@@ -1,0 +1,1 @@
+# football-manager-friday-skin
