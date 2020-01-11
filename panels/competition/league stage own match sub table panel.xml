@@ -1,0 +1,15 @@
+﻿<panel width="600">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="10" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+		<widget class="text" auto_size="vertical">
+			<translation id="text" translation_id="466404" type="use" value="Head-to-Head Record For Teams On Same Points[COMMENT: league table showing h2h record between teams]" />
+		</widget>
+
+		<!--league stage panel-->
+		<widget class="league_stage_panel" id="lspn" save_session_state="true" file="competition/league stage auto sized vertical" ShFr="false" />
+
+	</container>
+</panel>

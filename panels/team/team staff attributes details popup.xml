@@ -1,0 +1,30 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+	<container class="main_box" appearance="boxes/popup/standard/titled/paper" id="main">
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="titl" />
+					<integer id="set_property" value="titl" />
+				</record>
+			</list>
+		</record>
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+
+		<container class="simple_data_list" id="tabl" set_property="objt" auto_size="vertical">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="dali" />
+					</record>
+				</list>
+			</record>
+			<record id="widget_properties" class="property_list_viewer_xml_panel" file="team/team staff attributes details widget" height="30" />
+		</container>
+
+	</container>
+
+</panel>

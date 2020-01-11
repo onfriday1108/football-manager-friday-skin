@@ -1,0 +1,37 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container height="30">
+
+			<container height="25">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" inset="0"/>
+				<widget class="picture" id="bsic" scale_picture="true" file="pitch/icons/kit/large/simple kit" image_alignment="centre"/>
+				<widget class="text" id="bsnm" alignment="centre"/>
+			</container>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="10" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+				<record id="default_properties" image_alignment="centre" hidden="true" width="16" height="16" />
+
+				<widget class="picture" id="PTgs" file="icons/16px/goal" />
+				<widget class="picture" id="PTas" file="icons/16px/assist" />
+				<widget class="picture" id="PTrt" file="icons/16px/key player" />
+				<widget class="picture" id="PNba" file="icons/16px/yellow card" />
+				<widget class="picture" id="PHNO" file="icons/16px/debut" />
+			</container>
+
+		</container>
+
+		<widget class="text" id="name" colour="text" size="small" alignment="left,can_scale" auto_size="vertical" multiline="false" />
+
+	</container>
+
+</panel>

@@ -1,0 +1,32 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+    <container>
+
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10" />
+
+      <container class="inner_subtle_box" id="sctb">
+      <translation id="title" translation_id="333700" type="use" value="Assignments[COMMENT: scout table; column header for the scout's name]" />
+        <!-- embedded buttons -->
+        <container id="btns" height="26" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+          <widget class="primary_icon_button" id="nass" size="10" style="bold" click_event="nack" icon="icons/16px/plus" alignment="centre" embed_in_frame="true">
+            <layout class="centre_in_parent_attachment" alignment="vertical" />
+
+            <translation id="text" translation_id="363618" type="use" value="Create new assignment[COMMENT: heading; scouting assignments; button to create a new scouting assignment - FR 8138]" />
+          </widget>
+        </container>
+        
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="10,0,0,0" />
+            <widget class="assignment_list_widget" id="aslw" show_view_assignment_button="false" />
+       </container>
+      
+     </container>
+      
+
+
+</panel>

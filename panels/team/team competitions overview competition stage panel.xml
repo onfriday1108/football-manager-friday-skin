@@ -1,0 +1,31 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<boolean id="overview_version" value="true" />
+
+	<!-- No game panel-->
+	<container id="nots" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+		<widget class="text" id="nost" alignment="centre_x,top" spec="text" size="large" style="semi_bold, embossed"  />
+	</container>
+
+	<!-- group box for stage to go into -->
+	<container id="stgb">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!--league stage panel-->
+		<widget class="league_stage_panel" id="lspn" hidden="true" view="oovr" league_table_heading_length="0"/>
+
+		<!--cup stage_panel-->
+		<widget class="cup_stage_panel" file="competition/cup overview stage" id="cstp" hidden="true" save_session_state="true" />
+
+		<!--group stage scrolling box (to be filled in code)-->
+		<widget class="scrolling_box" id="gscb" hidden="true" save_session_state="true"/>
+	</container>
+
+	<!-- The exceptions so point deductions in the league etc-->
+	<widget class="table" layout="-1" id="exta" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" hidden="true" mode="fill_rows" />
+
+</panel>

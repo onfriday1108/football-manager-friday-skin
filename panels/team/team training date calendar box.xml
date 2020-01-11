@@ -1,0 +1,162 @@
+<panel class="main_box">
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="hlfC"  >
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0"  />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container id="barR" background_animator_duration="0.2"/>
+
+		<container id="barL" background_animator_duration="0.2"/>
+	</container>
+
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0"  />
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"  />
+
+		<widget class="text" id="tpDs" size="small" height="100" width="100" auto_size="none" colour="disabled" alignment="centre"/>
+
+	</container>
+
+
+	<container class="inner_subtle_box" appearance="boxes/custom/calendar/cell/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- notification bar for today date and training camp days  -->
+		<container height="6">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0,1,0,0" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<container background_colour="title" id="toda" height="6" />
+		</container>
+
+		<container height="2" />
+
+		<!-- top part the description of box and the calendar date -->
+		<container height="30">
+			<layout class="arrange_horizontal_attachment" alignment="middle,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+			<widget class="text" id="dias" size="large" style="bold" width="30" alignment="centre"/>
+
+
+			<widget class="label" id="mtDs" size="small" colour="disabled" alignment="centre"/>
+
+			<!-- spacer to avoid overlap with rest icon -->
+			<widget class="spacer" width="20"/>
+		</container>
+
+
+		<!-- centre container mode 1( match day or match pre day) -->
+		<container id="Cco1" >
+			<layout class="fit_children_attachment" />
+			<layout class="arrange_vertical_attachment" layout="-1,25,20" offset="5" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- the centre container for logo button -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<!-- team logo on match days -->
+				<widget class="object_portrait_picture" id="foto" scale_picture="true" image_alignment="centre" keep_aspect_ratio="true" alignment="centre" style="bold"/>
+
+				<!-- match prep button -->
+				<container id="mplb">
+					<layout class="arrange_vertical_attachment" alignment="middle" gap="1"  offset="0"   />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+					<widget class="label" alignment="left,bottom" size="small" auto_size="vertical" >
+						<translation id="text" translation_id="329965" type="use" value="Focus[COMMENT: team training; header text for the team's particular training Focus in a given week]" />
+					</widget>
+
+					<widget class="match_training_focus_popup_button" id="mpbu" icon="" auto_size="none"  height="30" icon_alignment="left,centre_y"/>
+
+				</container>
+			</container>
+
+			<!-- name of the team on match days -->
+			<widget class="team_button" id="IIte" alignment="centre" icon_enabled="false" style="semi_bold">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" />
+			</widget>
+
+			<!-- home or away matches -->
+			<widget class="label" id="casa" alignment="centre" size="small">
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="6" />
+			</widget>
+		</container>
+
+		<!-- centre container mode 2( match day and match pre day)-->
+		<container id="Cco2" >
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,60" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-2" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+					<widget class="object_portrait_picture" id="fot2" scale_picture="true" image_alignment="centre" keep_aspect_ratio="true" alignment="centre" style="bold" />
+					<container>
+						<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+						<widget class="team_button" id="IIt2" alignment="left,bottom" icon_enabled="false" style="bold" />
+						<widget class="label" id="cas2" alignment="left,top" />
+					</container>
+				</container>
+
+				<container id="mpl2">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="label" alignment="left,bottom" size="small" auto_size="vertical" >
+						<translation id="text" translation_id="329965" type="use" value="Focus[COMMENT: team training; header text for the team's particular training Focus in a given week]" />
+					</widget>
+					<widget class="match_training_focus_popup_button" id="mpb2" icon="" auto_size="none" height="30" icon_alignment="left,centre_y" >
+					</widget>
+				</container>
+			</container>
+
+
+		</container>
+
+	</container>
+
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<container >
+			<layout class="arrange_vertical_attachment" alignment="top" offset="13" gap="0"  />
+
+		</container>
+
+		<container >
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+			<container id="inHI"  class="inner_subtle_box" appearance="boxes/dialog/background/paper" background_colour="instant hint colour" hidden="true">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"  />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+				<animation class="fade_on_hide_animation" duration="0.5"/>
+
+				<!--Instant hint text-->
+				<widget class="text" id="llam" size="small" auto_size="vertical" colour="hint" alignment="centre"/>
+
+			</container>
+
+		</container>
+	</container>
+
+
+
+</panel>

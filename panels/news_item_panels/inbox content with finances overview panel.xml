@@ -1,0 +1,16 @@
+<panel>
+
+	<string id="skin_style" value="subtle box"/>
+
+
+  <!--Up Arrow-->
+  <flags id="upar" value="icons/16px/table up" />
+  <!--Down Arrow-->
+  <flags id="dwar" value="icons/16px/table down" />
+
+
+  <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+  <widget class="finances_summary_panel" id="main" file="club/finances summary inbox"/>
+</panel>

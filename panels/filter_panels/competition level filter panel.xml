@@ -1,0 +1,27 @@
+<panel>
+	<!-- Filter panel for different levels of competitions ( international, domestic etc.) -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="filter_check_box_list_container" auto_size="vertical" ahdn="false">
+		<translation id="title" translation_id="316549" type="use" value="Competition Level[COMMENT: filter option on the competitions screen]" />
+		
+		<list id="objL">
+
+			<record id="dome">
+				<translation id="text" translation_id="316551" type="use" value="Domestic[COMMENT: filter option on the competitions screen]" />
+			</record>
+
+			<record id="intl">
+				<translation id="text" translation_id="316552" type="use" value="International[COMMENT: filter option on the competitions screen]" />
+			</record>
+
+			<record id="club">
+				<translation id="text" translation_id="316553" type="use" value="Club (Non-Domestic)[COMMENT: filter option on the competitions screen]" />
+			</record>
+			
+			
+		</list>
+
+	</container>
+	
+</panel>

@@ -1,0 +1,17 @@
+﻿<panel>
+  
+  <list id="properties_to_forward">
+    <record get_property="RAiv" set_property="text" target="RAiv"/>
+    <record get_property="IPTc" set_property="colour" target="RAiv"/>
+    <record get_property="RAir" set_property="text" target="RAir"/>
+  </list>
+
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+    <!-- value -->
+    <widget class="text" id="RAiv" auto_size="vertical" style="bold" size="large"/>
+
+    <!-- description -->
+    <widget class="text" id="RAir" alignment="left,top" auto_size="none" size="small" colour="faded text" multiline="true"/>
+</panel>

@@ -1,0 +1,11 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<widget class="league_stage_panel" id="leag" view="oovr" league_table_heading_length="0" file="competition/league stage auto sized vertical">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+	</widget>
+	<widget class="text" id="notE" hidden="true" alignment="centre_x,top">
+		<translation id="text" translation_id="242495" type="use" value="Not entered yet[COMMENT: manager competitions panel: team not entered competition yet this season - but will at some point]" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="10"/>
+	</widget>
+</panel>

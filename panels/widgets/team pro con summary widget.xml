@@ -1,0 +1,25 @@
+﻿<panel auto_size="vertical">
+  <layout class="fit_children_attachment" alignment="vertical" offset="6" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="6" />
+
+  <container id="outr">
+    <layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+    <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6" />
+
+    <widget class="picture" id="icon" scale_picture="true" height="32" width="32" >
+    </widget>
+
+    <container id="iner">
+      <layout class="arrange_vertical_attachment" alignment="top" gap="0" do_not_size="true" />
+      <layout class="fit_children_attachment" alignment="vertical,fill" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="label" id="titl" font="label" auto_size="vertical">
+      </widget>
+
+      <widget class="text" id="desc" size="9" auto_size="vertical"/>
+    </container>
+
+  </container>
+</panel>

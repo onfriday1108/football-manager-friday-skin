@@ -1,0 +1,172 @@
+<panel>
+
+	<string id="skin_style" value="subtle box" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" />
+			<layout class="arrange_horizontal_attachment" layout="-1, 250" gap="12" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" />
+
+			<!--left side with text and logos and that-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="15" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- main body text -->
+				<widget class="inbox_body_text" id="bdtx" />
+
+				<!-- logos -->
+				<container height="84">
+					<layout class="arrange_horizontal_attachment" layout="-1,60,40,60,-1" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<!--home team-->
+					<container class="client_object_viewer_xml_panel" id="hmnm">
+						<layout class="arrange_vertical_attachment" alignment="middle" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<!--name-->
+						<widget class="team_button" id="name" auto_size="vertical" spec="text" size="large" style="bold" alignment="right,centre_y" icon_enabled="false">
+							<record id="object_property" get_property="objt" set_property="valu" />
+						</widget>
+						<!--division-->
+						<widget class="text" id="dvpl" auto_size="vertical" alignment="right,centre_y" colour="faded text">
+							<record id="object_property">
+								<integer id="get_property" value="subt" />
+								<integer id="set_property" value="text" />
+							</record>
+						</widget>
+						<!--form-->
+						<widget class="team_recent_form_widget" id="form" height="26" alignment="right">
+							<record id="object_property">
+								<integer id="get_property" value="Tfrm" />
+							</record>
+						</widget>
+					</container>
+					<widget class="object_portrait_picture" id="hmpc" scale_picture="true" image_alignment="centre" />
+
+					<!--versus text-->
+					<widget class="text" alignment="centre" colour="text" style="bold" size="25">
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+						<translation id="text" translation_id="242324" type="use" value="v[versus]" />
+					</widget>
+
+					<!--away team-->
+					<widget class="object_portrait_picture" id="awpc" scale_picture="true" image_alignment="centre" />
+					<container class="client_object_viewer_xml_panel" id="awnm">
+						<layout class="arrange_vertical_attachment" alignment="middle" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<!--name-->
+						<widget class="team_button" id="name" auto_size="vertical" spec="text" size="large" style="bold" alignment="left,centre_y" icon_enabled="false">
+							<record id="object_property" get_property="objt" set_property="valu" />
+						</widget>
+						<!--division-->
+						<widget class="text" id="dvpl" auto_size="vertical" alignment="left,centre_y" colour="faded text">
+							<record id="object_property">
+								<integer id="get_property" value="subt" />
+								<integer id="set_property" value="text" />
+							</record>
+						</widget>
+						<!--form-->
+						<widget class="team_recent_form_widget" id="form" height="26" alignment="left">
+							<record id="object_property">
+								<integer id="get_property" value="Tfrm" />
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="middle" gap="4" />
+
+					<!--stadium-->
+					<widget class="stadium_button" id="stdi" auto_size="all" alignment="centre">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+
+					<!--stage name-->
+					<widget class="text" id="comp" auto_size="all" alignment="centre">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+
+					<!--date-->
+					<widget class="text" id="fxdt" auto_size="all" alignment="centre" />
+
+				</container>
+
+				<!--separator-->
+				<widget class="horizontal_divider" />
+
+				<!--other match text-->
+				<widget class="inbox_body_text" id="altx" />
+
+				<!--full draw list-->
+				<widget class="text" id="drtt" alignment="centre" auto_size="vertical" font="title" />
+				<container class="table" id="draw" layout="-1,50,-1" row_height="28" fixed_size_rows="true" auto_size="vertical">
+					<list id="column_widget_properties">
+						<record index="0" alignment="right,centre_y" icon_alignment="right" />
+						<record index="1" alignment="centre" style="semi_bold">
+							<translation id="text" translation_id="242324" type="use" value="v[versus]" />
+						</record>
+						<record index="2" alignment="left,centre_y" />
+					</list>
+
+				</container>
+			</container>
+
+			<!--right side with comp details-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--dynamic image and logo-->
+				<container id="Dyni" height="150">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				</container>
+
+				<container class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!--name-->
+					<widget class="client_object_label" id="cnam" auto_size="vertical" font="title" alignment="centre" />
+
+					<!--reputation-->
+					<widget class="comp_reputation_stars_label" id="crep" alignment="centre">
+						<record id="object_property">
+							<integer id="get_property" value="crps" />
+						</record>
+					</widget>
+
+					<container height="8" />
+
+					<!--holders-->
+					<widget class="text" auto_size="vertical" alignment="centre" font="title">
+						<translation id="text" translation_id="385506" type="use" value="Holders[COMMENT: FR 9550 - holders, i.e. last winners of a competition]" />
+					</widget>
+					<widget class="object_portrait_picture" id="ChoL" scale_picture="true" image_alignment="centre" height="60">
+						<record id="object_property">
+							<integer id="get_property" value="ChoR" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+					<widget class="team_button" id="ChoR" icon_enabled="false" alignment="centre" auto_size="vertical" style="bold">
+						<record id="object_property">
+							<integer id="get_property" value="ChoR" />
+						</record>
+					</widget>
+
+					<container height="8" />
+
+				</container>
+			</container>
+		</container>
+
+	</container>
+
+</panel>

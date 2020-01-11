@@ -1,0 +1,69 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container id="nodt">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="label" alignment="top">
+			<translation id="text" translation_id="402382" type="use" value="No data to show[COMMENT: FR 14193; could be more specific to this panel or completely generic and reusable]" />
+		</widget>
+	</container>
+	<container id="data">
+
+		<layout class="arrange_vertical_attachment" layout="250,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container class="main_box">
+			<translation id="title" translation_id="383647" type="use" value="Sponsorship Income[COMMENT: FR 10982, content for Finances Screen]" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container id="pcht" class="pie_chart">
+				<record id="pie_chart_properties">
+					<boolean id="draw_instant_hint" value="true" />
+					<integer id="highlight_value" value="10" />
+				</record>
+			</container>
+		</container>
+
+		<container class="main_box" >
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="txtG" layout="35,-1, 120,120,120,120" row_height="28" row_spacing="0" mode="fill_rows,select_rows" msov="itSL" msex="itUL">
+
+				<!-- table headings -->
+				<list id="headings">
+					<record indx="0" column_span="2">
+						<translation id="text" translation_id="229400" type="use" value="Type" />
+					</record>
+					<record>
+						<translation id="text" translation_id="383825" type="use" value="Value (Per Season)[COMMENT: FR 10982, content for Finances Screen]" />
+					</record>
+					<record>
+						<translation id="text" translation_id="383823" type="use" value="Until[COMMENT: FR 10982, content for Finances Screen]" />
+					</record>
+					<record>
+						<translation id="text" translation_id="230113" type="use" value="Duration" />
+					</record>
+					<record>
+						<translation id="text" translation_id="383814" type="use" value="Total Value[COMMENT: FR 10982, content for Finances Screen]" />
+					</record>
+
+				</list>
+
+				<list id="column_table_properties">
+					<record indx="0" id="icon" />
+					<record indx="1" id="type" />
+					<record indx="2" id="valu" />
+					<record indx="3" id="unti" />
+					<record indx="4" id="dura" />
+					<record indx="5" id="tota" />
+				</list>
+
+				<!-- default sort -->
+				<list id="default_sort_column">
+					<integer value="valu" />
+				</list>
+
+			</widget>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,26 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <container class="inner_box_no_margin">
+    <layout class="arrange_horizontal_attachment" layout="20, -1, 20, 20" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="2" apply_to_children="true"/>
+
+    <widget class="picture" id="lgnd" file="icons/16px/circle" >
+      <layout class="stick_to_sides_attachment" alignment="vertical"/>
+    </widget>
+
+    <widget class="text" id="ctxt" alignment="left" auto_size="all" font="semibold" colour="title" size="10">
+      <layout class="centre_in_parent_attachment" alignment="vertical" offset="2"/>
+    </widget>
+
+    <widget class="icon_tick_button" id="sall" show_button_appearance="false" >
+      <layout class="stick_to_sides_attachment" alignment="vertical"/>
+    </widget>
+    <widget class="icon_button" id="snon" icon="icons/16px/cross" show_button_appearance="false" >
+      <layout class="stick_to_sides_attachment" alignment="vertical"/>
+    </widget>
+    
+  </container>
+    
+</panel>

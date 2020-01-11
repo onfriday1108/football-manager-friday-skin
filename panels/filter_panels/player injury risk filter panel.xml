@@ -1,0 +1,31 @@
+﻿<panel>
+	<!-- Hide player filter rule panel -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+	
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="450118" type="use" value="Injury Risk[COMMENT: player injury panel section detailing susceptibility to injury, title]"/>
+
+
+		<list id="objL">
+
+			<record  id="irLo">
+				<translation id="text" translation_id="448756" type="use" value="Low[COMMENT: FR 20159; short description for training related injury risk - low]"/>
+			</record>
+			<record  id="irNo">
+				<translation id="text" translation_id="448757" type="use" value="Normal[COMMENT: FR 20159; short description for training related injury risk - normal]"/>
+			</record>
+			<record  id="irIn">
+				<translation id="text" translation_id="448758" type="use" value="Increased[COMMENT: FR 20159; short description for training related injury risk - increased]"/>
+			</record>
+			<record  id="irHi">
+				<translation id="text" translation_id="448759" type="use" value="High[COMMENT: FR 20159; short description for training related injury risk - high]"/>
+			</record>
+			<record  id="irVH">
+				<translation id="text" translation_id="448760" type="use" value="Very High[COMMENT: FR 20159; short description for training related injury risk - very high]"/>
+			</record>
+
+		</list>
+		
+	</container>
+
+</panel>

@@ -1,0 +1,55 @@
+<panel height="300" width="500">
+	
+	<translation id="title" translation_id="243376" type="use" value="Send Message" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="8" />	
+
+	<attachment class="moveable_attachment" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+		<!--who are we sending the message to?-->
+		<container id="to  " height="30">
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<!--user label-->
+			<widget class="label" auto_size="horizontal">
+				<translation id="text" translation_id="466417" type="use" value="To:[COMMENT: FR13104 - text to introduce a popup button for choosing who to send a message to during hot-seat or network play]" />
+				<colour id="colour" name="selection" />
+			</widget>
+
+			<!--user selection popup-->
+			<widget class="popup_button" id="user" auto_size="horizontal" />
+		</container>
+
+		<!--message panel-->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" />
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+
+			<!--subject label-->
+			<widget class="label" auto_size="horizontal">
+				<translation id="text" translation_id="247719" type="use" value="Subject:" />
+				<colour id="colour" name="selection" />
+			</widget>
+
+			<!--edit boxes-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+				<!--subject-->
+				<widget class="edit_box" id="subj" chev="sbch" />
+
+				<!--message text-->
+				<widget class="edit_box" id="text" height="200" chev="msch" mlti="true" />
+			</container>
+		</container>
+	</container>
+
+	<container id="btns" file="generic/send message buttons" />
+	
+</panel>

@@ -1,0 +1,152 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<widget class="picture" file="photos/dynamic/match ticket/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-9,-20,-10" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<widget class="spacer" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-3,-24,-7" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="spacer" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-8,-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<!--info-->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-3,-1,-3,-3,-3,-3,-3,-3" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<!--stadium/city-->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6"/>
+
+						<widget class="stadium_button" id="stdi" auto_size="all" font="fonts/capitals_bold" colour="white" alignment="left,auto_fit" icon_enabled="false" wants_mouse_events="false">
+							<record id="object_property">
+								<integer id="get_property" value="stad"/>
+							</record>
+						</widget>
+
+					</container>
+
+					<widget class="spacer" />
+
+					<!--teams text-->
+					<widget class="formatted_label" auto_size="vertical" size="12" font="fonts/capitals_bold" colour="white" alignment="left,auto_fit" wants_mouse_events="false">
+						<!-- Ideally this should be'vs.' but I had to use an existing string -->
+						<translation id="format" translation_id="230347" type="use" value="[%team#1-short] v [%team#2-short] [comment - title of match]"/>
+						<record id="object_property">
+							<list id="get_properties">
+								<record get_property="home" set_property="var1"/>
+								<record get_property="away" set_property="var2"/>
+							</list>
+						</record>
+					</widget>
+
+					<!--comp-->
+					<widget class="fixture_name_text" id="FxNV" auto_size="vertical" colour="faded white" alignment="left,auto_fit" wants_mouse_events="false" >
+						<record id="object_property">
+							<integer id="get_property" value="FxNm"/>
+						</record>
+					</widget>
+
+					<!--date-->
+					<widget class="date_cell" id="fxdV" format="[%date#1-long]" auto_size="vertical" alignment="left,auto_fit" colour="faded white">
+						<record id="object_property">
+							<integer id="get_property" value="fxdt"/>
+						</record>
+					</widget>
+
+					<!--time-->
+					<widget class="date_cell" id="FXTV" auto_size="vertical" colour="faded white" alignment="left,auto_fit">
+						<translation id="format" translation_id="346726" type="use" value="Kick Off [%date#1-time][COMMENT: string telling us when the kick off of a match is]"/>
+						<record id="object_property">
+							<integer id="get_property" value="FXTm"/>
+						</record>
+					</widget>
+
+					<!--aggregate text-->
+					<widget class="fixture_aggregate_label" id="aggt" auto_size="vertical" colour="faded white" alignment="left,auto_fit">
+						<record id="object_property">
+							<integer id="get_property" value="FxAg"/>
+						</record>
+					</widget>
+
+					<!--more logo action and prices-->
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-1,-6" offset="0" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+						<!--comp logo-->
+						<widget class="object_portrait_picture" id="cmlG" scale_picture="true">
+							<boolean id="keep_aspect_ratio" value="true"/>
+							<flags id="image_alignment" value="left"/>
+							<record id="object_property">
+								<integer id="get_property" value="fxCo"/>
+								<integer id="set_property" value="objt"/>
+							</record>
+						</widget>
+
+						<!--ticket price-->
+						<widget class="cash_cell" id="pric" alignment="left,centre_y,auto_fit" multiline="false" colour="faded white">
+							<translation id="format" translation_id="346560" type="use" value="Admission: [%cash#1-short-roundnone][COMMENT: string telling us the admission price for a match ticket]"/>
+							<record id="object_property">
+								<integer id="get_property" value="FxTP"/>
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<!--badges-->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1,-8,-1,-8,-14" offset="0" gap="1"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="spacer" />
+
+					<!--home team-->
+					<widget class="object_portrait_picture" id="hmtm" scale_picture="true" wants_mouse_events="false">
+						<boolean id="keep_aspect_ratio" value="true"/>
+						<flags id="image_alignment" value="centre"/>
+						<record id="object_property">
+							<integer id="get_property" value="home"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+					</widget>
+
+					<widget class="spacer" />
+
+					<!--away team-->
+					<widget class="object_portrait_picture" id="awtm" scale_picture="true" wants_mouse_events="false">
+						<boolean id="keep_aspect_ratio" value="true"/>
+						<flags id="image_alignment" value="centre"/>
+						<record id="object_property">
+							<integer id="get_property" value="away"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+					</widget>
+
+					<widget class="spacer" />
+
+				</container>
+
+			</container>
+
+			<widget class="spacer" />
+
+		</container>
+
+		<widget class="spacer" />
+
+	</container>
+
+
+</panel>

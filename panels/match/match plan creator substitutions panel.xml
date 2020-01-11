@@ -1,0 +1,21 @@
+<panel>
+	<!-- wizard panel title, header and footer strings -->
+	<translation id="wizard_panel_title" translation_id="344948" type="use" value="Substitutions[COMMENT: match plan creator wizard: Panel title text of substitutions match plan step in the wizard]" />
+  <translation_list id="wizard_panel_header">
+    <translation translation_id="344574" type="use">Please choose the time after which the match plan should consider substituting players.[COMMENT: match plan creator wizard: instructional text]</translation>
+    <translation />
+    <translation translation_id="491955" type="use">Players may be substituted for poor condition, performance or tactical reasons.[COMMENT: AREA: Match Plans; SUB-AREA: Advice; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: match plan wizard step]</translation>
+    <translation />
+    <translation translation_id="344669" type="use">Regardless of the time selected here, or any scenario-specific subsitution instructions, the match plan will always attempt to substitute an injured player.[COMMENT: match plan creator wizard: instructional text]</translation>
+  </translation_list>
+  <translation id="wizard_panel_step_text" translation_id="469770" type="use" value="Step 9: Substitutions[COMMENT: match plan creator wizard: Short description of substitutions match plan step in the wizard, just a step number change to ID 344925, we'll fix this properly long-term]" />
+
+	<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="arrange_horizontal_attachment" layout="-1, -2" offset="0" gap="10" />
+
+	<widget class="label" alignment="right,centre_y" auto_size="vertical">
+    <translation id="text" translation_id="333911" type="use" value="Make Substitution after...[Comment: label for a popup button to allow the user to choose around what time the AI should start making substitutions when using a match plan]" />
+  </widget>
+  <widget class="popup_button" id="subs" select_event="subs" auto_size="vertical" />
+</panel>

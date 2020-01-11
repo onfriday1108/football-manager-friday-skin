@@ -1,0 +1,16 @@
+<panel>
+  <attachment_group class="vertical_arrange_autosize"/>
+
+  <container class="vertical_label_value_pair" value_widget="wagP" label_widget="wagT">
+    <attachment_group class="vertical_arrange_autosize"/>
+    <widget class="text" id="wagT" auto_size="vertical" alignment="left,centre_y">
+      <translation id="text" translation_id="227799" type="use" value="Wage" />
+    </widget>
+
+    <widget class="wage_label" format="2" id="wagL" auto_size="vertical" alignment="left,centre_y" size="large" style="bold">
+
+    </widget>
+
+  </container>
+
+</panel>

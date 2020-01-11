@@ -1,0 +1,65 @@
+﻿<panel save_session_state="true">
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+	<container id="hunc">
+		<attachment_group class="horizontal_arrange" horizontal_layout="300,-1">
+			<global id="horizontal_gap" name="ui.main_contrast_box_gap" />
+		</attachment_group>
+
+		<widget class="contract_offer_panel" id="roco" file="person/human contract offer inbox read only panel" is_inbox_read_only="true" hidden="true" auto_size="vertical">
+
+		</widget>
+
+    <container>
+      <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+      <widget class="text" font="title" colour="accent" auto_size="vertical">
+        <translation id="text" translation_id="491850" type="use" value="Club Vision[COMMENT: AREA: Club vision panel; SUB-AREA: Panel heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the club vision panel]" />
+      </widget>
+      
+      <container class="club_vision_viewer_panel" id="Cvis" show_objective_type="false" show_objective_importance="false" show_objective_status="false" vision_type="1">
+
+      </container>
+    </container>
+
+		
+
+	</container>
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" />
+
+		<container class="contract_promises_panel" id="prom" is_in_inbox="true" file="none" hidden="true">
+
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" />
+
+			<widget class="button" click_event="walk" auto_size="all">
+				<translation id="text" translation_id="313553" type="use" value="Walk Away[COMMENT: contract offer panel; walk away from the current contract negotiation]" />
+			</widget>
+
+		</container>
+
+		<container class="contract_offer_panel" id="on" is_in_inbox="true" file="none" hidden="true">
+
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" />
+
+      <widget class="button" click_event="dela" id="dela" hidden="true" auto_size="all">
+        <translation id="text" translation_id="234328" type="use" value="Delay" />
+      </widget>
+
+			<widget class="button" click_event="walk" auto_size="all">
+				<translation id="text" translation_id="313553" type="use" value="Walk Away[COMMENT: contract offer panel; walk away from the current contract negotiation]" />
+			</widget>
+
+		</container>
+
+		<widget class="button" click_event="hdof" id="hdof" auto_size="all">
+		</widget>
+
+		<widget class="button" id="staN" click_event="evio"  auto_size="all" appearance="buttons/primary/normal/button">
+			<translation id="text" translation_id="491992" type="use" value="Start Negotiations[COMMENT: AREA: Inbox; SUB-AREA: Contracts; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: button text to begin contract talks]" />
+		</widget>
+
+	</container>
+
+</panel>

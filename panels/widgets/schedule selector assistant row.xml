@@ -1,0 +1,9 @@
+﻿<panel>
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="4" gap="4"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2"/>
+
+	<widget class="text" id="text" alignment="left,centre_y"/>
+	<widget class="icon_button" icon="icons/16px/recommended nation" appearance="labels/standard/label" auto_size="horizontal" wants_mouse_events="false" red_replacement="positive bg">
+		<translation id="text"  translation_id="361263" type="use" value="Recommendation[COMMENT: FR 8316]" />
+	</widget>
+</panel>

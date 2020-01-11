@@ -1,0 +1,67 @@
+<panel appearance="boxes/dialog/match/paper" width="1010">
+	<translation id="title" translation_id="330203" type="use" value="Make Substitution[COMMENT: match tactics shortcuts, change tactics dialog title]" />
+
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+
+	<!-- arrange items vertically, with text at top -->
+	<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="6" />
+	<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
+
+	<!-- text field - should resize vertically to ensure that it's contents fit -->
+	<widget class="text" auto_size="vertical" colour="match scoreboard clock paused" alignment="centre_x" style="semi_bold">
+		<translation id="text" translation_id="330227" type="use" value="Match paused[COMMENT: match tactics shortcuts, quick substitution dialog]" />
+	</widget>
+
+	<container id="qusb">
+		<layout class="arrange_vertical_attachment" layout="380,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+
+		<container class="inner_subtle_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+			<widget class="match_team_squad_panel" id="fiXI" file="match/match team squad quick sub" include_starting_xi="false" include_starting_subs="false" include_current_subs="false">
+				<translation id="title" translation_id="330293" type="use" value="On Pitch[COMMENT: title for a squad list of players currently in the first XI]" />
+			</widget>
+		</container>
+		<container class="inner_subtle_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+			<widget class="match_team_squad_panel" id="subs" file="match/match team squad quick sub subs" include_current_xi="false" include_starting_xi="false" include_starting_subs="false">
+				<translation id="title" translation_id="330292" type="use" value="On Bench[COMMENT: subs bench panel; subsection box which will list any designated substitutes]" />
+			</widget>
+		</container>
+
+	</container>
+
+	<!-- standard buttons / these get shown & hidden by subclasses -->
+	<container height="40">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" />
+		<widget class="icon_button" id="rrep" auto_size="all" icon="icons/16px/staff" show_button_appearance="false" icon_colour="positive" alignment="left,centre_y" icon_alignment="left,centre_y" colour="text" spec="text" >
+			<layout class="centre_in_parent_attachment" alignment="vertical" />
+		</widget>
+
+		<container>
+			<attachment_group class="button_arrangement_right" />
+
+			<widget class="primary_icon_tick_button" id="ok">
+				<translation id="text" translation_id="229918" type="use" value="Confirm" />
+				<layout class="autosize_attachment" />
+			</widget>
+
+			<widget class="icon_button" id="undo" auto_size="vertical" controller_button="x_button">
+				<translation id="text" translation_id="230251" type="use" value="Undo" />
+				<layout class="autosize_attachment" />
+				<record id="click_event">
+					<flags id="event_id" value="UNDO" />
+				</record>
+			</widget>
+
+			<widget class="icon_button" id="canc" auto_size="vertical">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				<layout class="autosize_attachment" />
+			</widget>
+		</container>
+	</container>
+
+</panel>

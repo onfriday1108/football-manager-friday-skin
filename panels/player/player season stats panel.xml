@@ -1,0 +1,79 @@
+<panel>
+
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+  <boolean id="should_force_refresh" value="true" />
+
+  <widget class="table" layout="-3,-2,-2,-2" mode="stripe_rows" auto_size="vertical" row_height="32" column_spacing="10" fixed_size_rows="true" auto_size_rows="false">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+    <record id="default_properties" alignment="left,centre_y" spec="text"/>
+
+      <widget class="label" row="0" column="1" size="small">
+      <translation id="text" translation_id="356297" type="use" value="Overall (Club)[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface, leave as lower case text please]" />
+    </widget>
+    <widget class="label" row="0" column="2" size="small">
+      <translation id="text" translation_id="316640" type="use" value="league[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface, leave as lower case text please]" />
+    </widget>
+    <widget class="label" row="0" column="3" size="small">
+      <translation id="text" translation_id="328539" type="use" value="international[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface, leave as lower case text please]" />
+    </widget>
+
+    <widget class="label" row="1" column="0" id="goco" size="small">
+      <translation id="text" translation_id="316641" type="use" value="appearances/goals[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface, leave as lower case text please]" />
+    </widget>
+    <widget class="label" row="1" column="1" id="apgo" size="14">
+      <translation id="hint" translation_id="376541" type="use" value="Overall stats include league, cup and continental matches for the player's club[COMMENT: FR 9584; player profile season stats panel; hint for overall stats]" />
+    </widget>
+    <widget class="label" row="1" column="2" id="apgL" size="14">
+      <translation id="hint" translation_id="376590" type="use" value="Stats from league matches for the player's club[COMMENT: FR 9584; player profile season stats panel; hint for league stats]" />
+    </widget>
+    <widget class="label" row="1" column="3" id="apgI" size="14">
+      <translation id="hint" translation_id="376589" type="use" value="Stats from international matches[COMMENT: FR 9584; player profile season stats panel; hint for international stats]" />
+    </widget>
+
+    <widget class="label" row="2" column="0" size="small">
+      <translation id="text" translation_id="316642" type="use" value="yellow/red cards[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface, leave as lower case text please]" />
+    </widget>
+    <widget class="text" row="2" column="1" id="yere" size="14">
+      <translation id="hint" translation_id="376541" type="use" value="Overall stats include league, cup and continental matches for the player's club[COMMENT: FR 9584; player profile season stats panel; hint for overall stats]" />
+    </widget>
+
+    <widget class="text" row="2" column="2" id="yerL" size="14">
+      <translation id="hint" translation_id="376590" type="use" value="Stats from league matches for the player's club[COMMENT: FR 9584; player profile season stats panel; hint for league stats]" />
+    </widget>
+    <widget class="text" row="2" column="3" id="yerI" size="14">
+      <translation id="hint" translation_id="376589" type="use" value="Stats from international matches[COMMENT: FR 9584; player profile season stats panel; hint for international stats]" />
+    </widget>
+
+    <widget class="label" row="3" column="0" size="small">
+      <translation id="text" translation_id="316643" type="use" value="average rating[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface, leave as lower case text please]" />
+    </widget>
+    <widget class="dashed_number_label" row="3" column="1" id="avra" size="14">
+      <translation id="hint" translation_id="376541" type="use" value="Overall stats include league, cup and continental matches for the player's club[COMMENT: FR 9584; player profile season stats panel; hint for overall stats]" />
+      <record id="object_property">
+        <integer id="get_property" value="PFaV" />
+      </record>
+    </widget>
+    <widget class="dashed_number_label" row="3" column="2" id="avrL" size="14">
+      <translation id="hint" translation_id="376590" type="use" value="Stats from league matches for the player's club[COMMENT: FR 9584; player profile season stats panel; hint for league stats]" />
+      <record id="object_property">
+        <integer id="get_property" value="Plav" />
+      </record>
+    </widget>
+    <widget class="dashed_number_label" row="3" column="3" id="avrI" size="14">
+      <translation id="hint" translation_id="376589" type="use" value="Stats from international matches[COMMENT: FR 9584; player profile season stats panel; hint for international stats]" />
+      <record id="object_property">
+        <integer id="get_property" value="Piav" />
+      </record>
+    </widget>
+
+  </widget>
+
+
+  <!--buttons to go to personal details-->
+  <widget class="link_appearance_button" id="vpst">
+    <layout class="stick_to_sides_attachment" alignment="right" />
+    <translation id="text" translation_id="316644" type="use" value="View Player Stats[COMMENT: player season stats panel; button which when clicked takes you to a player's personal details screen]" />
+  </widget>
+
+</panel>

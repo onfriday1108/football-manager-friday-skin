@@ -1,0 +1,32 @@
+<!-- A panel that can display a single match result. Designed to be used with an XML viewer panel-->
+<panel>
+  <layout class="arrange_horizontal_attachment" alignment="middle,extend" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+  <!-- Home team name -->
+  <widget class="team_button" icon_enabled="false" alignment="right">
+    <record id="object_property" get_property="home" dont_set_object="true"/>
+  </widget>
+  <container>
+    <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4"/>
+    <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <!-- Home team logo -->
+    <widget class="object_portrait_picture" scale_picture="true" width="30">
+      <record id="object_property" get_property="home" dont_set_object="true"/>
+    </widget>
+		<!-- scoreline -->
+		<widget class="text" size="large" alignment="centre" auto_size="horizontal">
+			<record id="object_property" get_property="FxRs" dont_set_object="true"/>
+		</widget>
+    <!-- Away team logo -->
+    <widget class="object_portrait_picture" scale_picture="true" width="30">
+      <record id="object_property" get_property="away" dont_set_object="true"/>
+    </widget>
+  </container>
+  <!-- Away team name -->
+  <widget class="team_button" icon_enabled="false">
+    <record id="object_property" get_property="away" dont_set_object="true"/>
+  </widget>
+</panel>

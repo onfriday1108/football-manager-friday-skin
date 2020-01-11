@@ -1,0 +1,20 @@
+<panel>
+
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" vertical_gap="0" />
+
+	<widget class="text" size="large" id="ntSc" auto_size="vertical">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,10,0,0" />
+	</widget>
+
+	<container class="multi_collapsable_box_container" allow_single_bar_click="true" id="iSec" inset="0" offset="0">
+
+		<container class="team_stadium_collapsible_box" id="box1" />
+		<container class="team_stadium_collapsible_box" id="box2" />
+		<container class="team_stadium_collapsible_box" id="box3" />
+		<container class="team_stadium_collapsible_box" id="box4" />
+		<container class="team_stadium_collapsible_box" id="box5" />
+
+	</container>
+
+
+</panel>

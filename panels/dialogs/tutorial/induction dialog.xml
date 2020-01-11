@@ -1,0 +1,14 @@
+﻿<panel width="700" can_close_with_escape="false">
+
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+
+
+	<container id="cont" class="inner_subtle_box" appearance="boxes/custom/inbox attachment/personal/paper" red_replacement="tutorial bg">
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+		
+			<string id="skin_style" value="contrast box" />
+
+		
+		<!-- we programatically add our panel here -->
+	</container>
+</panel>

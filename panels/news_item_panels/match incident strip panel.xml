@@ -1,0 +1,19 @@
+<panel height="24">
+	<layout class="arrange_horizontal_attachment" layout="20, 36, 4, 14, 4, -1" gap="0" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+	<widget class="picture" id="inty" scale_picture="false" image_alignment="centre">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+  </widget>
+	<widget class="text" id="inct" alignment="centre" size="small" colour="faded text">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+  </widget>
+	<widget class="spacer" />
+	<widget class="object_portrait_picture" id="miTp" scale_picture="true" image_alignment="centre">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+  </widget>
+	<widget class="spacer" />
+	<widget class="person_button" id="Plpc">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+  </widget>
+</panel>

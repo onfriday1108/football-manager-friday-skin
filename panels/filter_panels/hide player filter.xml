@@ -1,0 +1,37 @@
+<panel>
+	<!-- Hide player filter rule panel -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="247301" type="use" value="Hide players" />
+
+		<list id="objL">
+			<record id="imds">
+				<translation id="hint" translation_id="318292" type="use" value="Filter out players who are in the current match squad[COMMENT - hint text; team screen; filter panel; hide players option]" />
+				<translation id="text" translation_id="385530" type="use" value="In match squad[COMMENT: filter panel; hide players option]" />
+			</record>
+			<record id="lntl">
+				<translation id="hint" translation_id="308041" type="use" value="Filter out players who are on loan or on trial[COMMENT - hint text; team screen; filter panel; hide players option]" />
+				<translation id="text" translation_id="247302" type="use" value="On loan or trial" />
+			</record>
+			<record id="unav">
+				<translation id="hint" translation_id="308042" type="use" value="Filter out players who are unavailable for selection[COMMENT - hint text; team screen; filter panel; hide players option]" />
+				<translation id="text" translation_id="247303" type="use" value="Unavailable" />
+			</record>
+			<record id="locn">
+				<translation id="hint" translation_id="247305" type="use" value="Filter out players who have over a year left on their contracts[COMMENT - hint text; team screen; filter panel; hide players option]" />
+				<translation id="text" translation_id="247304" type="use" value="On long-term deals[COMMENT - team squad screen; filter panel; hide players option]" />
+			</record>
+			<record id="ntac">
+				<translation id="hint" translation_id="308043" type="use" value="Filter out players who currently are not at the club[COMMENT - hint text; team screen; filter panel; hide players option]" />
+				<translation id="text" translation_id="275845" type="use" value="Not at club[COMMENT - team squad screen; filter panel; hide players option]" />
+			</record>
+			<record id="nhgp">
+				<translation id="hint" translation_id="466418" type="use" value="Filter out players who do not qualify as home-grown[COMMENT - hint text; team screen; filter panel; hide players option]" />
+				<translation id="text" translation_id="466419" type="use" value="Non home-grown[COMMENT - team squad screen; filter panel; hide players option]" />
+			</record>
+		</list>
+		
+	</container>
+
+</panel>

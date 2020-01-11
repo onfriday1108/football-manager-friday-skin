@@ -1,0 +1,19 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_inset="0" />
+
+	<container class="filter_check_box_list_container" auto_size="vertical" ahdn="false">
+		<translation id="title" translation_id="275837" type="use" value="Show Players[COMMENT - loan players panel; filter option for showing players at club/not at club]" />
+
+		<list id="objL">
+			<record id="atcl">
+				<translation id="text" translation_id="275838" type="use" value="At Club[COMMENT - loan players panel; filter option for showing players at club/not at club]" />
+			</record>
+			<record id="ntcl">
+				<translation id="text" translation_id="275839" type="use" value="Away From Club[COMMENT - loan players panel; filter option for showing players at club/not at club]" />
+			</record>
+		</list>
+
+	</container>
+
+</panel>

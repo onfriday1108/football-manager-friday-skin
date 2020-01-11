@@ -1,0 +1,40 @@
+<panel width="500">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="20" horizontal_alignment="horizontal"  />
+
+	<container class="standard_popup_box" id="cont">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="10" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" />
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="label" size="9" auto_size="all">
+				<translation id="text" translation_id="336161" type="use" value="Added to[COMMENT: add to shortlist confirmation popup; label to prefix popup buttons indication which shortlist the player was added to]" />
+			</widget>
+			<widget class="popup_button" id="slst" sele="sshl" auto_size="all" fixed="false" />
+			<widget class="popup_button" id="durl" sele="sdur" auto_size="all" fixed="false" />
+		</container>
+
+		<widget class="text" id="dstx" size="9" auto_size="vertical" />
+		<widget class="text" id="ctlt" size="9" auto_size="vertical" style="bold" />
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" layout="-2, -1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="check_box" id="atcc" click_event="dnsh" hidden="false">
+				<translation id="text" translation_id="301057" type="use" value="Don't show this message again.[COMMENT: The title of a checkbox displayed in a dialog, which allows the user to request that the dialog isn't displayed again.]" />
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+			</widget>
+
+			<widget class="link_appearance_button" id="vlst" click_event="gosh">
+				<translation id="text" translation_id="257906" type="use" value="View Shortlist[COMMENT:Award voting news link button]" />
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+			</widget>
+		</container>
+
+	</container>
+</panel>

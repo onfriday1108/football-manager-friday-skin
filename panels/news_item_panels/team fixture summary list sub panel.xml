@@ -1,0 +1,58 @@
+<panel height="150">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+		<widget class="link_button_title" section="TeFi">
+			<translation id="text" translation_id="441092" type="use" value="First 5 Fixtures[COMMENT: team fixture list summary header text]"/>
+
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+				<integer id="set_property" value="objt"/>
+			</record>
+		</widget>
+	</container>
+
+	<widget class="client_object_list_table" id="fxTb" database_table_type="53" auto_size="vertical" mode="fill_rows, hide_headings">
+		<record id="object_property">
+			<integer id="get_property" value="impF"/>
+			<integer id="set_property" value="objt"/>
+		</record>
+		<boolean id="always_use_latest_object_list" value="true"/>
+		
+		<list id="default_sort_column">
+			<integer value="fxdt"/>
+		</list>
+
+		<record id="viewed_property_ids">
+			<!-- Fixture Date -->
+			<record id="fxdS"/>
+			<!-- Fixture Opponent -->
+			<record id="fopt"/>
+			<!-- Venue -->
+			<record id="FxVn"/>
+		</record>
+	</widget>
+
+	<widget class="client_object_list_table" id="fxTB" database_table_type="53" auto_size="vertical" mode="fill_rows, hide_headings">
+		<record id="object_property">
+			<integer id="get_property" value="imPF"/>
+			<integer id="set_property" value="objt"/>
+		</record>
+		<boolean id="always_use_latest_object_list" value="true"/>
+
+		<list id="default_sort_column">
+			<integer value="fxdt"/>
+		</list>
+
+		<record id="viewed_property_ids">
+			<!-- Fixture Date -->
+			<record id="fxdS"/>
+			<!-- Fixture Opponent -->
+			<record id="fopt"/>
+			<!-- Venue -->
+			<record id="FxVn"/>
+		</record>
+	</widget>
+
+</panel>

@@ -1,0 +1,137 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+	<string id="skin_style" value="title link" />
+
+	<!-- attachment title area -->
+	<container class="inner_box_no_margin" height="540">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- content area -->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--Top Area-->
+			<container height="76">
+				<layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container class="inner_subtle_box">
+					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+					<!-- Squad Summary -->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" />
+
+						<widget class="text" font="title" colour="accent" auto_size="vertical">
+							<translation id="text" translation_id="420675" type="use" value="Squad Summary[COMMENT: squad performance summary during training camp; compiled at the end of the training camp]" />
+						</widget>
+						<widget class="text" id="sSTx" />
+
+					</container>
+
+
+				</container>
+
+				<container class="inner_subtle_box">
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+
+					<!--Duration Container-->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" />
+						<widget class="text" font="title" colour="accent" auto_size="vertical">
+							<translation id="text" translation_id="255373" type="use" value="Duration[COMMENT: scout assignments table; column header for nation/region/etc]" />
+						</widget>
+						<widget class="text" id="dLAB" font="value" />
+
+					</container>
+
+					<!--Estimated Cost Container-->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" />
+						
+						<widget class="text" font="title" colour="accent" auto_size="vertical">
+							<translation id="text" translation_id="335037" type="use" value="Estimated Cost[COMMENT: scout report panel label]" />
+						</widget>
+						<widget class="text" id="esCL" font="value" />
+
+					</container>
+
+				</container>
+
+
+			</container>
+
+			<!--Bottom Area-->
+			<!--Training Information-->
+			<container class="training_overview_panel" file="none" id="TOvR">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="team_training_overview_panel" file="none" id="tOPN">
+
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<container id="tOVh">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<container>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="inner_subtle_box">
+								<translation id="title" translation_id="348321" type="use" value="Squad Fitness[COMMENT: training overview panel; showing an overview of the fitness of your squad]" />
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+								<container id="sQfP" class="pie_chart_with_guide">
+									<record id="pie_chart_properties">
+										<boolean id="draw_instant_hint" value="true" />
+										<integer id="highlight_value" value="10" />
+									</record>
+								</container>
+							</container>
+
+							<container class="inner_subtle_box">
+								<translation id="title" translation_id="348322" type="use" value="Squad Training Happiness[COMMENT: training overview panel; a breakdown of how happy and how fit the players in your squad are]" />
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+								<container id="tHAP" class="pie_chart_with_guide">
+									<record id="pie_chart_properties">
+										<boolean id="draw_instant_hint" value="true" />
+										<integer id="highlight_value" value="10" />
+									</record>
+								</container>
+							</container>
+
+
+						</container>
+
+
+					</container>
+
+					<container id="sesB">
+
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="text" id="brTX" alignment="centre" size="11" />
+					</container>
+          <container id="seMB">
+
+            <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+            <widget class="text" id="mbTX" alignment="centre" size="11" />
+          </container>
+
+        </container>
+
+			</container>
+
+		</container>
+	</container>
+
+</panel>

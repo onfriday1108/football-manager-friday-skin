@@ -1,0 +1,24 @@
+﻿<panel width="400" cancel_mouse_hide="true">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--mentality-->
+		<container class="main_box" height="78" appearance="boxes/popup/standard/titled/paper">
+			<translation id="title" translation_id="348204" type="use" value="Mentality[Comment: prefix used before mentality type text on quick tactical instruction button during match]" />
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="mentality_selection_buttons" id="ment">
+				<record id="default_properties">
+					<flags id="style" value="semi_bold" />
+					<flags id="size" value="large" />
+					<symbol id="appearance" value="buttons/custom/match/shout icon/button" />
+				</record>
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

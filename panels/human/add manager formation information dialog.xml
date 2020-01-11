@@ -1,0 +1,43 @@
+<panel id="dlog" width="400" height="185">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="standard_popup_box">
+		<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container class="manager_profile_panel" id="mPpa" file="none">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+			<widget class="spacer" />
+
+			<!-- Preferred Style -->
+			<widget class="label" alignment="left" font="title" colour="accent">
+				<translation id="text" translation_id="483629" type="use" value="Preferred Tactical Style" />
+			</widget>
+			<widget class="button" id="styl" alignment="left" height="30">
+				<record id="click_event">
+					<integer id="event_id" value="styl" />
+					<integer id="index" value="npps" />
+				</record>
+				<translation id="text" translation_id="483630" type="use" value="Choose a Style" />
+			</widget>
+
+			<widget class="spacer" />
+			<widget class="spacer" />
+
+			<!-- Preferred Formation -->
+			<widget class="label" alignment="left" font="title" colour="accent">
+				<translation id="text" translation_id="229988" type="use" value="Preferred Formation" />
+			</widget>
+			<widget class="button" id="form" alignment="left" height="30" disabled="true">
+				<record id="click_event">
+					<integer id="event_id" value="form" />
+					<integer id="index" value="Nppf" />
+				</record>
+				<translation id="text" translation_id="343389" type="use" value="Choose a Formation[COMMENT: add manager panel; option for the user to select a team from a list]" />
+			</widget>
+		</container>
+	</container>
+
+</panel>

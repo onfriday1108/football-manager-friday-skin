@@ -1,0 +1,18 @@
+﻿<panel width="60">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+    <!-- Trophy picture -->
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+      <widget class="picture" id="" file="pictures/trophies/default/shadow" image_alignment="centre_x, bottom" scale_picture="true" keep_aspect_ratio="true">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+      </widget>
+    
+      <widget class="object_portrait_picture" id="trop" property="trop" scale_picture="true" keep_aspect_ratio="true" comp_use_trophy_icon="true" image_alignment="centre_x, bottom" clickable="false">
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+      </widget>
+    </container>
+
+  
+</panel>

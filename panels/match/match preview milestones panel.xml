@@ -1,0 +1,13 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+	<container class="scrolling_box">
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" id="mils" auto_size="vertical" alignment="top,left" multiline="true"/>
+		</container>
+	</container>
+
+</panel>

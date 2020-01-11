@@ -1,0 +1,33 @@
+﻿<panel>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!-- rules -->
+	<container class="inner_box" id="titl">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="client_object_list_table" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows, printable, keyboard, dont_ask_for_focus" row_height="28" auto_size="vertical">
+			<!--available views-->
+			<record id="viewed_property_ids">
+				<record id="Pnms" />
+				<!-- person name -->
+				<record id="PSag" auto_hide_priority="3" />
+				<!-- person age -->
+				<record id="Pnat" auto_hide_priority="1" />
+				<!-- person nationality -->
+				<record id="Poap" auto_hide_priority="3" />
+				<!-- overall appearances -->
+				<record id="Pogl" auto_hide_priority="4" />
+				<!-- overall goals -->
+				<record id="Poas" auto_hide_priority="4" />
+				<!-- overall assists -->
+				<flags id="Poav" />
+				<!-- overall average rating -->
+			</record>
+		</widget>
+	</container>
+
+
+</panel>

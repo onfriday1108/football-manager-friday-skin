@@ -1,0 +1,56 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="inner_subtle_box" force_title_borders="true">
+		<string id="skin_style" value="title link" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<widget class="label" id="tctx" auto_size="all" colour="faded text" size="small" alignment="left,centre_y" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="right" embed_in_frame="true" inset="10" />
+			<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="8" />
+		</widget>
+
+		<widget class="link_button" section="tcdt" auto_size="all" alignment="left,centre_y" embed_in_frame="true">
+      <translation id="text" translation_id="468959" type="use" value="Formation Analysis[COMMENT: team report; formation analysis header text; revision to ID 316744 to change from tactic to formation analysis]" />
+			<layout class="stick_to_sides_attachment" alignment="left" embed_in_frame="true" inset="10" />
+			<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="8" />
+		</widget>
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="0"/>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="10"/>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_inset="0" />
+
+						<widget class="label" auto_size="vertical" font="label">
+							<translation id="text" translation_id="349786" type="use" value="Most Successful Formation[COMMENT: team report, title for display showing the formation used with the most success by the team]" />
+						</widget>
+
+						<widget class="text" id="form" size="10" style="semi_bold" auto_size="vertical" />
+						<widget class="text" id="fdat" size="8" auto_size="vertical" colour="faded text" />
+					</container>
+
+					<widget class="horizontal_divider"/>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="label" auto_size="vertical" font="label">
+							<translation id="text" translation_id="349788" type="use" value="Most Vulnerable To Facing[COMMENT: team report, title for display showing the formation faced with the least success by the team]" />
+						</widget>
+
+						<widget class="text" id="vfor" size="10" style="semi_bold" auto_size="vertical" />
+
+						<widget class="text" id="vdat" size="8" auto_size="vertical" colour="faded text" />
+
+					</container>
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

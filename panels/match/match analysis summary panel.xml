@@ -1,0 +1,373 @@
+<panel>
+  <list id="object_viewer_panels_for_update">
+    <integer value="conC" />
+    <integer value="plt1" />
+    <integer value="plt2" />
+  </list>
+
+  <!-- These views will be passed to the tables.-->
+  <list id="views">
+    <!-- Number, Person, Incident, Summary -->
+    <record id="0">
+      <translation id="name" translation_id="247414" type="use" value="Overview" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="PinD" sort_disabled="true" />
+        <record id="Pcar" sort_disabled="true" />
+        <record id="TtSM">
+          <boolean id="sort_disabled" value="true" />
+          <record id="column_heading">
+            <flags id="alignment" value="left,centre_y" />
+          </record>
+        </record>
+      </record>
+    </record>
+    <!-- Number, Person, Goals, Shot missed target, Shot hitwoodwork, Shot saved, Shot blocked  -->
+    <record id="1">
+      <translation id="name" translation_id="291479" type="use" value="Shots[COMMENT: match analysis panel; event type]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="sGiC" sort_disabled="true" />
+        <record id="MiST" sort_disabled="true" />
+        <record id="ShWd" sort_disabled="true" />
+        <record id="SSVD" sort_disabled="true" />
+        <record id="SBlc" sort_disabled="true" />
+      </record>
+    </record>
+    <!-- Number, Person, Passes completed, Passes intercepted, Passes out of Pitch, Key Passes, Pass hit woodwork  -->
+    <record id="2">
+      <translation id="name" translation_id="291480" type="use" value="Passes[COMMENT: match analysis panel; event type]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="MPcp" sort_disabled="true" />
+        <record id="PcmP" sort_disabled="true" />
+        <record id="PsIn" sort_disabled="true" />
+        <record id="POfP" sort_disabled="true" />
+        <record id="RcPs" sort_disabled="true" />
+        <record id="KeYP" sort_disabled="true" />
+        <record id="ChCr" sort_disabled="true" />
+        <record id="PsWd" sort_disabled="true" />
+      </record>
+    </record>
+    <!-- Number, Person, Crosses completed, Crosses intercepted, Crosses out of Pitch, Recieved Cross, Cross hit woodwork  -->
+    <record id="3">
+      <translation id="name" translation_id="291481" type="use" value="Crosses[COMMENT: match analysis panel; event type]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="CCPM" sort_disabled="true" />
+        <record id="EnCi" sort_disabled="true" />
+        <record id="COOp" sort_disabled="true" />
+        <record id="RCCE" sort_disabled="true" />
+        <record id="CrWd" sort_disabled="true" />
+      </record>
+    </record>
+    <!-- Number, Person, headers won, Headers lost, Headers Missed, Key Header  -->
+    <record id="4">
+      <translation id="name" translation_id="376394" type="use" value="Aerial Challenges[COMMENT: player stat: headers table label]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="CEHW" sort_disabled="true" />
+        <record id="CEHL" sort_disabled="true" />
+        <record id="HDMS" sort_disabled="true" />
+        <record id="CEKH" sort_disabled="true" />
+      </record>
+    </record>
+    <!-- Number, Person, Tackles won, Tackles lost, Key tackles  -->
+    <record id="5">
+      <translation id="name" translation_id="291483" type="use" value="Tackles[COMMENT: match analysis panel; event type]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="CETW" sort_disabled="true" />
+        <record id="CETL" sort_disabled="true" />
+        <record id="CEKT" sort_disabled="true" />
+      </record>
+    </record>
+    <!-- Number, Person, Foul called, Foul Penalty, Foul Against, Yellow Card, Red Card  -->
+    <record id="6">
+      <translation id="name" translation_id="291484" type="use" value="Fouls[COMMENT: match analysis panel; event type]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="CEFC" sort_disabled="true" />
+        <record id="CEFP" sort_disabled="true" />
+        <record id="CEFA" sort_disabled="true" />
+        <record id="CEYC" sort_disabled="true" />
+        <record id="CERC" sort_disabled="true" />
+      </record>
+    </record>
+    <!-- Number, Person, interceptions, Interceptions missed, Shots blocked defending  -->
+    <record id="7">
+      <translation id="name" translation_id="291486" type="use" value="Interceptions[COMMENT: match analysis panel; event type]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="CEIN" sort_disabled="true" />
+        <record id="CEIM" sort_disabled="true" />
+        <record id="CEBS" sort_disabled="true" />
+      </record>
+    </record>
+    <!-- Number, Person, Throw ins, Attacking freekicks, defensive freekicks, corners  -->
+    <record id="8">
+      <translation id="name" translation_id="306492" type="use" value="Set Pieces[COMMENT: match analysis panel; event type]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="CETI" sort_disabled="true" />
+        <record id="CEAF" sort_disabled="true" />
+        <record id="CEDF" sort_disabled="true" />
+        <record id="CECR" sort_disabled="true" />
+      </record>
+    </record>
+    <!-- Number, Person, Clear cut chances, half chances  -->
+    <record id="9">
+      <translation id="name" translation_id="306493" type="use" value="Scoring Chances[COMMENT: match analysis panel; event type]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="CECc" sort_disabled="true" />
+        <record id="CEhC" sort_disabled="true" />
+      </record>
+    </record>
+    <!-- Number, Person, Saves held, saves tipped, saves parried  -->
+    <record id="10">
+      <translation id="name" translation_id="316588" type="use" value="Saves[COMMENT: match analysis panel; event type]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+        <record id="CESh" sort_disabled="true" />
+        <record id="CeSP" sort_disabled="true" />
+        <record id="CESt" sort_disabled="true" />
+      </record>
+    </record>
+    <!-- Number, Person, Offisides called, Dribble  -->
+    <record id="11">
+      <translation id="name" translation_id="306495" type="use" value="Movement[COMMENT: match analysis panel; event type]" />
+      <record id="view" >
+        <record id="PsnC" sort_disabled="true" />
+        <record id="Pnam" sort_disabled="true" />
+        <record id="Ptcp" sort_disabled="true" />
+
+				<record id="PDru" sort_disabled="true" />
+				<record id="CEOC" sort_disabled="true" />
+        <record id="CEDr" sort_disabled="true" />
+      </record>
+    </record>
+		<!-- Number, Person, Mistake missed interception, Mistake lost ball, Mistake lost challenge, Mistake handball, Mistake conceded penalty, Mistake dropped ball, Mistake leading to goal, Mistake caught on ball  -->
+		<record id="12">
+			<translation id="name" translation_id="383551" type="use" value="Mistakes[COMMENT: match analysis panel; event type]" />
+			<record id="view" >
+				<record id="PsnC" sort_disabled="true" />
+				<record id="Pnam" sort_disabled="true" />
+				<record id="Ptcp" sort_disabled="true" />
+				<record id="CEmi" sort_disabled="true" />
+				<record id="CElb" sort_disabled="true" />
+				<record id="CElc" sort_disabled="true" />
+				<record id="CEmh" sort_disabled="true" />
+				<record id="CEcp" sort_disabled="true" />
+				<record id="CEdp" sort_disabled="true" />
+				<record id="CElg" sort_disabled="true" />
+				<record id="CEcb" sort_disabled="true" />
+			</record>
+		</record>
+  </list>
+
+    <layout class="arrange_vertical_attachment" layout="120,-1" offset="0"  />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+    <container class="bordered_box_transparent">
+      <layout class="arrange_vertical_attachment" layout="30,60" offset="0"  />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+      <container >
+        <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="4" gap="0" />
+
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="left" offset="6" gap="4" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+          <widget class="label" font="title" auto_size="horizontal" alignment="left,centre_y" >
+            <translation id="text" translation_id="247971" type="use" value="Summary" />
+          </widget>
+
+          <!-- These record id's need to be the same as the tables in match analysis stat tables. They are used to show and hide each table. -->
+          <widget class="view_menu_popup" id="stSl" select_event="ctvW" save_session_state="true" embed_in_frame="false"/>
+        </container>
+		  <!-- TODO:: Matt W 26/09/2019 - Bug 13328 removed prozone branding, revisit when known what replacement is-->
+        <widget class="picture" auto_size="horizontal" height="30" image_alignment="right,centre_y" file="" scale_picture="true" keep_aspect_ratio="true" >
+          <layout class="centre_in_parent_attachment" alignment="vertical" />
+        </widget>
+      </container>
+
+      <container id="conC">
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+          <record id="default_properties" hidden="true" />
+
+        <!-- Overview -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0"  />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="0" />
+          <widget class="match_analysis_stat_comparison" comparison_type="1" />
+          <widget class="match_analysis_stat_comparison" comparison_type="39" />
+          <widget class="match_analysis_stat_comparison" comparison_type="40" />
+        </container>
+        
+        <!-- Shots -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="0" />
+          <widget class="match_analysis_stat_comparison" comparison_type="1" />
+          <widget class="match_analysis_stat_comparison" comparison_type="2" />
+          <widget class="match_analysis_stat_comparison" comparison_type="3" />
+        </container>
+
+        <!-- Passes -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="4" />
+          <widget class="match_analysis_stat_comparison" comparison_type="5" />
+          <widget class="match_analysis_stat_comparison" comparison_type="6" />
+          
+          <!-- Would have to use chalkboard data which isn't of the same type as the rest of the stats on this screen. -->
+          <!-- <widget class="match_analysis_stat_comparison" comparison_type="7" /> -->
+        </container>
+
+        <!-- Crosses -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="8" />
+          <widget class="match_analysis_stat_comparison" comparison_type="9" />
+        </container>
+
+        <!-- Aerial Challenges -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="11" />
+          <widget class="match_analysis_stat_comparison" comparison_type="12" />
+          <widget class="match_analysis_stat_comparison" comparison_type="13" />
+        </container>
+
+        <!-- Tackles -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="14" />
+          <widget class="match_analysis_stat_comparison" comparison_type="15" />
+          <widget class="match_analysis_stat_comparison" comparison_type="16" />
+          <widget class="match_analysis_stat_comparison" comparison_type="17" />
+        </container>
+
+        <!-- Fouls -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="18" />
+          <!-- Would have to use chalkboard data which isn't of the same type as the rest of the stats on this screen. -->
+          <!-- <widget class="match_analysis_stat_comparison" comparison_type="19" /> -->
+          <widget class="match_analysis_stat_comparison" comparison_type="20" />
+          <widget class="match_analysis_stat_comparison" comparison_type="21" />
+        </container>
+
+        <!-- Interceptions -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="22" />
+          <!-- Would have to use chalkboard data which isn't of the same type as the rest of the stats on this screen. -->
+          <!-- <widget class="match_analysis_stat_comparison" comparison_type="23" /> -->
+          <widget class="match_analysis_stat_comparison" comparison_type="24" />
+        </container>
+        
+        <!-- Set Pieces -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="25" />
+          <widget class="match_analysis_stat_comparison" comparison_type="26" />
+          <widget class="match_analysis_stat_comparison" comparison_type="27" />
+          <widget class="match_analysis_stat_comparison" comparison_type="28" />
+        </container>
+
+        <!-- Scoring Chances -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="29" />
+          <widget class="match_analysis_stat_comparison" comparison_type="30" />
+        </container>
+
+        <!-- Saves -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="31" />
+          <widget class="match_analysis_stat_comparison" comparison_type="32" />
+          <widget class="match_analysis_stat_comparison" comparison_type="33" />
+          <widget class="match_analysis_stat_comparison" comparison_type="34" />
+        </container>
+
+        <!-- Movement -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="match_analysis_stat_comparison" comparison_type="35" />
+          <widget class="match_analysis_stat_comparison" comparison_type="36" />
+          <widget class="match_analysis_stat_comparison" comparison_type="37" />
+          <!-- Would have to use chalkboard data which isn't of the same type as the rest of the stats on this screen. -->
+          <!-- <widget class="match_analysis_stat_comparison" comparison_type="38" /> -->
+          <widget class="match_analysis_stat_comparison" comparison_type="39" />
+        </container>
+      </container>
+    </container>
+
+    <container>
+      <layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+      <container class="bordered_box_transparent">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+        <widget class="match_player_list_table" id="plt1" mode="fill_rows, stripe_rows" fixed_size_rows="true" auto_size_rows="false" row_height="28" database_table_type="1" row_spacing="2">
+        </widget>
+      </container>
+      <container class="bordered_box_transparent">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+        <widget class="match_player_list_table" id="plt2" mode="fill_rows, stripe_rows" fixed_size_rows="true" auto_size_rows="false" row_height="28" database_table_type="1" row_spacing="2">
+        </widget>
+      </container>
+    </container>
+</panel>

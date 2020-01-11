@@ -1,0 +1,785 @@
+<panel class="client_object_viewer_xml_panel">
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="tabbed_container" appearance="" default_item="deta" save_session_state="true">
+
+		<!--details-->
+		<container class="client_object_label_value_table" id="deta" edit_mode="true">
+			<translation id="title" translation_id="229526" type="use" value="Details" />
+
+			<record id="table_properties" auto_size="none">
+				<flags id="mode" value="fill_rows, stripe_rows, printable" />
+				<boolean id="auto_size_rows" value="true" />
+				<boolean id="fixed_size_rows" value="false" />
+
+				<string id="layout" value="-3,-4" />
+				<integer id="row_spacing" value="0" />
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" />
+					<record indx="1" alignment="left,centre_y" auto_size="vertical" />
+				</list>
+
+				<list id="column_table_properties">
+					<record indx="0">
+						<integer id="left" value="8" />
+					</record>
+					<record indx="1">
+						<flags id="alignment" value="left,centre_y" />
+						<integer id="top" value="2" />
+						<integer id="bottom" value="2" />
+					</record>
+				</list>
+			</record>
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+
+			<list id="viewed_property_ids">
+				<integer value="Pfna" />
+				<integer value="Psna" />
+				<integer value="Pcna" />
+				<integer value="Pfln" />
+				<integer value="PNat" />
+				<integer value="Phcl" />
+				<integer value="Peth" />
+				<integer value="Pske" />
+				<integer value="Pdob" />
+			</list>
+		</container>
+
+		<!--personal data-->
+		<container class="tabbed_container" appearance="" id="pers" default_item="attr" save_session_state="true">
+			<translation id="title" translation_id="395034" type="use" value="Personal Data[COMMENT: FR9189 - title for a tab containing UI to edit a player's personal data]" />
+
+			<!--attributes-->
+			<widget class="client_object_label_value_table" id="attr" edit_mode="true">
+				<translation id="title" translation_id="229822" type="use" value="Attributes" />
+
+				<boolean id="should_force_refresh" value="true" />
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<record id="Pada">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned" />
+					</record>
+					<record id="Pamb">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned" />
+					</record>
+					<record id="Ploy">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned" />
+					</record>
+					<record id="Ppre">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned" />
+					</record>
+					<record id="Ppro">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned" />
+					</record>
+					<record id="Pspo">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned" />
+					</record>
+					<record id="Ptem">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned" />
+					</record>
+					<record id="Pcvy">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned" />
+					</record>
+				</list>
+
+			</widget>
+
+
+			<!--languages-->
+			<widget class="client_object_list_property_panel" id="lang" edit_mode="true">
+				<translation id="title" translation_id="229371" type="use" value="Languages" />
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="prof" />
+
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="lang" />
+								<!-- language -->
+								<flags id="prof" />
+								<!-- proficiency -->
+								<flags id="csln" />
+								<!-- cannot speak language -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/person language properties" />
+
+				<integer id="viewed_property_ids" value="PElg" />
+
+			</widget>
+
+		</container>
+
+		<!--player data-->
+		<container class="tabbed_container" appearance="" id="play" default_item="gene" save_session_state="true">
+			<translation id="title" translation_id="293595" type="use" value="Player Data" />
+
+			<!--general-->
+			<widget class="client_object_label_value_table" id="gene" edit_mode="true">
+				<translation id="title" translation_id="248359" type="use" value="General" />
+
+				<boolean id="should_force_refresh" value="true" />
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="PCAB" />
+					<integer value="ERCA" />
+					<integer value="PPAB" />
+					<record id="PCON">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pdir">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pimp">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pipr">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pver">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<integer value="Phei" />
+					<integer value="Pwei" />
+				</list>
+
+			</widget>
+
+			<!--positions-->
+			<widget class="client_object_label_value_table" id="posi" edit_mode="true">
+				<translation id="title" translation_id="230082" type="use" value="Positions" />
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<!-- This forces tabbed_container to update when new data is gathered so we can figure if it is enabled - when we're using client/server data retrieval-->
+				<attachment class="event_relay_attachment" event_id="CoUp">
+					<record id="action_event">
+						<flags id="event_id" value="mbrM" />
+						<flags id="event_target" value="prnt" />
+					</record>
+				</attachment>
+
+				<!-- This forces tabbed_container to update when new data is gathered so we can figure if it is enabled - when we're getting properties instantly from the server-->
+				<attachment class="event_relay_attachment" event_id="FRCO">
+					<record id="action_event">
+						<flags id="event_id" value="mbrM" />
+						<flags id="event_target" value="prnt" />
+					</record>
+				</attachment>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="PReA"/>
+            
+					<record id="Pgoa">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pdls">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pdce">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pdrs">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pwbl">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pwbr">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pdmc">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pmls">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pmce">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pmrs">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Paml">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pamc">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pamr">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Pace">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Plft">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+					<record id="Prft">
+						<record id="widget_edit_info" class="attribute_adjustable_bar_skinned">
+							<record id="object_property" set_property="mxAv" />
+						</record>
+					</record>
+				</list>
+
+			</widget>
+
+			<!--mental-->
+			<widget class="client_object_label_value_table" id="ment" edit_mode="true">
+				<translation id="title" translation_id="230106" type="use" value="Mental" />
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+			</widget>
+
+			<!--physical-->
+			<widget class="client_object_label_value_table" id="phys" edit_mode="true">
+				<translation id="title" translation_id="230003" type="use" value="Physical" />
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+			</widget>
+
+			<!--technical-->
+			<widget class="client_object_label_value_table" id="tech" edit_mode="true">
+				<translation id="title" translation_id="229413" type="use" value="Technical" />
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<!-- This forces tabbed_container to update when new data is gathered so we can figure if it is enabled -->
+				<attachment class="event_relay_attachment" event_id="CoUp">
+					<record id="action_event">
+						<flags id="event_id" value="mbrM" />
+						<flags id="event_target" value="prnt" />
+					</record>
+				</attachment>
+
+				<!-- This forces tabbed_container to update when new data is gathered so we can figure if it is enabled - when we're getting properties instantly from the server-->
+				<attachment class="event_relay_attachment" event_id="FRCO">
+					<record id="action_event">
+						<flags id="event_id" value="mbrM" />
+						<flags id="event_target" value="prnt" />
+					</record>
+				</attachment>
+
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+						<record>
+							<!-- Disable if goalkeeper -->
+							<integer id="get_property" value="Pigo" />
+							<integer id="set_property" value="itds" />
+						</record>
+					</list>
+				</record>
+
+			</widget>
+
+			<!--goalkeeping-->
+			<widget class="client_object_label_value_table" id="goal" edit_mode="true">
+				<translation id="title" translation_id="230024" type="use" value="Goalkeeping" />
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<!-- This forces tabbed_container to update when new data is gathered so we can figure if it is enabled -->
+				<attachment class="event_relay_attachment" event_id="CoUp">
+					<record id="action_event">
+						<flags id="event_id" value="mbrM" />
+						<flags id="event_target" value="prnt" />
+					</record>
+				</attachment>
+
+				<!-- This forces tabbed_container to update when new data is gathered so we can figure if it is enabled - when we're getting properties instantly from the server-->
+				<attachment class="event_relay_attachment" event_id="FRCO">
+					<record id="action_event">
+						<flags id="event_id" value="mbrM" />
+						<flags id="event_target" value="prnt" />
+					</record>
+				</attachment>
+
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+						<record>
+							<!-- Enable if goalkeeper -->
+							<integer id="get_property" value="Pigo" />
+							<integer id="set_property" value="iten" />
+						</record>
+					</list>
+				</record>
+
+			</widget>
+
+			<!--preferred moves-->
+			<container id="cnt2">
+				<translation id="title" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="client_object_label_value_table" id="pmt1" edit_mode="true">
+
+					<record id="table_properties" auto_size="none">
+						<flags id="mode" value="fill_rows, stripe_rows, printable" />
+						<boolean id="auto_size_rows" value="true" />
+						<boolean id="fixed_size_rows" value="false" />
+
+						<string id="layout" value="-3,-4" />
+						<integer id="row_spacing" value="0" />
+						<list id="column_widget_properties">
+							<record indx="0" alignment="left,centre_y" />
+							<record indx="1" alignment="left,centre_y" auto_size="vertical" />
+						</list>
+
+						<list id="column_table_properties">
+							<record indx="0">
+								<integer id="left" value="8" />
+							</record>
+							<record indx="1">
+								<flags id="alignment" value="left,centre_y" />
+								<integer id="top" value="2" />
+								<integer id="bottom" value="2" />
+							</record>
+						</list>
+					</record>
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+
+				</widget>
+
+				<widget class="client_object_label_value_table" id="pmt2" edit_mode="true">
+
+					<record id="table_properties" auto_size="none">
+						<flags id="mode" value="fill_rows, stripe_rows, printable" />
+						<boolean id="auto_size_rows" value="true" />
+						<boolean id="fixed_size_rows" value="false" />
+
+						<string id="layout" value="-3,-4" />
+						<integer id="row_spacing" value="0" />
+						<list id="column_widget_properties">
+							<record indx="0" alignment="left,centre_y" />
+							<record indx="1" alignment="left,centre_y" auto_size="vertical" />
+						</list>
+
+						<list id="column_table_properties">
+							<record indx="0">
+								<integer id="left" value="8" />
+							</record>
+							<record indx="1">
+								<flags id="alignment" value="left,centre_y" />
+								<integer id="top" value="2" />
+								<integer id="bottom" value="2" />
+							</record>
+						</list>
+					</record>
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+
+				</widget>
+
+			</container>
+		</container>
+
+		<!--relationships-->
+		<container class="tabbed_container" appearance="" id="rela" default_item="prfp" save_session_state="true">
+			<translation id="title" translation_id="308474" type="use" value="Relationships[COMMENT: Persons relationships with other people]" />
+
+			<!--favourite people-->
+			<widget class="client_object_list_property_panel" id="prfp" edit_mode="true">
+				<translation id="title" translation_id="293060" type="use" value="Favourite People" />
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="leve" />
+
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="pers" />
+								<!-- person -->
+								<flags id="leve" />
+								<!-- rel level -->
+								<flags id="perm" />
+								<!-- Permenant -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/relationship properties" />
+
+				<integer id="viewed_property_ids" value="Pfvp" />
+
+			</widget>
+
+			<!--disliked people-->
+			<widget class="client_object_list_property_panel" id="prdp" edit_mode="true">
+				<translation id="title" translation_id="293061" type="use" value="Disliked People" />
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="leve" />
+
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="pers" />
+								<!-- person -->
+								<flags id="leve" />
+								<!-- rel level -->
+								<flags id="perm" />
+								<!-- Permenant -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/relationship properties" />
+
+				<integer id="viewed_property_ids" value="Pdsp" />
+
+			</widget>
+
+			<!--favourite clubs-->
+			<widget class="client_object_list_property_panel" id="prfc" edit_mode="true">
+				<translation id="title" translation_id="293421" type="use" value="Favourite Clubs" />
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="leve" />
+
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="club" />
+								<!-- club -->
+								<flags id="leve" />
+								<!-- rel level -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/relationship properties" />
+
+				<integer id="viewed_property_ids" value="Pfvc" />
+
+			</widget>
+
+			<!--disliked clubs-->
+			<widget class="client_object_list_property_panel" id="prdc" edit_mode="true">
+				<translation id="title" translation_id="293422" type="use" value="Disliked Clubs" />
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="leve" />
+
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="club" />
+								<!-- club -->
+								<flags id="leve" />
+								<!-- rel level -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/relationship properties" />
+
+				<integer id="viewed_property_ids" value="Pdsc" />
+
+			</widget>
+
+		</container>
+	</container>
+
+	<!--Show the budget value-->
+	<widget class="client_object_label_value_table" id="bvLT" height="30">
+
+		<record id="table_properties" auto_size="none">
+			<flags id="mode" value="stripe_rows, printable" />
+			<boolean id="auto_size_rows" value="true" />
+			<boolean id="fixed_size_rows" value="false" />
+
+			<string id="layout" value="-1, 120" />
+			<integer id="row_spacing" value="0" />
+			<list id="column_widget_properties">
+				<record indx="0" alignment="right,centre_y" />
+				<record indx="1" alignment="right,centre_y" auto_size="vertical" style="bold" colour="accent" />
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0">
+					<integer id="left" value="8" />
+				</record>
+				<record indx="1">
+					<flags id="alignment" value="left,centre_y" />
+					<integer id="top" value="2" />
+					<integer id="bottom" value="2" />
+				</record>
+			</list>
+		</record>
+
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+
+		<list id="viewed_property_ids">
+			<integer value="fDBu" />
+		</list>
+
+	</widget>
+
+</panel>

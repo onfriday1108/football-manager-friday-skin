@@ -1,0 +1,133 @@
+<panel id="dlog" height="555">
+
+	<translation id="title" translation_id="292630" type="use" value="Edit Filter" />
+	<!-- stick all items to width of box -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<!-- middle widget (table) grows to size -->
+	<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="0" />
+
+	<!-- add custom icon to top right corner of dialog -->
+	<widget class="picture" id="cico" file="icons/dialog/search" auto_size="all" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true" />
+	</widget>
+
+	<!-- area containing import button -->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" />
+
+		<widget class="label" auto_size="horizontal">
+			<translation id="text" translation_id="316543" type="use" value="Specify the exact terms under which you wish to search for a player[filter dialog text]" />
+		</widget>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" apply_to_children="true" inset="0" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="popup_button" id="impo" auto_size="all" fixed="true" appearance="buttons/standard/normal/button">
+				<translation id="text" translation_id="316605" type="use" value="Quick Search" />
+				<event id="menu_layout_notification_event" event_id="mlne" event_target="impo" />
+				<record id="select_event">
+					<flags id="event_id" value="impo" />
+				</record>
+			</widget>
+		</container>
+	</container>
+
+	<!-- group box containing the 2 filter tables -->
+	<container>
+
+		<!-- stick all items to width of box -->
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- bottom table stretches to size, top table takes up rest -->
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+
+		<!-- table containing filter compare rules -->
+		<widget class="filter_table" id="fcrt" show_compare_rules="true" mode="fill_rows" />
+
+		<!-- table containing all other filter rules -->
+		<widget class="filter_table" id="fort" show_compare_rules="false" mode="0" auto_size="vertical" />
+
+		<container id="attr">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" />
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+				<layout class="fit_children_attachment" alignment="vertical" />
+
+				<widget class="label" auto_size="horizontal" alignment="right,centre_y">
+					<translation id="text" translation_id="297324" type="use" value="Attributes To Match:[COMMENT: player search panel; string identifying drop-down from which to choose how many attributes can fail the filter]" />
+				</widget>
+				<widget class="selection_list" id="atmw" select_event="atme" width="120" />
+			</container>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="right" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+				<widget class="label" auto_size="horizontal" alignment="right,centre_y">
+					<translation id="text" translation_id="297325" type="use" value="Adjust All Attributes:[COMMENT: player search panel; string identifying button from which to increase and decrease all attribute filters]" />
+				</widget>
+				<widget class="button" id="att-" alignment="centre" click_event="at-e">
+					<translation id="text" translation_id="297326" type="use" value="Down[COMMENT: player search panel; string identifying button from which to increase and decrease all attribute filters]" />
+				</widget>
+				<widget class="button" id="att+" alignment="centre" click_event="at+e">
+					<translation id="text" translation_id="297327" type="use" value="Up[COMMENT: player search panel; string identifying button from which to increase and decrease all attribute filters]" />
+				</widget>
+			</container>
+
+		</container>
+
+
+
+	</container>
+
+	<!-- container holding 2 rows of buttons -->
+	<container id="butt">
+
+		<!-- vertical arrangement with children sticking to left and right side-->
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- group box containing top row -->
+		<container>
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+
+			<widget class="icon_button" id="attr" auto_size="all" icon="icons/16px/attributes">
+				<translation id="text" translation_id="247473" type="use" value="Attributes..." />
+				<record id="click_event">
+					<flags id="event_id" value="attr" />
+				</record>
+			</widget>
+
+		</container>
+
+		<!-- bottom row of buttons -->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" />
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+			<widget class="icon_button" id="clea" auto_size="all" icon="icons/16px/clear">
+				<translation id="text" translation_id="229717" type="use" value="Clear" />
+				<record id="click_event">
+					<flags id="event_id" value="clea" />
+				</record>
+			</widget>
+
+			<container file="person/person filter buttons" />
+
+		</container>
+
+	</container>
+</panel>

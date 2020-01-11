@@ -1,0 +1,33 @@
+<panel width="220" wants_mouse_events="true">
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+	<container class="standard_popup_box">
+
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" do_not_size="true" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<container class="inner_box_no_margin" height="35">
+			<layout class="arrange_horizontal_attachment" layout="30,-1" offset="4" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<widget class="number_label" id="totC" alignment="centre" size="xlarge"/>
+
+			<widget class="text" alignment="left,centre_y" size="small" style="semi_bold" >
+				<translation id="text" translation_id="377877" type="use" value="Events[COMMENT: FR 8117; section title; calendar filtered showing only events]" />
+			</widget>
+		</container>
+
+		<container class="scrolling_box" auto_size="vertical" auto_size_maximum_height="500">
+			<container class="inner_box_no_margin" id="WiCn">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" do_not_size="true" />
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="6"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- This is where the individual popups are created. -->
+			</container>
+		</container>
+	</container>
+</panel>

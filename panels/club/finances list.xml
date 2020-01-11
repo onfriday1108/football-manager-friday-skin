@@ -1,0 +1,139 @@
+<panel save_session_state="true">
+
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container class="main_box" force_title_borders="true" id="ttbx">
+
+		<!-- buttons area -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="fnlb">
+				<translation id="text" translation_id="229821" type="use" value="Finances" />
+			</widget>
+			<widget class="view_menu_label" id="rclb" navigation_focus_target="false">
+				<translation id="text" translation_id="320574" type="use" value="Richest[COMMENT: richest clubs section on World screen; section showing richest clubs in the game]" />
+			</widget>
+			<!-- view button -->
+			<widget class="view_menu_popup" id="view" save_session_state="true" select_event="view">
+				<list id="items">
+					<record id="Covv">
+						<translation id="name" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]" />
+					</record>
+					<record id="Cfis">
+						<translation id="name" translation_id="275841" type="use" value="Financial Status[COMMENT: finances list panel; financial status view option]" />
+					</record>
+					<record id="Ccba">
+						<translation id="name" translation_id="255029" type="use" value="Bank Balance[COMMENT: finances list panel; bank balance view option]" />
+					</record>
+					<record id="Ctro">
+						<translation id="name" translation_id="255030" type="use" value="Turnover[COMMENT: finances list panel; turnover view option]" />
+					</record>
+					<record id="Cfpl">
+						<translation id="name" translation_id="255031" type="use" value="Profit[COMMENT: finances list panel; profit view option]" />
+					</record>
+					<record id="Cfls">
+						<translation id="name" translation_id="255032" type="use" value="Loss[COMMENT: finances list panel; loss view option]" />
+					</record>
+					<record id="Cpls">
+						<translation id="name" translation_id="356917" type="use" value="Profit (Last Season)[COMMENT: team properties, finance label]" />
+					</record>
+					<record id="Clls">
+						<translation id="name" translation_id="356892" type="use" value="Loss (Last Season)[COMMENT: team properties, finance label]" />
+					</record>
+					<record id="Ctfu">
+						<translation id="name" translation_id="356989" type="use" value="Transfer Budget (Season)[COMMENT: team properties, finance label]" />
+					</record>
+					<record id="Ctfc">
+						<translation id="name" translation_id="356988" type="use" value="Transfer Budget (Current)[COMMENT: team properties, finance label]" />
+					</record>
+					<record id="Cwwb">
+						<translation id="name" translation_id="310128" type="use" value="Wage Budget[COMMENT: contract offer screen - comments table]" />
+					</record>
+					<record id="Ccww">
+						<translation id="name" translation_id="255028" type="use" value="Wage Bill[COMMENT: finances list panel; wage bill view option]" />
+					</record>
+					<record id="Caww">
+						<translation id="text" translation_id="284318" type="use" value="Average Wage[COMMENT: heading; team_information_panel; average wage]" />
+					</record>
+					<record id="Cmwa">
+						<translation id="name" translation_id="356896" type="use" value="Maximum Wage Allowed[COMMENT: team properties, finance label]" />
+					</record>
+					<record id="Csth">
+						<translation id="name" translation_id="275842" type="use" value="Season Ticket Holders" />
+					</record>
+					<record id="Ctpr">
+						<translation id="name" translation_id="275843" type="use" value="Average Ticket Price[COMMENT: finances list panel; average ticket price view option]" />
+					</record>
+					<record id="Cstp">
+						<translation id="name" translation_id="275844" type="use" value="Average Season Ticket Price[COMMENT: finances list panel; average season ticket price view option]" />
+					</record>
+					<record id="Crat">
+						<translation id="name" translation_id="356984" type="use" value="Ticket Price Ratio[COMMENT: team properties, finance label]" />
+					</record>
+					<record id="Cstr">
+						<translation id="name" translation_id="356930" type="use" value="Season Ticket Price Ratio[COMMENT: team properties, finance label]" />
+					</record>
+				</list>
+				<flags id="slct" value="all" />
+			</widget>
+
+		</container>
+
+		<!-- embedded buttons -->
+		<container id="btns" embed_in_frame="true">
+
+			<attachment_group class="title_embedded_panel_right" />
+
+			<widget class="subtle_button" id="sfcb" auto_size="all" click_event="shfl" embed_in_frame="true" save_session_state="true">
+				<translation id="text" translation_id="247166" type="use" value="Show Filters" />
+			</widget>
+
+		</container>
+
+		<widget class="table" id="tabl" mode="fill_rows, stripe_rows,keyboard,needs_sorting" save_session_state="true" layout="50, 200, 150, -1">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+
+			<!-- table mode does not seem to be working for this table -->
+			<boolean id="auto_size_rows" value="true" />
+			<boolean id="fixed_size_rows" value="false" />
+			<integer id="row_spacing" value="0" />
+
+			<record id="default_properties" spec="text" alignment="left,centre_y" />
+
+			<list id="column_widget_properties">
+				<record index="2" navigation_focus_target="false"  />
+				<record index="3" auto_size="vertical"  />
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" left="4" />
+				<record indx="3" top="2" bottom="2" right="4" />
+			</list>
+
+		</widget>
+
+	</container>
+
+	<!-- filter editing panel -->
+	<widget class="filter_panel" id="filp" width="200">
+
+		<!-- buttons area -->
+		<container id="btnf" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<!-- filter menu -->
+			<widget class="subtle_button" id="hfcb" click_event="hdfl" auto_size="all" embed_in_frame="true" save_session_state="true">
+				<translation id="text" translation_id="247168" type="use" value="Hide Filters" />
+			</widget>
+
+		</container>
+
+		<boolean id="hidn" value="true" />
+	</widget>
+</panel>

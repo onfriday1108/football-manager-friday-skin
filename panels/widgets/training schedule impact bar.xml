@@ -1,0 +1,7 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+	<container class="main_box" appearance="boxes/custom/dynamics/bar/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<widget class="horizontal_split_value_bar" negative_colour="negative" positive_colour="positive" max_value="30" min_value="-30" id="mcbb"/>
+	</container>
+</panel>

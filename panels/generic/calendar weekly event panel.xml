@@ -1,0 +1,10 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+	<layout class="fit_children_attachment" alignment="horizontal" offset="0" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true"/>
+
+	<widget class="text" id="fixN" auto_size="all" size="medium" hidden="true" alignment="left" />
+	<widget class="link_text" id="likT" auto_size="all" size="medium" hidden="true" alignment="left" />
+	<widget class="icon_button" id="icBt" auto_size="all" hidden="true" />
+</panel>

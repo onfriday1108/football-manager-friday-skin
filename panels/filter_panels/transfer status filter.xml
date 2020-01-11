@@ -1,0 +1,35 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="242853" type="use" value="Status" />
+
+		<list id="objL">
+		<!-- these ids needs to match up with CLIENT_TRANSFER_STATUS enum values -->
+			<record id="offe">
+				<translation id="text" translation_id="338602" type="use" value="Unresponded Offers[COMMENT - transfer status filter text; new offers]" />
+			</record>
+			<record id="nego">
+				<translation id="text" translation_id="257346" type="use" value="Negotiations[COMMENT - transfer status filter text; negotiated offers]" />
+			</record>
+			<record id="cont">
+				<translation id="text" translation_id="257347" type="use" value="Contract[COMMENT - transfer status filter text; offers at contract stage]" />
+			</record>
+			<record id="work">
+				<translation id="text" translation_id="257348" type="use" value="Work Permit[COMMENT - transfer status filter text; offers at work permit stage]" />
+			</record>
+			<record id="tbco">
+				<translation id="text" translation_id="257349" type="use" value="To Be Confirmed[COMMENT - transfer status filter text; offers awaiting confirmation]" />
+			</record>
+			<record id="conf">
+				<translation id="text" translation_id="257350" type="use" value="Confirmed[COMMENT - transfer status filter text; confirmed offers]" />
+			</record>
+			<record id="canc">
+				<translation id="text" translation_id="257351" type="use" value="Cancelled[COMMENT - transfer status filter text; cancelled offers]" />
+			</record>
+			
+		</list>
+
+	</container>
+
+</panel>

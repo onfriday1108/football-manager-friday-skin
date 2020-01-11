@@ -1,0 +1,22 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<widget class="table" id="hist" layout="20,-1,-2,90" mode="0" >
+
+		<boolean id="fixed_size_rows" value="true"/>
+		<boolean id="auto_size_rows" value="true"/>
+		<integer id="row_spacing" value="10"/>
+
+		<list id="column_widget_properties">
+			<record index="0" alignment="centre_x" style="vertical" auto_size="vertical"/>
+			<record index="1" alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="50" width="50" image_alignment="centre"/>
+			<record index="3" alignment="left,centre_y" spec="text" style="light_bold"/>
+		</list>
+
+		<list id="column_table_properties">
+			<record index="1" left="5"/>
+			<record index="2" left="5" alignment="centre"/>
+		</list>
+
+	</widget>
+</panel>

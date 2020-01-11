@@ -1,0 +1,113 @@
+<panel id="dlog" width="750">
+	<layout class="arrange_vertical_attachment" alignment="top" />
+	<layout class="centre_in_parent_attachment" alignment="vertical"/>
+	<layout class="fit_children_attachment" alignment="vertical,fill" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4"/>
+	<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+
+	<widget class="text" id="text" auto_size="vertical" alignment="centre"/>
+
+	<container height="8"/>
+
+	<container>
+
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+
+		<container id="durc" class="inner_subtle_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="8" horizontal_alignment="horizontal"  />
+
+			<widget class="label" auto_size="vertical" font="label">
+				<translation id="text" translation_id="230113" type="use" value="Duration"/>
+			</widget>
+
+			<widget class="popup_button" id="durm" auto_size="vertical"/>
+		</container>
+
+		<container id="posc" class="inner_subtle_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="8" horizontal_alignment="horizontal" />
+
+			<widget class="label" auto_size="vertical" font="label">
+				<translation id="text" translation_id="348259" type="use" value="Position to be played in[COMMENT: move to affiliate dialog; tell the partner club where to play a player being sent there]"/>
+			</widget>
+
+			<widget class="position_popup" id="posm" short_position_string="false" display_compound_positions="true" alignment="left" auto_size="none" height="30" sele="SePo"/>
+		</container>
+
+		<container id="rolc" class="inner_subtle_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="8" horizontal_alignment="horizontal"  />
+
+			<widget class="label" auto_size="vertical" font="label">
+				<translation id="text" translation_id="436515" type="use" value="Preferred Role[COMMENT: FR 17873; role popup on loan offer screen]"/>
+			</widget>
+
+			<widget class="popup_button" id="rolp" alignment="left" auto_size="none" height="30"/>
+
+		</container>
+
+	</container>
+
+	<container id="cbco" class="inner_subtle_box" >
+
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+
+		<container>
+
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+			<widget class="check_box" id="lpcm">
+				<translation id="text" translation_id="243587" type="use" value="Can play in cup matches"/>
+			</widget>
+
+			<widget class="check_box" id="lpao">
+				<translation id="text" translation_id="243588" type="use" value="Can play against own team"/>
+			</widget>
+
+			<widget class="check_box" id="lpab">
+				<translation id="text" translation_id="420724" type="use" value="Can play against own club's B team[COMMENT: transfer offer loan option type, works alongside IDs 243587, 243588, 243589 and 383274]"/>
+			</widget>
+
+			<widget class="check_box" id="lcbr">
+				<translation id="text" translation_id="243589" type="use" value="Can be recalled"/>
+			</widget>
+
+		</container>
+
+		<container>
+
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+			<widget class="check_box" id="lcnt">
+				<translation id="text" translation_id="420725" type="use" value="Loan cannot be terminated[COMMENT: FR 13832; loan offer; clause to prevent loaning team from terminating the loan early]"/>
+			</widget>
+
+			<widget class="check_box" id="lpmc">
+				<translation id="text" translation_id="441100" type="use" value="Can play for parent club[COMMENT: loan clause]"/>
+			</widget>
+
+			<widget class="check_box" id="lprs">
+				<translation id="text" translation_id="383274" type="use" value="Can play for parent club reserves[COMMENT: loan clause]"/>
+			</widget>
+
+			<widget class="check_box" id="lpoc">
+				<translation id="text" translation_id="463722" type="use" value="Can play for parent club in cup matches[COMMENT: FR 12067; loan clause]"/>
+			</widget>
+		</container>
+	</container>
+
+	<container height="8"/>
+
+	<container>
+
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill"/>
+
+		<!-- don't show this dialog again checkbox -->
+		<widget class="check_box" id="atcc" hidden="true">
+			<translation id="text" translation_id="301057" type="use" value="Don't show this message again.[COMMENT: The title of a checkbox displayed in a dialog, which allows the user to request that the dialog isn't displayed again.]"/>
+		</widget>
+
+		<!-- standard buttons / these get shown & hidden by subclasses -->
+		<container id="btns" file="dialog buttons"/>
+
+	</container>
+
+</panel>

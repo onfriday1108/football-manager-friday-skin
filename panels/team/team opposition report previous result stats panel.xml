@@ -1,0 +1,30 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <container class="main_box" force_title_borders="true">
+    <layout class="arrange_vertical_attachment" alignment="top" gap="2" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <string id="skin_style" value="title link" />
+
+    <widget class="link_button" section="mtst" auto_size="all" alignment="left,centre_y">
+      <translation id="text" translation_id="247439" type="use" value="Match Stats" />
+    </widget>
+
+    <container height="6">
+    </container>
+
+    <widget class="label" alignment="left,centre_y" auto_size="vertical" font="label">
+      <translation id="text" translation_id="232851" type="use" value="Possession" />
+    </widget>
+
+    <widget class="horizontal_comparison_bar" height="10" id="poSe" label_width="0" animation_file="none"/>
+
+    <widget class="label" alignment="left,centre_y" auto_size="vertical" font="label">
+      <translation id="text" translation_id="247381" type="use" value="Shots" />
+    </widget>
+    
+    <widget class="horizontal_comparison_bar" height="10" id="shtS" label_width="0" animation_file="none"/>
+    
+  </container>
+</panel>

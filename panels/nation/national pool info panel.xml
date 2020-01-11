@@ -1,0 +1,24 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box" id="tstb">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container class="table" id="tsit" mode="fill_rows, stripe_rows" layout="-1,20,30">
+
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" spec="text" multiline="false" />
+				<record index="1" auto_size="all" />
+				<record index="2" image_alignment="centre"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record index="1" alignment="right,centre_y"/>
+				<record index="2" alignment="centre"/>
+			</list>
+
+		</container>
+
+	</container>
+</panel>

@@ -1,0 +1,12 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+	<container class="titled_box" id="YCpr"  name="youth_report">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+		<container id="Ypcs" entity_layout_id="at02">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		</container>
+	</container>
+</panel>

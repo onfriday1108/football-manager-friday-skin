@@ -1,0 +1,23 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal"/>
+	
+	<!-- main body text -->
+	<widget class="inbox_body_text" id="bdtx" />
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="arrange_horizontal_attachment" layout="250, -1" offset="0" >
+			<global id="gap" name="ui.main_box_gap"/>
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+		<container class="inbox_mini_profile_player_details_panel" id="psdt" width="290"/>
+
+		<container class="vertical_arrange_container" id="infc" auto_size="vertical" width="300" offset="0" inset="0" draw_horizontal_dividers="true">
+			<global id="gap" name="ui.inner_box_gap"/>
+
+			<!-- additional information boxes will be added to this container -->
+		</container>
+	</container>
+
+</panel>

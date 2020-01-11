@@ -1,0 +1,14 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <container class="scrolling_box">
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" do_not_size="true"/>
+      <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="4"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+      <widget class="client_object_viewer_xml_panel" file="person/person contract info" id="cntp"/>
+    </container>
+  </container>
+
+</panel>  

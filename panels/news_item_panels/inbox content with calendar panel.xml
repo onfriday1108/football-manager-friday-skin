@@ -1,0 +1,13 @@
+<panel height="700">
+  <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+  <boolean id="should_force_refresh" value="true"/>
+
+  <list id="properties_to_forward">
+    <record get_property="datS" set_property="datS" target="cldr"/>
+  </list>
+
+  <!-- content area -->
+   <container class="calendar_panel" id="cldr" file="generic/calendar month view inbox"/>
+
+</panel>

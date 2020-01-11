@@ -1,0 +1,48 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<widget class="table" id="know" layout="180,-1" mode="fill_rows, stripe_rows" >
+		<boolean id="fixed_size_rows" value="false"/>
+		<boolean id="auto_size_rows" value="true"/>
+		<boolean id="all_content_same_height" value="false"/>
+		<flags id="auto_size" value="vertical" />
+
+		<!-- everything should be left aligned -->
+		<record id="default_properties">
+			<flags id="alignment" value="left,centre_y"/>
+		</record>
+
+		<!-- 2nd and 4th columns should be yellow, and have the same text style as the labels -->
+		<list id="column_widget_properties">
+			<record indx="1" spec="text" colour="selection"/>
+		</list>
+
+		<!-- table isn't sortable -->
+		<list id="column_table_properties">
+			<record indx="0" sort_disabled="true"/>
+			<record indx="1" sort_disabled="true" top="2" bottom="2"/>
+			<record indx="2" sort_disabled="true" top="2" bottom="2"/>
+		</list>
+
+		<widget class="label" id="cpkc" col="0" row="0"/>
+		<widget class="horizontal_percentage_bar" id="lknp" col="1" row="0" auto_size="vertical" label_width="0"/>
+
+		<widget class="label" id="tflb" col="0" row="1"/>
+		<widget class="horizontal_percentage_bar" id="tfbr" col="1" row="1" auto_size="vertical" label_width="0"/>
+
+		<widget class="label" id="pdlb" col="0" row="2"/>
+		<widget class="horizontal_percentage_bar" id="pdbr" col="1" row="2" auto_size="vertical" label_width="0"/>
+
+		<widget class="label" id="tclb" col="0" row="3"/>
+		<widget class="horizontal_percentage_bar" id="tcbr" col="1" row="3" auto_size="vertical" label_width="0"/>
+
+		<widget class="label" id="trlb" col="0" row="4"/>
+		<widget class="horizontal_percentage_bar" id="trbr" col="1" row="4" auto_size="vertical" label_width="0"/>
+
+		<widget class="label" id="sflb" col="0" row="5"/>
+		<widget class="horizontal_percentage_bar" id="sfbr" col="1" row="5" auto_size="vertical" label_width="0"/>
+
+	</widget>
+	<!-- table -->
+
+</panel>

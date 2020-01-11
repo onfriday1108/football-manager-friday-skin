@@ -1,0 +1,32 @@
+<panel>
+	<string id="title" value="Player Target Debug" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" layout_children="true"/>
+	<container class="main_box" id="titl">
+		<string id="title" value="Temp Tastic" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<widget class="table" id="ditb" layout="-1, -1" mode="fill_rows, stripe_rows,printable" row_height="20" row_spacing="0" >
+
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="306487" type="use" value="Debug Info" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="227806" type="use" value="Value" />
+				</record>
+			</list>
+
+			<record id="default_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+
+			<list id="column_table_properties">
+				<record indx="0" sort_disabled="true" />
+			</list>
+
+		</widget>
+
+	</container>
+</panel>

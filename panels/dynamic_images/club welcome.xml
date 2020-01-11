@@ -1,0 +1,101 @@
+<!-- XML for the news item dynamic image showing info about a new player at user's club. Use with PROPERTY_LIST_VIEWER_XML_PANEL -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- Background image -->
+	<container class="client_object_viewer_xml_panel" id="bgim">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<!-- PROP_CLUB -->
+		<record id="object_property" get_property="Cclu" set_property="objt" />
+
+		<widget class="picture" id="CoPi" file="photos/dynamic/generic/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<!-- PROP_DARK_ACCENT_COLOUR - red replacement-->
+			<record id="object_property" get_property="oDAC" set_property="rrep" />
+		</widget>
+
+		<widget class="picture" id="WSha" file="photos/dynamic/welcome/shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+		</widget>
+
+		<widget class="picture" id="WCol" file="photos/dynamic/welcome/colours" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<record id="object_property">
+				<list id="get_properties">
+					<!-- PROP_TEAM_FOREGROUND_COLOUR1 -->
+					<record get_property="tbcl" set_property="rrep" dont_set_hint="true"/>
+					<!-- PROP_TEAM_BACKGROUND_COLOUR1 -->
+					<record get_property="oSCn" set_property="brep" dont_set_hint="true"/>
+				</list>
+			</record>
+		</widget>
+
+	</container>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-18,-20,-2" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!-- Player picture -->
+		<widget class="object_portrait_picture" image_alignment="centre_x,bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+			<!-- PROP_PERSON -->
+			<record id="object_property" get_property="Pers" set_property="objt" />
+		</widget>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-5,-19,-4, 1,-1, -7,-1, 1,-3, -8, -17,-9,-3" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="spacer" />
+			<!-- Club logo -->
+			<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+				<!-- PROP_CLUB -->
+				<record id="object_property" get_property="Cclu" set_property="objt" />
+			</widget>
+			<widget class="spacer" />
+			<!-- Line -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+				<widget class="picture" file="boxes/main/contrast/paper" auto_size="vertical" red_replacement="white">
+					<!-- PROP_TEAM -->
+					<record id="object_property" get_property="Cclu" set_property="objt" />
+				</widget>
+			</container>
+			<widget class="spacer" />
+			<!-- Welcome string -->
+			<widget class="game_formatted_label" alignment="centre,auto_fit,can_scale" font="title" colour="white" wants_mouse_events="false">
+				<translation id="format" translation_id="423138" type="use" value="Welcome to [%club#1-short][COMMENT: dynamic news image; welcoming a new player to the club]" />
+				<!-- PROP_CLUB -->
+				<record id="object_property" get_property="Cclu" set_property="valu" />
+			</widget>
+			<widget class="spacer" />
+			<!-- Line -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+				<widget class="picture" file="boxes/main/contrast/paper" auto_size="vertical" red_replacement="white" />
+			</container>
+			<widget class="spacer" />
+			<!-- Player forname -->
+			<widget class="game_formatted_label" alignment="bottom,auto_fit,can_scale" font="capitals" colour="white" wants_mouse_events="false">
+				<string id="format" value="[%person#1-first]" alignment="centre,auto_fit" />
+				<!-- PROP_FIRST_NAME_PERSON -->
+				<record id="object_property" get_property="fnpr" set_property="valu" />
+			</widget>
+			<!-- Player surname -->
+			<widget class="game_formatted_label" alignment="top,auto_fit,can_scale" font="title" colour="white" wants_mouse_events="false">
+				<string id="format" value="[%person#1-surname]" alignment="centre,auto_fit" />
+				<!-- PROP_PERSON -->
+				<record id="object_property" get_property="Pers" set_property="valu" />
+			</widget>
+			<!-- Hash-tag -->
+			<widget class="game_formatted_label" alignment="centre,auto_fit" colour="faded white" wants_mouse_events="false">
+				<string id="format" value="#[%club#1-hashtag]" />
+				<!-- PROP_TEAM -->
+				<record id="object_property" get_property="Cclu" set_property="valu" />
+			</widget>
+			<widget class="spacer" />
+		</container>
+
+		<widget class="spacer" />
+
+	</container>
+</panel>

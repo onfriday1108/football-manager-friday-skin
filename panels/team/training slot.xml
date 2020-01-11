@@ -1,0 +1,17 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="10" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+  <string id="skin_style" value="title link" />
+
+  <widget class="link_button" section="ttcP" id="trRE" auto_size="horizontal" alignment="left,centre_y" font="title">
+    <translation id="text" translation_id="308600" type="use" value="Match Preparation[COMMENT - team screen section for match preparation]" />
+  </widget>
+
+  <widget class="text" id="cFOc" alignment="right,centre_y" spec="text" style="semi_bold" colour="faded text"/>
+
+  <widget class="match_training_focus_popup_button" id="cFOb" alignment="left,centre_y" spec="text" auto_size="horizontal" appearance="buttons/subtle/normal/button"/>
+
+
+
+</panel>

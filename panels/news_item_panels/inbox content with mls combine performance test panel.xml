@@ -1,0 +1,12 @@
+﻿<panel>
+  <attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+   <!-- 1st place & 2nd/3rd place styles -->
+	<flags id="best" value="tables/custom/league/champions/row" />
+	<flags id="top3" value="tables/custom/league/promotion/row" />
+  <flags id="nrml" value="tables/standard/row/normal/row" />
+    
+  <container height="705" file="competition/mls combine performance test panel">
+  </container>
+
+</panel>

@@ -1,0 +1,98 @@
+<panel>
+	<boolean id="should_force_refresh" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="table" id="stat" layout="-1, 55, 55, 55, 55, 55, 55, 55, 55" mode="fill_rows, stripe_rows">
+		<!-- Set appearance for our fake header -->
+		<list id="row_properties">
+			<record indx="0" appearance="tables/standard/heading/normal/row" />
+		</list>
+
+		<flags id="row_appearance" value="tables/custom/fmc/default/row" />
+		<flags id="row_over_appearance" value="tables/custom/fmc/over/row" />
+		<flags id="stripe_appearance" value="tables/custom/fmc/stripe/row" />
+		<flags id="selected_appearance" value="tables/custom/fmc/selected/row" />
+
+		<!-- Column ids are the stat property to display in that column. See player_stats_properties.h -->
+		<list id="column_table_properties">
+			<record indx="0" left="4" />
+			<!-- Appearances -->
+			<record indx="1" id="PSap" />
+			<!-- Goals -->
+			<record indx="2" id="PSgs" />
+			<!-- Conceded -->
+			<record indx="3" id="PSgc" />
+			<!-- Assists -->
+			<record indx="4" id="PSas" />
+			<!-- Man of match -->
+			<record indx="5" id="PSmm" />
+			<!-- Yellow cards -->
+			<record indx="6" id="PSYc" />
+			<!-- Red cards -->
+			<record indx="7" id="PSRc" />
+			<!-- Average rating -->
+			<record indx="8" id="PsAr" />
+		</list>
+
+		<list id="headings">
+			<record alignment="left,centre_y" size="9" font="fonts/panel_title">
+				<translation id="text" translation_id="229984" type="use" value="Statistics" />
+			</record>
+			<record alignment="centre">
+				<translation id="hint" translation_id="227845" type="use" value="Appearances" />
+				<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
+			</record>
+			<record alignment="centre">
+				<translation id="hint" translation_id="227857" type="use" value="Goals" />
+				<translation id="text" translation_id="227856" type="use" value="Gls" />
+			</record>
+			<record id="conC" alignment="centre">
+				<translation id="hint" translation_id="247734" type="use" value="Conceded" />
+				<translation id="text" translation_id="257312" type="use" value="Conc" />
+			</record>
+			<record alignment="centre">
+				<translation id="hint" translation_id="227847" type="use" value="Assists" />
+				<translation id="text" translation_id="249488" type="use" value="Asts" />
+			</record>
+			<record alignment="centre">
+				<translation id="hint" translation_id="227859" type="use" value="Man Of The Match" />
+				<translation id="text" translation_id="249493" type="use" value="MoM[COMMENT man of match]" />
+			</record>
+			<record alignment="centre" colour="yellow">
+				<translation id="hint" translation_id="247391" type="use" value="Yellow Cards" />
+				<translation id="text" translation_id="227868" type="use" value="Yel[COMMENT yellow cards]" />
+			</record>
+			<record alignment="centre" colour="red1">
+				<translation id="hint" translation_id="247392" type="use" value="Red Cards" />
+				<translation id="text" translation_id="227870" type="use" value="Red[COMMENT red cards]" />
+			</record>
+			<record alignment="centre">
+				<translation id="hint" translation_id="233158" type="use" value="Average Rating" />
+				<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+			</record>
+		</list>
+
+		<record id="default_properties" alignment="left,centre_y" spec="text" column="0" />
+
+
+		<!-- Row labels -->
+		<widget class="text" row="0" sort_order="0">
+			<translation id="text" translation_id="247558" type="use" value="Non Competitive" />
+		</widget>
+		<widget class="text" row="1" sort_order="0">
+			<translation id="text" translation_id="332799" type="use" value="League[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface]" />
+		</widget>
+		<widget class="text" row="2" sort_order="0">
+			<translation id="text" translation_id="343458" type="use" value="Cup[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface, use top 10 matches]" />
+		</widget>
+		<widget class="text" row="3" sort_order="0">
+			<translation id="text" translation_id="343431" type="use" value="Continental[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface, use top 10 matches]" />
+		</widget>
+		<widget class="text" row="4" sort_order="1">
+			<translation id="text" translation_id="332785" type="use" value="International[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface]" />
+		</widget>
+		<widget class="text" row="5" sort_order="2">
+			<translation id="text" translation_id="332834" type="use" value="Overall[COMMENT: player season stats panel; text which will be displayed underneath a season total in the game's user interface]" />
+		</widget>
+	</widget>
+</panel>

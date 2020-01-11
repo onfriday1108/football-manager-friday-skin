@@ -1,0 +1,13 @@
+<panel>
+
+  <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="5"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+  <container class="tabbed_container" id="main" default_item="MANs" save_session_state="true">
+
+    <widget class="match_analysis_statistics_panel" id="MANs" file="match/match analysis statistics small"/>
+    <widget class="match_analysis_performance_panel" id="MANf" file="match/match analysis performance small"/>
+    <widget class="match_analysis_tactics_panel" id="MANt" file="match/match analysis tactics small"/>
+  </container>
+
+</panel>

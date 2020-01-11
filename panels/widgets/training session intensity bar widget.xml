@@ -1,0 +1,21 @@
+﻿<panel>
+	<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+
+	<container class="inner_box_no_margin" height="12" width="80" appearance="boxes/custom/training intensity/paper">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="1" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<widget class="horizontal_percentage_bar" id="barI" bar_value_colour="tactical_familiarity_colour_1" label_width="0" appearance="charts/bar/custom/tactics" animation_file="false"/>
+			<widget class="icon_button" id="exma" icon="icons/16px/warning" icon_alignment="centre" style="bold"  wants_mouse_events="false" show_button_appearance="false" red_replacement="red3">
+				<attachment class="flash_colour_attachment" auto_start="true">
+					<colour id="first_colour" name="red 400" />
+					<colour id="second_colour" name="red 800" />
+					<flags id="colour_property" value="bkcl" />
+				</attachment>
+			</widget>
+		</container>
+	</container>
+	
+</panel>

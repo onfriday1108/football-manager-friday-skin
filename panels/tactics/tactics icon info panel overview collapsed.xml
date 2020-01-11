@@ -1,0 +1,24 @@
+<panel>
+	<list id="cnvs">
+		<record id="it01" name="kit picture">
+			<record target="main" id="top " set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+			<record target="main" id="botm" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+			<record target="main" id="rght" set_side="none,right" get_side="none,right" move_side="true" offset="0"/>
+			<record target="main" id="left" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+		</record>
+		<record id="it09" hidden="true" name="injury" height="16" width="16">
+			<record target="main" id="top " set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+			<record target="main" id="rght" set_side="none,right" get_side="none,right" move_side="true" offset="0"/>
+		</record>
+		<record id="it10" hidden="true"/>
+		<record id="it03" hidden="true" name="pie"/>
+		<record id="it04" hidden="true" name="position_duty"/>
+		<record id="it04" hidden="true" name="position_duty"/>
+		<record id="it02" hidden="true" name="player picker"/>
+		<record id="it05" hidden="true" name="familiarity"/>
+		<record id="it06" hidden="true" name="morale"/>
+		<record id="it07" hidden="true" name="condition"/>
+		<record id="it08" hidden="true" name="rating"/>
+		<record id="it11" hidden="true" name="personalised instructions"/>
+	</list>
+</panel>

@@ -1,0 +1,64 @@
+<panel cancel_mouse_hide="true">
+
+	<attachment class="match_ball_fade_attachment" />
+	<animation class="fade_on_hide_animation" duration="0.2" />
+	<real id="delay_modal_close" value="0.15" />
+
+	<!--standard feed items in here-->
+	<container id="feed">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	</container>
+
+	<!--container for saying you've made changes to your tactics-->
+	<container id="Chan" hidden="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!--text-->
+		<widget class="text" id="ChaT" auto_size="horizontal" style="semi_bold, embossed" size="10" />
+
+		<!--cancel pending changes button-->
+		<widget class="button" id="ChaB" auto_size="horizontal">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			<record id="click_event">
+				<flags id="event_id" value="canc" />
+			</record>
+		</widget>
+	</container>
+
+	<!--container for match controls when viewing highlights-->
+	<widget class="match_playback_control_container" id="Cont" file="match/match playback control container feed" hidden="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<record id="object_property" get_property="maCo" set_property="maCo" />
+	</widget>
+
+	<!--container for saying you're recording a clip-->
+	<container id="Ring" hidden="true" class="main_box" appearance="boxes/custom/match/feed/advice/paper" red_replacement="blue grey 800" blue_replacement="red 500" width="600">
+		<layout class="arrange_horizontal_attachment" alignment="right" offset="0"  />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0,2" apply_to_children="true" />
+    <layout class="stick_to_sides_attachment" alignment="right, vertical" inset="0" />
+		<!--icon-->
+    
+		<widget class="icon_button" auto_size="horizontal" show_button_appearance="false" icon="icons/16px/bullet" font="title" colour="red 500">
+			<record id="primary_icon_properties" red_replacement="red 500" />
+			<translation id="text" translation_id="447547" type="use" value="Recording[COMMENT: heading for a natification showing that you're recording match time]" />
+		</widget>
+
+		<!--time bar-->
+		<widget class="horizontal_percentage_bar" id="recT" width="300" label_width="70" alignment="left" min_value="0" max_value="60" is_right_to_left="false">
+			<flags id="bar_chart_label_type" value="bclF" />
+			<translation id="format" translation_id="447548" type="use" value="[%number#1] sec[COMMENT: FR21689 - label to show how many seconds have elapsed - sec is an abbreviation for seconds, singular or plural]" />
+		</widget>
+
+		<!--stop recording button-->
+		<widget class="button" auto_size="horizontal">
+			<translation id="text" translation_id="321980" type="use" value="Stop Recording[COMMENT: Stop recording highlights button hint]" />
+			<record id="click_event">
+				<flags id="event_id" value="esrc" />
+			</record>
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,7 @@
+﻿<panel display_development_centre_advice="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="sTop" class="player_development_advice_item_panel" file="widgets/player development centre advice item">
+		<translation id="text" translation_id="351370" type="use" value="Currently [%person#2] has no advice on managing [%male#1].[COMMENT: player development advice panel; text displayed when no advice is available for a category]" />
+	</container>
+</panel>

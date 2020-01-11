@@ -1,0 +1,6 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="tactic_slot_tab_container" height="" id="prep" file="tactics/tactic slot tab container inbox" />
+
+</panel>

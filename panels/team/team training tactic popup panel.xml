@@ -1,0 +1,18 @@
+<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="standard_popup_box" id="cPan">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="10" gap="5" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="10" gap="5"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" apply_to_children="true" />
+
+		<widget class="text" id="txCn" height="30" font="fonts/panel_title">
+			<translation id="text" translation_id="346873" type="use" value="Tactics Being Trained[COMMENT: match preparation news item; section heading for tactic preparation choice]" />
+		</widget>
+		<widget class="tactic_slot_tab_container" id="prep" file="tactics/tactic slot tab container training">
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,99 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box" force_title_borders="true" id="plti">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- Debug buttons area -->
+		<container id="dbgc" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="TitL" >
+				<translation id="text" translation_id="247171" type="use" value="Referee Stats" />
+			</widget>
+
+			<!-- view button -->
+			<widget class="view_menu_popup" id="plvi" sele="vtvm" />
+		</container>
+
+		<widget class="client_object_list_table" database_table_type="1" id="pltb" mode="fill_rows, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows" table_type="1">
+
+			<boolean id="save_session_state" value="true" />
+
+			<!-- default sort by playing position (primary), then picked position, then name -->
+			<list id="default_sort_column">
+				<integer value="Prra" />
+			</list>
+
+			<integer id="contextual_handler_column_id" value="Pnms" />
+			<boolean id="should_force_refresh" value="true" />
+
+			<flags id="default_view" value="stat" />
+			<!--available views-->
+			<list id="viws">
+				<record id="stat">
+					<translation id="text" translation_id="247412" type="use" value="Stats" />
+					<record id="view">
+						<flags id="Pnms" />
+						<!-- name -->
+						<flags id="Prgc" />
+						<!-- games -->
+						<flags id="Pryc" />
+						<!-- yellow cards -->
+						<flags id="Prrc" />
+						<!-- red cards-->
+						<flags id="Prhp" />
+						<!-- home penalties -->
+						<flags id="Prap" />
+						<!-- away penalties -->
+						<flags id="POid" />
+						<!-- official incorrect decisions - DEBUG ONLY -->
+						<flags id="Prcd" />
+						<!-- official controversial decisions - DEBUG ONLY -->
+						<flags id="Prra" />
+						<!-- rating -->
+					</record>
+				</record>
+
+				<record id="debu">
+					<translation id="name" translation_id="247109" type="use" value="Debug" />
+					<boolean id="tick" value="false" />
+					<record id="view">
+						<flags id="Pnms" />
+						<!-- person name -->
+						<flags id="Orep" />
+						<!-- Reputation -->
+						<flags id="Ocra" />
+						<!-- Offical Current Ability -->
+						<flags id="Opta" />
+						<!-- Offical Potential Ability -->
+						<flags id="Oalf" />
+						<!-- Official Allowing Flow -->
+						<flags id="Odis" />
+						<!-- Official  Discipline -->
+						<flags id="Oimm" />
+						<!-- Official Important Matches -->
+						<flags id="Oprs" />
+						<!-- Official Pressure -->
+						<flags id="Oref" />
+						<!-- Official  Refereeing -->
+						<flags id="Orun" />
+						<!-- Official Running Line -->
+						<flags id="Otkp" />
+						<!-- Official TimeKeeping -->
+					</record>
+				</record>
+			</list>
+		</widget>
+	</container>
+
+	<!-- panel for no data available-->
+	<container class="empty_state" id="nmpl" header_widget="BShe" hidden="true">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+		</widget>
+	</container>
+
+</panel>
+<!-- panel -->

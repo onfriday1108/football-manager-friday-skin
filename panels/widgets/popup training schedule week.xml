@@ -1,0 +1,23 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="text" set_property="text" target="txtL" />  
+		<record get_property="indx" set_property="indx" target="twes" />  
+		<record get_property="objt" set_property="objt" target="twes" />  
+		<record get_property="tswk" set_property="tswk" target="twes" />  
+		<record get_property="stDT" set_property="stDT" target="twes" />  
+	</list>
+	
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<container id="cont" class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="10" vertical_gap="4" horizontal_inset="10" />
+		<widget class="text" id="txtL" font="title" height="30" alignment="left,centre_y" />
+		<container class="training_schedule_week_widget" id="twes" height="280" file="widgets/training schedule week widget intensity" clickable="false" draggable="false" >
+			<record id="object_property" get_property="objt" set_property="objt" />
+			<boolean id="shortened" value="true"/>
+			<string id="schedule_session_widget_file" value="widgets/training schedule large session widget"/>
+			<string id="schedule_header_file" value="widgets/training schedule day month header"/>
+		</container>
+	</container>
+
+</panel>

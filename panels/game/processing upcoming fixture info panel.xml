@@ -1,0 +1,41 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" layout="175, 1, 120, -1" offset="0" gap="10" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+  <container>
+    <layout class="arrange_vertical_attachment" layout="-7,-4" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <!--days til match -->
+    <container class="animated_wipe_container" duration="0.5" id="days" wipe_data_trigger_id="text" remove_widget_after_wipe="true" skip_first_wipe_in="true">     
+      <!-- This container will wipe in new text from the right and wipe old text out the left with an additional fade -->
+      <record id="wipe_in_animation" class="translate_animation" duration="1" trigger_id="hidden" trigger_value="false" start_value="1.05, 0.0" end_value="0.0, 0.0" end_mode="hold_end" />
+      <list id="wipe_out_animation">
+        <record class="translate_animation" duration="2" trigger_id="hidden" trigger_value="true" start_value="0.0, 0.0" end_value="-1.05, 0.0" end_mode="hold_end" />
+        <record class="fade_animation" duration="1" trigger_id="hidden" trigger_value="true" start_value="1.0" end_value="0.0" end_mode="hold_end" />
+      </list>
+      
+      <record id="widget_properties" class="text" colour="title" alignment="right,centre_y" style="bold, shadowed" size="12" multiline="false" />
+    </container>
+    <!-- This label may be hidden if the days to match is 'Today', 'Tomorrow' etc -->
+    <widget class="text" id="dayE" colour="grey" alignment="right,top" style="bold" size="8">
+      <translation id="text" translation_id="348442" type="use" value="To Next Match[COMMENT: Game processing panel; label for number of days until the next match]" />
+    </widget>
+  </container>
+
+	<widget class="vertical_divider" red_replacement="white">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="5" />
+	</widget>
+
+  <widget class="client_object_viewer_xml_panel" file="game/processing upcoming fixture badges" id="tmbp" />
+
+  <container>
+    <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <!--fixture "home" vs "away"-->
+    <widget class="text" id="fixt" colour="white" alignment="left,bottom" style="bold, shadowed" size="12" />
+    <!--competition-->
+    <widget class="text" id="comp" colour="faded white" alignment="left,top" style="bold" size="8" />
+  </container>
+</panel>

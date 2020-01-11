@@ -1,0 +1,54 @@
+﻿<!-- panel to be used during the welcome to the club briefing -->
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+	<container class="main_transparent_box">
+		<translation id="title" translation_id="491850" type="use" value="Club Vision[COMMENT: AREA: Club vision panel; SUB-AREA: Panel heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the club vision panel]"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+		<container class="club_vision_viewer_panel" show_objective_importance="true" show_objective_type="true" show_objective_status="false" disable_link="true">
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="vertical"/>
+						<integer id="min_value" value="0"/>
+						<integer id="max_value" value="720"/>
+						<!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+						<symbol id="set_property" value="height"/>
+						<integer id="true_value" value="370"/>
+						<integer id="false_value" value="480"/>
+					</record>
+					<record>
+						<flags id="alignment" value="vertical"/>
+						<integer id="min_value" value="721"/>
+						<integer id="max_value" value="868"/>
+						<!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+						<symbol id="set_property" value="height"/>
+						<integer id="true_value" value="490"/>
+						<integer id="false_value" value="480"/>
+					</record>
+					<record>
+						<flags id="alignment" value="vertical"/>
+						<integer id="min_value" value="869"/>
+						<integer id="max_value" value="968"/>
+						<!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+						<symbol id="set_property" value="height"/>
+						<integer id="true_value" value="580"/>
+						<integer id="false_value" value="480"/>
+					</record>
+					<record>
+						<flags id="alignment" value="vertical"/>
+						<integer id="min_value" value="969"/>
+						<integer id="max_value" value="10000"/>
+						<!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+						<symbol id="set_property" value="height"/>
+						<integer id="true_value" value="680"/>
+						<integer id="false_value" value="480"/>
+					</record>
+				</list>
+			</attachment>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+	</container>
+
+</panel>

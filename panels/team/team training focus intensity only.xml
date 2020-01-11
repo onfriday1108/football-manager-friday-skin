@@ -1,0 +1,26 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  
+  <container id="dflb" >
+    <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="6" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+    <container>
+        <layout class="arrange_horizontal_attachment" layout="-2,-3" offset="2" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <widget class="label" alignment="left,centre_y" auto_size="horizontal">
+          <translation id="text" translation_id="346740" type="use" value="Main Focus[COMMENT: training players panel, column heading for Training Focus]" />
+        </widget>
+        <widget class="general_training_focus_popup_button" id="dffo" icon="" icon_alignment="left,centre_y" alignment="left,centre_y" spec="text" auto_size="none" needs_main_focus="false" />
+    </container>
+
+    <container>
+        <layout class="arrange_horizontal_attachment" layout="-2,-3" offset="2" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <widget class="label" alignment="left,centre_y" auto_size="horizontal">
+          <translation id="text" translation_id="347767" type="use" value="Intensity Level[COMMENT: team training; the desired default level of intensity the players will train under]" />
+        </widget>
+        <widget class="general_training_intensity_popup_button" id="dfin" alignment="left,centre_y" auto_size="none" needs_main_focus="false" />
+    </container>
+  </container>
+</panel>

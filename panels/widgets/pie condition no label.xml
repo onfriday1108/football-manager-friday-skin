@@ -1,0 +1,13 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" embed_in_frame="true"/>
+
+  <!--the way layout works for donut chart is a replacement for donut_line_width, the first value is the prportion
+    for the centre empty space the second value for the line width and the third/rest of values for the gap in the
+    outer space of the donut chart-->
+  <widget class="percentage_pie_chart" id="piec" max_value="100" is_donut_chart="true" layout="-1,2" embed_in_frame="true"/>
+  <widget class="percentage_pie_chart" id="inPI" max_value="100" is_donut_chart="true" layout="-1,2,4" embed_in_frame="true"/>
+
+  <!-- These are needed for the panel code to work but we don't want them visible -->
+  <widget class="condition_label" size="small" alignment="right" id="CDLB" hidden="true" embed_in_frame="true"/>
+  <widget class="condition_label" size="small"  id="FTLB" hidden="true" embed_in_frame="true"/>
+</panel>

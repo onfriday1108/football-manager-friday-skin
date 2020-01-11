@@ -1,0 +1,16 @@
+<panel  >
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  <boolean id="should_force_refresh" value="true"/>
+  
+  <widget class="label" id="labl" size="10" alignment="left,top" multiline="true">
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="Psrs"/>
+          <integer id="set_property" value="valu" />
+        </record>
+      </list>
+    </record>
+  </widget>
+  
+</panel>

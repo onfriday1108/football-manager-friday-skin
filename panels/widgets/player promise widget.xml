@@ -1,0 +1,18 @@
+﻿<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="6" gap="2"/>
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="6" gap="2" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8"/>
+
+  <!--icon and promise title-->
+  <container height="16">
+    <layout class="arrange_horizontal_attachment" layout="16,-1" offset="0" gap="4"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+    <widget class="picture" id="prmI" scale_picture="true" keep_aspect_ratio="true" />
+    <widget class="label" id="prmN" auto_size="horizontal" style="semi_bold" alignment="left,centre_y"/>
+  </container>
+
+  <widget class="label" id="prmT" auto_size="vertical" colour="faded text" />
+  <widget class="label" id="prmD" multiline="true" auto_size="vertical"  />
+
+  <widget class="horizontal_divider" />
+</panel>

@@ -1,0 +1,32 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container class="inner_subtle_box">
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+		<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+		<layout class="arrange_horizontal_attachment" layout="75, -1, -1" offset="0" gap="0"/>
+
+		<widget class="object_portrait_picture" id="ppic" scale_picture="true" image_alignment="centre" height="120"/>
+
+		<container >
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="person_button" id="nmtx" auto_size="vertical" spec="text" colour="title" font="semibold" size="11" multiline="false" info_popup_enabled="true" person_is_player="true"/>
+			<widget class="position_label" id="pstx" spec="text" auto_size="vertical" display_format="1" multiline="true" colour="faded text" alignment="left,centre_y"/>
+
+			<container>
+				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+				<layout class="fit_children_attachment" alignment="vertical"/>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="5" offset="0"/>
+
+				<widget class="picture" id="inji" file="icons/match/match_injured" auto_size="all" image_alignment="centre"/>
+				<widget class="text" id="istx" auto_size="vertical" multiline="true" style="semi_bold"/>
+			</container>
+		</container>
+
+		<widget class="text" id="ilds" auto_size="vertical" spec="text" colour="text" size="11" alignment="left,centre_y"/>
+	</container>
+
+</panel>

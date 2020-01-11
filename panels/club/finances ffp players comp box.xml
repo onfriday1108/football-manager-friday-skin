@@ -1,0 +1,209 @@
+﻿<panel>
+	<layout apply_to_children="true" inset="0" alignment="all" class="stick_to_sides_attachment" />
+
+	<container class="bordered_box_no_margin">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+		<!--summary coloured box-->
+		<container id="sumb" file="club/finances ffp summary coloured box" />
+
+		<widget class="text" id="fpps" auto_size="vertical" colour="faded text">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="fpps" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="4" horizontal_inset="10" />
+
+			<widget class="client_object_list_table" id="plat" mode="fill_rows, stripe_rows"  database_table_type="1">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="fppl" />
+							<integer id="set_property" value="objL" />
+						</record>
+					</list>
+				</record>
+
+				<list id="viws">
+
+					<record id="geni">
+						<translation id="name" translation_id="247410" type="use" value="General Info" />
+						<!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+						<record id="view">
+							<flags id="Pfpw" />
+							<!-- player status/info -->
+							<flags id="Pnfo" />
+							<!-- player status/info -->
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="PSag" />
+							<!-- person age -->
+							<flags id="Pcww" />
+							<!-- weekly wage -->
+							<flags id="Pced" />
+							<!-- contract expiry -->
+							<flags id="Pdva" />
+							<!-- player value -->
+						</record>
+					</record>
+				
+				</list>
+			</widget>
+		
+			<widget class="spacer" height="5" />
+
+			<widget class="horizontal_divider" />
+
+			<container height="80">
+
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="hmwr" />
+							<integer id="set_property" value="hidn" />
+						</record>
+					</list>
+				</record>
+
+				<layout class="grid_layout_attachment" row_layout="20,20,30" mode="exact" vertical_gap="0">
+					<list id="column_layout">
+						<record>
+							<string id="column_layout" value="-1" />
+							<integer id="horizontal_offset" value="0" />
+						</record>
+						<record>
+							<string id="column_layout" value="-1,-1,-1" />
+							<integer id="horizontal_offset" value="0" />
+						</record>
+						<record>
+							<string id="column_layout" value="-1,-1,-1" />
+							<integer id="horizontal_offset" value="0" />
+						</record>
+					</list>
+
+				</layout>
+
+				<widget class="label" font="title" colour="accent" col="0" row="0" height="20">
+					<translation id="text" translation_id="416327" type="use" value="Total wage for period[COMMENT: FR 12541]" />
+				</widget>
+
+				<!--Current wage for period-->
+				<widget class="label" id="cwpt" font="label" col="0" row="1" height="20">
+					<translation id="text" translation_id="416328" type="use" value="Current [COMMENT:FR 12541]" />
+
+					<!--need to hide this if comp has no valid FFP wage related rules-->
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="hmwr" />
+								<integer id="set_property" value="hidn" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<widget class="label" id="cwpv" auto_size="all" col="0" row="2" font="value" alignment="left,top">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="hmwr" />
+								<integer id="set_property" value="hidn" />
+							</record>
+							<record>
+								<integer id="get_property" value="cwpv" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<!--Max allowed wage for period-->
+				<widget class="label" id="mwpt" font="label" col="1" row="1" height="20">
+					<translation id="text" translation_id="416329" type="use" value="Maximum Allowed[COMMENT:FFP label]" />
+					<translation id="hint" type="use" translation_id="376613" value="The club must keep total player wage expenditure below this amount in order to pass FFP rules[COMMENT: FFP (Financial Fair Play) label, hint text]" />
+					<!--need to hide this if comp has no valid FFP wage related rules-->
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="hmwr" />
+								<integer id="set_property" value="hidn" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<widget class="label" id="mwpv" auto_size="all" col="1" row="2" font="value" alignment="left,top">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="hmwr" />
+								<integer id="set_property" value="hidn" />
+							</record>
+							<record>
+								<integer id="get_property" value="mwpv" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<!--Current wage surplus for period-->
+				<widget class="label" id="wspt" font="label" col="2" row="1" height="20">
+					<translation id="text" translation_id="416330" type="use" value="Current Surplus/(Deficit) for Period[COMMENT:FFP label]" />
+					<!--need to hide this if comp has no valid FFP wage related rules-->
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="hmwr" />
+								<integer id="set_property" value="hidn" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<widget class="label" id="wspv" auto_size="all" col="2" row="2" font="value" alignment="left,top">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="hmwr" />
+								<integer id="set_property" value="hidn" />
+							</record>
+							<record>
+								<integer id="get_property" value="wspv" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+			</container>
+
+			<!--link to competition rules-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="right" horizontal_inset="0" />
+
+				<widget class="link_button" id="crlb" section="csrl" alignment="right,centre_y" auto_size="all">
+					<translation id="text" translation_id="324089" type="use" value="Competition Rules[COMMENT: how to system; help string]" />
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="ffpc" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+			</container>
+		</container>
+
+	</container>
+</panel>

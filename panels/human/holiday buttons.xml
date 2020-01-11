@@ -1,0 +1,12 @@
+<panel>
+	<attachment_group class="button_arrangement_right" />
+
+	<widget class="primary_icon_tick_button" id="ok" auto_size="all" controller_button="y_button" appearance="buttons/primary/normal/button">
+		<translation id="text" translation_id="343772" type="use" value="Go On Holiday[COMMENT: button text to send the user on holiday]" />
+  </widget>
+
+	<widget class="icon_button" id="canc" auto_size="all" controller_button="b_button">
+		<translation id="text" translation_id="229828" type="use" value="Cancel" />
+	</widget>
+
+</panel>

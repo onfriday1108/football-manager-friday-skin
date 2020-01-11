@@ -1,0 +1,50 @@
+<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"  />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<container height="60">
+		<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0"  />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<container id="fose" class="folder_select_panel" height="30" size="8" />
+		<container class="edit_box" id="namf" height="30" size="8" />
+	</container>
+
+	<container>
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<!--We have a table-->
+		<widget class="table" id="fost" layout="-1,-1,-1" mode="fill_rows" auto_size_rows="true" row_spacing="0">
+
+			<record id="default_properties" auto_size="vertical" />
+
+			<widget class="label" col="0" row="0">
+				<translation id="text" translation_id="349096" type="use" value="Start[COMMENT: highlight recorder, button text to start a recording of match highlights]" />
+			</widget>
+			<widget class="edit_box" id="stee" col="1" row="0" size="10" />
+			<widget class="icon_button" click_event="gets" col="2" row="0">
+				<translation id="text" translation_id="348846" type="use" value="Get" />
+			</widget>
+
+			<widget class="label" col="0" row="1">
+				<translation id="text" translation_id="348824" type="use" value="End[COMMENT: highlight recorder, button text to end a recording of match highlights]" />
+			</widget>
+			<widget class="edit_box" id="fiee" col="1" row="1" />
+			<widget class="icon_button" click_event="gete" col="2" row="1">
+				<translation id="text" translation_id="348846" type="use" value="Get" />
+			</widget>
+
+		</widget>
+
+		<widget class="button" id="gore" auto_size="all" click_event="rhfr">
+			<string id="text" value="Export" />
+		</widget>
+
+	</container>
+
+
+
+</panel>

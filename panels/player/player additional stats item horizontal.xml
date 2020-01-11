@@ -1,0 +1,8 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="5" />
+
+	<widget class="formatted_label" format="[%fraction#1-1.0]" size="15" id="stVL" alignment="right,centre_y" auto_size="all"/>
+	<widget class="text" id="sttx" size="10" alignment="left,centre_y" auto_size="all"/>
+</panel>

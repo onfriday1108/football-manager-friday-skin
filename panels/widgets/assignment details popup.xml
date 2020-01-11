@@ -1,0 +1,123 @@
+﻿<panel width="550">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizonal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="standard_popup_box" height="300">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,1,-1" horizontal_offset="0" vertical_alignment="vertical" />
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_alignment="horizontal" />
+		
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+					<widget class="text" id="asdw" auto_size="vertical">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					</widget>
+
+					<widget class="text" id="aadw">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+					</widget>
+				</container>
+
+				<widget class="button" id="easw" auto_size="all">
+					<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					<translation id="text" translation_id="450809" type="use" value="Edit assignment...[COMMENT: FR 21125, scouting centre text to change an assignment]" />
+				</widget>
+
+			</container>
+
+			<widget class="horizontal_divider" />
+
+			<container height="50">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container id="durc">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" />
+
+					<widget class="text" auto_size="vertical" alignment="left,centre_y" font="title">
+						<translation id="text" translation_id="230113" type="use" value="Duration" />
+					</widget>
+
+					<widget class="text" id="durw" auto_size="vertical" alignment="left,centre_y" />
+
+				</container>
+
+				<container id="datc">
+					<attachment_group class="horizontal_arrange" horizontal_layout="-1,1,-1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="text" auto_size="vertical" alignment="left,centre_y" font="title">
+							<translation id="text" translation_id="293013" type="use" value="Start Date" />
+						</widget>
+
+						<widget class="text" id="sdaw" auto_size="vertical" alignment="left,centre_y" />
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+						
+						<widget class="text" auto_size="vertical" alignment="left,centre_y" font="title">
+							<translation id="text" translation_id="293014" type="use" value="End Date" />
+						</widget>
+
+						<widget class="text" id="edaw" auto_size="vertical" alignment="left,centre_y" />
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+
+		<widget class="vertical_divider" />
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal"  />
+
+			<widget class="text" auto_size="vertical" alignment="left,centre_y" font="title" colour="accent">
+				<translation id="text" translation_id="450810" type="use" value="Next Planned Match[COMMENT: FR 21125, scouting centre text showing the match the scout intends to observe next]" />
+			</widget>
+
+			<widget class="text" id="nfdw" auto_size="vertical" alignment="left,centre_y" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="table" id="sctt" mode="fill_rows" layout="-7,-3" column_spacing="10">
+
+					<list id="column_table_properties">
+						<record>
+							<flags id="id" value="team" />
+							<record id="column_heading">
+								<translation id="text" translation_id="450811" type="use" value="Scouted teams[COMMENT: FR 21125, scouting centre text showing the teams that have been scouted on an assignment]" />
+								<flags id="alignment" value="left,centre_y" />
+								<flags id="column" value="0" />
+							</record>
+						</record>
+						<record>
+							<flags id="id" value="seen" />
+							<record id="column_heading">
+								<translation id="text" translation_id="450812" type="use" value="Times seen[COMMENT: FR 21125, how often a scout has watched a team play]" />
+								<flags id="alignment" value="left,centre_y" />
+								<flags id="column" value="1" />
+							</record>
+						</record>
+					</list>
+
+				</widget>
+
+				<widget class="text" id="ntww" alignment="left,top">
+					<translation id="text" translation_id="450813" type="use" value="No matches watched yet[COMMENT: FR 21125, scouting centre text explaining there are no matches watched so far]" />
+				</widget>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

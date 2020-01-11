@@ -1,0 +1,15 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" gap="1" offset="0"/>
+  <layout class="fit_children_attachment" alignment="vertical,fill" gap="1" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+  <boolean id="should_force_refresh" value="true"/>
+  
+  <!-- Duration -->
+  <widget class="negotiation_popup_widget" id="lelw" file="widgets/negotiation widget horizontal">
+    <translation id="text" translation_id="230113" type="use" value="Duration"/>
+    <boolean id="have_please_select_string" value="false"/>
+    <boolean id="allow_force_selection" value="false"/>
+  </widget>
+
+</panel>

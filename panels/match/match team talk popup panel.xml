@@ -1,0 +1,19 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="standard_popup_box">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="10"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="10" apply_to_children="true" />
+
+		<container class="inner_subtle_box" id="tonM" width="200">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<!--Create tones here. -->
+		</container>
+
+		<container class="inner_subtle_box" id="comC">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<!-- This is where the 'match team talk action panel' (one per tone) are created -->
+		</container>
+	</container>
+</panel>

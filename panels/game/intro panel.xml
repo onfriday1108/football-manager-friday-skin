@@ -1,0 +1,432 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<!--this is the URL top get image for promo banner-->
+	<flags id="pURL" value="http://static-content.sega.co.uk.s3.amazonaws.com/sigames/FM16/banner.png" />
+	<flags id="pLUR" value="http://static-content.sega.co.uk.s3.amazonaws.com/sigames/FM16/url.txt" />
+
+	<!-- Style for the FM stripe -->
+	<record id="style">
+		<real id="inset" value="320"/>
+		<real id="angle" value="72"/>
+		<real id="width" value="240"/>
+		<real id="alpha" value="200"/>
+		<string id="foreground_colour" value="fm purple"/>
+		<string id="background_colour" value="primary"/>
+	</record>
+
+	<container class="add_manager_panel" id="adMP" file="none" manager_appearance_side="left">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container id="CHWc">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		</container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!-- Edit manager appearance - a wizard panel to provide standard wizard buttons and panel handling -->
+			<container class="wizard_panel" id="wzrd" hidden="true">
+
+				<layout class="arrange_horizontal_attachment" layout="-40,-60" offset="10" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="10" />
+
+				<container id="emCW" file="game/manager man buttons">
+				</container>
+
+				<container id="mWiC" class="main_transparent_box">
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<!-- wizard panel container, the actual panels will be added here -->
+					<container id="plco">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<container class="manager_profile_panel" id="fPan" check_profile="true" hide_manager="true">
+							<translation id="wizard_panel_title" translation_id="292599" type="use" value="Personal Details[COMMENT: add manager screen; panel title]" />
+						</container>
+						<container class="manager_profile_panel" id="sPan" check_profile="true" file="human/add manager appearance panel" manager_appearance_side="left" hidden="true">
+							<translation id="wizard_panel_title" translation_id="395141" type="use" value="Appearance[COMMENT: add manager screen; panel title; appearance of the manager]" />
+						</container>
+
+					</container>
+
+					<!-- row of buttons -->
+					<container class="main_box" height="60">
+						<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+						<!-- row of buttons -->
+						<container id="btns" height="40" width="500">
+							<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+
+
+							<container height="30">
+								<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+								<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+								<layout class="centre_in_parent_attachment" alignment="vertical" />
+
+								<widget class="icon_button" id="ltEr" hidden="true" click_event="cPrL" auto_size="all">
+									<translation id="text" translation_id="424577" type="use" value="Later[COMMENT: wizard dialog: default previous button text]" />
+								</widget>
+
+							</container>
+
+							<widget class="icon_button" id="prev" click_event="prpa" auto_size="all" icon="icons/16px/left">
+								<layout class="centre_in_parent_attachment" alignment="vertical" />
+								<translation id="text" translation_id="255267" type="use" value="Previous[COMMENT: wizard dialog: default previous button text]" />
+							</widget>
+							<widget class="primary_icon_button" id="nxt1" click_event="n1pa" auto_size="all" icon="icons/16px/right" icon_alignment="right">
+								<layout class="centre_in_parent_attachment" alignment="vertical" />
+								<translation id="text" translation_id="255268" type="use" value="Next[COMMENT: wizard dialog: default next button text]" />
+							</widget>
+							<widget class="primary_icon_tick_button" id="fini" click_event="fNPr" hidden="true">
+								<layout class="centre_in_parent_attachment" alignment="vertical" />
+								<translation id="text" translation_id="229918" type="use" value="Confirm" />
+							</widget>
+
+						</container>
+
+						<container id="sVgm" height="40" width="500" hidden="true">
+
+							<widget class="icon_button" click_event="cMEa" auto_size="all">
+								<layout class="centre_in_parent_attachment" alignment="vertical" />
+								<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+								<translation id="text" translation_id="229828" type="use" value="Cancel" />
+							</widget>
+
+							<widget class="primary_icon_tick_button" click_event="cMNf">
+								<layout class="centre_in_parent_attachment" alignment="vertical" />
+								<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+								<translation id="text" translation_id="229918" type="use" value="Confirm" />
+							</widget>
+
+						</container>
+
+					</container>
+				</container>
+
+			</container>
+
+		</container>
+	</container>
+
+	<container id="mIco">
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="right" apply_to_children="true" inset="20" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		
+		<!-- Content -->
+		<container id="mnla" height="700" width="650">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="0" />
+
+			<!--Load last game -->
+			<container width="230">
+				<animation class="translate_animation" start_value="20,0" end_value="0,0" duration="0.8" tween="ease_out" end_mode="stop" />
+				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+				<container height="300" width="230">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<!-- Load Last Game Button-->
+					<container height="200">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						
+						<container>
+							<layout class="arrange_vertical_attachment" layout="100,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="10" apply_to_children="true" />
+
+								<!--Club image-->
+								<widget class="picture" id="resp" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+							</container>
+
+							<!-- Button Text -->
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+								<record id="default_properties" auto_size="vertical" />
+
+								<!-- Header Text -->
+								<widget class="label" id="morl" size="small" font="title" alignment="centre" colour="secondary">
+									<translation id="text" translation_id="420632" type="use" value="Most Recent[COMMENT: FR 16138, main menu text to load the most recent saved game, the saved game name itself will be displayed in parentheses below this]" />
+								</widget>
+
+
+								<widget class="label" id="resT" multiline="true" size="11" spec="text" font="fonts/main menu last game" alignment="centre" colour="secondary" disabled_colour="faded white">
+									<translation id="text" translation_id="260987" type="use" value="Load Last Game[COMMENT: Title of confirmation dialog when attempting to load last game]" />
+								</widget>
+
+							</container>
+						</container>
+
+						<!-- Button (spans across entire parent container) -->
+						<widget class="button" id="resb" appearance="buttons/custom/intro panel/button" focus_appearance="buttons/subtle/flex/button_controller">
+							<record id="click_event" event_id="RLGA" event_target="glob" />
+						</widget>
+					</container>
+
+
+					<!-- Edit appearance button-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" horizontal_alignment="left" />
+						<container class="button" id="reeB" auto_size="vertical" width="198" appearance="buttons/custom/intro panel/button" alignment="left" colour="secondary" multiline="true">
+							<translation id="text" translation_id="443654" type="use" value="Edit Manager Appearance[COMMENT: manager edit appearance panel; editing manager's look]" />
+
+							<record id="click_event" event_id="eMnG" />
+						</container>
+					</container>
+
+					<container height="20" />
+				</container>
+			</container>
+		</container>
+
+		<container width="430" height="700">
+			<animation class="translate_animation" start_value="20,0" end_value="0,0" duration="0.9" tween="ease_out" end_mode="stop" />
+
+			<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_alignment="left" horizontal_inset="0" />
+
+			<container height="100" width="400">
+				<attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_offset="0" vertical_gap="10" vertical_inset="10" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,170,0,0" />
+
+
+				<widget class="picture" file="main menu/logo" scale_picture="true" image_alignment="left,centre_y" width="200" height="40"/>
+				<container height="32" width="20">
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="left" horizontal_inset="0" />
+
+					<!-- What's New? button-->
+					<widget class="icon_button" id="WNbt" click_event="what" auto_size="horizontal" height="32" appearance="buttons/custom/start screen/whats new/button" style="semi_bold" icon="icons/16px/maximise" icon_alignment="right,centre_y" />
+
+				</container>
+			</container>
+
+			<!--middle -->
+			<container height="250" width="430">
+				<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<!--Start New game-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+
+					<widget class="label" font="title" size="small" alignment="left,bottom" auto_size="vertical" colour="faded white">
+						<translation id="text" translation_id="339126" type="use" value="Start a new game[COMMENT: intro panel; start a new game, use top matches as a similar string was previously used]" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,98,0,0" />
+
+					</widget>
+
+					<widget class="spacer" height="10" />
+
+					<!-- Start New Football Manager Career-->
+					<container class="intro_panel_button" height="52" id="fmcg" icon="icons/custom/start screen/career">
+						<translation id="text" translation_id="420633" type="use" value="Career[COMMENT: FR 16138, intro screen, takes the user to all Career game options]" />
+						<translation id="description" translation_id="420634" type="use" value="Pick a team of your choice and start your career[COMMENT: FR 16138, intro screen, cannot be feminised]" />
+						<translation id="hint" translation_id="338952" type="use" value="Choose this to see the options for starting a new Football Manager game[COMMENT: intro panel; hint text for clicking on the Football Manager header, to see the cascading options within]" />
+						<record id="click_event" event_id="NEWO" is_fmc_game="false" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,70,0,0" />
+					</container>
+
+					<!-- Fantasy Draft Button-->
+					<container id="fmfd" class="intro_panel_button" height="52" icon="icons/custom/start screen/fantasy draft" hidden="true">
+						<translation id="text" translation_id="251420" type="use" value="Fantasy Draft[COMMENT - Title of draft for the Fantasy Draft draft type]" />
+						<translation id="description" translation_id="383597" type="use" value="Pick a new team online and play against friends[COMMENT: intro panel; hint text for Versus Mode online, cannot be feminised as outside of saved game environment]" />
+						<translation id="hint" translation_id="383283" type="use" value="Choose this to start a new fantasy draft game[COMMENT: intro panel; hint text for start a new fantasy draft game(small custom competitions)]" />
+						<record id="click_event">
+							<flags id="event_id" value="nFdG" />
+							<flags id="mode" value="0" />
+						</record>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,54,0,0" />
+					</container>
+					<!-- Start New Football Manager Online Game-->
+					<container id="fmon" class="intro_panel_button" height="52" icon="icons/custom/start screen/online career">
+						<translation id="text" translation_id="420635" type="use" value="Online Career[COMMENT: FR 16138, intro screen, takes the user to all Online game options]" />
+						<translation id="description" translation_id="420636" type="use" value="Host an online game and invite your friends to join[COMMENT: FR 16138, intro screen, cannot be feminised]" />
+						<translation id="hint" translation_id="338950" type="use" value="Choose this option to start a new online game.[Comment: this starts a new game with networking enabled]" />
+						<record id="click_event">
+							<flags id="event_id" value="NEWN" />
+							<boolean id="is_fmc_game" value="false" />
+						</record>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,37,0,0" />
+					</container>
+					<!-- Start new Football Manager Create a Club Game -->
+					<container class="intro_panel_button" height="52" id="fmcc" icon="icons/custom/start screen/create a club">
+						<translation id="text" translation_id="420637" type="use" value="Create-a-Club[COMMENT: FR 16138, refer to ID 396025 as this is just a streamlined version of that for UI purposes, both are intro panel items to begin this game mode]" />
+						<translation id="description" translation_id="420638" type="use" value="Create your own club and lead them to glory[COMMENT: FR 16138, explanation of Create-a-Club mode, cannot be feminised]" />
+						<translation id="hint" translation_id="395984" type="use" value="Choose this to see the options for starting a new Football Manager game with your own created club[COMMENT: FR 8517 intro panel; hint text for clicking on the Football Manager Touch header, to see the cascading options within, cannot be feminised as no human manager can be guaranteed on the intro panel]" />
+
+						<record id="click_event" event_id="NEWO" is_fmc_game="false" is_create_a_club_game="true" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,22,0,0" />
+					</container>
+
+
+				</container>
+
+
+			</container>
+
+			<container height="10" />
+
+			<container height="60" width="300">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!-- Load Game Button-->
+				<container class="button" auto_size="vertical" width="200" appearance="buttons/custom/intro panel/button" alignment="left" size="12">
+					<translation id="text" translation_id="248149" type="use" value="Load Game" />
+					<translation id="hint" translation_id="320428" type="use" value="Choose this option to load a previously saved game[COMMENT: intro panel; hint text]" />
+
+					<record id="click_event" event_id="OPN?" event_target="glob" />
+					<record id="contextual_event" event_id="ldgc" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,55,0,0" />
+				</container>
+
+				<!-- Join Online Game Button-->
+				<container id="netb" class="button" auto_size="vertical" width="200" appearance="buttons/custom/intro panel/button" alignment="left" size="12">
+					<translation id="text" translation_id="339054" type="use" value="Join Online Game[COMMENT: intro panel button text to join a network game]" />
+					<translation id="hint" translation_id="338948" type="use" value="Choose this option to join an online game.[COMMENT: game start screen, hint text for Join Online Game button, use top ten matches as this string is only slightly altered to remove references to starting a game]" />
+
+					<record id="click_event" event_id="join" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,44,0,0" />
+				</container>
+			</container>
+
+			<container height="15" />
+
+			<container height="150" width="400">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container id="buFc">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<!-- Preferences -->
+					<widget class="button" click_event="PLSM" auto_size="vertical" width="200" appearance="buttons/custom/intro panel/button" alignment="left">
+						<translation id="text" translation_id="229824" type="use" value="Preferences" />
+						<translation id="hint" translation_id="255121" type="use" value="Change your game preferences.[COMMENT: intro screen: preferences button hint]" />
+						<record id="click_event">
+							<flags id="event_id" value="PREF" />
+							<flags id="event_target" value="scrC" />
+						</record>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,31,0,0" />
+					</widget>
+
+					<!-- Downloads -->
+					<widget class="button" id="stor" auto_size="vertical" width="200" appearance="buttons/custom/intro panel/button" alignment="left">
+						<translation id="text" translation_id="349581" type="use" value="Downloads[COMMENT: button text to take user to the downloads]" />
+						<translation id="hint" translation_id="349534" type="use" value="Choose this option to access downloads." />
+						<record id="click_event" event_id="STOR" fssa="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,22,0,0" />
+					</widget>
+
+					<!-- Manual -->
+					<widget class="button" id="mnBT" auto_size="vertical" width="200" appearance="buttons/custom/intro panel/button" alignment="left">
+						<record id="click_event" event_id="soUM" />
+						<translation id="text" translation_id="326982" type="use" value="Manual" />
+						<translation id="hint" translation_id="329225" type="use" value="Click here to read the online manual.[COMMENT - hint text for button on start screen which links to the online manual]" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,15,0,0" />
+					</widget>
+
+					<!-- View Match -->
+					<widget class="button" id="abvm" click_event="PLSM" auto_size="vertical" width="200" appearance="buttons/custom/intro panel/button" alignment="left">
+						<global id="hidden" name="platform_is_stadia"/>
+						<translation id="text" translation_id="242332" type="use" value="View Match" />
+						<translation id="hint" translation_id="248053" type="use" value="Choose this option to watch a previously saved match." />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,5,0,0" />
+					</widget>
+
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<!-- Credits -->
+					<widget class="button" click_event="CRED" id="hoft" auto_size="vertical" width="200" appearance="buttons/custom/intro panel/button" alignment="left">
+						<translation id="text" translation_id="247992" type="use" value="Credits" />
+						<translation id="hint" translation_id="255106" type="use" value="Click here to see the people behind [%string#1 - current name of game, e.g. FM2007].[COMMENT - hint text for button which displays game credits]" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,17,0,0" />
+					</widget>
+
+					<!-- Leaderboards -->
+					<widget class="button" id="lbBT" click_event="LDRB" auto_size="vertical" width="200" appearance="buttons/custom/intro panel/button" alignment="left">
+						<translation id="text" translation_id="335142" type="use" value="Leaderboards[COMMENT: section title for leaderboard section]" />
+						<translation id="hint" translation_id="351942" type="use" value="Click here to view the leaderboards.[COMMENT - hint text for button on start screen which links to the leaderboards]" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,10,0,0" />
+					</widget>
+
+					<!-- Quit -->
+					<widget class="button" id="qttx" auto_size="vertical" width="200" appearance="buttons/custom/intro panel/button" alignment="left">
+						<translation id="text" translation_id="248058" type="use" value="Quit" />
+						<translation id="hint" translation_id="255120" type="use" value="Choose this option to exit [%string#1 - current name of game, e.g. FM2007] and return to the real world...[COMMENT - hint text for button to exit game]" />
+						
+						<record id="click_event">
+							<flags id="event_id" value="QUIT" />
+							<flags id="event_target" value="scrC" />
+						</record>
+					</widget>
+				</container>
+			</container>
+
+			<!--promo banner image-->
+			<widget class="picture" id="prob" width="250" height="120" keep_aspect_ratio="true" scale_picture="false" image_alignment="top" >
+				<global id="hidden" name="platform_is_stadia"/>
+			</widget>
+		</container>
+
+
+	</container>
+
+	<container id="lpro" hidden="true">
+		<layout class="arrange_horizontal_attachment" layout="-50,-50" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container>
+
+				<widget class="picture" file="main menu/logo" image_alignment="centre" scale_picture="true" height="400" width="400" keep_aspect_ratio="true">
+					<layout class="centre_in_parent_attachment" alignment="all" offset="0" />
+
+				</widget>
+			</container>
+
+
+			<widget class="button" show_button_appearance="false" click_event="toIN">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+
+		</container>
+
+		<widget class="spacer" />
+	</container>
+
+	<!-- version label-->
+	<widget class="text" id="vers" auto_size="all" spec="text" colour="faded white" style="bold, shadowed">
+		<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="10,10,0,0" />
+	</widget>
+
+	<!-- when visible, this panel will cover the movie test panel and take mouse/key events -->
+	<!-- this is visible by default, otherwise the client object system re-applies the 'hidden=true' property when it sets up sections, which may happen before the panel should be hidden -->
+	<container class="splash_movie_panel" id="spmp" movie_finish_event="spmf">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<container id="wiBK" class="inner_box_no_margin" background_colour="black">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="true" start_value="1.0" end_value="0.0" duration="2.0" end_mode="hold_end" />
+		<animation class="fade_animation" trigger_start="hiMN" start_value="0.0" end_value="1.0" duration="0.2" end_mode="stop">
+			<record id="finished_event" event_id="fnHI" event_target="root" event_flags="7" />
+		</animation>
+	</container>
+
+</panel>

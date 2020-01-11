@@ -1,0 +1,44 @@
+<!-- Type 0 == DT_CUSTOM -->
+<panel width="350" height="200" type="0">
+	<translation id="title" translation_id="343345" type="use" value="Buy Back Offer[COMMENT: Title of dialog to buy back player]" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<!--Forwards PROP_QUESTION_TEXT to text widget 'ques' as PROP_TEXT-->
+	<list id="properties_to_forward">
+		<record get_property="qtxt" set_property="text" target="ques"/>
+	</list>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<widget class="text" id="ques" size="10"/>
+
+		<widget class="check_box" id="atcc" click_event="dnsh" >
+			<translation id="text" translation_id="301057" type="use" value="Don't show this message again.[COMMENT: The title of a checkbox displayed in a dialog, which allows the user to request that the dialog isn't displayed again.]" />
+		</widget>
+
+	</container>
+
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="ok">
+			<translation id="text" translation_id="242044" type="use" value="Yes" />
+		</widget>
+
+		<widget class="icon_button" id="no" auto_size="all" icon="icons/16px/cross">
+			<translation id="text" translation_id="231460" type="use" value="No" />
+		</widget>
+
+		<widget class="icon_button" id="nego" auto_size="all" hidden="true" icon="icons/16px/none">
+			<translation id="text" translation_id="241903" type="use" value="Negotiate" />
+			<record id="click_event">
+				<flags id="event_id" value="mkon" />
+			</record>
+		</widget>
+
+	</container>
+
+</panel>

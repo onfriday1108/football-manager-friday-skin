@@ -1,0 +1,65 @@
+﻿<panel>
+	<container id="main" >
+		<layout class="stick_to_sides_attachment" alignment="all"  inset="5" />
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="-5" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all"  inset="0" />
+
+		<container>
+
+			<container id="it11" height="26" width="26" name="personalised instructions">
+				<layout class="stick_to_sides_attachment" alignment="bottom"  inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="left"  inset="0" />
+			</container>
+
+			<container id="it01" name="kit picture">
+				<layout class="stick_to_sides_attachment" alignment="all"  inset="0" />
+			</container>
+
+			<container class="main_contrast_box" height="18" width="25" red_replacement="teal 900">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="bottom"  inset="7" />
+				<layout class="stick_to_sides_attachment" alignment="right"  inset="0" />
+				<container id="it08" name="rating" />
+			</container>
+		</container>
+
+		<container id="it10" height="64">
+			<layout class="arrange_vertical_attachment" layout="22,-1, 20" offset="1" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="1" />
+
+			<container>
+				<container id="it03"  width="25" name="pie">
+					<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" />
+				</container>
+				<container id="it04" name="position_duty">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</container>
+			</container>
+
+			<container id="it02" name="player picker"/>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container width="2"/>
+				<container id="it06" width="16" name="morale"/>
+				<container id="it07" name="condition"/>
+			</container>
+
+		</container>
+
+	</container>
+
+
+	<container id="it09" height="30" width="30" name="injury">
+		<layout class="stick_to_sides_attachment" alignment="right,top"  inset="0" />
+	</container>
+
+	<container id="it05" hidden="true" name="familiarity"/>
+
+</panel>

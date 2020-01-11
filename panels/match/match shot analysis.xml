@@ -1,0 +1,194 @@
+<panel save_session_state="true">
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="subsection_box_transparent" >
+		<translation id="title" translation_id="395318" type="use" value="Shot Accuracy[COMMENT: FR 10596, match shot analysis label]" />
+
+		<!-- prozone logo area -->
+		<container id="btna" embed_in_frame="true" height="30">
+			<layout class="arrange_horizontal_attachment" alignment="right" embed_in_frame="true" gap="4" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" embed_in_frame="true" />
+			<layout class="stick_to_sides_attachment" alignment="right,top" embed_in_frame="true" inset="0" />
+
+			<layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="true" offset="0" />
+
+			<container embed_in_frame="true" width="100" height="30">
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" embed_in_frame="true" />
+				<layout class="stick_to_sides_attachment" alignment="right" apply_to_children="true" inset="0" embed_in_frame="true" />
+
+				<!-- TODO:: Matt W 26/09/2019 - Bug 13328 removed prozone branding, revisit when known what replacement is-->
+				<widget class="picture" width="90" image_alignment="right,top" file="" scale_picture="true" keep_aspect_ratio="true" embed_in_frame="true" />
+			</container>
+
+		</container>
+
+		<layout class="arrange_horizontal_attachment" layout="425,-1" offset="2"  />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container class="inner_subtle_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container id="teaC">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="2" gap="-9" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+				<widget class="radio_toggle_switch_left" id="homb" auto_size="vertical" alignment="centre" group_parent_level="teaC" selected="true" group="2" click_event="homF" />
+				<widget class="radio_toggle_switch_right" id="awab" auto_size="vertical" group="2" group_parent_level="teaC" alignment="centre" click_event="awaF" />
+			</container>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container id="homc">
+					<layout class="arrange_vertical_attachment" layout="30,-1" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="check_box" id="hsal" click_event="hsal" selected="true">
+						<translation id="text" translation_id="247116" type="use" value="Select All" />
+					</widget>
+
+					<widget class="tactic_player_list_table" id="homt" database_table_type="1" mode="fill_rows, stripe_rows" fixed_size_rows="true" auto_size_rows="false" row_height="25" sort_disabled="true">
+						<record id="default_properties" spec="text" />
+						<flags id="default_view" value="0" />
+						<list id="views">
+							<record id="0">
+								<record id="view">
+									<!--Name, Incident, etc-->
+									<record id="InCh" />
+									<record id="PsnC" />
+									<record id="Pnam" />
+									<record id="PinD" />
+									<record id="Pcar" />
+
+									<!--Stats-->
+									<record id="MPst" width="30" />
+									<record id="MPgl" />
+								</record>
+							</record>
+						</list>
+
+						<list id="column_table_properties">
+							<!-- Tick Box -->
+							<record>
+								<integer id="id" value="InCh" />
+								<integer id="width" value="35" />
+								<translation id="name" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]" />
+								<record id="widget_info">
+									<symbol id="class" value="chalkboard_player_check_box" />
+									<record id="click_event" event_id="plCE" />
+									<boolean id="selected" value="true" />
+								</record>
+
+								<record id="column_widget_properties">
+									<flags id="alignment" value="centre" />
+								</record>
+
+								<record id="column_heading">
+									<flags id="alignment" value="centre" />
+									<translation id="text" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]" />
+									<translation id="hint" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]" />
+								</record>
+							</record>
+						</list>
+					</widget>
+				</container>
+
+				<container id="awac">
+					<layout class="arrange_vertical_attachment" layout="30,-1" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="check_box" id="asal" click_event="asal" selected="true">
+						<translation id="text" translation_id="247116" type="use" value="Select All" />
+					</widget>
+
+					<widget class="tactic_player_list_table" id="awat" database_table_type="1" mode="fill_rows, stripe_rows" fixed_size_rows="true" auto_size_rows="false" row_height="25" sort_disabled="true">
+						<record id="default_properties" spec="text" />
+						<flags id="default_view" value="0" />
+						<list id="views">
+							<record id="0">
+								<record id="view">
+									<!--Name, Incident, etc-->
+									<record id="InCh" />
+									<record id="PsnC" />
+									<record id="Pnam" />
+									<record id="PinD" />
+									<record id="Pcar" />
+
+									<!--Stats-->
+									<record id="MPst" width="30" />
+									<record id="MPgl" />
+								</record>
+							</record>
+						</list>
+
+						<list id="column_table_properties">
+							<!-- Tick Box -->
+							<record>
+								<integer id="id" value="InCh" />
+								<integer id="width" value="35" />
+								<translation id="name" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]" />
+								<record id="widget_info">
+									<symbol id="class" value="chalkboard_player_check_box" />
+									<record id="click_event" event_id="plCE" />
+									<boolean id="selected" value="true" />
+								</record>
+
+								<record id="column_widget_properties">
+									<flags id="alignment" value="centre" />
+								</record>
+
+								<record id="column_heading">
+									<flags id="alignment" value="centre" />
+									<translation id="text" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]" />
+									<translation id="hint" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]" />
+								</record>
+							</record>
+						</list>
+					</widget>
+				</container>
+			</container>
+
+		</container>
+
+		<container class="inner_subtle_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container id="radC">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="2" gap="-10" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" apply_to_children="true" />
+
+					<widget class="radio_toggle_switch_left" id="shob" auto_size="all" alignment="right,centre_y" group_parent_level="radC" selected="true" group="1" click_event="shoF">
+						<translation id="text" translation_id="247381" type="use" value="Shots" />
+						<translation id="hint" translation_id="447663" type="use" value="This view shows the initial trajectory of shots and not necessarily where the shots ended up if they were deflected[COMMENT - Match Analysis shot chart screen, tooltip explaining where the shots are tracked from]" />
+					</widget>
+
+				</container>
+
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" apply_to_children="true" />
+
+
+					<widget class="radio_toggle_switch_right" id="goab" auto_size="all" group="1" group_parent_level="radC" alignment="left,centre_y" click_event="goaF">
+						<translation id="text" translation_id="247334" type="use" value="Goals[COMMENT - match screen; option in replays menu for goal replays to be shown]" />
+					</widget>
+
+				</container>
+
+			</container>
+
+			<widget class="shot_areas_panel" id="areP" mode="1" enable_popup="true"/>
+		</container>
+
+	</container>
+
+</panel>

@@ -1,0 +1,13 @@
+<panel>
+  <boolean id="show_inactive_buttons" value="true" />
+
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <widget height="45" class="tactic_slot_button" file="tactics/tactic slot button training" id="tsb0" tactics_slot="0"/>
+
+  <widget height="45" class="tactic_slot_button" file="tactics/tactic slot button training" id="tsb1" tactics_slot="1"/>
+
+  <widget height="45" class="tactic_slot_button" file="tactics/tactic slot button training" id="tsb2" tactics_slot="2" />
+
+</panel>

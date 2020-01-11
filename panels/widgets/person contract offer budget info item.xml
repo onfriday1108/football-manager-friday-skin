@@ -1,0 +1,41 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize"/>
+
+		<widget class="text"  auto_size="all" size="small" colour="faded text" style="bold" font="label">
+			<record id="object_property" get_property="text" set_property="text" />
+		</widget>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left"/>
+
+			<widget class="picture" width="20" height="20" file="icons/16px/circle" image_alignment="centre" hidden="true">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="colr" />
+							<integer id="set_property" value="colr" />
+						</record>
+						<record>
+							<integer id="get_property" value="Shwn" />
+							<integer id="set_property" value="Shwn" />
+						</record>
+					</list>
+				</record>
+			</widget>
+			
+			<widget class="text" auto_size="all" size="xlarge" style="bold" font="value">
+				<record id="object_property" get_property="valu" set_property="text" />
+			</widget>
+
+		</container>
+
+		<widget class="text" auto_size="all" size="small" colour="faded text">
+			<record id="object_property" get_property="atxt" set_property="text" />
+		</widget>
+
+	</container>
+
+</panel>

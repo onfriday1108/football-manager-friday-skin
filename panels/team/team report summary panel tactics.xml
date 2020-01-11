@@ -1,0 +1,53 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <widget class="text" id="NoFr" alignment="centre">
+    <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+  </widget>
+
+  <container id="SoFr">
+    <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="4" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+    <!--most used-->
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="text" alignment="centre_x,top" auto_size="vertical">
+        <translation id="text" translation_id="349787" type="use" value="Most Used Formation[COMMENT: team report, title for display showing the formation most used by the team]" />
+      </widget>
+
+      <widget class="text" id="MUFr" alignment="centre_x,top" auto_size="vertical" size="12" style="bold" />
+      <widget class="text" id="MUFx" alignment="centre_x,top" auto_size="vertical" size="9" />
+    </container>
+
+    <!--most successful-->
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="text" alignment="centre_x,top" auto_size="vertical">
+        <translation id="text" translation_id="349786" type="use" value="Most Successful Formation[COMMENT: team report, title for display showing the formation used with the most success by the team]" />
+      </widget>
+
+      <widget class="text" id="MSFr" alignment="centre_x,top" auto_size="vertical" size="12" style="bold" />
+      <widget class="text" id="MSFx" alignment="centre_x,top" auto_size="vertical" size="9" />
+    </container>
+
+    <!--most vulnerable to facing-->
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="text" alignment="centre_x,top" auto_size="vertical">
+        <translation id="text" translation_id="349788" type="use" value="Most Vulnerable To Facing[COMMENT: team report, title for display showing the formation faced with the least success by the team]" />
+      </widget>
+
+      <widget class="text" id="MVFr" alignment="centre_x,top" auto_size="vertical" size="12" style="bold" />
+      <widget class="text" id="MVFx" alignment="centre_x,top" auto_size="vertical" size="9" />
+    </container>
+  </container>
+
+</panel>

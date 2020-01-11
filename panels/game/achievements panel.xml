@@ -1,0 +1,53 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	
+	<container class="main_transparent_box" id="trtb">
+	
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	
+		 <!-- number of achievments in table -->
+    <container class="main_box" embed_in_frame="true">
+      <attachment_group class="title_embedded_panel_left"/>
+		
+	  <widget class="view_menu_popup" id="view" />
+      <widget class="label" id="talb" embed_in_frame="true" auto_size="horizontal" alignment="right,centre_y" spec="text" colour="selection"/>
+    </container>
+    
+    <container class="multi_box" changed_event="chta" top_kind="subtle_popup_button" top_layout="right,top" contents_kind="container">
+      <record id="top_properties" auto_size="horizontal"/>
+			
+			<container id="achv">
+				<string id="title" value="Unlocked" />
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+				
+				<widget class="achievements_table" id="actb" select_event="acsl">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" />
+				</widget>
+
+				<widget class="button" auto_size="all" id="clsa" click_event="clsa">
+					<string id="text" value="Clear Selected Achievement(s)" />
+					<layout class="stick_to_sides_attachment" alignment="right" />
+				</widget>
+	
+				<widget class="button" auto_size="all" id="clac" click_event="clac">
+					<string id="text" value="Clear All Achievements" />
+					<layout class="stick_to_sides_attachment" alignment="right" />
+				</widget>
+			</container>
+			
+			<container id="unac">
+				<string id="title" value="Locked" />
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+				
+				<widget class="achievements_table" id="uatb" select_event="acsl">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" />
+				</widget>
+	
+				<widget class="button" auto_size="all" id="adac" click_event="adac">
+					<string id="text" value="Unlock Achievement" />
+					<layout class="stick_to_sides_attachment" alignment="right" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

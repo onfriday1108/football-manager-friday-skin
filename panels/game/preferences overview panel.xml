@@ -1,0 +1,276 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at0:" />
+		<record entity_layout_id="at0;" />
+		<record entity_layout_id="at0&lt;" />
+		<record entity_layout_id="at0=" />
+		<record entity_layout_id="at0&gt;" />
+		<record entity_layout_id="at0?" />
+		<record entity_layout_id="at0@" />
+		<record entity_layout_id="at0A" />
+		<record entity_layout_id="at0B" />
+		<record entity_layout_id="at0C" />
+		<record entity_layout_id="at0E" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at0D" />
+		<record entity_layout_id="at0F" />
+		<record entity_layout_id="at0G" />
+		<record entity_layout_id="at0H" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at0I" />
+		<record entity_layout_id="at0J" />
+		<record entity_layout_id="at06" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<widget class="horizontal_divider" entity_layout_id="at00" id="at00" height="19">
+		<layout class="stick_to_object_attachment" id="align_top" offset="3" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+	</widget>
+	<widget class="horizontal_divider" entity_layout_id="at02" id="at02" height="19">
+		<layout class="stick_to_object_attachment" id="align_top" offset="79" get_side="bottom" set_side="top" move_side="true" target="at00" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+	</widget>
+	<widget class="text" entity_layout_id="at0?" alignment="centre_y,left" id="at0?" width="200" height="22" name="skin label">
+		<string id="font" value="title" />
+		<string id="colour" value="disabled" />
+		<string id="size" value="small" />
+		<translation id="value" translation_id="230230" type="use" value="Skin" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="8" get_side="bottom" set_side="top" move_side="true" target="at02" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="68" get_side="right" set_side="left" move_side="true" target="at04" />
+	</widget>
+	<container class="game_settings_viewer_panel" entity_layout_id="at05" id="at05" width="200" height="30" name="skin selection">
+		<record id="table_properties">
+			<list id="column_table_properties">
+				<record hidden="true">
+					<integer id="index" value="0" />
+				</record>
+			</list>
+		</record>
+		<list id="viewed_property_ids">
+			<symbol id="a_button" value="skin" />
+		</list>
+		<layout class="stick_to_object_attachment" id="align_top" offset="5" get_side="bottom" set_side="top" move_side="true" target="at0?" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="68" get_side="right" set_side="left" move_side="true" target="at04" />
+	</container>
+	<widget class="horizontal_divider" entity_layout_id="at07" id="at07" height="19">
+		<layout class="stick_to_object_attachment" id="align_top" offset="298" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+	</widget>
+	<widget class="vertical_divider" entity_layout_id="at0B" id="at0B" width="17">
+		<string id="image_alignment" value="centre_x" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="3" get_side="bottom" set_side="top" target="at07" />
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="-3" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="567" get_side="left" set_side="left" move_side="true" target="main" />
+	</widget>
+	<container class="settings_viewer_panel" entity_layout_id="at08" id="at08" height="25" name="Sound">
+		<record id="table_properties">
+			<list id="column_table_properties" />
+		</record>
+		<list id="viewed_property_ids">
+			<symbol id="a_button" value="play_sounds" />
+		</list>
+		<layout class="stick_to_object_attachment" id="align_top" offset="9" get_side="bottom" set_side="top" move_side="true" target="at0C" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="18" get_side="right" set_side="left" target="at0B" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-23" get_side="right" set_side="right" target="main" />
+	</container>
+	<container class="match_settings_viewer_panel" entity_layout_id="at0:" id="at0:" width="249" height="30" name="Quality">
+		<record id="table_properties">
+			<list id="column_table_properties">
+				<record hidden="true">
+					<integer id="index" value="0" />
+				</record>
+			</list>
+		</record>
+		<list id="viewed_property_ids">
+			<symbol id="a_button" value="graphical_detail" />
+		</list>
+		<layout class="stick_to_object_attachment" id="align_top" offset="47" get_side="bottom" set_side="top" move_side="true" target="at07" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="294" get_side="left" set_side="left" move_side="true" target="main" />
+	</container>
+	<widget class="text" entity_layout_id="at0A" alignment="centre_y,left" id="at0A" width="200" height="22" name="3D graphics label">
+		<string id="font" value="title" />
+		<string id="colour" value="title" />
+		<translation id="text" translation_id="329999" type="use" value="Graphics Quality[COMMENT: preferences: graphical detail level, title]" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="11" get_side="bottom" set_side="top" move_side="true" target="at07" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+	</widget>
+	<widget class="label" entity_layout_id="at0&lt;" id="at0&lt;" width="200" height="19" name="3D Graphics title">
+		<translation id="text" translation_id="348427" type="use" value="This PC's 3D Graphics Capability[COMMENT: game preferences; label text indicating the user's capacity to accomodate the 3D match display]" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="11" get_side="bottom" set_side="top" move_side="true" target="at0A" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+	</widget>
+	<widget class="graphical_level_stars_label" entity_layout_id="at0;" alignment="left" id="at0;" width="200" height="14" name="3D Graphics">
+		<layout class="stick_to_object_attachment" id="align_top" offset="6" get_side="bottom" set_side="top" move_side="true" target="at0&lt;" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+	</widget>
+	<widget class="text" entity_layout_id="at0=" alignment="centre_y,left" id="at0=" width="200" height="22" name="interface label">
+		<string id="font" value="title" />
+		<string id="colour" value="title" />
+		<translation id="text" translation_id="333864" type="use" value="Interface[COMMENT: preferences: User Interface settings section title]" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="7" get_side="bottom" set_side="top" move_side="true" target="at02" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+	</widget>
+	<widget class="text" entity_layout_id="at0&gt;" alignment="centre_y,left" id="at0&gt;" width="200" height="22" name="mode label">
+		<string id="font" value="title" />
+		<string id="colour" value="disabled" />
+		<string id="size" value="small" />
+		<translation id="value" translation_id="256712" type="use" value="Mode[COMMENT: Start New Game screen: league mode header in column where user picks Playable or View-Only]" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="2" get_side="bottom" set_side="top" move_side="true" target="at0=" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+	</widget>
+	<widget class="text" entity_layout_id="at0@" alignment="centre_y,left" id="at0@" width="200" height="22" name="scaling label">
+		<string id="font" value="title" />
+		<string id="colour" value="disabled" />
+		<string id="size" value="small" />
+		<translation id="value" type="new" value="Scaling[COMMENT: AREA: Game Settings; SUB-AREA: Interface; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: game preferences, user interface, set the UI scaling level]" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="9" get_side="bottom" set_side="top" move_side="true" target="at04" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+	</widget>
+	<widget class="text" entity_layout_id="at0C" alignment="centre_y,left" id="at0C" height="22" name="sounds label">
+		<string id="font" value="title" />
+		<string id="colour" value="title" />
+		<translation id="text" translation_id="332277" type="use" value="Sounds[COMMENT:Label for selecting whether sound is on or off]" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="11" get_side="bottom" set_side="top" move_side="true" target="at07" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="19" get_side="right" set_side="left" target="at0B" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-222" get_side="right" set_side="right" target="main" />
+	</widget>
+	<container class="inner_subtle_box" entity_layout_id="at0E" id="at0E" height="76">
+		<layout class="stick_to_object_attachment" id="align_top" offset="16" get_side="bottom" set_side="top" move_side="true" target="at08" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="19" get_side="right" set_side="left" target="at0B" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-22" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container class="settings_viewer_panel" entity_layout_id="at09" id="at09" height="35" name="Volume">
+			<record id="table_properties">
+				<list id="column_table_properties">
+					<record hidden="true">
+						<integer id="index" value="0" />
+					</record>
+				</list>
+			</record>
+			<list id="viewed_property_ids">
+				<symbol id="a_button" value="sound_volume" />
+			</list>
+			<layout class="stick_to_object_attachment" id="align_top" offset="25" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		</container>
+		<widget class="text" entity_layout_id="at0D" alignment="centre_y,left" id="at0D" width="200" height="22" name="skin label">
+			<string id="font" value="title" />
+			<string id="colour" value="disabled" />
+			<string id="size" value="small" />
+			<translation id="text" translation_id="330754" type="use" value="Volume[COMMENT: game settings; sound options, volume level control]" />
+			<layout class="stick_to_object_attachment" id="align_top" offset="1" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+		</widget>
+	</container>
+	<container class="game_settings_viewer_panel" entity_layout_id="at0F" alignment="centre_x,centre_y" id="at0F" width="200" height="30" name="language label">
+		<record id="table_properties">
+			<list id="column_table_properties">
+				<record hidden="true">
+					<string id="disabled" value="true" />
+					<integer id="index" value="0" />
+				</record>
+			</list>
+			<list id="column_widget_properties">
+				<record>
+					<integer id="index" value="1" />
+					<string id="change_db_langauge" value="true" />
+				</record>
+			</list>
+		</record>
+		<list id="viewed_property_ids">
+			<symbol id="a_button" value="current_language" />
+		</list>
+		<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="bottom" set_side="top" move_side="true" target="at0I" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+	</container>
+	<container class="game_settings_viewer_panel" entity_layout_id="at0G" alignment="centre_x,centre_y" id="at0G" width="200" height="30" name="Currency label">
+		<record id="table_properties">
+			<list id="column_table_properties">
+				<record hidden="true">
+					<string id="disabled" value="true" />
+					<integer id="index" value="0" />
+				</record>
+				<record>
+					<integer id="index" value="1" />
+				</record>
+			</list>
+		</record>
+		<list id="viewed_property_ids">
+			<symbol id="a_button" value="selected_currency" />
+		</list>
+		<layout class="stick_to_object_attachment" id="align_top" offset="37" get_side="bottom" set_side="top" move_side="true" target="at00" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0H" />
+	</container>
+	<widget class="vertical_divider" entity_layout_id="at0H" id="at0H" width="17" height="30">
+		<string id="image_alignment" value="centre_x" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="37" get_side="bottom" set_side="top" move_side="true" target="at00" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0F" />
+	</widget>
+	<widget class="vertical_divider" entity_layout_id="at01" id="at01" width="17" height="30">
+		<string id="image_alignment" value="centre_x" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="37" get_side="bottom" set_side="top" move_side="true" target="at00" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0G" />
+	</widget>
+	<widget class="radio_button" entity_layout_id="at03" id="rdFL" appearance="switches/toggle/left/button" auto_size="horizontal" needs_width="true" height="30">
+		<string id="icon" value="" />
+		<string id="show_button_appearance" value="true" />
+		<translation id="text" value="Full Screen Mode" translation_id="247118" type="use" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="3" get_side="bottom" set_side="top" move_side="true" target="at0&gt;" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+	</widget>
+	<widget class="radio_button" entity_layout_id="at04" id="rdWI" appearance="" auto_size="horizontal" needs_width="true" height="30">
+		<string id="icon" value="" />
+		<string id="show_button_appearance" value="true" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="3" get_side="bottom" set_side="top" move_side="true" target="at0&gt;" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="-10" get_side="right" set_side="left" move_side="true" target="at03" />
+	</widget>
+	<widget class="text" entity_layout_id="at0I" alignment="centre_y,left" id="at0I" width="200" height="22" name="region label">
+		<string id="font" value="title" />
+		<string id="colour" value="title" />
+		<translation id="text" value="Region" translation_id="229399" type="use" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="6" get_side="bottom" set_side="top" move_side="true" target="at00" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+	</widget>
+	<container class="settings_viewer_panel" entity_layout_id="at0J" id="at0J" width="950" height="59">
+		<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" move_side="true" target="at0@" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container entity_layout_id="at06" id="at06" file="game/preferences zoom options" height="59" name="scaling options">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-5" get_side="right" set_side="right" target="main" />
+		</container>
+	</container>
+</panel>

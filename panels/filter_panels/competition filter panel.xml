@@ -1,0 +1,13 @@
+<panel>
+	<!-- Filter panel for filtering fixtures by competition -->
+	<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
+
+	<container class="filter_check_box_list_container" id="nctr" auto_size="vertical" >
+		<translation id="title" translation_id="227741" type="use" value="Competitions" />
+		
+		<!-- Competitions will be added here -->
+
+	</container>
+
+	
+</panel>

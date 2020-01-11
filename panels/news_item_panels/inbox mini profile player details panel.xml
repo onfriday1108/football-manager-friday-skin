@@ -1,0 +1,25 @@
+<panel height="250">
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <container class="inner_subtle_box" id="psdt">
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+    <layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" offset="0"/>
+
+    <!--dynamic image here please-->
+    <container id="Dyni" height="150" width="250">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+    </container>
+
+    <container height="12" width="1"/>
+
+    <!-- person name -->
+    <widget class="person_button" id="pnam" auto_size="all" spec="text" style="bold" alignment="centre" size="12">
+    </widget>
+
+    <!-- person description -->
+    <widget class="text" id="ppos" auto_size="vertical" colour="faded text" alignment="top" size="10" multiline="true">
+      <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+    </widget>
+  </container>
+
+</panel>

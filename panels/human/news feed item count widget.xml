@@ -1,0 +1,13 @@
+<panel height="30">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <container height="30">
+    <layout class="arrange_vertical_attachment" layout="25, 4" gap="0" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+    <widget class="text" id="ICtx" alignment="left,centre_y" auto_size="all"/>
+	  <widget class="horizontal_divider" />
+    
+  </container>
+
+</panel>

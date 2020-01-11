@@ -1,0 +1,220 @@
+<panel>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container class="inner_box">
+			<translation id="title" translation_id="340460" type="use" value="Join Online Game[COMMENT: text to join an online game, use top ten matches as this is very similar to an existing string]" />
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="main_box">
+				<translation id="title" translation_id="335278" type="use" value="Search Criteria[COMMENT - title of panel showing network game filters]" />
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+
+				<widget class="table" row_height="36" row_spacing="3">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+					<flags id="layout" value="-1, -1, 20, -1, -1" />
+					<flags id="mode" value="" />
+					<flags id="auto_size" value="vertical" />
+					<boolean id="auto_size_rows" value="false" />
+
+					<widget class="label" col="0" row="0">
+						<translation id="text" translation_id="335293" type="use" value="Server name[COMMENT: find network game; server name field]" />
+					</widget>
+					<widget class="edit_box" id="name" col="1" row="0" return_event="sear" />
+
+					<widget class="label" col="0" row="1">
+						<translation id="hint" translation_id="342023" type="use" value="Choose the type of network game you wish to join.[COMMENT: hint for a drop down allowing the user to filter search results of available online games. Cannot be feminized]" />
+						<translation id="text" translation_id="335987" type="use" value="Game type[COMMENT: find network game; game type field, asks the user to select a type of network game to play, any, an fm career, an fmc career, or a versus competition]" />
+					</widget>
+					<widget class="popup_button" id="gmty" col="1" row="1" row_height="32">
+						<list id="items">
+							<record id="0">
+								<translation id="text" translation_id="334961" type="use" value="Any[COMMENT: join network game - game type]" />
+							</record>
+							<record id="4">
+								<translation id="text" translation_id="335047" type="use" value="FM Career[COMMENT: join network game - game type]" />
+							</record>
+							<!-- <record id="5">
+								<translation id="text" translation_id="391733" type="use" value="FMT Career[COMMENT: join network game - game type]" />
+							</record> -->
+							<!-- record id="3">
+								<translation id="text" translation_id="335511" type="use" value="Versus Competition[COMMENT: join network game - game type]" />
+							</record> -->
+							<record id="9">
+								<translation id="text" translation_id="251420" type="use" value="Fantasy Draft[COMMENT - Title of draft for the Fantasy Draft draft type]" />
+							</record>
+						</list>
+						<integer id="selection" value="0" />
+					</widget>
+
+					<widget class="label" col="0" row="2">
+						<translation id="hint" translation_id="342022" type="use" value="Choose a limit for the number of connections made to a server.[COMMENT: hint for a drop down allowing the user to filter search results of available online games]" />
+						<translation id="text" translation_id="335178" type="use" value="Maximum no. of connections[COMMENT: find network game; number of users field]" />
+					</widget>
+					<widget class="popup_button" id="nmus" col="1" row="2" row_height="30">
+						<list id="items">
+							<record id="-1">
+								<translation id="text" translation_id="341123" type="use" value="No Limit[COMMENT: join network game; no limit on max managers]" />
+							</record>
+							<record id="2">
+								<string id="text" value="2" />
+							</record>
+							<record id="4">
+								<string id="text" value="4" />
+							</record>
+							<record id="8">
+								<string id="text" value="8" />
+							</record>
+							<record id="16">
+								<string id="text" value="16" />
+							</record>
+							<record id="32">
+								<string id="text" value="32" />
+							</record>
+						</list>
+						<integer id="selection" value="-1" />
+					</widget>
+
+					<widget class="label" col="3" row="0">
+						<translation id="text" translation_id="335114" type="use" value="Included division[COMMENT: find network game; number of users field]" />
+					</widget>
+					<widget class="popup_button" id="divi" col="4" row="0" row_height="30">
+						<translation id="hint" translation_id="342020" type="use" value="Choose a division to be included in the network game.[COMMENT: hint for a drop down allowing the user to filter search results of available online games]" />
+					</widget>
+
+					<widget class="check_box" col="3" row="1" id="pass">
+						<translation id="hint" translation_id="342026" type="use" value="Choose whether or not to include passworded games in the filter results.[COMMENT: hint for a drop down allowing the user to filter search results of available online games]" />
+						<translation id="text" translation_id="335196" type="use" value="No password[COMMENT: find network game; filter field]" />
+					</widget>
+					<widget class="check_box" col="4" row="1" id="frnd" click_event="frnd">
+						<translation id="hint" translation_id="466423" type="use" value="Choose whether or not to include only games involving your friends.[COMMENT: hint for a drop down allowing the user to filter search results of available online games. Cannot be feminised]" />
+						<translation id="text" translation_id="336655" type="use" value="Show only friends[COMMENT: Leaderboard panel; check box text for showing only your friends in the high scores leaderboards]" />
+					</widget>
+
+					<widget class="check_box" col="3" row="2" id="nodb">
+						<translation id="hint" translation_id="342024" type="use" value="Choose whether or not to allow games with edited data in your filter results.[COMMENT: hint for a drop down allowing the user to filter search results of available online games. Cannot be feminized]" />
+						<translation id="text" translation_id="335195" type="use" value="No editor changes[COMMENT: find network game; filter field]" />
+					</widget>
+
+					<widget class="check_box" col="4" row="2" id="igen">
+						<translation id="hint" translation_id="357293" type="use" value="The host can never use the In-Game Editor to make changes in this game, even if they have purchased it.[COMMENT: hint for a drop down allowing the user to filter search results of available online games. Cannot be feminized]" />
+						<translation id="text" translation_id="357234" type="use" value="In-Game Editor Not Allowed[COMMENT: find network game; filter field]" />
+					</widget>
+				</widget>
+
+				<widget class="primary_button" click_event="sear" auto_size="all">
+					<translation id="text" translation_id="247194" type="use" value="Search" />
+					<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" />
+				</widget>
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="main_box" id="sslb">
+					<translation id="title" translation_id="466425" type="use" value="Servers[COMMENT - title of list containing network game lobbies]" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="table" id="Srec" select_event="sltr" double_click_event="join">
+
+						<flags id="layout" value="20, -1, -1, 140, 120, 120, -1" />
+						<flags id="mode" value="select_rows, show_bullets" />
+						<boolean id="auto_size_rows" value="true" />
+
+
+						<list id="headings">
+							<record alignment="centre">
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="229689" type="use" value="Name" />
+								<translation id="hint" translation_id="342110" type="use" value="The name of the server game.[COMMENT: join network screen; hint for field showing the name of the network host game]" />
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="335014" type="use" value="Created by[COMMENT: join network screen; field showing creator of network game]" />
+								<translation id="hint" translation_id="342111" type="use" value="The name of the user who created the game.[COMMENT: join network screen; hint for field showing creator of network game]" />
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="335987" type="use" value="Game type[COMMENT: find network game; game type field, asks the user to select a type of network game to play, any, an fm career, an fmc career, or a versus competition]" />
+								<translation id="hint" translation_id="342116" type="use" value="The type of game being played.[COMMENT: find network game; hint for game type field, asks the user to select a type of network game to play, any, an fm career, an fmc career, or a versus competition]" />
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="335004" type="use" value="Connections[COMMENT: join network screen; field showing number of network clients]" />
+								<translation id="hint" translation_id="342113" type="use" value="The number of clients connected to this game.[COMMENT: join network screen; hint for field showing number of network clients]" />
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="334998" type="use" value="Club managers[COMMENT: join network screen; field showing number of managers]" />
+								<translation id="hint" translation_id="342114" type="use" value="The number of human managers in the game.[COMMENT: join network screen; hint for field showing number of managers]" />
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="335189" type="use" value="Nations[COMMENT: join network game panel; list of nations in the network game]" />
+								<translation id="hint" translation_id="356969" type="use" value="The nations that are playable.[COMMENT: join network game panel; hint for list of nations in the network game, use top 10 matches]" />
+							</record>
+						</list>
+
+						<list id="column_widget_properties">
+							<record indx="0">
+								<flags id="algn" value="centre" />
+							</record>
+							<record indx="1">
+								<flags id="algn" value="left,centre_y" />
+								<flags id="spec" value="text" />
+							</record>
+							<record indx="2">
+								<flags id="algn" value="left,centre_y" />
+							</record>
+							<record indx="3">
+								<flags id="algn" value="left,centre_y" />
+							</record>
+							<record indx="4">
+								<flags id="algn" value="left,centre_y" />
+							</record>
+							<record indx="5">
+								<flags id="algn" value="left,centre_y" />
+							</record>
+							<record indx="6">
+								<flags id="spec" value="text" />
+								<flags id="algn" value="left,centre_y" />
+							</record>
+						</list>
+					</widget>
+				</widget>
+
+				<!-- buttons panel -->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="5" apply_to_children="true" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="5" />
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+
+					<!-- cancel button-->
+					<widget class="button" id="cncl" auto_size="all">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+						<translation id="text" translation_id="229828" type="use" value="Cancel" />
+						<record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
+					</widget>
+
+					<!-- rest of buttons on right -->
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+						<widget class="primary_icon_button" id="join" auto_size="all">
+							<translation id="text" translation_id="248408" type="use" value="Join Game" />
+							<record id="click_event">
+								<flags id="event_id" value="join" />
+							</record>
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

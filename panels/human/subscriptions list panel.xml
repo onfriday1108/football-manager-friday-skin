@@ -1,0 +1,146 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+	<container class="inner_box_no_margin" id="plcn" alignment="left" spec="text" size="large">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1, -2" offset="0" gap="1"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<!-- object list -->
+			<container class="main_box" appearance="boxes/sidebar/standard/left/paper">
+				<layout class="arrange_vertical_attachment" layout="-1, 30" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+				<widget class="table" id="oltb" layout="-1, 25" mode="fill_rows, stripe_rows, select_rows, select_multiple, dont_allow_empty_selection, show_bullets" row_height="30">
+					<list id="headings">
+						<record alignment="left,centre_y">
+							<translation id="text" translation_id="229689" type="use" value="Name"/>
+						</record>
+					</list>
+
+					<list id="column_widget_properties">
+						<record index="0" alignment="left,centre_y"/>
+						<record index="1" alignment="centre"/>
+					</list>
+
+					<list id="column_table_properties">
+						<record index="0" id="name" left="10"/>
+					</list>
+
+					<integer id="default_sort_column" value="name"/>
+				</widget>
+
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+
+					<widget class="button" auto_size="all">
+						<translation id="text" translation_id="247116" type="use" value="Select All"/>
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+						<record id="click_event">
+							<flags id="event_id" value="ALL "/>
+							<flags id="event_target" value="awdt"/>
+						</record>
+					</widget>
+
+					<widget class="button" auto_size="all">
+						<translation id="text" translation_id="248399" type="use" value="Remove All"/>
+						<record id="click_event">
+							<flags id="event_id" value="rmva"/>
+						</record>
+					</widget>
+				</container>
+
+			</container>
+
+			<!-- subscription categories -->
+			<container class="main_box" id="sbox">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+				<!-- buttons area -->
+				<container id="btna" embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" />
+
+					<widget class="icon_tick_button" id="sacc" auto_size="horizontal" click_event="sacc" embed_in_frame="true"/>
+					<widget class="icon_button" id="sncc" auto_size="horizontal" icon="icons/16px/cross" click_event="sncc" embed_in_frame="true"/>
+				</container>
+
+				<container id="slcn">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+
+					<record id="default_properties" hidden="true" />
+
+					<widget class="label" id="nmlb" auto_size="all">
+						<translation id="text" translation_id="336608" type="use" value="Receive News About: [COMMENT: manage subscriptions panel; label indicating which news items are selected]"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+					</widget>
+
+					<!-- nation -->
+					<widget class="label" id="nat1" auto_size="all">
+						<translation id="text" translation_id="336608" type="use" value="Receive News About: [COMMENT: manage subscriptions panel; label indicating which news items are selected]"/>
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+					</widget>
+					<widget class="popup_button" id="ntpb" auto_size="horizontal" height="30" fixed="false" hidden="true">
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+					</widget>
+
+					<!-- cup comp -->
+					<widget class="label" id="clb1" auto_size="all">
+						<translation id="text" translation_id="336609" type="use" value="Receive News From[COMMENT: manage subscriptions panel; label indicating which category/ies news items are selected from]"/>
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+					</widget>
+					<widget class="popup_button" id="ccpb" auto_size="horizontal" height="30" fixed="false">
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+					</widget>
+					<widget class="label" id="clb2" auto_size="all">
+						<translation id="text" translation_id="337772" type="use" value="About: [COMMENT: manage subscriptions panel; label indicating which news items are selected and why user has received them, space is intentional]"/>
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+					</widget>
+				</container>
+
+				<container id="nosb" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+					<widget class="label" id="notx" auto_size="all" colour="faded text">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0"/>
+					</widget>
+				</container>
+
+				<container class="scrolling_box">
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0"/>
+
+						<container id="col0">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal"  />
+						</container>
+
+						<container id="col1">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal"  />
+						</container>
+
+						<container id="col2">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal"  />
+						</container>
+					</container>
+				</container>
+
+			</container>
+		</container>
+
+	</container>
+
+</panel>

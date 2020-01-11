@@ -1,0 +1,16 @@
+<panel>
+
+  <string id="skin_style" value="subtle box"/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="main_box" id="cPan">
+    <translation id="title" translation_id="346873" type="use" value="Tactics Being Trained[COMMENT: match preparation news item; section heading for tactic preparation choice]" />
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <widget class="tactic_slot_tab_container" id="prep" file="tactics/tactic slot tab container training news">
+      <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="5"/>
+    </widget>
+  </container>
+</panel>

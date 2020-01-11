@@ -1,0 +1,10 @@
+﻿<panel>
+  <layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <container class="network_settings_panel" >
+    <record id="object_property" get_property="objt" set_property="objt" />
+  </container>
+
+  <widget class="preferences_button_panel" iDil="true"/>
+</panel>

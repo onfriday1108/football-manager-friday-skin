@@ -1,0 +1,38 @@
+﻿<panel height="70">
+	<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+
+	<boolean id="RcBg" value="true"/> <!-- we want the background image to be recoloured to the main team colour -->
+	<boolean id="AnIc" value="false"/>	<!-- we don't want these icons animating -->
+
+	<container class="inner_box" id="bcIM" appearance="boxes/custom/pitch player presentation/paper" height="70">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1, 60" horizontal_gap="-22"/>
+
+			<!-- name and number -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_offset="6" horizontal_inset="4"/>
+
+						<widget class="person_button" id="pplr" format="[%person#1-shirt]" style="bold" alignment="centre, can_scale" info_popup_enabled="false" person_is_player="true" font="title" size="6.5" links_enabled_in_popup="false" info_popup_instead_of_link="true" auto_size="vertical" navigation_focus_target="false"/>
+						<widget class="picture" id="SqNm" height="40" image_alignment="centre" scale_picture="true"/>
+					</container>
+			</container>
+
+			<!-- portrait picture -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="right, bottom" clickable="false">
+						<record id="object_property">
+							<integer id="get_property" value="objt"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+					</widget>
+			</container>
+		</container>
+	</container>
+</panel>

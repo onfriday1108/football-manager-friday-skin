@@ -1,0 +1,48 @@
+<panel>
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<string id="item_file" value="competition/competition fixtures item panel match preview" />
+	<integer id="display_mode" value="2" />
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- titled box -->
+	<container>
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- No fixtures panel-->
+		<container id="nomt" hidden="true">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<widget class="spacer" height="10" />
+
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="242251" type="use" value="No fixtures scheduled yet[COMMENT competition fixtures panel, no fixtures set up yet]" />
+			</widget>
+		</container>
+
+		<container id="fxct">
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!-- scrolling box - used if more than 1 table-->
+			<container class="scrolling_box" id="fxsb" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				<container id="fsbg">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+				</container>
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

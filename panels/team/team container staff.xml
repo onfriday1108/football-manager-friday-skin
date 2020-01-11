@@ -1,0 +1,72 @@
+<panel>
+
+  <boolean id="save_session_state" value="true" />
+
+  <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+  <container class="tabbed_container" id="cstm" default_item="clst" save_session_state="true">
+
+    <!--Bug fix 60333-->
+    <flags id="save_default_state" value="false" />
+
+    <container id="clst">
+      <translation id="title" translation_id="331818" type="use" value="All[COMMENT - Staff Panel; title of club tab]" />
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <widget class="team_container_staff_details_panel" id="clpn" />
+
+    </container>
+
+    <container id="ftst">
+      <translation id="title" translation_id="331957" type="use" value="Senior Squad[COMMENT - Staff Panel; title of senior squad tab]" />
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <widget class="team_container_staff_details_panel" id="ftpn" />
+
+    </container>
+
+    <container id="rtst">
+      <translation id="title" translation_id="229290" type="use" value="Reserve Squad" />
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <widget class="team_container_staff_details_panel" id="rtpn" />
+
+    </container>
+
+    <container id="ytst">
+      <translation id="title" translation_id="342154" type="use" value="Youth Squad(s)[COMMENT: Staff Panel; title of youth squad(s) tab]" />
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <widget class="team_container_staff_details_panel" id="ytpn" />
+
+    </container>
+    
+
+  </container>
+
+  <container class="tabbed_container" id="nstm" default_item="ssst" save_session_state="true">
+
+    <!--Bug fix 60333-->
+    <flags id="save_default_state" value="false" />
+
+    <container id="ssst">
+      <translation id="title" translation_id="331957" type="use" value="Senior Squad[COMMENT - Staff Panel; title of senior squad tab]" />
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <widget class="team_container_staff_details_panel" id="sspn" />
+
+    </container>
+
+    <container id="u21s">
+      <translation id="title" translation_id="331934" type="use" value="Other Squads[COMMENT - Staff Panel; title of other squads tab]" />
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <widget class="team_container_staff_details_panel" id="u21p" />
+
+    </container>
+
+  </container>
+
+</panel>

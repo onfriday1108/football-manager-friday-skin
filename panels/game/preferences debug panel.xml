@@ -1,0 +1,93 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="main_box">
+				<translation id="title" translation_id="227743" type="use" value="Transfers" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+				<widget class="game_settings_viewer_panel" id="set1">
+					<list id="viewed_property_ids">
+						<symbol value="enable_transfers" />
+						<symbol value="enable_transfer_windows" />
+						<symbol value="create_other_rule_groups" />
+					</list>
+				</widget>
+
+			</container>
+
+			<container class="main_box">
+				<translation id="title" translation_id="242774" type="use" value="Match" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+				<widget class="game_settings_viewer_panel" id="set3">
+					<list id="viewed_property_ids">
+						<symbol value="enable_match_engine" />
+						<symbol value="enable_match_screen" />
+						<symbol value="enable_friendlies" />
+						<symbol value="use_random_me_for_internationals" />
+						<symbol value="use_random_me_for_continental" />
+						<symbol value="export_individual_movie_frames" />
+					</list>
+				</widget>
+
+			</container>
+
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="main_box">
+				<translation id="title" translation_id="227745" type="use" value="Media" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+				<widget class="game_settings_viewer_panel" id="set2">
+					<list id="viewed_property_ids">
+						<symbol value="enable_media_comments" />
+						<symbol value="send_comments_to_all_humans" />
+						<symbol value="show_all_comments" />
+						<symbol value="error_check_comments" />
+						<symbol value="translation_flood" />
+						<symbol value="press_conference_flood" />
+					</list>
+				</widget>
+
+			</container>
+
+			<container class="main_box">
+				<translation id="title" translation_id="329981" type="use" value="Game" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+				<widget class="game_settings_viewer_panel" id="set3">
+					<list id="viewed_property_ids">
+						<symbol value="enable_regeneration" />
+						<symbol value="enable_simulated_stats" />
+						<symbol value="show_available_for_reserves" />
+						<symbol value="store_all_player_form" />
+						<symbol value="disable_human_managers_sackings" />
+						<symbol value="disable_ai_managers_sackings" />
+						<symbol value="starting_injury_config" />
+					</list>
+				</widget>
+
+			</container>
+
+		</container>
+	</container>
+
+	<widget class="preferences_button_panel" />
+</panel>

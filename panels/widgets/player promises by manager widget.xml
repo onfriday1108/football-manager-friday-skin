@@ -1,0 +1,9 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+    <widget class="number_label" id="numL" alignment="centre" spec="text" size="large"/>
+  </container>
+
+  <widget class="link_button" id="lnkB" section="Prel" appearance=""/>
+</panel>

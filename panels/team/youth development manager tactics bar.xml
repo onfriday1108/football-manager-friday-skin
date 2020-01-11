@@ -1,0 +1,45 @@
+﻿<panel>
+  <layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main"/>
+  <layout class="stick_to_object_attachment" id="alPl" offset="10" get_side="left" set_side="left" target="main"/>
+  <layout class="stick_to_object_attachment" id="alPr" offset="-7" get_side="right" set_side="right" target="main"/>
+  <widget class="spacer" id="main">
+    <boolean id="exclude_from_find" value="true"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </widget>
+  <widget class="spacer" id="fmin" embed_in_frame="true">
+    <boolean id="exclude_from_find" value="true"/>
+    <layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+  </widget>
+  <container class="client_object_viewer_xml_panel" entity_layout_id="at0B" file="widgets/person picture name and job widget" id="mgrP"  auto_size="horizontal"  needs_width="true">
+    <layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main"/>
+    <layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main"/>
+    <layout class="stick_to_object_attachment" id="alPl" offset="12" get_side="left" set_side="left" move_side="true" target="main"/>
+  </container>
+  <container class="inner_box" entity_layout_id="at0D" id="at0D" width="200">
+    <layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main"/>
+    <layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main"/>
+    <layout class="stick_to_object_attachment" id="alPr" offset="6" get_side="right" set_side="left" move_side="true" target="at0B"/>
+    <widget class="spacer" id="main">
+      <boolean id="exclude_from_find" value="true"/>
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+    </widget>
+    <widget class="spacer" id="fmin" embed_in_frame="true">
+      <boolean id="exclude_from_find" value="true"/>
+      <layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+    </widget>
+    <widget class="widget_popup_button" entity_layout_id="at00" id="devR" auto_size="all" needs_height="true" needs_width="true" icon="icons/16px/staff" appearance="buttons/subtle/normal/button">
+	  <translation id="text" translation_id="335274" type="use" value="Responsibilities[COMMENT: Manager main/top menu: national team options when team name is not visible]" />
+	  <string id="popup_alignment" value="centre_x, bottom" />
+      <string id="widget_type" value="group_responsibility_list_widget"/>
+      <record id="WdgP" file="team/staff responsibility summary popup panel" width="800" height="210"/>
+      <record id="mopp" file="modal popup panel auto sized" />
+		<layout class="centre_in_parent_attachment" alignment="all" />
+    </widget>
+  </container>
+  <container class="tactic_slot_tab_container" show_team_selector_formation="true" should_update_tactics="true"  entity_layout_id="at0C" file="tactics/tactics slot tab container youth development" id="tctS">
+    <layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main"/>
+    <layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main"/>
+    <layout class="stick_to_object_attachment" id="alPl" offset="12" get_side="right" set_side="left" target="at0D"/>
+    <layout class="stick_to_object_attachment" id="alPr" offset="0" get_side="right" set_side="right" target="main"/>
+  </container>
+</panel>

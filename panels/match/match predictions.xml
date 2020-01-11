@@ -1,0 +1,21 @@
+<panel>
+
+	<!-- This container will stick to the top and bottom of it's parent -->
+	<layout class="stick_to_sides_attachment" alignment="all" inset="10" apply_to_children="true"/>
+
+	<widget class="table" id="prec" layout="-2,-3" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows" column_spacing="4">
+
+		<record id="default_properties" spec="text" />
+
+		<list id="column_table_properties">
+			<record indx="0" left="4" top="2" bottom="3" sort_disabled="true"/>
+			<record indx="1" right="4" top="2" bottom="3" sort_disabled="true"/>
+		</list>
+
+		<list id="column_widget_properties">
+			<record indx="1" />
+		</list>
+
+	</widget>
+
+</panel>

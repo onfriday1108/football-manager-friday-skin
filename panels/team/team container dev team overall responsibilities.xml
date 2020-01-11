@@ -1,0 +1,47 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at01"/>
+		<record entity_layout_id="at05"/>
+		<record entity_layout_id="at02"/>
+		<record entity_layout_id="at06"/>
+	</list>
+	<boolean id="GTBT" value="true"/>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container entity_layout_id="at00" id="at00">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="0" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<container class="group_responsibility_list_widget" entity_layout_id="at01" id="Ryth" file="team/staff responsibility summary panel" height="150" name="youth players">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="-0" get_side="right" set_side="right" target="main"/>
+		</container>
+		<widget class="horizontal_divider" entity_layout_id="at05" id="at05" height="10">
+			<layout class="stick_to_object_attachment" id="align_top" offset="5" get_side="bottom" set_side="top" move_side="true" target="at01"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		</widget>
+		<container class="group_responsibility_list_widget" entity_layout_id="at02" id="Rodl" file="team/staff responsibility summary panel" height="250" name="outgoing dev loans">
+			<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="bottom" set_side="top" move_side="true" target="at05"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="0" get_side="right" set_side="right" target="main"/>
+		</container>
+	</container>
+</panel>

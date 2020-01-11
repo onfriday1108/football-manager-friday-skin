@@ -1,0 +1,9 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="20,-3,5,-3" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2"/>
+
+	<widget class="info_icon_hint_text" id="atTX" width="20"></widget>
+	<widget class="text" id="atNM"  auto_size="none" alignment="left,centre_y"/>
+	<widget class="spacer" />
+	<widget class="adjustable_bar" is_reversed="true" id="hoBR" max_value="20" bar_value_colour="tracksuit 1" adj_bar_highlight_value_colour="green"/>
+</panel>

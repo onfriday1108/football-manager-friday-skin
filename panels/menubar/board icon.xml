@@ -1,0 +1,7 @@
+<panel height="36">
+  <translation id="hint" translation_id="491850" type="use" value="Club Vision[COMMENT: AREA: Club vision panel; SUB-AREA: Panel heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the club vision panel]" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <widget class="picture" id="pict" file="icons/26px/board" image_alignment="centre" red_replacement="sidebar text" />
+</panel>

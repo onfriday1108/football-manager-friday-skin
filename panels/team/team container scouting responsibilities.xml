@@ -1,0 +1,108 @@
+﻿<panel>
+	<boolean id="GTBT" value="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="8"/>
+		<container class="scrolling_box">
+			<container class="inner_box">
+				<layout class="fit_children_attachment" alignment="vertical,fill" gap="-26" />
+				<layout class="arrange_vertical_attachment" alignment="top" gap="-26" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend"/>
+
+					<widget class="picture"  file="icons/16px/search" width="16" height="16" image_alignment="centre">
+						<string id="red_replacement" value="title"/>
+					</widget>
+					<widget class="text"  alignment="centre_y,left" height="26" name="title" font="title" colour="title">
+						<string id="size" value="large"/>
+						<translation id="text" translation_id="391265" type="use" value="Scouting[COMMENT: editor club responsibilities section]"/>
+					</widget>
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+
+					<container class="group_responsibility_list_widget" id="Rsca" file="team/staff responsibility summary panel" name="1st team scouting" hide_container_title="true" />
+					<container id="scoa" height="65" name="scouting area">
+						<layout class="arrange_vertical_attachment" alignment="fill" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+						<container>
+							<layout class="arrange_horizontal_attachment" alignment="left" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+							<widget class="label" id="LsdS" height="30" name="shortlist label" auto_size="horizontal">
+								<translation id="txtt" translation_id="345587" type="use" value="When [%person#1-you] scout a player, add him to [%person#1-your] shortlist for:[COMMENT: team options panel; string identifying drop-down from which to choose a default time on shortlist when bidding for a player]" />
+							</widget>
+
+							<widget class="subtle_popup_button" id="dtsb" select_event="dtse"  auto_size="all" needs_height="true" name="shortlist popup">
+								<list id="items">
+									<record id="-1">
+										<translation id="text" translation_id="343581" type="use" value="Don't Shortlist[COMMENT - Length of time for a player to remain on Shortlist]" />
+									</record>
+									<record id="0">
+										<translation id="text" translation_id="243398" type="use" value="Indefinitely[COMMENT - Length of time for a player to remain on Shortlist]" />
+									</record>
+									<record id="1">
+										<translation id="text" translation_id="243399" type="use" value="1 Month[COMMENT - Length of time for a player to remain on Shortlist]" />
+									</record>
+									<record id="3">
+										<translation id="text" translation_id="243400" type="use" value="3 Months[COMMENT - Length of time for a player to remain on Shortlist]" />
+									</record>
+									<record id="6">
+										<translation id="text" translation_id="243401" type="use" value="6 Months[COMMENT - Length of time for a player to remain on Shortlist]" />
+									</record>
+									<record id="12">
+										<translation id="text" translation_id="243402" type="use" value="1 Year[COMMENT - Length of time for a player to remain on Shortlist]" />
+									</record>
+								</list>
+
+							</widget>
+						</container>
+						<container>
+							<layout class="arrange_horizontal_attachment" alignment="left" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+							<widget class="label" id="LmdS" height="30" auto_size="horizontal" name="scout time label">
+								<translation id="txtt" translation_id="396619" type="use" value="When [%person#1-you] scout a player, watch him:[COMMENT: FR 4319; team options panel; string identifying drop-down from which to choose a default number of matches to scout a player for, use top 10 matches for ID, removed the 'for' from after 'watch him' as this results in inconsistencies everywhere and needs tidying once and for all]" />
+							</widget>
+							<widget class="subtle_popup_button" id="dmsb" select_event="dmse"  auto_size="all" needs_height="true" name="scout time popup">
+
+								<list id="items">
+									<record id="1">
+										<translation id="text" translation_id="254713" type="use" value="For 1 Match[COMMENT: person actions menu; send scout to watch player for one match]" />
+									</record>
+									<record id="2">
+										<translation id="text" translation_id="396594" type="use" value="For 2 Matches[COMMENT: person actions menu; send scout to watch player for one match, use top 10 matches for ID 363563, this NEEDS to include 'For' before the duration in order to be consistently appended to ID 363796 as well as all other scouting menu options]" />
+									</record>
+									<record id="3">
+										<translation id="text" translation_id="396595" type="use" value="For 3 Matches[COMMENT: person actions menu; send scout to watch player for one match, use top 10 matches for ID 363564, this NEEDS to include 'For' before the duration in order to be consistently appended to ID 363796 as well as all other scouting menu options]" />
+									</record>
+									<record id="7">
+										<translation id="text" translation_id="374746" type="use" value="For 1 Week[COMMENT: person actions menu; send scout to watch player for x weeks/months]" />
+									</record>
+									<record id="14">
+										<translation id="text" translation_id="374748" type="use" value="For 2 Weeks[COMMENT: person actions menu; send scout to watch player for x weeks/months]" />
+									</record>
+									<record id="30">
+										<translation id="text" translation_id="374745" type="use" value="For 1 Month[COMMENT: person actions menu; send scout to watch player for x weeks/months]" />
+									</record>
+									<record id="60">
+										<translation id="text" translation_id="374747" type="use" value="For 2 Months[COMMENT: person actions menu; send scout to watch player for x weeks/months]" />
+									</record>
+									<record id="90">
+										<translation id="text" translation_id="374749" type="use" value="For 3 Months[COMMENT: person actions menu; send scout to watch player for x weeks/months]" />
+									</record>
+									<record id="100">
+										<translation id="text" translation_id="412467" type="use" value="Until Full Knowledge[COMMENT: fr 14446 person actions menu; send scout to watch player until gained full knowledge]" />
+									</record>
+								</list>
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+		</container>
+		<container class="inner_box" entity_layout_id="at0D" file="generic/simple form with confirmation buttons" />
+	</container>
+</panel>

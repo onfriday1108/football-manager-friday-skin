@@ -1,0 +1,72 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical"/>
+			<layout class="arrange_horizontal_attachment" layout="-1, 250" gap="12"/>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true"/>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!-- logos -->
+					<container height="100">
+						<layout class="arrange_horizontal_attachment" alignment="middle,fill"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+						<container height="100">
+							<layout class="arrange_vertical_attachment" layout="-1, 25"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+							<widget class="object_portrait_picture" id="hmpc" scale_picture="true" image_alignment="centre" width="50"/>
+							<widget class="client_object_label" id="hmnm" auto_size="none" spec="text" size="large" colour="text" alignment="centre"/>
+						</container>
+
+						<widget class="text" auto_size="all" alignment="centre" colour="text" style="semi_bold" size="18">
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+							<translation id="text" translation_id="242324" type="use" value="v[versus]"/>
+						</widget>
+
+						<container height="100">
+							<layout class="arrange_vertical_attachment" layout="-1, 25"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+							<widget class="object_portrait_picture" id="awpc" scale_picture="true" image_alignment="centre"/>
+							<widget class="client_object_label" id="awnm" auto_size="none" spec="text" size="large" colour="text" alignment="centre"/>
+						</container>
+					</container>
+
+					<widget class="text" id="comp" style="bold" auto_size="vertical" size="large" alignment="centre"/>
+					<widget class="text" id="fxdt" auto_size="vertical" size="large" alignment="centre"/>
+				</container>
+
+				<!-- main body text -->
+				<widget class="inbox_body_text" id="bdtx"/>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--dynamic image here please-->
+				<container id="Dyni" height="150">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				</container>
+
+				<!-- opposition details -->
+				<widget class="inbox_mini_profile_team_info_panel" id="tmin"/>
+
+				<!-- stadium details -->
+				<widget class="client_object_viewer_xml_panel" file="news_item_panels/inbox mini profile stadium info panel" id="stdi"/>
+			</container>
+		</container>
+	</container>
+
+</panel>

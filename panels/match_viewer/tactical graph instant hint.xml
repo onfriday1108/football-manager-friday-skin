@@ -1,0 +1,14 @@
+<panel>
+  <layout class="fit_children_attachment" alignment="vertical" offset="10" gap="0"/>
+  <layout class="fit_children_attachment" alignment="horizontal" offset="20" gap="0"/>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="10" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="20"/>
+
+  <container class="inner_box_no_margin" background_colour="instant hint colour" height="25" >
+    <layout class="fit_children_attachment" alignment="horizontal" offset="5" gap="0"/>
+    <layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5"/>
+    <widget class="text" id="txtG" auto_size="all" size="10" colour="white" />
+  </container>
+
+</panel>

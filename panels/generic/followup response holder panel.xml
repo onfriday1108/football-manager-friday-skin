@@ -1,0 +1,13 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="main_box" red_replacement="light_box_background">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+		
+		<container id="cntB">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="top" vertical_inset="0" />
+
+			<widget class="object_portrait_picture" id="perP" scale_picture="true" width="80" height="80" />
+		</container>
+	</container>
+</panel>

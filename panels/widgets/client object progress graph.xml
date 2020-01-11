@@ -1,0 +1,13 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+	<widget class="progress_graph_panel" file="player/progress graph profile panel">
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="PpAH" />
+					<integer id="set_property" value="value" />
+				</record>
+			</list>
+		</record>
+	</widget>	
+</panel>

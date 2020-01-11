@@ -1,0 +1,120 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="icon_box" icon="none">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- Player status icon with a fitness donut as first item-->
+		<widget class="player_status_all_button" id="plsA" appearance="buttons/custom/status round" auto_size="all" alignment="bottom" offset_x="0" offset_y="4" gap="-4" maximised="false" max_items_per_row_or_column="3" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true" />
+
+			<!-- Get player status flags-->
+			<record id="object_property" get_property="Pnfo" dont_set_hint="true"/>
+			<!-- Set icon to only show: Inj, Tir-->
+			<integer id="type" value="3" />
+
+			<!-- Fitness donut instead of icon embeded in frame -->
+			<widget class="pie_condition_label" id="fPie" file="widgets/pie condition no label" mode="2" width="26" height="26" embed_in_frame="true">
+				<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true" />
+
+				<record id="object_property" get_property="PRCF" />
+			</widget>
+		</widget>
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="link" section="PInj" auto_size="all">
+				<translation id="text" translation_id="247571" type="use" value="Fitness" />
+			</widget>
+		</container>
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize"/>
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,as_needed" />
+					<!-- Fitness text -->
+					<widget class="fitness_label" id="fitL" multiline="false" auto_size="all" style="semi_bold"/>
+					<!-- Expected time out for injury -->
+					<widget class="label" id="injD" auto_size="all" multiline="true" colour="faded text"/>
+				</container>
+
+				<container>
+
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-3"/>
+
+					<!-- Fitness percentage / Condition percentage -->
+					<container>
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+								<widget class="label" auto_size="vertical" font="label">
+									<translation id="text" translation_id="394347" type="use" value="CON/SHP[COMMENT: label for the player's condition (CON, for Overall Condition) and match sharpness (SHP)]" />
+									<translation id="hint" translation_id="394523" type="use" value="Overall Physical Condition/Match Sharpness[COMMENT: label for the player's condition and match fitness]" />
+								</widget>
+
+								<container>
+									<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+									<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+									<widget class="editable_client_object_property_panel" id="conv" auto_size="all" size="small">
+										<record id="widget_info" class="condition_label" auto_size="all" ivih="false">
+											<string id="format" value="[%number#1]%" />
+										</record>
+										<record id="widget_properties" width="50" height="24" />
+										<record id="object_property" get_property="Pcon" />
+									</widget>
+
+									<widget class="label" auto_size="all">
+										<string id="text" value="/"/>
+									</widget>
+
+									<widget class="editable_client_object_property_panel" id="fitv" auto_size="all" size="small">
+										<record id="widget_info" class="condition_label" auto_size="all" ivih="false" mode="1">
+											<string id="format" value="[%number#1]%" />
+										</record>
+										<record id="widget_properties" width="50" height="24" />
+										<record id="object_property" get_property="Pfit" />
+									</widget>
+								</container>
+							</container>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!-- Treatment for injured players -->
+						<container id="treC">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+							<widget class="label" auto_size="vertical" font="label">
+								<translation id="text" translation_id="447652" type="use" value="Treatment[COMMENT: FR 20159; player injury table; treatment type player is receiving column header]"/>
+							</widget>
+							<widget class="label" id="trea" auto_size="vertical"/>
+						</container>
+
+						<!-- Injury risk for uninjured players -->
+						<container id="inrC">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="label" auto_size="vertical" font="label">
+								<translation id="text" translation_id="450118" type="use" value="Injury Risk[COMMENT: player injury panel section detailing susceptibility to injury, title]" />
+							</widget>
+							<widget class="injury_risk_label" id="injR" auto_size="vertical"/>
+						</container>
+
+
+					</container>
+
+
+				</container>
+			</container>
+		</container>
+
+
+	</container>
+</panel>

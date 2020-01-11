@@ -1,0 +1,234 @@
+<panel height="481">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<string id="skin_style" value="title link" />
+
+	<!-- attachment title area -->
+	<container class="inner_box">
+
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"  />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--Top Area-->
+		<container height="60">
+			<layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0"  />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="inner_box_no_margin">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<!--Duration Container-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="text" font="title" colour="accent" alignment="left,bottom" auto_size="vertical">
+						<translation id="text" translation_id="255373" type="use" value="Duration[COMMENT: scout assignments table; column header for nation/region/etc]" />
+					</widget>
+					<widget class="text" id="dLAB" font="value" auto_size="vertical"/>
+
+				</container>
+
+				<!--Estimated Cost Container-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="text" font="title" colour="accent" alignment="left,bottom" auto_size="vertical">
+						<translation id="text" translation_id="335037" type="use" value="Estimated Cost[COMMENT: scout report panel label]" />
+					</widget>
+					<widget class="text" id="esCL" font="value" auto_size="vertical"/>
+
+				</container>
+
+			</container>
+
+			<container class="inner_subtle_box">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--Squad Size Container-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="text" font="title" colour="accent" alignment="left,bottom" auto_size="vertical">
+						<translation id="text" translation_id="388931" type="use" value="Squad Size[COMMENT: FR 8517, the size of the current squad]" />
+					</widget>
+					<widget class="text" id="sqSL" font="value" auto_size="vertical"/>
+
+				</container>
+
+				<!--Available Slot Container-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="text" font="title" colour="accent" alignment="left,bottom" auto_size="vertical">
+						<translation id="text" translation_id="420682" type="use" value="Available Slots[COMMENT: title text; Avaialbe Slots in the upcoming training camp]" />
+					</widget>
+					<widget class="text" id="EMsl" font="value" auto_size="vertical"/>
+
+				</container>
+
+			</container>
+
+
+		</container>
+
+		<!--Bottom Area-->
+		<container class="training_overview_panel" file="none" id="TOvR">
+			<layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0"  />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+
+			<!--Training Information-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-3,-2" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container class="inner_subtle_box">
+					<layout class="arrange_vertical_attachment" layout="-1" offset="5" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container class="team_training_overview_panel" file="none" id="tOPN">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<container id="mCON">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+							<container id="barc">
+								<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="-1" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+								<record id="default_properties" file="team/team training week schedule bar inbox short" />
+
+								<container class="team_training_week_schedule_bar" id="fBAR"  />
+
+								<container class="team_training_week_schedule_bar" />
+
+								<container class="team_training_week_schedule_bar" />
+
+							</container>
+
+						</container>
+
+						<container id="sesB">
+
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+							<widget class="text" id="brTX" alignment="centre" size="11" />
+						</container>
+						<container id="seMB">
+
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+							<widget class="text" id="mbTX" alignment="centre" size="11" />
+						</container>
+					</container>
+
+				</container>
+				
+				<container class="inner_subtle_box">
+					<layout class="arrange_vertical_attachment" layout="-1" offset="5" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="client_object_list_table" id="fXLT" database_table_type="53" select_event="self" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows, printable, store_sort_state" column_mode="resize_columns, move_columns, custom_views">
+						<boolean id="save_session_state" value="true" />
+						<boolean id="dont_restore_selection" value="true" />
+						<list id="save_default_state">
+							<integer value="crvi" />
+						</list>
+
+						<list id="Spid">
+							<integer value="home" />
+							<integer value="away" />
+							<integer value="FxTy" />
+							<integer value="FxCt" />
+						</list>
+
+						<!-- default sort -->
+						<list id="default_sort_column">
+							<integer value="fxdt" />
+						</list>
+
+						<!--default view from the view list-->
+						<flags id="default_view" value="gene" />
+
+						<!--list of all available views-->
+						<list id="viws">
+							<record id="gene">
+								<translation id="text" translation_id="242258" type="use" value="Fixtures" />
+								<record id="view">
+									<flags id="fxdt" />
+									<flags id="FXTm" />
+									<flags id="fopt" />
+								</record>
+								<record id="table_properties">
+									<integer id="sort" value="fxdt" />
+								</record>
+							</record>
+
+						</list>
+
+					</widget>
+				</container>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,180" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--Players Missing the Camp Information-->
+				<container class="inner_subtle_box">
+					<translation id="title" translation_id="420683" type="use" value="Players Missing the Camp[COMMENT: title text; players missing the training camp]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+					<widget class="client_object_list_table" select_event="slPL" id="plMS" database_table_type="1" customisation_context="play" mode="fill_rows, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows" column_mode="resize_columns, move_columns, custom_views" popup_menu_class="popup_button_table_header">
+
+						<boolean id="save_session_state" value="true" />
+						<boolean id="save_default_state" value="true" />
+
+						<integer id="contextual_handler_column_id" value="Pnms" />
+
+						<!-- default sort by playing position (primary), then picked position, then name -->
+						<list id="default_sort_column">
+							<integer value="PtsL" />
+							<integer value="PpsC" />
+						</list>
+
+						<!--default view-->
+						<flags id="default_view" value="geni" />
+
+						<!--available views-->
+						<list id="viws">
+							<record id="geni">
+
+								<translation id="name" translation_id="247410" type="use" value="General Info" />
+								<!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+								<record id="view">
+									<flags id="Pnms" />
+									<flags id="Pnfo" />
+
+
+								</record>
+							</record>
+
+						</list>
+					</widget>
+
+
+
+				</container>
+
+				<container class="inner_subtle_box">
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container class="team_training_tactic_panel" />
+				</container>
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

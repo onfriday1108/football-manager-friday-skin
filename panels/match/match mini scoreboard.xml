@@ -1,0 +1,106 @@
+<panel>
+
+  <layout class="arrange_horizontal_attachment" layout="105, -1" offset="0" gap="0"/>
+
+  <!-- match time -->
+  <container class="inner_box" width="105" height="30" appearance="pitch/scoreboard/bar">
+    <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <container>
+      <layout class="arrange_horizontal_attachment" alignment="middle" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+      <widget class="text" id="Matt" size="11" style="bold,shadowed"  alignment="centre" width="72" height="28">
+        <layout class="stick_to_sides_attachment" alignment="top" inset="1"/>
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+      </widget>
+
+      <widget class="text" id="Mijt" size="8" colour="match scoreboard added time" style="bold,shadowed" alignment="centre" width="30" height="28">
+        <layout class="stick_to_sides_attachment" alignment="top" inset="2"/>
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+      </widget>
+
+    </container>
+  </container>
+
+  <!-- team logos, names and scores -->
+  <container width="540">
+    <layout class="arrange_horizontal_attachment" layout="270,270" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+
+    <!-- home team -->
+    <container width="270" height="30">
+      <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="left" inset="4"/>
+
+      <!--home team background colour-->
+      <widget class="picture" id="hmbg" auto_size="vertical" file="pitch/scoreboard/team" cached="true" rthr="68">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
+
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0"/>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+
+        <!--home team score-->
+        <widget class="text" id="hmsc" size="10" height="30" width="30" alignment="centre" style="bold,shadowed">
+          <layout class="stick_to_sides_attachment" alignment="right" inset="10"/>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+        </widget>
+
+        <!--home team aggregate score-->
+        <widget class="text" id="hmsa" colour="grey" size="8" height="30" width="30" alignment="centre" style="bold,shadowed">
+          <layout class="stick_to_sides_attachment" alignment="right" inset="30"/>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+        </widget>
+
+      </container>
+
+      <!--home team name and badge-->
+      <widget class="ctbt" id="hmnm" size="8" height="30" width="150" icon_alignment="left" alignment="centre" auto_size="horizontal" NoNo="true" style="bold,shadowed">
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="left" inset="5"/>
+      </widget>
+
+    </container>
+
+    <!-- away team -->
+    <container width="270" height="30">
+      <layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="5"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="right" inset="2"/>
+
+      <!--away team background colour-->
+      <widget class="picture" id="awbg" auto_size="vertical" file="pitch/scoreboard/team" cached="true" rthr="68">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
+
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+        <!--away team score-->
+        <widget class="text" id="awsc" size="10" height="30" width="30" alignment="centre" style="bold,shadowed">
+          <layout class="stick_to_sides_attachment" alignment="left" inset="10"/>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+        </widget>
+
+        <!--away team aggregate score-->
+        <widget class="text" id="awsa" colour="grey" size="8" height="30" width="30" alignment="centre" style="bold,shadowed">
+          <layout class="stick_to_sides_attachment" alignment="left" inset="30"/>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+        </widget>
+
+        <!--away team name and badge-->
+        <widget class="ctbt" id="awnm" size="8" height="30" width="100" alignment="centre" icon_alignment="far_right" auto_size="horizontal" display_format="3" NoNo="true" style="bold,shadowed">
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+          <layout class="stick_to_sides_attachment" alignment="right" inset="5"/>
+        </widget>
+      </container>
+    </container>
+  </container>
+
+</panel>

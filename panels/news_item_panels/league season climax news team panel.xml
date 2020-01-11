@@ -1,0 +1,116 @@
+﻿<!-- Component of news item panel showing information about a race for promotion. Show a team and remaining fixtures. To be used with a CLIENT_OBJECT_VIEWER_XML_PANEL -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="inner_subtle_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- Set colour to PROP_ACCENT_COLOUR-->
+		<record id="object_property" get_property="oDAC" set_property="rrep" />
+
+		<!-- Club badge, current league position and odds for promotion -->
+		<container height="50">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- Badge -->
+			<widget class="object_portrait_picture" scale_picture="true" width="50">
+				<!-- PROP_OBJECT -->
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+
+			<widget class="game_formatted_label" alignment="centre" style="bold" size="large" colour="white" wants_mouse_events="false" multiline="true">
+				<string id="format" value="[%team#1-long]" />
+				<!-- PROP_TEAM -->
+				<record id="object_property" get_property="objt" set_property="valu" />
+			</widget>
+			<!-- Removed because odds aren't dynamic-->
+			<!--<container>
+        <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="formatted_label" alignment="right,bottom">
+          <string id="format" value="[%number#1-nth]" />
+          <record id="object_property" get_property="TpoN" set_property="valu" />
+        </widget>
+        <widget class="label" alignment="right,top">
+          <translation id="text" translation_id="252893" type="use" value="Position[COMMENT: team division position, title]" />
+        </widget>
+        
+        -->
+			<!-- Title odds, conditionally shown -->
+			<!--
+        <widget class="odds_label" alignment="right,bottom" hidden="true">
+          <record id="object_property">
+            <list id="get_properties">
+              <record id="object_property" get_property="titT" set_property="Shwn" />
+              <record id="object_property" get_property="TmtO" set_property="valu" />
+            </list>
+          </record>
+        </widget>
+        <widget class="label" alignment="right,top" hidden="true">
+          <translation id="text" translation_id="443660" type="use" value="Title Odds[COMMENT: news item, FR 20945; gambling odds for a team to win the title]" />
+          <record id="object_property" get_property="titT" set_property="Shwn" />
+        </widget>
+        -->
+			<!-- Promotion odds, conditionally shown -->
+			<!--
+        <widget class="odds_label" alignment="right,bottom" hidden="true">
+          <record id="object_property">
+            <list id="get_properties">
+              <record id="object_property" get_property="proT" set_property="Shwn" />
+              <record id="object_property" get_property="TmpO" set_property="valu" />
+            </list>
+          </record>
+        </widget>
+        <widget class="label" alignment="right,top" hidden="true">
+          <translation id="text" translation_id="443661" type="use" value="Promotion Odds[COMMENT: news item, FR 20945; gambling odds for a team to get promoted]" />
+          <record id="object_property" get_property="proT" set_property="Shwn" />
+        </widget>
+        -->
+			<!-- Relegation odds, conditionally shown -->
+			<!--
+        <widget class="odds_label" alignment="right,bottom" hidden="true">
+          <record id="object_property">
+            <list id="get_properties">
+              <record id="object_property" get_property="relT" set_property="Shwn" />
+              <record id="object_property" get_property="TmrO" set_property="valu" />
+            </list>
+          </record>
+        </widget>
+        <widget class="label" alignment="right,top" hidden="true">
+          <translation id="text" translation_id="443662" type="use" value="Relegation Odds[COMMENT: news item, FR 20945; gambling odds for a team to get relegated]" />
+          <record id="object_property" get_property="relT" set_property="Shwn" />
+        </widget>
+      </container>-->
+		</container>
+
+		<!-- Table showing the remaining fixtures -->
+		<container class="client_object_list_table" database_table_type="53" mode="dont_ask_for_focus">
+			<record id="object_property">
+				<list id="get_properties">
+					<record get_property="tbDP" set_property="defp" />
+					<record get_property="TnLf" set_property="objL" />
+				</list>
+			</record>
+			<!--list of all available views-->
+			<list id="viws">
+				<record id="gene">
+					<translation id="text" translation_id="242258" type="use" value="Fixtures" />
+					<record id="view">
+						<flags id="fxdS" />
+						<flags id="fopt" />
+						<flags id="Ooml" />
+						<flags id="FxVn" />
+					</record>
+					<record id="table_properties" auto_size="vertical">
+						<integer id="sort" value="fxdt" />
+					</record>
+				</record>
+			</list>
+			<!--default view from the view list-->
+			<flags id="default_view" value="gene" />
+		</container>
+	</container>
+</panel>

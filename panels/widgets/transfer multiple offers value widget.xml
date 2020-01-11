@@ -1,0 +1,16 @@
+﻿<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" horizontal_inset="0" vertical_gap="0"/>
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_gap="0"/>
+
+		<widget class="button" id="cos1" auto_size="all" show_button_appearance="false" multiline="false" colour="text" font="bold"/>
+
+		<widget class="button" id="VwOf" auto_size="all" appearance="icons/16px/right" red_replacement="text"/>
+
+	</container>
+
+	<widget class="button" id="cos2" auto_size="all" alignment="left,centre_y" colour="faded text" multiline="true" show_button_appearance="false"/>
+
+</panel>

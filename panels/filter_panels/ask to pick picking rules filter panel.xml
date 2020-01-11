@@ -1,0 +1,14 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<container class="main_box">
+		<translation id="title" translation_id="344655" type="use" value="Quick Pick[COMMENT - team screen team selection, contains the former Ask To Pick menu but also acts as a standalone button which picks the team, renamed for accuracy]" />
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+
+		<widget class="check_box" id="crcb" disabled="true" auto_size="vertical">
+			<translation id="hint" translation_id="338032" type="use" value="Only show players who are available to the assistant manager when they are asked to pick the team[COMMENT - hint text; team screen; filter panel; hide players option]" />
+			<translation id="text" translation_id="344978" type="use" value="Team Selection Guidelines[COMMENT - team screen team selection, menu item to display advanced team selection filters]" />
+		</widget>
+	</container>
+
+</panel>

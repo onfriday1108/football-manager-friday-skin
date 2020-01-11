@@ -1,0 +1,153 @@
+﻿<panel>
+
+	<attachment_group class="horizontal_arrange" horizontal_alignment="right">
+		<global id="horizontal_gap" name="ui.button_row_gap"/>
+	</attachment_group>
+
+	<record id="default_properties" appearance="buttons/subtle/normal/button" />
+
+	<!--logo
+	<widget class="match_team_logo_picture" id="logo" width="30" />-->
+
+	<!--quick sub-->
+	<widget class="icon_button" id="qsub" icon="icons/26px/substitution" auto_size="horizontal">
+		<translation id="text" translation_id="454740" type="use" value="Make Sub[COMMENT: match tactics shortcuts, change tactics dialog title, Sub is an abbreviation for Substitution]" />
+		<translation id="hint" translation_id="330203" type="use" value="Make Substitution[COMMENT: match tactics shortcuts, change tactics dialog title]" />
+	</widget>
+
+	<!--formation-->
+	<widget class="menu_strip_popup_button" id="form" auto_size="horizontal" icon="icons/16px/formation" icon_alignment="left" auto_size_maximum_width="200">
+		<translation id="hint" translation_id="332222" type="use" value="Change tactic for your team[COMMENT: hint for a popup button that allows the user to change tactic during a match]" />
+		<record id="modal_popup_properties" dcep="true" />
+		<record id="widget_properties">
+			<translation id="title" translation_id="316746" type="use" value="Tactic[COMMENT:team report, tactic name]" />
+			<integer id="width" value="380" />
+			<flags id="auto_size" value="vertical" />
+			<flags id="alignment" value="top" />
+			<symbol id="appearance" value="boxes/popup/standard/titled/paper" />
+			<symbol id="default_widget_type" value="hint_text_button" />
+			<symbol id="submenu_type" value="subtle_popup_button" />
+			<symbol id="separator_type" value="picture" />
+			<record id="default_widget_properties" />
+			<record id="submenu_properties" fixed="true">
+				<event id="click_notification_event" event_id="DMCN" item="NULL" />
+				<event id="menu_layout_notification_event" event_id="MLNO" />
+			</record>
+			<record id="separator_properties" file="dividers/standard/vertical/line" auto_size="vertical" />
+		</record>
+		<string id="mpmF" value="generic/modal popup panel match" />
+
+		<attachment class="test_screen_size_attachment">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="horizontal" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="1200" />
+					<symbol id="set_property" value="label_disabled" />
+				</record>
+			</list>
+		</attachment>
+	</widget>
+
+	<!--mentality-->
+	<widget class="mentality_table_popup_button" id="ment" auto_size="horizontal" icon="icons/16px/mentality" secondary_icon_enabled="false">
+		<translation id="hint" translation_id="348297" type="use" value="Select your match mentality[COMMENT: team instructions: match mentality hint]" />
+
+		<attachment class="test_screen_size_attachment">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="horizontal" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="1250" />
+					<symbol id="set_property" value="label_disabled" />
+				</record>
+			</list>
+		</attachment>
+	</widget>
+
+	<!--team instructions-->
+	<widget class="team_instructions_panel" id="ShIn" file="team/team instructions button panel match" />
+
+	<!--opposition instructions-->
+	<widget class="icon_button" id="oppi" icon="icons/26px/club" auto_size="horizontal">
+		<translation id="text" translation_id="466456" type="use" value="Opp. Instructions[COMMENT: title for a button allowing setting of the opposition instructions, Opp. is an abbreviation for Opposition]" />
+		<translation id="hint" translation_id="447561" type="use" value="Set Opposition Instructions[COMMENT: title for a button allowing setting of the opposition instructions]" />
+
+		<attachment class="test_screen_size_attachment">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="horizontal" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="1400" />
+					<symbol id="set_property" value="label_disabled" />
+				</record>
+			</list>
+		</attachment>
+	</widget>
+
+	<!--shouts-->
+	<widget class="widget_popup_button" id="shou" auto_size="horizontal" popup_alignment="left,bottom" widget_type="match_tactic_popup_panel" icon="icons/26px/team talk" secondary_icon_enabled="false" >
+		<translation id="text" translation_id="319627" type="use" value="Shouts[COMMENT: sections.xml, touchline shoust header text]" />
+		<translation id="hint" translation_id="451315" type="use" value="Shouts allow tactics to be quickly adjusted during a match.[COMMENT: hint text for the Shouts button, reintroduced to the UI late in development]" />
+		<record id="modal_popup_properties">
+			<boolean id="darkened" value="false" />
+			<boolean id="attempt_to_reposition" value="true" />
+		</record>
+		<record id="widget_properties">
+			<string id="file" value="match/match tactic popup panel shout" />
+		</record>
+
+		<attachment class="test_screen_size_attachment">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="horizontal" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="1550" />
+					<symbol id="set_property" value="label_disabled" />
+				</record>
+			</list>
+		</attachment>
+	</widget>
+
+	<container width="10"/>
+
+	<widget class="vertical_divider" width="10"/>
+
+	<container width="10"/>
+
+	<!--something's changed indicator-->
+	<widget class="text" id="scha" auto_size="horizontal" alignment="centre_x,top">
+		<string id="text" value="*" />
+	</widget>
+
+	<!--container when advanced changes have been made-->
+	<container id="advc">
+		<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" vertical_inset="0" />
+
+		<record id="default_properties" auto_size="horizontal" />
+
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" colour="text">
+			<translation id="text" translation_id="466457" type="use" value="Tactical changes will take effect at the next break in play[COMMENT: match screen; text showing that the user's tactical changes will take effect when the ball next goes out of play]" />
+		</widget>
+
+			<container>
+
+				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="right">
+			   		<global id="horizontal_gap" name="ui.button_row_gap"/>
+		        </attachment_group>
+
+				<!--edit pending changes button-->
+				<widget class="icon_button" id="ediP" event_id="eptt" icon="icons/16px/edit" auto_size="horizontal" appearance="buttons/subtle/normal/button">
+					<translation id="text" translation_id="229690" type="use" value="Edit" />
+				</widget>
+
+				<!--cancel pending changes button-->
+				<widget class="icon_button" id="canP" event_id="cptt" icon="icons/16px/cross" auto_size="horizontal" appearance="buttons/subtle/normal/button">
+					<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				</widget>
+
+			</container>
+	</container>
+
+</panel>

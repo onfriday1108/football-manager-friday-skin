@@ -1,0 +1,75 @@
+<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at04"/>
+		<record entity_layout_id="at0D"/>
+		<record entity_layout_id="at05"/>
+	</list>
+	<string id="transfers_icon" value="icons/16px/transfer"/>
+	<string id="staff_icon" value="icons/16px/staff"/>
+	<string id="scouting_icon" value="icons/16px/search"/>
+	<string id="media_icon" value="icons/16px/media"/>
+	<string id="transfers_icon" value="icons/16px/transfer"/>
+	<string id="training_icon" value="icons/16px/training"/>
+	<string id="tactics_icon" value="icons/16px/tactics"/>
+	<string id="match_icon" value="icons/16px/whistle"/>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container entity_layout_id="at00" id="at00">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<container class="main_box" entity_layout_id="at04" id="at04" save_session_state="true" auto_size="horizontal" name="container">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true"/>
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+			</widget>
+			<container class="inner_box" entity_layout_id="at0D" file="generic/simple form with confirmation buttons" id="at0D" height="30">
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+			</container>
+			<container class="tabbed_container" entity_layout_id="at05" id="ovar" save_session_state="true" default_item="hRes" name="tabbed container">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_bottom" offset="-8" get_side="top" set_side="bottom" target="at0D"/>
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+
+				<!-- Human responsibilities panel -->
+				<container id="hRes" file="team/team container human responsibilities" icon="icons/16px/manager respo">
+					<translation id="title" translation_id="227980" type="use" value="Manager[COMMENT - manager, short text]" />
+				</container>
+
+				 <!--Delegated responsibilities panel--> 
+				<container id="dRes" file="team/team container human responsibilities" icon="icons/16px/staff respo">
+					<translation id="title" translation_id="309195" type="use" value="Staff[COMMENT: interaction manager; category type]" />
+				</container>
+			
+			</container>
+		</container>
+	</container>
+</panel>

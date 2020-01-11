@@ -1,0 +1,94 @@
+<panel NOOk="true">
+	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container class="main_box" id="titl" height="152" red_replacement="light_box_background">
+		<layout class="arrange_vertical_attachment" layout="-3,1,-2" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="30,-1" offset="0" gap="10"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<!--logo-->
+			<widget class="object_portrait_picture" id="pict" scale_picture="true">
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre" />
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<!--team picker/reputation-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="popup_button" id="team" auto_size="vertical"/>
+
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="4" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+					<widget class="label" id="TrsL">
+						<record id="object_property">
+							<integer id="get_property" value="Trst" />
+							<integer id="name" value="true" />
+						</record>
+					</widget>
+
+					<widget class="stars_range_strip" id="TrsV" alignment="right,centre_y">
+						<record id="object_property">
+							<integer id="get_property" value="Trst" />
+						</record>
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<widget class="horizontal_divider" col="0" row="6" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="44,-1,-1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<!-- empty spacing container to align with content above -->
+			<widget class="spacer" />
+
+			<!--fee-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="label" alignment="left,bottom" font="label" colour="faded text" auto_size="vertical">
+					<translation id="text" translation_id="247258" type="use" value="Fee[COMMENT - fee for friendly opposition on arrange friendly panel]" />
+				</widget>
+
+				<widget class="cash_cell" id="fee " alignment="left,top">
+					<string id="alternate_text" value="-"/>
+				</widget>
+
+			</container>
+
+			<!--income-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="label" alignment="left,bottom" font="label" colour="faded text" auto_size="vertical">
+					<translation id="text" translation_id="242366" type="use" value="Income" />
+				</widget>
+
+				<widget class="cash_cell" id="inco" alignment="left,top">
+					<string id="alternate_text" value="-"/>
+				</widget>
+
+			</container>
+		</container>
+
+
+	</container>
+</panel>

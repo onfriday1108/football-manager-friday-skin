@@ -1,0 +1,98 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  <container class="main_box">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <widget class="table">
+
+      <flags id="layout" value="-1,-1,-1" />
+      <flags id="mode" value="fill_rows, stripe_rows" />
+      <integer id="row_spacing" value="0" />
+      <boolean id="auto_size_rows" value="true" />
+      <boolean id="fixed_size_rows" value="false" />
+      <boolean id="sort_disabled" value="true" />
+
+      <list id="column_table_properties">
+        <record indx="0" alignment="centre" />
+      </list>
+
+      <!-- row 0 - Licensed and Database sub-headings -->
+      <widget class="label" row="0" col="0" alignment="centre" auto_size="vertical" spec="text" size="large">
+        <string id="text" value="Outfield Shirts" />
+      </widget>
+      <widget class="label" row="0" col="1" alignment="centre" auto_size="vertical">
+        <string id="text" value="Licensed" />
+      </widget>
+      <widget class="label" row="0" col="2" alignment="centre" auto_size="vertical">
+        <string id="text" value="Database" />
+      </widget>
+
+      <!-- row 1 - outfield shirts -->
+      <widget class="label" row="1" col="0" alignment="centre" auto_size="vertical">
+        <string id="text" value="Home" />
+      </widget>
+      <widget class="label" row="2" col="0" alignment="centre" auto_size="vertical">
+        <string id="text" value="Away" />
+      </widget>
+      <widget class="label" row="3" col="0" alignment="centre" auto_size="vertical">
+        <string id="text" value="Third" />
+      </widget>
+      <widget class="kit_picture" id="HLSi" kit_id="0" height="160" row="1" col="1" scale_picture="true" />
+      <widget class="kit_picture" id="HDSi" kit_id="0" kit_use_db_preview="true" height="160" row="1" col="2" scale_picture="true" />
+      <widget class="kit_picture" id="ALSi" kit_id="1" height="160" row="2" col="1" scale_picture="true" />
+      <widget class="kit_picture" id="ADSi" kit_id="1" kit_use_db_preview="true" height="160" row="2" col="2" scale_picture="true" />
+      <widget class="kit_picture" id="TLSi" kit_id="2" height="160" row="3" col="1" scale_picture="true" />
+      <widget class="kit_picture" id="TDSi" kit_id="2" kit_use_db_preview="true" height="160" row="3" col="2" scale_picture="true" />
+
+      <!-- the following code is commented out since this year we haven't got any goalkeeper kit graphics, nor any shorts or socks graphics whatsoever -->
+
+      <!-- row 2 - shorts -->
+      <!-- row 3 - socks -->
+      <!-- row 4 - goalkeeper shirts -->
+      <!-- row 5 - goalkeeper shorts -->
+      <!-- row 6 - goalkeeper socks -->
+      <!--
+      <widget class="label" text="Shorts" row="2" col="0" auto_size="vertical"/>
+      <widget class="kit_panel" id="HLSh" width="70" height="70" row="2" col="1"/>
+      <widget class="kit_panel" id="HDSh" width="70" height="70" row="2" col="2"/>
+      <widget class="kit_panel" id="ALSh" width="70" height="70" row="2" col="3"/>
+      <widget class="kit_panel" id="ADSh" width="70" height="70" row="2" col="4"/>
+      <widget class="kit_panel" id="TLSh" width="70" height="70" row="2" col="5"/>
+      <widget class="kit_panel" id="TDSh" width="70" height="70" row="2" col="6"/>
+
+      <widget class="label" text="Socks" row="3" col="0" auto_size="vertical"/>
+      <widget class="kit_panel" id="HLSo" width="70" height="70" row="3" col="1"/>
+      <widget class="kit_panel" id="HDSo" width="70" height="70" row="3" col="2"/>
+      <widget class="kit_panel" id="ALSo" width="70" height="70" row="3" col="3"/>
+      <widget class="kit_panel" id="ADSo" width="70" height="70" row="3" col="4"/>
+      <widget class="kit_panel" id="TLSo" width="70" height="70" row="3" col="5"/>
+      <widget class="kit_panel" id="TDSo" width="70" height="70" row="3" col="6"/>
+
+      <widget class="label" text="Goalkeeper Shirts" row="4" col="0" auto_size="vertical"/>
+      <widget class="kit_panel" id="HLiG" width="70" height="70" row="4" col="1"/>
+      <widget class="kit_panel" id="HDiG" width="70" height="70" row="4" col="2"/>
+      <widget class="kit_panel" id="ALiG" width="70" height="70" row="4" col="3"/>
+      <widget class="kit_panel" id="ADiG" width="70" height="70" row="4" col="4"/>
+      <widget class="kit_panel" id="TLiG" width="70" height="70" row="4" col="5"/>
+      <widget class="kit_panel" id="TDiG" width="70" height="70" row="4" col="6"/>
+
+      <widget class="label" text="Shorts" row="5" col="0" auto_size="vertical"/>
+      <widget class="kit_panel" id="HLhG" width="70" height="70" row="5" col="1"/>
+      <widget class="kit_panel" id="HDhG" width="70" height="70" row="5" col="2"/>
+      <widget class="kit_panel" id="ALhG" width="70" height="70" row="5" col="3"/>
+      <widget class="kit_panel" id="ADhG" width="70" height="70" row="5" col="4"/>
+      <widget class="kit_panel" id="TLhG" width="70" height="70" row="5" col="5"/>
+      <widget class="kit_panel" id="TDhG" width="70" height="70" row="5" col="6"/>
+
+      <widget class="label" text="Socks" row="6" col="0" auto_size="vertical"/>
+      <widget class="kit_panel" id="HLoG" width="70" height="70" row="6" col="1"/>
+      <widget class="kit_panel" id="HDoG" width="70" height="70" row="6" col="2"/>
+      <widget class="kit_panel" id="ALoG" width="70" height="70" row="6" col="3"/>
+      <widget class="kit_panel" id="ADoG" width="70" height="70" row="6" col="4"/>
+      <widget class="kit_panel" id="TLoG" width="70" height="70" row="6" col="5"/>
+      <widget class="kit_panel" id="TDoG" width="70" height="70" row="6" col="6"/>
+    -->
+    </widget>
+  </container>
+
+</panel>

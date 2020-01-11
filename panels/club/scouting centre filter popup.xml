@@ -1,0 +1,312 @@
+﻿<panel>
+	<!--colours used for the min rec widgets in the filter popup-->
+	<flags id="mruc" value="grey" />
+	<flags id="mrsc" value="positive" />
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<container class="standard_popup_box" id="SCfp">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="4" horizontal_inset="8" />
+
+
+		<widget class="text" id="titw" auto_size="vertical" colour="accent" size="large">
+			<record id="object_property" get_property="SCFt" set_property="text" />
+		</widget>
+
+		<container class="scrolling_box" auto_size="vertical">
+			<record id="auto_size_restrictions">
+				<string id="type" value="screen" />
+				<string id="limit_type" value="maximum" />
+				<string id="orientation" value="vertical" />
+
+			</record>
+
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+				<!--Scouts-->
+				<container class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+					<container class="icon_box">
+						<attachment_group class="vertical_arrange_autosize" horizontal_inset="4" />
+
+						<widget class="scouting_centre_delivery_widget" id="scow" height="30" npdC="1">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="AGis" />
+										<integer id="set_property" value="npdY" />
+									</record>
+
+								</list>
+							</record>
+						</widget>
+
+						<container class="inner_subtle_box">
+
+                   
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" />
+
+              <widget class="text" auto_size="vertical" alignment="left">
+                <translation id="text" translation_id="451386" type="use" value="Minimum recommendation level[COMMENT: Bug 169893, allows the user to set a threshold for players recommended to them]" />
+                <translation id="hint" translation_id="451387" type="use" value="Only show suggested players from assignments in the scouting centre at the specified recommendation level[COMMENT: Bug 169893, allows the user to set a threshold for players recommended to them]" />
+              </widget>
+
+							<widget class="simple_data_list" id="mirc" height="40" set_property="objt">
+								<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="right" horizontal_gap="6" vertical_inset="0" />
+								<record id="object_property" get_property="MRit" set_property="valu" />
+
+								<record id="widget_properties" class="property_list_viewer_xml_panel" file="widgets/player minimum scout recommendation button" />
+							</widget>
+
+
+							<!--<container height="40" >
+
+                
+
+
+              </container>-->
+
+							<!--<widget class="popup_button" auto_size="all" select_event="SCmr">
+								<translation id="hint" translation_id="451387" type="use" value="Only show suggested players from assignments in the scouting centre at the specified recommendation level[COMMENT: Bug 169893, allows the user to set a threshold for players recommended to them]" />
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="MRit" />
+											<integer id="set_property" value="itms" />
+										</record>
+										<record>
+											<integer id="get_property" value="MRel" />
+											<integer id="set_property" value="slct" />
+										</record>
+										<record>
+											<integer id="get_property" value="SCmr" />
+											<integer id="set_property" value="sele" />
+										</record>
+
+									</list>
+								</record>
+							</widget>-->
+
+						</container>
+
+					</container>
+
+				</container>
+
+				<!--Analysts-->
+				<container class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+					<container class="icon_box">
+						<attachment_group class="vertical_arrange_autosize" horizontal_inset="4" />
+
+						<widget class="scouting_centre_delivery_widget" id="anaw" height="30" npdC="2">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="AGis" />
+										<integer id="set_property" value="npdY" />
+									</record>
+
+								</list>
+							</record>
+						</widget>
+
+
+					</container>
+
+				</container>
+
+				
+
+				<!--Transfer Targets-->
+				<container class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+					<container class="icon_box">
+						<attachment_group class="vertical_arrange_autosize" horizontal_inset="4" />
+
+						<widget class="scouting_centre_delivery_widget" id="trtw" height="30" npdC="3">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="AGis" />
+										<integer id="set_property" value="npdY" />
+									</record>
+
+								</list>
+							</record>
+						</widget>
+
+
+
+					</container>
+
+				</container>
+
+				<!--Agents Suggestions-->
+				<container class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+					<container class="icon_box">
+						<attachment_group class="vertical_arrange_autosize" horizontal_inset="4" />
+
+						<widget class="scouting_centre_delivery_widget" id="agsw" height="30" npdC="4">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="AGis" />
+										<integer id="set_property" value="npdY" />
+									</record>
+
+								</list>
+							</record>
+						</widget>
+
+						<container class="inner_subtle_box">
+							<attachment_group class="vertical_arrange_autosize" />
+
+							<widget class="manager_text" auto_size="vertical" alignment="left,top">
+								<translation id="text" translation_id="466394" type="use" value="Ensure [%person#1-you]'re only contacted by agents about:[COMMENT: was ID 337892, i put it back; old commment was: team options panel; string identifying drop-down from which to choose from preset options to filter out agent approach news items]" />
+							</widget>
+
+							<widget class="table" layout="-1" fixed_size_rows="false" auto_size_rows="true" auto_size="vertical">
+								<record id="default_properties" alignment="left,centre_y" click_event="pase" />
+
+								<widget class="check_box" id="faoa" row="0" col="0">
+									<translation id="text" translation_id="333665" type="use" value="All players[COMMENT: team options panel; string identifying drop-down item to filter out agent approach news items]" />
+									<translation id="hint" translation_id="383798" type="use" value="This option includes all options below as well as all other players[COMMENT: team options panel; string identifying drop-down item to filter out agent approach news items]" />
+								</widget>
+								<widget class="check_box" id="faoy" row="1" col="0">
+									<translation id="text" translation_id="383338" type="use" value="Future prospect players[COMMENT: team options panel; string identifying drop-down item to filter out agent approach news items]" />
+								</widget>
+								<widget class="check_box" id="faot" row="2" col="0">
+									<translation id="text" translation_id="243605" type="use" value="Transfer Listed Players[COMMENT - submenu of transfer listed players for exchange]" />
+								</widget>
+								<widget class="check_box" id="faou" row="3" col="0">
+									<translation id="text" translation_id="383818" type="use" value="Unattached players[COMMENT: team options panel; string identifying drop-down item to filter out agent approach news items]" />
+								</widget>
+								<widget class="check_box" id="faos" row="4" col="0">
+									<translation id="text" translation_id="437041" type="use" value="Shortlisted players[COMMENT: team options panel; string identifying drop-down item to filter out agent approach news items]" />
+								</widget>
+								<widget class="check_box" id="faaf" row="5" col="0">
+									<translation id="text" translation_id="466395" type="use" value="Affordable players[COMMENT: team options panel; string identifying drop-down item to filter out agent approach news items, see IDs 383818 and 437041 for examples of other strings in this area]" />
+								</widget>
+
+							</widget>
+
+						</container>
+					</container>
+
+				</container>
+
+				<!--Agents Notifications-->
+				<container class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+					<container class="icon_box">
+						<attachment_group class="vertical_arrange_autosize" horizontal_inset="4" />
+
+						<widget class="scouting_centre_delivery_widget" id="agnw" height="30" npdC="5">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="AGis" />
+										<integer id="set_property" value="npdY" />
+									</record>
+
+								</list>
+							</record>
+						</widget>
+
+
+
+					</container>
+
+				</container>
+
+				<!--Free Agent-->
+				<container class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+					<container class="icon_box">
+						<attachment_group class="vertical_arrange_autosize" horizontal_inset="4" />
+
+						<widget class="scouting_centre_delivery_widget" id="fraw" height="30" npdC="6">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="AGis" />
+										<integer id="set_property" value="npdY" />
+									</record>
+
+								</list>
+							</record>
+						</widget>
+
+
+
+						<container class="inner_subtle_box">
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" />
+
+							<record id="default_properties" auto_size="all" />
+
+
+							<widget class="text">
+								<translation id="text" translation_id="466396" type="use" value="Age range[COMMENT: FR 22700, scouting centre filter type]" />
+							</widget>
+
+							<widget class="selection_list" id="mina" use_menu_for_plus_minus="false" select_event="mias" />
+
+							<widget class="text">
+								<string id="text" value="-" />
+							</widget>
+
+							<widget class="selection_list" id="maxa" use_menu_for_plus_minus="false" select_event="maas" />
+
+						</container>
+
+					</container>
+
+				</container>
+
+        <!--Other-->
+        <container class="inner_subtle_box">
+          <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+          <container class="icon_box">
+            <attachment_group class="vertical_arrange_autosize" horizontal_inset="4" />
+
+            <widget class="scouting_centre_delivery_widget" id="othw" height="30" npdC="7">
+              <record id="object_property">
+                <list id="get_properties">
+                  <record>
+                    <integer id="get_property" value="AGis" />
+                    <integer id="set_property" value="npdY" />
+                  </record>
+
+                </list>
+              </record>
+            </widget>
+
+
+          </container>
+
+        </container>
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" vertical_inset="0" />
+
+					<widget class="button" auto_size="all" click_event="ersf">
+						<translation id="text" translation_id="230013" type="use" value="Reset" />
+					</widget>
+
+					<widget class="button" auto_size="all" id="adfb" click_event="advf">
+						<translation id="text" translation_id="466397" type="use" value="Advanced filters...[COMMENT: FR 22700, scouting centre filter type]" />
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+
+					</widget>
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+
+
+</panel>

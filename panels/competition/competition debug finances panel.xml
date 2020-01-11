@@ -1,0 +1,236 @@
+﻿<panel>
+	<translation id="title" translation_id="306487" type="use" value="Debug Info" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box">
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+    
+    <container class="tabbed_container" default_item="dtie" save_session_state="true">
+      
+      <container id="dtie">
+        <string id="title" value="Team Income/Expenditure" />
+        <layout class="arrange_vertical_attachment" offset="0"  alignment="top,extend" gap="1"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+        
+        <widget class="embedded_season_selection_list" id="dtfs" sele="efsc" auto_size="vertical" />
+
+        <container class="tabbed_container" default_item="dcff" save_session_state="true">
+
+          <container id="dcff">
+            <string id="title" value="Income" />
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+            <widget class="table" id="dfnt" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+              <list id="headings">
+                <record alignment="left,centre_y">
+                  <string id="text" value="Team" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Gate Receipts" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Season Tickets" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="TV Revenue" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Merchandising" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Players Sold" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Prize Money" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Investments" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Interest" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Other" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Sponsorship" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Match Day Income" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Affiliate/B Club" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Corporate Facilities" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Solidarity Payments" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Fund Raising" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Grants" />
+                </record>
+              </list>
+            </widget>
+          </container>
+
+          <container id="dcfx">
+            <string id="title" value="Expenditure" />
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+            <widget class="table" id="dfnx" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+              <list id="headings">
+                <record alignment="left,centre_y">
+                  <string id="text" value="Team" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Player Wages" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Staff Wages" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Non-Football Costs" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Bonuses" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Loyalty Bonuses" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Dividends" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Transfer Expenditure" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Ground Maintenance" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="League Fines" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Loan Repayments and Interest" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Tax" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Other" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Match Day Expenses" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Agent Fees" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Youth Setup" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Scouting Costs" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="B Club Expenditure" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Travel Costs" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Director Emoluments" />
+                </record>
+              </list>
+            </widget>
+          </container>
+
+          <container id="dcft">
+            <string id="title" value="Totals" />
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+            <widget class="table" id="dftt" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+              <list id="headings">
+                <record alignment="left,centre_y">
+                  <string id="text" value="Team" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Total Income" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Total Expediture" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Profit" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Profit w/o transfers" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Profit for tax" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Commercial Income" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Total Wages" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Total player wage expenditure" />
+                </record>
+              </list>
+            </widget>
+          </container>
+          
+        </container>        
+      </container>
+
+      <container id="dctd">
+        <string id="title" value="Ticket Data" />
+        <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="table" id="dftk" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+          <list id="headings">
+            <record alignment="left,centre_y">
+              <string id="text" value="Team" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Match Ticket From dB" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Match Ticket Ingame" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Match Ticket Ratio" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Season Ticket From dB" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Season Ticket Ingame" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Season Ticket Ratio" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Season Ticket Holders" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Season Ticket %" />
+            </record>
+          </list>
+        </widget>
+      </container>
+      
+    </container>
+	</container>
+</panel>

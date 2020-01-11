@@ -1,0 +1,27 @@
+<!-- this is an XML to be used with the past_meetings_panel -->
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5" do_not_size="true"/>
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="5" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <!-- past meetings fixtures panel only displays last result -->
+  <container class="main_box" size="9">
+    <translation id="text" translation_id="316604" type="use" value="Previous Results[COMMENT: team report; subsection box header text listing previous results vs an opponent]" />
+
+    <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+    <container class="past_meetings_fixtures_panel" id="fixt" fixture_count="1" file="team/team next match past meetings fixture" />
+  </container>
+
+  <!-- the head to head league table -->
+  <container class="main_box" size="9">
+    <translation id="title" translation_id="298735" type="use" value="Head-To-Head Table[COMMENT: this is the head to head table showing the past meetings between yourself and the opposition]" />
+
+    <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+    <container class="league_stage_panel" id="leag" view="oovr" auto_size="vertical"/>
+  </container>
+
+</panel>

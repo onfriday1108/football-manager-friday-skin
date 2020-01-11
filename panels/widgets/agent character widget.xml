@@ -1,0 +1,10 @@
+﻿<panel>
+	<layout class="fit_children_attachment" alignment="horizontal" offset="8" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="8" />
+	<layout class="stick_to_sides_attachment" alignment="left,top" apply_to_children="true" inset="8,8"/>
+	
+	<widget class="text" id="ctxt" auto_size="all" auto_size_maximum_width="600">
+		
+	</widget>
+	
+</panel>

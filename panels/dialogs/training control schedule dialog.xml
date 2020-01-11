@@ -1,0 +1,39 @@
+﻿<panel id="dlog" width="600">
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+
+	<attachment_group class="vertical_arrange_autosize" horizontal_inset="10" vertical_gap="8" />
+
+	<layout class="centre_in_parent_attachment" alignment="all" />
+
+	<widget class="text" id="text" auto_size="vertical" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
+
+		<widget class="check_box" id="atcc" hidden="true">
+			<translation id="text" translation_id="301057" type="use" value="Don't show this message again.[COMMENT: The title of a checkbox displayed in a dialog, which allows the user to request that the dialog isn't displayed again.]" />
+		</widget>
+
+		<container id="btns">
+
+			<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" />
+			<layout class="arrange_horizontal_platform_attachment" alignment="right" offset="0" wrap="true" />
+
+			<widget class="primary_icon_button" id="yes" hidn="true" event_id="yes" auto_size="all">
+				<translation id="text" translation_id="468953" type="use" value="Yes, but only this once[COMMENT: Text button; confirming that the manager wants to change training one time only]" />
+			</widget>
+
+			<widget class="primary_icon_button" id="no" hidn="true" event_id="no" auto_size="all">
+				<translation id="text" translation_id="468954" type="use" value="Yes, and take control of all general training[COMMENT: Text button; confirming that the manager wants to change training and take control of training]" />
+			</widget>
+
+			<widget class="button" id="canc" hidn="true" event_id="canc" auto_size="all">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+		</container>
+
+	</container>
+
+
+</panel>

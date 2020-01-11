@@ -1,0 +1,38 @@
+<panel id="vudl" width="400" height="350">
+
+	<layout class="arrange_vertical_attachment" alignment="bottom" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<widget class="container" id="shtb">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+		
+		<widget class="spacer" height="6" />
+		<widget class="button" id="vlbn" auto_size="vertical" />
+		<widget class="spacer" height="6" />
+		<widget class="text" size="8" id="mess" auto_size="vertical" alignment="centre" />
+		<widget class="spacer" height="6" />
+		<widget class="text" size="8" id="save" auto_size="vertical" alignment="centre" />
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<widget class="button" id="vutw" auto_size="vertical" alignment="centre">
+				<translation id="text" translation_id="312685" type="use" value="Post To Twitter[COMMENT: Button where user can update Twitter status]" />
+			</widget>
+		</container>
+	</widget>
+
+	<!-- row of buttons -->
+	<widget class="container" id="btns">
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+		<!-- row of buttons -->
+		<container id="btns" file="dialog buttons" />
+
+	</widget>
+
+</panel>

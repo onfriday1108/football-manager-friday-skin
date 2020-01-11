@@ -1,0 +1,49 @@
+<panel>
+
+	<string id="skin_style" value="contrast box" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+
+		<layout class="arrange_vertical_attachment" layout="-1,20" offset="17" gap="12" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="7" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="main_box" appearance="boxes/custom/darken/rounded/no margin/paper">
+				<layout class="arrange_vertical_attachment" layout="-4,-3" offset="4" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="label" id="sqbd" size="15" alignment="centre_x,bottom" style="bold" colour="white"/>
+				<widget class="label" spec="text" alignment="centre_x,top" colour="faded white">
+					<translation id="text" translation_id="392777" type="use" value="Squad Budget[COMMENT: fantasy draft screen; total budget allowed for players]" />
+				</widget>
+			</container>
+
+			<container class="main_box" appearance="boxes/custom/darken/rounded/no margin/paper" red_replacement="title">
+				<layout class="arrange_vertical_attachment" layout="-4,-3" offset="4" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="label" id="crtt" size="15" alignment="centre_x,bottom" style="bold" colour="white"/>
+				<widget class="label" spec="text" alignment="centre_x,top" colour="faded white">
+					<translation id="text" translation_id="392665" type="use" value="Current Squad Total[COMMENT: fantasy draft screen; current cash total of players drafted]" />
+				</widget>
+			</container>
+
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<widget class="label" spec="text" size="large" alignment="right" colour="faded alt text">
+				<translation id="text" translation_id="388931" type="use" value="Squad Size[COMMENT: FR 8517, the size of the current squad]" />
+			</widget>
+			<widget class="label" id="nump" spec="text" size="large" alignment="left" />
+		</container>
+
+	</container>
+
+</panel>

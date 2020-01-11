@@ -1,0 +1,13 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+	<container class="standard_popup_box">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+		<widget class="table" id="ytta" auto_size="vertical" mode="fill_rows" layout="-1,-1">
+		</widget>
+	</container>
+</panel>

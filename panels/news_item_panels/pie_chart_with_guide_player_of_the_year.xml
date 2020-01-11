@@ -1,0 +1,15 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" layout="-1, -1" gap="0" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+
+  <widget class="table" mode="select_rows" id="txtG" layout="-1" row_height="28" row_spacing="0" auto_size="vertical">
+    <layout class="stick_to_sides_attachment" alignment="top" inset="30"/>
+    <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+  </widget>
+
+  <widget class="pie_chart" id="piCH">
+    <layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+  </widget>
+
+</panel>

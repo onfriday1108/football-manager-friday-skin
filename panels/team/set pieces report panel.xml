@@ -1,0 +1,5 @@
+﻿<panel>
+	<widget class="text" text="Set Pieces" height="50" width="100">
+		<layout class="centre_in_parent_attachment" />
+	</widget>
+</panel>

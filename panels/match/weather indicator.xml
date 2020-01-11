@@ -1,0 +1,14 @@
+<panel>
+
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <widget class="picture" id="icon" image_alignment="centre" height="30" scale_picture="true" keep_aspect_ratio="true" />
+
+  <widget class="text" id="temp" spec="text" size="normal" auto_size="vertical" alignment="centre_x,top">
+    <layout class="stick_to_object_attachment" priority="1" target="icon" get_side="bottom" set_side="bottom" offset="0" />
+    <layout class="stick_to_object_attachment" priority="1" target="icon" get_side="right" set_side="right" offset="0" />
+  </widget>
+
+</panel>
+

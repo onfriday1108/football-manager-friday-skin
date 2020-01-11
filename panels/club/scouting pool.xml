@@ -1,0 +1,89 @@
+<panel>
+
+  <boolean id="save_session_state" value="true" />
+  <boolean id="save_default_state" value="true" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container>
+    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+    <widget class="scouting_top_panel" id="stop">
+      <record id="object_property">
+        <integer id="get_property" value="objt" />
+        <integer id="set_property" value="objt" />
+      </record>
+      <list id="visible_items">
+        <flags value="scrc" />
+        <flags value="scfc" />
+        <flags value="assc" />
+        <flags value="rtec" />
+        <flags value="scbc" />
+        <flags value="trbc" />
+      </list>
+    </widget>
+
+
+    <widget class="main_box" force_title_borders="true">
+
+
+      <attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+      <container embed_in_frame="true">
+        <attachment_group class="title_embedded_panel_left" />
+
+        <widget class="view_menu_label" navigation_focus_target="false" >
+          <translation id="text" translation_id="466401" type="use" value="Scouting Priorities[COMMENT: FR 22639, scouting centre options title]"  />
+        </widget>
+
+        <widget class="view_menu_popup" id="plvi" auto_size="horizontal" embed_in_frame="true" />
+
+      </container>
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<widget class="popup_button" id="assb" auto_size="horizontal" embed_in_frame="true" />
+
+		</container>
+
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+
+        <widget class="client_object_list_table" id="pltb"  mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets, drag_rows, drop_on_rows" column_mode="resize_columns, move_columns, custom_views" fixed_size_rows="true" auto_size_rows="false" fixed_row_height="29" drag_drop_handler_column="prio" select_event="psls" customization_context="play">
+          <boolean id="save_session_state" value="true" />
+          <boolean id="save_default_state" value="true" />
+			
+			<list id="column_widget_properties">
+				<record indx="0" navigation_focus_target="false"/>
+			</list>
+			
+        </widget>
+
+        <widget class="text" id="nopl" alignment="centre" hidden="true">
+          <translation id="text" translation_id="318307" type="use" value="There are currently no players waiting to be assigned to a member of the scouting team.[COMMENT: scouting pool; information text helping the user understand scouting a little better]" />
+        </widget>
+
+      </container>
+
+      <container height="30">
+
+        <attachment_group class="horizontal_arrange" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+        <widget class="subtle_button" id="pras" click_event="pras" auto_size="horizontal" save_session_state="true">
+          <translation id="text" translation_id="466402" type="use" value="Prioritise Assignment[COMMENT: FR 22639, scouting centre assignments option title]" />
+        </widget>
+
+        <widget class="subtle_button" id="buto" click_event="rscp" auto_size="horizontal" save_session_state="true">
+          <translation id="text" translation_id="348783" type="use" value="Cancel Assignment[COMMENT: scouting assigment widget text, cancel scout assignment]" />
+        </widget>
+
+      </container>
+
+    </widget>
+  </container>
+
+
+</panel>

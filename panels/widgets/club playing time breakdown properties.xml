@@ -1,0 +1,23 @@
+﻿<record>
+	<list id="column_table_properties">
+		<record id="valu" width="50">
+			<translation id="name" translation_id="336580" type="use" value="Players[COMMENT:club/nation section for all scouting pages]" />
+			<record id="widget_info" class="number_label"  alignment="left,centre_y" />
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="336580" type="use" value="Players[COMMENT:club/nation section for all scouting pages]" />
+			</record>
+		</record>
+
+		<record id="pbpt" width="-1" >
+			<translation id="name" translation_id="423877" type="use" value="Playing Time[COMMENT: FR 14013, contract promise type]" />
+			<record id="widget_info" class="playing_time_label" alignment="left,centre_y"/>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="423877" type="use" value="Playing Time[COMMENT: FR 14013, contract promise type]" />
+			</record>
+		</record>
+
+	</list>
+
+</record>

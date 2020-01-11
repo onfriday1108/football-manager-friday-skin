@@ -1,0 +1,36 @@
+<panel width="700">
+  <layout class="arrange_vertical_attachment" alignment="top"/>
+  <layout class="centre_in_parent_attachment" alignment="all"/>
+  <layout class="fit_children_attachment" alignment="vertical, fill" offset="10"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="16" apply_to_children="true"/>
+
+  <!-- header -->
+  <widget class="label" id="ques">
+    <translation id="text" translation_id="247158" type="use" value="Question"/>
+    <flags id="spec" value="text"/>
+    <flags id="size" value="large"/>
+  </widget>
+
+  <widget class="label" id="optx" colour="selection">
+    <translation id="text" translation_id="230337" type="use" value="Options"/>
+  </widget>
+
+  <!-- options table -->
+  <widget class="table" id="itwt" sele="item" dcac="doub" mode="0" row_height="28" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" layout="-1" >
+    <list id="column_table_properties">
+      <record index="0" top="0" bottom="0"/>
+    </list>
+  </widget>
+  
+  <widget class="spacer" height="20"/>
+
+  <container class="horizontal_arrange_container" alignment="fill" inset="0" offset="0" gap="2" auto_size="vertical">
+    <!-- don't show this dialog again checkbox -->
+    <widget class="check_box" id="atcc" auto_size="horizontal" height="30">
+      <translation id="text" translation_id="301057" type="use" value="Don't show this message again.[COMMENT: The title of a checkbox displayed in a dialog, which allows the user to request that the dialog isn't displayed again.]"/>
+    </widget>
+
+    <!-- row of buttons -->
+    <container id="btns" file="player/transfer reason buttons" height="30" auto_size="horizontal"/>
+  </container>
+</panel>

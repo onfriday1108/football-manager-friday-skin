@@ -1,0 +1,24 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="horizontal" offset="0" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="left,top" apply_to_children="true" inset="0"/>
+
+	<container class="standard_popup_box">
+		<layout class="fit_children_attachment" alignment="horizontal" offset="8" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="8" />
+		<layout class="stick_to_sides_attachment" alignment="left,top" apply_to_children="true" inset="8"/>
+
+		<widget class="text" id="agch" auto_size="all" auto_size_maximum_width="300">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="valu" />
+						<integer id="set_property" value="text" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+	</container>
+
+</panel>

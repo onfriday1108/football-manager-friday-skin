@@ -1,0 +1,104 @@
+<panel>
+  <set_var name="local_layout">
+    <string value="-3,-2,-3" />
+  </set_var>
+  
+  <attachment_group class="vertical_arrange_autosize" />
+	<container id="cftb" draw_horizontal_dividers="true">
+	
+    <attachment_group class="vertical_arrange_autosize" vertical_gap="20" />
+
+    <container class="main_box">
+      <attachment_group class="vertical_arrange_autosize" />
+
+
+      <container>
+        <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_gap="10">
+          <var id="horizontal_layout" name="local_layout" />
+        </attachment_group>
+
+        <widget class="text" auto_size="vertical" font="title" colour="performance board tag" alignment="left,centre_y">
+          <translation id="text" translation_id="423750" type="use" value="Board Transfer Reactions[COMMENT - team screen section containing board opinions on club transfer activity]" />
+        </widget>
+
+        <widget class="spacer" />
+
+        <widget class="text" auto_size="vertical" font="title" colour="performance fans tag" alignment="right,centre_y">
+          <translation id="text" translation_id="348094" type="use" value="Fan Transfer Reactions[COMMENT - team screen section]" />
+        </widget>
+
+      </container>
+
+      <container>
+        <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_gap="10">
+          <var id="horizontal_layout" name="local_layout" />
+        </attachment_group>
+
+        <widget class="spacer" />
+
+        <widget class="icon_button" icon="icons/16px/transfer in" auto_size="vertical" font="title" colour="fg positive" icon_colour="fg positive" alignment="centre" appearance="" icon_alignment="centre" navigation_focus_target="false">
+          <translation id="text" translation_id="491862" type="use" value="Transfers In[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title for summary overview of confidence regarding transfers into the club]" />
+        </widget>
+
+        <widget class="spacer" />
+
+      </container>
+
+      <widget class="table" id="intb" mode="fill_rows,stripe_rows" fixed_size_rows="false" auto_size_rows="true" column_spacing="8" row_spacing="8" auto_size="vertical">
+        <var id="layout" name="local_layout" />
+        <list id="column_table_properties">
+          <record index="0" id="boar" alignment="centre" />
+          <record index="1" id="play" alignment="centre" />
+          <record index="2" id="fans" alignment="centre" />
+
+        </list>
+
+        <list id="column_widget_properties">
+          <record indx="0" alignment="left,centre_y" />
+          <record indx="1" alignment="left,centre_y" />
+          <record indx="2" alignment="left,centre_y" />
+        </list>
+
+      </widget>
+      
+    </container>
+
+    <container class="main_box">
+      <attachment_group class="vertical_arrange_autosize" />
+
+
+      <container>
+        <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_gap="10">
+          <var id="horizontal_layout" name="local_layout" />
+        </attachment_group>
+
+        <widget class="spacer" />
+
+        <widget class="icon_button" icon="icons/16px/transfer out" auto_size="vertical" font="title" colour="fg negative" icon_colour="fg negative" alignment="centre" appearance="" icon_alignment="centre" navigation_focus_target="false">
+          <translation id="text" translation_id="491863" type="use" value="Transfers Out[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title for summary overview of confidence regarding transfers out of the club]" />
+        </widget>
+
+        <widget class="spacer" />
+
+      </container>
+
+      <widget class="table" id="outb" mode="fill_rows,stripe_rows" fixed_size_rows="false" auto_size_rows="true" column_spacing="8" row_spacing="8" auto_size="vertical">
+        <var id="layout" name="local_layout" />
+        <list id="column_table_properties">
+          <record index="0" id="boar" alignment="centre" />
+          <record index="1" id="play" alignment="centre" />
+          <record index="2" id="fans" alignment="centre" />
+
+        </list>
+
+        <list id="column_widget_properties">
+          <record indx="0" alignment="left,centre_y" />
+          <record indx="1" alignment="left,centre_y" />
+          <record indx="2" alignment="left,centre_y" />
+        </list>
+
+      </widget>
+    </container>
+
+  </container>
+</panel>

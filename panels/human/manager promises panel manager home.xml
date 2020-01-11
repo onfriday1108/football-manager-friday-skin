@@ -1,0 +1,16 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="scrolling_box">
+		<widget class="simple_data_list" id="plst" gap="6" auto_size="vertical">
+			<record id="widget_properties" class="property_list_viewer_xml_panel" file="human/manager promises item panel manager home" height="85"/>
+		</widget>
+	</container>
+
+	<container class="empty_state" id="nodt" header_widget="nooP" hidden="true">
+
+		<widget class="manager_text" id="nooP">
+			<translation id="text" translation_id="374449" type="use" value="[%person#1-You] have no outstanding promises at this time.[COMMENT: FR 3585; manager promises panel; string displayed when there is no data]" />
+		</widget>
+	</container>
+</panel>

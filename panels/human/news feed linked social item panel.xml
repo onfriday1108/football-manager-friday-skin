@@ -1,0 +1,15 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!-- retweeted by label -->
+	<container id="rtbx" height="20">
+		<layout class="arrange_horizontal_attachment" layout="16, -1" gap="2"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+		<widget class="picture" file="icons/custom/feed/rt" height="16" width="16" scale_picture="false" alignment="centre"/>
+		<widget class="label" id="rttx" size="small" colour="faded text" multiline="true" auto_size="vertical" alignment="left,centre_y"/>
+	</container>
+
+	<container class="main_box" file="human/news feed social item content panel" appearance="boxes/custom/feed/social item/paper" red_replacement="social media" blue_replacement="social media linked box"/>
+
+</panel>

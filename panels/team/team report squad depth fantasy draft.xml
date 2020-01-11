@@ -1,0 +1,13 @@
+﻿<panel>
+  <boolean id="save_session_state" value="true"/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+  <container >
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    <widget class="pitch_squad_depth" id="pict" vertical="true" pitch_length_multiplier="1.02" pitch_draw_grass="false" select_event="slic" pitch_line_colour="faded white" pitch_dont_draw_ads="true" pitch_keep_selected_icons="true" pitch_touchline_length_percentage="15" pitch_touchline_width_percentage="30" line_width="1" >
+      <boolean id="pitch_draw_goals" value="false"/>
+      <boolean id="pitch_draw_markings" value="true"/>
+      <boolean id="pitch_allow_player_selection" value="false" />
+    </widget>
+  </container>
+</panel>

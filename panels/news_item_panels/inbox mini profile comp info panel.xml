@@ -1,0 +1,94 @@
+<panel height='130'>
+
+	<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="10"/>
+	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0"/>
+
+
+	<container height="120">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="vertical" inset="0"/>
+
+		<container width="25"/>
+		<widget class="object_portrait_picture"  width="100">
+
+			<boolean id="scale_picture" value="true"/>
+			<boolean id="keep_aspect_ratio" value="true"/>
+			<flags id="image_alignment" value="centre"/>
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<container width="25"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0"/>
+
+			<widget class="comp_button" auto_size="horizontal" size="xlarge" icon_enabled="false">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</widget>
+
+			<widget class="nation_button" auto_size="horizontal" >
+				<record id="object_property">
+					<integer id="get_property" value="cnat" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<container height="50">
+				<layout class="grid_layout_attachment" row_layout="20,30" mode="exact" vertical_gap="0">
+
+					<list id="column_layout">
+						<record>
+							<string id="column_layout" value="120,150,-1" />
+							<integer id="horizontal_offset" value="0" />
+							<integer id="horizontal_gap" value="5" />
+						</record>
+						<record>
+							<string id="column_layout" value="120,150,-1" />
+							<integer id="horizontal_offset" value="0" />
+							<integer id="horizontal_gap" value="5" />
+						</record>
+					</list>
+				</layout>
+
+				<widget class="label" font="title"  col="0" row="0" size="small">
+					<translation id="text" translation_id="306609" type="use" value="Reputation[COMMENT: competitions reputation in a continent]" />
+				</widget>
+
+				<widget class="label" font="title"  col="1" row="0" size="small">
+					<translation id="text" translation_id="249504" type="use" value="Dates[COMMENT - competition stage rules panel, dates heading]"/>
+				</widget>
+
+				<widget class="label" font="title" col="2" row="0" size="small">
+					<translation id="text" translation_id="385506" type="use" value="Holders[COMMENT: FR 9550 - holders, i.e. last winners of a competition]" />
+				</widget>
+
+				<widget class="comp_reputation_stars_label" col="0" row="1" alignment="left,centre_y">
+					<record id="object_property">
+						<integer id="get_property" value="crps" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</widget>
+
+				<widget class="label" id="dats"  col="1" row="1" size="large">
+				</widget>
+
+				<widget class="team_button" col="2" row="1" alignment="left,centre_y" size="large">
+					<record id="object_property">
+						<integer id="get_property" value="ChoR" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</widget>
+			</container>
+		</container>
+
+
+	</container>
+
+</panel>

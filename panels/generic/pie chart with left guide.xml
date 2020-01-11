@@ -1,0 +1,23 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" layout="-4, -3" gap="10" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+
+  <widget class="table" id="txtG" layout="-1" row_height="28" row_spacing="0" auto_size="vertical">
+    <layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+  </widget>
+  
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"  inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+    <layout class="stick_to_object_attachment" target="txtG" get_side="top" set_side="top" />
+    <layout class="stick_to_object_attachment" target="txtG" get_side="bottom" set_side="bottom" />
+    
+    <widget class="pie_chart" id="piCH" />
+
+    <container >
+      <layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+      <widget class="text" id="perw" alignment="centre" font="text" height="52" width="52" colour="text" size="xsmall"/>
+    </container>
+  </container>
+</panel>

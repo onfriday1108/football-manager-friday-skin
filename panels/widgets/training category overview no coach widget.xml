@@ -1,0 +1,13 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="middle" gap="2" offset="0" />
+	<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<widget class="text" auto_size="all" style="bold">
+		<translation id="text" translation_id="466574" type="use" value="No Coach Assigned[COMMENT: FR 24728 - Training Screen Revamp - UI - Coaches]" />
+	</widget>
+
+	<widget class="button" auto_size="all" click_event="oEDT">
+    <translation id="text" translation_id="492041" type="use" value="Edit Coach Assignments[COMMENT: AREA: Training; SUB-AREA: Coaches Overview; FR-BN: 1458; TONE: Formal; CHARLIMIT: None; REF-ID: 466575; NOTE: fix to the referenced string]" />
+	</widget>
+
+</panel>

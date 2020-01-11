@@ -1,0 +1,30 @@
+<panel>
+  <layout class="fit_children_attachment" alignment="vertical" />
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <container class="inner_subtle_box" appearance="boxes/popup/standard/titled/paper">
+    <layout class="fit_children_attachment" alignment="vertical,fill" />
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+
+    <translation id="title" translation_id="416357" type="use" value="Receive advice about player development[COMMENT: FR 17000; backroom advice news panel setting popup title]" />
+
+    <widget class="check_box" click_event="emal">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+      <translation id="title" translation_id="416355" type="use" value="Email report on topic[COMMENT: FR 17000; backroom advice news panel setting; enable emails about advice topic]" />
+    </widget>
+    <widget class="popup_button" click_event="freq">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="24" apply_to_children="true" />
+    </widget>
+    <widget class="popup_button" click_event="prov">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="24" apply_to_children="true" />
+    </widget>
+
+    <widget class="horizontal_divider" />
+    
+    <widget class="check_box" click_event="cntx">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+      <translation id="title" translation_id="416356" type="use" value="Receive contextual advice between emails[COMMENT: FR 17000; backroom advice news panel setting; enable contextual advice about advice topic]" />
+    </widget>
+  </container>
+</panel>

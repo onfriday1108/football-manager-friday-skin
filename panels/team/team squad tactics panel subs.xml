@@ -1,0 +1,235 @@
+<panel>
+  <boolean id="save_session_state" value="true" />
+  <boolean id="save_default_state" value="true" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="inner_box" id="plti" alignment="left">
+    <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <container embed_in_frame="true">
+		<attachment_group class="title_embedded_panel_left"/>
+
+      <widget class="view_menu_popup" id="plvi" appearance="buttons/view/normal/button" auto_tick_exclusive="true" fixed="false" />
+    </container>
+
+    <!-- buttons area -->
+    <container embed_in_frame="true">
+		<attachment_group class="title_embedded_panel_right"/>
+
+      <!-- filter menu -->
+      <widget class="embedded_filter_button" id="plsf" target="plti" auto_size="horizontal" height="24" embed_in_frame="true" />
+    </container>
+
+    <widget class="tactic_player_list_table" id="pltb" database_table_type="1" mode="fill_rows, select_rows, select_multiple, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows, show_insert_column_popup" column_mode="resize_columns, move_columns, custom_views" popup_menu_class="popup_button_table_header">
+
+      <boolean id="auto_size_rows" value="true" />
+      <boolean id="fixed_size_rows" value="false" />
+      <boolean id="dont_restore_selection" value="true" />
+      <boolean id="save_session_state" value="true" />
+      <boolean id="save_default_state" value="true" />
+
+      <integer id="contextual_handler_column_id" value="PlSE" />
+
+      <!-- default sort by playing position (primary), then picked position, then name -->
+      <list id="default_sort_column">
+        <integer value="PtsL" />
+        <integer value="PpsC" />
+      </list>
+
+      <list id="disallowed_view_property_ids">
+        <!-- never allow squad selection, squad number selection or team selection -->
+        <flags value="Pssi"/>
+        <flags value="PtsL"/>
+        <flags value="Psne"/>
+      </list>
+      <list id="required_view_property_ids">
+        <!-- always require role/duty -->
+        <flags value="TPRD"/>
+      </list>
+
+      <!--properties for each object we always want to request, regardless of whether or not they're displayed 
+							(this can help when for example supplying a selected object to another panel to display further info)-->
+      <!--these can be omitted, they're just a time saver-->
+      <list id="Spid">
+        <integer value="PPra" />
+      </list>
+
+      <!--default view-->
+      <flags id="default_view" value="sltn" />
+
+      <!--available views-->
+      <list id="viws">
+
+        <record id="sltn">
+          <translation id="name" translation_id="326989" type="use" value="Selection Info[COMMENT: button in view_menu on squad screens; choose to view club stats]" />
+          <record id="view">
+            <record id="TPRD" />
+            <!-- squad number -->
+            <record id="Pnfo" />
+            <!-- status info -->
+            <flags id="PCpQ" />
+            <!-- role/duty suitability -->
+            <record id="PlSE" />
+            <!-- person name -->
+            <record id="Pmor" auto_hide_priority="1050" width="30" ShTx="false"/>
+            <!-- player morale -->
+            <flags id="PpsC" />
+            <!-- position -->
+            <record id="Pfrm" auto_hide_priority="1100" />
+            <!-- player form -->
+            <record id="Pcon" auto_hide_priority="1010" width="60"/>
+            <!-- player condition -->
+            <flags id="Poap" />
+            <!-- overall appearances -->
+            <flags id="Pogl" />
+            <!-- overall goals -->
+            <record id="Poav" auto_hide_priority="1020" width="40"/>
+            <!-- overall average rating -->
+          </record>
+        </record>
+
+        <!-- shown for international teams -->
+        <record id="csln">
+          <translation id="name" translation_id="275847" type="use" value="Club Selection[COMMENT: button in view_menu on squad screens; choose to view club stats]" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- player status/info -->
+            <flags id="PCpQ" />
+            <!-- role/duty suitability -->
+            <flags id="PlSE" />
+            <!-- person name -->
+            <record id="Pmor" auto_hide_priority="1050" ShTx="true"/>
+            <!-- player morale -->
+            <record id="Pfrm" auto_hide_priority="1100" />
+            <!-- player form -->
+            <record id="Pcon" auto_hide_priority="1010" />
+            <!-- player condition -->
+            <flags id="Poap" />
+            <!-- overall appearances -->
+            <flags id="Pogl" />
+            <!-- overall goals -->
+            <record id="Poav" auto_hide_priority="1020" />
+            <!-- overall average rating -->
+          </record>
+
+          <record id="object_list_view_context">
+            <integer id="player_stats_scope" value="5" />
+          </record>
+        </record>
+
+        <!-- shown for international teams -->
+        <record id="intf">
+          <translation id="name" translation_id="275848" type="use" value="International Selection[COMMENT: button in view_menu on squad screens; choose to view international stats]" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- player status/info -->
+            <flags id="PCpQ" />
+            <!-- role/duty suitability -->
+            <flags id="PlSE" />
+            <!-- person name -->
+            <record id="Pmor" auto_hide_priority="1050" ShTx="true"/>
+            <!-- player morale -->
+            <record id="Pfrm" auto_hide_priority="1100" />
+            <!-- player form -->
+            <record id="Pcon" auto_hide_priority="1010" />
+            <!-- player condition -->
+            <flags id="Poap" />
+            <!-- overall appearances -->
+            <flags id="Pogl" />
+            <!-- overall goals -->
+            <record id="Poav" auto_hide_priority="1020" />
+            <!-- overall average rating -->
+          </record>
+
+          <record id="object_list_view_context">
+            <integer id="player_stats_scope" value="7" />
+          </record>
+        </record>
+
+        <record id="coac">
+          <translation id="name" translation_id="292814" type="use" value="Reports[COMMENT: top level menu title for player reports screens]" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- player status/info -->
+            <flags id="PCpQ" />
+            <!-- role/duty suitability -->
+            <flags id="PlSE" />
+            <!-- person name -->
+            <flags id="Pbpc" />
+            <!-- best position -->
+            <flags id="Pbrc" />
+            <!-- role -->
+            <flags id="Pbdc" />
+            <!-- duty -->
+            <flags id="Page" />
+            <!-- age -->
+            <flags id="Pcac" />
+            <!-- currant ability -->
+            <flags id="Pppc" />
+            <!-- potential ability -->
+           </record>
+        </record>
+
+        <record id="fitn">
+          <translation id="name" translation_id="247571" type="use" value="Fitness" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- player status/info -->
+            <flags id="PCpQ" />
+            <!-- role/duty suitability -->
+            <flags id="PlSE" />
+            <!-- person name -->
+            <record id="Pcon" auto_hide_priority="900" />
+            <!-- player condition -->
+            <record id="Pfit" auto_hide_priority="1000" />
+            <!-- player fitness-->
+            <record id="Pcsr" auto_hide_priority="1100" />
+            <!-- player condition string (match fit, lacking match fitness etc.)-->
+          </record>
+        </record>
+
+        <record id="mora">
+          <translation id="name" translation_id="227839" type="use" value="Morale" />
+          <boolean id="tick" value="false" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- status info -->
+            <flags id="PCpQ" />
+            <!-- role/duty suitability -->
+            <flags id="PlSE" />
+            <!-- person name -->
+            <record id="Pmor" auto_hide_priority="900" ShTx="true"/>
+            <!-- player morale -->
+            <record id="Pfrm" auto_hide_priority="1100" />
+            <!-- player form -->
+            <record id="Pcon" auto_hide_priority="1000" />
+            <!-- player condition -->
+          </record>
+
+          <record id="object_list_view_context">
+            <integer id="player_stats_scope" value="5" />
+          </record>
+        </record>
+
+      </list>
+
+    </widget>
+
+    <!-- panel showing squad selection rules for the next match -->
+    <widget class="match_squad_info_panel" id="ssnm" show_all_comps="false" should_force_refresh="true"/>
+
+  </container>
+
+</panel>

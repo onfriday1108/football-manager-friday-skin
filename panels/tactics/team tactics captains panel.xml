@@ -1,0 +1,6 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="tactics_captains_panel" id="CapT" />
+
+</panel>

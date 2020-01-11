@@ -1,0 +1,29 @@
+<!-- training coaches panel -->
+<panel>
+  
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	
+	<container class="main_box">
+	
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	
+		<!-- knowledge panel -->
+		<container class="non_player_knowledge_panel" id="npkn" height="175" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!-- club assignments summary -->
+			<container class="scouting_assignments_panel" file="non_player/non player scouting assignments" id="casp" />
+			
+			<!-- nation assignments summary -->
+			<container class="scouting_assignments_panel" file="non_player/non player scouting assignments" id="nasp" />
+
+		</container>
+	
+	</container>
+
+</panel>

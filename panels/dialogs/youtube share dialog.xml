@@ -1,0 +1,51 @@
+<panel id="ytlg" width="600">
+	<translation id="title" translation_id="435399" type="use" value="Confirm YouTube Post[COMMENT:YouTube share dialog]" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="8" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="text" auto_size="vertical" alignment="centre">
+			<translation id="text" translation_id="435400" type="use" value="By pressing OK you allow for the following content to be uploaded to YouTube[COMMENT:Confirmation string for the user that on OK the following will be uploaded to YouTube, cannot be feminised as this can be done outside of a saved game or before a human manager profile is created]" />
+		</widget>
+
+		<widget class="text" auto_size="vertical" alignment="left,centre_y">
+			<translation id="text" translation_id="435401" type="use" value="Privacy[COMMENT:Privacy setting for users uploading videos to YouTube]" />
+		</widget>
+		<widget class="popup_button" id="priv" width="200">
+			<list id="items">
+				<record id="0">
+					<translation id="text" translation_id="348857" type="use" value="Hidden[COMMENT: steam workshop publishing panel; user can set the level of publicity for their steam workshop content]" />
+				</record>
+				<record id="1">
+					<translation id="text" translation_id="248393" type="use" value="Public" />
+				</record>
+			</list>
+			<flags id="selection" value="1" />
+		</widget>
+
+		<widget class="text" auto_size="vertical" alignment="left,centre_y">
+			<translation id="text" translation_id="349149" type="use" value="Title[COMMENT: publish steam workshop panel; name of the content downloaded or published or subscribed from Steam Workshop]" />
+		</widget>
+		<widget class="edit_box" id="yoti" />
+
+		<widget class="text" auto_size="vertical" alignment="left,centre_y">
+			<translation id="text" translation_id="251852" type="use" value="Description[COMMENT: database selection dialog, database description label]" />
+		</widget>
+		<widget class="edit_box" id="yode" mlti="true" />
+
+	</container>
+
+	<!-- row of buttons -->
+	<widget class="container" id="btns">
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+		<!-- row of buttons -->
+		<container id="btns" file="ok cancel buttons" />
+
+	</widget>
+</panel>

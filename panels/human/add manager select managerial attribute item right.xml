@@ -1,0 +1,12 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="-3,5,-3,20" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2"/>
+
+  <widget class="adjustable_bar" id="hoBR" max_value="20" bar_value_colour="tactical 1" adj_bar_highlight_value_colour="blue" file="adjustable bar right aligned label"/>
+  <widget class="spacer" />
+  <widget class="text" id="atNM"  auto_size="none" alignment="right,centre_y"/>
+	<widget class="info_icon_hint_text" id="atTX" width="20"></widget>
+
+
+
+</panel>

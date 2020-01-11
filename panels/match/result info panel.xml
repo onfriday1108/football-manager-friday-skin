@@ -1,0 +1,36 @@
+<!-- A panel showing a single fixture result -->
+<!-- Designed to be used with the RESULT_INFO_PANEL, a CLIENT_OBJECT_VIEWER_XML_PANEL -->
+<panel>
+
+  <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="8"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+    <widget class="fixture_opponent_picture" id="oppi" scale_picture="true" height="55">
+      <boolean id="keep_aspect_ratio" value="true" />
+      <flags id="image_alignment" value="centre" />
+
+      <record id="object_property">
+        <integer id="get_property" value="fopP" />
+        <boolean id="dont_set_object" value="true"/>
+      </record>
+    </widget>
+
+
+  <container>
+
+    <attachment_group class="vertical_arrange_autosize" vertical_alignment="middle"/>
+
+    <widget class="fixture_opponent_venue_text" id="fOpV" spec="text" size="small" alignment="centre" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="fOpV" />
+      </record>
+    </widget>
+
+    <widget class="fixture_full_result_text" id="FxFR" spec="text" style="bold" alignment="centre" multiline="true" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="FxFR" />
+      </record>
+    </widget>
+
+  </container>
+</panel>

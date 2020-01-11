@@ -1,0 +1,60 @@
+<panel read_only='true'>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="main_box">
+		<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="10" gap="10"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!--formation text-->
+		<widget class="label" id="frmt" alignment="left,centre_y" spec="text" size="12" style="semi_bold" appearance="none" auto_size="none"/>
+
+		<!--container for active slot stuff-->
+		<container id="SloA">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" gap="10"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<!--familiarity-->
+			<container id="famC">
+				<layout class="arrange_vertical_attachment" layout="-1, -1"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="label" id="FAMI" alignment="left" font="title">
+					<translation id="text" translation_id="318317" type="use" value="Familiarity[COMMENT: match preparation training tactics; label to indicate how well the squad is versed in a tactic which they're working upon]"/>
+				</widget>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<widget class="horizontal_percentage_bar" id="fami" label_width="0" height="4">
+						<translation id="hint" translation_id="326040" type="use" value="Click to see the full breakdown of tactic familiarity levels[COMMENT: hint to the user to tell them that clicking on this widget will show them a panel with their team's levels of tactical familiarity]"/>
+					</widget>
+
+					<!--This is a button overlay to make the horizontal percentage bar look more like you can click on it -->
+					<container id="FamB">
+						<translation id="hint" translation_id="326040" type="use" value="Click to see the full breakdown of tactic familiarity levels[COMMENT: hint to the user to tell them that clicking on this widget will show them a panel with their team's levels of tactical familiarity]"/>
+					</container>
+				</container>
+			</container>
+
+			<!--options drop down-->
+			<!--<widget class="popup_button" id="opti" fixed="true" appearance="menu/button" width="40">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="2"/>
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="15"/>
+      </widget>-->
+
+		</container>
+	</container>
+
+	<!--container for inactive slot stuff-->
+	<container id="SloI">
+		<layout class="arrange_horizontal_attachment" layout="-1, 200" gap="10"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="10" apply_to_children="true"/>
+
+		<widget class="spacer" />
+
+		<widget class="popup_button" id="CrNw" icon="icons/16px/plus">
+			<translation id="text" translation_id="363617" type="use" value="Create New Tactic[COMMENT: FR 8989 - match preparation training tactics; button to create a new tactic based on a preset formation]"/>
+		</widget>
+	</container>
+
+</panel>

@@ -1,0 +1,13 @@
+<panel>
+	<!-- Filter panel for different levels of competitions ( international, domestic etc.) -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+
+	<container class="filter_check_box_list_container" id="nctr" auto_size="vertical" >
+		<translation id="title" translation_id="229364" type="use" value="Nations"/>
+
+		<!-- Division's will be added here -->
+
+	</container>
+	
+</panel>

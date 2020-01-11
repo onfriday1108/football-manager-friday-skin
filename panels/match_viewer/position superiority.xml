@@ -1,0 +1,35 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<!-- useful panel...-->
+	<container class="main_box">
+
+		<layout class="arrange_vertical_attachment" alignment="top,extend" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<string id="title" value="Position Superiority"/>
+
+		<widget class="popup_button" id="pscp" height="30" select_event="pscp"/>
+
+		<!--The Five we used-->
+		<widget class="table" id="pscr" layout="-1, -1" mode="fill_rows, stripe_rows" auto_size_rows="true" row_height="18" row_spacing="0">
+			<list id="column_table_properties">
+				<record index="0" alignment="left" />
+				<record index="0" alignment="left" />
+			</list>
+
+			<list id="headings">
+				<record alignment="left,centre_y" column="0">
+					<string id="text" value="Top Scores" />
+				</record>
+				<record alignment="left,centre_y" column="0">
+					<string id="text" value="Difference" />
+				</record>
+			</list>
+
+		</widget>
+
+	</container>
+
+</panel>

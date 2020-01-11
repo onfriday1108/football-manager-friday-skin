@@ -1,0 +1,17 @@
+﻿<panel height="60">
+  <layout class="arrange_horizontal_attachment" layout="26, -1" offset="0" gap="1" do_not_size="true"/>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <list id="properties_to_forward">
+    <record get_property="text" set_property="text" target="NuOf"/>
+  </list>
+  
+  <widget class="picture" file="icons/26px/affiliate" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" red_replacement="text">
+    <layout class="centre_in_parent_attachment" alignment="vertical"/>
+  </widget>
+
+  <widget class="text" id="NuOf" auto_size="vertical" alignment="left,centre_y" >
+    <layout class="centre_in_parent_attachment" alignment="vertical"/>
+  </widget>
+
+</panel>

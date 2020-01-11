@@ -1,0 +1,52 @@
+﻿<panel save_session_state="true">
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="8"/>
+	<layout class="fit_children_attachment" alignment="vertical" offset="2" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2"/>
+
+	<container width="34">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<widget class="player_basic_positions_indicator_widget" id="ppip" height="60">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="objt"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</list>
+			</record>
+		</widget>
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!-- Position label-->
+		<widget class="position_label" id="PPos" alignment="left,centre_y" auto_size="vertical" navigation_focus_target="false">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="PpsC"/>
+						<integer id="set_property" value="valu"/>
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<widget class="tactical_role_label" id="Pbrs" alignment="left,centre_y" auto_size="vertical" colour="faded text" size="normal">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="Pbrc"/>
+						<integer id="set_property" value="valu"/>
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<container height="5"/>
+	</container>
+</panel>

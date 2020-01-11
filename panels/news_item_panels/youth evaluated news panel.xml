@@ -1,0 +1,5 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+	<container height="500" file="news_item_panels/youth evaluated panel">
+	</container>
+</panel>

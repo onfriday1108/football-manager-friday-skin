@@ -1,0 +1,104 @@
+<!-- player training levels panel --><panel>
+  <boolean id="save_session_state" value="true" />
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="inner_box">
+    <translation id="title" translation_id="441101" type="use" value="Training Workload[COMMENT: player training workload title]" />
+    <layout class="arrange_vertical_attachment" layout="-2,-2,-5" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+    
+     <!--subsection box containing first bar chart--> 
+    <container class="main_box">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="15" apply_to_children="true" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="5" apply_to_children="true" />
+
+      <!--put a dotted line behind the chart to indicate the safe level--> 
+      <widget class="container">
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+        <layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1,-1,10" offset="0" />
+        <widget class="inner_box_no_margin">
+          <record id="aprn">
+            <integer id="mode" value="2" />
+            <flags id="lsty" value="bottom" />
+            <colour id="colour" name="grey" />
+          </record>
+        </widget>
+        <widget class="inner_box_no_margin">
+          <record id="aprn">
+            <integer id="mode" value="2" />
+            <flags id="lsty" value="bottom" />
+            <colour id="colour" name="grey" />
+          </record>
+        </widget>
+        <widget class="inner_box_no_margin">
+          <record id="aprn">
+            <integer id="mode" value="2" />
+            <flags id="lsty" value="bottom" />
+            <colour id="colour" name="grey" />
+          </record>
+        </widget>
+        <widget class="inner_box_no_margin">
+          <record id="aprn">
+            <integer id="mode" value="2" />
+            <flags id="lsty" value="bottom" />
+            <colour id="colour" name="grey" />
+          </record>
+        </widget>
+        <widget class="container" />
+        <widget class="container" />
+      </widget>
+
+       <!--vertical bar chart-->
+      <container class="vertical_bar_chart" id="trlv" bar_colour="green" allow_selection="true" show_negative_values="false" />
+
+    </container>
+
+     <!--subsection box containing bar chart--> 
+    <container class="main_box" id="trpb">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="15" apply_to_children="true" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="5" apply_to_children="true" />
+
+       <!--put a dotted line behind the chart to indicate the safe level--> 
+      <widget class="container">
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+        <layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1,-1,10" offset="0" />
+        <widget class="inner_box_no_margin">
+          <record id="aprn">
+            <integer id="mode" value="2" />
+            <flags id="lsty" value="bottom" />
+            <colour id="colour" name="grey" />
+          </record>
+        </widget>
+        <widget class="inner_box_no_margin">
+          <record id="aprn">
+            <integer id="mode" value="2" />
+            <flags id="lsty" value="bottom" />
+            <colour id="colour" name="grey" />
+          </record>
+        </widget>
+        <widget class="inner_box_no_margin">
+          <record id="aprn">
+            <integer id="mode" value="2" />
+            <flags id="lsty" value="bottom" />
+            <colour id="colour" name="grey" />
+          </record>
+        </widget>
+        <widget class="inner_box_no_margin">
+          <record id="aprn">
+            <integer id="mode" value="2" />
+            <flags id="lsty" value="bottom" />
+            <colour id="colour" name="grey" />
+          </record>
+        </widget>
+        <widget class="container" />
+        <widget class="container" />
+      </widget>
+
+       <!--training graph--> 
+      <container class="vertical_bar_chart" id="trpr" bar_colour="yellow" show_negative_values="false" />
+
+    </container>
+
+  </container>
+
+</panel>

@@ -1,0 +1,43 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<flags id="splt" value="tables/standard/row/divider/row"/>
+
+	<container class="main_box" id="tbct" appearance="boxes/custom/interface/search/paper">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<widget class="client_object_list_table" id="colt" database_table_type="-1" auto_size="vertical" auto_size_maximum_height="700" row_height="35" action_event="NULL">
+			<boolean id="force_refresh_on_object_list" value="true"/>
+			<boolean id="keyboard_event_fallthrough_no_scroll" value="true"/>
+			<flags id="mode" value="fill_rows, fill_custom_rows, keyboard, select_rows, dont_ask_for_focus, stripe_rows, show_bullets, hide_headings"/>
+			<list id="column_widget_properties">
+				<record indx="0" left="44">
+					<integer id="size" value="large" />
+					<integer id="colour" value="text" />
+					<integer id="cursor" value="1"/>
+					<boolean id="disable_link" value="true" />
+				</record>
+
+				<record indx="1">
+					<colour id="colour" name="faded text" />
+					<integer id="size" value="small" />
+					<flags id="auto_size" value="vertical" />
+					<integer id="cursor" value="1"/>
+				</record>
+			</list>
+
+			<record id="viewed_property_ids">
+				<record id="objt"/>
+				<record id="subS"/>
+			</record>
+		</widget>
+
+		<widget class="text" id="nore" height="20" colour="disabled"/>
+
+	</container>
+
+</panel>

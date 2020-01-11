@@ -1,0 +1,14 @@
+<panel width="50" background_colour="instant hint colour" height="30">
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <animation class="fade_on_hide_animation"/>
+  <animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" duration="0.6" start_value="1, 0" end_value="0, 0"/>
+
+  <container class="property_list_viewer_xml_panel" id="hntV">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+    <widget class="text" id="tPos" colour="hint" alignment="centre">
+      <record id="object_property" get_property="gcBL" set_property="text"/>
+    </widget>
+  </container>
+</panel>

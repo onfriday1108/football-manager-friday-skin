@@ -1,0 +1,21 @@
+<panel width="100">
+  <flags id="next_bg_colour" value="draft next team"/>
+  <flags id="user_bg_colour" value="draft user team"/>
+
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="2"/>
+
+  <container class="main_box" id="bdbx" appearance="boxes/custom/darken/rounded/standard/paper">
+    <layout class="arrange_vertical_attachment" layout="20, -4, 35" gap="0" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+    <widget class="label" id="pnmb" spec="text" size="small" alignment="centre" colour="secondary"/>
+
+    <widget class="object_portrait_picture" id="pktm" scale_picture="true">
+      <boolean id="keep_aspect_ratio" value="true"/>
+      <flags id="image_alignment" value="centre"/>
+    </widget>
+
+    <widget class="text" id="ptmn" spec="text" size="small" alignment="centre" colour="secondary"/>
+  </container>
+</panel>

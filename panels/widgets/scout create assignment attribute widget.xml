@@ -1,0 +1,26 @@
+<panel  >
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+    <layout class="arrange_horizontal_attachment" alignment="right,extend" gap="0" offset="0"/>
+
+    <widget class="label" id="attn" size="10">
+      
+    </widget>
+
+    <widget class="label" id="sign" size="12" auto_size="horizontal" hidden="true">
+      <string id="text" type="new" value="≥"/>
+    </widget>
+
+    <widget class="edit_box" id="edtb" width="32" auto_select="true" changed_event="edbc" alignment="centre" hidden="true">
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="2" />
+    </widget>
+    
+    <widget class="label" id="valu" hidden="true" width="17" alignment="right">
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="2" />
+    </widget>
+    
+  </container>
+  
+</panel>

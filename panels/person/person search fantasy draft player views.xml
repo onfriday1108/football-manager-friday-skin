@@ -1,0 +1,241 @@
+﻿<record>
+  <flags id="current_view" value="ovvw" />
+  <!--available views-->
+  <list id="viws">
+    <record id="ovvw">
+      <record id="view_table_properties">
+        <integer id="row_height" value="60" />
+      </record>
+      <translation id="name" translation_id="247414" type="use" value="Overview" />
+      <record id="view">
+        <record id="PNaN" auto_hide_priority="2"  height="64" />
+        <!-- player name/nation -->
+        <record id="PpsP" auto_hide_priority="6" />
+        <!-- person position-->
+        <record id="Pfot" auto_hide_priority="100" width="120" />
+        <!-- person preferred foot-->
+        <record id="Dfcl" auto_hide_priority="7" />
+        <!-- person draft club -->
+        <record id="Pdva" auto_hide_priority="4" />
+        <!-- value -->
+        <record id="PatF" auto_hide_priority="1"  />
+        <!-- add to shortlist -->
+        <record id="PaDF" auto_hide_priority="1"  />
+        <!-- add to draft -->
+      </record>
+    </record>
+    <record id="----" />
+
+    <record>
+      <translation id="text" translation_id="229822" type="use" value="Attributes" />
+
+      <list id="items">
+        <record id="phat">
+          <translation id="name" translation_id="230003" type="use" value="Physical" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- player status/info -->
+            <flags id="Pnms" />
+            <!-- person name -->
+            <flags id="Pacc" />
+            <!-- (p) acceleration -->
+            <flags id="Pagi" />
+            <!-- (p) agility -->
+            <flags id="Pbal" />
+            <!-- (p) balance -->
+            <flags id="Pjum" />
+            <!-- (p) jumping -->
+            <flags id="Pnft" />
+            <!-- (p) natural fitness -->
+            <flags id="Ppac" />
+            <!-- (p) pace -->
+            <flags id="Psta" />
+            <!-- (p) stamina -->
+            <flags id="Pstr" />
+            <!-- (p) strength -->
+          </record>
+        </record>
+
+        <record id="meat">
+          <translation id="name" translation_id="230106" type="use" value="Mental" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- player status/info -->
+            <flags id="Pnms" />
+            <!-- person name -->
+            <record id="Pagg" />
+            <!-- (m) aggression -->
+            <record id="Pant" />
+            <!-- (m) anticipation -->
+            <record id="Pbra" />
+            <!-- (m) bravery -->
+            <record id="Pcmp" />
+            <!-- (m) composure -->
+            <record id="Pcnt" />
+            <!-- (m) concentration -->
+            <record id="Pdec" />
+            <!-- (m) decisions -->
+            <record id="Pdet" />
+            <!-- (m) determination -->
+            <record id="Pfla" />
+            <!-- (m) flair -->
+            <record id="Pinf" />
+            <!-- (m) influence -->
+            <record id="Potb" />
+            <!-- (m) off the ball -->
+            <record id="Ppsn" />
+            <!-- (m) positioning -->
+            <record id="Ptwr" />
+            <!-- (m) teamwork -->
+            <record id="Pcre" />
+            <!-- (m) vision -->
+            <record id="Pwkr" />
+            <!-- (m) work rate -->
+          </record>
+        </record>
+
+        <record id="teat">
+          <translation id="name" translation_id="229413" type="use" value="Technical" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- player status/info -->
+            <flags id="Pnms" />
+            <!-- person name -->
+            <record id="Pcor" />
+            <!-- (t) corner taking -->
+            <record id="Pcro" />
+            <!-- (t) crossing -->
+            <record id="Pdri" />
+            <!-- (t) dribbling -->
+            <record id="Pfin" />
+            <!-- (t) finishing -->
+            <record id="Pfrs" />
+            <!-- (t) first touch -->
+            <record id="Pfrk" />
+            <!-- (t) free kick taking -->
+            <record id="Phea" />
+            <!-- (t) heading -->
+            <record id="Plsh" />
+            <!-- (t) long shots -->
+            <record id="Plth" />
+            <!-- (t) long throws -->
+            <record id="Pmar" />
+            <!-- (t) marking -->
+            <record id="Ppas" />
+            <!-- (t) passing -->
+            <record id="Ppen" />
+            <!-- (t) penalty taking -->
+            <record id="Ptac" />
+            <!-- (t) tackling -->
+            <record id="Ptec" />
+            <!-- (t) technique -->
+          </record>
+        </record>
+
+        <record id="goat">
+          <translation id="name" translation_id="230024" type="use" value="Goalkeeping" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- player status/info -->
+            <flags id="Pnms" />
+            <!-- person name -->
+            <flags id="Paab" />
+            <!-- aerial reach -->
+            <flags id="Pcoa" />
+            <!-- command of area -->
+            <flags id="Pcom" />
+            <!-- communication -->
+            <flags id="Pecc" />
+            <!-- eccentricity -->
+            <flags id="Phan" />
+            <!-- handling -->
+            <flags id="Pkic" />
+            <!-- kicking -->
+            <flags id="Pooo" />
+            <!-- one on ones -->
+            <flags id="Pref" />
+            <!-- reflexes -->
+            <flags id="Prou" />
+            <!-- rushing out -->
+            <flags id="Pttp" />
+            <!-- tendency to punch -->
+            <flags id="Pthr" />
+            <!-- throwing -->
+          </record>
+        </record>
+
+        <record id="deat">
+          <translation id="name" translation_id="247413" type="use" value="Defensive" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- player status/info -->
+            <flags id="Pnms" />
+            <!-- person name -->
+            <flags id="Pacc" />
+            <!-- acceleration -->
+            <flags id="Pant" />
+            <!-- anticipation -->
+            <flags id="Phea" />
+            <!-- heading -->
+            <flags id="Pjum" />
+            <!-- jumping -->
+            <flags id="Pmar" />
+            <!-- marking -->
+            <flags id="Ppac" />
+            <!-- pace -->
+            <flags id="Ppsn" />
+            <!-- positioning -->
+            <flags id="Psta" />
+            <!-- stamina -->
+            <flags id="Pstr" />
+            <!-- strength -->
+            <flags id="Ptac" />
+            <!-- tackling -->
+          </record>
+        </record>
+
+        <record id="atat">
+          <translation id="name" translation_id="230042" type="use" value="Attacking" />
+          <record id="view">
+            <flags id="PtsL" />
+            <!-- picked info -->
+            <flags id="Pnfo" />
+            <!-- player status/info -->
+            <flags id="Pnms" />
+            <!-- person name -->
+            <flags id="Pcro" />
+            <!-- crossing -->
+            <flags id="Pdri" />
+            <!-- dribbling -->
+            <flags id="Pfrk" />
+            <!-- free kicks -->
+            <flags id="Pfin" />
+            <!-- finishing -->
+            <flags id="Pfrs" />
+            <!-- first touch -->
+            <flags id="Pfla" />
+            <!-- flair -->
+            <flags id="Plsh" />
+            <!-- long shots -->
+            <flags id="Potb" />
+            <!-- off the ball -->
+            <flags id="Ppas" />
+            <!-- passing -->
+            <flags id="Pcre" />
+            <!-- vision -->
+          </record>
+        </record>
+      </list>
+    </record>
+  </list>
+</record>

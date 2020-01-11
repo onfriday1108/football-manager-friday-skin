@@ -1,0 +1,19 @@
+<panel height="750" width="1010">
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!--ui in here-->
+	<container class="client_object_viewer_xml_panel" id="edit" file="human/create a son panel edit">
+	</container>
+
+	<!--button area-->
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="ok  " click_event="ok  ">
+			<translation id="text" translation_id="229829" type="use" value="Ok" />
+		</widget>
+
+	</container>
+
+</panel>

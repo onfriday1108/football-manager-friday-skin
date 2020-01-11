@@ -1,0 +1,35 @@
+﻿<panel width="400">
+	<layout class="arrange_vertical_attachment" alignment="bottom"/>
+	<layout class="fit_children_attachment" alignment="vertical,fill"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+	<container class="standard_popup_box" id="main">
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="titl"/>
+					<integer id="set_property" value="titl"/>
+				</record>
+			</list>
+		</record>
+
+		<layout class="arrange_vertical_attachment" alignment="bottom"/>
+		<layout class="fit_children_attachment" alignment="vertical,fill"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+
+		<container embed_in_frame="true" height="25">
+			<layout class="arrange_horizontal_attachment" alignment="right" embed_in_frame="true" gap="4" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" embed_in_frame="true"/>
+			<layout class="stick_to_sides_attachment" alignment="right,top" embed_in_frame="true" inset="6"/>
+			<layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="true" offset="2"/>
+
+			<widget class="picture" file="icons/16px/line" width="16" height="16" embed_in_frame="true" scale_picture="true" image_alignment="centre" keep_aspect_ratio="true" red_replacement="grey"/>
+			<widget class="label" auto_size="horizontal" height="16" embed_in_frame="true" colour="grey" size="small">
+				<translation id="text" translation_id="297338" type="use" value="Average"/>
+			</widget>
+		</container>
+
+		<!-- sub panels added here -->
+	</container>
+
+</panel>

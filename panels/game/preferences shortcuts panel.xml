@@ -1,0 +1,67 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container class="inner_subtle_box">
+				<translation id="title" translation_id="316786" type="use" value="Shortcuts[COMMENT: preference screen panel title]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="table" id="scmd" mode="fill_rows,stripe_rows,select_rows,show_bullets" layout="-2,-1" row_spacing="0" row_height="28" select_event="secu">
+					
+					<record id="default_properties" alignment="left,centre_y" />
+					<list id="headings">
+						<record alignment="left,centre_y" column_span="5">
+							<translation id="text" translation_id="251946" type="use" value="Keyboard Commands[COMMENT: preferences: keyboard commands table header (list of possible commands)]" />
+						</record>
+					</list>
+
+					<!-- small inset from sides of table -->
+					<list id="column_table_properties">
+						<record indx="0" sort_disabled="false" left="5" right="5" />
+					</list>
+
+				</widget>
+			</container>
+
+			<container class="inner_subtle_box">
+				<translation id="title" translation_id="251947" type="use" value="Command Shortcuts[COMMENT: preferences: keyboard shortcuts table header (list of shorctuts for a keyboard command)]" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="table" id="scut" mode="stripe_rows,select_rows" layout="-1,200" row_spacing="5" row_height="31">
+					<flags id="auto_size" value="vertical" />    
+					<record id="default_properties" alignment="left,centre_y" />
+
+					<!-- small inset from sides of table -->
+					<list id="column_table_properties">
+						<record index="0" sort_disabled="true" left="5" />
+						<record index="1" sort_disabled="true" right="5"/>
+					</list>
+
+				</widget>
+			</container>
+
+		</container>
+
+		<widget class="container">
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+			<widget class="button" disabled="true" id="reSC" auto_size="all" click_event="reSC">
+				<translation id="text" translation_id="251948" type="use" value="Restore All To Defaults[COMMENT: preferences: keyboard shortcut: reset to default, button text]" />
+			</widget>
+		</widget>
+
+	</container>
+</panel>

@@ -1,0 +1,22 @@
+<panel>
+	<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="0.0" end_value="1.0" duration="0.2" end_mode="hold_end" />
+	<animation class="fade_animation" trigger_id="hidden" trigger_value="true" start_value="1.0" end_value="0.0" duration="0.2" end_mode="hold_end" >
+		<record id="finished_event">
+			<flags id="event_id" value="fdFn"/>
+			<flags id="event_target" value="glob"/>
+		</record>
+	</animation>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="scrolling_box">
+		<container id="actS">
+			<record id="default_properties">
+				<symbol id="appearance" value="buttons/custom/conversation/statement/button" />
+			</record>
+
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		</container>
+	</container>
+</panel>

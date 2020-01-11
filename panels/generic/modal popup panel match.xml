@@ -1,0 +1,24 @@
+<panel cancel_mouse_hide='true'>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <attachment class="event_relay_attachment" event_id="layout">
+    <record id="action_event">
+      <flags id="event_id" value="DsAn"/>
+      <integer id="evfl" value="7" />
+      <flags id="evtg" value="root" />
+    </record>
+  </attachment>
+
+  <attachment class="event_relay_attachment" event_id="mcan">
+    <record id="action_event">
+      <flags id="event_id" value="EnAn"/>
+      <integer id="evfl" value="7" />
+      <flags id="evtg" value="root" />
+    </record>
+  </attachment>
+
+  <container class="inner_box_no_margin" id="ppcn">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  </container>
+
+</panel>

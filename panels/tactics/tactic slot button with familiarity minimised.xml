@@ -1,0 +1,87 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,85" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" apply_to_children="true" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,30, 20" offset="0" gap="1" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container>
+
+					<container class="main_box" id="borb">
+
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+					</container>
+
+					<widget class="icon_button" id="frmt" alignment="left,centre_y" appearance="none">
+
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0,10,0,0" />
+
+					</widget>
+
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<container id="SloA">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="popup_button" id="opti" fixed="true" appearance="buttons/custom/tactics/pitch switch/right/button" icon_alignment="centre"/>
+					</container>
+
+				</container>
+
+			</container>
+
+
+			<container id="SloI">
+				<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="popup_button" id="crMn" fixed="true" spec="text" appearance="buttons/custom/tactics/pitch switch/normal/button">
+					<translation id="text" translation_id="363617" type="use" value="Create New Tactic[COMMENT: FR 8989 - match preparation training tactics; button to create a new tactic based on a preset formation]"/>
+				</widget>
+
+			</container>
+
+		</container>
+
+
+		<!--familiarity-->
+		<container id="famC">
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="4" gap="3" do_not_size="true" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" offset="4" gap="3" />
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+
+			<container class="inner_subtle_box" id="fmiL" height="12" width="75" appearance="boxes/custom/tactic fam/paper">
+
+				<widget class="horizontal_percentage_bar" bar_value_colour="tactical_familiarity_colour_1" id="fami" label_width="0" appearance="charts/bar/custom/tactics">
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				</widget>
+
+				<!--This is a button overlay to make the horizontal percentage bar look more like you can click on it -->
+				<container id="FamB">
+					<translation id="hint" translation_id="326040" type="use" value="Click to see the full breakdown of tactic familiarity levels[COMMENT: hint to the user to tell them that clicking on this widget will show them a panel with their team's levels of tactical familiarity]" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</container>
+
+			</container>
+
+		</container>
+
+
+	</container>
+
+
+
+
+</panel>

@@ -1,0 +1,55 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- title: can be changed to a titled box/subsection box/other container that takes a text or title property and contain the other bits inside -->
+	<widget class="label" id="dgrt" auto_size="vertical" alignment="centre">
+		<translation id="text" translation_id="329881" type="use" value="Dangerman[COMMENT: Heading on match preparation scout report sub-panel]" />
+	</widget>
+
+	<!-- contents -->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- profile picture -->
+		<widget class="picture" id="prop">
+			<boolean id="scale_picture" value="true" />
+			<boolean id="keep_aspect_ratio" value="true" />
+			<flags id="image_alignment" value="centre" />
+
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" />
+			
+			<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+				<list id="value">
+					<boolean value="false" />
+				</list>
+			</attachment>
+
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="fcgn" /> <!--Facegen data request-->
+					</record>
+          <record>
+            <integer id="get_property" value="Pfke" />
+            <!--Fake name request-->
+          </record>
+          <record>
+						<integer id="get_property" value="prpc" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget> <!-- picture -->
+
+		<widget class="person_button" id="name" alignment="centre">
+			<record id="object_property">
+				<integer id="get_property" value="dref" /> <!-- db record reference -->
+				<integer id="set_property" value="valu" /> <!-- set as value property -->
+			</record>
+		</widget>
+		
+	</container> <!-- contents -->
+
+</panel>

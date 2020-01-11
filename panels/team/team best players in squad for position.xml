@@ -1,0 +1,20 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  <boolean id="should_force_refresh" value="true" />
+  
+  <container class="simple_data_list" set_property="objt" alignment="horizontal">
+    <boolean id="test" value="true"/>
+
+
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="TbPS" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </list>
+    </record>
+    <record id="widget_properties" class="property_list_viewer_xml_panel" file="widgets/best player in squad for position widget" height="50" width="175" minimum_width="175"/>
+  </container>
+  
+</panel>

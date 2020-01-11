@@ -1,0 +1,113 @@
+<panel height="160">
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <container class="main_box" appearance="boxes/popup/standard/titled/paper" id="main">
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="titl" />
+          <integer id="set_property" value="titl" />
+        </record>
+      </list>
+    </record>
+
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+   
+
+    <widget class="label" id="ratl" auto_size="vertical" size="large" style="semi_bold">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="subt" />
+            <integer id="set_property" value="valu" />
+          </record>
+        </list>
+      </record>
+    </widget>
+
+    <widget class="label" id="text" auto_size="vertical" colour="faded text" size="small">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="text" />
+            <integer id="set_property" value="valu" />
+          </record>
+        </list>
+      </record>
+    </widget>
+
+    <container height="10"/>
+
+    <widget class="horizontal_divider" />
+
+    <widget class="table" layout="-1,-1,-1" mode="fill_rows">
+
+      <widget class="label" row="0" col="0" font="title" colour="faded text">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="betx" />
+              <integer id="set_property" value="valu" />
+            </record>
+          </list>
+        </record>
+        
+      </widget>
+
+      <widget class="label" id="best" row="1" col="0">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="frst" />
+              <integer id="set_property" value="valu" />
+            </record>
+          </list>
+        </record>
+      </widget>
+
+      <widget class="label" row="0" col="1" font="title" colour="faded text">
+        <translation id="text" translation_id="433579" type="use" value="Average[COMMENT: attributes comparison screen, string indicating the attribute is at an average level for whatever it's being compared to, this was ID 318263 but some languages need a dedicated version]" />
+
+      </widget>
+
+      <widget class="label" row="1" col="1">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="aver" />
+              <integer id="set_property" value="valu" />
+            </record>
+          </list>
+        </record>
+      </widget>
+
+      <widget class="label" row="0" col="2" font="title" colour="faded text">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="wotx" />
+              <integer id="set_property" value="valu" />
+            </record>
+          </list>
+        </record>
+        
+      </widget>
+
+      <widget class="label" id="last" row="1" col="2">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="last" />
+              <integer id="set_property" value="valu" />
+            </record>
+          </list>
+        </record>
+      </widget>
+
+    </widget>
+
+  </container>
+
+</panel>

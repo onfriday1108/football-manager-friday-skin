@@ -1,0 +1,20 @@
+﻿<panel height="46">
+	<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<container class="inner_box" appearance="boxes/custom/transfer centre/status/right/paper" id="VAtp" height="40">
+		<layout class="arrange_horizontal_attachment" layout="-1, 20" offset="0" gap="0" do_not_size="true"/>
+
+		<container class="vertical_arrange_container" alignment="middle" gap="-2" inset="0" offset="0" height="40">
+			<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+
+			<widget class="button" id="cos1" auto_size="vertical" alignment="left,can_scale" multiline="false" show_button_appearance="false" colour="text" style="semi_bold"/>
+			<widget class="button" id="cos2" auto_size="vertical" alignment="left,centre_y" colour="faded text" multiline="true" show_button_appearance="false"/>
+		</container>
+
+		<widget class="button" id="VwOf" auto_size="vertical" alignment="centre" appearance="icons/16px/right">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+		</widget>
+	</container>
+
+</panel>

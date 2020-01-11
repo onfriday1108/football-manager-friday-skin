@@ -1,0 +1,56 @@
+<panel width="335" height="480">
+	<translation id="title" translation_id="335054" type="use" value="Filter Messages[COMMENT: Inbox; match stats; title for customise match stats dialog]"/>
+
+	<colour id="news_category_colour_affiliates" name="news_category_colour_affiliates"/>
+	<colour id="news_category_colour_agents" name="news_category_colour_agents"/>
+	<colour id="news_category_colour_awards" name="news_category_colour_awards"/>
+	<colour id="news_category_colour_competitions" name="news_category_colour_competitions"/>
+	<colour id="news_category_colour_contracts" name="news_category_colour_contracts"/>
+	<colour id="news_category_colour_discipline" name="news_category_colour_discipline"/>
+	<colour id="news_category_colour_finances" name="news_category_colour_finances"/>
+	<colour id="news_category_colour_injuries" name="news_category_colour_injuries"/>
+	<colour id="news_category_colour_jobs" name="news_category_colour_jobs"/>
+	<colour id="news_category_colour_match" name="news_category_colour_match"/>
+	<colour id="news_category_colour_media" name="news_category_colour_media"/>
+	<colour id="news_category_colour_messages" name="news_category_colour_messages"/>
+	<colour id="news_category_colour_records" name="news_category_colour_records"/>
+	<colour id="news_category_colour_scouting" name="news_category_colour_scouting"/>
+	<colour id="news_category_colour_training" name="news_category_colour_training"/>
+	<colour id="news_category_colour_transfers" name="news_category_colour_transfers"/>
+	<colour id="news_category_colour_tutorial" name="news_category_colour_tutorial"/>
+
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4"/>
+
+		<widget class="table" id="fltb" layout="10, -1" mode="fill_rows" auto_size_rows="true" row_spacing="-4" column_spacing="6">
+			<list id="column_widget_properties">
+				<record index="1" alignment="left,centre_y"/>
+			</list>
+
+		</widget>
+	</container>
+
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="button" id="rstr" auto_size="all" disabled="true">
+			<translation id="text" translation_id="308581" type="use" value="Restore All[COMMENT: match screen - button on tv view that will restore all the information widgets that have been minimised.]"/>
+			<record id="click_event">
+				<flags id="event_id" value="rstr"/>
+			</record>
+		</widget>
+
+		<widget class="primary_icon_tick_button" id="ok">
+			<translation id="text" translation_id="229918" type="use" value="Confirm"/>
+		</widget>
+
+		<widget class="button" id="canc" auto_size="all">
+			<translation id="text" translation_id="229828" type="use" value="Cancel"/>
+		</widget>
+	</container>
+
+</panel>

@@ -1,0 +1,108 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<colour id="budget_info_positive_colour" name="positive"/>
+	<colour id="budget_info_zero_colour" name="text"/>
+	<colour id="budget_info_negative_colour" name="negative"/>
+	<boolean id="save_session_state" value="true"/>
+	<boolean id="sdst" value="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container class="main_box" red_replacement="light_box_background">
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<widget class="icon_button" id="shpa" appearance="" icon="icons/16px/hide sidebar" click_event="hspa" icon_alignment="left" auto_size="all" embed_in_frame="true">
+				<animation class="position_animation" no_clipping="true"/>
+			</widget>
+		</container>
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<animation class="size_animation"/>
+
+			<container id="sctb">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="4"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+				<widget class="label" auto_size="horizontal" font="title" colour="accent">
+					<translation id="text" translation_id="248356" type="use" value="Scouting"/>
+				</widget>
+
+				<container height="28">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+					<widget class="primary_icon_button" id="nass" size="10" click_event="nack" auto_size="horizontal" icon="icons/16px/plus">
+						<translation id="text" translation_id="363618" type="use" value="Create new assignment[COMMENT: heading; scouting assignments; button to create a new scouting assignment - FR 8138]"/>
+					</widget>
+				</container>
+
+				<widget class="label" id="nbsc" font="text" size="large" style="semi_bold" auto_size="vertical"/>
+				<widget class="label" id="nbsa" font="text" size="normal" auto_size="vertical"/>
+				<widget class="text" font="text" id="rktx" size="normal" auto_size="vertical" colour="faded text"/>
+
+				<widget class="horizontal_divider" />
+
+				<widget class="label" font="title" colour="accent" auto_size="vertical">
+					<translation id="text" translation_id="334387" type="use" value="World Knowledge[COMMENT: team scouts; information about range of knowledge]"/>
+				</widget>
+				<widget class="label" id="wkpc" font="text" size="large" style="semi_bold" auto_size="vertical"/>
+				<widget class="manager_text" font="text" colour="faded text" auto_size="vertical">
+					<translation id="text" translation_id="363753" type="use" value="The stronger the knowledge of [%person#1-your] scouting team, the more players available for [%person#1-you] to search from.[COMMENT: FR 8138]"/>
+				</widget>
+
+				<widget class="horizontal_divider" />
+
+				<widget class="label" font="title" colour="accent" auto_size="vertical">
+					<translation id="text" translation_id="363717" type="use" value="Regional Knowledge[COMMENT: FR 8138, scouting label, displays information about the regional knowledge of a scout/the scouting team]"/>
+				</widget>
+
+				<container height="120">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<container class="team_scouting_knowledge_map" id="regP">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+					</container>
+
+					<widget id="mapM" class="scouting_map_mask" wants_mouse_events="true"/>
+				</container>
+
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+
+					<widget class="link_appearance_button" id="knpl" click_event="vsck">
+						<translation id="text" translation_id="334195" type="use" value="View Knowledge[COMMENT: heading; scout_overview; link to club's knowldge]"/>
+						<layout class="stick_to_sides_attachment" alignment="right,top" inset="0, 0, 0, 10"/>
+					</widget>
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<widget class="label" id="tbtx" font="title" auto_size="vertical"/>
+				<widget class="label" id="tbva" font="text" size="xlarge" auto_size="vertical"/>
+
+				<widget class="label" id="wbtx" font="title" auto_size="vertical">
+					<translation id="text" translation_id="321080" type="use" value="Wage Budget Available:"/>
+				</widget>
+				<widget class="label" id="wbva" font="text" size="xlarge" auto_size="vertical"/>
+
+				<widget class="label" id="sctx" font="title" auto_size="vertical">
+					<translation id="text" translation_id="321079" type="use" value="Salary Cap Budget Available: [COMMENT: contract offer screen - comments table]"/>
+				</widget>
+				<widget class="label" id="scva" font="text" size="xlarge" auto_size="vertical"/>
+
+				<widget class="widget_popup_button" id="adbw" auto_size="vertical" popup_alignment="left,top" widget_type="client_object_viewer_xml_panel" appearance="buttons/standard/normal/button">
+					<record id="widget_properties" file="club/popup budget adjustment panel" width="500"/>
+					<record id="modal_popup_properties" file="modal popup panel auto sized" propagate_mouse_events="false"/>
+					<translation id="text" translation_id="383546" type="use" value="Make Budget Adjustment[COMMENT::dialog title; this will be used on the dialog where the manager will be able to choose how to adjust his financial budget]"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+</panel>

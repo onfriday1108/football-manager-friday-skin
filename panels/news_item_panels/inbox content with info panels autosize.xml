@@ -1,0 +1,14 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!-- main body text -->
+			<widget class="inbox_body_text" id="bdtx"/>
+
+			<container class="horizontal_arrange_container" id="infc" auto_size="vertical" alignment="fill" gap="4" offset="0" inset="0">
+				<!-- additional information boxes will be added to this container -->
+			</container>
+
+		</container>
+</panel>

@@ -1,0 +1,73 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="8" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="8" />
+
+		<container class="inner_box">
+			<translation id="title" translation_id="450761" type="use" value="Inbox delivery options[COMMENT: 21109 Scouting Centre, customise how often you receive updates to your scouting centre inbox]" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" auto_size="vertical">
+				<record id="object_property" get_property="SCFt" set_property="text" />
+			</widget>
+
+			<container height="40">
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="4" />
+
+				<widget class="popup_button" select_event="DWfs" auto_size="horizontal" auto_size_minimum_width="120">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="DUit" />
+								<integer id="set_property" value="itms" />
+							</record>
+							<record>
+								<integer id="get_property" value="DWfr" />
+								<integer id="set_property" value="slct" />
+							</record>
+							<record>
+								<integer id="get_property" value="DWfs" />
+								<integer id="set_property" value="sele" />
+							</record>
+
+						</list>
+					</record>
+				</widget>
+
+				<widget class="text" auto_size="horizontal" alignment="left,centre_y">
+					<translation translation_id="249808" type="use" id="text" value="Or[COMMENT - used to combine filter rules together]" />
+				</widget>
+
+				<widget class="popup_button" auto_size="horizontal" auto_size_minimum_width="120">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="URit" />
+								<integer id="set_property" value="itms" />
+							</record>
+							<record>
+								<integer id="get_property" value="DWur" />
+								<integer id="set_property" value="slct" />
+							</record>
+							<record>
+								<integer id="get_property" value="DWus" />
+								<integer id="set_property" value="sele" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+
+			</container>
+
+
+		</container>
+
+
+
+		<container height="1" />
+
+	</container>
+</panel>

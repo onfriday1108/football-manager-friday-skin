@@ -1,0 +1,28 @@
+<panel id="fblg" width="900" height="680">
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<container id="pCon" height="600">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	</container>
+
+	<!-- row of buttons -->
+	<container id="btns">
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="shar">
+			<record id="click_event" event_id="sSOC" dialog_event="true" />
+			<translation id="text" translation_id="394580" type="use" value="Share[COMMENT: FR 11059 button text; Share your team selection on social networks]" />
+		</widget>
+
+		<widget class="button" id="save" height="30" auto_size="horizontal" >
+			<record id="click_event" event_id="exIM" dialog_event="true" />
+			<translation id="text" translation_id="394572" type="use" value="Save as Image[COMMENT: FR 11059 button text; Save an image of your team selection]" />
+		</widget>
+
+		<widget class="button" id="canc" event_id="canc" height="30" auto_size="horizontal" >
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+		</widget>
+	</container>
+
+</panel>

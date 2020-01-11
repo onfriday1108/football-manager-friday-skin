@@ -1,0 +1,18 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+	<container id="outr">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="10" vertical_offset="0" />
+
+		<widget class="picture" id="icon" scale_picture="true" height="45" width="45" />
+
+		<container id="iner">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+			<widget class="label" id="titl" spec="text" style="semi_bold" size="small" auto_size="vertical" colour="text" />
+
+			<widget class="text" id="desc" spec="text" size="small"  auto_size="vertical" colour="faded text"/>
+		</container>
+
+	</container>
+</panel>

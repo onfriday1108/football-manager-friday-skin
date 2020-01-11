@@ -1,0 +1,98 @@
+<panel info_panel_type="1">
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="2"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!--comp picture-->
+	<widget class="object_portrait_picture" id="fxCo" scale_picture="true" height="30">
+		<boolean id="keep_aspect_ratio" value="true" />
+		<flags id="image_alignment" value="centre" />
+		<record id="object_property">
+			<integer id="get_property" value="fxCo" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>
+
+	<!--competition-->
+	<widget class="fixture_name_text" id="fxnm" auto_size="vertical" alignment="centre" font="title" colour="text">
+		<record id="object_property">
+			<integer id="get_property" value="FxNm" />
+		</record>
+	</widget>
+
+	<!--stadium-->
+	<widget class="text" id="stad" alignment="centre_x" spec="text" size="small" auto_size="vertical" />
+
+	<!--date-->
+	<widget class="date_cell" id="date" alignment="centre" auto_size="vertical" colour="faded text">
+		<translation id="format" translation_id="447557" type="use" value="[%date#1-time] kick off on [%date#1-short][COMMENT: string to show the kick off time and date of a fixture]" />
+		<record id="object_property">
+			<integer id="get_property" value="fxdt" />
+		</record>
+	</widget>
+
+	<!--settings/save match-->
+	<container class="match_playback_control_container" file="" height="70">
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<record id="object_property" get_property="maCo" set_property="maCo" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="middle"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget id="View" class="priority_action_popup_button">
+				<list id="items">
+					<record id="vgls" event_id="vgls" type="5" priority="1">
+						<translation id="name" translation_id="454724" type="use" value="Watch Goals[COMMENT: command to watch some match highlights]" />
+					</record>
+					<record id="vkey" event_id="vkey" type="3">
+						<translation id="name" translation_id="454725" type="use" value="Watch Key Highlights[COMMENT: command to watch some match highlights]" />
+					</record>
+					<record id="vext" event_id="vext" type="2">
+						<translation id="name" translation_id="454726" type="use" value="Watch Extended Highlights[COMMENT: command to watch some match highlights]" />
+					</record>
+					<record id="vcom" event_id="vcom" type="1">
+						<translation id="name" translation_id="454727" type="use" value="Watch Comprehensive Highlights[COMMENT: command to watch some match highlights]" />
+					</record>
+				</list>
+			</widget>
+
+			<!--save match-->
+			<widget class="button" id="svmt" click_event="svmt" auto_size="all">
+				<translation id="text" translation_id="232965" type="use" value="Save Match" />
+			</widget>
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="middle"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <!-- hide if social media is disabled -->
+      <attachment class="get_global_attachment" get_property="SnHd" set_property="hidn" skip_if_null="true"/>
+
+      <!--button to fire up the upload panel-->
+			<widget class="icon_button" id="uplo" click_event="uplo" auto_size="all">
+				<global id="hidden" name="platform_is_stadia"/>
+				<translation id="text" translation_id="441069" type="use" value="Review and Share Highlight Video[COMMENT: FR21694 - button to view the upload highlights panel]" />
+			</widget>
+		</container>
+
+	</container>
+
+	<!--score/scorers-->
+	<container class="inner_subtle_box">
+		<translation id="title" translation_id="447558" type="use" value="Scoresheet[COMMENT: string title for the score and scorers of a match]" />
+
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" gap="12" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--  home incidents panel -->
+		<widget class="home_match_incidents_panel" id="hmip" small_version="true" file="match/match incidents left overview" />
+
+		<!--  away incidents panel -->
+		<widget class="away_match_incidents_panel" id="amip" small_version="true" file="match/match incidents right overview" />
+	</container>
+
+</panel>

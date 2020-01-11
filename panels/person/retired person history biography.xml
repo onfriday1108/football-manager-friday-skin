@@ -1,0 +1,10 @@
+<panel class="person_history_biography_panel">
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <container class="scrolling_box">
+    <widget class="person_bio_text" id="biot" spec="text" size="10" auto_size="vertical"/>
+  </container>
+
+
+</panel>

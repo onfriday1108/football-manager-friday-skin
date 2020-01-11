@@ -1,0 +1,283 @@
+<panel class="client_object_viewer_xml_panel">
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="tabbed_container">
+		<container id="cnt0">
+			<translation id="title" translation_id="248359" type="use" value="General" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_label_value_table" id="edtb" edit_mode="true">
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Nrep" />
+					<integer value="Catd" />
+					<integer value="Cmna" />
+					<integer value="Cmxa" />
+					<integer value="Nmya" />
+					<integer value="Nsod" />
+					<integer value="Necf" />
+					<integer value="Nfap" />
+					<integer value="Nygn" />
+					<integer value="Nndn" />
+					<integer value="Ngct" />
+					<integer value="Nfml" />
+					<integer value="Nfpa" />
+					<integer value="tbcl" />
+					<integer value="ttcl" />
+				</list>
+
+			</widget>
+
+		</container>
+
+		<container id="cnt1">
+
+			<translation id="title" translation_id="316691" type="use" value="Facilities" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_label_value_table" id="sttb" edit_mode="true">
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+					<flags id="auto_size" value="vertical" />
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="TsFI" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Snam" />
+					<integer value="Scpy" />
+					<integer value="Sscy" />
+					<integer value="Scas" />
+					<integer value="Sucy" />
+					<integer value="Secy" />
+					<integer value="SsfT" />
+					<integer value="Scov" />
+					<integer value="Sush" />
+				</list>
+
+			</widget>
+
+
+		</container>
+
+		<container id="cnt2">
+
+			<translation id="title" translation_id="357992" type="use" value="Generated Players[COMMENT: In-game editor section title; attributes related to generation of new players]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_label_value_table" id="gptb" edit_mode="true">
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+					<flags id="auto_size" value="vertical" />
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="NYRt" />
+
+				</list>
+
+			</widget>
+
+
+		</container>
+
+
+		<container id="cnt3">
+			<translation id="title" translation_id="293548" type="use" value="Tactical Attributes" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_label_value_table" id="tatb" edit_mode="true">
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Natt" />
+					<integer value="Ndep" />
+					<integer value="Ndir" />
+					<integer value="Nflm" />
+					<integer value="Nflx" />
+					<integer value="Nfrl" />
+					<integer value="Nmar" />
+					<integer value="Noff" />
+					<integer value="Nprs" />
+					<integer value="Nstb" />
+					<integer value="Ntpo" />
+					<integer value="Nupm" />
+					<integer value="Nwid" />
+				</list>
+
+			</widget>
+
+		</container>
+
+		<container id="cnt4">
+			<translation id="title" translation_id="293223" type="use" value="Rival Nations" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_list_property_panel" id="rina" edit_mode="true">
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="leve" />
+
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="nati" />
+								<!-- nation -->
+								<flags id="leve" />
+								<!-- rel level -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/relationship properties" />
+
+				<integer id="viewed_property_ids" value="Nrvn" />
+
+			</widget>
+
+		</container>
+
+		<container id="cnt5">
+			<translation id="title" translation_id="229371" type="use" value="Languages" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_list_property_panel" id="lang" edit_mode="true">
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="perc" />
+
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="lang" />
+								<!-- language -->
+								<flags id="perc" />
+								<!-- percentage -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/nation language properties" />
+
+				<integer id="viewed_property_ids" value="Nlns" />
+
+			</widget>
+
+		</container>
+
+	</container>
+
+
+</panel>

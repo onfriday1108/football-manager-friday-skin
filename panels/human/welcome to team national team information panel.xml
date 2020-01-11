@@ -1,0 +1,288 @@
+﻿<!-- panel to be used during the welcome to the club briefing --><panel height="500">
+	<attachment_group class="vertical_arrange_autosize">
+		<global id="vertical_gap" name="ui.main_contrast_box_gap" />
+	</attachment_group>
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="main_contrast_box_no_margin">
+
+		<attachment class="test_screen_size_attachment" skip_if_false="true">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="720" />
+					<!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="110" />
+					<integer id="false_value" value="135" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="721" />
+					<integer id="max_value" value="868" />
+					<!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="125" />
+					<integer id="false_value" value="135" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="869" />
+					<integer id="max_value" value="10000" />
+					<!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="145" />
+					<integer id="false_value" value="135" />
+				</record>
+			</list>
+		</attachment>
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="picture" file="patterns/faded/9" image_alignment="left, bottom" red_replacement="secondary" />
+
+		<widget class="picture" file="patterns/faded/10" image_alignment="right, top" red_replacement="secondary">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="12" />
+		</widget>
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="120, 100, 1, -1, 1, -1" horizontal_offset="12" vertical_alignment="vertical" vertical_inset="12" horizontal_gap="8" />
+
+			<!-- badge -->
+			<widget class="object_portrait_picture" id="tmlg" scale_picture="true" image_alignment="centre" clickable="false">
+				<layout class="stick_to_sides_attachment" alignment="top,bottom" inset="15" />
+			</widget>
+
+			<!-- home kit -->
+			<widget class="kit_picture" id="tmkt" kit_id="0" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+
+			<widget class="picture" file="dividers/standard/vertical/line" width="1" />
+
+			<!-- Reputation and prediction -->
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="10" vertical_gap="14" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="30, -1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" horizontal_gap="10" />
+
+						<widget class="object_portrait_picture" id="mnrp" width="30" height="30" scale_picture="true" image_alignment="centre" clickable="false" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="1" />
+
+							<widget class="text" auto_size="vertical" font="label" colour="secondary">
+								<translation id="text" translation_id="447865" type="use" value="Rival[COMMENT: description of the level of relationship between two people; FR 21622]" />
+							</widget>
+							<widget class="text" id="mnrl" auto_size="vertical" font="value" colour="secondary" />
+						</container>
+					</container>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="30, -1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" horizontal_gap="10" />
+
+						<widget class="object_portrait_picture" id="tpdp" width="30" height="30" scale_picture="true" image_alignment="centre" clickable="false" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="1" />
+
+						<widget class="text" auto_size="vertical" font="label" colour="secondary">
+							<translation id="text" translation_id="491944" type="use" value="Top League[COMMENT: AREA: Welcome to team; SUB-AREA: team information and history; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the highest reputation league section on the team information and history step of the welcome pack when the human has taken over a national team]" />
+						</widget>
+						<widget class="text" id="tpdl" auto_size="vertical" font="value" colour="secondary" />
+						</container>
+					</container>
+				</container>
+
+			<widget class="picture" file="dividers/standard/vertical/line" width="1" />
+
+			<!-- Staff -->
+			<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="10" vertical_gap="14" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="30, -1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" horizontal_gap="10" />
+
+					<widget class="object_portrait_picture" id="capp" width="30" height="30" scale_picture="true" image_alignment="centre" clickable="false" />
+
+					<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="1" />
+
+						<widget class="text" auto_size="vertical" font="label" colour="secondary">
+							<translation id="text" translation_id="258290" type="use" value="Captain[COMMENT: heading; team_information_panel; club/nation captain]" />
+						</widget>
+						<widget class="text" id="capl" auto_size="vertical" font="value" colour="secondary" />
+					</container>
+				</container>
+
+				<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="30, -1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" horizontal_gap="10" />
+
+					<widget class="object_portrait_picture" id="assp" width="30" height="30" scale_picture="true" image_alignment="centre" clickable="false" />
+
+					<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="1" />
+
+						<widget class="text" auto_size="vertical" font="label" colour="secondary">
+							<translation id="text" translation_id="227983" type="use" value="Assistant Manager" />
+						</widget>
+						<widget class="text" id="assn" auto_size="vertical" font="value" colour="secondary" />
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<container height="320">
+
+		<attachment_group class="horizontal_arrange" horizontal_layout="240, -1">
+			<global id="horizontal_gap" name="ui.main_contrast_box_gap" />
+		</attachment_group>
+
+		<container class="main_transparent_box">
+			<translation id="title" translation_id="316691" type="use" value="Facilities" />
+			<attachment_group class="vertical_arrange" vertical_layout="-1, -1" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="picture" file="icons/custom/welcome/stadium" image_alignment="centre" red_replacement="text" />
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!-- Stadium info -->
+					<widget class="text" id="stnm" style="bold" auto_size="vertical" alignment="centre" />
+					<widget class="text" id="stcp" auto_size="vertical" alignment="centre" size="small" />
+					<widget class="text" id="stag" auto_size="vertical" alignment="centre" size="small" />
+				</container>
+			</container>
+
+			<container />
+		</container>
+
+		<container class="main_transparent_box">
+			<attachment_group class="vertical_arrange" vertical_gap="8" />
+
+			<!-- Club or nation history -->
+			<widget class="text" font="title" colour="title" auto_size="vertical">
+				<translation id="text" translation_id="491945" type="use" value="National Team History[COMMENT: AREA: Welcome to team; SUB-AREA: team information and history; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the team history sub-panel on the team information and history step of the welcome pack when the human has taken over a national team]" />
+			</widget>
+
+			<container height="50">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				
+				<widget class="team_container_honours_panel" id="trpp" honour_subpanel_filename="team/honours info small panel" file="team/team container honours panel no title" />
+			</container>
+
+			<widget class="picture" file="dividers/standard/horizontal/line" height="1" />
+
+			<!-- ranking info -->
+			<widget class="text" font="title" colour="title" auto_size="vertical">
+				<translation id="text" translation_id="297998" type="use" value="World Ranking[COMMENT: heading; a team's world ranking]" />
+			</widget>
+
+			<container height="105">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-3, 1, -2" horizontal_gap="12" />
+
+				<widget class="client_object_list_table" database_table_type="9" id="Nrtb" mode="fill_rows, stripe_rows, hide_headings" save_session_state="false" row_height="25">
+					<list id="default_sort_column">
+						<integer value="Nfrp" />
+						<integer value="Nffr" />
+					</list>
+					<record id="viewed_property_ids">
+						<record id="Nffr" />
+						<record id="Nnat" />
+						<record id="Nfrc" />
+						<record id="Nfrp" />
+					</record>
+				</widget>
+
+				<widget class="vertical_divider" />
+				
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_gap="2" />
+
+					<container>
+
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+
+						<widget class="text" auto_size="all" font="label" colour="text" >
+							<translation id="text" translation_id="491946" type="use" value="Current World Ranking[COMMENT: AREA: Welcome to team; SUB-AREA: team information and history; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Label for nation record relating to the national teams current fifa ranking]" />
+						</widget>
+						<widget class="fifa_ranking_label" format="1" id="NcuR" Numf="0" alignment="left" auto_size="all" font="value" islk="false" />
+
+					</container>
+
+					<container>
+
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+
+						<widget class="text" auto_size="all" font="label" colour="positive" >
+							<translation id="text" translation_id="242575" type="use" value="Highest world ranking" />
+						</widget>
+						<widget class="text" id="NhiR" auto_size="all" colour="positive" font="value" />
+
+					</container>
+
+					<container>
+
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+
+						<widget class="text" auto_size="all" font="label" colour="negative" >
+							<translation id="text" translation_id="319634" type="use" value="Lowest World Ranking[COMMENT: nation record type]" />
+						</widget>
+						<widget class="text" id="NloR" auto_size="all" colour="negative" font="value" />
+
+					</container>
+				</container>
+			</container>
+
+			<widget class="picture" file="dividers/standard/horizontal/line" height="1" />
+
+			<!-- records info -->
+			<widget class="text" font="title" colour="title" auto_size="vertical">
+				<translation id="text" translation_id="243323" type="use" value="Records" />
+			</widget>
+
+			<container height="40">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-1, -1" />
+
+				<container height="40">
+					<attachment_group class="horizontal_arrange" horizontal_layout="40, -1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" horizontal_gap="10" />
+
+					<widget class="object_portrait_picture" id="NCap" width="40" height="40" scale_picture="true" image_alignment="centre" clickable="false" />
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_layout="-1, -1" vertical_gap="2" />
+
+						<widget class="text" auto_size="none" height="20" alignment="left, centre_y" font="label">
+							<translation id="text" translation_id="232103" type="use" value="Most Capped Player" />
+						</widget>
+						<widget class="text" id="NCal" auto_size="none" alignment="left, top" font="value" />
+					</container>
+				</container>
+
+				<container height="40">
+					<attachment_group class="horizontal_arrange" horizontal_layout="40, -1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" horizontal_gap="10" />
+
+					<widget class="object_portrait_picture" id="NGlp" width="40" height="40" scale_picture="true" image_alignment="centre" clickable="false" />
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_layout="-1, -1" vertical_gap="2" />
+
+						<widget class="text" auto_size="none" height="20" alignment="left, centre_y" font="label">
+							<translation id="text" translation_id="253094" type="use" value="All-Time Top Goalscorer[COMMENT: heading on competition records screen]" />
+						</widget>
+						<widget class="text" id="NGll" auto_size="none" alignment="left, top" font="value" />
+					</container>
+				</container>
+			</container>
+
+			<widget class="spacer" height="20" />
+		</container>
+	</container>
+
+</panel>

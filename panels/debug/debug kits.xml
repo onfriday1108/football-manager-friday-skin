@@ -1,0 +1,45 @@
+<!--
+This file holds the layout for the debug kits panel in FM.
+
+It's composed of two smaller panels that show the details about the kits licensing,
+and match graphics such as the commentary, pitch icons and title bar.
+-->
+<!-- team container debug kits panel -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<widget class="multi_box" id="mult">
+
+		<!-- configure "menu" button in multibox; use a top popup, embedded in the frame -->
+		<integer id="right_embed_inset" value="16" />
+		<integer id="top_embed_inset" value="4" />
+		<flags id="top_kind" value="embedded_popup_button" />
+		<record id="top_properties" fixed="false" />
+
+		<!-- set the default item (only works if there's no default state previously saved) -->
+		<flags id="default_item" value="dkli" />
+		<!-- save the state -->
+		<boolean id="save_session_state" value="true" />
+		<boolean id="sdst" comment="save default state" value="true" />
+
+		<!-- contents of the multi-box -->
+		<!-- the box will display just one of these panels at a time, and hide all the others -->
+		<!-- it takes the names to use in its tabs/menus from the title properties of the panels -->
+		<!-- each of the panels also needs a unique id so that the box can tell them all apart -->
+		<!-- the containers defined below use the file property to load in their content from other files -->
+		<!-- you can use this as a way to split large screens or panels up into more manageable pieces -->
+		<!-- without having to write any extra code -->
+
+		<!-- Kits (shirts, shorts and socks)-->
+		<container id="dkli" file="debug/debug kits licence">
+			<translation id="title" translation_id="282052" type="use" value="Licence" />
+		</container>
+
+		<!-- Match Graphics -->
+		<container id="dkma" file="debug/debug kits match">
+			<translation id="title" translation_id="242774" type="use" value="Match" />
+		</container>
+
+	</widget>
+
+</panel>

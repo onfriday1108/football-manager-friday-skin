@@ -1,0 +1,49 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="inner_box" id="titl" >
+		<translation id="title" translation_id="229954" type="use" value="Nation Coefficients" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- nation co-efficients table -->
+		<widget class="table" id="tabl" mode="fill_rows, stripe_rows,printable,keyboard" layout="65, -1, 70, 70, 70, 70, 70, 70, 70, 130, 130, 130" row_spacing="0">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			<flags id="heading_class" value="column_heading" />
+
+			<record id="default_properties" alignment="centre" />
+
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y" />
+				<record indx="1" alignment="left,centre_y" />
+				<record indx="2" alignment="centre" />
+				<record indx="3" alignment="centre" />
+				<record indx="4" alignment="centre" />
+				<record indx="5" alignment="centre" />
+				<record indx="6" alignment="centre" />
+				<record indx="7" alignment="centre" />
+				<record indx="8" alignment="centre" />
+				<record indx="9" alignment="centre" />
+				<record indx="10" alignment="centre" />
+        <record indx="11" alignment="centre" />
+      </list>
+
+			<list id="column_table_properties">
+				<record indx="0" id="UCpo" />
+				<record indx="1" id="UCna" />
+				<record indx="2" id="UCy1" sort_ascending="false" />
+				<record indx="3" id="UCy2" sort_ascending="false" />
+				<record indx="4" id="UCy3" sort_ascending="false" />
+				<record indx="5" id="UCy4" sort_ascending="false" />
+				<record indx="6" id="UCy5" sort_ascending="false" />
+				<record indx="7" id="UCy6" sort_ascending="false" />
+				<record indx="8" id="UCy7" sort_ascending="false" />
+				<record indx="9" id="UCto" sort_ascending="false" />
+				<record indx="10" id="UCt2" sort_ascending="false" />
+        <record indx="11" id="UCt3" sort_ascending="false" />
+      </list>
+		</widget>
+
+
+	</container>
+</panel>

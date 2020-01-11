@@ -1,0 +1,12 @@
+﻿<panel>
+  <record id="object_property" get_property="Pclb" set_property="srto" />
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <!-- person club -->
+  <widget class="club_button" alignment="left,centre_y">
+    <record id="object_property">
+      <integer id="get_property" value="Pclb"/>
+      <integer id="set_property" value="valu"/>
+    </record>
+  </widget>
+</panel>

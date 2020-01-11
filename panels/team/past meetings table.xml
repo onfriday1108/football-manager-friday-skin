@@ -1,0 +1,14 @@
+<panel>
+  <translation id="title" translation_id="247248" type="use" value="Past Meetings" />
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <widget class="inner_box">
+    <translation id="text" translation_id="298735" type="use" value="Head-To-Head Table[COMMENT: this is the head to head table showing the past meetings between yourself and the opposition]" />
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <widget class="league_stage_panel" id="leag" auto_size="vertical" default_view="ovpm" view="ovpm">
+      <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" />
+    </widget>
+  </widget>
+
+</panel>

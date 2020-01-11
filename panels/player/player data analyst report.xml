@@ -1,0 +1,118 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<widget class="player_reports_overview_summary_panel" height="190">
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>
+
+	<!-- No analyst report -->
+	<container id="ndar" class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+
+		<container id="nocs" height="60">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				<translation id="text" translation_id="447601" type="use" value="Analyst Report Required[COMMENT: shown when the user can't view player info without getting anlalyst report first]" />
+			</widget>
+			<widget class="icon_button" id="sctP" click_event="rcar" auto_size="horizontal" height="30" icon="icons/16px/search">
+				<translation id="text" translation_id="447602" type="use" value="Get Analyst Report[COMMENT - Fr 21335 request a player to be analysed and leave it up to the analysts to choose who takes the assignment by assigning them to a 'pool']" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+			</widget>
+		</container>
+
+		<widget id="nocn" class="label" spec="text" size="11" alignment="left" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+	</container>
+
+	<!-- Already being analyzed -->
+	<container id="anlc" class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="447603" type="use" value="Analysis In Progress[COMMENT: FR 21135 disabled menu item when a player is already being analysed]" />
+		</widget>
+	</container>
+
+	<container id="pctc">
+		<layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container class="main_box">
+			<translation id="title" translation_id="447604" type="use" value="Role Analysis[COMMENT: Panel title for when viewing analyst report]" />
+			<widget class="text" id="rDat" colour="faded text" auto_size="all" alignment="right,centre_y" embed_in_frame="true">
+				<layout class="stick_to_sides_attachment" alignment="right,top" inset="4" />
+			</widget>
+
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="text" id="rctw" colour="faded text" auto_size="vertical"/>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container>
+
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<container class="main_contrast_box" red_replacement="positive dark">
+						<layout class="fit_children_attachment" alignment="vertical" offset="4" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+						<widget class="text" font="text" size="14" colour="white" auto_size="vertical">
+							<translation id="text" translation_id="447605" type="use" value="Positives[COMMENT: Match Analysis - Match Positives title]" />
+
+						</widget>
+					</container>
+
+					<widget class="table" id="tpro" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4">
+
+					</widget>
+
+				</container>
+
+
+				<container>
+
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<container class="main_contrast_box" red_replacement="negative dark">
+						<layout class="fit_children_attachment" alignment="vertical" offset="4" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+						<widget class="text" font="text" size="14" colour="white" auto_size="vertical">
+							<translation id="text" translation_id="447606" type="use" value="Negatives[COMMENT: Match Analysis - Match negatives title]" />
+
+						</widget>
+					</container>
+
+					<widget class="table" id="tcon" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4">
+
+					</widget>
+
+				</container>
+
+			</container>
+
+
+		</container>
+
+		<widget class="player_additional_stats_panel" file="player/player additional stats for analyst report">
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+
+	</container>
+
+
+</panel>

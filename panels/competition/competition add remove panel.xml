@@ -1,0 +1,91 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+		<translation id="title" translation_id="325848" type="use" value="Add/Remove Leagues[COMMENT: section title for screen for adding and removing competitions from the simulation]" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="5" />
+
+			<!-- Add league button -->
+			<widget class="primary_popup_button" id="addn" auto_size="horizontal" height="30" fixed="true" select_event="addc">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+				<translation id="text" translation_id="319453" type="use" value="Add League[COMMENT - competition detail panel - button to add a new nation]" />
+			</widget>
+
+			<container class="scrolling_box" id="nats">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				<!-- workaround container:
+              We need this because of the weirdness that is the 'arrange horizontal attachment' with "wrap", which turns it into a "arrange horizontal and vertical autosizing"
+              attachment. In this scrolling box it means we are arranging horizontally and sticking to the top, but the stick-to-sides attachment will layout its container's
+              bounds, which effectively resets the scroll offset of the scrolling box - it starts laying out from the current scroll position downwards, meaning above is only
+              empty space and widgets are cut off at the bottom.
+              
+              The workaround for now is to add a second level - a container that arranges itself vertically, which in turn is the actual container with the national leagues
+              that uses the arrange horizontal attachment with the wrapping.
+        -->
+				<container id="work">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+					<!-- National leagues -->
+					<container id="natl">
+						<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" gap="10" />
+						<layout class="arrange_horizontal_attachment" alignment="left" wrap_widgets="true" offset="0" gap="10" />
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+
+						<!-- items dynamically added in code -->
+					</container>
+
+				</container>
+				<!-- workaround container -->
+			</container>
+		</container>
+	</container>
+
+	<container class="main_box" id="cofi">
+		<translation id="title" translation_id="402383" type="use" value="Game Details[COMMENT: add/remove leagues panel; sub-panel at the bottom of the screen which contains the approximate player count and estimated game speed and performance]" />
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="10" />
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+		<container id="coun">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="label" alignment="centre" font="title" colour="faded text">
+				<translation id="text" translation_id="292332" type="use" value="Approximate Player Count[COMMENT: nation league selection panel; label showing approximate number of players]" />
+			</widget>
+			<widget class="label" id="plcn" alignment="centre" size="xlarge" style="bold">
+				<translation id="text" type="new" value="0" />
+			</widget>
+			<widget class="label" id="plce" alignment="centre" />
+		</container>
+
+		<container id="perm">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="label" alignment="centre" font="title" colour="faded text">
+				<translation id="text" translation_id="292333" type="use" value="Computer Performance[COMMENT: nation league selection panel; label for showing how fast the pc is]" />
+			</widget>
+			<widget class="stars_range_strip" id="cmpf" large="true" alignment="centre" auto_size="vertical" />
+		</container>
+
+		<container id="spee">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="label" alignment="centre" font="title" colour="faded text">
+				<translation id="text" translation_id="292330" type="use" value="Estimated Game Speed[COMMENT: nation league selection panel; label for showing how fast the game will be]" />
+			</widget>
+			<widget class="estimated_game_speed_stars_label" id="gmsp" large="true" alignment="centre" auto_size="vertical" />
+		</container>
+	</container>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0,0,0,5" />
+
+		<container class="inner_box_no_margin" file="competition/competition detail level buttons" auto_size="vertical" />
+	</container>
+</panel>

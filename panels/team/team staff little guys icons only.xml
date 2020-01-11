@@ -1,0 +1,11 @@
+﻿<panel >
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<string id="eslf" value="icons/custom/staff/little guy empty"/>
+	<string id="eslc" value="staff empty slot colour"/>
+
+	<widget class="scrolling_box">
+		<container class="horizontal_arrange_container" id="harg" wrap="true" alignment="left" offset="0" inset="0" gap="0" auto_size="vertical" />
+	</widget>
+
+</panel>

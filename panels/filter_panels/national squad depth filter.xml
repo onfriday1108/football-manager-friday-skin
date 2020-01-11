@@ -1,0 +1,17 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="main_box">
+		<translation id="title" translation_id="420625" type="use" value="Minimum Ability[COMMENT: squad depth filter' text to hide low Ability players in a subsection box]" />
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="radio_button" id="mca3" click_event="mint" height="24" secondary_icon_enabled="true" secondary_icon="icons/custom/star rating/scouting/six" secondary_icon_alignment="left" />
+		<widget class="radio_button" id="mca2" click_event="mind" height="24" secondary_icon_enabled="true" secondary_icon="icons/custom/star rating/scouting/four" secondary_icon_alignment="left" />
+		<widget class="radio_button" id="mca1" click_event="mino" height="24" secondary_icon_enabled="true" secondary_icon="icons/custom/star rating/scouting/two" secondary_icon_alignment="left" />
+		<widget class="radio_button" id="mca0" click_event="mizo" selected="true" height="24">
+			<translation id="text" translation_id="227487" type="use" value="None" />
+		</widget>
+
+	</container>
+</panel>

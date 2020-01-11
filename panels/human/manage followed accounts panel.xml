@@ -1,0 +1,135 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="middle,extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+  <!-- IMPORTANT note this record is duplicated so if you change this please search for portrait_picture_file_overrides and update the other places -->
+	<record id="portrait_picture_file_overrides">
+		<!--id number maps to specific object type-->
+		<string id="1" value="widgets/object portrait picture news feed non player"/>
+		<string id="2" value="widgets/object portrait picture news feed club"/>
+		<string id="3" value="widgets/object portrait picture news feed nation"/>
+		<string id="4" value="widgets/object portrait picture news feed comp"/>
+		<string id="5" value="widgets/object portrait picture news feed fan"/>
+		<string id="6" value="widgets/object portrait picture news feed media source broadsheet"/>
+		<string id="7" value="widgets/object portrait picture news feed media source tabloid"/>
+		<string id="8" value="widgets/object portrait picture news feed media source magazine"/>
+		<string id="9" value="widgets/object portrait picture news feed media source fanzine"/>
+		<string id="10" value="widgets/object portrait picture news feed media source radio"/>
+		<string id="11" value="widgets/object portrait picture news feed media source tv"/>
+		<string id="12" value="widgets/object portrait picture news feed media source website"/>
+		<string id="13" value="widgets/object portrait picture news feed media source bookmaker"/>
+		<string id="14" value="widgets/object portrait picture news feed media source social media"/>
+		<string id="15" value="widgets/object portrait picture news feed media source podcast"/>
+		<string id="16" value="widgets/object portrait picture news feed media source developer"/>
+		<string id="17" value="widgets/object portrait picture news feed journalist"/>
+		<string id="18" value="widgets/object portrait picture news feed comp"/>
+		<string id="19" value="widgets/object portrait picture news feed comp"/>
+	</record>
+
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="8" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+		<widget class="text" font="title" alignment="centre" auto_size="all">
+			<translation id="text" translation_id="412458" type="use" value="Following[COMMENT: FR 16824; news feed panel; label to indicate number of followed objects]" />
+		</widget>
+
+		<widget class="view_menu_popup" id="filt" select_event="filt" embed_in_frame="false">
+			<list id="items">
+				<record id="10">
+					<translation id="name" translation_id="491927" type="use" value="All Followed[COMMENT: AREA: manage followed accounts panel; SUB-AREA: filter popup item label; FR: 26022; TONE: Formal; CHARLIMIT: None;]" />
+				</record>
+				<record id="0">
+					<translation id="name" type="use" translation_id="232113" value="Players" />
+				</record>
+				<record id="2">
+					<translation id="name" type="use" translation_id="229528" value="Staff" />
+				</record>
+				<record id="4">
+					<translation id="name" type="use" translation_id="229362" value="Teams" />
+				</record>
+				<record id="5">
+					<translation id="name" type="use" translation_id="251266" value="Leagues[COMMENT: manager stats screen; column heading for league wins column]" />
+				</record>
+				<record id="6">
+					<translation id="name" type="use" translation_id="293850" value="Cups[COMMENT: Competition editor; section name]" />
+				</record>
+				<record id="7">
+					<translation id="name" type="use" translation_id="229364" value="Nations" />
+				</record>
+				<record id="8">
+					<translation id="name" type="use" translation_id="229368" value="Awards" />
+				</record>
+				<record id="9">
+					<translation id="name" type="use" translation_id="231444" value="Regions[COMMENT: search filter dialog region list submenu]" />
+				</record>
+				<record>
+					<translation id="text" translation_id="251889" type="use" value="Shortlists[COMMENT: search/shortlist panels: shortlist manipulation menu]" />
+						<list id="items">
+							<record id="11">
+								<translation id="name" translation_id="491928" type="use" value="All Shortlists[COMMENT: AREA: manage followed accounts panel; SUB-AREA: filter popup item label; FR: 26022; TONE: Formal; CHARLIMIT: None;]" />
+							</record>
+							<record id="1">
+								<translation id="name" translation_id="416349" type="use" value="Player Shortlists[COMMENT: FR 16821; manage followed accounts panel; filter popup item label]" />
+							</record>
+							<record id="3">
+								<translation id="name" translation_id="416350" type="use" value="Staff Shortlists[COMMENT: FR 16821; manage followed accounts panel; filter popup item label]" />
+							</record>
+							
+						</list>
+				</record>
+			</list>
+		</widget>
+	</container>
+
+  <!-- layout props set in code to handle different layouts needed for subscriptions and shortlists -->
+  <widget class="table" id="flwl" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" row_height="34" auto_size_rows="false" fixed_size_rows="true" row_spacing="4" column_spacing="4" show_bullets="true" />
+  
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+			<widget class="button" id="sela" auto_size="all" click_event="ALL ">
+				<translation id="text" translation_id="247116" type="use" value="Select All" />
+			</widget>
+
+			<widget class="button" id="rema" auto_size="all" click_event="rmva">
+				<translation id="text" translation_id="248399" type="use" value="Remove All" />
+			</widget>
+		</container>
+
+		<container>
+			<attachment_group class="button_arrangement_right" />
+
+			<widget class="primary_icon_tick_button" id="ok">
+				<translation id="text" translation_id="229918" type="use" value="Confirm" />
+			</widget>
+
+			<widget class="button" id="undo" auto_size="all" click_event="UNDO">
+				<translation id="text" translation_id="230251" type="use" value="Undo" />
+			</widget>
+
+			<widget class="button" id="redo" auto_size="all" click_event="REDO">
+				<translation id="text" translation_id="329043" type="use" value="Redo" />
+			</widget>
+
+			<widget class="button" id="revt" auto_size="all">
+				<translation id="text" translation_id="344717" type="use" value="Revert" />
+				<record id="click_event">
+					<flags id="event_id" value="revt" />
+				</record>
+			</widget>
+
+			<widget class="button" id="canc" auto_size="all">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+
+		</container>
+	</container>
+
+</panel>

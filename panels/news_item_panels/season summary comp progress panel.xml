@@ -1,0 +1,31 @@
+<panel height="56">
+	<layout class="arrange_horizontal_attachment" alignment="middle,extend" offset="0" gap="8"/>
+	<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+
+	<flags id="winners_text_colour" value="gold"/>
+	<flags id="runner_up_text_colour" value="text"/>
+	<flags id="normal_text_colour" value="text"/>
+
+	<!-- Comp logo -->
+	<widget class="object_portrait_picture" id="logo" scale_picture="true" image_alignment="centre" width="30" height="30">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" />
+
+		<!-- Comp name -->
+		<widget class="comp_button" id="name" icon_enabled="false" alignment="left,bottom" auto_size="vertical" font="title">
+			<record id="object_property">
+				<list id="get_properties">
+					<record id="object_property" get_property="objt" set_property="valu"/>
+				</list>
+			</record>
+		</widget>
+
+		<widget class="text" id="stgn" alignment="left,top" multiline="true" auto_size="vertical"/>
+	</container>
+
+	<widget class="comp_award_trophy_picture" id="TROP" scale_picture="true" image_alignment="centre" width="30" height="30"/>
+
+</panel>

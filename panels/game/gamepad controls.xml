@@ -1,0 +1,15 @@
+﻿<panel>
+
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="0" />
+
+	<container id="SONY" hidden="true" file="game/gamepad controls playstation" />
+	<container id="XBOX" hidden="true" file="game/gamepad controls xbox" />
+	<container id="NINT" hidden="true" file="game/gamepad controls nintendo" />
+	<container id="GGPC" hidden="true" file="game/gamepad controls stadia" />
+
+	<widget class="text" id="dclm" height="55">
+		<translation id="text" translation_id="495442" type="use" value="No endorsement or affiliation is intended between Stadia and the manufacturers of non-Stadia controllers or consoles. STADIA, the Stadia beacon, Google, and related marks and logos are trademarks of Google LLC. All other trademarks are the property of their respective owners.[COMMENT: AREA: User Interface; SUB-AREA: Google Stadia; FR-BN: 20741; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Google Stadia gamepass disclaimer text]" />
+	</widget>
+
+	<container id="btns" file="dialog buttons" />
+</panel>

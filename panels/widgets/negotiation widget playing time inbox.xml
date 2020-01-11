@@ -1,0 +1,34 @@
+﻿<panel>
+	<flags id="eidc" value="faded text"/>
+	<flags id="eirc" value="negative"/>
+	<flags id="iinc" value="text"/>
+	<flags id="iirc" value="negative"/>
+
+  <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="4" vertical_inset="1" />
+
+	<widget class="label" height="30" width="10" hidden="true" colour="contract negotiation restriction" alignment="right,centre_y" id="star">
+		<string id="text" value="*"/>
+		<layout class="centre_in_parent_attachment" alignment="vertical"/>
+	</widget>
+
+	<!-- condition lock -->
+	<widget class="check_box" id="lock" click_event="lock" label_disabled="true" width="32" height="30" alignment="right,centre_y" appearance="buttons/subtle/normal/button" icon="switches/lock/button" icon_alignment="centre">
+		<translation id="hint" translation_id="350950" type="use" value="Select to mark this as non-negotiable[COMMENT: contract offer panel and transfer offer panel; offer condition lock; the contract term or transfer condition is not negotiable, i.e. the wage, squad status etc]"/>
+		<layout class="centre_in_parent_attachment" alignment="vertical"/>
+	</widget>
+
+	<widget class="text" id="text"  alignment="left,centre_y" multiline="false" auto_size="horizontal" height="30">
+		<layout class="centre_in_parent_attachment" alignment="vertical"/>
+	</widget>
+
+	<widget class="popup_button" appearance="buttons/standard/normal/button" alignment="left" id="popU" height="30" auto_size="horizontal">
+		<layout class="centre_in_parent_attachment" alignment="vertical"/>
+	</widget>
+
+	<widget class="spacer" />
+
+	<widget class="text" id="eiwi" alignment="left,centre_y" multiline="true" height="50" auto_size="horizontal">
+		<layout class="centre_in_parent_attachment" alignment="vertical"/>
+	</widget>
+
+</panel>

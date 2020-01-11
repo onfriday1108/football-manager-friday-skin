@@ -1,0 +1,38 @@
+<panel width="300">
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<widget class="table" mode="fill_cells, stripe_rows" id="wasl" fixed_size_rows="true" auto_size_rows="false" row_height="30" layout="-1,90" inset="0" column_spacing="0">
+		<list id="column_table_properties">
+			<record>
+				<flags id="id" value="Cura" />
+				<flags id="alignment" value="left,centre_y" />
+				<record id="column_heading" >
+					<translation id="text" translation_id="450815" type="use" value="Current Assignment[COMMENT: FR 21125, scouting centre text showing the current assignment]" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="0" />
+				</record>
+			</record>
+
+			<record>
+				<flags id="id" value="timr" />
+				<flags id="alignment" value="left,centre_y" />
+				<record id="column_heading">
+					<translation id="text" translation_id="450816" type="use" value="Time Remaining[COMMENT: FR 21125, scouting centre text showing the time remaining on a scouting assignment]" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="1" />
+				</record>
+			</record>
+
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="1" auto_size="none">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+		</list>
+	</widget>
+
+
+</panel>

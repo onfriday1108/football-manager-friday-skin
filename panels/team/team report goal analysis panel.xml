@@ -1,0 +1,195 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<widget class="team_report_request_report_panel" id="nort" />
+
+	<container id="sort">
+		<translation id="text" translation_id="317305" type="use" value="View goal analysis from" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container id="main">
+			<layout class="arrange_horizontal_attachment" layout="-2, -1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container class="main_box">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container height="26">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="5" />
+
+					<widget class="label" auto_size="horizontal" size="large" font="title" colour="accent">
+						<translation id="text" translation_id="317304" type="use" value="Goal Analysis[COMMENT: team report goal analysis panel; panel title for goal analysis section]" />
+					</widget>
+
+				</container>
+
+				<container id="sele" height="32">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0">
+            <global id="gap" name="ui.button_row_gap"/>
+          </layout>
+          <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
+
+					<widget class="popup_button" id="comp" sele="scvw" auto_size="all" auto_tick_exclusive="true" appearance="switches/toggle/left/button" />
+					<widget class="popup_button" id="view" sele="sgav" auto_size="all" auto_tick_exclusive="true" appearance="switches/toggle/right/button" />
+				</container>
+
+				<container class="tabbed_container" id="tabs" default_item="glti" save_session_state="true">
+
+					<container id="glti">
+						<translation id="title" translation_id="316709" type="use" value="Goal Times[COMMENT: team report; box title for aspect of statistical report]" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<widget class="table" id="tabl" layout="-1,-2" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+
+							<list id="headings">
+								<record alignment="left,centre_y" column="0">
+									<translation id="text" translation_id="316712" type="use" value="Match Period[COMMENT:team report, minutes played]" />
+								</record>
+								<record alignment="left,centre_y" column="1">
+									<translation id="text" translation_id="316713" type="use" value="Goals[COMMENT:team report, goals scored and conceded]" />
+								</record>
+							</list>
+
+							<list id="column_widget_properties">
+								<record indx="0" alignment="left,centre_y" />
+								<record indx="1" alignment="left,centre_y" />
+							</list>
+
+							<list id="column_table_properties">
+								<record indx="0" sort_disabled="true" left="5" />
+								<record indx="1" sort_disabled="true" right="5" />
+							</list>
+						</widget>
+					</container>
+
+					<container id="glty">
+						<translation id="title" translation_id="319564" type="use" value="Goal Types[COMMENT: team report goal analysis panel; panel title listing goal totals]" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<widget class="table" id="goal" layout="-1,-2" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false">
+
+							<list id="headings">
+								<record alignment="left,centre_y" column="0">
+									<translation id="text" translation_id="317307" type="use" value="Goal Type[COMMENT:team report, type of goal]" />
+								</record>
+								<record alignment="left,centre_y" column="1">
+									<translation id="text" translation_id="316713" type="use" value="Goals[COMMENT:team report, goals scored and conceded]" />
+								</record>
+							</list>
+
+							<list id="column_widget_properties">
+								<record indx="0" alignment="left,centre_y" />
+								<record indx="1" alignment="left,centre_y" />
+							</list>
+
+							<list id="column_table_properties">
+								<record indx="0" sort_disabled="true" left="5" />
+								<record indx="1" sort_disabled="true" right="5" />
+							</list>
+						</widget>
+					</container>
+
+					<container id="glas">
+						<translation id="title" translation_id="317309" type="use" value="Goal Assists[COMMENT: team report goal analysis panel; panel title listing assists totals]" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<widget class="table" id="assi" layout="-1, -2" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false">
+
+							<list id="headings">
+								<record alignment="left,centre_y" column="0">
+									<translation id="text" translation_id="317310" type="use" value="Assist Type[COMMENT:team report, type of assist]" />
+								</record>
+								<record alignment="left,centre_y" column="1">
+									<translation id="text" translation_id="316713" type="use" value="Goals[COMMENT:team report, goals scored and conceded]" />
+								</record>
+							</list>
+
+							<list id="column_widget_properties">
+								<record indx="0" alignment="left,centre_y" />
+								<record indx="1" alignment="left,centre_y" />
+							</list>
+
+							<list id="column_table_properties">
+								<record indx="0" sort_disabled="true" left="5" />
+								<record indx="1" sort_disabled="true" right="5" />
+							</list>
+						</widget>
+					</container>
+
+					<container id="ccch">
+						<translation id="title" translation_id="447662" type="use" value="Clear Cut Chances[COMMENT: team report goal analysis panel; panel title listing clear cut chances totals]" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<widget class="table" id="ccct" layout="-1, -2" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false">
+
+							<list id="column_widget_properties">
+								<record indx="0" alignment="left,centre_y" />
+								<record indx="1" alignment="left,centre_y" />
+							</list>
+
+							<list id="column_table_properties">
+								<record indx="0" sort_disabled="true" left="5" />
+								<record indx="1" sort_disabled="true" right="5" />
+							</list>
+						</widget>
+					</container>
+
+				</container>
+			</container>
+
+			<container class="main_subtle_box">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container class="tabbed_container" id="ptab" default_item="gloc">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<container id="gloc">
+						<translation id="title" translation_id="364397" type="use" value="Goals Locations[COMMENT: team report goal analysis panel; panel title indicating where on the pitch goals came from]" />
+						<layout class="arrange_vertical_attachment" alignment="top,extend" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<widget class="pitch_goals_areas" id="gpic" vertical="true">
+							<integer id="pitch_touchline_width_percentage" value="20" />
+							<flags id="pitch_alignment" value="top" />
+							<boolean id="pitch_draw_goals" value="false" />
+							<boolean id="show_goals_text" value="true" />
+							<boolean id="pitch_draw_markings" value="true" />
+							<boolean id="pitch_draw_grass" value="false" />
+							<boolean id="pitch_draw_ads" value="false" />
+						</widget>
+					</container>
+
+					<container id="asst">
+						<translation id="title" translation_id="317311" type="use" value="Assist Locations[COMMENT: team report goal analysis panel; panel title indicating where on the pitch assists came from]" />
+						<layout class="arrange_vertical_attachment" alignment="top,extend" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<widget class="pitch_assist_areas" id="pict" vertical="true">
+							<integer id="pitch_touchline_width_percentage" value="20" />
+							<flags id="pitch_alignment" value="top" />
+							<boolean id="pitch_draw_goals" value="false" />
+							<boolean id="show_assist_text" value="true" />
+							<boolean id="pitch_draw_markings" value="true" />
+							<boolean id="pitch_draw_grass" value="false" />
+							<boolean id="pitch_draw_ads" value="false" />
+						</widget>
+					</container>
+
+				</container>
+			</container>
+
+
+		</container>
+
+		<!-- Used if team hasn't got any goal data -->
+		<container class="empty_state" id="ngld" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="text">
+				<translation id="text" translation_id="435253" type="use" value="No match information available.[COMMENT: text explaining lack of info on goal analysis panels]" />
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

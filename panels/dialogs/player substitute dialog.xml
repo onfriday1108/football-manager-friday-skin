@@ -1,0 +1,37 @@
+<panel id="dlog" width="600" height="500">
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment"/>
+
+	<!-- add custom icon to top right corner of dialog (actual icon image gets set in code) -->
+	<widget class="picture" id="cico" auto_size="all" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true"/>
+	</widget>
+
+	<!-- arrange items vertically, with text at top -->
+	<layout class="arrange_vertical_attachment" alignment="top" gap="8"/>
+
+	<!-- the height of the dialog has now been set, so centre the dialog vertically -->
+	<layout class="centre_in_parent_attachment" alignment="vertical"/>
+
+	<!-- fit the height of the dialog to the height of its components -->
+	<layout class="fit_children_attachment" alignment="vertical,fill" gap="8"/>
+
+	<!-- stretch everything to the sides of the dialog -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+	<!-- first we centre the dialog horizontally, the width will not change so this will position the dialog correctly -->
+	<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+
+	<!-- table -->
+	<widget class="table" layout="-1" id="tabl" mode="" auto_size="vertical" row_height="255" box_style="no_border, transparent" auto_size_maximum_height="470"/>
+
+	<!-- text field - should resize vertically to ensure
+	     that it's contents fit -->
+	<widget class="text" id="text" auto_size="vertical"/>
+
+	<!-- standard buttons / these get shown & hidden by subclasses -->
+	<container id="btns" file="dialog buttons">
+
+	</container>
+
+</panel>

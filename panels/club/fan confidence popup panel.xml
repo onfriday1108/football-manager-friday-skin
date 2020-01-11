@@ -1,0 +1,62 @@
+<panel width="578">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="12" vertical_gap="8" horizontal_inset="0" />
+
+	<!--this listens for EVENT_NAVIGATION_NOTIFICATION and cancels the popup if it hears one-->
+	<attachment class="global_event_relay_attachment" event_id="navn">
+		<record id="action_event" event_id="mcan"/>
+	</attachment>
+
+	<container class="standard_popup_box" id="main">
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="12" vertical_gap="8" horizontal_inset="5" />
+
+		<widget class="text" id="titl" auto_size="vertical" multiline="true" spec="title" font="fonts/panel_title" style="bold" size="10" colour="text" />
+
+		<widget class="horizontal_divider" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left" horizontal_offset="5" horizontal_gap="8" vertical_offset="0" />
+
+			<record id="default_properties" width="100" />
+
+			<widget class="object_portrait_picture" id="ppic" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="56"/>
+			<widget class="object_portrait_picture" id="spic" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="56"/>
+
+			<container id="tata">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+
+				<widget class="label" id="pr1t" font="label" colour="accent" alignment="centre_x,bottom"/>
+				<widget class="label" id="pr1v" font="value" alignment="centre_x,top"/>
+
+			</container>
+
+			<container id="tutu">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+
+				<widget class="label" id="pr2t" font="label" colour="accent" alignment="centre_x,bottom"/>
+				<widget class="label" id="pr2v" font="value" alignment="centre_x,top"/>
+
+
+			</container>
+
+			<container id="toto">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+
+				<widget class="label" id="pr3t" font="label" colour="accent" alignment="centre_x,bottom"/>
+				<widget class="label" id="pr3v" font="value" alignment="centre_x,top"/>
+			</container>
+
+		</container>
+
+		<widget class="horizontal_divider" />
+
+		<container id="tete">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+			<widget class="text" id="desc" auto_size="vertical" multiline="true" size="10"/>
+		</container>
+
+
+	</container>
+
+</panel>

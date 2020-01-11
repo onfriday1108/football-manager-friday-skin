@@ -1,0 +1,57 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- panel for waiting-->
+	<container id="wait" class="empty_state" header_widget="hdr">
+
+		<!--explanatory text-->
+		<widget class="text" id="hdr">
+			<translation id="text" translation_id="357003" type="use" value="Waiting for match reports...[COMMENT: match goal update; text displaying on the latest scores screen to indicate why there's a delay, text very similar to 232960 but pluralised]" />
+		</widget>
+
+	</container>
+
+	<!-- panel for no available goals-->
+	<container id="nofc" class="empty_state" hidden="true" header_widget="hdr">
+		<!--explanatory text-->
+		<widget class="text" id="hdr">
+			<translation id="text" translation_id="323216" type="use" value="No goals scored[COMMENT: Text used when team hasn't scored a goal when using this formation]" />
+		</widget>
+
+	</container>
+
+	<container class="main_box" id="sofc">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="table" id="mlst" mode="fill_rows, stripe_rows" auto_size_rows="true" layout="-1,-2,20,20,10,20,20,-2,-3" fixed_size_rows="false">
+
+			<!-- set the colum properties -->
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" />
+				<record index="1" alignment="right,centre_y" />
+				<record index="2" alignment="right,centre_y" />
+				<record index="3" alignment="right,centre_y" />
+				<record index="4" alignment="centre" />
+				<record index="5" alignment="left,centre_y" />
+				<record index="6" alignment="left,centre_y" />
+				<record index="7" alignment="left,centre_y" />
+				<record index="8" alignment="right,centre_y" />
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="m_it" top="2" bottom="2" left="2" />
+				<record index="1" id="m_t1" />
+				<record index="2" id="m_a1" />
+				<record index="3" id="m_s1" />
+				<record index="4" id="m_dv" />
+				<record index="5" id="m_s2" />
+				<record index="6" id="m_a2" />
+				<record index="7" id="m_t2" />
+				<record index="8" id="m_pt" right="4" top="3" bottom="2" />
+			</list>
+
+		</widget>
+	</container>
+
+</panel>

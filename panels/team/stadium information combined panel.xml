@@ -1,0 +1,176 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <!--stadium stuff-->
+  <container class="vertical_adaptive_container" gap="6">
+
+    <container>
+      <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <!--stadium name-->
+      <widget class="client_object_label" height="15" size="13" style="bold" id="Tsre" priority="1" alignment="centre_x" auto_size="vertical">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+        </record>
+      </widget>
+
+      <!--stadium city-->
+      <widget class="city_label" size="10" height="15" colour="grey2" id="SctI" priority="1" alignment="centre_x" show_nation="true" auto_size="vertical">
+        <record id="object_property">
+          <integer id="get_property" value="SctI" />
+        </record>
+      </widget>
+
+    </container>
+
+    <!--stadium picture-->
+    <widget class="stadium_picture" id="STAp" image_alignment="centre" priority="1" height="240" width="400">
+      <record id="object_property">
+        <integer id="get_property" value="objt" />
+        <integer id="set_property" value="objt" />
+      </record>
+    </widget>
+
+    <!--capacity/pitch condition/build year-->
+    <container height="118" class="main_box" appearance="boxes/plain/standard/subtle/paper" priority="1">
+      <layout class="arrange_horizontal_attachment" layout="-2,-3,-2" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="3" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="8" apply_to_children="true" />
+
+      <!--capacity-->
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="top" offset="6" gap="3" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+        <widget class="picture" file="icons/information/capacity" height="30" scale_picture="false" image_alignment="centre" />
+        <widget class="dashed_number_label" spec="text" style="bold" id="ScpV" size="12" colour="title" alignment="centre_x,bottom" auto_size="vertical">
+          <record id="object_property">
+            <integer id="get_property" value="Scpy" />
+          </record>
+        </widget>
+        <widget class="label" id="ScpL" spec="text" size="small" colour="grey2" alignment="centre_x,top" auto_size="vertical">
+          <record id="object_property">
+            <integer id="get_property" value="Scpy" />
+            <boolean id="name" value="true" />
+          </record>
+        </widget>
+      </container>
+
+      <!--pitch description graphic-->
+      <widget class="pitch_description_picture" id="SdeS" spec="text" size="small" image_alignment="centre_x,top">
+        <record id="object_property">
+          <integer id="get_property" value="SdeS" />
+        </record>
+      </widget>
+
+      <!--built year-->
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="top" offset="6" gap="3" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+        <widget class="picture" file="icons/information/date_constructed" height="30" scale_picture="false" image_alignment="centre" />
+        <widget class="dashed_number_label" spec="text" style="bold" id="SbdV" NumF="0" size="12" colour="title" alignment="centre_x,bottom" auto_size="vertical">
+          <record id="object_property">
+            <integer id="get_property" value="Sbdy" />
+          </record>
+        </widget>
+        <widget class="label" id="SbdL" spec="text" size="small" colour="grey2" alignment="centre_x,top" auto_size="vertical">
+          <record id="object_property">
+            <integer id="get_property" value="Sbdy" />
+            <boolean id="name" value="true" />
+          </record>
+        </widget>
+      </container>
+
+    </container>
+
+    <!--surface type/condition/undersoil heating-->
+    <container class="inner_box_no_margin" priority="1" default_height="78" minimum_height="78">
+      <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="15" apply_to_children="true" />
+
+      <!--surface type-->
+      <container id="SURF">
+        <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+        <widget class="picture" height="30" scale_picture="false" image_alignment="centre" file="icons/information/pitch_surface" />
+        <widget class="pitch_surface_type_label" spec="text" style="bold" colour="title" id="SsfV" size="12" alignment="centre_x,bottom" auto_size="vertical">
+          <record id="object_property">
+            <integer id="get_property" value="SsfT" />
+          </record>
+        </widget>
+        <widget class="label" id="SsfL" spec="text" size="small" colour="grey2" alignment="centre_x,top" auto_size="vertical">
+          <record id="object_property">
+            <integer id="get_property" value="SsfT" />
+            <boolean id="name" value="true" />
+          </record>
+        </widget>
+      </container>
+
+      <!--stadium condition-->
+      <container>
+        <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+        <widget class="value_based_picture" id="SdcP" height="30" scale_picture="false" image_alignment="centre">
+          <list id="value_list">
+            <record min_value="0" max_value="1" file="icons/information/stadium_level_5" />
+            <record min_value="2" max_value="5" file="icons/information/stadium_level_4" />
+            <record min_value="6" max_value="10" file="icons/information/stadium_level_3" />
+            <record min_value="11" max_value="15" file="icons/information/stadium_level_2" />
+            <record min_value="16" max_value="20" file="icons/information/stadium_level_1" />
+          </list>
+          <record id="object_property">
+            <integer id="get_property" value="Sdcy" />
+          </record>
+        </widget>
+        <widget class="stadium_condition_label" spec="text" style="bold" id="SdcV" size="12" alignment="centre_x,bottom" auto_size="vertical">
+          <list id="value_list">
+            <record min_value="0" max_value="1" colour="very good" />
+            <record min_value="2" max_value="5" colour="good" />
+            <record min_value="6" max_value="10" colour="ok" />
+            <record min_value="11" max_value="15" colour="poor" />
+            <record min_value="16" max_value="20" colour="very poor" />
+          </list>
+          <record id="object_property">
+            <integer id="get_property" value="Sdcy" />
+          </record>
+        </widget>
+        <widget class="label" id="SdcL" spec="text" size="small" colour="grey2" alignment="centre_x,top" auto_size="vertical">
+          <record id="object_property">
+            <integer id="get_property" value="Sdcy" />
+            <boolean id="name" value="true" />
+          </record>
+        </widget>
+      </container>
+
+      <!--undersoil heating-->
+      <container id="UNDE">
+        <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+        <widget class="picture" height="30" scale_picture="false" image_alignment="centre" file="icons/information/undersoil_heating" />
+        <widget class="yes_no_label" spec="text" style="bold" colour="title" id="SusV" size="11" alignment="centre_x,bottom" auto_size="vertical">
+          <record id="object_property">
+            <integer id="get_property" value="Sush" />
+          </record>
+        </widget>
+        <widget class="label" id="SusL" spec="text" size="small" colour="grey2" alignment="centre_x,top" auto_size="vertical">
+          <record id="object_property">
+            <integer id="get_property" value="Sush" />
+            <boolean id="name" value="true" />
+          </record>
+        </widget>
+      </container>
+
+    </container>
+
+  </container>
+
+</panel>

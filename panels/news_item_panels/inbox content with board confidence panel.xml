@@ -1,0 +1,8 @@
+<panel height="333">
+
+	<string id="skin_style" value="subtle box"/>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="board_confidence_panel" id="main" file="club/board confidence inbox"/>
+</panel>

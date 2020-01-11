@@ -1,0 +1,62 @@
+<!-- A panel used for displaying a ranked list of stats about players in a competition -->
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<boolean id="save_session_state" value="true" />
+
+	<!-- Header with stat type string and stat selector button -->
+	<container class="inner_box" id="stit" wants_mouse_events="false" appearance="boxes/titled/match/transparent/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container embed_in_frame="true">
+			<layout class="fit_children_attachment" alignment="vertical" gap="0" embed_in_frame="true" />
+			<layout class="stick_to_sides_attachment" alignment="right" inset="4" apply_to_children="true" embed_in_frame="true" />
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" embed_in_frame="true"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" embed_in_frame="true" />
+
+			<widget class="popup_button" id="view" fixed="true" auto_tick_exclusive="true" auto_size="all" embed_in_frame="true" appearance="none">
+				<record id="primary_icon_properties" red_replacement="white" />
+			</widget>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!-- Table showing the data-->
+			<widget class="object_list_table" id="stat" mode="hide_headings" auto_size_rows="true" fixed_size_rows="false" row_spacing="0" auto_size="vertical" column_spacing="10">
+				<list id="column_table_properties">
+					<!-- Ranking -->
+					<record id="csRS" width="40">
+						<record id="widget_info" class="sortable_text" size="large" style="bold" />
+					</record>
+					<!-- Team -->
+					<record id="Ttea" width="25" dont_set_object="true">
+						<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre"/>
+					</record>
+					<!-- Person portrait -->
+					<record id="Pers" width="40">
+						<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre"/>
+					</record>
+					<!-- Person and team stacked labels -->
+					<record id="PTIf" width="-1" dont_set_object="true">
+						<record id="widget_info" class="property_list_viewer_xml_panel" file="competition/player and team label panel match" height="40"/>
+					</record>
+					<!-- Short stat value -->
+					<record id="csSS" width="60">
+						<record id="widget_info" class="label" size="large" style="bold" alignment="right,centre_y" />
+					</record>
+				</list>
+
+				<record id="viewed_property_ids">
+					<record id="csRS" />
+					<record id="Ttea" />
+					<record id="Pers" />
+					<record id="PTIf" />
+					<record id="csSS" />
+				</record>
+			</widget>
+		</container>
+	</container>
+</panel>

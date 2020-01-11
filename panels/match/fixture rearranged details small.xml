@@ -1,0 +1,73 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="10" vertical_offset="0"/>
+
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8" horizontal_offset="0" vertical_inset="0"/>
+
+		<widget class="fixture_opponent_picture" id="fopP" scale_picture="true" width="60">
+			<boolean id="keep_aspect_ratio" value="true" />
+			<flags id="image_alignment" value="centre" />
+
+			<record id="object_property" get_property="fopP" dont_set_object="true" />
+		</widget>
+
+		<container>
+			<layout class="grid_layout_attachment" row_layout="-1,-1,-1"  mode="auto" >
+				<list id="column_layout">
+					<record>
+						<string id="column_layout" value="-1" />
+					</record>
+					<record>
+						<string id="column_layout" value="-3,-4" />
+					</record>
+					<record>
+						<string id="column_layout" value="-3,-4" />
+					</record>
+				</list>
+			</layout>
+
+			<widget class="text" id="fRaR" colour="negative" alignment="left,centre_y">
+
+			</widget>
+
+			<!--opponent-->
+			<widget class="fixture_opponent_team_button" id="fopt" icon_enabled="false" alignment="left,centre_y" style="bold" auto_size="vertical">
+				<record id="object_property" get_property="fopt" />
+			</widget>
+
+			<widget class="date_cell" id="fxdt" alignment="centre" auto_size="vertical" >
+				<string id="format" value="[%date#1-long]" />
+				<record id="object_property" get_property="fxdt" />
+			</widget>
+
+			<!--opponent league position-->
+			<widget class="fixture_opponent_league_position_text" id="Ooml"  icon_enabled="false" alignment="left,centre_y"  auto_size="vertical" colour="faded text">
+				<record id="object_property" get_property="Ooml" />
+			</widget>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="0"/>
+				<!--venue-->
+				<widget class="fixture_venue_label" id="FxVn" alignment="centre_x" auto_size="horizontal" format="1">
+					<record id="object_property" get_property="FxVn" />
+				</widget>
+
+				<widget class="stadium_button" id="stad" auto_size="none" colour="faded text">
+					<translation id="no_object_text" translation_id="227505" type="use" value="Unknown Stadium"/>
+					<record id="object_property" get_property="stad" />
+				</widget>
+
+			</container>
+
+
+
+		</container>
+
+	</container>
+
+
+
+	<widget class="horizontal_divider"/>
+
+</panel>

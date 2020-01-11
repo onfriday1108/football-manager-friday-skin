@@ -1,0 +1,56 @@
+<panel>
+
+	<set_var name="highlight_criticism_table">
+		<widget class="table" mode="fill_rows" layout="20,-1" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" row_spacing="2">
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left, centre_y" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" height="20" />
+				<record indx="1" alignment="left,centre_y" multiline="true" />
+			</list>
+		</widget>
+	</set_var>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="10" />
+
+			<widget class="performance_grade_box" id="smgb" auto_size="vertical">
+
+			</widget>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" />
+
+					<widget class="text" font="title" colour="performance highlight positive" auto_size="vertical">
+						<translation id="text" translation_id="491846" type="use" value="Notable Highlights[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: If Applicable, otherwise None; REF-ID: n/a; NOTE: title for best aspects of recent managerial performance]" />
+					</widget>
+
+					<var id="hitb" name="highlight_criticism_table" />
+
+					<widget class="text" id="mhtx" auto_size="vertical" />
+
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" />
+
+					<widget class="text" font="title" colour="performance highlight negative" auto_size="vertical">
+						<translation id="text" translation_id="491849" type="use" value="Notable Criticism[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: If Applicable, otherwise None; REF-ID: n/a; NOTE: title for worst aspects of recent managerial performance]" />
+					</widget>
+
+
+					<var id="crtb" name="highlight_criticism_table" />
+
+					<widget class="text" id="mctx" auto_size="vertical" />
+
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

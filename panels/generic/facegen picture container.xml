@@ -1,0 +1,129 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+
+	<container height="420" class="inner_subtle_box">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		<layout class="arrange_vertical_attachment" alignment="bottom" offset="20" gap="0" />
+
+		<container height="350">
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+
+			<container width="300" height="350" id="FRfC">
+
+				<widget class="button" id="ClBu" disabled="true" click_event="ClpI" alignment="centre" height="50">
+					<translation id="text" translation_id="424578" type="use" value="Clear Points[Manager profile face creation panel; removing the points allocated by the user on the photo]" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" inset="0" />
+				</widget>
+
+        <container>
+        <layout class="arrange_horizontal_attachment" alignment="middle" offset="0">
+          <global id="horizontal_gap" name="ui.split_button_row_gap" />
+        </layout>
+				<widget class="icon_button" id="roLe" hidden="true" width="150" icon_alignment="centre" icon="icons/16px/rotate left" appearance="buttons/standard/split/left/button" alignment="centre" height="45">
+					<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="0" />
+					<record id="click_event">
+						<flags id="event_id" value="roPi" />
+						<flags id="value" value="90" />
+					</record>
+				</widget>
+
+				<widget class="icon_button" id="roRI" hidden="true" width="150" icon_alignment="centre" alignment="centre" appearance="buttons/standard/split/right/button" icon="icons/16px/rotate right" height="45">
+					<layout class="stick_to_sides_attachment" alignment="right,bottom" inset="0" />
+					<record id="click_event">
+						<flags id="event_id" value="roPi" />
+						<flags id="value" value="-90" />
+					</record>
+				</widget>
+        </container>
+
+				<container height="300" width="300">
+					<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" />
+
+					<widget class="facenge_picture" background_colour="black" height="300" width="300" wants_mouse_events="true" wants_contextual_events="true" id="aFRn" image_alignment="centre">
+						<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" />
+					</widget>
+				</container>
+
+				<container height="300" width="300">
+					<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" />
+					<container class="facegen_crop_container" height="200" width="200" id="CrCo" inset="5">
+            <layout class="centre_in_parent_attachment" alignment="all" />
+						<attachment class="moveable_attachment" />
+						<attachment class="facegen_sizeable_attachment" request_layout="false"/>
+
+					</container>
+				</container>
+
+			</container>
+
+			<container width="300">
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="10" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+				<widget class="picture" id="tmFR" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+				<widget class="text" id="PhDe" alignment="centre" auto_size="vertical">
+				</widget>
+			</container>
+
+		</container>
+
+		<widget class="horizontal_divider" image_alignment="centre">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+
+		<container height="40">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<record id="default_properties" alignment="centre" icon_colour="text" auto_size="horizontal" />
+			
+			<widget class="icon_button" id="brBu" icon="icons/16px/folder">
+				<record id="click_event">
+					<integer id="event_id" value="mChn" />
+					<integer id="mode" value="0" />
+				</record>
+			</widget>
+
+			<widget class="icon_button" id="cBut" icon="icons/16px/edit">
+				<record id="click_event">
+					<integer id="event_id" value="mChn" />
+					<integer id="mode" value="1" />
+				</record>
+			</widget>
+
+			<widget class="icon_button" id="gMbu" icon="icons/16px/squad">
+				<record id="click_event">
+					<integer id="event_id" value="mChn" />
+					<integer id="mode" value="2" />
+				</record>
+			</widget>
+
+			<widget class="icon_tick_button" id="cMdl">
+				<record id="click_event">
+					<integer id="event_id" value="mChn" />
+					<integer id="mode" value="3" />
+				</record>
+			</widget>
+
+			<widget class="icon_button" id="wbCM" icon="icons/16px/camera">
+				<record id="click_event">
+					<integer id="event_id" value="mChn" />
+					<integer id="mode" value="4" />
+				</record>
+			</widget>
+
+		</container>
+	</container>
+
+
+
+	<widget class="icon_button" icon="icons/16px/left" id="no" event_id="no" auto_size="horizontal" height="40">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+		<translation id="text" type="use" translation_id="247672" value="Back" />
+	</widget>
+
+
+</panel>

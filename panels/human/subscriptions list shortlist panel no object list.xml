@@ -1,0 +1,57 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+	<container class="inner_box_no_margin" id="plcn" alignment="left" spec="text" size="large">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!-- subscription categories -->
+		<container class="main_box" id="sbox">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8"/>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+			<!-- buttons area -->
+			<container id="stba" embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_right" />
+
+				<widget class="icon_tick_button" id="sacc" click_event="sacc" embed_in_frame="true"/>
+				<widget class="icon_button" id="sacc" auto_size="all" icon="icons/16px/cross" click_event="sncc" embed_in_frame="true"/>
+			</container>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+
+				<widget class="label" auto_size="all">
+					<translation id="text" translation_id="336608" type="use" value="Receive News About: [COMMENT: manage subscriptions panel; label indicating which news items are selected]"/>
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+				</widget>
+			</container>
+
+			<container class="scrolling_box">
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0"/>
+
+					<container id="col0">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal"  />
+					</container>
+
+					<container id="col1">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal"  />
+					</container>
+
+					<container id="col2">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal"  />
+					</container>
+				</container>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

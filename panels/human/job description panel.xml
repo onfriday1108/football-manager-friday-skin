@@ -1,0 +1,195 @@
+<panel width="650">
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+	<container class="container_with_mouse_events">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+		<container class="standard_popup_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="8" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="8" />
+
+			<!--badge and blurb-->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize"  horizontal_alignment="left,extend" horizontal_gap="12"/>
+
+				<!--badge-->
+				<widget class="object_portrait_picture" id="logo" scale_picture="true" height="80" width="80" keep_aspect_ratio="true" image_alignment="centre">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--blurb-->
+				<container id="BLUB">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" auto_size="vertical" font="title" colour="accent">
+						<translation id="text" translation_id="346725" type="use" value="Job Advert[COMMENT: title for a panel describing a job advertisement]" />
+					</widget>
+					<widget class="text" id="post" auto_size="vertical" size="xlarge" style="bold"/>
+
+					<!--blurb-->
+					<widget class="text" id="blub" auto_size="vertical" colour="faded text"/>
+
+					<widget class="spacer" height="4" />
+
+					<widget class="client_object_label_value_table" id="infp" auto_size="vertical">
+						<!--this record contains any properties you want to pass on to the table-->
+						<record id="table_properties">
+							<flags id="mode" value="" />
+							<boolean id="auto_size_rows" value="true" />
+							<boolean id="fixed_size_rows" value="false" />
+							<flags id="auto_size" value="vertical" />
+							<string id="layout" value="-1,-2" />
+							<integer id="row_spacing" value="0" />
+
+							<list id="column_widget_properties">
+								<record indx="0" alignment="left,centre_y" font="title"/>
+								<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+							</list>
+
+							<list id="column_table_properties">
+								<record indx="0">
+									<integer id="left"  />
+									<boolean id="sort_disabled" value="true" />
+								</record>
+								<record indx="1">
+									<boolean id="sort_disabled" value="true" />
+									<flags id="alignment" value="left,centre_y" />
+									<integer id="top" value="2" />
+									<integer id="bottom" value="2" />
+								</record>
+							</list>
+						</record>
+
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+
+						<!--this list contains the property ids you want to display in the table - if you omit it, the table will attempt to display all properties in the supplied object-->
+						<list id="viewed_property_ids">
+							<integer value="Cvis" />
+							<integer value="CTPl" />
+						</list>
+					</widget>
+				</container>
+			</container>
+
+			<widget class="horizontal_divider"/>
+
+			<!--club info-->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+				<!--reputation-->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" id="TrsL" spec="text" size="normal" alignment="centre_x,top" auto_size="vertical" font="label" colour="faded text">
+						<record id="object_property">
+							<integer id="get_property" value="Trst" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="club_reputation_stars_label" spec="text" style="bold" id="TrsV" size="13" alignment="centre" auto_size="vertical" font="fonts/letterpressed">
+
+						<boolean id="NumF" value="0" />
+						<record id="object_property">
+							<integer id="get_property" value="Trst" />
+						</record>
+					</widget>
+				</container>
+
+				<!--finances-->
+				<container id="fina">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" id="CsfL" alignment="centre_x,top" auto_size="vertical" font="label" colour="faded text">
+						<record id="object_property">
+							<integer id="get_property" value="Csfs" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="financial_status_label" id="CsfV" alignment="centre_x,bottom" auto_size="vertical" font="value" colour="accent">
+						<boolean id="NumF" value="0" />
+						<record id="object_property">
+							<integer id="get_property" value="Csfs" />
+						</record>
+					</widget>
+				</container>
+
+				<!--wage bill-->
+				<container id="wabi">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" id="CcwL" alignment="centre_x,top" auto_size="vertical" font="label" colour="faded text">
+						<record id="object_property">
+							<integer id="get_property" value="Ccww" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="wage_label" id="CcwV" alignment="centre_x,bottom" auto_size="vertical" font="value" colour="accent">
+						<boolean id="NumF" value="0" />
+						<record id="object_property">
+							<integer id="get_property" value="Ccww" />
+						</record>
+					</widget>
+				</container>
+
+				<!--facilities-->
+				<container id="faci">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" id="TfcL"  alignment="centre_x,top" auto_size="vertical" font="label" colour="faded text">
+						<record id="object_property">
+							<integer id="get_property" value="TfcD" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="training_facilities_description_text" format="1" id="TfcV" alignment="centre_x,bottom" auto_size="vertical" font="value" colour="accent">
+						<boolean id="NumF" value="0" />
+						<record id="object_property">
+							<integer id="get_property" value="TfcD" />
+						</record>
+					</widget>
+				</container>
+
+				<!--world ranking-->
+				<container id="wora">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" id="NffL" alignment="centre_x,top" auto_size="vertical" font="label" colour="faded text">
+						<record id="object_property">
+							<integer id="get_property" value="Nffr" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="fifa_ranking_label" format="1" id="NffV" alignment="centre_x,bottom" auto_size="vertical" font="value" colour="accent">
+						<boolean id="NumF" value="0" />
+						<record id="object_property">
+							<integer id="get_property" value="Nffr" />
+						</record>
+					</widget>
+				</container>
+			</container>
+
+
+			<!--buttons-->
+			<container id="btnC">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+
+				<widget class="button" id="diij" auto_size="all" click_event="diij">
+					<translation id="text" translation_id="235158" type="use" value="Declare Interest In Job" />
+				</widget>
+				<widget class="primary_button" id="apjb" click_event="apjb">
+					<translation id="text" translation_id="247763" type="use" value="Apply For Job" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

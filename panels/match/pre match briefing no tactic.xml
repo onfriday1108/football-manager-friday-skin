@@ -1,0 +1,21 @@
+﻿<container>
+
+	<layout class="arrange_vertical_attachment" layout="-1" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="middle,extend" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<!-- intro text-->
+		<widget class="text" auto_size="vertical" alignment="centre" font="title" colour="accent">
+			<translation id="text" translation_id="451323" type="use" value="No tactic selected, please create a tactic and pick a provisional line-up first[COMMENT: If no tactic is setup we need something to display to the user why, revision to ID 447572]" />
+		</widget>
+
+		<widget class="button" auto_size="vertical" alignment="centre">
+			<translation id="text" translation_id="447573" type="use" value="Go to tactics[COMMENT: button to allow you to hand over the team talk to your assistant]" />
+			<record id="click_event" event_id="GCMT" event_target="glob" />
+		</widget>
+	</container>
+
+</container>

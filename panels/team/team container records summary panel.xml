@@ -1,0 +1,327 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="inner_box" force_title_borders="true" id="trtb">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- buttons area -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" navigation_focus_target="false" >
+				<translation id="text" translation_id="243323" type="use" value="Records"  />
+			</widget>
+
+			<!-- view button -->
+			<widget class="view_menu_popup" id="view" save_session_state="true"/>
+		</container>
+
+		<!-- text explaining that some records are only valid since the game start date -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right"/>
+
+			<widget class="label" id="rvlb" embed_in_frame="true" auto_size="horizontal" alignment="right,centre_y" spec="text" colour="selection" />
+		</container>
+
+		<container class="scrolling_box">
+
+			<container id="fmcp">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_offset="0" />
+
+				<container>
+
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+					
+					<container class="inner_subtle_box" id="leag" >
+						<translation id="title" translation_id="232109" type="use" value="League Positions" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="table" id="lpot" mode="fill_rows,stripe_rows" fixed_size_rows="false" auto_size_rows="true" layout="240, -1" hidden="true" auto_size="vertical">
+							<list id="column_table_properties">
+								<record indx="0" left="4" sort_disabled="true" />
+								<record indx="1" top="3" bottom="3" sort_disabled="true" alignment="left,centre_y"/>
+							</list>
+
+							<list id="column_widget_properties">
+								<record index="0" alignment="left,centre_y" />
+								<record index="1" alignment="left,centre_y" spec="text" colour="selection" auto_size="vertical" />
+							</list>
+						</widget>
+
+						<widget class="label" id="nLps" alignment="left,top" auto_size="vertical">
+							<translation id="text" translation_id="320160" type="use" value="No records available[COMMENT: team records overview panel, text to display when there are no player records close to being broken]" />
+						</widget>
+
+						<container embed_in_frame="true">
+							<attachment_group class="title_embedded_panel_right" />
+							
+							<widget class="link_appearance_button" id="lgps" click_event="vall" embed_in_frame="true" hidden="true">
+								<translation id="text" translation_id="350720" type="use" value="All League Positions[COMMENT: team records summary panel; button to link to League Positions tab]" />
+							</widget>
+						</container>
+
+					</container>
+
+					<container class="inner_subtle_box" id="rank" hidden="true" >
+						<translation id="title" translation_id="234067" type="use" value="Rankings" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="table" id="rant" mode="fill_rows,stripe_rows" fixed_size_rows="false" auto_size_rows="true" layout="200, -1" auto_size="vertical">
+							<list id="column_table_properties">
+								<record indx="0" left="4" sort_disabled="true" />
+								<record indx="1" top="3" bottom="3" sort_disabled="true" alignment="left,centre_y"/>
+							</list>
+
+							<list id="column_widget_properties">
+								<record index="0" alignment="left,centre_y" />
+								<record index="1" alignment="left,centre_y" spec="text" colour="selection" auto_size="vertical"/>
+							</list>
+						</widget>
+
+						<container embed_in_frame="true">
+							<attachment_group class="title_embedded_panel_right" />
+
+							<widget class="link_appearance_button" id="ttra" click_event="vall" embed_in_frame="true">
+								<translation id="text" translation_id="350721" type="use" value="All Rankings[COMMENT: team records summary panel; button to link to Rankings tab]" />
+							</widget>
+						</container>
+
+					</container>
+
+					<container class="inner_subtle_box">
+						<translation id="title" translation_id="232110" type="use" value="Attendances" />
+
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="table" id="attt" mode="fill_rows,stripe_rows" fixed_size_rows="false" auto_size_rows="true" layout="200, -1" hidden="true" auto_size="vertical">
+							<list id="column_table_properties">
+								<record indx="0" left="4" sort_disabled="true" />
+								<record indx="1" top="3" bottom="3" sort_disabled="true" alignment="left,centre_y"/>
+							</list>
+
+							<list id="column_widget_properties">
+								<record index="0" alignment="left,centre_y" />
+								<record index="1" alignment="left,centre_y" spec="text" colour="selection" auto_size="vertical"/>
+							</list>
+						</widget>
+
+						<widget class="label" id="nAtt" alignment="left,top" auto_size="vertical">
+							<translation id="text" translation_id="320160" type="use" value="No records available[COMMENT: team records overview panel, text to display when there are no player records close to being broken]" />
+						</widget>
+
+						<container embed_in_frame="true">
+							<attachment_group class="title_embedded_panel_right" />
+
+							<widget class="link_appearance_button" id="atts" click_event="vall" embed_in_frame="true" hidden="true">
+								<translation id="text" translation_id="350719" type="use" value="All Attendances[COMMENT: team records summary panel; button to link to Attendances tab]" />
+							</widget>
+						</container>
+
+					</container>
+
+					<container class="inner_subtle_box">
+						<translation id="title" translation_id="232111" type="use" value="Results" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="table" id="rest" mode="fill_rows,stripe_rows" fixed_size_rows="false" auto_size_rows="true" layout="200, -1" hidden="true" auto_size="vertical">
+							<list id="column_table_properties">
+								<record indx="0" left="4" sort_disabled="true" />
+								<record indx="1" top="3" bottom="3" sort_disabled="true" alignment="left,centre_y"/>
+							</list>
+
+							<list id="column_widget_properties">
+								<record index="0" alignment="left,centre_y" />
+								<record index="1" alignment="left,centre_y" spec="text" colour="selection" auto_size="vertical"/>
+							</list>
+						</widget>
+
+						<widget class="label" id="nRes" alignment="left,top" auto_size="vertical">
+							<translation id="text" translation_id="320160" type="use" value="No records available[COMMENT: team records overview panel, text to display when there are no player records close to being broken]" />
+						</widget>
+
+						<container embed_in_frame="true">
+
+							<attachment_group class="title_embedded_panel_right" />
+
+							<widget class="link_appearance_button" id="resu" click_event="vall" embed_in_frame="true" hidden="true" >
+								<translation id="text" translation_id="350722" type="use" value="All Results[COMMENT: team records summary panel; button to link to Results tab]" />
+							</widget>
+						</container>
+
+					</container>
+
+					<container class="inner_subtle_box" id="trct">
+						<translation id="title" translation_id="227743" type="use" value="Transfers" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+						<container id="iTrb" hidden="true">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="50,-1" horizontal_offset="0" horizontal_gap="1" vertical_offset="0" />
+
+								<container height="50">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+									<widget class="object_portrait_picture" id="trap" width="50" height="50" scale_picture="true">
+										<boolean id="keep_aspect_ratio" value="true" />
+										<flags id="image_alignment" value="centre" />
+									</widget>
+
+									<widget class="picture" id="trpp" width="50" height="50" scale_picture="true">
+										<boolean id="keep_aspect_ratio" value="true" />
+										<flags id="image_alignment" value="centre" />
+									</widget>
+								</container>
+
+
+								<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+									<widget class="label" id="tra1" auto_size="none" alignment="left,centre_y" font="label" colour="faded text"/>
+
+									<widget class="text" id="tra2" auto_size="vertical" multiline="true" alignment="left,centre_y" style="bold" />
+
+								</container>
+
+							</container>
+
+							<widget class="table" id="trat" mode="fill_rows,stripe_rows" fixed_size_rows="false" auto_size_rows="true" layout="300, -1" auto_size="vertical">
+								<list id="column_table_properties">
+									<record indx="0" left="4" sort_disabled="true" />
+									<record indx="1" top="3" bottom="3" sort_disabled="true" alignment="left,centre_y" />
+								</list>
+
+								<list id="column_widget_properties">
+									<record index="0" alignment="left,centre_y" />
+									<record index="1" alignment="left,centre_y" spec="text" colour="selection" auto_size="vertical"/>
+								</list>
+							</widget>
+
+						</container>
+
+						<widget class="label" id="nTrf" alignment="left,top" auto_size="vertical">
+							<translation id="text" translation_id="320160" type="use" value="No records available[COMMENT: team records overview panel, text to display when there are no player records close to being broken]" />
+						</widget>
+
+						<container embed_in_frame="true">
+							<attachment_group class="title_embedded_panel_right" />
+
+							<widget class="link_appearance_button" id="trns" click_event="vall" embed_in_frame="true" hidden="true" >
+								<translation id="text" translation_id="316767" type="use" value="All Transfers[COMMENT: team transfers section; a list of players who have joined or left the club]" />
+							</widget>
+						</container>
+
+					</container>
+
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<container class="inner_subtle_box">
+						<translation id="title" translation_id="232113" type="use" value="Players" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<container id="iPlC" hidden="true">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+							
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="50,-1" horizontal_offset="0" horizontal_gap="1" vertical_offset="0" />
+
+								<container height="50">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+									<widget class="object_portrait_picture" id="plap" scale_picture="true">
+										<boolean id="keep_aspect_ratio" value="true" />
+										<flags id="image_alignment" value="centre" />
+									</widget>
+
+									<widget class="picture" id="plpp" scale_picture="true">
+										<boolean id="keep_aspect_ratio" value="true" />
+										<flags id="image_alignment" value="centre" />
+									</widget>
+
+								</container>
+
+
+								<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+									<widget class="label" id="pla1" auto_size="vertical" alignment="left,centre_y" font="label" colour="faded text"/>
+
+									<widget class="text" id="pla2" auto_size="vertical" alignment="left,top" style="bold" />
+
+								</container>
+
+							</container>
+
+							<widget class="table" id="plat" mode="fill_rows,stripe_rows" fixed_size_rows="false" auto_size_rows="true" layout="200, -1"  auto_size="vertical">
+								<list id="column_table_properties">
+									<record indx="0" left="4" sort_disabled="true" />
+									<record indx="1" top="3" bottom="3" sort_disabled="true" alignment="left,centre_y" />
+								</list>
+
+								<list id="column_widget_properties">
+									<record index="0" alignment="left,centre_y" />
+									<record index="1" alignment="left,centre_y" spec="text" colour="selection" auto_size="vertical"/>
+								</list>
+							</widget>
+
+						</container>
+
+						<widget class="label" id="nPly" alignment="left,top" auto_size="vertical">
+							<translation id="text" translation_id="320160" type="use" value="No records available[COMMENT: team records overview panel, text to display when there are no player records close to being broken]" />
+						</widget>
+
+						<container embed_in_frame="true">
+							<attachment_group class="title_embedded_panel_right" />
+
+							<widget class="link_appearance_button" id="plrs" click_event="vall" embed_in_frame="true" hidden="true" >
+								<translation id="text" translation_id="306490" type="use" value="All Players[COMMENT: match analysis panel; view all players label]" />
+							</widget>
+						</container>
+
+					</container>
+
+					<container class="inner_subtle_box">
+						<translation id="title" translation_id="232112" type="use" value="Sequences" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="table" id="seqt" mode="fill_rows,stripe_rows" fixed_size_rows="false" auto_size_rows="true" layout="200, -1" hidden="true" auto_size="vertical">
+							<list id="column_table_properties">
+								<record indx="0" left="4" sort_disabled="true" />
+								<record indx="1" top="3" bottom="3" sort_disabled="true" alignment="left,centre_y" />
+							</list>
+
+							<list id="column_widget_properties">
+								<record index="0" alignment="left,centre_y" />
+								<record index="1" alignment="left,centre_y" spec="text" colour="selection" auto_size="vertical"/>
+							</list>
+						</widget>
+
+						<widget class="label" id="nSeq" alignment="left,top" auto_size="vertical">
+							<translation id="text" translation_id="320160" type="use" value="No records available[COMMENT: team records overview panel, text to display when there are no player records close to being broken]" />
+						</widget>
+
+						<container embed_in_frame="true">
+							<attachment_group class="title_embedded_panel_right" />
+
+							<widget class="link_appearance_button" id="seqs" click_event="vall" embed_in_frame="true" hidden="true" >
+								<translation id="text" translation_id="350723" type="use" value="All Sequences[COMMENT: team records summary panel; button to link to Sequences tab]" />
+							</widget>
+						</container>
+
+					</container>
+
+				</container>
+
+
+			</container>
+
+		</container>
+
+	</container>
+</panel>

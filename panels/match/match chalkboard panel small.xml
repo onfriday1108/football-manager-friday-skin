@@ -1,0 +1,776 @@
+<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	<boolean id="save_immediate_state" value="true" />
+
+	<!-- subsection box containing controls -->
+	<container class="main_box">
+		<translation id="title" translation_id="291476" type="use" value="Controls[COMMENT: match analysis panel; controls panel title]" />
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" />
+
+		<widget class="table" mode="fill_rows" layout="-1, -1, 28, -1, 30" auto_size="vertical" row_height="28" column_spacing="2">
+
+			<list id="column_table_properties">
+				<record indx="0" left="5" alignment="centre_y" />
+				<record indx="1" left="5" alignment="centre_y" />
+				<record indx="2" left="5" alignment="centre_y" />
+				<record indx="3" left="5" alignment="centre_y" />
+			</list>
+
+			<widget class="label" row="0" column="0" standard_spec="text" size="small" style="semi_bold">
+				<translation id="text" translation_id="291477" type="use" value="Team[COMMENT: match analysis panel; team label]" />
+			</widget>
+			<widget class="radio_button" group="0" id="htmb" row="1" column="0" click_event="shtm">
+				<translation id="text" translation_id="247373" type="use" value="Home Team" />
+			</widget>
+			<widget class="radio_button" group="0" id="atmb" row="2" column="0" click_event="satm">
+				<translation id="text" translation_id="247374" type="use" value="Away Team" />
+			</widget>
+
+			<widget class="label" row="0" column="1" standard_spec="text" size="small" style="semi_bold">
+				<translation id="text" translation_id="306489" type="use" value="View[COMMENT: match analysis panel; view label]" />
+			</widget>
+			<widget class="radio_button" group="1" id="allb" row="1" column="1" click_event="vall">
+				<translation id="text" translation_id="306490" type="use" value="All Players[COMMENT: match analysis panel; view all players label]" />
+			</widget>
+			<widget class="radio_button" group="1" id="plrb" row="2" column="1" click_event="vplr">
+				<translation id="text" translation_id="338110" type="use" value="Selected Player Only[COMMENT: match analysis panel; view selected player only label, use top 10 matches]" />
+			</widget>
+
+			<widget class="label" row="3" column="0" standard_spec="text" size="small" style="semi_bold">
+				<translation id="text" translation_id="291478" type="use" value="Event[COMMENT: match analysis panel; event label]" />
+			</widget>
+			<widget class="popup_button" id="evpp" row="4" column="0" select_event="slty" auto_size="vertical" multiline="false" column_span="2">
+				<list id="items">
+					<record id="shot">
+						<translation id="text" translation_id="291479" type="use" value="Shots[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="pass">
+						<translation id="text" translation_id="291480" type="use" value="Passes[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="recv">
+						<translation id="text" translation_id="383619" type="use" value="Received Passes[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="cros">
+						<translation id="text" translation_id="291481" type="use" value="Crosses[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="head">
+						<translation id="text" translation_id="388156" type="use" value="Headers Attempted[COMMENT - match analysis screen, event type on chalkboard; TP - changed from Aerial Challenges attempted, id 376389]" />
+					</record>
+					<record id="tack">
+						<translation id="text" translation_id="291483" type="use" value="Tackles[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="foul">
+						<translation id="text" translation_id="291484" type="use" value="Fouls[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="inte">
+						<translation id="text" translation_id="291486" type="use" value="Interceptions[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="setp">
+						<translation id="text" translation_id="306492" type="use" value="Set Pieces[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="chan">
+						<translation id="text" translation_id="306493" type="use" value="Scoring Chances[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="save">
+						<translation id="text" translation_id="316588" type="use" value="Saves[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="avrp">
+						<translation id="text" translation_id="306494" type="use" value="Average Positions[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="move">
+						<translation id="text" translation_id="306495" type="use" value="Movement[COMMENT: match analysis panel; event type]" />
+					</record>
+					<record id="mist">
+						<translation id="text" translation_id="383551" type="use" value="Mistakes[COMMENT: match analysis panel; event type]" />
+					</record>
+				</list>
+				<flags id="selection" value="shot" />
+			</widget>
+
+			<widget class="check_box" id="sbt0" row="0" column="2" alignment="left,centre_y">
+				<record id="click_event" event_id="tgsb" type="0" />
+			</widget>
+			<widget class="label" id="sbl0" row="0" column="3">
+				<string id="text" value="Incident Type 1" />
+			</widget>
+			<widget class="picture" file="pitch/icons/analysis" id="pic0" row="0" column="4" scale_picture="true" />
+
+			<widget class="check_box" id="sbt1" row="1" column="2" alignment="left,centre_y">
+				<record id="click_event" event_id="tgsb" type="1" />
+			</widget>
+			<widget class="label" id="sbl1" row="1" column="3">
+				<string id="text" value="Incident Type 2" />
+			</widget>
+			<widget class="picture" file="pitch/icons/analysis" id="pic1" row="1" column="4" scale_picture="true" />
+
+			<widget class="check_box" id="sbt2" row="2" column="2" alignment="left,centre_y">
+				<record id="click_event" event_id="tgsb" type="2" />
+			</widget>
+			<widget class="label" id="sbl2" row="2" column="3">
+				<string id="text" value="Incident Type 3" />
+			</widget>
+			<widget class="picture" file="pitch/icons/analysis" id="pic2" row="2" column="4" scale_picture="true" />
+
+			<widget class="check_box" id="sbt3" row="3" column="2" alignment="left,centre_y">
+				<record id="click_event" event_id="tgsb" type="3" />
+			</widget>
+			<widget class="label" id="sbl3" row="3" column="3">
+				<string id="text" value="Incident Type 4" />
+			</widget>
+			<widget class="picture" file="pitch/icons/analysis" id="pic3" row="3" column="4" scale_picture="true" />
+
+			<widget class="check_box" id="sbt4" row="4" column="2" alignment="left,centre_y">
+				<record id="click_event" event_id="tgsb" type="4" />
+			</widget>
+			<widget class="label" id="sbl4" row="4" column="3">
+				<string id="text" value="Incident Type 5" />
+			</widget>
+			<widget class="picture" file="pitch/icons/analysis" id="pic4" row="4" column="4" scale_picture="true" />
+
+		</widget>
+	</container>
+
+	<container class="tabbed_container" default_item="pitc" save_session_state="true">
+
+		<!-- table containing players -->
+		<widget class="tactic_player_list_table" id="mtst" database_table_type="1" mode="select_rows,fill_rows,stripe_rows,printable,show_bullets" select_event="sele" save_immediate_state="true">
+			<translation id="title" translation_id="247412" type="use" value="Stats" />
+			<record id="msvw">
+				<boolean id="M_nm" value="true" />
+			</record>
+		</widget>
+
+		<!-- pitch -->
+		<widget class="pitch_with_players" id="pitc" vertical="false" select_event="slic" pitch_draw_ads="false" pitch_draw_arrows="true" pitch_keep_selected_icons="false">
+			<translation id="title" translation_id="248078" type="use" value="Pitch" />
+		</widget>
+	</container>
+
+	<!-- view used for passes type-->
+	<record id="pass">
+		<boolean id="M_pa" value="true" />
+		<!-- passes -->
+		<boolean id="M_pc" value="true" />
+		<!-- passes completed -->
+		<boolean id="M_kp" value="true" />
+		<!-- key passes -->
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="true" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for shots type-->
+	<record id="shot">
+		<boolean id="M_pa" value="false" width="100" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="true" />
+		<!-- shots -->
+		<boolean id="M_so" value="true" />
+		<!-- shots on target -->
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="true" />
+		<!-- goals -->
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for cross type-->
+	<record id="cros">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="true" />
+		<!-- crosses -->
+		<boolean id="M_cc" value="true" />
+		<!-- crosses completed -->
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for headers type -->
+	<record id="head">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="true" />
+		<boolean id="M_hw" value="true" />
+		<boolean id="M_ky" value="true" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for tackles type -->
+	<record id="tack">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="true" />
+		<boolean id="M_kt" value="true" />
+		<boolean id="M_tw" value="true" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for passes received type -->
+	<record id="recv">
+		<boolean id="M_pa" value="true" />
+		<!-- passes -->
+		<boolean id="M_pc" value="true" />
+		<!-- passes completed -->
+		<boolean id="M_kp" value="true" />
+		<!-- key passes -->
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="true" />
+		<!-- passes completed % -->
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for interceptions type -->
+	<record id="inte">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="true" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for fouls type -->
+	<record id="foul">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="true" />
+		<boolean id="M_fd" value="true" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for movement type -->
+	<record id="move">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="true" />
+		<boolean id="M_os" value="true" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for mistakes type -->
+	<record id="mist">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="true" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for average positions type -->
+	<record id="avrp">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="true" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for set pieces type -->
+	<record id="setp">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="true" />
+		<!-- throw-ins taken -->
+		<boolean id="M_ce" value="true" />
+		<!-- corners taken -->
+		<boolean id="M_df" value="true" />
+		<!-- defensive free kicks taken -->
+		<boolean id="M_af" value="true" />
+		<!-- attacking free kicks taken -->
+	</record>
+
+	<!-- view used for chances type -->
+	<record id="chan">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="true" />
+		<boolean id="M_so" value="true" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="true" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="false" />
+		<boolean id="M_sp" value="false" />
+		<boolean id="M_sd" value="false" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+	<!-- view used for saves type -->
+	<record id="save">
+		<boolean id="M_pa" value="false" />
+		<boolean id="M_pc" value="false" />
+		<boolean id="M_kp" value="false" />
+		<boolean id="M_cr" value="false" />
+		<boolean id="M_cc" value="false" />
+		<boolean id="M_ta" value="false" />
+		<boolean id="M_kt" value="false" />
+		<boolean id="M_tw" value="false" />
+		<boolean id="M_ha" value="false" />
+		<boolean id="M_hw" value="false" />
+		<boolean id="M_ky" value="false" />
+		<boolean id="M_ic" value="false" />
+		<boolean id="M_rw" value="false" />
+		<boolean id="M_os" value="false" />
+		<boolean id="M_fm" value="false" />
+		<boolean id="M_fd" value="false" />
+		<boolean id="M_st" value="false" />
+		<boolean id="M_so" value="false" />
+		<boolean id="M_co" value="false" />
+		<boolean id="M_rt" value="false" />
+		<boolean id="M_as" value="false" />
+		<boolean id="M_gl" value="false" />
+		<boolean id="Pmtc" value="false" />
+		<boolean id="Ppfc" value="false" />
+		<boolean id="M_cp" value="false" />
+		<boolean id="M_dr" value="false" />
+		<boolean id="M_sn" value="true" />
+		<boolean id="M_in" value="false" />
+		<boolean id="M_nm" value="true" />
+		<boolean id="M_sb" value="false" />
+		<boolean id="M_cn" value="false" />
+		<boolean id="M_sh" value="true" />
+		<boolean id="M_sp" value="true" />
+		<boolean id="M_sd" value="true" />
+		<boolean id="M_mt" value="false" />
+		<boolean id="M_ti" value="false" />
+		<boolean id="M_ce" value="false" />
+		<boolean id="M_df" value="false" />
+		<boolean id="M_af" value="false" />
+	</record>
+
+</panel>

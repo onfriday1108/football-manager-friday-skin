@@ -1,0 +1,24 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+	<string id="skin_style" value="contrast box"/>
+
+	<container class="inner_box_no_margin">
+		<layout class="arrange_horizontal_attachment" layout="3, -1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<widget class="vertical_divider" image_alignment="centre"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-4, -5"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+			<widget class="text" alignment="centre_x,bottom" colour="faded alt text">
+				<translation id="text" translation_id="242353" type="use" value="Wages"/>
+			</widget>
+			<widget class="wage_label" id="pwag" alignment="centre_x,top" size="large" style="bold"/>
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,61 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+	<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<container id="fixY">
+		<layout class="fit_children_attachment" alignment="horizontal" offset="5" gap="0" />
+		<layout class="arrange_vertical_attachment" layout="-1,-1" gap="1" />
+		<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<widget class="text" id="days" spec="text" size="small" multiline="false" auto_size="horizontal" alignment="bottom" style="shadowed">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="tbcl" />
+						<boolean id="dont_set_property" value="true" />
+						<!--we don't use this, we just get it so that the title colour can be calculated correctly for contrast-->
+					</record>
+					<record>
+						<integer id="get_property" value="ttcl" />
+						<integer id="set_property" value="colr" />
+					</record>
+				</list>
+			</record>
+		</widget>
+		<widget class="fixture_opponent_venue_text" spec="text" id="oppo" format="[%team#1-short] ([%string#1])" size="10" multiline="false" auto_size="horizontal" alignment="top" style="bold, shadowed">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="tbcl" />
+						<boolean id="dont_set_property" value="true" />
+						<!--we don't use this, we just get it so that the title colour can be calculated correctly for contrast-->
+					</record>
+					<record>
+						<integer id="get_property" value="ttcl" />
+						<integer id="set_property" value="colr" />
+					</record>
+				</list>
+			</record>
+		</widget>
+	</container>
+
+	<!--panel for no fixtures-->
+	<widget class="label" id="fixN" alignment="centre_x" style="bold, shadowed" auto_size="horizontal">
+		<translation id="text" translation_id="298048" type="use" value="No upcoming fixtures." />
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="tbcl" />
+					<boolean id="dont_set_property" value="true" />
+					<!--we don't use this, we just get it so that the title colour can be calculated correctly for contrast-->
+				</record>
+				<record>
+					<integer id="get_property" value="ttcl" />
+					<integer id="set_property" value="colr" />
+				</record>
+			</list>
+		</record>
+	</widget>
+
+</panel>

@@ -1,0 +1,11 @@
+<panel scale_picture="true" keep_aspect_ratio="true">
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <widget class="picture" id="bkgd" file="pictures/stadiums/none_base" scale_picture="true" keep_aspect_ratio="true" hidden="true">
+    <layout class="centre_in_parent_attachment" alignment="all"/>
+  </widget>
+  
+  <widget class="picture" id="STPC" scale_picture="true" keep_aspect_ratio="true">
+    <layout class="centre_in_parent_attachment" alignment="all"/>
+  </widget>
+</panel>

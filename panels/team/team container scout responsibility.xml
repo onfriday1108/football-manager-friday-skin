@@ -1,0 +1,16 @@
+﻿<panel>
+  <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+  <container>
+    <attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+    <container class="group_responsibility_list_widget" file="team/staff responsibility summary panel" id="srgw" height="400">
+    </container>
+
+    <widget class="link_button" id="resp" alignment="centre" section="mnrO" auto_size="all">
+      <translation id="text" translation_id="492029" type="use" value="Staff Responsibilities[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+    </widget>
+
+  </container>
+
+</panel>

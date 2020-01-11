@@ -1,0 +1,121 @@
+<!-- comp detail panel -->
+<panel>
+	<string id="table_activated_row_appearance" value="tables/custom/league/top playoff/row" />
+	<string id="table_deactivated_row_appearance" value="tables/custom/league/relegation/row" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+		<translation id="text" translation_id="259403" type="use" value="Detail Level[COMMENT:Container title text on Detail Level screen]" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- Estimated game speed indicator -->
+		<container embed_in_frame="true" height="30">
+			<layout class="arrange_horizontal_attachment" alignment="right" embed_in_frame="true" offset="4" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+			<layout class="stick_to_sides_attachment" alignment="right,top" embed_in_frame="true" inset="2" />
+
+			<layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="true" offset="4" />
+
+			<widget class="label" alignment="right,centre_y" auto_size="horizontal" embed_in_frame="true">
+				<translation id="text" translation_id="292330" type="use" value="Estimated Game Speed[COMMENT: nation league selection panel; label for showing how fast the game will be]" />
+			</widget>
+			<widget class="estimated_game_speed_stars_label" id="gmsp" value="17" auto_size="all" embed_in_frame="true" />
+		</container>
+
+		<container class="inner_box" force_title_borders="true">
+			<!--<translation id="text" translation_id="318283" type="use" value="Competitions[COMMENT:Container title text on Detail Level screen]" />-->
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<!-- Detail presets pop-up (embedded in main_box frame) -->
+			<container embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_right" />
+
+				<record id="default_properties" auto_size="horizontal" embed_in_frame="true" />
+
+				<widget class="label" alignment="right,centre_y">
+					<translation id="text" translation_id="344790" type="use" value="Set International Competition Detail Levels To[COMMENT: competition detail panel; label for picking a preset detail level from a dropdown menu]" />
+				</widget>
+				<widget class="embedded_popup_button" fixed="false" id="indt" select_event="indt" alignment="centre" height="30">
+					<list id="items">
+						<record id="4">
+							<translation id="text" translation_id="255016" type="use" value="Maximum[COMMENT - competition detail level; maximum domestic comp level setting]" />
+						</record>
+						<record id="3">
+							<translation id="text" translation_id="255015" type="use" value="Continental[COMMENT - competition detail level; continental domestic comp level setting]" />
+						</record>
+						<record id="2">
+							<translation id="text" translation_id="255013" type="use" value="Default[COMMENT - competition detail level; default domestic comp level setting]" />
+						</record>
+						<record id="1">
+							<translation id="text" translation_id="255012" type="use" value="Minimum[COMMENT - competition detail level; minimum domestic comp level setting]" />
+						</record>
+					</list>
+				</widget>
+
+				<widget class="label" alignment="right,centre_y">
+					<translation id="text" translation_id="344788" type="use" value="Set Club Competition Detail Levels To[COMMENT: competition detail panel; label for picking a preset detail level from a dropdown menu]" />
+				</widget>
+				<widget class="embedded_popup_button" fixed="false" id="cldt" select_event="cldt" alignment="centre" height="30">
+					<list id="items">
+						<record id="5">
+							<translation id="text" translation_id="255016" type="use" value="Maximum[COMMENT - competition detail level; maximum domestic comp level setting]" />
+						</record>
+						<record id="4">
+							<translation id="text" translation_id="255015" type="use" value="Continental[COMMENT - competition detail level; continental domestic comp level setting]" />
+						</record>
+						<record id="3">
+							<translation id="text" translation_id="255014" type="use" value="National[COMMENT - competition detail level; national domestic comp level setting]" />
+						</record>
+						<record id="2">
+							<translation id="text" translation_id="255013" type="use" value="Default[COMMENT - competition detail level; default domestic comp level setting]" />
+						</record>
+						<record id="1">
+							<translation id="text" translation_id="255012" type="use" value="Minimum[COMMENT - competition detail level; minimum domestic comp level setting]" />
+						</record>
+					</list>
+				</widget>
+			</container>
+
+			<!-- Rule groups and competition tables -->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="10"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+				<!-- Table containing rule groups -->
+				<widget class="table" id="rgtb" layout="-1, -1" select_event="serg" mode="fill_rows, stripe_rows, select_rows" save_session_state="true">
+					<list id="column_table_properties">
+						<record indx="0" sort_disabled="true" left="5"/>
+						<record indx="1" sort_disabled="true" />
+					</list>
+					<!-- Filled from code -->
+				</widget>
+
+				<!-- Table containing competitions for the selected rule groups -->
+				<widget class="table" id="comp" layout="-1, -1">
+					<flags id="mode" value="fill_rows, stripe_rows" />
+					<flags id="heading_class" value="column_heading_alternative" />
+
+					<list id="headings">
+						<record alignment="left,centre_y">
+							<translation id="text" translation_id="227741" type="use" value="Competitions" />
+						</record>
+						<record alignment="left,centre_y">
+							<translation id="text" translation_id="318287" type="use" value="Match Detail[COMMENT: competition detail panel; column heading label]" />
+						</record>
+					</list>
+
+					<list id="column_widget_properties">
+						<record indx="0" sort_disabled="true" alignment="left,centre_y" left="5"/>
+						<record indx="1" sort_disabled="true" alignment="left,centre_y" />
+					</list>
+				</widget>
+			</container>
+		</container>
+
+		<!-- Confirm/Undo buttons -->
+		<container class="inner_box_no_margin" file="competition/competition detail level buttons" auto_size="vertical" />
+	</container>
+
+</panel>

@@ -1,0 +1,12 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  
+  <container class="main_box" id="bkCo">
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+    
+    <widget class="picture" id="piID" scale_picture="true" alignment="centre"/>
+    <widget class="text" id="txID" alignment="centre"/>
+  </container>
+
+</panel>

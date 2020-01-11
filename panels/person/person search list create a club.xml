@@ -1,0 +1,83 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<flags id="sdap" value="boxes/popup/standard/paper" />
+	<flags id="sdbc" value="" />
+
+	<container id="plti" alignment="left">
+
+		<translation id="title" translation_id="247194" type="use" value="Search" />
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="8" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container height="35">
+			<layout class="arrange_horizontal_attachment" alignment="left" gap="5" offset="6" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="radio_button" id="bscR" appearance="tabs/subsection/normal/top/button" click_event="hAVO" icon_enabled="false" auto_size="horizontal" selected="true" show_button_appearance="true">
+				<translation id="text" translation_id="425010" type="use" value="Basic Search[COMMENT: person search type]" />
+			</widget>
+			<widget class="radio_button" id="advR" appearance="tabs/subsection/normal/top/button" click_event="sAVO" icon_enabled="false" auto_size="horizontal" show_button_appearance="true">
+				<translation id="text" translation_id="425011" type="use" value="Advanced Search[COMMENT: person search type]" />
+			</widget>
+		</container>
+
+
+		<container height="30">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="text" auto_size="all" alignment="left,centre_y">
+				<translation id="text" translation_id="247229" type="use" value="Player Name" />
+			</widget>
+
+			<widget class="icon_button" auto_size="horizontal" icon="icons/16px/search" icon_alignment="centre"/>
+
+			<widget class="edit_box" changed_event="nSCH" />
+		</container>
+
+		<container class="horizontal_split_container" id="splt" starting_layout="0, -4" save_session_state="true" save_default_state="true" min_height_top="200" min_height_bottom="100">
+
+			<widget class="person_filter_panel" id="psfp" draw_title="false" >
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			</widget>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!-- main area -->
+				<container class="inner_box" force_title_borders="true" id="rslt" alignment="left">
+
+
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<!-- buttons area -->
+					<container embed_in_frame="true">
+						<attachment_group class="title_embedded_panel_left"/>
+
+						<widget class="view_menu_label" id="TitL"/>
+						<widget class="view_menu_popup" id="plvi" />
+					</container>
+
+					<!-- customisation context is set in code for this table, depending on if search is player or staff search -->
+					<widget class="person_search_table" id="pltb" table_type="1" fixed_size_rows="true" auto_size_rows="false" fixed_row_height="29" dont_restore_selection="true" mode="fill_rows, stripe_rows, printable, keyboard, manual_sort, store_sort_state, show_bullets, select_rows, select_multiple, drag_rows, show_insert_column_popup" select_event="psls" column_mode="resize_columns, move_columns, custom_views" popup_menu_class="popup_button_table_header" deferred_scrolling="true" deferred_scrolling_timeout="400">
+						<boolean id="save_session_state" value="true" />
+						<boolean id="save_default_state" value="true" />
+
+						<record id="common_view_table_properties">
+							<integer id="row_height" value="29" />
+						</record>
+						
+					</widget>
+
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

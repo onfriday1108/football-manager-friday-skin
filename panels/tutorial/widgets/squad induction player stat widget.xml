@@ -1,0 +1,16 @@
+﻿<panel>
+  <attachment_group class="horizontal_arrange" horizontal_layout="60,-1" horizontal_gap="5"/>
+
+  <!-- Profile picture -->
+  <widget class="picture" id="plph" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x" />
+  <container>
+    <attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="0" />
+    <widget class="text" id="plst" font="title" colour="text" style="bold" size="xsmall" alignment="bottom,left" />
+    <widget class="person_button" id="plna" info_popup_enabled="false" person_is_player="true" hidden="true" disable_link="true"/>
+    <widget class="text" id="nopl" font="title" colour="text" size="xsmall" alignment="left" >
+      <translation id="text" translation_id ="282266" type="use" value="Not Set[COMMENT: Captain select; when there is currently no captain]" />
+    </widget>
+    <widget class="player_description_text" id="plde" colour="faded text" size="small" hidden="true"/>
+    <widget class="text" id="plwa" colour="faded text" size="small" hidden="true"/>
+  </container>
+</panel>

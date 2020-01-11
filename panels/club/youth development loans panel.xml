@@ -1,0 +1,118 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="atbc" />
+		<record entity_layout_id="at0B" />
+		<record entity_layout_id="at0A" />
+		<record entity_layout_id="at0:" />
+		<record entity_layout_id="at0D" />
+		<record entity_layout_id="atb8" />
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at0;" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at0C" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="atab" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="dfdf" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container entity_layout_id="at02" id="at02">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container class="main_subtle_box" entity_layout_id="atbc" id="plrC" width="340">
+			<layout class="stick_to_object_attachment" id="align_top" offset="8" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-8" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" move_side="true" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="loan_report_panel" file="none" is_mini_loan_panel="true" entity_layout_id="at0B" id="clnO"  height="120"  >
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+				<layout class="test_screen_size_attachment">
+					<string id="alignment" value="vertical"/>
+					<integer id="min_value" value="768"/>
+					<integer id="max_value" value="10000"/>
+					<symbol id="set_property" value="shown"/>
+					<boolean id="test_on_layout" value="false"/>
+				</layout>
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				
+				<container class="main_box" entity_layout_id="dfdf" id="dfdf" height="120" name="form container">
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top"  target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<container class="player_form_summary_panel" entity_layout_id="at0D" id="frmS" maximum_items="5" file="player/player form summary panel profile">
+						<record id="object_property" get_property="objt" set_property="objt" />
+						<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+						<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+						<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					</container>
+				</container>
+			</container>
+			<widget class="horizontal_divider" entity_layout_id="at0A" id="at0A" height="1">
+				<layout class="stick_to_object_attachment" id="align_bottom" offset="-10" get_side="top" set_side="bottom" move_side="true" target="at0B" />
+				<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+			</widget>
+			<container class="development_player_loan_report_widget" entity_layout_id="at0:" id="lndC" navigation_container="true">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="top" set_side="bottom" target="at0A" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+			</container>
+		</container>
+		<container entity_layout_id="atb8" file="widgets/youth loans sub panel" id="atb8">
+			<layout class="stick_to_object_attachment" id="align_top" offset="8" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-8" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="left" set_side="right" target="atbc"/>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,22 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container class="inner_subtle_box">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<container class="horizontal_arrange_container" id="infc" appearance="boxes/inner/standard/paper" auto_size="vertical" alignment="left,extend" gap="4" offset="0" inset="0">
+					<!-- additional information boxes will be added to this container -->
+				</container>
+			</container>
+
+			<!-- main body text -->
+			<widget class="inbox_body_text" id="bdtx"/>
+
+		</container>
+	</container>
+
+</panel>

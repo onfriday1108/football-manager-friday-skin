@@ -1,0 +1,28 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<widget class="picture" id="bgim" file="photos/dynamic/comp preview/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+	<container id="horC">
+		<layout class="arrange_vertical_attachment" layout="-1, -4, -1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="spacer" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<widget class="spacer" />
+
+			<widget class="object_portrait_picture" id="logo" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+				<!-- PROP_COMP -->
+				<record id="object_property" get_property="comp" set_property="objt"/>
+			</widget>
+		</container>
+
+		<widget class="spacer" />
+
+	</container>
+</panel>

@@ -1,0 +1,141 @@
+<panel>
+	<!-- Hide player filter rule panel -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="main_box">
+		<translation id="title" translation_id="375946" type="use" value="Player Eligibility[COMMENT: player status panel title text]" />
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="radio_button" id="irnf" auto_size="horizontal" selected="true">
+			<translation id="text" translation_id="375940" type="use" value="Not Filtered[COMMENT: player status flag filter panel, text to indicate there are no current filters applied]" />
+		</widget>
+
+		<widget class="radio_button" id="irel">
+			<translation id="text" translation_id="375691" type="use" value="Eligible[COMMENT: player status filter for players eligible for something]" />
+		</widget>
+
+		<widget class="radio_button" id="irsu">
+			<translation id="text" translation_id="242666" type="use" value="Suspended[COMMENT - on player form screen, shown if player was suspended for a match]" />
+		</widget>
+
+		<widget class="radio_button" id="irin">
+			<translation id="text" translation_id="228027" type="use" value="On international duty" />
+		</widget>
+
+		<widget class="radio_button" id="irie">
+			<translation id="text" translation_id="346711" type="use" value="Ineligible[COMMENT - Ineligible]" />
+		</widget>
+
+	</container>
+
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="227953" type="use" value="Transfer Status" />
+
+		<list id="objL">
+
+			<record id="tstl">
+				<translation id="text" translation_id="346904" type="use" value="Transfer listed[COMMENT - player is transfer listed]" />
+			</record>
+
+			<record id="tsbr">
+				<translation id="text" translation_id="228061" type="use" value="Transfer listed by request" />
+			</record>
+
+			<record id="tsll">
+				<translation id="text" translation_id="346735" type="use" value="Loan listed[COMMENT - listed for loan string, short]" />
+			</record>
+
+			<record id="tswn">
+				<translation id="text" translation_id="346920" type="use" value="Wanted[COMMENT - Wanted by a club]" />
+			</record>
+
+			<record id="tsft">
+				<translation id="text" translation_id="228053" type="use" value="Transfer arranged" />
+			</record>
+
+		</list>
+		
+	</container>
+
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="227954" type="use" value="Contract Status" />
+
+		<list id="objL">
+			
+			<record id="csol">
+				<translation id="text" translation_id="322074" type="use" value="Player On Loan (Out)[COMMENT: skin colour option; player on loan away from the club]" />
+			</record>
+
+			<record id="csil">
+				<translation id="text" translation_id="322073" type="use" value="Player On Loan (In)[COMMENT: skin colour option; player on loan at the club]" />
+			</record>
+
+			<record id="csti">
+				<translation id="text" translation_id="322075" type="use" value="Player On Trial (In)[COMMENT: skin colour option; player on trial at club]" />
+			</record>
+
+			<record id="csto">
+				<translation id="text" translation_id="322076" type="use" value="Player On Trial (Out)[COMMENT: skin colour option; player on trial away from the club]" />
+			</record>
+
+			<record id="csoc">
+				<translation id="text" translation_id="228071" type="use" value="Out of contract" />
+			</record>
+
+			<record id="csac">
+				<translation id="text" translation_id="321210" type="use" value="Amateur Contract[COMMENT: an amateur contract]" />
+			</record>
+
+			<record id="csre">
+				<translation id="text" translation_id="228073" type="use" value="Retiring" />
+			</record>
+
+			<record id="csyc">
+				<translation id="text" translation_id="227368" type="use" value="Youth Contract" />
+			</record>
+
+			<record id="cswp">
+				<translation id="text" translation_id="228029" type="use" value="Needs work permit" />
+			</record>
+
+		</list>
+		
+	</container>
+
+
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="247463" type="use" value="Happiness" />
+
+		<list id="objL">
+
+		<record id="phuh">
+			<translation id="text" translation_id="228077" type="use" value="Unhappy" />
+		</record>
+
+		<record id="phsc">
+			<translation id="text" translation_id="228079" type="use" value="Slight Concern[COMMENT - Slight Concern long string player status button]" />
+		</record>
+
+		<record id="pstm">
+			<translation id="text" translation_id="395387" type="use" value="Supporting Team-Mate[COMMENT - Supporting unhappy team mate long string player status button; FR 11621]" />
+		</record>
+
+		<record id="patm">
+			<translation id="text" translation_id="395131" type="use" value="Against Team-Mate[COMMENT - Against unhappy team mate long string player status button; FR 11621]" />
+		</record>
+
+		<record id="pamg">
+			<translation id="text" translation_id="395515" type="use" value="Unhappy Manager backed down[COMMENT - Unhappy manager has backed down to an unhappy team mate long string player status button; FR 11621]" />
+		</record>
+
+		<record id="pwop">
+			<translation id="text" translation_id="395523" type="use" value="Waiting on promise[COMMENT - Player waiting on a promise to solve unhappiness, long string player status button; FR 11621]" />
+		</record>
+
+		</list>
+
+	</container>
+
+
+</panel>

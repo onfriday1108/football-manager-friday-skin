@@ -1,0 +1,43 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" vertical_offset="0"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<!-- content area -->
+	<container>
+		<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" vertical_offset="0"/>
+
+		<container class="inner_subtle_box" height="60">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="0"/>
+
+			<!-- some pictures -->
+			<widget class="object_portrait_picture" id="picT" width="40" scale_picture="true" image_alignment="centre"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="2" horizontal_offset="0" vertical_inset="0"/>
+
+				<container>
+					<attachment_group class="vertical_arrange" horizontal_inset="0" vertical_gap="0" vertical_offset="9" vertical_alignment="middle"/>
+
+					<!-- human team -->
+					<widget class="client_object_label" id="tnam" auto_size="vertical" spec="text" colour="text" alignment="left,centre_y" size="large" style="semi_bold" multiline="false"/>
+
+					<!-- human team division-->
+					<widget class="client_object_label" id="hdiv" auto_size="vertical" spec="text" size="small" colour="faded text" alignment="left,centre_y" multiline="false"/>
+				</container>
+
+				<container id="tmcn">
+					<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_alignment="right" horizontal_gap="0" horizontal_offset="0"/>
+				</container>
+			</container>
+		</container>
+
+		<container id="infc">
+			<layout class="fit_children_attachment" alignment="vertical"/>
+			<layout class="arrange_horizontal_attachment" alignment="fill"/>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true"/>
+
+			<!-- additional information boxes will be added to this container -->
+		</container>
+	</container>
+</panel>

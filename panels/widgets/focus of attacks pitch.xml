@@ -1,0 +1,109 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!--team logos-->
+	<container>
+		<!--logo-->
+		<widget class="match_team_logo_picture" id="hmLo" team_index="0" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="25" height="25">
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" />
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<!--logo-->
+		<widget class="match_team_logo_picture" id="amLo" team_index="1" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="25" height="25">
+			<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" />
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+	</container>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="18" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="10" />
+
+		<!--left side-->
+		<container id="left">
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!--top arrow-->
+			<container id="top ">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container id="arrC" file="widgets/attack focus arrow left"/>
+
+				<widget id="perc" class="percentage_label" alignment="centre" colour="white" style="bold, shadowed" size="11"/>
+			</container>
+			
+			<!--spacer-->
+			<widget class="spacer"/>
+
+			<!--middle arrow-->
+			<container id="midd">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container id="arrC" file="widgets/attack focus arrow left" />
+
+				<widget id="perc" class="percentage_label" alignment="centre" colour="white" style="bold, shadowed" size="11"/>
+			</container>
+
+			<!--spacer-->
+			<widget class="spacer"/>
+
+			<!--bottom arrow-->
+			<container id="bott">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container id="arrC" file="widgets/attack focus arrow left"/>
+
+				<widget id="perc" class="percentage_label" alignment="centre" colour="white" style="bold, shadowed" size="11"/>
+			</container>
+		</container>
+
+		<!--right side-->
+		<container id="righ">
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!--top arrow-->
+			<container id="top ">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container id="arrC" file="widgets/attack focus arrow right"/>
+
+				<widget id="perc" class="percentage_label" alignment="centre" colour="white" style="bold, shadowed" size="11"/>
+			</container>
+
+			<!--spacer-->
+			<widget class="spacer"/>
+
+			<!--middle arrow-->
+			<container id="midd">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container id="arrC" file="widgets/attack focus arrow right"/>
+
+				<widget id="perc" class="percentage_label" alignment="centre" colour="white" style="bold, shadowed" size="11"/>
+			</container>
+
+			<!--spacer-->
+			<widget class="spacer"/>
+
+			<!--bottom arrow-->
+			<container id="bott">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container id="arrC" file="widgets/attack focus arrow right"/>
+
+				<widget id="perc" class="percentage_label" alignment="centre" colour="white" style="bold, shadowed" size="11"/>
+			</container>
+		</container>
+	</container>
+</panel>

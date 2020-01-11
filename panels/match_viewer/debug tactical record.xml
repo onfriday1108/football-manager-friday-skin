@@ -1,0 +1,105 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<!--We will have a table with the entries on the left and a table on the right with the data...-->
+	<container class="main_box" id="manN">
+		<string id="title" value="Manager Name"/>
+
+		<!-- buttons area -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<!--Query the tactics-->
+			<widget class="popup_button" embed_in_frame="true" fixed="false" auto_size="horizontal" id="graP" select_event="graP">
+				<string id="text" value="Tactical Variables"/>
+			</widget>
+
+			<widget class="button" embed_in_frame="true" auto_size="horizontal" click_event="quer">
+				<string id="text" value="Query Tactics"/>
+			</widget>
+		</container>
+
+		<layout class="arrange_vertical_attachment" layout="-1, -2" gap="0" offset="0"  />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<widget class="graph" id="grap" click_event="seGR">
+			<record id="default_series_properties" type="line" colour="black" line_width="2"/>
+			<record id="instant_hint" file="match_viewer/tactical graph instant hint"/>
+			<record id="x_axis">
+				<string id="title" value="Time"/>
+			</record>
+			<record id="y_axis">
+				<string id="title" value="1-20"/>
+			</record>
+			<list id="grid_line_styles">
+				<record colour="graph row"/>
+				<record colour="transparent"/>
+			</list>
+		</widget>
+
+		<container>
+
+			<layout class="arrange_horizontal_attachment" layout="-1, -2" gap="0" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<!--Contains our entries...-->
+			<widget class="table" id="entr" row_height="20" column_space="2" auto_size_rows="true"  select_event="ents">
+				<string id="layout" value="-1, -1" />
+				<flags id="mode" value="select_rows, fill_rows" />
+
+				<!-- default properties adopted by every item in table -->
+				<list id="column_widget_properties">
+					<record index="0" alignment="left,centre_y" spec="text" size="8"/>
+					<record index="1" alignment="left,centre_y" spec="text" size="8"/>
+				</list>
+
+				<list id="headings">
+					<record spec="text" size="8">
+						<string id="text" value="Match Time" />
+					</record>
+					<record spec="text" size="8">
+						<string id="text" value="Full Update" />
+					</record>
+				</list>
+
+				<list id="column_table_properties">
+					<record index="0" sort_disabled="false" />
+					<record index="1" sort_disabled="false" />
+				</list>
+			</widget>
+
+			<container class="main_box" id="valC">
+				<string id="title" value="Select a row..."/>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+				<!--Contains our values...-->
+				<widget class="table" id="vals" row_height="20" column_space="2" auto_size_rows="true" >
+					<string id="layout" value="-1,-1" />
+					<flags id="mode" value="fill_rows" />
+
+					<!-- default properties adopted by every item in table -->
+					<list id="column_widget_properties">
+						<record index="0" alignment="left,centre_y" spec="text" size="8"/>
+						<record index="1" alignment="left,centre_y" spec="text" size="8"/>
+					</list>
+
+					<list id="column_table_properties">
+						<record index="0" sort_disabled="true" />
+						<record index="1" sort_disabled="true" />
+					</list>
+				</widget>
+
+			</container>
+
+		</container>
+
+
+
+
+
+
+	</container>
+
+
+</panel>

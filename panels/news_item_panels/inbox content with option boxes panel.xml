@@ -1,0 +1,20 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!-- if you want to arrange things vertically -->
+	<container class="vertical_arrange_container" auto_size="vertical" id="opvt" hidden="true" inset="0" gap="15" offset="0" draw_horizontal_dividers="true"/>
+
+	<!-- if you want to arrange things horizontally -->
+	<container class="horizontal_arrange_container" auto_size="vertical" id="ophr" hidden="true" inset="0" gap="50" offset="0"/>
+
+	<!-- if you need any extra text below the option boxes -->
+	<widget class="text" id="adtx" auto_size="vertical" spec="text" colour="text" hidden="true" font="fonts/inbox_body" size="large">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+	</widget>
+
+	<container id="adbx">
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+	</container>
+
+
+</panel>

@@ -1,0 +1,188 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left" />
+
+
+			<widget class="link_button_title" section="Psta" embed_in_frame="true">
+				<translation id="text" translation_id="385617" type="use" value="Season Stats[COMMENT: player overview; player stats by competition panel title]" />
+			</widget>
+
+		</container>
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<widget class="popup_button" id="cmpb" height="30" auto_size="horizontal" embed_in_frame="true" select_event="cmps" />
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+
+			<widget class="label" id="nost" alignment="centre" size="large" hidden="true" auto_size="vertical" auto_size_minimum_height="200">
+				<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+			</widget>
+
+			<container id="detS">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container height="50">
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="5" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<!--Matches Won-->
+					<container id="mtWV" file="player/player additional stats item" />
+
+
+					<!--Man of the match-->
+					<container id="manV" file="player/player additional stats item" />
+
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<container height="50">
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="5" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<!--Average Rating-->
+					<container id="avrV" file="player/player additional stats item" />
+
+					<!--Distance Coverd-->
+					<container id="ds9V">
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						<widget class="text" id="sttx" colour="disabled" size="small" alignment="left,bottom" auto_size="vertical"/>
+						<container>
+
+							<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="5" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<widget class="distance_label" size="15" id="stVL" auto_size="horizontal" alignment="left,top" />
+						</container>
+					</container>
+
+				</container>
+
+				<!--Shots-->
+				<container class="main_box" height="160" id="SHOc">
+					<layout class="arrange_horizontal_attachment" layout="-1,10,-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="percentage_pie_chart" id="ShSP" value_colour="shots on target colour" is_donut_chart="true" layout="-6,-3,-1" />
+
+						<widget class="pie_chart" id="shSC" is_donut_chart="true" layout="-6,-1,-2,-1" />
+
+
+						<container>
+							<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+							<widget class="text" id="shTX" alignment="centre_x,bottom" style="semi_bold" colour="shots goal colour" />
+							<widget class="formatted_label" style="semi_bold" format="[%fraction#1-1.0]" id="ShSK" alignment="centre_x,top" colour="shots goal colour" />
+						</container>
+
+					</container>
+
+					<widget class="vertical_divider"/>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						<container id="ShSV" file="player/player additional stats item horizontal"/>
+						<container id="SoTV" file="player/player additional stats item" height="40" />
+						<container id="SfTV" file="player/player additional stats item" height="40" />
+					</container>
+				</container>
+
+				<!--Passes-->
+				<container  class="main_box" height="160" id="PASc">
+					<layout class="arrange_horizontal_attachment" layout="-1,10,-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="percentage_pie_chart" id="PasP" value_colour="passes succeeded colour" is_donut_chart="true" layout="-6,-3,-1" />
+
+						<widget class="pie_chart" id="PaSF" is_donut_chart="true" layout="-6,-1,-2,-1" />
+
+						<container>
+							<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+							<widget class="text" alignment="centre_x,bottom" style="semi_bold" colour="key passes colour">
+								<translation id="text" translation_id="376511" type="use" value="Key[COMMENT: Player's stat panel; graph guide; key passes made during match, released for translation as I have no idea of the context of the existing Key translation]" />
+							</widget>
+
+							<widget class="formatted_label" format="[%fraction#1-1.0]" style="semi_bold" id="pasK" alignment="centre_x,top" colour="key passes colour" />
+						</container>
+
+					</container>
+
+					<widget class="vertical_divider"/>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						<container id="PasV" file="player/player additional stats item horizontal" height="32" />
+						<container id="PSUV" file="player/player additional stats item" height="50" />
+						<container id="PFIV" file="player/player additional stats item" height="50" />
+					</container>
+				</container>
+
+				<!--Tackles-->
+				<container  class="main_box" height="160" id="TACc">
+					<layout class="arrange_horizontal_attachment" layout="-1,10,-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="percentage_pie_chart" id="tacP" value_colour="tackles won colour" is_donut_chart="true" layout="-6,-3,-1" />
+
+						<widget class="pie_chart" id="tacK" is_donut_chart="true" layout="-6,-1,-2,-1" />
+
+						<container>
+							<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+							<widget class="text" alignment="centre_x,bottom" style="semi_bold" colour="key tackles colour">
+								<translation id="text" translation_id="376511" type="use" value="Key[COMMENT: Player's stat panel; graph guide; key passes made during match, released for translation as I have no idea of the context of the existing Key translation]" />
+							</widget>
+							<widget class="formatted_label" format="[%fraction#1-1.0]" id="taVK" alignment="centre_x,top" style="semi_bold" colour="key tackles colour" />
+						</container>
+
+					</container>
+
+					<widget class="vertical_divider"/>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						<container id="tacV" file="player/player additional stats item horizontal" height="30" />
+						<container id="twoV" file="player/player additional stats item" height="40" />
+						<container id="tfiV" file="player/player additional stats item" height="40" />
+					</container>
+				</container>
+
+			</container>
+		</container>
+
+
+
+		<widget class="player_form_summary_panel" file="player/player form summary panel for analyst report" >
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+
+
+	</container>
+
+</panel>

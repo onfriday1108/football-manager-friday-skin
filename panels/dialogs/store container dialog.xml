@@ -1,0 +1,100 @@
+<panel>
+	<record id="widget_info">
+		<symbol id="class" value="container" />
+		<integer id="width" value="900" />
+		<integer id="height" value="648" />
+	</record>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box" appearance="boxes/custom/store/dialog/paper" red_replacement="store_background">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container id="hdrc" height="60">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="1" />
+
+			<!-- Editor tab-->
+			<container class="main_box" id="dwnt" appearance="boxes/custom/store/wallet/paper" red_replacement="store_foreground">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="radio_button" group="1" group_parent_level="2" id="mabt" selected="true" icon_enabled="false" appearance="">
+					<flags id="selected_appearance" value="tabs/standard/selected/top/button" />
+					<record id="click_event">
+						<flags id="event_id" value="dwns" />
+						<flags id="index" value="0" />
+					</record>
+				</widget>
+
+				<!--Icon and label-->
+				<container>
+					<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="20" gap="10" />
+
+					<widget class="picture" image_alignment="centre" file="icons/custom/store/sections/ige" height="30" width="30"/>
+					<widget class="text" alignment="top" size="large" colour="fmt_downloads_colour" auto_size="all"  wants_mouse_events="false">
+						<translation id="text" translation_id="424568" type="use" value="In-Game Editor[COMMENT: store dialog; panel header text for the Editor section of the store]" />
+					</widget>
+				</container>
+			</container>
+
+			<!-- Workshop tab-->
+			<container class="main_box" id="wrkt" appearance="boxes/custom/store/wallet/paper" red_replacement="store_background">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="radio_button" group="1" group_parent_level="2" id="mcbt" selected="false" icon_enabled="false" appearance="">
+					<flags id="selected_appearance" value="tabs/standard/selected/top/button" />
+					<record id="click_event">
+						<flags id="event_id" value="shWo" />
+						<flags id="index" value="0" />
+					</record>
+				</widget>
+
+				<!--Icon and label-->
+				<container >
+					<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="20" gap="10" />
+
+					<widget class="picture" image_alignment="centre" file="icons/custom/store/sections/workshop" height="30" width="30"  />
+					<widget class="text" alignment="top" size="large" colour="steam_workshop_colour" auto_size="all" wants_mouse_events="false" id="wktt">
+						<string id="text" value="[%string#1]" />
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<container class="main_contrast_box" red_replacement="store_foreground">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true" />
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="8"/>
+
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<container id="stCO" class="store_dialog">
+					</container>
+
+					<container id="wrCO" class="publish_steam_workshop_panel" hidden="true">
+					</container>
+				</container>
+
+				<container id="ftrc">
+					<layout class="stick_to_sides_attachment" alignment="bottom" apply_to_children="true" inset="0"/>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+
+					<widget class="primary_icon_button" id="ok" auto_size="all" icon="icons/16px/cross" appearance="buttons/custom/store/standard/normal/button">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+						<translation id="text" translation_id="249644" type="use" value="Close[COMMENT - Button to close tutorial dialog]" />
+						<record id="click_event">
+							<flags id="event_id" value="ok  " />
+							<flags id="dont_close_dialog" value="true" />
+						</record>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

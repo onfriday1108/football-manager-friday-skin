@@ -1,0 +1,97 @@
+<panel>
+
+  <layout class="arrange_vertical_attachment" layout="110,-1"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+  <!-- profile picture -->
+  <widget class="picture" id="prop">
+    <boolean id="scale_picture" value="true"/>
+    <boolean id="keep_aspect_ratio" value="true"/>
+    <flags id="image_alignment" value="centre"/>
+
+    <attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+      <list id="value">
+        <boolean value="false"/>
+      </list>
+    </attachment>
+
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="fcgn"/>
+          <!--Facegen data request-->
+        </record>
+        <record>
+          <integer id="get_property" value="Pfke"/>
+          <!--Fake name request-->
+        </record>
+        <record>
+          <integer id="get_property" value="prpc"/>
+          <integer id="set_property" value="valu"/>
+        </record>
+      </list>
+    </record>
+  </widget>
+
+  <widget class="table" layout="1,-1,-1" mode="fill_rows, stripe_rows, printable" id="layt" >
+
+    <!-- name -->
+    <widget class="label" id="naml" row="0" col="1">
+      <record id="object_property">
+        <integer id="get_property" value="Psnm"/>
+        <boolean id="name" value="true"/>
+      </record>
+    </widget>
+
+    <widget class="person_button" id="namv" row="0" col="2">
+      <record id="object_property">
+        <integer id="get_property" value="Psnm"/>
+      </record>
+      <boolean id="info_popup_enabled" value="true"/>
+    </widget>
+
+    <!-- age -->
+    <widget class="label" id="agel" row="1" col="1">
+      <record id="object_property">
+        <integer id="get_property" value="Page"/>
+        <boolean id="name" value="true"/>
+      </record>
+    </widget>
+
+    <widget class="label" id="agev" row="1" col="2">
+      <record id="object_property">
+        <integer id="get_property" value="Page"/>
+      </record>
+    </widget>
+
+    <!-- nationality -->
+    <widget class="label" id="natl" row="2" col="1">
+      <record id="object_property">
+        <integer id="get_property" value="Pnat"/>
+        <boolean id="name" value="true"/>
+      </record>
+    </widget>
+
+    <widget class="person_nationality_button" id="natv" row="2" col="2">
+      <record id="object_property">
+        <integer id="get_property" value="objt"/>
+        <integer id="set_property" value="objt"/>
+      </record>
+    </widget>
+    
+    <!--join date-->
+    <widget class="label" id="jodL" row="3" col="1">
+      <record id="object_property">
+        <integer id="get_property" value="Pnjd"/>
+        <boolean id="name" value="true"/>
+      </record>
+    </widget>
+
+    <widget class="date_cell" id="jodV" row="3" col="2" alignment="left,centre_y" >
+      <record id="object_property">
+        <integer id="get_property" value="Pnjd"/>
+      </record>
+    </widget>
+
+  </widget>
+</panel>

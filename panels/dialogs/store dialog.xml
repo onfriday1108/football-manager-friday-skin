@@ -1,0 +1,217 @@
+<panel appearance="">
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="inner_box_no_margin" id="main">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="24" apply_to_children="true" />
+		<!--Image-->
+		<widget class="picture" height="188" id="baka" file="icons/custom/store/ige/image" image_alignment="left,centre_y" scale_picture="true" keep_aspect_ratio="true" />
+
+		<!--Text-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" alignment="left,top" size="12" colour="store_dialog_text" auto_size="vertical">
+				<translation id="text" translation_id="424569" type="use" value="The In-game Editor enables the real-time editing of a number of items within Football Manager, including:[COMMENT: store dialog; Editor description string]" />
+			</widget>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--description bullet points-->
+				<widget class="icon_button" id="deso" auto_size="vertical" size="11" appearance="" icon_colour="store_dialog_faded_text" icon="icons/26px/squad" colour="store_dialog_faded_text">
+					<translation id="text" translation_id="424570" type="use" value="All player and staff attributes.[COMMENT: store dialog; Editor description bullet string]" />
+				</widget>
+
+				<widget class="icon_button" id="dest" auto_size="vertical" size="11" appearance="" icon_colour="store_dialog_faded_text" icon="icons/26px/position suitability" colour="store_dialog_faded_text">
+					<translation id="text" translation_id="424571" type="use" value="'Under the hood' attributes such as Current Ability and Potential Ability.[COMMENT: store dialog; Editor description bullet string]" />
+				</widget>
+
+				<widget class="icon_button" id="deth" auto_size="vertical" size="11" appearance="" icon_colour="store_dialog_faded_text" icon="icons/26px/transfer" colour="store_dialog_faded_text">
+					<translation id="text" translation_id="424572" type="use" value="Transfer players and staff between clubs.[COMMENT: store dialog; Editor description bullet string]" />
+				</widget>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="26" gap="6" />
+
+					<widget class="text" alignment="left,top" size="11" colour="store_dialog_faded_text" auto_size="all">
+						<translation id="text" translation_id="424574" type="use" value="...and much, much more.[COMMENT: store dialog; Editor description string]" />
+					</widget>
+				</container>
+			</container>
+
+			<widget class="text" alignment="left,top" size="12" colour="store_dialog_text" auto_size="vertical">
+				<translation id="text" translation_id="424575" type="use" value="Editing can be achieved quickly and easily directly from the relevant screen in-game.[COMMENT: store dialog; Editor description string]" />
+			</widget>
+
+		</container>
+
+		<container height="20"/>
+
+		<!--Purchase/Already unlocked-->
+		<container height="34">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!--Buy Now container-->
+			<container id="inic" hidden="false">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" inset="0" alignment="vertical" apply_to_children="true" />
+
+				<widget class="button" id="prtg" size="11" style="semi_bold" colour="store_dialog_faded_text" auto_size="horizontal" appearance="" />
+
+				<widget class="button" id="acbt" auto_size="horizontal" click_event="mkEp" appearance="buttons/custom/store/primary/normal/button">
+					<translation id="text" translation_id="424576" type="use" value="Buy Now[COMMENT: store dialog; text to appear on a button to purchase an item]" />
+				</widget>
+
+			</container>
+
+			<!--Unlocked container-->
+			<container id="ialp" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8" />
+
+				<widget class="label" id="unlc" size="large" auto_size="horizontal" colour="store_dialog_text">
+					<translation id="text" translation_id="339235" type="use" value="Unlocked[COMMENT: store dialog text; text indicating user has already unlocked an item available in the store]" />
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+				</widget>
+			</container>
+		</container>
+	</container>
+
+	<!--Cart-->
+	<container class="inner_box_no_margin">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container id="cart" class="main_box" red_replacement="store_foreground" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" apply_to_children="true" />
+			<layout class="arrange_vertical_attachment" layout="30,-1,65,80" offset="0" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" vertical_offset="0" />
+
+				<widget class="label" alignment="left" size="20" font="panel_title_store" auto_size="all" colour="store_dialog_text">
+					<translation id="text" translation_id="333726" type="use" value="Cart[COMMENT: store dialog; link text, takes user to their shopping cart]" />
+				</widget>
+
+				<widget class="icon_button" id="okct" auto_size="all" icon_alignment="centre" icon="icons/16px/cross" appearance="buttons/custom/store/standard/normal/button" click_event="carc">
+					<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+				</widget>
+			</container>
+
+			<widget class="table" id="crtt" mode="stripe_rows" layout="-1,80,80,40" column_spacing="2" auto_size_rows="true">
+
+				<flags id="heading_class" value="column_heading_store" />
+
+				<list id="column_widget_properties">
+					<record index="0">
+						<boolean id="sort_ascending" value="false" />
+						<flags id="alignment" value="left, centre_y" />
+						<colour id="colour" name="store_dialog_text" />
+					</record>
+					<record index="1">
+						<boolean id="sort_ascending" value="false" />
+						<flags id="alignment" value="centre" />
+						<colour id="colour" name="store_dialog_text" />
+					</record>
+					<record index="2">
+						<boolean id="sort_ascending" value="false" />
+						<flags id="alignment" value="right, centre_y" />
+						<colour id="colour" name="store_dialog_text" />
+					</record>
+					<record index="3">
+						<boolean id="sort_ascending" value="false" />
+						<flags id="alignment" value="centre" />
+						<colour id="colour" name="store_dialog_text" />
+					</record>
+
+				</list>
+
+				<!--headings-->
+				<list id="column_table_properties">
+
+					<record>
+						<record id="column_heading" colour="store_dialog_text">
+							<translation id="text" translation_id="333895" type="use" value="Item[COMMENT: cart table; column header for item name]" />
+							<flags id="alignment" value="left,centre_y" />
+							<flags id="column" value="0" />
+						</record>
+						<boolean id="sort_disabled" value="true" />
+					</record>
+					<record>
+						<record id="column_heading" colour="store_dialog_text">
+							<translation id="text" translation_id="334007" type="use" value="Quantity[COMMENT: cart table; column header for Quantity]" />
+							<flags id="alignment" value="centre" />
+							<flags id="column" value="1" />
+						</record>
+						<boolean id="sort_disabled" value="true" />
+					</record>
+					<record>
+						<record id="column_heading" colour="store_dialog_text">
+							<translation id="text" translation_id="334003" type="use" value="Price[COMMENT: cart table; column header for Price]" />
+							<flags id="alignment" value="right,centre_y" />
+							<flags id="column" value="2" />
+						</record>
+						<boolean id="sort_disabled" value="true" />
+					</record>
+					<record>
+						<record id="column_heading" colour="store_dialog_text">
+							<string id="text" value="" />
+							<flags id="alignment" value="centre" />
+							<flags id="column" value="3" />
+						</record>
+						<boolean id="sort_disabled" value="true" />
+					</record>
+				</list>
+
+
+			</widget>
+
+			<widget class="text" size="11" auto_size="vertical" colour="store_dialog_text" alignment="centre_x" hidden="true">
+				<translation id="text" translation_id="342390" type="use" value="Unlockables purchased are only valid in FMC Career Games[COMMENT: store dialog; text to appear on the check out page of the store, used to inform the user that all unloackable items purchased apply only to football manager classic mode]" />
+			</widget>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="arrange_vertical_attachment" layout="30,-1" offset="0" />
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="20" />
+
+					<widget class="label" id="tclb" alignment="right" colour="store_dialog_text" auto_size="horizontal">
+						<translation id="text" translation_id="334173" type="use" value="Total Cost[COMMENT: store dialog; label text indicating total cost of items in cart]" />
+					</widget>
+
+					<widget class="label" id="ctot" alignment="right" colour="store_dialog_text" auto_size="horizontal" />
+
+				</container>
+
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6" />
+
+					<widget class="button" id="clct" alignment="centre" appearance="buttons/custom/store/standard/normal/button" auto_size="all" click_event="clrC">
+						<translation id="text" translation_id="333725" type="use" value="CLEAR CART[COMMENT: store dialog; text to appear on a button to remove all items placed in the cart]" />
+					</widget>
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+						<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+
+						<widget class="button" id="chkt" appearance="buttons/custom/store/primary/normal/button" alignment="centre" auto_size="all" click_event="mkPR">
+							<translation id="text" translation_id="333724" type="use" value="CHECKOUT[COMMENT: store dialog; text to appear on a button to take the user to the checkout]" />
+						</widget>
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+	</container>
+</panel>

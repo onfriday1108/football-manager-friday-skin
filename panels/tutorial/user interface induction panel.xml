@@ -1,0 +1,4 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+	<container file="tutorial/widgets/induction panel header" />
+</panel>

@@ -1,0 +1,10 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5"/>
+
+  <!-- Normally badges get a bigger inset than person portraits but we have so little space that we don't want that here -->
+  <integer id="biIn" value="0"/>
+  
+  <widget class="object_portrait_picture" id="left" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+  <!--<widget class="object_portrait_picture" id="rhgt" image_alignment="left" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>-->
+  <widget class="object_portrait_picture" id="pcen" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+</panel>

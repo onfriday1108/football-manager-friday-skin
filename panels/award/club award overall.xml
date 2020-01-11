@@ -1,0 +1,35 @@
+<!-- Main panel for awards given to clubs -->
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+	<!-- Container with most recent winners (1st-3rd) -->
+	<container class="inner_subtle_box">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+		<record id="default_properties">
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</record>
+		
+		<!-- 1st Place -->
+		<container class="club_award_details_panel" id="cadf">
+			<integer id="placing" value="1"/>
+		</container>
+
+		<!-- 2nd Place -->
+		<container class="club_award_details_panel" id="cads">
+			<integer id="placing" value="2"/>
+		</container>
+
+		<!-- 3rd Place -->
+		<container class="club_award_details_panel" id="cadt">
+			<integer id="placing" value="3"/>
+		</container>
+
+	</container>
+
+	<!-- History table with selectable rows -->
+	<container class="award_past_winners_panel" id="capw">
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</container>
+
+</panel>

@@ -1,0 +1,34 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<container class="main_contrast_box" red_replacement="bg lighter">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,90" horizontal_offset="0" vertical_inset="0" />
+
+		<widget class="text" size="9" alignment="right,centre_y" multiline="true">
+			<translation id="text" translation_id="336862" type="use" value="Time remaining until transfer window closes[COMMENT: transfer deadline day window closing countdown hint text]" />
+		</widget>
+
+		<container id="hhmm">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+			<container id="hhhh">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<widget class="label" id="tdwk" size="xlarge" alignment="centre" style="bold" colour="text"/>
+				<widget class="label" size="7" alignment="centre_x,top" auto_size="vertical" >
+					<translation id="text" translation_id="412442" type="use" value="WEEKS[COMMENT: transfer deadline day countdown text, will display X WEEKS X DAYS of time remaining in the window, use upper case]" />
+				</widget>
+			</container>
+
+			<container id="mmmm">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<widget class="label" id="tdda" size="xlarge" alignment="centre" style="bold" colour="text"/>
+				<widget class="label" size="7" alignment="centre_x,top" auto_size="vertical" >
+					<translation id="text" translation_id="412443" type="use" value="DAYS[COMMENT: transfer deadline day countdown text, will display X WEEKS X DAYS of time remaining in the window, use upper case]" />
+				</widget>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

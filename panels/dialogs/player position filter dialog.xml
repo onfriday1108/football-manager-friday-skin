@@ -1,0 +1,36 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_contrast_box" red_replacement="pitch_box_background">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="8" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+		<widget class="text" auto_size="vertical" alignment="left,centre_y" font="title">
+			<translation id="text" translation_id="230082" type="use" value="Positions" />
+		</widget>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="pitch_with_all_positions" id="ppip" vertical="true" pitch_show_names="false" pitch_allow_multiple_select="true" pitch_draw_grass="false" pitch_touchline_width_percentage="5"/>
+
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="button" id="sapb" click_event="sapo">
+					<translation id="text" translation_id="247116" type="use" value="Select All" />
+				</widget>
+
+				<widget class="button" id="clpb" click_event="cpos">
+					<translation id="text" translation_id="229717" type="use" value="Clear" />
+				</widget>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

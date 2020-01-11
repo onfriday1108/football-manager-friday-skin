@@ -1,0 +1,33 @@
+﻿<panel height="55">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="1,0" apply_to_children="true" />
+
+	<container class="main_box" id="sBox" appearance="boxes/custom/training/session/paper" wants_mouse_events="false">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<container class="horizontal_adaptive_container" offset="4" gap="4" inset="0">
+			<container default_width="-1" minimum_width="25" priority="100">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0,2" apply_to_children="true" />
+				<widget class="picture" id="pict" red_replacement="white" image_alignment="centre" keep_aspect_ratio="true" wants_mouse_events="false"/>
+				<widget class="object_portrait_picture" id="matP" red_replacement="white" image_alignment="centre" keep_aspect_ratio="true"  scale_picture="true" hidden="true" />
+			</container>
+
+			<container  wants_mouse_events="false" default_width="-3" priority="1">
+				<attachment_group clas="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+				<widget class="text" id="text" style="bold" auto_size="vertical" alignment="left,centre_y" colour="white" disabled_colour="faded white" ahOM="false"  wants_mouse_events="false">
+					<record id="auto_size_restrictions">
+						<flags id="target" value="text"/>
+						<integer id="value" value="2"/>
+						<flags id="property" value="restrict_to_lines"/>
+						<string id="limit_type" value="maximum" />
+						<string id="orientation" value="vertical" />
+						<string id="type" value="property"/>
+					</record>
+				</widget>
+				<widget class="text" id="scnd" alignment="left,top" auto_size="vertical" size="small" colour="white" disabled_colour="faded white"  ahOM="false" wants_mouse_events="false"/>
+
+			</container>
+		</container>
+	</container>
+
+	<widget class="button" id="SesB" appearance="buttons/custom/training/session/button" />
+	<widget class="radio_button" id="radB" group="1" icon_enabled="false" show_button_appearance="true" appearance="switches/custom/training/session/button"/>
+</panel>

@@ -1,0 +1,45 @@
+<panel>
+	<!-- wizard panel title, header and footer strings -->
+	<translation id="wizard_panel_title" translation_id="343273" type="use" value="Attacking Approach[COMMENT: match plan creator wizard: attacking style, title]" />
+	<translation_list id="wizard_panel_header">
+		<translation translation_id="344570" type="use">Please choose an attacking approach.[COMMENT: match plan creator wizard: instructional text]</translation>
+		<translation />
+		<translation translation_id="348319" type="use">Specifying an attacking approach will set up touchline instructions for match plan scenarios using either Overload, Attacking or Control Strategy.[COMMENT: match plan creator wizard: instructional text]</translation>
+	</translation_list>
+	<translation id="wizard_panel_step_text" translation_id="344930" type="use" value="Step 4: Choose An Attacking Approach[COMMENT: match plan creator wizard: Short description of selecting an attacking style in the wizard]" />
+
+	<!-- centre the widgets vertically, but align them to the left side -->
+	<layout class="arrange_horizontal_attachment" layout="-1, -2" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal"  />
+
+		<widget class="radio_button" id="att0" auto_size="vertical">
+			<record id="click_event">
+				<integer id="event_id" value="atta" />
+				<integer id="index" value="0" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="att1" auto_size="vertical">
+			<record id="click_event">
+				<integer id="event_id" value="atta" />
+				<integer id="index" value="1" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="att2" auto_size="vertical">
+			<record id="click_event">
+				<integer id="event_id" value="atta" />
+				<integer id="index" value="2" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="att3" auto_size="vertical">
+			<record id="click_event">
+				<integer id="event_id" value="atta" />
+				<integer id="index" value="3" />
+			</record>
+		</widget>
+	</container>
+
+	<widget class="text" id="desc" />
+</panel>

@@ -1,0 +1,29 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<container id="PObx">
+		<attachment_group class="vertical_arrange_autosize" horizontal_inset="8" />
+
+		<widget class="text" font="title" auto_size="all" colour="positive light">
+			<translation id="text" translation_id="491964" type="use" value="Club Vision Objectives Passed[COMMENT: AREA: Club vision success or failure news items; SUB-AREA: success or failure details sub panel; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for list of club vision objectives that the user has successfully completed]" />
+		</widget>
+
+		<container id="POls" draw_horizontal_dividers="true">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="16" />
+			<!-- passed items added here -->
+		</container>
+	</container>
+
+	<container id="FObx">
+		<attachment_group class="vertical_arrange_autosize" horizontal_inset="8" />
+
+		<widget class="text" font="title" auto_size="all" colour="negative light">
+			<translation id="text" translation_id="491965" type="use" value="Club Vision Objectives Failed[COMMENT: AREA: Club vision success or failure news items; SUB-AREA: success or failure details sub panel; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for list of club vision objectives that the user has failed to achieve]" />
+		</widget>
+
+		<container id="FOls" draw_horizontal_dividers="true">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="16" />
+			<!-- failed items added here -->
+		</container>
+	</container>
+</panel>

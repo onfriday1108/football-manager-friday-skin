@@ -1,0 +1,21 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_offset="0" horizontal_inset="0" vertical_alignment="top, extend"/>
+
+	<boolean id="save_session_state" value="true"/>
+
+	<widget class="inbox_body_text" id="fwdt" colour="inbox_text"/>
+
+	<container class="inner_subtle_box" appearance="boxes/custom/inbox attachment/media/paper">
+		<attachment_group class="vertical_arrange" vertical_offset="0" vertical_gap="0" vertical_alignment="top, extend"/>
+
+		<!-- headline container -->
+		<container file="news_item_panels/inbox headline panel" id="hlpn"/>
+
+		<container id="icbx">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8"/>
+			<!-- inbox content panel gets added here -->
+
+		</container>
+	</container>
+
+</panel>

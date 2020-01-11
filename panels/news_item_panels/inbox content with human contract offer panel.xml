@@ -1,0 +1,17 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<widget class="inbox_body_text" id="bdtx" colour="inbox_text"/>
+	<!-- content area -->
+	<container class="bordered_box" appearance="boxes/custom/inbox attachment/personal/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+		<widget class="contract_offer_information_panel" id="ofbx" file="person/human contract information news content panel">
+
+		</widget>
+
+	</container>
+
+</panel>

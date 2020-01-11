@@ -1,0 +1,51 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="1" apply_to_children="true" />
+
+	<boolean id="hide_unused_buttons" value="true" />
+
+	<container class="main_transparent_box_no_margin" alignment="centre">
+		<attachment_group class="horizontal_arrange_autosize" horizontal_offset="4" vertical_inset="4"/>
+     
+
+		<container class="positional_appearance_container" positional_appearance_first="buttons/standard/split/left/button" positional_appearance_normal="buttons/standard/split/middle/button" positional_appearance_last="buttons/standard/split/right/button" positional_appearance_first_and_last="buttons/standard/normal/button">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" vertical_inset="0">
+        <global id="horizontal_gap" name="ui.split_button_row_gap" />
+      </attachment_group>
+
+			<!-- rewind / nudge rewind -->
+			<widget class="match_playback_control_button" id="prew" icon="icons/26px/rewind" auto_size="horizontal" icon_alignment="left" control_type="wind" control_direction="backward" />
+
+			<!-- fast forward / nudge forward -->
+			<widget class="match_playback_control_button" id="pff " icon="icons/26px/fast forward" auto_size="horizontal" icon_alignment="right" control_type="wind" control_direction="forward" />
+		</container>
+
+		<container class="positional_appearance_container" positional_appearance_first="buttons/standard/split/left/button" positional_appearance_normal="buttons/standard/split/middle/button" positional_appearance_last="buttons/standard/split/right/button" positional_appearance_first_and_last="buttons/standard/normal/button">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" vertical_inset="0">
+       <global id="horizontal_gap" name="ui.split_button_row_gap" />
+      </attachment_group>
+
+			<!--previous highlight-->
+			<widget class="match_playback_control_button" id="pskp" icon="icons/26px/skip back" auto_size="horizontal" icon_alignment="left" control_type="skip" control_direction="backward">
+				<translation id="text" translation_id="247351" type="use" value="Previous Highlight" />
+			</widget>
+
+			<!--next highlight-->
+			<widget class="match_playback_control_button" id="pskn" icon="icons/26px/skip forward" auto_size="horizontal" icon_alignment="right" control_type="skip" control_direction="forward">
+				<translation id="text" translation_id="247352" type="use" value="Next Highlight" />
+			</widget>
+
+		</container>
+
+		<!-- "live" button -->
+		<widget class="icon_button" id="live" icon="icons/26px/live" icon_alignment="left" auto_size="horizontal">
+			<translation id="text" translation_id="289352" type="use" value="Live[COMMENT: match_time_slider; instruction to set the action back to live]" />
+			<translation id="hint" translation_id="289353" type="use" value="Live[COMMENT: match_time_slider; instruction to set the action back to live, hint tooltip]" />
+		</widget>
+
+		<!--Record button-->
+		<widget class="icon_button" id="rcrd" icon="icons/26px/record" auto_size="horizontal" click_event="ermc" icon_alignment="left">
+			<global id="hidden" name="platform_is_stadia"/>
+			<translation id="text" translation_id="466461" type="use" value="Record Clip[COMMENT: text for a button to record a video clip of a part of a match]" />
+		</widget>
+	</container>
+</panel>

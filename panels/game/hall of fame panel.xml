@@ -1,0 +1,149 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<boolean id="save_session_state" value="true"/>
+
+	<!--  main box containing tables  -->
+	<container class="main_box" force_title_borders="true" id="hofp" draw_horizontal_dividers="true">
+
+		<!-- buttons area -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="labl" />
+			<!-- view button -->
+			<widget class="view_menu_popup" id="hfmn" sele="hofi" />
+		</container>
+
+
+		<layout class="arrange_vertical_attachment" layout="-5, -6" offset="0" >
+			<global id="gap" name="ui.inner_box_gap"/>
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container class="inner_box">
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="table" id="hoft" mode="fill_rows, stripe_rows, select_rows, show_bullets, keyboard, printable" layout="50,-7,-6,80,125,125,125,125,70" row_spacing="0" default_focus="true">
+				<record id="defp">
+					<flags id="algn" value="left,centre_y" />
+				</record>
+
+				<list id="headings">
+					<record>
+						<translation id="text" translation_id="247287" type="use" value="Rank[COMMENT - Hall of fame column heading]" />
+						<translation id="hint" translation_id="247288" type="use" value="Ranking in the Hall of Fame" />
+					</record>
+					<record>
+						<translation id="text" translation_id="247289" type="use" value="Name[COMMENT - Hall of fame column heading]" />
+						<translation id="hint" translation_id="247290" type="use" value="Manager's name" />
+					</record>
+					<record>
+						<translation id="text" translation_id="247291" type="use" value="Team[COMMENT - Hall of fame column heading]" />
+						<translation id="hint" translation_id="247292" type="use" value="Team managed" />
+					</record>
+
+					<record>
+						<translation id="text" translation_id="247293" type="use" value="Nationality[COMMENT - Nationality - Hall of fame column heading]" />
+						<translation id="hint" translation_id="247294" type="use" value="Manager's nationality" />
+					</record>
+
+					<record>
+						<translation id="text" translation_id="331849" type="use" value="Domestic Divisions[COMMENT - Hall of fame column heading]" />
+						<translation id="hint" translation_id="331926" type="use" value="Number of domestic leagues won" />
+						<flags id="algn" value="centre" />
+					</record>
+					<record>
+						<translation id="text" translation_id="331848" type="use" value="Domestic Cups[COMMENT - Hall of fame column heading]" />
+						<translation id="hint" translation_id="331925" type="use" value="Number of domestic cups won[COMMENT: hall of fame panel; hint string for Domestic Cups label]" />
+						<flags id="algn" value="centre" />
+					</record>
+					<record>
+						<translation id="text" translation_id="331933" type="use" value="Other Club Trophies[COMMENT - Hall of fame column heading]" />
+						<translation id="hint" translation_id="331928" type="use" value="Number of other club trophies won[COMMENT: hall of fame panel; hint string for Other Club Trophies label]" />
+						<flags id="algn" value="centre" />
+					</record>
+					<record>
+						<translation id="text" translation_id="331905" type="use" value="International Trophies[COMMENT - Hall of fame column heading]" />
+						<translation id="hint" translation_id="331927" type="use" value="Number of international competitions won[COMMENT: hall of fame panel; hint string for International Trophies label]" />
+						<flags id="algn" value="centre" />
+					</record>
+					<record>
+						<translation id="text" translation_id="247299" type="use" value="Score[COMMENT - Hall of fame score column heading]" />
+						<flags id="algn" value="centre" />
+					</record>
+				</list>
+
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" />
+					<record indx="1" alignment="left,centre_y" />
+					<record indx="2" alignment="left,centre_y" />
+					<record indx="3" alignment="left,centre_y" />
+					<record indx="4" alignment="centre" />
+					<record indx="5" alignment="centre" />
+					<record indx="6" alignment="centre" />
+					<record indx="7" alignment="centre" />
+					<record indx="8" alignment="centre" />
+				</list>
+
+				<list id="column_table_properties">
+					<record indx="0" left="4" />
+				</list>
+			</widget>
+
+		</container>
+
+		<container class="inner_box">
+			<translation id="title" translation_id="229526" type="use" value="Details" />
+			<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<widget class="table" id="hofd" mode="fill_rows, stripe_rows, printable" layout="-1,-1" row_spacing="0" auto_size="vertical">
+				<record id="defp">
+					<flags id="algn" value="left,centre_y" />
+				</record>
+
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" />
+					<record indx="1" alignment="left,centre_y" spec="text" colour="selection" />
+				</list>
+
+				<list id="column_table_properties">
+					<record indx="0" srtd="true" />
+					<record indx="1" srtd="true" />
+				</list>
+			</widget>
+
+			<widget class="table" id="hofi" mode="fill_rows, stripe_rows, printable" layout="-1,-1,-1" row_spacing="0">
+				<record id="defp">
+					<flags id="algn" value="left,centre_y" />
+				</record>
+
+				<list id="headings">
+					<record>
+						<translation id="text" translation_id="247291" type="use" value="Team[COMMENT - Hall of fame column heading]" />
+					</record>
+					<record>
+						<translation id="text" translation_id="247300" type="use" value="Achievement[COMMENT - Hall of fame column heading]" />
+					</record>
+					<record>
+						<translation id="text" translation_id="345619" type="use" value="Years Won[COMMENT - Hall of fame column heading; List of years in which an achievement was won]" />
+					</record>
+				</list>
+
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" />
+					<record indx="1" alignment="left,centre_y" spec="text" colour="selection" />
+				</list>
+
+				<list id="column_table_properties">
+					<record indx="0" sort_disabled="false" />
+					<record indx="1" sort_disabled="false" sort_ascending="false" />
+					<record indx="1" sort_disabled="false" />
+				</list>
+			</widget>
+		</container>
+	</container>
+
+</panel>

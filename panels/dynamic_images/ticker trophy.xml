@@ -1,0 +1,80 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- Grass image -->
+	<widget class="picture" id="bgim" file="photos/dynamic/ticker trophy/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+	<!-- Ticker tape coloured to teams colours -->
+	<container class="client_object_viewer_xml_panel" id="ticT">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<!-- PROP_TEAM -->
+		<record id="object_property" get_property="Ttea" set_property="objt"/>
+
+		<widget class="picture" file="photos/dynamic/ticker trophy/ticker back" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<record id="object_property">
+				<list id="get_properties">
+					<!-- PROP_TEAM_FOREGROUND_COLOUR1 -->
+					<record get_property="oPCn" set_property="rrep"/>
+					<!-- PROP_TEAM_BACKGROUND_COLOUR1 -->
+					<record get_property="oSCn" set_property="brep"/>
+				</list>
+			</record>
+		</widget>
+	</container>
+
+
+
+	<!-- Trophy Image -->
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-1, -9, -1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="spacer" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1, -6, -1" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<widget class="spacer" />
+			<container>
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<widget class="picture" image_alignment="centre_x,bottom" scale_picture="true" keep_aspect_ratio="true" file="pictures/trophies/default/shadow"/>
+
+				<widget class="comp_award_trophy_picture" image_alignment="centre_x,bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+					<!-- PROP_COMPETITION -->
+					<record id="object_property" get_property="comp" set_property="objt"/>
+				</widget>
+			</container>
+			<widget class="spacer" />
+		</container>
+
+		<widget class="spacer" />
+
+	</container>
+
+	<!-- Ticker tape coloured to teams colours -->
+	<container class="client_object_viewer_xml_panel">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<!-- PROP_TEAM -->
+		<record id="object_property" get_property="Ttea" set_property="objt"/>
+
+		<widget class="picture" file="photos/dynamic/ticker trophy/ticker" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<record id="object_property">
+				<list id="get_properties">
+					<!-- PROP_TEAM_FOREGROUND_COLOUR1 -->
+					<record get_property="Tfc1" set_property="rrep"/>
+					<!-- PROP_TEAM_BACKGROUND_COLOUR1 -->
+					<record get_property="Tbc1" set_property="brep"/>
+				</list>
+			</record>
+		</widget>
+	</container>
+
+	<!-- ticker shading -->
+	<widget class="picture" id="bgim" file="photos/dynamic/ticker trophy/ticker shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+</panel>

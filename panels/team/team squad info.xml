@@ -1,0 +1,64 @@
+<panel>
+	<animation class="position_animation" />
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+	<container class="collapsable_box" id="tstb" save_default_state="true" save_session_state="true" allow_single_bar_click="true" disable_animations="true" >
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+		<layout class="arrange_horizontal_attachment" layout="-1, -2" gap="10"/>
+
+		<record id="opened_event" event_id="tsiO" />
+		<record id="closed_event" event_id="tsiC" />
+
+		<!-- buttons area -->
+		<container id="btna" embed_in_frame="true" hidden="false" >
+			<attachment_group class="title_embedded_panel_right" horizontal_offset="35" horizontal_gap="10" vertical_inset="3" />
+
+			<widget class="check_box" id="ftlb" auto_size="horizontal" select_event="exft" icon_alignment="left, centre_y" alignment="right, centre_y" embed_in_frame="true" navigation_focus_target="true" >
+				<translation id="text" translation_id="480348" type="use" value="Exclude future transfers out[COMMENT: AREA: Squad selection Info Panel; SUB-AREA: Tickbox label; FR: 16179; TONE: Formal; CHARLIMIT: None]" />
+			</widget>
+		</container>
+
+		<container class="table" id="mist" mode="fill_rows" auto_size_rows="true" fixed_size_rows="false" layout="35, 20, -1" row_spacing="6">
+			<flags id="auto_size" value="vertical" />
+
+			<list id="column_widget_properties">
+				<record index="0" id="icon" auto_size="all" />
+				<record index="1" id="tkcr" image_alignment="centre" />
+				<record index="2" id="rule" alignment="left,centre_y" spec="text" multiline="true" />
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="icon" alignment="left,centre_y" />
+				<record index="1" id="tkcr" />
+				<record index="2" id="rule" alignment="left,centre_y" />
+			</list>
+		</container>
+
+		<container class="table" id="tsit" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" layout="35, 20, 50, 25, 15, -1, 20" row_spacing="6">
+			<flags id="auto_size" value="vertical" />
+
+			<list id="column_widget_properties">
+				<record index="0" id="icon" auto_size="all" />
+				<record index="1" id="tkcr" image_alignment="centre" />
+				<record index="2" id="prog" auto_size="all" />
+				<record index="3" id="valu" alignment="centre_y" spec="text" colour="selection" multiline="false" style="bold" />
+				<record index="4" id="divi" alignment="centre_x,centre_y"/>
+				<record index="5" id="rule" alignment="left,centre_y" spec="text" multiline="true" />
+				<record index="6" id="warn" />
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="icon" alignment="left,centre_y" />
+				<record index="1" id="tkcr" />
+				<record index="2" id="prog" />
+				<record index="3" id="valu" />
+				<record index="4" id="divi" />
+				<record index="5" id="rule" alignment="left,centre_y" />
+				<record index="6" id="warn" />
+			</list>
+		</container>
+	</container>
+</panel>

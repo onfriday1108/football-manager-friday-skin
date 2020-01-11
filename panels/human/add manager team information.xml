@@ -1,0 +1,217 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top, extend" gap="5" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<!-- Header with team name and bg colour -->
+	<container height="100" id="Thed" background_animator_duration="0.2">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<layout class="arrange_horizontal_attachment" layout="70, -1, 140" gap="10" offset="10" />
+
+		<!-- Set background colour to team colour -->
+		<record id="object_property">
+			<integer id="get_property" value="oPCn" />
+			<integer id="set_property" value="bkcl" />
+			<boolean id="dont_set_object" value="true" />
+		</record>
+
+		<!-- Team badge -->
+		<widget class="object_portrait_picture" id="Tbdg" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true" height="30" width="30">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="15" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+		</widget>
+
+		<!-- Team name and media prediction -->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="30" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical" gap="4" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" alignment="right, extend" gap="4" offset="0" />
+
+				<!-- Team name -->
+				<widget class="team_button" id="temN" icon_enabled="false" auto_size="vertical" size="14" style="semi_bold" force_draw_as_enabled="true">
+					<record id="object_property">
+						<list id="get_properties">
+							<record get_property="objt" dont_set_object="true" />
+							<record get_property="oSCn" set_property="colr" dont_set_object="true" />
+						</list>
+					</record>
+				</widget>
+
+				<!-- View squad -->
+				<widget class="button" id="vsqd" click_event="tmin" auto_size="all">
+          <record id="object_property">
+            <list id="get_properties">
+              <record get_property="oSCn" set_property="colr" dont_set_object="true" />
+              <record get_property="oSCn" set_property="rrep" dont_set_object="true" />
+            </list>
+          </record>
+					<translation id="text" translation_id="320409" type="use" value="View Squad[COMMENT: add manager panel; button text; view selected team's squad]" />
+				</widget>
+			</container>
+
+			<!-- Predicted finish text -->
+			<widget class="media_expectation_text" id="mpre" auto_size="vertical" size="10" force_draw_as_enabled="true">
+				<translation id="format" translation_id="352187" type="use" value="Predicted to finish [%number#1-nth][COMMENT: media predicted position. ie 4th]" />
+				<record id="object_property">
+					<list id="get_properties">
+						<record get_property="CmeD" dont_set_object="true" />
+						<record get_property="oSCn" set_property="colr" dont_set_object="true" />
+					</list>
+				</record>
+			</widget>
+		</container>
+
+		<container id="tiki" width="140">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!-- Instead of just aligning right we need to do some crazy layout because they overlap and we want the drawing order to be home away, etc -->
+			<widget class="kit_picture" id="T_tk" kit_id="2" scale_picture="true" keep_aspect_ratio="true" width="80" image_alignment="centre" always_use_latest_object_list="true">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+			</widget>
+			<widget class="kit_picture" id="T_ak" kit_id="1" scale_picture="true" keep_aspect_ratio="true" width="80" image_alignment="centre" always_use_latest_object_list="true">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="30" />
+			</widget>
+			<widget class="kit_picture" id="T_hk" kit_id="0" scale_picture="true" keep_aspect_ratio="true" width="80" image_alignment="centre" always_use_latest_object_list="true">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="60" />
+			</widget>
+		</container>
+
+	</container>
+
+	<container class="main_box" id="fiCO" height="100" red_replacement="dark_box_background">
+		<translation id="title" translation_id="395022" type="use" value="Fantasy Club Information[COMMENT: FR 8517, title of a section, displaying Squad Budget and Squad Size]" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="client_object_label_value_table" id="fCIN">
+			<record id="table_properties">
+				<flags id="mode" value="fill_rows, stripe_rows" />
+				<boolean id="auto_size_rows" value="true" />
+				<boolean id="fixed_size_rows" value="false" />
+				<flags id="auto_size" value="none" />
+				<string id="layout" value="-3, -4" />
+				<integer id="row_spacing" value="0" />
+				
+				<list id="column_widget_properties">
+					<record index="0" alignment="left, centre_y" />
+					<record index="1" alignment="left, centre_y" auto_size="vertical" spec="text" colour="selection" />
+				</list>
+
+				<list id="column_table_properties">
+					<record index="0">
+						<integer id="left" value="8" />
+						<boolean id="sort_disabled" value="true" />
+					</record>
+					<record index="1">
+						<boolean id="sort_disabled" value="true" />
+						<flags id="alignment" value="left, centre_y" />
+						<integer id="top" value="2" />
+						<integer id="bottom" value="2" />
+					</record>
+				</list>
+			</record>
+
+			<!--this list contains the property ids you want to display in the table - if you omit it, the table will attempt to display all properties in the supplied object-->
+			<list id="viewed_property_ids">
+				<integer value="sqBD" />
+				<integer value="sqSI" />
+			</list>
+		</widget>
+	</container>
+
+	<container class="tabbed_container" id="tabs" default_item="info">
+		<!-- Information -->
+		<container id="info">
+			<translation id="title" translation_id="292589" type="use" value="Information[COMMENT: top level menu title for team information screens]" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container>
+				<!--<layout class="arrange_vertical_attachment" alignment="top" offset="0" horizontal_alignment="horizontal"/>-->
+			<layout class="arrange_vertical_attachment" alignment="bottom, extend" gap="6" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="client_object_label_value_table" id="infp">
+					<!--this record contains any properties you want to pass on to the table-->
+					<record id="table_properties">
+						<flags id="mode" value="fill_rows, stripe_rows" />
+						<boolean id="auto_size_rows" value="true" />
+						<boolean id="fixed_size_rows" value="false" />
+						<flags id="auto_size" value="none" />
+
+						<string id="layout" value="-3,-4" />
+						<integer id="row_spacing" value="0" />
+						<list id="column_widget_properties">
+							<record index="0" alignment="left, centre_y" />
+							<record index="1" alignment="left, centre_y" auto_size="vertical" spec="text" colour="selection" />
+						</list>
+
+						<list id="column_table_properties">
+							<record index="0">
+								<integer id="left" value="8" />
+								<boolean id="sort_disabled" value="true" />
+							</record>
+							<record index="1">
+								<boolean id="sort_disabled" value="true" />
+								<flags id="alignment" value="left, centre_y" />
+								<integer id="top" value="2" />
+								<integer id="bottom" value="2" />
+							</record>
+						</list>
+					</record>
+
+					<!--this list contains the property ids you want to display in the table - if you omit it, the table will attempt to display all properties in the supplied object-->
+					<list id="viewed_property_ids">
+						<integer value="Cprs" />
+						<integer value="Crsc" />
+						<integer value="TCnn" />
+						<integer value="Nffr" />
+						<integer value="Nlan" />
+						<integer value="CStT" />
+						<integer value="CTPl" />
+						<integer value="CmpM" />
+						<integer value="CfiD" />
+						<integer value="Tsta" />
+						<integer value="TstD" />
+						<integer value="TfcD" />
+						<integer value="DAfd" />
+						<integer value="TytD" />
+						<integer value="TsfD" />
+						<integer value="Ccon" />
+						<integer value="Tldr" />
+						<!--<integer value="CmeD"/>-->
+						<integer value="Tptd" />
+						<!--<integer value="Ncac"/>-->
+						<integer value="NrgR" />
+						<integer value="Ncni" />
+						<integer value="Nafy" />
+						<integer value="Nfay" />
+						<integer value="Nfdy" />
+					</list>
+				</widget>
+
+				<widget class="horizontal_divider" height="2" />
+
+				<widget class="text" id="summ" colour="title" font="title" auto_size="vertical">
+					<translation id="text" translation_id="491926" type="use" value="Club Culture[COMMENT: AREA: Club vision panel; SUB-AREA: Club culture sub-panel heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the club culture section of the club vision panel, outlines the key objectives in the overall running of the club]" />
+				</widget>
+				
+				<widget class="table" id="clcu" layout="30, -1" mode="fill_rows, stripe_rows" auto_size_rows="false" fixed_size_rows="true" row_height="26" row_spacing="4" auto_size="vertical">
+					<list id="column_widget_properties">
+						<record index="0" alignment="centre" />
+						<record index="1" alignment="left, centre_y" />
+					</list>
+				</widget>
+			</container>
+
+		</container>
+
+		<!-- League History graph -->
+		<container class="club_league_history_graph" id="clhg" file="club/club league history graph no buttons">
+			<translation id="title" translation_id="229719" type="use" value="History" />
+		</container>
+
+	</container>
+
+</panel>

@@ -1,0 +1,96 @@
+<!-- scout assignments panel -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<container class="main_box" id="subs">
+
+		<layout class="arrange_vertical_attachment" offset="0" layout="-1,22,22" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<!-- table containing assignments list-->
+		<widget class="table" id="astb" layout="-8,-6,-4,-4,-4,-3" select_event="slas" row_height="22" save_session_state="true">
+			<flags id="mode" value="fill_rows, stripe_rows, show_bullets, select_rows, select_multiple, dont_allow_empty_selection" />
+
+			<boolean id="fixed_size_rows" value="false" />
+			<boolean id="auto_size_rows" value="true" />
+			<boolean id="all_content_same_height" value="false" />
+
+			<list id="headings">
+				<record alignment="left,centre_y" column="0">
+					<translation id="text" translation_id="251903" type="use" value="Assigned[COMMENT: scout assignments table; column header for nation/region/etc]" />
+				</record>
+				<record alignment="left,centre_y" column="1">
+					<translation id="text" translation_id="251904" type="use" value="Status[COMMENT: scout assignments table; column header for nation/region/etc]" />
+				</record>
+				<record alignment="left,centre_y" column="2">
+					<translation id="text" translation_id="251905" type="use" value="Start Date[COMMENT: scout assignments table; column header for nation/region/etc]" />
+				</record>
+				<record alignment="left,centre_y" column="3">
+					<translation id="text" translation_id="255082" type="use" value="Resume Date[COMMENT: scout assignments table; column header for nation/region/etc]" />
+				</record>
+				<record alignment="left,centre_y" column="4">
+					<translation id="text" translation_id="255373" type="use" value="Duration[COMMENT: scout assignments table; column header for nation/region/etc]" />
+				</record>
+				<record alignment="left,centre_y" column="5">
+					<translation id="text" translation_id="257328" type="use" value="Reports[COMMENT: scout assignments table; column header for nation/region/etc]" />
+				</record>
+			</list>
+
+			<record id="default_properties">
+				<flags id="alignment" value="left,centre_y" standard_spec="text"/>
+			</record>
+
+			<list id="column_widget_properties">
+				<record indx="0">
+					<flags id="algn" value="left,centre_y" />
+					<flags id="auto_size" value="vertical" />
+				</record>
+				<record indx="1">
+					<flags id="algn" value="left,centre_y" />
+					<flags id="auto_size" value="vertical" />
+				</record>
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0">
+					<flags id="algn" value="left,centre_y" />
+				</record>
+				<record indx="1">
+					<flags id="algn" value="left,centre_y" />
+				</record>
+			</list>
+
+		</widget>
+
+		<!-- container storing add and remove buttons-->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+
+			<!-- add button -->
+			<widget class="primary_button" id="addb" disabled="true" click_event="asss" auto_size="all">
+				<translation id="text" translation_id="257329" type="use" value="Add New Assignment[COMMENT: team scouting panel; button for adding a new assignment]" />
+			</widget>
+			<widget class="button" id="remb" disabled="true" click_event="rema" auto_size="all">
+				<translation id="text" translation_id="251907" type="use" value="Remove[COMMENT: team scouting panel; button for adding a new assignment]" />
+			</widget>
+			<widget class="button" id="resb" disabled="true" click_event="ress" auto_size="all">
+				<translation id="text" translation_id="255452" type="use" value="Restart[COMMENT: team scouting panel; button for restarting a new assignment]" />
+			</widget>
+			<widget class="button" id="repb" disabled="true" click_event="repa" auto_size="all">
+				<translation id="text" translation_id="257330" type="use" value="Reports[COMMENT: team scouting panel; button for adding a new assignment]" />
+			</widget>
+		</container>
+
+		<!-- container storing add and remove buttons-->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="6" />
+
+			<widget class="picture" id="pict" file="icons/16px/warning" auto_size="all" cached="true" hidden="true" />
+			<widget class="label" id="advt" auto_size="horizontal" />
+
+		</container>
+	</container>
+</panel>

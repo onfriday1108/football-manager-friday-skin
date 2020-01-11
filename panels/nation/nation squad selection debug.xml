@@ -1,0 +1,121 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+			<widget class="label" auto_size="all">
+				<string id="text" value="Team" />
+			</widget>
+
+			<widget class="popup_button" id="tspo" select_event="stce" auto_size="vertical"/>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-2,-3" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+				<container class="main_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<widget class="text" auto_size="all" id="sslb"/>
+
+					<widget class="table" id="sstb" mode="fill_rows, stripe_rows ,show_bullets, select_rows, keyboard"  select_event="ssce" layout="-1, -1" auto_size_rows="true">
+
+						<!-- headings -->
+						<list id="headings">
+							<record alignment="left,centre_y">
+								<string id="text" value="Slot"/>
+							</record>
+							<record alignment="left,centre_y">
+								<string id="text" value="Selected Player"/>
+							</record>
+						</list>
+
+					</widget>
+
+				</container>
+
+				<container class="main_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<widget class="label" auto_size="all">
+						<string id="text" value="Players Considered For Selected Slot" />
+					</widget>
+
+					<widget class="table" id="sctb" mode="fill_rows, stripe_rows" layout="-4, -3, -2, -2, -1, -1, -1, -1" auto_size_rows="true">
+
+						<!-- headings -->
+						<list id="headings">
+							<record alignment="left,centre_y">
+								<string id="text" value="Person"/>
+							</record>
+							<record alignment="left,centre_y">
+								<string id="text" value="Position"/>
+							</record>
+							<record alignment="left,centre_y">
+								<string id="text" value="Overall Score"/>
+							</record>
+              <record alignment="left,centre_y">
+                <string id="text" value="HR"/>
+              </record>
+							<record alignment="left,centre_y">
+								<string id="text" value="CA"/>
+							</record>
+							<record alignment="left,centre_y">
+								<string id="text" value="PA"/>
+							</record>
+							<record alignment="left,centre_y">
+								<string id="text" value="PPA"/>
+							</record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Age"/>
+              </record>
+						</list>
+
+						<list id="column_table_properties">
+							<record indx="0" id="pers" />
+							<record indx="1" id="posi" />
+							<record indx="2" id="ovsc" />
+              <record indx="3" id="hmrp" />
+							<record indx="4" id="cuab" />
+							<record indx="5" id="poab" />
+							<record indx="6" id="ppab" />
+              <record indx="7" id="page" />
+						</list>
+
+					</widget>
+
+				</container>
+
+
+			</container>
+
+			<container class="main_box">
+				<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal"  />
+
+				<widget class="label" auto_size="vertical">
+					<string id="text" value="Unavaliable Players Considered" />
+				</widget>
+
+				<widget class="text" id="unav" auto_size="vertical"/>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

@@ -1,0 +1,26 @@
+<!-- A base panel dynamic images with single centrally aligned logo-->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- Background image layer -->
+	<container id="laye">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<!-- Background image -->
+		<widget class="picture" id="bgim" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false"/>
+	</container>
+
+	<container id="horC">
+		<layout class="arrange_horizontal_attachment" layout="-2, -4, -2" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!-- Logo/Portrait -->
+		<widget class="spacer" />
+
+		<widget class="object_portrait_picture" id="logo" image_alignment="centre_x,bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false"/>
+
+		<widget class="spacer" />
+
+	</container>
+
+</panel>

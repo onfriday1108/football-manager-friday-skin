@@ -1,0 +1,16 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+	
+	<string id="skin_style" value="subtle box"/>
+
+	<widget class="text" id="rltp" auto_size="all" alignment="left, bottom" font="title" size="small" colour="faded text"/>
+	
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" vertical_offset="0" vertical_alignment="bottom" horizontal_inset="0" horizontal_gap="2"/>
+		
+		<widget class="text" id="rlvl" auto_size="all" alignment="left, bottom" style="bold" size="xlarge"/>
+		<widget class="spacer" width="4"/>
+		<widget class="picture" id="info" file="icons/16px/info" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="14" height="22" colour="white"/>
+		<widget class="text" id="cuvl" auto_size="horizontal" height="22" alignment="left, centre_y"/>
+	</container>
+</panel>

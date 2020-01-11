@@ -1,0 +1,27 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<widget class="text" auto_size="vertical" size="11" font="panel_title" >
+		<translation id="text" translation_id="343652" type="use" value="Exclude[COMMENT: offer to clubs panel title; exclusion options for offer to clubs are contained within]" />
+	</widget>
+
+	<widget class="check_box" id="ercw" click_event="exrt">
+		<translation id="text" translation_id="344719" type="use" value="Rival Clubs[COMMENT: offer to clubs; exclude rival clubs check box, use top 10 matches]" />
+	</widget>
+
+	<widget class="check_box" id="efcw" click_event="exfc">
+		<translation id="text" translation_id="343719" type="use" value="Foreign Clubs[COMMENT: offer to clubs; exclude foreign clubs check box, use top 10 matches]" />
+	</widget>
+
+	<widget class="check_box" id="edcw" click_event="exdc">
+		<translation id="text" translation_id="343570" type="use" value="Domestic Clubs[COMMENT: offer to clubs; exclude domestic clubs check box, use top 10 matches]" />
+	</widget>
+
+	<widget class="check_box" id="encw" click_event="exnt">
+		<translation id="text" translation_id="420723" type="use" value="Clubs Outside Top Divisions[COMMENT: FR 7556 offer to clubs; exclude clubs outside top divisions check box]" />
+	</widget>
+
+</panel>

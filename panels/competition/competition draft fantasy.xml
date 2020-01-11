@@ -1,0 +1,290 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<string id="eslf" value="icons/custom/staff/little guy empty"/>
+	<string id="eslc" value="staff empty slot colour"/>
+
+	<boolean id="viewing_old_draft" value="false"/>
+	<boolean id="save_immediate_state" value="true"/>
+	
+	<container id="shDS" height="60">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<container class="main_box_no_margin">
+			<layout class="arrange_horizontal_attachment" layout="480, -1" offset="0" gap="-8"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<!--next round-->
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="260, -1" offset="8" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+					<widget class="spacer"/>
+
+					<container class="main_box" appearance="boxes/custom/interface/draft bar/next/paper">
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+						<!--shield-->
+						<widget class="object_portrait_picture" id="nrSh" width="35" scale_picture="true" image_alignment="centre" disabled="true" blend_mode="luminosity" transparency="0.4"/>
+
+						<!--draft info-->
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+							<!--round-->
+							<widget class="text" font="title" size="small" auto_size="vertical" colour="faded text">
+								<translation id="text" translation_id="255268" type="use" value="Next[COMMENT: wizard dialog: default next button text]"/>
+							</widget>
+							<!--Team-->
+							<widget class="team_button" icon_enabled="false" id="nrTm" auto_size="vertical" style="bold" colour="faded text"/>
+							<!--Budget-->
+							<widget class="text" id="nrBg" size="small" auto_size="vertical" colour="faded text"/>
+						</container>
+					</container>
+
+				</container>
+
+				<!--current round-->
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="80, 210, -1" offset="8" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+					<widget class="spacer"/>
+
+					<container class="main_box" appearance="boxes/custom/interface/draft bar/current/paper">
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+						<!--shield-->
+						<widget class="object_portrait_picture" id="crSh" width="35" scale_picture="true" image_alignment="centre"/>
+
+						<!--draft info-->
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+							<!--round-->
+							<widget class="text" id="crRn" font="title" size="small" auto_size="vertical" colour="text"/>
+							<!--Team-->
+							<widget class="team_button" icon_enabled="false" id="crTm" auto_size="vertical" style="bold"/>
+							<!--Budget-->
+							<widget class="text" id="crBg" size="small" auto_size="vertical"/>
+						</container>
+					</container>
+
+					<widget class="spacer"/>
+				</container>
+
+				<!--timer-->
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="120, -1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+					<container class="main_box" appearance="boxes/custom/interface/draft bar/clock/paper">
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+
+						<widget class="text" alignment="left,top" auto_size="vertical" style="bold" font="title">
+							<layout class="stick_to_sides_attachment" alignment="left" inset="4"/>
+							<translation id="text" translation_id="227998" type="use" value="Draft"/>
+						</widget>
+
+						<container height="32">
+							<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="2"/>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2"/>
+
+							<widget class="picture" width="32" file="icons/48px/time" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" red_replacement="white"/>
+							<widget class="text" id="timi" alignment="left,centre_y" size="xlarge" style="bold" colour="white"/>
+						</container>
+					</container>
+
+					<widget class="spacer"/>
+				</container>
+			</container>
+
+			<!--last round details-->
+			<widget class="draft_fantasy_picks_panel" id="drfp" file="competition/draft picks fantasy draft panel"/>
+		</container>
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4"/>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,260" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<container class="main_box">
+				<layout class="arrange_vertical_attachment" layout="40,-1" offset="0" gap="8"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<!--Tab headers-->
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+					<widget class="radio_button" id="shtT" auto_size="horizontal" height="35" appearance="tabs/standard/normal/top/button" icon="" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/26px/add shortlist" secondary_icon_alignment="left">
+						<translation id="text" translation_id="227994" type="use" value="Shortlist"/>
+						<record id="click_event">
+							<integer id="event_id" value="sVIC"/>
+							<integer id="index" value="1"/>
+						</record>
+					</widget>
+
+					<widget class="radio_button" id="fndT" icon="" appearance="tabs/standard/normal/top/button" secondary_icon_enabled="true" show_button_appearance="true" secondary_icon="icons/26px/search" secondary_icon_alignment="left" auto_size="horizontal" height="35" selected="true">
+						<translation id="text" translation_id="447505" type="use" value="Find Player[COMMENT:Fantasy draft tab header - player search]"/>
+						<record id="click_event">
+							<integer id="event_id" value="sVIC"/>
+							<integer id="index" value="0"/>
+						</record>
+					</widget>
+
+					<widget class="radio_button" id="temT" icon="" appearance="tabs/standard/normal/top/button" secondary_icon_enabled="true" show_button_appearance="true" secondary_icon="icons/26px/squad" secondary_icon_alignment="left" auto_size="horizontal" height="35">
+						<translation id="text" translation_id="392666" type="use" value="Current Squad[COMMENT: fantasy draft screen; section showing current players chosen]"/>
+						<record id="click_event">
+							<integer id="event_id" value="sVIC"/>
+							<integer id="index" value="2"/>
+						</record>
+					</widget>
+				</container>
+
+				<!--Tab containers-->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<widget class="person_search_panel" file="person/person search panel fantasy draft" pAFD="true" id="dfFS" type="4" select_event="psSE"/>
+					<widget class="person_search_panel" file="person/person search panel fantasy draft" id="shTL" pAFD="true"  hidden="true">
+						<integer id="type" value="0"/>
+					</widget>
+					<widget class="person_search_panel" file="person/person search panel fantasy draft with player cards" pDPC="true" id="crsq" hidden="true">
+						<integer id="type" value="9"/>
+					</widget>
+				</container>
+
+
+			</container>
+
+			<!--pitch and Draft details-->
+			<container class="main_box">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2" apply_to_children="true"/>
+				<layout class="arrange_vertical_attachment" layout="80,-1" offset="0" gap="4"/>
+
+				<!--Budget and current spend-->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true"/>
+					<layout class="arrange_vertical_attachment" layout="-1,10,-1" gap="4"/>
+					
+					<!--total budget-->
+					<widget class="text" id="ttBg" size="large" alignment="centre"/>
+
+					<!--total vs spent graph-->
+					<widget class="horizontal_cash_percentage_bar" bar_chart_label_type="bclN" bar_value_colour="tactical_familiarity_colour_1" label_width="0" id="fich" alignment="centre" width="220"/>
+
+					<!-- Remaining-->
+					<widget class="text" id="ttRm" colour="title" size="large" alignment="centre"/>
+
+				</container>
+				<!--Pitch-->
+				<container class="main_contrast_box" red_replacement="pitch_box_background">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="-8"/>
+					
+					<!--little guys-->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true"/>
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="4" gap="4"/>
+						<layout class="arrange_vertical_attachment" layout="26,-1,25" offset="4" gap="4"/>
+
+						<!--Current Squad Size with button-->
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+							<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0"/>
+							<widget class="button" id="lgLn" auto_size="horizontal" font="text" style="bold" colour="text" appearance="labels/standard" blue_replacement="text">
+								<record id="click_event">
+									<integer id="event_id" value="sVIC"/>
+									<integer id="index" value="2"/>
+								</record>
+							</widget>
+						</container>
+
+						<!--Little guys container-->
+						<container class="horizontal_arrange_container" id="harg" wrap="true" alignment="left" offset="0" inset="0" gap="0" auto_size="vertical"/>
+
+						<!--Max Squad Size label-->
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+							<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0"/>
+							<widget class="text" id="LgLb" font="text" size="normal" auto_size="horizontal" colour="faded text"/>
+						</container>
+					</container>
+
+					<container id="CRSq" class="team_report_squad_depth_edit_panel" file="team/team report squad depth fantasy draft"/>
+				</container>
+			</container>
+		</container>
+
+		<container height="34">
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<container class="draft_pick_buttons_panel" id="dpbp" file="none" height="30">
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" group="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="right" gap="4" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+				<widget class="button" id="chpl" auto_size="horizontal" click_event="chpl">
+					<translation id="text" translation_id="247192" type="use" value="Change Player"/>
+					<attachment class="flash_colour_attachment" auto_start="true">
+						<colour id="first_colour" name="primary_button"/>
+						<colour id="second_colour" name="teal a700"/>
+						<flags id="colour_property" value="bkcl"/>
+					</attachment>
+				</widget>
+
+				<widget class="button" id="auto" auto_size="horizontal" click_event="auto">
+					<translation id="text" translation_id="329715" type="use" value="Auto-Pick[COMMENT: button label used to auto-pick penalty takers for a penalty shootout]"/>
+				</widget>
+
+				<widget class="button" id="sthp" auto_size="horizontal" click_event="sthp">
+					<translation id="text" translation_id="331958" type="use" value="Skip to your next pick[COMMENT: MLS draft panel; button label for skipping to humans next pick]"/>
+				</widget>
+
+				<widget class="primary_icon_tick_button" id="fini" click_event="pafn" auto_size="horizontal">
+					<translation id="text" translation_id="360153" type="use" value="Complete Draft[COMMENT: FR #7452; draft screen; button for skipping to the end of the draft once the user has no more picks; Complete means to finish the draft]"/>
+				</widget>
+
+				<container id="cntC"  hidden="true" >
+					<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="4" group="0"/>
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+
+					<widget class="icon_button" id="cont" hidden="true" auto_size="horizontal" icon="icons/16px/continue" icon_alignment="right,centre_y">
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+						<record id="click_event" event_id="CONT"/>
+						<attachment class="get_global_attachment" get_property="ahph" set_property="hint"/>
+						<attachment class="flash_colour_attachment" auto_start="true">
+							<colour id="first_colour" name="primary_button"/>
+							<colour id="second_colour" name="teal a700"/>
+							<flags id="colour_property" value="bkcl"/>
+						</attachment>
+						<translation id="text" translation_id="243222" type="use" value="Continue"/>
+					</widget>
+
+					<widget class="icon_button" auto_size="horizontal" height="10" size="7" alignment="centre" style="semi_bold" appearance="buttons/custom/network game/button" font="fonts/button" icon="icons/custom/network game/users">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+						<attachment class="get_global_attachment" get_property="nhmw" set_property="text"/>
+						<attachment class="get_global_attachment" get_property="ahph" set_property="hint"/>
+						<attachment class="test_global_attachment" get_property="nhmw" mode="0" value="0" set_property="hidn"/>
+						<event id="click_event" event_id="STAT" event_target="scrC"/>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

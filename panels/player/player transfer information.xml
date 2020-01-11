@@ -1,0 +1,130 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0">
+		<global id="gap" name="ui.main_contrast_box_gap"/>
+	</layout>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- Top panel with detailed contract info -->
+	<container class="inner_subtle_box" height="120">
+		<layout class="arrange_horizontal_attachment" layout="140, 4, -1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!-- Player portrait -->
+		<widget class="object_portrait_picture" id="port" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,bottom" />
+
+		<widget class="picture" file="dividers/standard/horizontal/line_vertical" />
+
+		<!-- The contract info for all contracted clubs -->
+		<container class="horizontal_arrange_container" layout="-8,-9,-9" inset="0" offset="0" gap="2">
+
+			<container class="vertical_arrange_container" inset="0" offset="2" gap="2">
+				
+				<!-- Player value -->
+				<widget class="label" font="label"  auto_size="vertical">
+					<translation id="text" translation_id="227806" type="use" value="Value" />
+				</widget>
+				<widget class="text" id="valT" font="value" auto_size="vertical" size="small"  multiline="true"/>
+
+				<container height="6"/>
+
+				<!-- Player ownership / co-ownership and loaned status -->
+				<widget class="label" id="ownL" font="label"  auto_size="vertical" />
+				<widget class="club_button" id="ownT" font="value" auto_size="vertical" size="small"  multiline="true"/>
+				<container height="4"/>
+				<widget class="text" id="bosT" auto_size="vertical" colour="accent" font="title" size="small" multiline="true" hidden="true" />
+				<widget class="text" id="loaT" auto_size="vertical" colour="accent" font="title" size="small" multiline="true" hidden="true" />
+			</container>
+
+			<container class="vertical_arrange_container" inset="0" offset="2" gap="2">
+
+				<!-- Contract wage and expiry -->
+				<widget class="label" font="label"  auto_size="vertical">
+					<translation id="text" translation_id="230163" type="use" value="Contract" />
+				</widget>
+				<widget class="text" id="conT" font="value" auto_size="vertical" size="small"  multiline="true"/>
+
+				<container height="18" />
+
+				<!-- Minimum fee release -->
+				<widget class="label" id="minL" font="label"  auto_size="vertical">
+					<translation id="text" translation_id="227379" type="use" value="Minimum Fee Release Clause" />
+				</widget>
+				<widget class="text" id="minT" font="value" auto_size="vertical" size="small"  multiline="true"/>
+			</container>
+
+      <container class="vertical_arrange_container" layout="40,-1" gap="10">
+        <!-- Player rights -->
+        <container class="vertical_arrange_container" auto_size="vertical" >
+          <widget class="label" id="rigL" font="label"  auto_size="vertical" />
+				  <widget class="club_button" id="rigT" font="value" auto_size="vertical" size="small"  multiline="true"/>
+        </container>
+        
+        <!-- Drafted -->
+        <container class="vertical_arrange_container" layout="15,-1">
+          <widget class="label" id="drfL" font="label"  auto_size="vertical" />
+          <container class="scrolling_box">
+            <container class="vertical_arrange_container" auto_size="vertical" alignment="top, extend" >
+				      <widget class="club_button" id="drfT" font="value" auto_size="vertical" size="small"  multiline="true"/>
+		        </container> 
+          </container>
+        </container>
+      </container>
+    </container>
+	</container>
+
+	<!-- Main panel and sidebar -->
+	<container draw_vertical_dividers="true">
+		<layout class="arrange_horizontal_attachment" layout="-2,-1" offset="0">
+			<global id="gap" name="ui.main_box_gap"/>
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!-- Bottom section with a tab for team that may have a contract with the player -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- These containers are filled in code. There will be one panel for each of the players contracts (up to 3 for a player that is co-owned and out on loan) -->
+			<!-- This class will be used for contracts with AI teams:-->
+			<!--<container file="player/player transfer information general"/>-->
+			<!-- And this class will be used for contracts with the human's club -->
+			<!--<container class="set transfer status panel"/>-->
+
+			<!-- This container is used if only one team have a contract with the player -->
+			<container class="main_box" id="info" hidden="true" navigation_container="true">
+				<translation id="title" translation_id="251898" type="use" value="Transfer Information[COMMENT: scout report panel box heading]" />
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			</container>
+
+			<!-- This container is used if multiple teams have a contract with the player -->
+			<container class="tabbed_container" id="tabs" hidden="true"/>
+		</container>
+
+		<!-- Right panel with squad selection rules and interest panels -->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container class="main_box" id="rulC" height="150" hidden="true">
+
+				<translation id="title" translation_id="350956" type="use" value="Squad Selection Rules[COMMENT: transfer information; title for sub panel showing rules for selection that applicable to the human's team]" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<container class="scrolling_box">
+					<container id="rulS">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					</container>
+				</container>
+			</container>
+
+			<container class="main_box">
+				<translation id="title" translation_id="316766" type="use" value="Interest[COMMENT: Header for Clubs Interested in Player summary box]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container class="player_transfer_interest_panel" id="Pint" />
+			</container>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,55 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+  <boolean id="should_force_refresh" value="true"/>
+
+  <container class="inner_contrast_box" red_replacement="bg lighter">
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4"/>
+    <layout class="fit_children_attachment" alignment="vertical,fill" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+    <container height="30">
+      <layout class="arrange_horizontal_attachment" layout="22,-1,-1" offset="6"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+      <container/> <!-- spacer to account for lock icon on other items -->
+
+      <widget class="text" id="extx" auto_size="all" style="bold">
+        <translation id="text" translation_id="248397" type="use" value="Players To Exchange"/>
+        <translation id="hint" translation_id="420726" type="use" value="Offer some players from your club in an exchange deal[COMMENT: FR 15637 tooltips for fees and clauses; explanation of players to exchange]"/>
+      </widget>
+
+      <container height="30">
+        <layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0"/>
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+        <widget class="button" id="rmew" click_event="reme" auto_size="all">
+          <translation id="text" translation_id="229716" type="use" value="Remove"/>
+        </widget>
+        <widget class="popup_button" id="adew" select_event="adde" fixed="true" auto_size="all">
+          <translation id="text" translation_id="395006" type="use" value="Add Player[COMMENT: FR 8517 button text for adding a specific player to a fantasy club]"/>
+        </widget>
+        <widget class="popup_button" id="icon" select_event="remf" draw_arrow="false" secondary_icon_enabled="false" icon="icons/16px/remove from list" appearance="buttons/custom/over state only/button" icon_alignment="left" height="30" width="20">
+          <list id="items">
+            <record id="RmvE">
+              <translation id="name" translation_id="229716" type="use" value="Remove"/>
+              <flags id="type" value="ptex"/>
+            </record>
+            <record id="RmcL">
+              <translation id="name" translation_id="376564" type="use" value="Remove and exclude from negotiation[COMMENT: FR9017 Remove and exclude an item from negotiations - transfer offer]"/>
+              <flags id="type" value="ptex"/>
+            </record>
+          </list>
+        </widget>
+      </container>
+
+    </container>
+
+    <widget class="table" id="excl" layout="-1, -1, -1, 24" select_event="sele" auto_size_rows="false" auto_size="vertical" row_spacing="2" row_height="30"/>
+
+   
+  </container>
+
+</panel>

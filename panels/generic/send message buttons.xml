@@ -1,0 +1,12 @@
+<panel>
+	<attachment_group class="button_arrangement_right" />
+
+	<widget class="primary_icon_button" id="smes" auto_size="all" click_event="smes" icon="icons/16px/send message">
+		<translation id="text" translation_id="243376" type="use" value="Send Message" />
+	</widget>
+
+	<widget class="button" id="canc" auto_size="all" click_event="canc">
+		<translation id="text" translation_id="229828" type="use" value="Cancel" />
+	</widget>
+
+</panel>

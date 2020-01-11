@@ -1,0 +1,49 @@
+<panel draw_horizontal_dividers="true">
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="14"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<!-- Duration -->
+	<container class="inner_box" id="lodc" height="55">
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container id="lodu" class="transfer_offer_loan_duration_panel" file="player/transfer offer loan duration inbox panel"/>
+	</container>
+
+	<container id="adop" draw_horizontal_dividers="true">
+		<layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" gap="14"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container class="inner_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<!-- additional fees and loan intentions -->
+			<container class="scrolling_box">
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<widget class="transfer_offer_additional_fees_panel" id="fees" file="player/transfer offer additional fees inbox panel"/>
+					<widget class="transfer_offer_loan_intentions_panel" id="loin" file="player/transfer offer loan intentions inbox panel"/>
+				</container>
+			</container>
+		</container>
+
+		<container class="inner_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<!-- clauses and loan options -->
+			<container class="scrolling_box">
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<widget class="transfer_offer_clauses_panel" id="clau" file="player/transfer offer clauses inbox panel"/>
+					<widget class="transfer_offer_loan_options_panel" id="lopp" file="player/transfer offer loan options inbox panel"/>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

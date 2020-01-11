@@ -1,0 +1,9 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	
+	<widget class="check_box" id="selc" click_event="fCbE" show_button_appearance="true" appearance="buttons/subtle/flex/button" icon_enabled="false" red_replacement="bg accent" />
+	
+	<widget class="text" id="tglB" alignment="left,centre_y" size="small" wants_mouse_events="false" >
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" />
+	</widget>
+</panel>

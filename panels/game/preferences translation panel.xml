@@ -1,0 +1,35 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <container class="main_box">
+      <translation id="title" translation_id="330724" type="use" value="Translation Settings[COMMENT: preferences: profile settings section title]" />
+      <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+      <widget class="game_settings_viewer_panel" id="set1">
+
+        <!--this record contains any properties you want to pass on to the table-->
+        <record id="table_properties">
+          <flags id="mode" value="" />
+          <string id="layout" value="-8,-3,-18" />
+          <string id="row_spacing" value="5" />
+        </record>
+
+        <list id="viewed_property_ids">
+          <symbol value="show_genders" />
+          <symbol value="show_string_ids" />
+          <symbol value="double_width_strings" />
+        </list>
+      </widget>
+
+    </container>
+
+  </container>
+
+  <widget class="preferences_button_panel" />
+</panel>

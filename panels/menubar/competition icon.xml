@@ -1,0 +1,7 @@
+<panel height="36">
+  <translation id="hint" translation_id="313854" type="use" value="Competitions[COMMENT: menu item to allow the user to navigate to a team's competition(s), e.g. go to the Spanish Top Division from the Real Madrid first team page, or go to the Reserves' league from Arsenal Reserves]" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <widget class="picture" id="pict" file="icons/26px/competition" image_alignment="centre" red_replacement="sidebar text"/>
+</panel>

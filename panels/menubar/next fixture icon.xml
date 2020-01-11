@@ -1,0 +1,5 @@
+﻿<panel height="36">
+	<widget class="pie_chart" id="piec" alignment="centre" is_donut_chart="true" donut_line_width="3" colour="sidebar text" size="9.5">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="3"/>
+	</widget>
+</panel>

@@ -1,0 +1,98 @@
+<panel>
+	<flags id="bbgc" value="dark_box_background" /> <!--current assignment background colour-->
+	<flags id="capa" value="buttons/standard/normal/button"/>	<!--current assignment popup button appearance-->
+	<flags id="catc" value="white"/><!--current assignment text colour-->
+	<flags id="cntc" value="faded text"/><!--current assignment text colour when no assignment-->
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+
+	<widget class="table" mode="fill_cells, stripe_rows" id="wasl" fixed_size_rows="false" auto_size_rows="true" layout="-1,140,60,200,150,60,35,140" inset="0" column_spacing="0">
+
+		<boolean id="save_session_state" value="true" />
+		<boolean id="sdst" value="true" />
+
+		<list id="column_table_properties">
+			<record>
+				<flags id="id" value="scou" />
+        <flags id="top" value="4" />
+				<record id="column_heading">
+					<translation id="text" translation_id="227987" type="use" value="Scout" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="0" />
+				</record>
+			</record>
+			<record>
+				<flags id="id" value="prva" />
+				<record id="column_heading">
+					<translation id="text" translation_id="450814" type="use" value="Previous Assignment[COMMENT: FR 21125, scouting centre text showing the previous assignment]" />
+					<flags id="column" value="2" />
+				</record>
+			</record>
+			<record>
+				<flags id="id" value="prvr" />
+
+				<record id="column_heading">
+					<translation id="text" translation_id="334022" type="use" value="Reports[COMMENT: scout table; column header for Reports]" />
+					<translation id="hint" translation_id="333959" type="use" value="Number of Reports[COMMENT: tool-tip heading on scout table]" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="4" />
+				</record>
+			</record>
+			<record>
+				<flags id="left" value="10" />
+				<flags id="id" value="cura" />
+				<flags id="alignment" value="left,centre_y" />
+				<record id="column_heading" show_button_appearance="false" font="title" colour="accent">
+					<translation id="text" translation_id="450815" type="use" value="Current Assignment[COMMENT: FR 21125, scouting centre text showing the current assignment]" />
+					<flags id="alignment" value="centre" />
+					<flags id="column" value="5" />
+				</record>
+			</record>
+			<record>
+				<flags id="id" value="time" />
+				<flags id="alignment" value="left,centre_y" />
+				<record id="column_heading" show_button_appearance="false" font="title">
+					<translation id="text" translation_id="450816" type="use" value="Time Remaining[COMMENT: FR 21125, scouting centre text showing the time remaining on a scouting assignment]" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="6" />
+				</record>
+			</record>
+			<record>
+				<flags id="id" value="curr" />
+				<record id="column_heading" show_button_appearance="false" font="title" column_span="2">
+					<translation id="text" translation_id="334022" type="use" value="Reports[COMMENT: scout table; column header for Reports]" />
+					<translation id="hint" translation_id="333959" type="use" value="Number of Reports[COMMENT: tool-tip heading on scout table]" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="7" />
+				</record>
+			</record>
+			<record>
+				<flags id="id" value="curd" />
+				<flags id="left" value="2" />
+				<flags id="top" value="26" />
+				<flags id="bottom" value="24" />
+			</record>
+			<record>
+				<flags id="id" value="nxta" />
+				<flags id="alignment" value="left,centre_y" />
+        <flags id="left" value="8" />
+				<record id="column_heading">
+					<translation id="text" translation_id="450817" type="use" value="Next Assignment[COMMENT: FR 21125, scouting centre text showing the forthcoming assignment]" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="8" />
+				</record>
+			</record>
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="2" auto_size="none">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+		</list>
+	</widget>
+
+
+</panel>

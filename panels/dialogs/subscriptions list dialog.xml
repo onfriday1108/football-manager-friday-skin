@@ -1,0 +1,13 @@
+<panel width="800">
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="48"/>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4"/>
+
+    <widget class="subscriptions_list_dialog_panel" id="lipp"/>
+  </container>
+
+</panel>

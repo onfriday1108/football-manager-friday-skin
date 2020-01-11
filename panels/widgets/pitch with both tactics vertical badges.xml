@@ -1,0 +1,63 @@
+﻿<panel pitch_instruction_description_font="text" pitch_instruction_description_text_colour="black" display_both_teams_vertical="true">
+	<layout class="arrange_vertical_attachment" alignment="fill" gap="0" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container id="away">
+
+		<!--logo-->
+		<widget class="match_team_logo_picture" id="awLo" team_index="1" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="40" height="40">
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="4" />
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<!--formation name-->
+		<widget class="button" id="afrm" auto_size="all" colour="white" appearance="labels/standard/label" red_replacement="blue grey 900">
+			<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" />
+		</widget>
+	</container>
+
+	<container id="home">
+
+		<!--logo-->
+		<widget class="match_team_logo_picture" id="hoLo" team_index="0" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="40" height="40">
+			<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="4" />
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<!--formation name-->
+		<widget class="button" id="hfrm" auto_size="all" colour="white" appearance="labels/standard/label" red_replacement="blue grey 900">
+			<layout class="stick_to_sides_attachment" alignment="right,bottom" inset="0" />
+		</widget>
+	</container>
+
+	<!-- Tactics icon container -->
+	<container id="rdbt" hidden="true">
+		<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="left,top" inset="4" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
+
+		<widget class="radio_button" appearance="buttons/custom/tactics/pitch switch/left/button" icon="" icon_alignment="right" secondary_icon_enabled="true" secondary_icon="icons/16px/roles" secondary_icon_alignment="centre" id="rldt" height="28" width="35" click_event="RLDT">
+			<translation id="hint" translation_id="383639" type="use" value="Show Role and Duty[COMMENT: hint for a radio button to toggle showing role and duty on the tactics pitch]" />
+		</widget>
+		<!--extra info radio button-->
+		<widget class="radio_button" appearance="buttons/custom/tactics/pitch switch/middle/button" icon="" icon_alignment="right" secondary_icon_enabled="true" secondary_icon="icons/16px/stats" secondary_icon_alignment="centre" id="exin" height="28" width="35" click_event="EXIN">
+			<translation id="hint" translation_id="383638" type="use" value="Show Extra Player Information[COMMENT: hint for a radio button to toggle showing extra player information on the tactics pitch]" />
+		</widget>
+
+		<!--extra info radio button-->
+		<widget class="radio_button" appearance="buttons/custom/tactics/pitch switch/right/button" icon="" icon_alignment="right" secondary_icon_enabled="true" secondary_icon="icons/16px/tactics" secondary_icon_alignment="centre" id="fmmd" height="28" width="35" click_event="FMMD">
+			<record id="secondary_icon_properties" red_replacement="white" />
+			<translation id="hint" translation_id="420756" type="use" value="Show Tactical Familiarity[COMMENT: BN 144236, hint for a radio button to toggle showing tactical familiarity on the tactics pitch]" />
+		</widget>
+	</container>
+</panel>

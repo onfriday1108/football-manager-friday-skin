@@ -1,0 +1,99 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+  <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+  
+  <container class="titled_box">
+    <translation id="title" translation_id="306615" type="use" value="Formats[COMMENT: preferences: formats (date, currency,etc) settings section (short) name]" />
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+    <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    
+    <container id="selected_currency" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="selected_currency" />
+      </list>
+    </container>
+
+    <container id="wage_string_type" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="wage_string_type" />
+      </list>
+    </container>
+
+    <container id="current_temperature" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="current_temperature" />
+      </list>
+    </container>
+
+    <container id="height_scale" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="height_scale" />
+      </list>
+    </container>
+
+    <container id="weight_scale" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="weight_scale" />
+      </list>
+    </container>
+
+    <container id="short_distance_scale" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="short_distance_scale" />
+      </list>
+    </container>
+
+    <container id="long_distance_scale" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="long_distance_scale" />
+      </list>
+    </container>
+
+    <container id="odds_format" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="odds_format" />
+      </list>
+    </container>
+
+    <container id="date_format" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="date_format" />
+      </list>
+    </container>
+
+    <container id="date_separator" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="date_separator" />
+      </list>
+    </container>
+
+    <container id="positive_currency_format" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="positive_currency_format" />
+      </list>
+    </container>
+
+    <container id="negative_currency_format" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="negative_currency_format" />
+      </list>
+    </container>
+
+    <container id="decimal_symbol" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="decimal_symbol" />
+      </list>
+    </container>
+
+    <container id="digit_grouping_symbol" file="game/preferences item"  >
+      <list id="viewed_property_ids">
+        <symbol value="digit_grouping_symbol" />
+      </list>
+    </container>
+
+  </container>
+
+</panel>

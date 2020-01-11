@@ -1,0 +1,42 @@
+<panel>
+	<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="5"/>
+
+  <widget class="horizontal_percentage_bar" id="cbar" width="60" label_width="0" height="15" >
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="colr" />
+          <integer id="set_property" value="bavc" />
+        </record>
+        <record>
+          <integer id="get_property" value="colr" />
+          <integer id="set_property" value="bfCL" />
+        </record>
+        <record>
+          <integer id="get_property" value="Opin" />
+          <integer id="set_property" value="valu" />
+        </record>
+        <record>
+          <integer id="get_property" value="Opih" />
+          <integer id="set_property" value="hint" />
+        </record>
+      </list>
+    </record>
+  </widget>
+  <widget class="text" id="opTx" auto_size="vertical" >
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="phSt" />
+          <integer id="set_property" value="valu" />
+        </record>
+        <record>
+          <integer id="get_property" value="phfl" />
+          <integer id="set_property" value="hint" />
+        </record>
+      </list>
+    </record>
+  </widget>
+</panel>

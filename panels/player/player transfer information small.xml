@@ -1,0 +1,38 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+  
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="icon_box" icon="icons/custom/icon box/transfer">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container height="15">
+			<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="Ptin" section="Ptin" auto_size="horizontal">
+				<translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+			</widget>
+		</container>
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- Transfer status -->
+				<widget class="transfer_status_label" id="trnc" format="1" auto_size="vertical" />
+
+				<!-- Loan status -->
+				<widget class="loan_status_label" id="lonc" format="1" size="small" colour="faded text" auto_size="vertical" />
+
+				<!-- Automatic response setting -->
+				<widget class="label" id="ofop" auto_size="vertical" size="small" colour="faded text"/>
+
+				<!-- Manager of football instructions-->
+				<widget class="label" id="dofl" auto_size="vertical" size="small" colour="faded text"/>
+			</container>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,40 @@
+<panel width="320">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="main_box" appearance="boxes/hints/standard/paper">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="5" horizontal_inset="5" />
+
+		<!--position title-->
+		<widget class="text" id="posT" auto_size="vertical" colour="hint" size="10"/>
+
+		<!--position rating-->
+		<container height="40">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--rating-->
+			<widget class="text" id="posR" size="11" alignment="left,centre_y" colour="hint">
+				<layout class="stick_to_sides_attachment" alignment="left,extend" inset="35"/>
+			</widget>
+		</container>
+
+		<!--role and duty title-->
+		<widget class="text" id="rd T" auto_size="vertical" colour="hint" size="10"/>
+
+		<!--position rating-->
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_offset="0" />
+
+			<!--pie-->
+			<widget class="position_role_duty_suitability_pie" id="rd P" width="26" height="26" should_draw_star="false"/>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="10" />
+
+				<!--rating-->
+				<widget class="text" id="rd R" auto_size="vertical" size="11" multiline="true" colour="hint"/>
+			</container>
+		</container>
+
+	</container>
+</panel>

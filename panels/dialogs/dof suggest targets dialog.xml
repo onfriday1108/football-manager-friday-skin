@@ -1,0 +1,6 @@
+<panel height="550">
+	<translation id="title" translation_id="376593" type="use" value="Suggest Transfer Targets" />
+	<layout class="fit_children_attachment" alignment="horizontal"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<widget class="director_of_football_panel" id="dofp" />
+</panel>

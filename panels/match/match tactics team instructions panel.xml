@@ -1,0 +1,8 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <widget class="tactics_team_instructions_panel" id="tacc" file="tactics/tactics team instructions panel" />
+
+
+</panel>

@@ -1,0 +1,71 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<!-- main area -->
+	<container id="main">
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="4" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="4" />
+
+		<!-- titled box containing table -->
+		<container class="main_box" id="uctt" >
+
+			<translation id="title" />
+      
+			<container id="btns" embed_in_frame="true">
+
+				<attachment_group class="title_embedded_panel_right" />
+
+        <!-- filter menu -->
+				<widget class="subtle_button" id="filt" click_event="shfl" auto_size="all" embed_in_frame="true">
+					<translation id="text" translation_id="247166" type="use" value="Show Filters" />
+				</widget>
+
+			</container>
+
+			<!-- 5 year club co-efficients table -->
+			<widget class="table" id="5ctb" mode="fill_rows, stripe_rows,printable,keyboard" layout="65, -1, 75, 70, 70, 70, 70, 70, 70, 100, 100" row_spacing="0" hidden="true" default_sort_column="UCpo">
+				<boolean id="save_session_state" value="true" />
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				<flags id="heading_class" value="column_heading" />
+
+				<record id="default_properties" alignment="left,centre_y" />
+
+				<list id="column_table_properties">
+					<record indx="0" id="UCpo" />
+					<record indx="1" id="UCcl" />
+					<record indx="2" id="UCna" />
+					<record indx="3" id="UCy1" sort_ascending="false" />
+					<record indx="4" id="UCy2" sort_ascending="false" />
+					<record indx="5" id="UCy3" sort_ascending="false" />
+					<record indx="6" id="UCy4" sort_ascending="false" />
+					<record indx="7" id="UCy5" sort_ascending="false" />
+					<record indx="8" id="UCy6" sort_ascending="false" />
+					<record indx="9" id="UCto" sort_ascending="false" />
+					<record indx="10" id="UCt2" sort_ascending="false" />
+				</list>
+
+			</widget>
+
+    </container>
+
+		<!-- filter editing panel -->
+		<widget class="filter_panel" id="filp" width="200">
+
+			<!-- buttons area -->
+			<container id="btnf" embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_right" />
+
+				<!-- filter menu -->
+				<widget class="subtle_button" id="hidf" click_event="hdfl" auto_size="all" embed_in_frame="true" save_session_state="true">
+					<translation id="text" translation_id="247168" type="use" value="Hide Filters" />
+				</widget>
+
+			</container>
+
+			<boolean id="hidn" value="true" />
+		</widget>
+	</container>
+</panel>

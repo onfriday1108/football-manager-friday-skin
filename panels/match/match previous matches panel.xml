@@ -1,0 +1,13 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="4" />
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4" />
+
+	<widget class="text" id="noma" auto_size="all" alignment="centre" colour="faded text" size="small">
+		<translation id="text" translation_id="344371" type="use" value="No previous matches played between these sides.[COMMENT: information on previous meetings between two sides]" />
+	</widget>
+
+	<!--bar chart-->
+	<widget class="horizontal_stacked_bar_chart_with_key_panel" id="matc" height="48"/>
+</panel>

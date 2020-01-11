@@ -1,0 +1,111 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container height="54">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<widget class="table" id="layt" layout="-1, -1, -1" fixed_size_rows="true" row_spacing="0" row_height="18" mode="fill_rows">
+
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y"/>
+				<record indx="1" alignment="centre, centre_y"/>
+				<record indx="2" alignment="right,centre_y"/>
+			</list>
+
+			<!--Position-->
+			<widget class="position_label" id="posi" row="0" col="0" multiline="false" size="small">
+				<record id="object_property">
+					<integer id="get_property" value="PpsC"/>
+				</record>
+			</widget>
+
+			<!-- Role -->
+			<widget class="tactical_role_label" id="roLL" alignment="centre_x,can_scale" row="0" col="1" size="small">
+				<record id="object_property">
+					<integer id="get_property" value="Pbrc"/>
+				</record>
+			</widget>
+
+			<!--Age in years-->
+			<widget class="dob_label" id="ages" row="0" col="2" display_format="2" size="small">
+				<record id="object_property">
+					<integer id="get_property" value="Pdob"/>
+				</record>
+			</widget>
+
+			<!--Club-->
+			<widget class="club_button" id="team" row="1" col="0" size="small">
+				<record id="object_property">
+					<integer id="get_property" value="Pclb"/>
+				</record>
+			</widget>
+
+			<!-- footedness -->
+			<widget class="label" id="ftdn" row="1" col="1" size="small">
+				<record id="object_property">
+					<integer id="get_property" value="PftS"/>
+				</record>
+			</widget>
+
+			<!--Value-->
+			<widget class="value_label" id="valu" row="1" col="2" size="small">
+				<record id="object_property">
+					<integer id="get_property" value="Pdva"/>
+				</record>
+			</widget>
+
+			<!--Nation-->
+			<widget class="nation_button" id="natp" row="2" col="0" size="small" format="[%nation#1-nationality]">
+				<record id="object_property">
+					<integer id="get_property" value="Pnat"/>
+				</record>
+			</widget>
+
+			<container row="2" col="1" column_span="2">
+				<layout class="arrange_horizontal_attachment" alignment="right" gap="2" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+				<record id="object_property" get_property="Pivi" set_property="hidn"/>
+
+				<!--Wage-->
+				<widget class="wage_label" id="wage" auto_size="horizontal" size="small">
+					<record id="object_property">
+						<integer id="get_property" value="Pcww"/>
+					</record>
+				</widget>
+
+				<widget class="label" auto_size="horizontal" size="small">
+					<translation id="text" translation_id="233089" type="use" value="-"/>
+				</widget>
+
+				<!--Contract Expiry Date-->
+				<widget class="contract_expiry_button" id="expi" auto_size="horizontal" size="small">
+					<record id="object_property">
+						<integer id="get_property" value="Pced"/>
+					</record>
+				</widget>
+			</container>
+		</widget>
+	</container>
+
+	<!--The subpanel is given its dbref from POPUP_INFORMATION_XML_PANEL-->
+	<container class="player_attributes_panel" file="player/player attributes panel small" id="plip" height="240"/>
+
+	<widget class="fitness_label" id="Pcsr" auto_size="vertical" alignment="centre" size="small">
+		<record id="object_property">
+			<integer id="get_property" value="Pcsr"/>
+		</record>
+	</widget>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical,extend" offset="0"/>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+
+		<widget class="embedded_popup_button" id="actn" auto_size="all" fixed="true">
+			<translation id="text" translation_id="316647" type="use" value="Actions[COMMENT: popup information panel actions button title]"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="8"/>
+		</widget>
+	</container>
+
+</panel>

@@ -1,0 +1,18 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="client_object_viewer_xml_panel">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<!-- PROP_STADIUM -->
+		<record id="object_property" get_property="stad" set_property="objt"/>
+
+		<widget class="picture" id="bgim" file="photos/dynamic/generic/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<!-- PROP_STADIUM_SEAT_COLOUR - red replacement -->
+			<record id="object_property" get_property="Sscl" set_property="rrep"/>
+		</widget>
+
+		<!-- Seat image -->
+		<widget class="picture" id="bckp" file="photos/dynamic/seats/seat shading close" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+	</container>
+</panel>

@@ -1,0 +1,25 @@
+<panel>
+	<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-2,-3,-2" horizontal_offset="0"/>
+
+	<!-- What it is and current progress -->
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="3" vertical_gap="2" horizontal_inset="5"/>
+
+		<widget class="text" id="stla"  style="semi_bold" auto_size="vertical"/>
+		<widget class="text" id="inpr" auto_size="vertical"/>
+
+	</container>
+
+	<widget class="horizontal_percentage_bar" id="hpbr" height="10"/>
+
+	<!-- the start and end date -->
+	<container>
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="3" vertical_gap="2" horizontal_inset="5"/>
+
+		<widget class="text" id="stda" auto_size="vertical"/>
+		<widget class="text" id="enda" auto_size="vertical"/>
+
+	</container>
+
+</panel>

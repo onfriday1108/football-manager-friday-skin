@@ -1,0 +1,123 @@
+<panel>
+
+  <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+  <container class="main_box" height="365">
+    <translation id="title" translation_id="316547" type="use" value="Scouting Knowledge[COMMENT: team screen; title of panel showing scouting knowledge]" />
+    <attachment_group class="horizontal_arrange" horizontal_layout="-1,673,-1" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+    <container embed_in_frame="true">
+      <attachment_group class="title_embedded_panel_right" />
+
+      <record id="default_properties" height="18" width="18"/>
+
+      <widget class="text" auto_size="horizontal" alignment="centre" height="30">
+        <string id="text" value="0%"/>
+      </widget>
+
+      <container class="main_box" background_colour="knowledge colour minimal" />
+      <container class="main_box" background_colour="knowledge colour nominal" />
+      <container class="main_box" background_colour="knowledge colour sporadic" />
+      <container class="main_box" background_colour="knowledge colour decent" />
+      <container class="main_box" background_colour="knowledge colour average" />
+      <container class="main_box" background_colour="knowledge colour good" />
+      <container class="main_box" background_colour="knowledge colour very good" />
+      <container class="main_box" background_colour="knowledge colour extensive" />
+      <container class="main_box" background_colour="knowledge colour exceptional" />
+      <container class="main_box" background_colour="knowledge colour outstanding" />
+      <container class="main_box" background_colour="knowledge colour complete" />
+
+      <widget class="text" auto_size="horizontal" alignment="centre" height="30">
+        <string id="text" value="100%"/>
+      </widget>
+
+    </container>
+
+    <container class="team_scouting_knowledge_map" id="map " disabled_colour="0.1"/>
+  </container>
+
+  <container>
+    <attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+    <container class="main_box">
+      <translation id="title" translation_id="338079" type="use" value="Regions" />
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+      <widget class="table" mode="fill_rows, stripe_rows, select_rows" id="tabe" layout="20,-3,-2" auto_size_rows="true" select_event="ZOM!" dont_restore_selection="true">
+        <boolean id="fixed_size_rows" value="false" />
+
+        <boolean id="save_session_state" value="true" />
+        <boolean id="sdst" value="true" />
+
+        <list id="headings">
+          <record/>
+          <record alignment="left,centre_y">
+            <translation id="text" translation_id="296523" type="use" value="Region[COMMENT: team screen; title of panel showing scouting knowledge]" />
+          </record>
+          <record alignment="left,centre_y">
+            <translation id="text" translation_id="251861" type="use" value="Knowledge[COMMENT: non player profile panel; title of panel showing scouting knowledge]" />
+          </record>
+        </list>
+
+        <list id="column_widget_properties">
+          <record indx="1" alignment="left,centre_y" />
+        </list>
+
+        <list id="column_table_properties">
+          <record indx="0" top="2" bottom="2">
+            <boolean id="sort_disabled" value="true" />
+            <record id="widget_info" class="picture" file="icons/16px/search" scale_picture="false"/>
+          </record>
+          <record indx="1" left="5" />
+          <record indx="2" top="3" bottom="3" />
+        </list>
+      </widget>
+    </container>
+
+    <container class="main_box">
+      <translation id="title" translation_id="229364" type="use" value="Nations" />
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+      <widget class="table" mode="fill_rows, stripe_rows, select_rows" id="tabl" layout="20,-3,-3,-2" auto_size_rows="true" select_event="ZOMN" dont_restore_selection="true" >
+        <boolean id="fixed_size_rows" value="false" />
+        <boolean id="auto_size_rows" value="true" />
+
+        <boolean id="save_session_state" value="true" />
+        <boolean id="sdst" value="true" />
+
+        <list id="headings">
+          <record/>
+          <record alignment="left,centre_y">
+            <translation id="text" translation_id="251843" type="use" value="Nation[COMMENT: team screen; title of panel showing scouting knowledge]" />
+          </record>
+          <record alignment="left,centre_y">
+            <translation id="text" translation_id="251861" type="use" value="Knowledge[COMMENT: non player profile panel; title of panel showing scouting knowledge]" />
+          </record>
+          <record alignment="left,centre_y">
+            <translation id="text" translation_id="251845" type="use" value="Source[COMMENT: team screen; title of panel showing scouting knowledge]" />
+          </record>
+        </list>
+
+        <list id="column_widget_properties">
+          <record indx="0" alignment="left,centre_y" />
+		  <record indx="1" alignment="left,centre_y" navigation_focus_target="false" />
+          <record indx="2" alignment="left,centre_y" />
+		  <record indx="3" alignment="left,centre_y" navigation_focus_target="false" />
+        </list>
+
+        <list id="column_table_properties">
+          <record indx="0" top="2" bottom="2">
+            <boolean id="sort_disabled" value="true" />
+            <record id="widget_info" class="picture" file="icons/16px/search" scale_picture="false"/>
+          </record>
+          <record indx="1" left="5" />
+          <record indx="2" top="3" bottom="3" />
+          <record indx="3" left="10" />
+        </list>
+
+      </widget>
+    </container>
+  </container>
+
+
+</panel>

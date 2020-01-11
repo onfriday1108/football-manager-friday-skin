@@ -1,0 +1,4 @@
+﻿<panel height="500">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+	<container class="tabbed_container" default_item="SStu" id="PcUp" save_session_state="true"/>
+</panel>

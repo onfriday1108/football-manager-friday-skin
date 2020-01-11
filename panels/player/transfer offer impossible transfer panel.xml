@@ -1,0 +1,16 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!-- panel for impossible transfer-->
+	<container class="empty_state" id="impo" header_widget="hdrw" body_widget="reas">
+
+		<!--explanatory text-->
+		<widget class="text" id="hdrw" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+			<translation id="text" translation_id="322130" type="use" value="This transfer is not possible.[COMMENT: impossible transfer on the transfer offer panel]"/>
+		</widget>
+		<widget class="text" id="reas" auto_size="vertical" alignment="centre"/>
+	</container>
+
+</panel>

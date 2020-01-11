@@ -1,0 +1,45 @@
+<panel height="46">
+
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container id="BctA" background_colour="instant hint colour"/>
+
+	<container >
+		<layout class="arrange_vertical_attachment" layout="22,-1" offset="4" gap="2"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+			<widget class="check_box" id="TCcB" click_event="tgca" width="24"/>
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<container id="cCHB">
+
+				<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+				<widget class="person_stars_range_strip" id="TCsR" auto_size="horizontal" navigation_focus_target="false">
+					<record id="auto_size_restrictions">
+						<string id="type" value="widget" />
+						<string id="limit_type" value="maximum" />
+						<string id="target" value="parent" />
+						<string id="orientation" value="horizontal" />
+					</record>
+				</widget>
+			</container>
+			<widget class="text" id="TCem" auto_size="horizontal" hidden="true">
+				<string id="text" value="-"/>
+			</widget>
+		</container>
+	</container>
+
+
+
+</panel>

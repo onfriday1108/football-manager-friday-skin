@@ -1,0 +1,9 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true" />
+
+  <!-- team kit picture -->
+  <container class="kit_picture" id="mikp" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre"/>
+  <!-- team logo -->
+  <widget class="picture" id="milp" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre"/>
+
+</panel>

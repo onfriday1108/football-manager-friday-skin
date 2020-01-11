@@ -1,0 +1,33 @@
+﻿<panel colour_team_names="true" colour_team_scores="true">
+  <!--background colour-->
+  <widget class="picture" id="bkcl" auto_size="vertical" file="boxes/custom/match/scoreboard/team/paper" cached="true" rthr="68" alignment="centre">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+    <layout class="centre_in_parent_attachment" alignment="vertical" />
+  </widget>
+
+  <container>
+    <layout class="arrange_horizontal_attachment" layout="40,-1,60" gap="10" offset="10"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+    <!--scores-->
+    <container>
+      <layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+      <!-- score -->
+      <widget class="text" id="mits" font="title" size="xlarge" alignment="right,centre_y" auto_size="horizontal" multiline="false"/>
+
+      <!-- aggregate score -->
+      <widget class="text" id="mita" font="title" size="large" alignment="right,centre_y" auto_size="horizontal" multiline="false"/>
+
+    </container>
+
+    <!-- team name -->
+    <widget class="text" id="mitn" font="title" size="xlarge" style="semi_bold" alignment="centre" multiline="false"/>
+
+    <widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre"/>
+
+  </container>
+
+</panel>

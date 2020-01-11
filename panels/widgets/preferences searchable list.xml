@@ -1,0 +1,17 @@
+﻿<container>
+	<layout class="stick_to_sides_attachment" alignment="all" />
+	<attachment_group class="vertical_arrange" vertical_layout="40, -1" />
+
+	<widget class="edit_box" changed_event="tent" />
+
+	<container class="main_box" red_replacement="tutorial bg">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container class="scrolling_box">
+			<widget class="container" id="indl">
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+				<!-- We programatically add our induction widgets here -->
+			</widget>
+		</container>
+	</container>
+</container>

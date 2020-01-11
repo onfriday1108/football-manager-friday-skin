@@ -1,0 +1,13 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+	<container class="inner_box_no_margin">
+		<attachment_group class="vertical_arrange" vertical_layout="25,25,-1" vertical_gap="0"/>
+
+		<widget class="picture" id="caic" image_alignment="centre" colour="normal_icon"/>
+		<widget class="text" id="cana" alignment="centre" />
+		<container id="subC">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+			<!-- Widgets added programatically -->
+		</container>
+	</container>
+</panel>

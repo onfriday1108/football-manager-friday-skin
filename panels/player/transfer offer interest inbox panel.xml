@@ -1,0 +1,36 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<flags id="interest_active_appearance" value="boxes/custom/listed/alt/yes/paper" />
+	<flags id="interest_none_appearance" value="boxes/custom/listed/alt/no/paper" />
+
+	<container class="inner_box_no_margin">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="8"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+
+		<widget class="vertical_divider" id="LNE1" image_alignment="centre" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="fill" horizontal_offset="0" vertical_offset="0" />
+
+			<widget class="table" id="pctb" layout="30, -1" mode="" fixed_size_rows="true" auto_size_rows="false" row_height="28" row_spacing="6" column_spacing="8" auto_size="vertical">
+				<!-- Offers -->
+				<widget class="button" id="offt" alignment="centre" size="11" style="semi_bold"  mouse_entered_event="shwb" mouse_exited_event="hipo" row="0" col="0"/>
+				<widget class="text" alignment="left,centre_y" row="0" col="1">
+					<translation id="text" translation_id="435250" type="use" value="Bids Made[COMMENT: FR 10253, player overview; trandfers sub panel; label for number of bids (transfer offers) made for a player, use top 10 matches, just capitalised the M in Made for bug 134165]" />
+				</widget>
+
+				<!-- Interest -->
+				<widget class="button" id="intt" alignment="centre" size="11" style="semi_bold" mouse_entered_event="shwi" mouse_exited_event="hipo" row="1" col="0"/>
+				<widget class="text" alignment="left,centre_y" row="1" col="1">
+					<translation id="text" translation_id="383284" type="use" value="Clubs Interested[COMMENT: FR 10253, player overview; trandfers sub panel; label for number of clubs interested in a player]" />
+				</widget>
+			</widget>
+		</container>
+	</container>
+
+</panel>

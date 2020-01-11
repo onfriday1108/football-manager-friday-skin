@@ -1,0 +1,9 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <boolean id="always_use_latest_object_list" value="true"/>
+
+  <container id="PoCn" file="widgets/object portrait picture news feed default">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </container>
+</panel>

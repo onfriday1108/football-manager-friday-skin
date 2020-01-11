@@ -1,0 +1,23 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container class="team_chemistry_overview_panel" file="team/team chemistry development overview panel" id="at00" entity_layout_id="at00">
+		<record id="object_property">
+			<string id="get_property" value="objt"/>
+			<string id="set_property" value="objt"/>
+		</record>
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+	</container>
+</panel>

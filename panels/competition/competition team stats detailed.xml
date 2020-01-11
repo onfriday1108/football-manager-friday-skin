@@ -1,0 +1,215 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<boolean id="save_session_state" value="true" />
+
+	<!-- Default stat type to select -->
+	<integer id="default_value" value="28"/>
+
+	<container class="main_box" force_title_borders="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<!-- Label and stage selector -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="labl">
+				<translation id="text" translation_id="247393" type="use" value="Team Stats" />
+			</widget>
+
+			<!-- The stages menu: visible if more than one stage/substage -->
+			<widget class="view_menu_popup" id="sviw" auto_tick_exclusive="true" save_session_state="true"/>
+		</container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+			<layout class="arrange_horizontal_attachment" layout="300, -1" offset="0" gap="8"/>
+
+			<container class="inner_subtle_box">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<container class="scrolling_box" navigation_container="true">
+					<!-- List of selectable stats grouped in collapsible boxes. This container must have this id to make the radio buttons work -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<record id="default_properties" save_default_state="true" save_session_state="true" allow_single_bar_click="true" appearance="boxes/collapsable/no margin/single/paper">
+							<record id="default_properties" file="competition/competition team stats detailed list panel" maximum_items="top_only_with_count">
+							</record>
+
+							<list id="attachments">
+								<record class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+							</list>
+
+						</record>
+						
+						<!-- General stats -->
+						<container class="collapsable_box" navigation_container="true">
+
+							<translation id="title" translation_id="248359" type="use" value="General" />
+
+							<!-- NOTE: If you add stats you also have to define views in 'competition team stats panel' -->
+						
+
+							<!-- CCS_AVERAGE_POSSESSION -->
+							<widget class="competition_team_stats_panel" type="28"/>
+							<!-- CCS_PENALTIES -->
+							<widget class="competition_team_stats_panel" type="17"/>
+							<!-- CCS_HEADERS_WON -->
+							<widget class="competition_team_stats_panel" type="34"/>
+							<!-- CCS_HEADERS_WON_RATIO -->
+							<widget class="competition_team_stats_panel" type="35"/>
+							<!-- CCS_YELLOW_CARDS -->
+							<widget class="competition_team_stats_panel" type="24"/>
+							<!-- CCS_RED_CARDS -->
+							<widget class="competition_team_stats_panel" type="25"/>
+						</container>
+						<!-- Form stats -->
+						<container class="collapsable_box" navigation_container="true">
+
+							<translation id="title" translation_id="248421" type="use" value="Form[COMMENT - Player form sub option on person screen]" />
+
+							<!-- NOTE: If you add stats you also have to define views in 'competition team stats panel' -->
+
+							<!-- CCS_FORM -->
+							<widget class="competition_team_stats_panel" type="5"/>
+							<!-- CCS_HOME_FORM -->
+							<widget class="competition_team_stats_panel" type="6"/>
+							<!-- CCS_AWAY_FORM -->
+							<widget class="competition_team_stats_panel" type="7"/>
+							<!-- CCS_GAMES_WON_IN_ROW -->
+							<widget class="competition_team_stats_panel" type="8"/>
+							<!-- CCS_GAMES_LOST_IN_ROW -->
+							<widget class="competition_team_stats_panel" type="9"/>
+							<!-- CCS_GAMES_SCORED_IN_ROW -->
+							<widget class="competition_team_stats_panel" type="14"/>
+							<!-- CCS_GAMES_WITHOUT_LOSING -->
+							<widget class="competition_team_stats_panel" type="10"/>
+							<!-- CCS_GAMES_WITHOUT_WINNING -->
+							<widget class="competition_team_stats_panel" type="11"/>
+							<!-- CCS_GAMES_WITHOUT_CONCEDING -->
+							<widget class="competition_team_stats_panel" type="12"/>
+							<!-- CCS_GAMES_WITHOUT_SCORING -->
+							<widget class="competition_team_stats_panel" type="13"/>
+							<!-- CCS_MINUTES_SINCE_LAST_GOAL -->
+							<widget class="competition_team_stats_panel" type="40"/>
+						</container>
+
+						<!-- Attacking stats -->
+						<container class="collapsable_box" navigation_container="true">
+							
+							<translation id="title" translation_id="230042" type="use" value="Attacking" />
+
+							<!-- NOTE: If you add stats you also have to define views in 'competition team stats panel' -->
+
+							<!-- CCS_GOALS -->
+							<widget class="competition_team_stats_panel" type="15"/>
+							<!-- CCS_CROSS_COMPLETION_RATIO -->
+							<widget class="competition_team_stats_panel" type="37"/>
+							<!-- CCS_CROSSES_COMPLETED -->
+							<widget class="competition_team_stats_panel" type="36"/>
+							<!-- CCS_GOALS_FROM_CORNERS -->
+							<widget class="competition_team_stats_panel" type="18"/>
+							<!-- CCS_GOALS_FROM_DFKS -->
+							<widget class="competition_team_stats_panel" type="20"/>
+							<!-- CCS_GOALS_FROM_IFKS -->
+							<widget class="competition_team_stats_panel" type="19"/>
+							<!-- CCS_PASS_COMPLETION_RATIO -->
+							<widget class="competition_team_stats_panel" type="30"/>
+							<!-- CCS_PASSES_COMPLETED -->
+							<widget class="competition_team_stats_panel" type="29"/>
+							<!-- CCS_CHANCES_CREATED -->
+							<widget class="competition_team_stats_panel" type="47"/>
+							<!-- CCS_SHOTS_ON_TARGET_RATIO -->
+							<widget class="competition_team_stats_panel" type="39"/>
+							<!-- CCS_SHOTS_ON_TARGET -->
+							<widget class="competition_team_stats_panel" type="38"/>
+							<!-- CCS_GOALS_TO_SHOTS_RATIO -->
+							<widget class="competition_team_stats_panel" type="48"/>
+							<!-- CCS_FOULS_AGAINST -->
+							<widget class="competition_team_stats_panel" type="45"/>
+							<!-- CCS_DRIBBLES_PER_GAME -->
+							<widget class="competition_team_stats_panel" type="46"/>
+						</container>
+
+						<!-- Defending stats -->
+						<container class="collapsable_box" navigation_container="true">
+							
+							<translation id="title" translation_id="285374" type="use" value="Defending[COMMENT: player profile, overview panel polygon category title]" />
+
+							<!-- NOTE: If you add stats you also have to define views in 'competition team stats panel' -->
+
+							<!-- CCS_CONCEDED -->
+							<widget class="competition_team_stats_panel" type="16"/>
+							<!-- CCS_CONCEDED_FROM_CORNERS -->
+							<widget class="competition_team_stats_panel" type="21"/>
+							<!-- CCS_CONCEDED_FROM_DFKS -->
+							<widget class="competition_team_stats_panel" type="23"/>
+							<!-- CCS_CONCEDED_FROM_IFKS -->
+							<widget class="competition_team_stats_panel" type="22"/>
+							<!-- CCS_CLEAN_SHEETS -->
+							<widget class="competition_team_stats_panel" type="41"/>
+							<!-- CCS_FOULS_MADE -->
+							<widget class="competition_team_stats_panel" type="31"/>
+							<!-- CCS_TACKLES_WON -->
+							<widget class="competition_team_stats_panel" type="32"/>
+							<!-- CCS_TACKLES_WON_RATIO -->
+							<widget class="competition_team_stats_panel" type="33"/>
+							<!-- CCS_PENALTIES_CONCEDED -->
+							<widget class="competition_team_stats_panel" type="44"/>
+						</container>
+
+						<!-- Attendance stats -->
+						<container class="collapsable_box" id="AttB" navigation_container="true">
+
+							<translation id="title" translation_id="232110" type="use" value="Attendances" />
+
+							<!-- NOTE: If you add stats you also have to define views in 'competition team stats panel' -->
+							<!-- CCS_AVERAGE_ATTENDANCE -->
+							<widget class="competition_team_stats_panel" type="2"/>
+							<!-- CCS_ATTENDANCE_PCT -->
+							<widget class="competition_team_stats_panel" type="3"/>
+							<!-- CCS_STADIUM_SELLOUTS -->
+							<widget class="competition_team_stats_panel" type="4"/>
+							<!-- CCS_HIGHEST_ATTENDANCE -->
+							<widget class="competition_team_stats_panel" type="42"/>
+							<!-- CCS_LOWEST_ATTENDANCE -->
+							<widget class="competition_team_stats_panel" type="43"/>
+						</container>
+
+						<!-- Finance stats -->
+
+						<container class="collapsable_box" id="finb" navigation_container="true">
+
+							<translation id="title" translation_id="316566" type="use" value="Finances[COMMENT: Link to club finances]" />
+
+							<!-- NOTE: If you add stats you also have to define views in 'competition team stats panel' -->
+
+							<!-- CCS_NET_TRANSFER_SPEND -->
+							<widget class="competition_team_stats_panel" type="27"/>
+							<!-- CCS_SALARY_PER_ANNUM -->
+							<widget class="competition_team_stats_panel" type="26"/>
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<container class="inner_box">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container class="competition_team_stats_panel" id="selP" maximum_items="100" type="2">
+					<!-- Header with stat type string and stat selector button -->
+					<widget class="text" id="stit" alignment="left,centre_y" style="semi_bold" font="title" colour="accent" auto_size="all">
+						<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" />
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<!-- panel for no data available-->
+	<container class="empty_state" id="nost" header_widget="BShe" hidden="true">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,15 @@
+﻿<panel>
+	<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+  
+	<container class="inner_subtle_box" id="STtb" height="40" appearance="boxes/custom/transfer centre/status/left/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<container class="inner_subtle_box_no_margin" >
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<widget class="text" id="Stts" alignment="centre" size="small"/>
+		</container>
+	</container>
+
+</panel>

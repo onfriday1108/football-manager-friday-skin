@@ -1,0 +1,44 @@
+<panel width="400" height="340">
+	<layout class="stick_to_sides_attachment" alignment="right, vertical" inset="0" apply_to_children="true"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container class="standard_popup_box" id="cont" width="400">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="8" horizontal_alignment="horizontal" horizontal_inset="8"/>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" horizontal_offset="0" vertical_offset="0" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+				<widget class="object_portrait_picture" id="obji" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="40" width="40"/>
+				<widget class="client_object_label" id="nmtx" style="bold" auto_size="vertical" alignment="left,centre_y"/>
+			</container>
+
+			<widget class="news_subscribe_button" id="flwb" ShTx="true" auto_size="all" subscribed_button_appearance="buttons/standard/normal/button" unsubscribed_button_appearance="buttons/primary/normal/button" subscribed_icon_appearance="icons/custom/feed/unfollow" unsubscribed_icon_appearance="icons/custom/feed/follow"/>
+		</container>
+
+		<container class="news_item_subscription_info_panel" id="SuIn" file="human/news feed item subscription info panel"/>
+
+		<widget class="text" id="sttx" font="title" height="36" alignment="left,centre_y">
+			<translation id="text" translation_id="412452" type="use" value="Receive...[COMMENT: FR 16824; news feed options dialog; label to indicate what news to recieve]"/>
+		</widget>
+
+		<widget class="check_box" id="soch" auto_size="vertical" click_event="slsc" height="30">
+			<translation id="text" translation_id="412453" type="use" value="Social Content[COMMENT: FR 16824; news feed options dialog; check box label to select social media]"/>
+		</widget>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1,30" horizontal_offset="0" horizontal_gap="2" vertical_alignment="vertical" vertical_inset="0" />
+
+			<widget class="check_box" id="nwch" auto_size="vertical" click_event="slnc">
+				<translation id="text" translation_id="295149" type="use" value="News[comment: option that appears on the competition context menu]"/>
+			</widget>
+
+			<widget class="subscription_depth_popup_button" id="nslb" auto_size="vertical" />
+
+			<widget class="icon_button" id="msub" click_event="shfo" icon="icons/16px/edit" icon_alignment="centre" height="30" width="30"/>
+		</container>
+	</container>
+
+</panel>

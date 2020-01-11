@@ -1,0 +1,41 @@
+<panel width="300">
+	<colour id="no_tone_colour" name="bg lighter"/>
+	<colour id="positive_colour" name="positive bg"/>
+	<colour id="neutral_colour" name="bg lighter"/>
+	<colour id="negative_colour" name="negative bg"/>
+
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="8"/>
+
+	<container class="main_contrast_box" id="apbx">
+		<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="8"/>
+
+		<widget class="table" id="tblp" layout="20, 22, 18, -1" mode="fill_rows, stripe_rows" fixed_size_rows="true" row_height="25">
+			<list id="headings">
+				<record index="0" alignment="left,centre_y" column_span="3">
+					<translation id="text" translation_id="227839" type="use" value="Morale"/>
+					<translation id="hint" translation_id="227839" type="use" value="Morale"/>
+				</record>
+				<record index="3" alignment="left,centre_y">
+					<translation id="text" translation_id="336580" type="use" value="Players[COMMENT:club/nation section for all scouting pages]"/>
+					<translation id="hint" translation_id="336580" type="use" value="Players[COMMENT:club/nation section for all scouting pages]"/>
+				</record>
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" sort_disabled="true" alignment="left,centre_y" multiline="false"/>
+				<record index="3" sort_disabled="true" alignment="left,centre_y" multiline="false"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" left="4" sort_disabled="true"/>
+				<record index="1" left="3" sort_disabled="true"/>
+				<record index="3" left="4" sort_disabled="true"/>
+			</list>
+		</widget>
+	</container>
+
+</panel>

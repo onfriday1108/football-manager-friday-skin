@@ -1,0 +1,66 @@
+<panel height="30">
+
+  <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0"/>
+  <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="4"/>
+
+  <container class="inner_box_no_margin">
+    <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0"/>
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="aprn" />
+          <integer id="set_property" value="aprn" />
+        </record>
+      </list>
+    </record>
+
+    <widget class="label" auto_size="horizontal">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="text" />
+            <integer id="set_property" value="text" />
+          </record>
+          <record>
+            <integer id="get_property" value="hint" />
+            <integer id="set_property" value="hint" />
+          </record>
+        </list>
+      </record>
+    </widget>
+
+    <container width="40">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="hidn" />
+            <integer id="set_property" value="hidn" />
+          </record>
+        </list>
+      </record>
+    </container>
+
+    <widget class="label" alignment="right,centre_y" auto_size="horizontal">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="valu" />
+            <integer id="set_property" value="valu" />
+          </record>
+          <record>
+            <integer id="get_property" value="hidn" />
+            <integer id="set_property" value="hidn" />
+          </record>
+        </list>
+      </record>
+    </widget>
+
+  </container>
+
+
+
+</panel>

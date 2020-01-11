@@ -1,0 +1,17 @@
+<panel>
+	<string id="skin_style" value="subtle box"/>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<container id="ctbx">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+		<widget class="table" id="rest" layout="180,-1,-1" fixed_size_rows="false" auto_size_rows="true" row_spacing="0" auto_size="vertical">
+
+		</widget>
+
+
+	</container>
+
+
+</panel>

@@ -1,0 +1,342 @@
+<panel>
+	<list id="object_viewer_panels_for_update">
+		<integer value="fTbP" />
+		<integer value="fTwP" />
+	</list>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+
+		<layout class="arrange_horizontal_attachment" layout="-1,120,-1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container class="main_box">
+			<layout class="arrange_vertical_attachment" layout="60,30,-1,1,200" offset="10" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="client_object_viewer_xml_panel" id="ftCn">
+				<layout class="arrange_horizontal_attachment" layout="60,-1" offset="0" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="object_portrait_picture" id="ftBd" scale_picture="true" image_alignment="centre">
+					<record id="object_property" get_property="home" set_property="objt" />
+				</widget>
+
+				<widget class="team_button" id="fbtn" icon_enabled="false" alignment="left,centre_y" size="large" style="bold">
+					<record id="object_property" get_property="home" set_property="valu" />
+				</widget>
+			</container>
+
+			<widget class="label" id="fTlb" alignment="left,bottom" font="title">
+				<translation id="text" translation_id="420623" type="use" value="Heat Map[COMMENT: match analysis, graphic to display the frequency of activity and touches in each area of the pitch]" />
+			</widget>
+
+			<widget class="preselected_match_chalkboard_panel" team_to_display="0" id="fChk" enable_popup="false">
+				<record id="object_property" get_property="objt" set_property="objt" />
+				<list id="chalkboard_events_to_display">
+					<!-- Heatmap -->
+					<integer value="43" />
+				</list>
+			</widget>
+
+			<widget class="horizontal_divider" />
+
+			<container id="FtCn">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container class="client_object_viewer_xml_panel" id="fTbP">
+					<layout class="arrange_vertical_attachment" layout="30,-1,-1" offset="0" gap="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="label" id="bfpf" alignment="left,bottom" font="title">
+						<translation id="text" translation_id="420658" type="use" value="Best Performance[COMMENT: match analysis overview, label for the best performance during the match]" />
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="client_object_property_panel" property="MPrt" size="xxlarge" alignment="centre_x,bottom" >
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<widget class="label" alignment="centre_x,top" >
+								<translation id="text" translation_id="229619" type="use" value="Rating" />
+							</widget>
+						</container>
+					</container>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="client_object_property_panel" property="Pers" alignment="left,top">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="PpSP">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="PpSN">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+					</container>
+				</container>
+
+				<container class="client_object_viewer_xml_panel" id="fTwP">
+					<layout class="arrange_vertical_attachment" layout="30,-1,-1" offset="0" gap="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="label" id="wfpf" alignment="left,bottom" font="title">
+						<translation id="text" translation_id="435188" type="use" value="Room for Improvement[COMMENT: match analysis overview, label for disappointing match performances, was 420659 Worst Performance but please shy away from such obvious negatives where possible please]" />
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="client_object_property_panel" property="MPrt" size="xxlarge" alignment="centre_x,bottom" >
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<widget class="label" alignment="centre_x,top" >
+								<translation id="text" translation_id="229619" type="use" value="Rating" />
+							</widget>
+						</container>
+					</container>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="client_object_property_panel" property="Pers" alignment="left,top" >
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="PpSP">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="PpSN">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<container class="main_box">
+			<layout class="arrange_vertical_attachment" layout="-1,120,-1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="spacer" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="label" alignment="left,centre_y" auto_size="vertical" font="title" colour="faded text">
+					<translation id="text" translation_id="434596" type="use" value="Heat Map Key[COMMENT: label text for the section highlighting what the colours mean on the heat map]" />
+				</widget>
+
+				<container height="22">
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="picture" file="icons/16px/circle" width="16" image_alignment="centre" red_replacement="red 500" />
+
+					<widget class="label" alignment="left,centre_y" auto_size="vertical">
+						<translation id="text" translation_id="434597" type="use" value="Very Active[COMMENT: text for a heat map describing area where a player was very active]" />
+					</widget>
+				</container>
+
+				<container height="22">
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="picture" file="icons/16px/circle" width="16" image_alignment="centre" red_replacement="yellow 500" />
+
+					<widget class="label" alignment="left,centre_y" auto_size="vertical">
+						<translation id="text" translation_id="434598" type="use" value="Active[COMMENT: text for a heat map describing area where a player was active]" />
+					</widget>
+				</container>
+
+				<container height="22">
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="picture" file="icons/16px/circle" width="16" image_alignment="centre" red_replacement="light green 500" />
+
+					<widget class="label" alignment="left,centre_y" auto_size="vertical">
+						<translation id="text" translation_id="434599" type="use" value="Less Active[COMMENT: text for a heat map describing area where a player was less active]" />
+					</widget>
+				</container>
+
+				<container height="22">
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="picture" file="icons/16px/circle" width="16" image_alignment="centre" red_replacement="blue 500" />
+
+					<widget class="label" alignment="left,centre_y" auto_size="vertical">
+						<translation id="text" translation_id="435249" type="use" value="Hardly Active[COMMENT: text for a heat map describing area where a player was less active]" />
+					</widget>
+				</container>
+			</container>
+
+			<widget class="spacer" />
+		</container>
+
+		<container class="main_box">
+			<layout class="arrange_vertical_attachment" layout="60,30,-1,1,200" offset="10" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="client_object_viewer_xml_panel" id="stCn">
+				<layout class="arrange_horizontal_attachment" layout="60,-1" offset="0" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="object_portrait_picture" id="StBd" scale_picture="true" image_alignment="centre">
+					<record id="object_property" get_property="away" set_property="objt" />
+				</widget>
+
+				<widget class="team_button" id="sbtn" icon_enabled="false" alignment="left,centre_y" size="large" style="bold" >
+					<record id="object_property" get_property="away" set_property="valu" />
+				</widget>
+			</container>
+
+			<widget class="label" id="sTlb" alignment="left,bottom" font="title">
+				<translation id="text" translation_id="420623" type="use" value="Heat Map[COMMENT: match analysis, graphic to display the frequency of activity and touches in each area of the pitch]" />
+			</widget>
+
+			<widget class="preselected_match_chalkboard_panel" team_to_display="1" id="sChk"  enable_popup="false">
+				<record id="object_property" get_property="objt" set_property="objt" />
+				<list id="chalkboard_events_to_display">
+					<!-- Heatmap -->
+					<integer value="43" />
+				</list>
+			</widget>
+
+			<widget class="horizontal_divider" />
+
+			<container id="StCn">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container class="client_object_viewer_xml_panel" id="sTbP">
+					<layout class="arrange_vertical_attachment" layout="30,-1,-1" offset="0" gap="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="label" id="bspf" alignment="left,bottom" font="title">
+						<translation id="text" translation_id="420658" type="use" value="Best Performance[COMMENT: match analysis overview, label for the best performance during the match]" />
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="client_object_property_panel" property="MPrt" size="xxlarge" alignment="centre_x,bottom" >
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<widget class="label" alignment="centre_x,top" >
+								<translation id="text" translation_id="229619" type="use" value="Rating" />
+							</widget>
+						</container>
+					</container>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="client_object_property_panel" property="Pers" alignment="left,top" >
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="PpSP">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="PpSN">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+					</container>
+				</container>
+
+				<container class="client_object_viewer_xml_panel" id="sTwP">
+					<layout class="arrange_vertical_attachment" layout="30,-1,-1" offset="0" gap="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="label" id="wspf" alignment="left,bottom" font="title">
+						<translation id="text" translation_id="435188" type="use" value="Room for Improvement[COMMENT: match analysis overview, label for disappointing match performances, was 420659 Worst Performance but please shy away from such obvious negatives where possible please]" />
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="client_object_property_panel" property="MPrt" size="xxlarge" alignment="centre_x,bottom" >
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<widget class="label" alignment="centre_x,top" >
+								<translation id="text" translation_id="229619" type="use" value="Rating" />
+							</widget>
+						</container>
+					</container>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="client_object_property_panel" property="Pers" alignment="left,top" >
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="PpSP">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="PpSN">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

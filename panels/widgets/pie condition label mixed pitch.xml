@@ -1,0 +1,7 @@
+﻿<panel inherit="panels/widgets/pie condition label mixed">
+  
+  <widget class="condition_label" id="CDLB" low_condition_colour="low condition match" medium_condition_colour="mid condition match" high_condition_colour="high condition match"/>
+
+  <widget class="condition_label" id="FTLB" low_condition_colour="low condition match" medium_condition_colour="mid condition match" high_condition_colour="high condition match"/>
+
+</panel>

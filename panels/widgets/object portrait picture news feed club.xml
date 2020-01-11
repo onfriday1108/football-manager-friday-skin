@@ -1,0 +1,39 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<boolean id="show_background" value="true"/>
+	<boolean id="show_label_instead_of_portrait" value="false"/>
+	<boolean id="use_object_colours" value="false"/>
+
+	<!-- background -->
+	<widget class="picture" id="obbk" file="boxes/custom/feed/profiles/default/paper" red_replacement="white" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-1,-6,-1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<widget class="spacer" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,-6,-1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="spacer" />
+
+			<!-- portrait -->
+			<widget class="picture" id="MEEP" scale_picture="true" image_alignment="centre">
+				<!-- "object_property" set in code -->
+			</widget>
+
+			<widget class="spacer" />
+
+		</container>
+
+		<widget class="spacer" />
+
+	</container>
+
+
+</panel>

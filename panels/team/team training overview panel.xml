@@ -1,0 +1,303 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container id="mCON">
+
+		<attachment_group class="vertical_arrange" vertical_layout="115,-1" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--The upper part of the panel-->
+		<container id="tBAR">
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+
+			<!-- The training box -->
+
+			<container class="main_box" id="GTRA" red_replacement="dark_box_background">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="5" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="gTRA" font="title" alignment="centre" auto_size="vertical" colour="accent">
+					<translation id="text" translation_id="329983" type="use" value="General Training[COMMENT: team training option; the team's general (not default, but set during a week without a match, for example) training focus for a particular time period]" />
+				</widget>
+
+				<container id="dflb">
+					<attachment_group class="vertical_arrange" vertical_alignment="fill,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<container>
+
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+						<container width="294">
+							<attachment_group class="horizontal_arrange" horizontal_layout="-2,-3" horizontal_offset="2" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+							<widget class="label" alignment="left,centre_y" auto_size="none">
+								<translation id="text" translation_id="346740" type="use" value="Main Focus[COMMENT: training players panel, column heading for Training Focus]" />
+							</widget>
+							<widget class="general_training_focus_popup_button" id="dffo" icon="" icon_alignment="left,centre_y" alignment="left,centre_y" spec="text" auto_size="none" needs_main_focus="false" />
+						</container>
+					</container>
+
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+						<container width="294">
+							<attachment_group class="horizontal_arrange" horizontal_layout="-2,-3" horizontal_offset="2" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+							<widget class="label" alignment="left,centre_y" auto_size="none">
+								<translation id="text" translation_id="347767" type="use" value="Intensity Level[COMMENT: team training; the desired default level of intensity the players will train under]" />
+							</widget>
+							<widget class="general_training_intensity_popup_button" id="dfin" alignment="left,centre_y" auto_size="none" needs_main_focus="false" />
+						</container>
+					</container>
+				</container>
+
+				<container id="dfil" hidden="true">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+						<widget class="label" alignment="right,centre_y" auto_size="none">
+							<translation id="text" translation_id="451527" type="use" value="Shared Training[COMMENT: heading; team_information_panel; indicates that a youth age group trains alongside the seniors]" />
+						</widget>
+						<widget class="label" alignment="right,centre_y" auto_size="horizontal">
+							<string id="text" value=":" />
+						</widget>
+					</container>
+
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+						<widget class="link_appearance_button" id="lbut" colour="tactics sidebar" alignment="centre" auto_size="horizontal">
+							<translation id="text" translation_id="227398" type="use" value="First Team" />
+						</widget>
+					</container>
+				</container>
+
+			</container>
+
+			<!-- The Scheduling box -->
+			<container class="main_box" id="STRA" red_replacement="dark_box_background">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="5" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="scLB" font="title" alignment="centre" auto_size="vertical" colour="accent" />
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="0" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<container>
+						<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" apply_to_children="true"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<widget class="slider_horizontal" id="trsl" height="30" test="icons/16px/down" width="200">
+							<integer id="notch_frequency" value="1" />
+							<integer id="interval" value="1" />
+							<integer id="page_interval" value="1" />
+							<flags id="alignment" value="centre" />
+							<integer id="min_value" value="0" />
+							<integer id="max_value" value="5" />
+							<integer id="value" value="3" />
+							<boolean id="draw_middle_notch" value="no" />
+							<boolean id="draw_notches" value="yes" />
+
+							<event id="changed_event">
+								<flags id="event_id" value="eCCH" />
+								<flags id="mode" value="1" />
+							</event>
+
+						</widget>
+					</container>
+
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+
+						<widget class="label" size="small" colour="disabled" alignment="left,top">
+							<translation id="text" translation_id="331638" type="use" value="Less Match Training[COMMENT: team training; slider label to on the right hand side, describing that match training is getting reduced]" />
+						</widget>
+						<widget class="label" size="small" colour="disabled" alignment="right,top">
+							<translation id="text" translation_id="331642" type="use" value="More Match Training[COMMENT: team training; slider label to on the right hand side, describing that match training is getting increased]" />
+						</widget>
+					</container>
+
+					<container>
+						<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+						<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+
+						<!-- the default focus popup button -->
+						<widget class="check_box" id="preC" alignment="right,centre_y" auto_size="vertical" multiline="false" mode="2" size="8.5">
+
+							<event id="click_event">
+								<flags id="event_id" value="eCCH" />
+								<flags id="mode" value="2" />
+							</event>
+
+							<translation id="text" translation_id="420751" type="use" value="Rest day before match[COMMENT: team training option, see ID 329685, just adding clarification that it's a rest day]" />
+							<translation id="hint" translation_id="404213" type="use" value="Allow rest day before match[COMMENT: team training option, see ID 329685, just adding clarification that it's a rest day]" />
+						</widget>
+
+						<!-- the default intesnsity popup button -->
+						<widget class="check_box" id="posC" alignment="left,centre_y" auto_size="vertical" multiline="false" size="8.5">
+
+							<event id="click_event">
+								<flags id="event_id" value="eCCH" />
+								<flags id="mode" value="3" />
+							</event>
+							<translation id="text" translation_id="420752" type="use" value="Rest day after match[COMMENT: team training option, see ID 329684, just adding clarification that it's a rest day]" />
+							<translation id="hint" translation_id="419629" type="use" value="Allow rest day after match[COMMENT: team training option]" />
+						</widget>
+
+					</container>
+				</container>
+
+			</container>
+
+			<!-- The Match Training box -->
+			<container class="main_box" id="PTRA" red_replacement="dark_box_background">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="5" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<widget class="label" id="mAsT" font="title" alignment="centre" auto_size="vertical" colour="accent" />
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="fill,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+						<container width="294">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="5" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+								<widget class="label" id="acMF" alignment="left,centre_y"  hidden="true">
+									<translation id="text" translation_id="346740" type="use" value="Main Focus[COMMENT: training players panel, column heading for Training Focus]" />
+								</widget>
+								<widget class="label" id="suMF" alignment="left,centre_y" >
+									<translation id="text" translation_id="357282" type="use" value="Suggested Main Focus[COMMENT: training players panel, column heading for Training Focus]" />
+								</widget>
+							</container>
+							<widget class="match_training_focus_popup_button" id="mtFP" icon="" icon_alignment="left,centre_y" alignment="left,centre_y" auto_size="none" needs_main_focus="false" />
+						</container>
+					</container>
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+						<container width="294">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="5" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+							<widget class="label" alignment="left,centre_y" auto_size="horizontal">
+								<translation id="text" translation_id="282227" type="use" value="Tactics[COMMENT: match analysis panel; title header]" />
+							</widget>
+							<widget class="icon_button" id="taBU" icon="" icon_alignment="left,centre_y" alignment="left,centre_y" auto_size="none" click_event="eTpC" secondary_icon_enabled="true" secondary_icon="icons/16px/down" colour="text" />
+						</container>
+					</container>
+				</container>
+
+
+			</container>
+
+		</container>
+
+		<!--The Downer part of the panel-->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange" vertical_layout="22,-1,160" vertical_offset="2" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container>
+
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="10" vertical_alignment="vertical" vertical_inset="0" />
+
+				<widget class="spacer" width="150" />
+
+				<container>
+
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="1" horizontal_gap="1" vertical_alignment="vertical" vertical_inset="0" />
+
+					<record id="default_properties" alignment="centre" auto_size="none" colour="disabled" />
+
+					<widget class="text">
+						<translation id="text" translation_id="249893" type="use" value="Mon[short for Monday]" />
+					</widget>
+					<widget class="text">
+						<translation id="text" translation_id="249894" type="use" value="Tue[short for Tuesday]" />
+					</widget>
+					<widget class="text">
+						<translation id="text" translation_id="249895" type="use" value="Wed[short for Wednesday]" />
+					</widget>
+					<widget class="text">
+						<translation id="text" translation_id="249896" type="use" value="Thu[short for Thursday]" />
+					</widget>
+					<widget class="text">
+						<translation id="text" translation_id="249897" type="use" value="Fri[short for Friday]" />
+					</widget>
+					<widget class="text">
+						<translation id="text" translation_id="249898" type="use" value="Sat[short for Saturday]" />
+					</widget>
+					<widget class="text">
+						<translation id="text" translation_id="249899" type="use" value="Sun[short for Sunday]" />
+					</widget>
+				</container>
+
+			</container>
+
+			<container class="vertical_adaptive_container" id="barc" inset="0" offset="0" gap="-1">
+
+				<record id="default_properties" default_height="-1" minimum_height="150" />
+
+				<container class="team_training_week_schedule_bar" id="fBAR" priority="1">
+					<translation id="title" translation_id="339927" type="use" value="This week[Comment: Training panel; label for the current week in the calendar]" />
+				</container>
+
+				<container class="team_training_week_schedule_bar" priority="2">
+					<translation id="title" translation_id="339785" type="use" value="Next Week[Comment: Training panel; label for the first week after the current week in the calendar]" />
+				</container>
+
+				<container class="team_training_week_schedule_bar" priority="3">
+					<translation id="title" translation_id="339729" type="use" value="In Two Weeks[Comment: Training panel; label for the second week after the current week in the calendar]" />
+				</container>
+
+				<container class="team_training_week_schedule_bar" priority="4">
+					<translation id="title" translation_id="339728" type="use" value="In Three Weeks[Comment: Training panel; label for the third week after the current week in the calendar]" />
+				</container>
+
+			</container>
+
+
+			<container id="bPAR">
+				<attachment_group class="horizontal_arrange" horizontal_layout="152,-1" vertical_alignment="vertical" />
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="3" vertical_gap="11" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" alignment="left,bottom" font="label" colour="accent" auto_size="vertical">
+						<translation id="text" translation_id="229395" type="use" value="Training Facilities" />
+					</widget>
+					<widget class="training_facilities_stars_label" id="tflb" auto_size="vertical" alignment="left" />
+				</container>
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_layout="-1,152" vertical_alignment="vertical" vertical_inset="0" />
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="3" vertical_gap="5" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="label" alignment="left,centre_y" font="label" colour="accent" auto_size="vertical">
+							<translation id="text" translation_id="330319" type="use" value="Player Happiness[COMMENT: team training overview; column header text which indicates a player's satisfaction with their training regimen]" />
+						</widget>
+						<widget class="label" id="happ" size="large" alignment="left,centre_y" />
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="3" vertical_gap="5" horizontal_alignment="horizontal" horizontal_inset="0" />
+						<widget class="label" font="label" colour="accent" auto_size="vertical">
+							<translation id="text" translation_id="330298" type="use" value="Overall Workload[COMMENT: training workload title header text]" />
+						</widget>
+						<widget class="label" id="ovWL" size="large" alignment="left,centre_y" />
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+
+
+	</container>
+
+	<container id="sesB">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="text" id="brTX" alignment="centre" size="11" />
+	</container>
+
+	<container id="seMB">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="text" id="mbTX" alignment="centre" size="11" />
+	</container>
+
+</panel>

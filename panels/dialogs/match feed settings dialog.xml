@@ -1,0 +1,162 @@
+<panel id="dlog" width="600">
+	<!-- stretch everything to the sides of the dialog -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+
+	<!-- arrange items vertically, with text at top -->
+	<layout class="arrange_vertical_attachment" alignment="top" />
+
+	<!-- centre dialog in parent -->
+	<layout class="centre_in_parent_attachment" alignment="all" />
+
+	<!-- fit the height of the dialog to the height of its components -->
+	<layout class="fit_children_attachment" alignment="vertical,fill" />
+
+	<translation id="title" translation_id="330221" type="use" value="Match Feed Settings[COMMENT: title for editing the settings for the match feed]" />
+
+	<widget class="check_box" id="enab" click_event="enMF" auto_size="all">
+		<translation id="text" translation_id="329915" type="use" value="Enable Match Feed Notifications[COMMENT: label for a check box]" />
+	</widget>
+
+	<container id="blah">
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+		<container class="main_box">
+			<translation id="title" translation_id="328531" type="use" value="Match Info[COMMENT: title of panel on match analysis preview panel showing key men, odds, ref etc.]" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+				<widget class="text" alignment="right,centre_y" height="30" auto_size="all">
+					<translation id="text" translation_id="330455" type="use" value="Show For[COMMENT: title for a popup button to change the duration of a match feed popup - it means 'show each popup for...' then we have a popup button for the number of seconds to show each notification]" />
+				</widget>
+				<widget class="popup_button" id="dura" auto_size="vertical" />
+			</container>
+
+			<!--NT_GOAL-->
+			<!--<widget class="check_box" id="se01">
+        <record id="click_event" event_id="sech" index="1" />
+      </widget>-->
+			<!--NT_OWN_GOAL-->
+			<!--<widget class="check_box" id="se02">
+        <record id="click_event" event_id="sech" index="2" />
+      </widget>-->
+			<!--Capstick: disabled this until the disallowed goals are displayed elsewhere-->
+			<!--NT_DISALLOWED_GOAL-->
+			<!--<widget class="check_box" id="se03">
+        <record id="click_event" event_id="sech" index="3"/>
+      </widget>-->
+			<!--NT_MISSED_PENALTY-->
+			<!--<widget class="check_box" id="se04">
+        <record id="click_event" event_id="sech" index="4" />
+      </widget>-->
+			<!--NT_FOUL-->
+			<!--<widget class="check_box" id="se05">
+        <record id="click_event" event_id="sech" index="5" />
+      </widget>-->
+			<!--NT_YELLOW_CARD-->
+			<!--<widget class="check_box" id="se06">
+        <record id="click_event" event_id="sech" index="6" />
+      </widget>-->
+			<!--NT_RED_CARD-->
+			<!--<widget class="check_box" id="se07">
+        <record id="click_event" event_id="sech" index="7" />
+      </widget>-->
+			<!--NT_OFFSIDE-->
+			<!--<widget class="check_box" id="se08">
+        <record id="click_event" event_id="sech" index="8" />
+      </widget>-->
+			<!--NT_ADDED_TIME-->
+			<widget class="check_box" id="se09">
+				<record id="click_event" event_id="sech" index="9" />
+			</widget>
+			<!--NT_IMPORTANT_SCORE-->
+			<widget class="check_box" id="se10">
+				<record id="click_event" event_id="sech" index="10" />
+			</widget>
+			<!--NT_LEAGUE_POSITION_CHANGE-->
+			<widget class="check_box" id="se11">
+				<record id="click_event" event_id="sech" index="11" />
+			</widget>
+			<!--NT_SUB-->
+			<!--<widget class="check_box" id="se23">
+        <record id="click_event" event_id="sech" index="23" />
+      </widget>-->
+			<!--NT_TEAM_STAT-->
+			<widget class="check_box" id="se24">
+				<record id="click_event" event_id="sech" index="24" />
+			</widget>
+			<!--NT_PLAYER_STAT-->
+			<widget class="check_box" id="se25">
+				<record id="click_event" event_id="sech" index="25" />
+			</widget>
+			<!--NT_MATCH_PLAN_TACTIC_CHANGE-->
+			<!--<widget class="check_box" id="se26">
+        <record id="click_event" event_id="sech" index="26" />
+      </widget>-->
+			<!--NT_MATCH_PLAN_PHILOSPHY_CHANGE-->
+			<!--<widget class="check_box" id="se27">
+        <record id="click_event" event_id="sech" index="27" />
+      </widget>-->
+			<!--NT_MATCH_PLAN_MENTALITY_CHANGE-->
+			<!--<widget class="check_box" id="se28">
+        <record id="click_event" event_id="sech" index="28" />
+      </widget>-->
+			<!--NT_PENALTY_AWARDED-->
+			<!--<widget class="check_box" id="se29">
+        <record id="click_event" event_id="sech" index="29" />
+      </widget>-->
+			<!--NT_TOUCHLINE_SHOUT-->
+			<widget class="check_box" id="se30">
+				<record id="click_event" event_id="sech" index="30" />
+			</widget>
+
+		</container>
+
+		<container class="main_box">
+			<translation id="title" translation_id="330489" type="use" value="Staff Feedback[COMMENT: title for match feed options to do with advice from your coaching staff]" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!--NT_SERIOUS_INJURY-->
+			<widget class="check_box" id="se12">
+				<record id="click_event" event_id="sech" index="12" />
+			</widget>
+			<!--NT_SLIGHT_INJURY-->
+			<widget class="check_box" id="se13">
+				<record id="click_event" event_id="sech" index="13" />
+			</widget>
+			<!--NT_TACTICS_ADVICE-->
+			<widget class="check_box" id="se14">
+				<record id="click_event" event_id="sech" index="14" />
+			</widget>
+			<!--NT_STATS_ADVICE-->
+			<widget class="check_box" id="se15">
+				<record id="click_event" event_id="sech" index="15" />
+			</widget>
+			<!--NT_PERFORMANCE_ADVICE-->
+			<widget class="check_box" id="se16">
+				<record id="click_event" event_id="sech" index="16" />
+			</widget>
+			<!--NT_TEAM_ADVICE-->
+			<widget class="check_box" id="se17">
+				<record id="click_event" event_id="sech" index="17" />
+			</widget>
+			<!--NT_KNOCK-->
+			<widget class="check_box" id="se18">
+				<record id="click_event" event_id="sech" index="18" />
+			</widget>
+
+		</container>
+	</container>
+
+	<!-- standard buttons / these get shown & hidden by subclasses -->
+	<container id="btns" file="dialog buttons" />
+
+</panel>

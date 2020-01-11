@@ -1,0 +1,89 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<!--header boxes-->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+
+		<!--Dressing Room Atmosphere container-->
+		<container class="inner_subtle_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+			<widget class="text" font="title" alignment="left,top" auto_size="vertical" colour="accent">
+				<translation id="text" translation_id="445603" type="use" value="Dressing Room Atmosphere[COMMENT: Team Dynamics: Dressing Room Atmosphere label]" />
+			</widget>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="8" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+				<!--bar chart-->
+				<container class="inner_box_no_margin" height="50" width="120">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2" />
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="4" offset="4" />
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="middle" gap="4" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<!--support text-->
+						<widget class="text" id="angT" spec="text" style="semi_bold" auto_size="horizontal" alignment="centre" />
+						<!--change icon-->
+						<widget class="picture" id="angP" file="icons/16px/change up" width="16" image_alignment="centre" />
+					</container>
+
+					<container height="15">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<widget class="horizontal_split_value_bar" negative_colour="comp person bar 1" positive_colour="comp person bar 2" max_value="100" min_value="-100" id="atbb" />
+						<widget class="horizontal_split_value_bar" max_value="100" min_value="-100" id="atsb" background_appearance_left="" background_appearance_right="" />
+					</container>
+				</container>
+
+				<widget class="text" id="agsL" alignment="left,top">
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+				</widget>
+			</container>
+		</container>
+
+		<container class="inner_subtle_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="text" font="title" alignment="left,top" auto_size="vertical" colour="accent">
+				<translation id="text" translation_id="447498" type="use" value="Managerial Support[COMMENT: team confidence panel header, offers board confidence feedback on the level of managerial support from the players]" />
+			</widget>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="8" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+				<!--bar chart-->
+				<container class="inner_box_no_margin" height="50" width="120">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2" />
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="4" offset="4" />
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="middle" gap="4" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<!--support text-->
+						<widget class="text" id="MngT" spec="text" style="semi_bold" auto_size="horizontal" alignment="centre" />
+						<!--change icon-->
+						<widget class="picture" id="MngP" file="icons/16px/change up" width="16" image_alignment="centre" />
+					</container>
+
+					<container height="15">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<widget class="horizontal_split_value_bar" negative_colour="comp person bar 1" positive_colour="comp person bar 2" max_value="100" min_value="-100" id="mtbb" />
+						<widget class="horizontal_split_value_bar" max_value="100" min_value="-100" id="mtsb" background_appearance_left="" background_appearance_right="" />
+					</container>
+				</container>
+
+				<widget class="text" id="mgsL" alignment="left,top">
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+				</widget>
+			</container>
+		</container>
+
+	</container>
+</panel>

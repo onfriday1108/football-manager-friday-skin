@@ -1,0 +1,20 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" layout="-1, 110" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="scrolling_box">
+		<container class="inner_box" id="infc">
+			<translation id="title" translation_id="339117" type="use" value="Season expectations[COMMENT: START_OF_SEASON_EXPECTATION_NEWS - board state what the minimum expectations for the season are]"/>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" vertical_gap="10"/>
+
+			<!-- additional information boxes will be added to this container -->
+		</container>
+	</container>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="bottom"/>
+
+		<widget class="season_expectations_budget_info_panel" id="cmlk"/>
+	</container>
+
+</panel>

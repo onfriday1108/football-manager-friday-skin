@@ -1,0 +1,69 @@
+<panel>
+
+	<translation id="title" translation_id="247243" type="use" value="Fixture Information" />
+	<!-- layout -->	
+	<layout class="arrange_vertical_attachment" alignment="fill" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- main multi box -->
+	<widget class="multi_box" id="tdmb">
+
+		<translation id="title" translation_id="247244" type="use" value="Panels" />
+		<flags id="tknd" value="gbox" />
+		<flags id="bknd" value="gbox" />
+
+		<flags id="cknd" value="gbox" />
+		<flags id="chev" value="eipc" />
+		<boolean id="save_session_state" value="true" />
+		
+		<integer id="dflt" value="fdep " />
+
+		<record id="bprp">
+			<flags id="mode" value="1" />
+		</record>
+
+		<!-- ******************************************************************** -->
+
+		<!-- the live fixtures page -->
+		<widget class="container" id="flip">
+		
+			<translation id="title" value="" />
+		<!-- Layout: -1,-4,-1,-3
+				|team 1		|N v N|	team 2						[view]
+				| 	event	|     |		event					|		|
+				| 	event	|     |		event					|		|
+				| 	event	|     |		event					|		|
+			-->
+			
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			
+			<widget class="table" id="flit" layout="-1,-4,-1,-4" mode="0">
+				<boolean id="auto_size_rows" value="true" />
+				<boolean id="save_session_state" value="true" />
+			</widget> <!-- the information table -->
+
+		</widget> <!-- "live fixtures" page -->
+
+		<!-- ******************************************************************** -->
+
+		<!-- the competition fixtures page -->
+		<widget class="container" id="fcop">
+			<translation id="title" value="" />
+		</widget> <!-- "competition fixtures" page -->
+
+		<!-- ******************************************************************** -->
+
+		<!-- the team fixtures page -->
+		<widget class="container" id="ftep">
+			<translation id="title" value="" />
+		</widget> <!-- "team fixtures" page -->
+		
+		<!-- ******************************************************************** -->
+
+
+		<!-- ******************************************************************** -->
+
+	</widget> <!-- main multi-box -->
+
+</panel>
+<!-- main container -->

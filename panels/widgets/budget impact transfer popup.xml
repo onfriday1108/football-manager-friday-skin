@@ -1,0 +1,55 @@
+﻿<panel width="600">
+	<attachment_group class="vertical_arrange_autosize"/>
+
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="10" vertical_gap="10" horizontal_inset="10"/>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1"/>
+
+			<container class="vertical_label_value_pair" value_widget="BItv" label_widget="BIts" height="80">
+
+				<widget class="text" id="BIts" alignment="left,centre_y">
+					<record id="object_property" get_property="BIts" set_property="text" />
+				</widget>
+
+				<widget class="text" id="BItv" alignment="left,centre_y">
+					<record id="object_property" get_property="BItv" set_property="text" />
+				</widget>
+			</container>
+
+			<container class="vertical_label_value_pair" value_widget="BIrv" label_widget="BIrs">
+				<attachment_group class="vertical_arrange_autosize"/>
+
+				<widget class="text" id="BIrs" alignment="left,centre_y">
+					<record id="object_property" get_property="BIrs" set_property="text" />
+				</widget>
+
+				<widget class="text" id="BIrv" alignment="left,centre_y">
+					<record id="object_property" get_property="BIrv" set_property="text" />
+				</widget>
+			</container>
+
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+
+			<widget class="text" colour="faded text" auto_size="vertical">
+				<record id="object_property" get_property="BIft" set_property="text" />
+			</widget>
+
+			<widget class="text" colour="faded text" auto_size="vertical">
+				<record id="object_property" get_property="BItx" set_property="text" />
+			</widget>
+
+			<widget class="text" colour="faded text" auto_size="vertical">
+				<record id="object_property" get_property="BIaw" set_property="text" />
+			</widget>
+
+		</container>
+
+	</container>
+
+</panel>

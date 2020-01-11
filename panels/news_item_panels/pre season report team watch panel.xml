@@ -1,0 +1,21 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <boolean id="save_session_state" value="true"/>
+
+  <!-- content area -->
+  <container class="scrolling_box">
+    <container id="ctbx">
+      <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+      <container class="competition_team_preview_panel" file="news_item_panels/pre season report team preview panel" height="600" >
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </container>
+    </container>
+  </container>
+
+</panel>

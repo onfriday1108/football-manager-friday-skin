@@ -1,0 +1,75 @@
+<panel database_table_type='1'>
+
+  <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="4" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+  <!--manager name-->
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <widget class="label" alignment="centre_x,bottom" size="10" auto_size="vertical">
+      <translation id="text" translation_id="227981" type="use" value="Manager" />
+    </widget>
+    <widget class="person_button" id="Mana" size="12" alignment="centre_x,top" style="bold" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="objt" />
+      </record>
+    </widget>
+  </container>
+
+  <!--preferred formation-->
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <widget class="label" id="frmL" alignment="centre_x,bottom" size="10" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="Nppf" />
+        <boolean id="name" value="true"/>
+      </record>
+    </widget>
+    <widget class="formation_label" id="frmV" size="12" alignment="centre_x,top" style="bold" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="Nppf" />
+      </record>
+    </widget>
+  </container>
+
+  <!--playing style-->
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <widget class="label" id="plsL" alignment="centre_x,bottom" size="10" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="npps" />
+        <boolean id="name" value="true"/>
+      </record>
+    </widget>
+    <widget class="playing_style_label" id="plsV" size="12" alignment="centre_x,top" style="bold" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="npps" />
+      </record>
+    </widget>
+  </container>
+
+  <!--playing mentality-->
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <widget class="label" id="plmL" alignment="centre_x,bottom" size="10" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="nppm" />
+        <boolean id="name" value="true"/>
+      </record>
+    </widget>
+    <widget class="playing_mentality_label" id="plmV" size="12" alignment="centre_x,top" style="bold" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="nppm" />
+      </record>
+    </widget>
+  </container>
+
+</panel>

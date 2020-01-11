@@ -1,0 +1,18 @@
+<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<container embed_in_frame="true">
+		<attachment_group class="title_embedded_panel_left" />
+
+		<widget class="popup_button" id="soIn" select_event="soIn" auto_size="all" fixed="false" tkex="true" embed_in_frame="true"/>
+
+	</container>
+
+	<container height="25"/>
+
+	<!-- Table -->
+	<widget class="table" id="comb" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" row_spacing="0"/>
+
+</panel>

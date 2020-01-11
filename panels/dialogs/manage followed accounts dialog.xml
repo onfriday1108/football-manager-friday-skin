@@ -1,0 +1,13 @@
+<!-- type 2 is DT_OK_CANCEL -->
+<panel width="650" type="2">
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="48"/>
+
+  <list id="properties_to_forward">
+    <record get_property="object" target="mfap"/>
+  </list>
+
+  <translation id="title" translation_id="412446" type="use" value="Followed Accounts[COMMENT: FR 16821; manage followed accounts panel; dialog title for managing followed accounts]"/>
+  
+  <widget class="manage_followed_accounts_panel" id="mfap"/>
+</panel>

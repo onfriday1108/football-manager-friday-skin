@@ -1,0 +1,30 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- No news text -->
+	<container id="none" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="20" />
+
+		<widget class="text" multiline="true" alignment="centre_x,top">
+			<translation id="text" translation_id="388376" type="use" value="There is currently no news to display.[COMMENT:FMC competition news; String displayed when there is not yet any news to display to user in the currently selected category]" />
+		</widget>
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top" gap="4" offset="5" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<record id="default_properties" file="competition/competition overview news item panel" />
+
+		<container class="competition_news_item_panel" index="0" />
+		<container class="competition_news_item_panel" index="1" />
+		<container class="competition_news_item_panel" index="2" />
+		<container class="competition_news_item_panel" index="3" />
+		<container class="competition_news_item_panel" index="4" />
+		<container class="competition_news_item_panel" index="5" />
+		<container class="competition_news_item_panel" index="6" />
+		<container class="competition_news_item_panel" index="7" />
+		<container class="competition_news_item_panel" index="8" />
+		<container class="competition_news_item_panel" index="9" />
+	</container>
+</panel>

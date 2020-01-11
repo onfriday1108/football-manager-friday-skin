@@ -1,0 +1,94 @@
+﻿<panel height="140">
+  <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+  <widget class="label" auto_size="all" font="title" style="semi_bold">
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="subt"/>
+          <integer id="set_property" value="valu"/>
+        </record>
+      </list>
+    </record>
+  </widget>
+  
+  <widget class="label" auto_size="all" size="large" style="semi_bold">
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="RatT"/>
+          <integer id="set_property" value="valu"/>
+        </record>
+      </list>
+    </record>
+  </widget>
+
+  <widget class="label" height="20" colour="faded text" size="small">
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="text"/>
+          <integer id="set_property" value="valu"/>
+        </record>
+      </list>
+    </record>
+  </widget>
+
+  <container height="10"/>
+
+  <widget class="horizontal_divider" />
+
+  <widget class="table" layout="20, -1, 20, -1" mode="fill_rows">
+    <widget class="label" row="0" col="0" font="title" colour="faded text" column_span="2">
+      <translation id="text" translation_id="374007" type="use" value="Best"/>
+    </widget>
+
+    <widget class="number_label" font="title" colour="faded text" alignment="right, centre_y" size="large" row="1" col="0">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="minv"/>
+            <integer id="set_property" value="valu"/>
+          </record>
+        </list>
+      </record>
+    </widget>
+    <widget class="team_button" id="best" row="1" col="1">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="last"/>
+            <integer id="set_property" value="valu"/>
+          </record>
+        </list>
+      </record>
+    </widget>
+
+    <widget class="label" row="0" col="2" font="title" colour="faded text" column_span="2">
+      <translation id="text" translation_id="374390" type="use" value="Worst[COMMENT: Player status panel; showing the worst average rating in the matches played]"/>
+    </widget>
+    
+    <widget class="number_label" font="title" colour="faded text" alignment="right, centre_y" size="large" row="1" col="2">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="maxv"/>
+            <integer id="set_property" value="valu"/>
+          </record>
+        </list>
+      </record>
+    </widget>
+    <widget class="team_button" id="last" row="1" col="3">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="frst"/>
+            <integer id="set_property" value="valu"/>
+          </record>
+        </list>
+      </record>
+    </widget>
+  </widget>
+
+</panel>

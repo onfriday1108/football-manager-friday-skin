@@ -1,0 +1,19 @@
+<panel width="500">
+	<translation id="title" translation_id="347955" type="use" value="Advanced Setup[COMMENT: text for a button that will allow the user some extra options when setting up the game]" />
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<list id="properties_to_forward">
+		<record get_property="object" target="ngsp"/>
+	</list>
+
+	<widget class="new_game_settings_panel" id="ngsp" height="52" />
+
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="ok">
+			<translation id="text" translation_id="229829" type="use" value="Ok" />
+		</widget>
+	</container>
+
+</panel>

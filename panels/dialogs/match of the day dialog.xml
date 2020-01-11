@@ -1,0 +1,17 @@
+<panel>
+	<translation id="title" translation_id="329353" type="use" value="Match Highlights[Comment:used for title in youtube video]" />
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="50"/>
+
+	<!-- Forward props to the panel -->
+	<list id="properties_to_forward">
+		<record get_property="mchs" target="mhfv"/>
+		<record get_property="shin" target="mhfv"/>
+		<record get_property="shpm" target="mhfv"/>
+	</list>
+
+	<container class="match_highlight_frame_viewer_panel" id="mhfv" view_change_time="3.0"/>
+
+</panel>

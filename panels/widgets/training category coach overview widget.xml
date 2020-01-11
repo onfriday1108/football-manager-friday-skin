@@ -1,0 +1,102 @@
+﻿<panel height="200" width="300">
+	<list id="draw_order">
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at0:" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at08" />
+	</list>
+	<string id="no_training_workload_icon" value="icons/custom/training/coach workload/no training" />
+	<string id="light_training_workload_icon" value="icons/custom/training/coach workload/light" />
+	<string id="average_training_workload_icon" value="icons/custom/training/coach workload/average" />
+	<string id="heavy_training_workload_icon" value="icons/custom/training/coach workload/heavy" />
+	<string id="very_heavy_training_workload_icon" value="icons/custom/training/coach workload/very heavy" />
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="inner_subtle_box_no_margin" entity_layout_id="at00" id="at00" sub_group_id="0">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<widget class="coach_stars_label" entity_layout_id="at01" id="store_results" auto_size="horizontal" name="stars" width="70" height="20"  navigation_focus_target="false">
+			<integer id="value" value="0" />
+			<string id="stars_type" value="3" />
+			<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" move_side="true" target="main" />
+		</widget>
+		<widget class="text" entity_layout_id="at02" alignment="centre_y,left" id="ctlb" name="category label" height="24">
+			<string id="style" value="bold" />
+			<integer id="size" value="11" />
+			<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" target="at01" />
+		</widget>
+		<container entity_layout_id="at0:" id="noCh" file="widgets/training category overview no coach widget" hidden="true" name="no coach container">
+			<layout class="stick_to_object_attachment" id="align_top" offset="2" get_side="bottom" set_side="top" target="at02" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+		</container>
+		<container entity_layout_id="at05" id="chsm" sub_group_id="0" name="coach summary container">
+			<layout class="stick_to_object_attachment" id="align_top" offset="2" get_side="bottom" set_side="top" target="at02" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="horizontal_arrange_container" entity_layout_id="at03" id="harg" alignment="left" offset="0" inset="0" name="people box" height="18">
+				<integer id="gap" value="0" />
+				<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+			</container>
+			<widget class="text" entity_layout_id="at04" alignment="centre_y,left" id="ldCh" name="lead coach text" height="20">
+				<layout class="stick_to_object_attachment" id="align_top" offset="2" get_side="bottom" set_side="top" move_side="true" target="at03" />
+				<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+			</widget>
+		</container>
+	</container>
+	<widget class="text" entity_layout_id="at07" alignment="centre_y,left" id="at07" auto_size="horizontal" name="coach workload label" colour="text" needs_width="true" height="20">
+		<string id="font" value="title" />
+		<integer id="size" value="8" />
+		<translation id="text" translation_id="466573" type="use" value="Coach Workload[COMMENT: training coaches panel title]" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="74" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" move_side="true" target="main" />
+	</widget>
+	<widget class="picture" entity_layout_id="at09" id="icon" width="20" height="20">
+		<string id="image_alignment" value="centre" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="74" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="11" get_side="right" set_side="left" move_side="true" target="at07" />
+	</widget>
+	<widget class="text" entity_layout_id="at08" alignment="centre_y,left" id="wklL" name="workload with pie chart" height="20">
+		<layout class="stick_to_object_attachment" id="align_top" offset="75" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" target="at09" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+	</widget>
+</panel>

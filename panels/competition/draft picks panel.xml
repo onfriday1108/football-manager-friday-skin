@@ -1,0 +1,30 @@
+<panel>
+
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- group box of fixed height-->
+	<container id="pick">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- table -->
+		<widget class="table" id="tabl" mode="fill_rows" layout="75, -1" row_spacing="10" column_spacing="10" auto_size_rows="true" all_content_same_height="false" fixed_size_rows="false">
+			<list id="column_table_properties">
+				<record index="0" sort_disabled="true" width="50" height="50"/>
+				<record index="1" sort_disabled="true" alignment="left,centre_y" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="centre" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="50" height="50"/>
+				<record index="1" alignment="left,centre_y" size="9" auto_size="vertical" />
+			</list>
+		</widget>
+
+		<widget class="label" id="nost" alignment="centre" size="12">
+			<translation id="text" translation_id="331851" type="use" value="Draft not started[COMMENT: MLS draft panel; text for info panel showing the draft hasn't begun]" />
+			<layout class="centre_in_parent_attachment" alignment="vertical" />
+		</widget>
+
+	</container>
+</panel>

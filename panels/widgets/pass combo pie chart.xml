@@ -1,0 +1,14 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="-3, -2" gap="10" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="middle" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<widget class="table" msov="itSL" msex="itUL" id="txtG" layout="-1" row_height="26" row_spacing="1" column_spacing="10" auto_size="vertical"/>
+
+	</container>
+
+	<widget class="pie_chart" id="piCH" />
+</panel>

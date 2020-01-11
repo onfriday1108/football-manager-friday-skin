@@ -1,0 +1,46 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="inbox_body_text" id="bdtx"/>
+	
+	<!--blueprint-->
+	<container class="inner_subtle_box" appearance="boxes/custom/blueprint/paper" height="280">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<!-- main body text -->
+		<widget class="text" auto_size="vertical" size="large" font="capitals_bold" colour="faded white">
+			<translation id="text" translation_id="416358" type="use" value="New Stadium Plans[COMMENT: FR11233 - title for a blueprint for new stadium plans]"/>
+		</widget>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="264, -1" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<!--dummy container-->
+			<container>
+			</container>
+
+			<!--info on the right-->
+			<container class="client_object_property_labelled_panel_grid" id="grid" vertical_offset="0" vertical_gap="0" row_count="4" colour="white">
+				<record id="label_widget_properties" colour="faded white"/>
+				<record id="value_widget_properties" colour="white" multiline="true" auto_size_maximum_height="38"/>
+				<list id="properties">
+					<integer value="SctI"/>
+					<integer value="Scos"/>
+					<integer value="Scov"/>
+					<integer value="SblS"/>
+					<integer value="Scpy"/>
+					<integer value="SsfT"/>
+					<integer value="Sush"/>
+					<integer value="SblC"/>
+				</list>
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</container>
+		</container>
+	</container>
+
+</panel>

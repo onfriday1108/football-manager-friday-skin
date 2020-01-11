@@ -1,0 +1,16 @@
+<panel height="36">
+  <translation id="hint" translation_id="257223" type="use" value="Inbox[COMMENT - quicklink icon hint]" />
+
+  <!-- news icon-->
+  <widget class="picture" id="pict" file="icons/26px/inbox" image_alignment="centre" red_replacement="sidebar text">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </widget>
+
+  <!-- the bit with the number of unread news (text) -->
+  <widget class="button" id="ibic" height="24" width="24" size="7" alignment="centre" appearance="buttons/custom/interface/notification/button" colour="black">
+    <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="right" inset="3"/>
+    <attachment class="get_global_attachment" get_property="mgru" set_property="text"/>
+    <attachment class="test_global_attachment" get_property="mgru" mode="0" value="0" set_property="hidn"/>
+  </widget>
+</panel>

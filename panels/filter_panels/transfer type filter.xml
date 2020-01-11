@@ -1,0 +1,30 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+	
+	<container class="filter_check_box_list_container"  auto_size="vertical">
+		<translation id="title" translation_id="229400" type="use" value="Type" />
+		
+		
+		<list id="objL">
+
+			<record id="1" click_event="tran">
+				<translation id="text" translation_id="230119" type="use" value="Transfer" />
+			</record>
+			<record id="4" click_event="tria">
+				<translation id="text" translation_id="232203" type="use" value="Trial" />
+			</record>
+			<record id="3" click_event="loan">
+				<translation id="text" translation_id="230124" type="use" value="Loan" />
+			</record>
+			<record id="7" click_event="enqu">
+				<translation id="text" translation_id="242716" type="use" value="Enquiry" />
+			</record>
+			<record id="0" click_event="staf">
+				<translation id="text" translation_id="229528" type="use" value="Staff" />
+			</record>
+
+		</list>
+		
+	</container>
+	
+</panel>

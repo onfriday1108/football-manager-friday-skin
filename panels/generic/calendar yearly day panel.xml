@@ -1,0 +1,9 @@
+<panel height="20">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box" appearance="boxes/custom/calendar/cell/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="text_button" id="dtBt" appearance="buttons/text/button" font="label"/>
+	</container>
+</panel>

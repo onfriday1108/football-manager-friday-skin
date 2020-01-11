@@ -1,0 +1,337 @@
+<panel width="1006" height="700" appearance="">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="standard_popup_box">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<layout class="arrange_vertical_attachment" layout="-1,15,35" gap="0" offset="0" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="arrange_vertical_attachment" layout="55,4,-1" gap="0" offset="0" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" layout="-1,-3,-1" />
+
+				<widget class="spacer" />
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+
+					<widget class="label" auto_size="vertical" font="title">
+						<translation id="text" translation_id="377813" type="use" value="Assignment[COMMENT: scouting assignment title]" />
+					</widget>
+
+					<widget class="label" id="assn" auto_size="vertical" size="large" colour="accent" />
+
+				</container>
+
+				<widget class="spacer" />
+
+			</container>
+
+			<widget class="horizontal_divider" />
+
+			<container id="dtls">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<layout class="arrange_vertical_attachment" layout="60,1,-1" gap="0" offset="0" />
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
+
+					<container id="trtc" width="229" height="60">
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
+						<container width="225" height="60">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+							<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0" />
+
+							<widget class="label" spec="title" height="17">
+								<translation id="text" translation_id="336071" type="use" value="Transfer Type[COMMENT: transfer lists; column header, type of transfer proposed for a player]" />
+							</widget>
+
+							<widget class="label" id="trtl" select_event="trte" size="large" height="25" />
+						</container>
+
+						<widget class="vertical_divider"/>
+					</container>
+
+					<container id="trbc" width="304" height="60">
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
+						<container width="300" height="60">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+							<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0" />
+
+							<container height="17">
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+								<layout class="arrange_horizontal_attachment" layout="-1,-1" gap="0" offset="0" />
+
+								<widget class="label" spec="title" height="17">
+									<translation id="text" translation_id="291309" type="use" value="Transfer Budget[COMMENT:Transfer budget label]" />
+								</widget>
+
+								<widget class="label" id="ttbu" alignment="right" size="small">
+								</widget>
+							</container>
+
+							<widget class="label" id="trbl" size="large" height="25" />
+
+						</container>
+
+						<widget class="vertical_divider"/>
+
+					</container>
+
+					<container width="150">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0" />
+
+						<widget class="label" spec="title" height="17">
+							<translation id="text" translation_id="229407" type="use" value="Age" />
+						</widget>
+
+						<container height="25" id="agec" hidden="true">
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+							<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="4" offset="0" />
+
+							<widget class="label" id="minl" size="large" auto_size="all" />
+
+							<widget class="label" size="large" auto_size="all">
+								<translation id="text" translation_id="233089" type="use" value="-" />
+							</widget>
+
+							<widget class="label" id="maxl" size="large" auto_size="all" />
+
+						</container>
+
+						<widget class="label" id="agau" hidden="true" size="large" auto_size="vertical">
+							<translation id="text" translation_id="300963" type="use" value="Automatic[COMMENT: player_instructions; player duty]" />
+						</widget>
+
+					</container>
+
+					<widget class="vertical_divider"/>
+
+					<container width="150">
+
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0" />
+
+						<widget class="label" spec="title" height="17">
+							<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+						</widget>
+
+						<widget class="scout_stars_label" id="cual" height="25" hidden="true"/>
+
+						<widget class="label" id="cuaa" hidden="true" size="large" auto_size="vertical">
+							<translation id="text" translation_id="300963" type="use" value="Automatic[COMMENT: player_instructions; player duty]" />
+						</widget>
+
+					</container>
+
+					<widget class="vertical_divider"/>
+
+					<container width="150">
+
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0" />
+
+						<widget class="label" spec="title" height="17">
+							<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]" />
+						</widget>
+
+						<widget class="scout_stars_label" id="poal" height="25" hidden="true">
+						</widget>
+
+						<widget class="label" id="poaa" hidden="true" size="large" auto_size="vertical">
+							<translation id="text" translation_id="300963" type="use" value="Automatic[COMMENT: player_instructions; player duty]" />
+						</widget>
+
+					</container>
+
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+					<layout class="arrange_vertical_attachment" layout="-1,4,50" gap="0" offset="0" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<layout class="arrange_horizontal_attachment" layout="-1,1,-1" gap="0" offset="0" />
+
+						<container class="inner_box">
+							<translation id="title" translation_id="364287" type="use" value="Desirable Attributes[COMMENT: FR 6137 ]" />
+
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+							<layout class="arrange_vertical_attachment" layout="-1,8" gap="0" offset="0" />
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+								<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" gap="2" offset="0" />
+
+								<widget class="table" id="tect" mode="fill_rows, stripe_rows, printable" layout="-1" row_height="24" row_spacing="0">
+
+									<list id="headings">
+										<record alignment="left,centre_y" column_span="3">
+											<translation id="text" translation_id="229413" type="use" value="Technical" />
+										</record>
+									</list>
+
+									<!-- small inset from sides of table -->
+									<list id="column_table_properties">
+										<record indx="0" left="4" right="4" sort_disabled="true" />
+									</list>
+								</widget>
+
+								<widget class="table" id="ment" mode="fill_rows, stripe_rows, printable" layout="-1" row_height="24" row_spacing="0">
+									<flags id="bullet_multi_appearance" value="checkbox/button_off" />
+									<flags id="bullet_multi_selected_appearance" value="checkbox/button_on" />
+									<list id="headings">
+										<record alignment="left,centre_y" column_span="3">
+											<translation id="text" translation_id="230106" type="use" value="Mental" />
+										</record>
+									</list>
+
+									<!-- small inset from sides of table -->
+									<list id="column_table_properties">
+										<record indx="0" left="4" right="4" sort_disabled="true" />
+									</list>
+
+								</widget>
+
+								<widget class="table" id="phyt" mode="fill_rows, stripe_rows, printable" layout="-1" row_height="24" row_spacing="0">
+									<flags id="bullet_multi_appearance" value="checkbox/button_off" />
+									<flags id="bullet_multi_selected_appearance" value="checkbox/button_on" />
+									<list id="headings">
+										<record alignment="left,centre_y" column_span="3">
+											<translation id="text" translation_id="230003" type="use" value="Physical" />
+										</record>
+									</list>
+
+									<!-- small inset from sides of table -->
+									<list id="column_table_properties">
+										<record indx="0" left="4" right="4" sort_disabled="true" />
+									</list>
+								</widget>
+							</container>
+
+							<widget class="spacer" />
+
+						</container>
+
+						<widget class="vertical_divider"/>
+
+						<container class="inner_box">
+							<translation id="title" translation_id="364209" type="use" value="Additional Conditions[COMMENT: FR 6137, scout assignement dialog text, search conditions]" />
+
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+							<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+
+							<!-- table containing read only filter rules -->
+							<widget class="filter_table" id="rcct" file="filter_panels/filter table create assignment" allow_filter_editing="false" show_move_buttons="false" show_operator_buttons="false" show_enabled_column="false" mode="fill_rows, stripe_rows" auto_size="vertical">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+							</widget>
+
+							<!-- table containing filter rules -->
+							<widget class="filter_table" id="asct" file="filter_panels/filter table create assignment" allow_filter_editing="false" show_move_buttons="false" show_operator_buttons="false" show_enabled_column="false" mode="fill_rows, stripe_rows"  auto_size="vertical">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+							</widget>
+
+						</container>
+
+					</container>
+
+					<widget class="horizontal_divider" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<layout class="arrange_horizontal_attachment" layout="-1,1,-1" gap="0" offset="0" />
+
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" gap="0" offset="0" />
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+								<layout class="arrange_vertical_attachment" layout="-1,-2" gap="4" offset="0" />
+
+								<widget class="label" spec="title">
+									<translation id="text" translation_id="306507" type="use" value="Scope" />
+								</widget>
+
+								<widget class="label" id="scol" size="11" auto_size="horizontal" />
+
+							</container>
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+								<layout class="arrange_vertical_attachment" layout="-1,-2" gap="4" offset="0" />
+
+								<widget class="label" spec="title">
+									<translation id="text" translation_id="227987" type="use" value="Scout" />
+								</widget>
+
+								<widget class="label" id="scul" size="11" auto_size="horizontal" />
+							</container>
+
+						</container>
+
+						<widget class="spacer" />
+
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" gap="0" offset="0" />
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+								<layout class="arrange_vertical_attachment" layout="-1,-2" gap="4" offset="0" />
+
+								<widget class="label" spec="title">
+									<translation id="text" translation_id="230113" type="use" value="Duration" />
+								</widget>
+
+								<widget class="label" id="durl" size="11" auto_size="horizontal" />
+
+							</container>
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+								<layout class="arrange_vertical_attachment" layout="-1,-2" gap="4" offset="0" />
+
+								<widget class="label" spec="title">
+									<translation id="text" translation_id="336017" type="use" value="Priority[COMMENT: transfers lists; column header, prioritise the importance of a particular deal]" />
+								</widget>
+
+								<widget class="label" id="pril" size="11" auto_size="horizontal" />
+							</container>
+
+						</container>
+
+					</container>
+
+				</container>
+
+
+			</container>
+
+		</container>
+
+		<widget class="horizontal_divider" />
+
+		<container>
+			<attachment_group class="button_arrangement_right" />
+
+			<widget class="primary_icon_tick_button" id="ok  " hidden="true">
+				<translation id="text" translation_id="229829" type="use" value="Ok" />
+			</widget>
+
+		</container>
+
+	</container>
+
+</panel>

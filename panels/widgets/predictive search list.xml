@@ -1,0 +1,53 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<flags id="splt" value="tables/standard/row/divider/row" />
+
+  <container class="main_box" appearance="boxes/custom/interface/search/paper">
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+    <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+    
+    <container id="tbct">
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+      <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="client_object_list_table" id="colt" database_table_type="-1" auto_size="vertical" auto_size_maximum_height="640" row_height="35">
+        <boolean id="force_refresh_on_object_list" value="true" />
+        <boolean id="keyboard_event_fallthrough_no_scroll" value="true" />
+        <flags id="mode" value="fill_rows, fill_custom_rows, keyboard, select_rows, dont_ask_for_focus, hide_headings, stripe_rows" />
+        <list id="column_widget_properties">
+          <record indx="0" left="44">
+            <integer id="size" value="large" />
+            <integer id="colour" value="text" />
+            <integer id="cursor" value="1" />
+          </record>
+
+          <record indx="1">
+            <colour id="colour" name="faded text" />
+            <integer id="size" value="small" />
+            <flags id="auto_size" value="vertical" />
+            <integer id="cursor" value="1" />
+          </record>
+        </list>
+
+        <record id="viewed_property_ids">
+          <record id="objt" />
+          <record id="subS" />
+        </record>
+      </widget>
+
+      <widget class="text" id="nore" height="20" colour="faded text" />
+
+    </container>
+
+    <widget class="icon_button" hidden="true" show_button_appearance="false" id="Shmo" click_event="ShMo" icon="icons/16px/down" height="20" alignment="centre" icon_alignment="centre">
+      <translation id="text" translation_id="492055" type="use" value="Show more[COMMENT: AREA: Whole Game; SUB-AREA: Search function; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: expands search results]" />
+    </widget>
+
+  </container>
+
+</panel>

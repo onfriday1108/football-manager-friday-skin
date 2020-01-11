@@ -1,0 +1,136 @@
+﻿<panel width="750">
+	<attachment_group class="vertical_arrange_autosize"/>
+
+
+	<container class="standard_popup_box">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-3" horizontal_offset="10" vertical_inset="6"/>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="10" vertical_gap="10"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1"/>
+
+				<container class="vertical_label_value_pair" value_widget="BIwv" label_widget="BIws" height="80">
+
+					<widget class="text" id="BIws" alignment="left,centre_y">
+						<record id="object_property" get_property="BIws" set_property="text" />
+					</widget>
+
+					<widget class="text"  id="BIwv" alignment="left,centre_y">
+						<record id="object_property" get_property="BIwv" set_property="text" />
+					</widget>
+				</container>
+
+				<container class="vertical_label_value_pair" value_widget="BIcw" label_widget="CfiL">
+					<attachment_group class="vertical_arrange_autosize"/>
+
+					<widget class="text" id="CfiL" alignment="left,centre_y">
+						<translation id="text" translation_id="247223" type="use" value="Current Wage[COMMENT: home_page; salary panel text]" />
+					</widget>
+
+					<widget class="text" id="BIcw" alignment="left,centre_y">
+						<record id="object_property" get_property="BIcw" set_property="text" />
+					</widget>
+				</container>
+				
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+
+				<widget class="text" colour="faded text" auto_size="vertical">
+					<record id="object_property" get_property="BIfp" set_property="text" />
+				</widget>
+
+				<widget class="text" colour="faded text" auto_size="vertical">
+					<record id="object_property" get_property="BItx" set_property="text" />
+				</widget>
+
+				<widget class="text" colour="faded text" auto_size="vertical">
+					<record id="object_property" get_property="BIaw" set_property="text" />
+				</widget>
+				
+			</container>
+
+			
+
+			<widget class="horizontal_divider" height="1"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1"/>
+
+				<container class="vertical_label_value_pair" value_widget="BIbv" label_widget="BIbs" >
+					<attachment_group class="vertical_arrange_autosize"/>
+
+					<widget class="text" id="BIbs" alignment="left,centre_y">
+						<record id="object_property" get_property="BIbs" set_property="text" />
+					</widget>
+
+					<widget class="text" auto_size="vertical" id="BIbv" alignment="left,centre_y">
+						<record id="object_property" get_property="BIbv" set_property="text" />
+					</widget>
+				</container>
+
+				<container class="vertical_label_value_pair" value_widget="BItv" label_widget="BIts">
+					<attachment_group class="vertical_arrange_autosize"/>
+
+					<widget class="text" id="BIts" alignment="left,centre_y">
+						<record id="object_property" get_property="BIts" set_property="text" />
+					</widget>
+
+					<widget class="text" auto_size="vertical" id="BItv" alignment="left,centre_y">
+						<record id="object_property" get_property="BItv" set_property="text" />
+					</widget>
+				</container>
+
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+				
+					<widget class="text" colour="faded text" auto_size="vertical">
+					<record id="object_property" get_property="BInb" set_property="text" />
+				</widget>
+
+				<widget class="text" colour="faded text" auto_size="vertical">
+					<record id="object_property" get_property="BIfT" set_property="text" />
+				</widget>
+
+			</container>
+			
+		</container>
+
+		<container class="inner_contrast_box" red_replacement="background">
+			<attachment_group class="vertical_arrange_autosize"/>
+
+			<widget class="text" auto_size="vertical" font="title" colour="accent">
+				<record id="object_property" get_property="BIsw" set_property="text" />
+			</widget>
+
+			<widget class="client_object_list_table" mode="fill_rows, stripe_rows" database_table_type="1" auto_size="vertical" auto_size_maximum_height="300">
+				<record id="object_property" get_property="Pcsp" set_property="objL" />
+
+				<list id="default_sort_column">
+					<integer value="Pcww" />
+				</list>
+
+				<!--available views-->
+				<list id="viws">
+					<record id="geni">
+						<record id="view">
+							<flags id="Pcww"/>
+							<!-- wage -->
+							<flags id="Pnms" />
+							<!-- person name -->
+						</record>
+					</record>
+				</list>
+
+			</widget>
+			
+		</container>
+
+	</container>
+
+</panel>

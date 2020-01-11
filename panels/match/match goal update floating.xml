@@ -1,0 +1,37 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0,2"/>
+
+	<flags id="MGUs" value="true"/>
+
+	<widget class="table" id="mlst" mode="fill_rows, stripe_rows" auto_size_rows="false" layout="22, -1, 20, 20, 10, 20, 20, -1, -2" fixed_size_rows="true" row_height="26" row_spacing="0">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+		<!-- set the colum properties -->
+		<list id="column_widget_properties">
+			<record index="0" alignment="left,centre_y"/>
+			<record index="1" alignment="right,centre_y"/>
+			<record index="2" alignment="right,centre_y"/>
+			<record index="3" alignment="right,centre_y"/>
+			<record index="4" alignment="centre"/>
+			<record index="5" alignment="left,centre_y"/>
+			<record index="6" alignment="left,centre_y"/>
+			<record index="7" alignment="left,centre_y"/>
+			<record index="8" alignment="right,centre_y"/>
+		</list>
+
+		<list id="column_table_properties">
+			<record index="0" id="m_it" top="2" bottom="2" left="2" />
+			<record index="1" id="m_t1" />
+			<record index="2" id="m_a1" />
+			<record index="3" id="m_s1" />
+			<record index="4" id="m_dv" />
+			<record index="5" id="m_s2" />
+			<record index="6" id="m_a2" />
+			<record index="7" id="m_t2" />
+			<record index="8" id="m_pt" right="4" />
+		</list>
+
+	</widget>
+
+</panel>

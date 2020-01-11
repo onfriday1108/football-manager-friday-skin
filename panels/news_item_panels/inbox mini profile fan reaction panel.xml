@@ -1,0 +1,18 @@
+<panel>
+	
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="8" horizontal_inset="8"/>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+
+		<widget class="label" auto_size="vertical" font="label">
+			<translation id="text" translation_id="347125" type="use" value="Fan Reaction[COMMENT: inbox player profile; fan reaction to signing section title]"/>
+		</widget>
+
+		<widget class="performance_grade_box" id="frea" auto_size="vertical" file="widgets/transfer performance grade box"/>
+
+	</container>
+
+	<widget class="horizontal_divider"/>
+
+</panel>

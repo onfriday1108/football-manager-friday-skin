@@ -1,0 +1,21 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<string id="skin_style" value="subtle box" />
+
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+    <widget class="label" auto_size="all" spec="text" size="large" colour="text" alignment="centre">
+			<translation id="text" translation_id="491645" type="use" value="Proposed Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+		</widget>
+
+		<widget class="playing_time_label" id="stlb" auto_size="all" spec="text" size="large" colour="text" style="bold" alignment="centre">
+			<record id="object_property">
+				<integer id="get_property" value="Pcpt" />
+				<integer id="set_property" value="valu" />
+			</record>
+		</widget>
+	</container>
+
+</panel>

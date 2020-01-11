@@ -1,0 +1,72 @@
+<panel>
+
+	<boolean id="save_session_state" value="true"/>
+	<boolean id="save_default_state" value="true"/>
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<!-- intro panel - contains team names and lineups -->
+		<container id="intr" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+
+			<widget class="match_preview_lineups_panel" id="line" file="match/match highlight frame viewer lineups panel" remove_warming_up_dialog="false">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+			</widget>
+			<widget class="processing_bar" id="prog" hidden="true" height="20" max_value="100">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+			</widget>
+		</container>
+
+		<!-- pitch panel for highlights -->
+		<!-- Contains all the "standard" objetcs for the match view -->
+		<container id="ptcn" hidden="true">
+			<widget class="match_pitch_panel" id="pitc" file="match/match pitch highlight frame viewer" vertical="false" pitch_unique_id="pnld" pitch_display_time="false">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			</widget>
+
+			<!--commentary sits over the pitch (bug 180951)-->
+			<widget class="match_commentary_panel" id="cmif" height="35" file="match/match highlight frame viewer commentary">
+				<boolean id="do_not_expect_object" value="true"/>
+			
+				<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" inset="0"/>
+			</widget>
+
+			<widget class="match_titlebar_panel" id="MHDr" file="match/match title bar score highlight frame viewer" height="40">
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="5" />
+			</widget>
+		</container>
+
+		<!-- post match panel -->
+		<container id="pstm" hidden="true">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<widget class="match_info_panel" id="minf" height="300" file="match/match info highlight frame viewer">
+			</widget>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="10"/>
+				<widget class="match_stats_panel" id="msta" file="match/match stats highlight frame viewer">
+				</widget>
+			</container>
+		</container>
+	</container>
+	
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="icon_button" id="skip" auto_size="all" icon="icons/16px/fast forward" hidden="true">
+			<record id="click_event" event_target="mhfv" event_id="skip"/>
+			<translation id="text" translation_id="332276" type="use" value="Skip[COMMENT: match_time_slider; instruction to skip the replay]" />
+		</widget>
+		<widget class="primary_icon_button" id="ok" auto_size="all" icon="icons/16px/cross">
+			<translation id="text" translation_id="249644" type="use" value="Close[COMMENT - Button to close tutorial dialog]" />
+		</widget>
+	</container>
+
+</panel>

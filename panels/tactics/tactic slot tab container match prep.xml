@@ -1,0 +1,15 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+  <string id="skin_style" value="title link" />
+  
+  <container class="training_slot" id="triS"  file="none" height="30">
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <container id="nxMP" class="team_next_match_panel" file="team/team next match tactics" height="30"/>
+
+  </container>
+
+</panel>

@@ -1,0 +1,9 @@
+<panel>
+	<attachment_group class="button_arrangement_right" />
+
+	<widget class="primary_icon_button" id="jnot" click_event="jnot" auto_size="all" icon="icons/actions/join other server">
+		<translation id="hint" translation_id="295222" type="use" value="Joins a network game at a specified IP address[COMMENT: network game tooltip to indicate the purpose of the Join Other Server button]" />
+		<translation id="text" translation_id="248060" type="use" value="Join Other Server[COMMENT - button to connect to a game not in the local server list]" />
+	</widget>
+  
+</panel>

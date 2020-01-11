@@ -1,0 +1,304 @@
+﻿<panel>
+	<boolean id="display_all_players" value="true" />
+
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/normal" />
+
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/substitute/row" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="inner_subtle_box" >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_popup" id="plvi" />
+		</container>
+
+		<widget class="match_player_list_table" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows, fill_columns" row_height="28" column_spacing="0" use_super_headings="true">
+			<boolean id="auto_size_rows" value="false" />
+			<boolean id="fixed_size_rows" value="true" />
+			<boolean id="dont_restore_selection" value="true" />
+			<boolean id="save_session_state" value="true" />
+			<boolean id="sort_disabled" value="true" />
+
+			<flags id="default_view" value="gnIn" />
+
+			<list id="default_sort_column">
+				<integer value="TPRD" />
+			</list>
+
+			<!--available views-->
+			<list id="viws">
+
+				<record id="gnIn">
+					<translation id="name" translation_id="247410" type="use" value="General Info" />
+					<record id="view">
+						<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="4"/>
+						<!--- Time -->
+						<flags id="PinD" auto_hide_priority="3"/>
+						<!-- Status -->
+						<flags id="Pcar" auto_hide_priority="2"/>
+						<!-- Name -->
+						<flags id="Pnam" auto_hide_priority="1"/>
+
+						<!-- PASSING -->
+						<!--- Total/Completed -->
+						<record id="tCmP" auto_hide_priority="25"/>
+						<!-- Key -->
+						<record id="MPkp" auto_hide_priority="26"/>
+						<!-- Chances created -->
+						<record id="MPCc" auto_hide_priority="27"/>
+
+						<!-- CROSSES -->
+						<!-- Total/Completed -->
+						<record id="tCmC" auto_hide_priority="31"/>
+
+						<!-- TACKLING -->
+						<!-- Total/Completed -->
+						<record id="tCmT" auto_hide_priority="29"/>
+						<!-- Key -->
+						<record id="MPkt" auto_hide_priority="34"/>
+						<!-- Fouls Made -->
+						<record id="MPfm" auto_hide_priority="36"/>
+						<!-- Interceptions -->
+						<record id="MPic" auto_hide_priority="35"/>
+
+						<!-- HEADING -->
+						<!-- Total/Won -->
+						<record id="tCmH" auto_hide_priority="28"/>
+						<!-- Key -->
+						<record id="MPky" auto_hide_priority="33"/>
+
+						<!-- MISC -->
+						<!-- Dribbles -->
+						<record id="DrbL" auto_hide_priority="32"/>
+
+						<!-- SHOOTING -->
+						<!-- Total/On Target -->
+						<record id="ssOt" auto_hide_priority="30"/>
+
+						<!--- Goals -->
+						<record id="MPgl" auto_hide_priority="21"/>
+						<!-- Assists -->
+						<record id="MPas" auto_hide_priority="22"/>
+						<!-- Rating -->
+						<record id="MPrt" auto_hide_priority="23"/>
+						<!-- Condition -->
+						<record id="PcOL" auto_hide_priority="24" alignment="centre"/>
+						<!-- Distance Run -->
+						<record id="PDru" auto_hide_priority="24"/>
+					</record>
+				</record>
+
+				<record id="GKIn">
+					<translation id="name" translation_id="230024" type="use" value="Goalkeeping" />
+					<record id="view">
+						<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="4"/>
+						<!--- Time -->
+						<flags id="PinD" auto_hide_priority="3"/>
+						<!-- Status -->
+						<flags id="Pcar" auto_hide_priority="2"/>
+						<!-- Name -->
+						<flags id="Pnam" auto_hide_priority="1"/>
+
+						<!-- Shots Faced -->
+						<record id="MPSF" auto_hide_priority="23"/>
+
+						<!-- SAVES -->
+						<!--- Held -->
+						<record id="MPsh" auto_hide_priority="25"/>
+						<!-- Parried -->
+						<record id="MPsp" auto_hide_priority="26"/>
+						<!-- Tipped -->
+						<record id="MPsd" auto_hide_priority="27"/>
+
+						<!-- Conceded -->
+						<record id="MPcn" auto_hide_priority="24"/>
+
+						<!-- MISC -->
+						<!-- Shots Blocked Defending -->
+						<record id="MPsb" auto_hide_priority="29"/>
+						<!-- Mistakes -->
+						<record id="MPmt" auto_hide_priority="28"/>
+
+						<!-- PASSING -->
+						<!--- Total/Completed -->
+						<record id="tCmP" auto_hide_priority="30"/>
+						<!-- Key -->
+						<record id="MPkp" auto_hide_priority="31"/>
+
+						<!-- Rating -->
+						<record id="MPrt" auto_hide_priority="21"/>
+						<!-- Condition -->
+						<record id="Pcon" auto_hide_priority="22" alignment="centre"/>
+					</record>
+				</record>
+
+				<record id="DFIn">
+					<translation id="name" translation_id="348029" type="use" value="Defending[COMMENT: touchline instructions category text, used in the tactics creator as a header text for options on defensive play]" />
+					<record id="view">
+						<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="4"/>
+						<!--- Time -->
+						<flags id="PinD" auto_hide_priority="3"/>
+						<!-- Status -->
+						<flags id="Pcar" auto_hide_priority="2"/>
+						<!-- Name -->
+						<flags id="Pnam" auto_hide_priority="1"/>
+
+						<!-- TACKLING -->
+						<!-- Total/Completed -->
+						<record id="tCmT" auto_hide_priority="23"/>
+						<!-- Key -->
+						<record id="MPkt" auto_hide_priority="24"/>
+						<!-- Fouls Made -->
+						<record id="MPfm" auto_hide_priority="28"/>
+						<!-- Interceptions -->
+						<record id="MPic" auto_hide_priority="25"/>
+
+						<!-- HEADING -->
+						<!-- Total/Won -->
+						<record id="tCmH" auto_hide_priority="26"/>
+						<!-- Key -->
+						<record id="MPky" auto_hide_priority="27"/>
+
+						<!-- PASSING -->
+						<!--- Total/Completed -->
+						<record id="tCmP" auto_hide_priority="31"/>
+
+						<!-- CROSSES -->
+						<!-- Total/Completed -->
+						<record id="tCmC" auto_hide_priority="32"/>
+
+						<!-- MISC -->
+						<!-- Shots Blocked Defending -->
+						<record id="MPsb" auto_hide_priority="30"/>
+						<!-- Mistakes -->
+						<record id="MPmt" auto_hide_priority="29"/>
+						<!-- Dribbles -->
+						<record id="DrbL" auto_hide_priority="36"/>
+
+						<!-- SHOOTING -->
+						<!-- Total/On Target -->
+						<record id="ssOt" auto_hide_priority="37"/>
+
+						<!--- Goals -->
+						<record id="MPgl" auto_hide_priority="34"/>
+						<!-- Assists -->
+						<record id="MPas" auto_hide_priority="35"/>
+						<!-- Rating -->
+						<record id="MPrt" auto_hide_priority="21"/>
+						<!-- Condition -->
+						<record id="Pcon" auto_hide_priority="22" alignment="centre"/>
+						<!-- Distance Run -->
+						<record id="PDru" auto_hide_priority="33"/>
+					</record>
+				</record>
+
+				<record id="ATIn">
+					<translation id="name" translation_id="230042" type="use" value="Attacking" />
+					<record id="view">
+						<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32" auto_hide_priority="4"/>
+						<!--- Time -->
+						<flags id="PinD" auto_hide_priority="3"/>
+						<!-- Status -->
+						<flags id="Pcar" auto_hide_priority="2"/>
+						<!-- Name -->
+						<flags id="Pnam" auto_hide_priority="1"/>
+
+						<!-- SHOOTING -->
+						<!-- Total/On Target -->
+						<record id="ssOt" auto_hide_priority="25"/>
+						<!-- Hit Woodwork -->
+						<record id="HwdW" auto_hide_priority="33"/>
+						<!-- Shots Saved -->
+						<record id="MPsv" auto_hide_priority="32"/>
+
+						<!-- HEADING -->
+						<!-- Total/Won -->
+						<record id="tCmH" auto_hide_priority="28"/>
+						<!-- Key -->
+						<record id="MPky" auto_hide_priority="30"/>
+
+						<!-- PASSING -->
+						<!--- Total/Completed -->
+						<record id="tCmP" auto_hide_priority="26"/>
+						<!-- Key -->
+						<record id="MPkp" auto_hide_priority="29"/>
+
+						<!-- CROSSES -->
+						<!-- Total/Completed -->
+						<record id="tCmC" auto_hide_priority="27"/>
+
+						<!-- MISC -->
+						<!-- Mistakes -->
+						<record id="MPmt" auto_hide_priority="35"/>
+						<!-- Dribbles -->
+						<record id="DrbL" auto_hide_priority="31"/>
+						<!-- Fouled -->
+						<record id="MPfd" auto_hide_priority="34"/>
+
+						<!--- Goals -->
+						<record id="MPgl" auto_hide_priority="23"/>
+						<!-- Assists -->
+						<record id="MPas" auto_hide_priority="24"/>
+						<!-- Rating -->
+						<record id="MPrt" auto_hide_priority="21"/>
+						<!-- Condition -->
+						<record id="Pcon" auto_hide_priority="22" alignment="centre"/>
+						<!-- Distance Run -->
+						<record id="PDru" auto_hide_priority="22"/>
+					</record>
+				</record>
+
+				<record id="SPIn">
+					<translation id="name" translation_id="306492" type="use" value="Set Pieces[COMMENT: match analysis panel; event type]" />
+					<record id="view">
+						<record id="TPRD" hidden="true"/>
+						<!-- Shirt Number -->
+						<record id="PsnS" width="32"/>
+						<!--- Time -->
+						<flags id="PinD" />
+						<!-- Status -->
+						<flags id="Pcar" />
+						<!-- Name -->
+						<flags id="Pnam" />
+
+						<!--- Throw Ins -->
+						<record id="MPti" />
+						<!-- Corners -->
+						<record id="MPce" />
+						<!-- Def FK -->
+						<record id="MPdf" />
+						<!-- Att FK -->
+						<record id="MPaf" />
+
+						<!--- Goals -->
+						<record id="MPgl" auto_hide_priority="2"/>
+						<!-- Assists -->
+						<record id="MPas" auto_hide_priority="2"/>
+						<!-- Rating -->
+						<record id="MPrt" auto_hide_priority="2"/>
+						<!-- Condition -->
+						<record id="Pcon" auto_hide_priority="2" alignment="centre"/>
+					</record>
+				</record>
+
+			</list>
+
+		</widget>
+
+	</container>
+
+</panel>

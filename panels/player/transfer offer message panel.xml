@@ -1,0 +1,18 @@
+<panel>
+  <layout class="fit_children_attachment" alignment="vertical,fill"/>
+  <layout class="arrange_vertical_attachment" alignment="top"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+  <boolean id="should_force_refresh" value="true"/>
+
+  <container class="main_box" id="msti">
+    <layout class="fit_children_attachment" alignment="vertical,fill"/>
+    <layout class="arrange_vertical_attachment" alignment="top"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+    <widget class="edit_control" multiline="true" id="msge" height="40" changed_event="msge">
+      <colour id="colour" name="faded text"/>
+    </widget>
+  </container>
+  
+</panel>

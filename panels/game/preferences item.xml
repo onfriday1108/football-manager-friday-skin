@@ -1,0 +1,22 @@
+﻿<panel >
+  <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0" />
+
+  <list id="properties_to_forward">
+    <record get_property="viewed_property_ids" set_property="viewed_property_ids" target="set1"/>
+  </list>
+
+  <container class="inner_subtle_box" >
+    <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0" />
+    <attachment class="hide_empty_container_attachment" min_value="0"/>
+
+    <widget class="game_settings_viewer_panel" id="set1" concat_hint="true">
+      <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+      <record id="table_properties" layout="-3,260">
+        <integer id="row_spacing" value="5" />
+      </record>
+    </widget>
+  </container>
+
+</panel>

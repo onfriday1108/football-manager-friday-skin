@@ -1,0 +1,322 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="10" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="bordered_box_no_margin" red_replacement="dark_background">
+		<layout class="arrange_horizontal_attachment" layout="400,-1" offset="0" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container id="piCO">
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="pitch_with_tactics" id="pcTA" icon_flags="dont_allow_player_links" pitch_is_read_only="true" pitch_dont_draw_indicators="true" pitch_draw_goals="false" pitch_kit_height="32" pitch_touchline_width_percentage="100" pitch_width_percentage="100" vertical="true" pitch_alignment="bottom" allow_y_score_adjustment_for_roles="false">
+				<boolean id="pitch_allow_player_selection" value="false" />
+				<string id="pitch_kit_icon" value="pitch/icons/dots" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="-2" />
+			</widget>
+
+			<container>
+
+				<attachment_group class="vertical_arrange" vertical_layout="40,-1,35" />
+
+				<container background_colour="fm purple" alpha="50">
+					<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="text" alignment="centre" font="title" size="large" colour="white">
+						<translation id="text" translation_id="396107" type="use" value="Powered by Football Manager[COMMENT: FR 11059 - pitch title; text displaying on top of the pitch before being shared on social networks]" />
+					</widget>
+
+				</container>
+
+				<container/>
+
+				<container>
+
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+
+					<widget class="picture" id="pMDL" file="main menu/logo" keep_aspect_ratio="true" scale_picture="true"/>
+
+				</container>
+
+			</container>
+
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,-1,40,5,-1" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container class="inner_box">
+				<translation id="title" translation_id="349831" type="use" value="Pitch Details[COMMENT: team report summary, title for an area showing details of the team's pitch]" />
+
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container class="client_object_viewer_xml_panel" id="piDP">
+
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<widget class="kit_picture" id="T_hk" kit_id="0" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+						<boolean id="always_use_latest_object_list" value="true" />
+						<!-- needed for fantasty draft create club changes -->
+						<record id="object_property">
+							<integer id="get_property" value="Tftm" />
+							<integer id="set_property" value="Ttea" />
+						</record>
+					</widget>
+
+					<container class="object_portrait_picture" image_alignment="centre" scale_picture="true" clickable="false">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</container>
+
+
+
+					<container class="picture" image_alignment="centre" scale_picture="false" file="pitch/icons/dots/medium/kit">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Tbc1" />
+									<integer id="set_property" value="rrep" />
+								</record>
+								<record>
+									<integer id="get_property" value="Tfc1" />
+									<integer id="set_property" value="brep" />
+								</record>
+							</list>
+						</record>
+					</container>
+
+				</container>
+
+				<container>
+
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<widget class="radio_button" id="ptD1" selected="true" icon_alignment="centre">
+						<record id="click_event">
+							<flags id="event_id" value="ptCG" />
+							<flags id="index" value="0" />
+						</record>
+					</widget>
+
+					<widget class="radio_button" id="ptD2" icon_alignment="centre">
+						<record id="click_event">
+							<flags id="event_id" value="ptCG" />
+							<flags id="index" value="1" />
+						</record>
+					</widget>
+
+					<widget class="radio_button" id="ptD3" icon_alignment="centre">
+						<record id="click_event">
+							<flags id="event_id" value="ptCG" />
+							<flags id="index" value="2" />
+						</record>
+					</widget>
+
+				</container>
+
+			</container>
+			<container class="inner_box">
+				<translation id="title" translation_id="395985" type="use" value="Colour Details[COMMENT: FR 11059 - Title for the options given; the options include the user choosing home, away or third colour for the players on the pitch]" />
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container class="client_object_viewer_xml_panel" id="piCD">
+
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="30" gap="60" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="15" />
+
+					<container class="bordered_box_no_margin" red_replacement="dark_box_background">
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="5" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+						<container>
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Tfc1" />
+										<integer id="set_property" value="bkcl" />
+									</record>
+								</list>
+							</record>
+						</container>
+						<container>
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Tbc1" />
+										<integer id="set_property" value="bkcl" />
+									</record>
+								</list>
+							</record>
+						</container>
+						<container>
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Toc1" />
+										<integer id="set_property" value="bkcl" />
+									</record>
+								</list>
+							</record>
+						</container>
+					</container>
+
+					<container class="bordered_box_no_margin" red_replacement="dark_box_background">
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="5" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+						<container>
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Tfc2" />
+										<integer id="set_property" value="bkcl" />
+									</record>
+								</list>
+							</record>
+						</container>
+						<container>
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Tbc2" />
+										<integer id="set_property" value="bkcl" />
+									</record>
+								</list>
+							</record>
+						</container>
+						<container>
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Toc2" />
+										<integer id="set_property" value="bkcl" />
+									</record>
+								</list>
+							</record>
+						</container>
+					</container>
+
+					<container class="bordered_box_no_margin" red_replacement="dark_box_background" id="kt3P">
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="5" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+						<container>
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Tfc3" />
+										<integer id="set_property" value="bkcl" />
+									</record>
+								</list>
+							</record>
+						</container>
+						<container>
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Tbc3" />
+										<integer id="set_property" value="bkcl" />
+									</record>
+								</list>
+							</record>
+						</container>
+						<container>
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Toc3" />
+										<integer id="set_property" value="bkcl" />
+									</record>
+								</list>
+							</record>
+						</container>
+					</container>
+
+				</container>
+
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<widget class="radio_button" id="clD1" selected="true" icon_alignment="centre">
+						<record id="click_event">
+							<flags id="event_id" value="clCH" />
+							<flags id="index" value="0" />
+						</record>
+					</widget>
+
+					<widget class="radio_button" id="clD2" icon_alignment="centre">
+						<record id="click_event">
+							<flags id="event_id" value="clCH" />
+							<flags id="index" value="1" />
+						</record>
+					</widget>
+
+					<widget class="radio_button" id="clD3" icon_alignment="centre">
+						<record id="click_event">
+							<flags id="event_id" value="clCH" />
+							<flags id="index" value="2" />
+						</record>
+					</widget>
+
+				</container>
+
+			</container>
+
+			<widget class="check_box" selected="true" click_event="chBT">
+				<translation id="text" translation_id="396003" type="use" value="Display Player Roles[COMMENT: FR 11059 Checkbox text; to disaply or not display player roles on the pitch]" />
+			</widget>
+
+			<widget class="horizontal_divider" />
+
+			<container>
+        <!-- hide if social media is disabled -->
+        <attachment class="get_global_attachment" get_property="SnHd" set_property="hidn" skip_if_null="true"/>
+
+        <layout class="arrange_vertical_attachment" layout="-2,-1" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="1" />
+
+					<widget id="wrSC" class="manager_text" edit_event="stCH" alignment="centre" colour="negative">
+						<translation id="text" translation_id="466529" type="use" value="[%person#1-You] need to be logged in to Twitter to be able to use this feature[COMMENT: FR 11059 Warning message; notifying user to be logged in first before sharing contents, fix to ID 396212 as Facebook had to be removed]" />
+					</widget>
+
+					<container class="edit_box" id="stCO" edit_event="stCH" alignment="left,top">
+						<translation id="placeholder_string" translation_id="396142" type="use" value="Talk about the team...[COMMENT: FR 11059 Placeholder string for status edit box, to write an status before sharing it on socail networks]" />
+					</container>
+
+				</container>
+
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="5" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+
+					<widget id="twsC" class="check_box" selected="true" click_event="twCH" alignment="centre" icon_alignment="centre">
+						<translation id="text" translation_id="312685" type="use" value="Post To Twitter[COMMENT: Button where user can update Twitter status]" />
+					</widget>
+
+					<widget class="icon_button" id="twLG" alignment="centre" red_replacement="twitter" icon="icons/26px/twitter" colour="white">
+						<record id="primary_icon_properties" red_replacement="white" />
+						<translation id="text" translation_id="312678" type="use" value="Login to Twitter[COMMENT: Button that lets the manager log in to Twitter.]" />
+						<event id="click_event" event_id="twDI" />
+					</widget>
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

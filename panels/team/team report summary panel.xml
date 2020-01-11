@@ -1,0 +1,27 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<widget class="team_report_request_report_panel" id="nort" />
+	<container id="sort" draw_vertical_dividers="true">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill">
+			<global id="horizontal_gap" name="ui.main_box_gap" />
+		</attachment_group>
+		<container id="scre" class="team_report_scout_report_panel" file="team/team report scout report overview" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+			<container id="noAn">
+				<attachment_group class="vertical_arrange" vertical_layout="40,-1" />
+
+				<widget class="label" font="title" colour="accent"  alignment="left,centre_y">
+					<translation id="text" translation_id="447607" type="use" value= "Analyst Report[COMMENT: Panel title for when viewing analyst report]" />
+				</widget>
+				
+				<widget class="label" font="label" alignment="centre">
+					<translation id="text" translation_id="448324" type="use" value= "No Analysts[COMMENT: FR 21135 disabled menu item when a club has no analysts]" />
+				</widget>
+			</container>
+			<container id="anre" class="team_report_analyst_report_panel" file="team/team report analyst report overview"/>
+		</container>
+	</container>
+</panel>

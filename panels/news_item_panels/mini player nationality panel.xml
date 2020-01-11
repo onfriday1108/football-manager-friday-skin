@@ -1,0 +1,16 @@
+﻿<panel>
+  <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <!-- person nationality -->
+  <widget class="nation_button" alignment="left,centre_y" auto_size="vertical" style="bold" size="12" format="[%nation#1-nationality]">
+    <record id="object_property">
+      <integer id="get_property" value="Pnat"/>
+      <integer id="set_property" value="valu"/>
+    </record>
+  </widget>
+
+  <widget class="label" alignment="left,centre_y" auto_size="vertical" font="title">
+    <translation id="text" translation_id="227841" type="use" value="Nationality"/>
+  </widget>
+</panel>

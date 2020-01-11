@@ -1,0 +1,326 @@
+<panel>
+	<!--colours for the status panel at the top right-->
+	<symbol id="okst" value="player starting" />
+	<symbol id="wast" value="player not starting" />
+	<symbol id="inst" value="instructions not used" />
+
+	<colour id="selected_colour" name="selected instruction" />
+	<colour id="preselected_colour" name="preselected instruction" />
+
+	<layout class="arrange_horizontal_attachment" layout="-6,-9" offset="0" gap="1" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container class="main_box" id="pliC" appearance="boxes/subsection/match/paper">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--role/duty popups-->
+			<widget class="role_duty_popup_button" id="prdp" auto_size="vertical" />
+
+        <!--swap with-->
+        <container id="swct" height="60">
+          <layout class="arrange_vertical_attachment" layout="-1,30,5,2" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+          <widget class="label" font="title" colour="accent">
+            <translation id="text" translation_id="364775" type="use" value="Swap positions with...[COMMENT: label for a popup button to allow the user to choose a player for this player to swap positions with on the pitch]" />
+            <layout class="stick_to_sides_attachment" alignment="left" inset="5" />
+          </widget>
+
+          <widget class="popup_button" id="swwi" select_event="sesw" appearance="buttons/custom/match/standard/normal/button"/>
+
+          <container height="5"/>
+
+          <!-- separator image -->
+          <widget class="horizontal_divider" id="pict">
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+          </widget>
+        </container>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<!--specific player instructions-->
+				<container id="plIC">
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="player_instructions_selector_panel" id="plIN" file="item selection panel match"/>
+
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10" />
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+						<widget class="icon_button" id="sele" auto_size="all" icon="icons/16px/circle" show_button_appearance="false" always_use_appearance_font="true" >
+							<translation id="text" translation_id="344778" type="use" value="Selected[COMMENT: label text for a key showing what colour a selected item is]" />
+						</widget>
+						<widget class="icon_button" id="porl" auto_size="vertical" icon="icons/16px/circle_disabled" show_button_appearance="false" always_use_appearance_font="true" >
+							<translation id="text" translation_id="395288" type="use" value="Part Of Role[COMMENT: when a tactical option is selected it will be highlighted in a colour if it is a part of the currently selected role; this text is highlighted in that colour as a Key marker to indicate this]" />
+						</widget>
+
+					</container>
+				</container>
+
+				<!--can't edit PIs info-->
+				<widget class="text" id="plIX">
+					<translation id="text" translation_id="374986" type="use" value="When players have different roles or duties, their instructions can't be changed.[COMMENT: warning text to say to the human that they cannot edit player instructions for multiple players when their roles and/or duties are different]" />
+				</widget>
+			</container>
+
+		</container>
+	</container>
+
+	<container class="tabbed_container" id="tabc" default_item="info" hide_selector_if_one_or_fewer_items="true">
+		<!--information area-->
+		<container id="info">
+			<string id="title" value="Info" />
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--info on the player selected-->
+			<container class="main_box" id="infC" height="175" appearance="boxes/subsection/match/paper">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--text showing this position's status - the container is what gets coloured, the text is the text-->
+				<container id="plBK">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="4" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true" />
+
+					<widget class="text" id="plst" alignment="centre_x" auto_size="vertical" />
+				</container>
+
+				<!--player icon and details-->
+				<container id="icde">
+					<layout class="arrange_vertical_attachment" layout="-2,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--icon, games played, suitability-->
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="65,-64,-36" offset="0" gap="4" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<!--icon-->
+						<widget class="object_portrait_picture" width="65" id="plpc">
+							<boolean id="scale_picture" value="true" />
+							<boolean id="keep_aspect_ratio" value="true" />
+							<flags id="image_alignment" value="centre_x,top" />
+
+							<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+								<list id="value">
+									<boolean value="false" />
+								</list>
+							</attachment>
+
+							<record id="object_property">
+								<integer id="index" value="1" />
+								<integer id="get_property" value="Ttsl" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</widget>
+
+						<!--details-->
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="4" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="person_button" id="plbt" spec="text" size="large" alignment="left,bottom" >
+								<record id="object_property">
+									<integer id="index" value="1" />
+									<integer id="get_property" value="Ttsl" />
+								</record>
+							</widget>
+							<widget class="text" id="mpld" spec="text" alignment="left,centre_y"  />
+							<widget class="position_label" id="PpsC" spec="text" alignment="left,top" >
+							</widget>
+
+						</container>
+
+						<!--suitability for role-->
+						<container width="200">
+							<layout class="arrange_vertical_attachment" layout="28,20" offset="0" gap="4" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="text" spec="text"  multiline="true" alignment="bottom" size="small">
+								<translation id="text" translation_id="356944" type="use" value="Suitability for role and duty[COMMENT: label for a star rating for how suitable a player is to the role he's been given]" />
+							</widget>
+							<widget class="position_role_duty_suitability_bar" id="rlSt" icon_alignment="centre" />
+						</container>
+					</container>
+
+					<!--rating-->
+					<container>
+						<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<container>
+							<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+							<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+							<widget class="dashed_number_label" id="poav" alignment="right,centre_y" spec="text" size="large" auto_size="horizontal" >
+								<translation id="hint_if_no_value" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+							</widget>
+							<widget class="label" spec="text" size="large" id="avrl" alignment="centre_y" auto_size="horizontal" >
+								<translation id="text" translation_id="227853" type="use" value="Average rating" />
+							</widget>
+						</container>
+					</container>
+				</container>
+
+				<!--text to say to select someone-->
+				<container id="selC">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="text" id="selt" alignment="centre" spec="text" size="large" />
+				</container>
+			</container>
+
+			<!-- Attributes Container -->
+			<container class="main_box" id="patt" appearance="boxes/subsection/match/paper">
+				<translation id="title" translation_id="316628" type="use" value="Important Attributes[COMMENT:title for attributes panel showing which attributes are important for a tactical role]" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="player_attributes_panel" id="patp" highlight_attributes="true" allow_no_player="true" file="player/player attributes panel match">
+				</container>
+			</container>
+		</container>
+
+		<container id="debg">
+			<string id="title" value="Debug" />
+
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="table" layout="-1,-1">
+
+				<widget class="label" row="0" column="0">
+					<string id="text" value="Hold up ball" />
+				</widget>
+				<widget class="label" id="Hubl" row="0" column="1">
+				</widget>
+
+				<widget class="label" row="1" column="0">
+					<string id="text" value="Tight Marking" />
+				</widget>
+				<widget class="label" id="TiMa" row="1" column="1">
+				</widget>
+
+				<widget class="label" row="2" column="0">
+					<string id="text" value="Forward Runs" />
+				</widget>
+				<widget class="label" id="FoRu" row="2" column="1">
+				</widget>
+
+				<widget class="label" row="3" column="0">
+					<string id="text" value="Run with ball" />
+				</widget>
+				<widget class="label" id="Rwba" row="3" column="1">
+				</widget>
+
+				<widget class="label" row="4" column="0">
+					<string id="text" value="Try through balls" />
+				</widget>
+				<widget class="label" id="Thro" row="4" column="1">
+				</widget>
+
+				<widget class="label" row="5" column="0">
+					<string id="text" value="Long shots" />
+				</widget>
+				<widget class="label" id="Long" row="5" column="1">
+				</widget>
+
+				<widget class="label" row="6" column="0">
+					<string id="text" value="Cross ball" />
+				</widget>
+				<widget class="label" id="CrBa" row="6" column="1">
+				</widget>
+
+				<widget class="label" row="7" column="0">
+					<string id="text" value="Cross from" />
+				</widget>
+				<widget class="label" id="CrFr" row="7" column="1">
+				</widget>
+
+				<widget class="label" row="8" column="0">
+					<string id="text" value="Cross aim" />
+				</widget>
+				<widget class="label" id="CrAi" row="8" column="1">
+				</widget>
+
+				<widget class="label" row="9" column="0">
+					<string id="text" value="Tackling" />
+				</widget>
+				<widget class="label" id="Tack" row="9" column="1">
+				</widget>
+
+				<widget class="label" row="10" column="0">
+					<string id="text" value="Free role" />
+				</widget>
+				<widget class="label" id="Free" row="10" column="1">
+				</widget>
+
+				<widget class="label" row="11" column="0">
+					<string id="text" value="Men behind ball" />
+				</widget>
+				<widget class="label" id="mbbl" row="11" column="1">
+				</widget>
+
+				<widget class="label" row="12" column="0">
+					<string id="text" value="Gung ho" />
+				</widget>
+				<widget class="label" id="Gung" row="12" column="1">
+				</widget>
+
+				<widget class="label" row="13" column="0">
+					<string id="text" value="RWB Style" />
+				</widget>
+				<widget class="label" id="rwbs" row="13" column="1">
+				</widget>
+
+				<widget class="label" row="14" column="0">
+					<string id="text" value="Play Wider" />
+				</widget>
+				<widget class="label" id="Wide" row="14" column="1">
+				</widget>
+
+				<widget class="label" row="15" column="0">
+					<string id="text" value="Move into channels" />
+				</widget>
+				<widget class="label" id="MvCh" row="15" column="1">
+				</widget>
+
+				<widget class="label" row="16" column="0">
+					<string id="text" value="Fluidity" />
+				</widget>
+				<widget class="label" id="Flam" row="16" column="1">
+				</widget>
+
+				<widget class="label" row="17" column="0">
+					<string id="text" value="Mentality" />
+				</widget>
+				<widget class="label" id="Ment" row="17" column="1">
+				</widget>
+
+				<widget class="label" row="18" column="0">
+					<string id="text" value="Pressing Intensity" />
+				</widget>
+				<widget class="label" id="Clos" row="18" column="1">
+				</widget>
+
+				<widget class="label" row="19" column="0">
+					<string id="text" value="Directness" />
+				</widget>
+				<widget class="label" id="Dire" row="19" column="1">
+				</widget>
+
+			</widget>
+
+		</container>
+	</container>
+</panel>

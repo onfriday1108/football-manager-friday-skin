@@ -1,0 +1,106 @@
+<panel>
+
+	<!--The other steps/interactive list-->
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<widget class="client_object_list_table" id="mait" database_table_type="1" select_event="spyr"
+				view_setting_name="stored_debug_full_team_view" mode="fill_rows, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows, select_rows"
+				column_mode="resize_columns, move_columns, custom_views">
+
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<boolean id="force_refresh_on_object_list" value="true"/>
+
+			<!--default view-->
+			<flags id="default_view" value="Scor" />
+
+			<!--available views-->
+			<list id="viws">
+
+				<record id="Squd">
+					<string id="text" value="Initial List to Choose From" />
+					<boolean id="tick" value="true" />
+					<record id="view">
+						<record id="Ppos"/>
+						<!-- Position -->
+						<record id="Pnms" person_is_player="true" width="100" />
+						<!-- person name -->
+						<record id="Page"/>
+						<!-- Age -->
+            <record id="RESV"/>
+            <!-- Allowed to play for the reserves-->
+            <record id="REXC" auto_hide_priority="1"/>
+            <!-- Reason for exclusion-->
+            <record id="Pcon" auto_hide_priority="2" />
+						<!-- player condition -->
+						<record id="Pfit" auto_hide_priority="3"/>
+						<!-- match fitness -->
+						<record id="Pfrm" auto_hide_priority="4" />
+						<!-- player form -->
+
+					</record>
+				</record>
+
+        <record id="Role">
+					<string id="text" value="Role Info" />
+					<boolean id="tick" value="true" />
+					<record id="view">
+						<record id="Ppos"/>
+						<!-- Position -->
+						<record id="Pnms" person_is_player="true" width="100" />
+						<!-- person name -->
+						<record id="TSCR"/>
+						<!-- Player new CA for role -->
+						<record id="TSNR"/>
+						<!-- Players' CA for role -->
+						<record id="TRSA"/>
+						<!-- Staff CA for role -->
+						<record id="TRSP"/>
+						<!-- Staff PA for role -->
+						<record id="PCAB"/>
+						<!-- Actual CA -->
+						<record id="PPAB"/>
+						<!-- Actual PA -->
+						<record id="Pcpt" auto_hide_priority="1" />
+            <!-- proposed playing time -->
+					</record>
+				</record>
+
+				<record id="Scor">
+					<string id="text" value="Dynamic Scoring" />
+					<boolean id="tick" value="true" />
+					<record id="view">
+						<record id="Pnms" person_is_player="true" width="100" />
+						<!-- person name -->
+						<record id="Page"/>
+						<!-- Age -->
+						<record id="TDRO" width="300"/>
+						<!--Team Selector - Dynamic Role/Duty-->
+						<record id="TDSC"/>
+						<!--Team Selector Dynamic Score-->
+						<record id="Ppos"/>
+						<!-- Position -->
+					</record>
+				</record>
+				
+				<record id="Adsc">
+					<string id="text" value="Advanced Scoring" />
+					<boolean id="tick" value="true" />
+					<record id="view">
+						<record id="Pnms" person_is_player="true" width="100" />
+						<!-- Age -->
+						<record id="TDRO" width="200"/>
+						<!--Team Selector - Dynamic Role/Duty-->
+						<record id="TDSC"/>
+						<!--Team Selector Match Score-->
+						<record id="TSSC"/>
+						<!--Team Selector Game Score-->
+						<record id="TADJ"/>
+						<!--Team Selector Game Adjust Score-->
+					</record>
+				</record>
+			</list>
+
+		</widget>
+	
+</panel>

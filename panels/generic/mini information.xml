@@ -1,0 +1,49 @@
+<panel>
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+
+	<container class="main_box" id="titl"  red_replacement="dark_box_background">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- The profile container created in code -->
+		<container id="prof">
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+		</container>
+
+		<!-- The Client object table -->
+		<container class="client_object_label_value_table" id="mini" auto_size="vertical">
+
+			<!--this record contains any properties you want to pass on to the table-->
+			<record id="table_properties">
+				<boolean id="auto_size_rows" value="true" />
+				<boolean id="fixed_size_rows" value="false" />
+				<string id="layout" value="-1,-1" />
+				<flags id="auto_size" value="vertical" />
+
+				<!-- default properties adopted by every item in table -->
+				<list id="column_widget_properties">
+					<record index="0">
+						<flags id="auto_size" value="vertical" />
+						<flags id="alignment" value="left" />
+					</record>
+					<record index="1">
+						<flags id="auto_size" value="vertical" />
+						<flags id="colour" value="faded text" />
+						<flags id="alignment" value="right,centre_y" />
+					</record>
+				</list>
+
+				<!-- small inset from sides of table -->
+				<list id="column_table_properties">
+					<record index="0" left="2" top="3" bottom="3" />
+					<record index="1" right="2" top="3" bottom="3" />
+				</list>
+			</record>
+		</container>
+
+	</container>
+
+</panel>

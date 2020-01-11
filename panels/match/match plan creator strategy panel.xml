@@ -1,0 +1,72 @@
+<panel>
+	<!-- wizard panel title, header and footer strings -->
+	<translation id="wizard_panel_title" translation_id="348204" type="use" value="Mentality[Comment: prefix used before mentality type text on quick tactical instruction button during match]" />
+	<translation_list id="wizard_panel_header">
+		<translation translation_id="350931" type="use">Please choose the match mentality to kick off with.[COMMENT: match plan creator wizard: instructional text]</translation>
+		<translation />
+		<translation translation_id="350728" type="use">Any mentality chosen here may be overridden by scenario-specific mentalities during the match.[COMMENT: match plan creator explanation text]</translation>
+	</translation_list>
+	<translation id="wizard_panel_step_text" translation_id="350961" type="use" value="Step 7: Choose A Mentality[COMMENT: match plan creator wizard: Short description of selecting a strategy step in the wizard]" />
+
+	<!-- centre the widgets vertically, but align them to the left side -->
+	<layout class="arrange_horizontal_attachment" layout="-1, -2" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+		<record id="default_properties" auto_size="vertical" />
+
+		<widget class="radio_button" id="msct">
+			<translation id="text" translation_id="465557" type="use" value="Very Defensive[COMMENT: tactical team instructions; team mentality, order is Very Defensive, Defensive, Cautious, Balanced, Positive, Attacking, Very Attacking]" />
+			<record id="click_event">
+				<integer id="event_id" value="stra" />
+				<integer id="index" value="1" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="msdf">
+			<translation id="text" translation_id="491953" type="use" value="Defensive[COMMENT: AREA: Tactics; SUB-AREA: Match Plan Creator; FR-BN: 6407; TONE: Formal; CHARLIMIT: Short; REF-ID: 298126; NOTE: Bespoke translation of the referenced ID for use in Match Plan Creator only]" />
+			<record id="click_event">
+				<integer id="event_id" value="stra" />
+				<integer id="index" value="2" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="mscu">
+			<translation id="text" translation_id="465558" type="use" value="Cautious[COMMENT: tactical team instructions; team mentality, order is Very Defensive, Defensive, Cautious, Balanced, Positive, Attacking, Very Attacking]" />
+			<record id="click_event">
+				<integer id="event_id" value="stra" />
+				<integer id="index" value="3" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="msst">
+			<translation id="text" translation_id="465559" type="use" value="Balanced[COMMENT: tactical team instructions; team mentality, order is Very Defensive, Defensive, Cautious, Balanced, Positive, Attacking, Very Attacking]" />
+			<record id="click_event">
+				<integer id="event_id" value="stra" />
+				<integer id="index" value="4" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="mscn">
+			<translation id="text" translation_id="465560" type="use" value="Positive[COMMENT: tactical team instructions; team mentality, order is Very Defensive, Defensive, Cautious, Balanced, Positive, Attacking, Very Attacking]" />
+			<record id="click_event">
+				<integer id="event_id" value="stra" />
+				<integer id="index" value="5" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="msat">
+			<translation id="text" translation_id="491954" type="use" value="Attacking[COMMENT: AREA: Tactics; SUB-AREA: Match Plan Creator; FR-BN: 6407; TONE: Formal; CHARLIMIT: Short; REF-ID: 298130; NOTE: Bespoke translation of the referenced ID for use in Match Plan Creator only]" />
+			<record id="click_event">
+				<integer id="event_id" value="stra" />
+				<integer id="index" value="6" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="msol">
+			<translation id="text" translation_id="465561" type="use" value="Very Attacking[COMMENT: tactical team instructions; team mentality, order is Very Defensive, Defensive, Cautious, Balanced, Positive, Attacking, Very Attacking]" />
+			<record id="click_event">
+				<integer id="event_id" value="stra" />
+				<integer id="index" value="7" />
+			</record>
+		</widget>
+	</container>
+
+	<widget class="text" id="desc" />
+</panel>

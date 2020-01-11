@@ -1,0 +1,163 @@
+<!-- XML for a news item about a choosing first team players to make available for reserve team matches -->
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<!-- Top section: Match and next match info box -->
+	<container class="inner_subtle_box" height="90" red_replacement="dark_box_background">
+		<layout class="arrange_horizontal_attachment" layout="-3,3,-2,-2" offset="0" gap="10"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+			
+			<!-- Teams -->
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" layout="35,-1" offset="0" gap="10"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<widget class="object_portrait_picture" id="log1" scale_picture="true" image_alignment="centre"/>
+				<widget class="team_button" id="tem1" icon_enabled="false" alignment="left,centre_y" style="semi_bold"/>
+			</container>
+
+			<!-- Teams -->
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" layout="35,-1" offset="0" gap="10"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<widget class="object_portrait_picture" id="log2" scale_picture="true" image_alignment="centre"/>
+				<widget class="team_button" id="tem2" icon_enabled="false" alignment="left,centre_y" style="semi_bold"/>
+			</container>
+		</container>
+
+		<widget class="vertical_divider">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+		</widget>
+
+		<!-- Next first team match -->
+		<container height="85" id="ftft">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+			<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<widget class="text" font="panel_title" auto_size="vertical">
+				<translation id="text" translation_id="376527" type="use" value="Next First Team Match[COMMENT: FR 8157; Player availability news item; title for section suggesting players to be made available for reserve/U18 team]"/>
+			</widget>
+
+			<!-- Opponent logo, name, comp and time to next fixture -->
+			<widget class="table" id="ffit" layout="40,-1" mode="none" auto_size_rows="true" fixed_size_rows="false" column_spacing="5" auto_size="vertical">
+				<widget class="object_portrait_picture" id="fLog" scale_picture="true" image_alignment="right,centre_y" row="0" col="0" row_span="3"/>
+				<widget class="team_button" id="fTem" icon_enabled="false" alignment="left,top" auto_size="vertical" row="0" col="1" style="semi_bold"/>
+				<widget class="comp_button" id="fCmp" icon_enabled="false" alignment="left,top" auto_size="vertical" row="1" col="1" colour="faded text" size="small" multiline="false"/>
+				<widget class="label" id="fTim" alignment="left,top" auto_size="vertical" row="2" col="1" colour="faded text" size="small"/>
+				<!-- Separator-->
+			</widget>
+			
+			<widget class="text" id="noFF" size="large">
+				<translation id="text" translation_id="298048" type="use" value="No upcoming fixtures."/>
+			</widget>
+		</container>
+		
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+			<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<record id="default_properties" alignment="left,top" auto_size="vertical" size="small" colour="faded text"/>
+
+			<!-- Starting team picked info: number of fisrt team player picked, number of subs picked, number of first team players not in squad -->
+			<widget class="label" id="fPi1"/>
+			<widget class="label" id="fPi2"/>
+			<widget class="label" id="fPi3"/>
+		</container>
+	</container>
+
+	<!-- Top middle section: match squad info -->
+	<widget class="match_squad_info_panel" id="ssnm" file="match/match squad info no popup" ignore_friendlies="false"/>
+
+	<!-- Bottom middle section: first team players available for reserves/U18s -->
+	<container class="inner_subtle_box" id="AvaT">
+		<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="15"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="5" apply_to_children="true"/>
+
+		<!-- Set all button in frame -->
+		<widget class="reserves_availability_popup" id="setA" select_event="setA" auto_size="all" fixed="true" Puna="true" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true"/>
+			<translation id="text" translation_id="376571" type="use" value="Set All[COMMENT: FR 8157; Player availability news item; text for button for changing all player's availabilities at once]"/>
+		</widget>
+
+		<!-- List of players available for reserves-->
+		<widget class="object_list_table" id="1stA" mode="show_bullets, select_rows, select_multiple, dont_ask_for_focus" row_height="30" auto_size_rows="false" fixed_size_rows="true" file="object list table size vertical">
+			<list id="default_sort_column">
+				<integer value="Pick"/>
+			</list>
+			<record id="viewed_property_ids">
+				<!--Player name-->
+				<record id="Pnms"/>
+				<!--Player Info-->
+				<record id="Pnma"/>
+				<!--First teams status (not a client object property)-->
+				<record id="Pick"/>
+				<!--Position played-->
+				<record id="Ppos"/>
+				<!--Condition-->
+				<record id="Pcon"/>
+				<!--Fitness-->
+				<record id="Pfit"/>
+				<!--Availability popup (not a client object property)-->
+				<record id="PprA"/>
+			</record>
+		</widget>
+		
+		<!-- No players label -->
+		<widget class="text" id="nAvP" auto_size="vertical" hidden="true" colour="faded text" alignment="centre"/>
+	</container>
+
+	<!-- Bottom section: suggested players to make available for reserves/U18s -->
+	<container class="inner_subtle_box" id="sugS">
+		<translation id="title" translation_id="376418" type="use" value="Assistants Suggestion: Players To Make Available[COMMENT: FR 8157; Player availability news item; title for section suggesting players to be made available for reserve/U18 team]"/>
+		<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+		<!-- Set all button in frame -->
+		<widget class="reserves_availability_popup" id="setU" select_event="setU" auto_size="all" fixed="true" Puna="false" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="right,top" inset="0"  embed_in_frame="true"/>
+			<translation id="text" translation_id="376571" type="use" value="Set All[COMMENT: FR 8157; Player availability news item; text for button for changing all player's availabilities at once]"/>
+		</widget>
+		
+		<!-- List of suggested players-->
+		<widget class="object_list_table" id="sugP" mode="show_bullets, select_rows, select_multiple, dont_ask_for_focus" row_height="30" auto_size_rows="false" fixed_size_rows="true" file="object list table size vertical">
+			<list id="default_sort_column">
+				<integer value="AvaS"/>
+			</list>
+
+			<record id="viewed_property_ids">
+				<!--Player name-->
+				<record id="Pnms"/>
+				<!--Player Info-->
+				<record id="Pnma"/>
+				<!--First teams status (not a client object property)-->
+				<record id="Pick"/>
+				<!--Reason for suggestion (not a client object property)-->
+				<record id="AvaS" multiline="false" alignment="left,centre_y"/>
+				<!--Position played-->
+				<record id="Ppos"/>
+				<!--Condition-->
+				<record id="Pcon"/>
+				<!--Fitness-->
+				<record id="Pfit"/>
+				<!--Availability popup (not a client object property)-->
+				<record id="AvaP"/>
+			</record>
+		</widget>
+		
+		<!-- No players label -->
+		<widget class="text" id="nAvS" auto_size="vertical" hidden="true" colour="faded text" alignment="centre"/>
+	</container>
+
+</panel>

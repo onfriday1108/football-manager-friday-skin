@@ -1,0 +1,10 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="label" auto_size="vertical" style="bold" colour="text" size="10" alignment="centre">
+		<translation id="text" translation_id="247710" type="use" value="Transfer Details"/>
+	</widget>
+
+	<widget class="label" id="fewa" auto_size="vertical" size="10" colour="text" alignment="centre"/>
+
+</panel>

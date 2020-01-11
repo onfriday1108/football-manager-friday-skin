@@ -1,0 +1,12 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="blend_container">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<widget class="picture" id="Mkit"/>
+		<widget class="picture" id="Effe" file="pictures/kits/2d/outfield/front/default/effect" blend_mode="multiply"/>
+		<widget class="picture" id="Logo"/>
+	</container>
+
+</panel>

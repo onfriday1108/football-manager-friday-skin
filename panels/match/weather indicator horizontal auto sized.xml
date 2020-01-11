@@ -1,0 +1,16 @@
+<panel>
+
+  <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+  <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0"  gap="5"/>
+  <layout class="fit_children_attachment" alignment="vertical" offset="0"  gap="5"/>
+  <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="5"/>
+
+  <!--pretty icon-->
+  <widget class="picture" id="icon" image_alignment="left" width="24" height="24" scale_picture="true" keep_aspect_ratio="true" />
+
+  <!--description label-->
+  <widget class="text" id="desc" alignment="left" auto_size="all"/>
+
+</panel>
+
+

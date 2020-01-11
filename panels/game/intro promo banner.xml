@@ -1,0 +1,12 @@
+<record>
+	<list id="items">
+		<record>
+			<string id="file" value="main menu/intro promo banner1" />
+			<record id="click_event">
+				<flags id="event_id" value="OURL" />
+				<string id="url" value="https://fm20.info/36xB6PO" />
+				<string id="url_tracking_category" value="FM20 Hero" />
+			</record>
+		</record>
+	</list>
+</record>

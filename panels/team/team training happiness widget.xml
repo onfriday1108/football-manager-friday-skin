@@ -1,0 +1,8 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true" />
+
+	<widget class="table" id="tbll" mode="fill_rows" layout="-1" auto_size_rows="true"  fixed_size_rows="false" row_spacing="4"/>
+	<widget class="text" id="noTi" alignment="centre" hidden="true">
+		<translation id="text" translation_id="242522" type="use" value="N/A"/>
+	</widget>
+</panel>

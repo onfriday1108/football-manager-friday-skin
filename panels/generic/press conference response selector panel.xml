@@ -1,0 +1,34 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="4"/>
+
+	<!-- tone buttons -->
+	<container class="inner_box_no_margin" id="tonE" height="30">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<widget class="table" id="tabs" layout="-1, -1, -1, -1" row_height="30" auto_size_rows="false" fixed_size_rows="false" column_spacing="0">
+			<record id="default_properties">
+				<flags id="auto_size" value="none"/>
+				<flags id="alignment" value="centre"/>
+				<symbol id="appearance" value="switches/toggle/transparent/normal/button"/>
+				<symbol id="selected_appearance" value="switches/transparent/toggle/normal/button"/>
+			</record>
+		</widget>
+	</container>
+	
+	<!-- player/team/positions popup -->
+	<container id="anPb" height="75" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="top" inset="20" apply_to_children="true"/>
+
+		<widget class="popup_button" id="anPu" select_event="AnsA" height="35" auto_size="horizontal">
+			<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+		</widget>
+	</container>
+	
+	<!-- answer list -->
+	<widget class="table" id="ancr" layout="-1" fixed_size_rows="true" auto_size_rows="false" row_height="62" mode="select_rows" row_spacing="4">
+		<record id="default_properties">
+			<symbol id="appearance" value="buttons/custom/conversation/statement/button" auto_size="none"/>
+		</record>
+	</widget>
+
+</panel>

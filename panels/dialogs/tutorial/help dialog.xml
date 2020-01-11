@@ -1,0 +1,64 @@
+﻿<panel height="620" width="800">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container>
+		<attachment_group class="vertical_arrange" vertical_layout=" -1,30" />
+		
+		<container hidden="true">
+			<attachment_group class="button_arrangement_right" />
+			<widget class="button" click_event="togV" auto_size="all">
+				<translation id="text" translation_id="495545" type="use" value="Toggle[COMMENT: AREA: UI; SUB-AREA: Help and Tutorials; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: toggle the help dialog on and off]" />
+			</widget>
+		</container>
+		
+		<container hidden="true">
+			<attachment_group class="vertical_arrange" vertical_layout="40, -1" />
+
+			<widget class="edit_box" changed_event="tent" />
+
+			<container class="main_box" red_replacement="tutorial bg">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="scrolling_box">
+					<widget class="container" id="indl">
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+						<!-- We programatically add our induction widgets here -->
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="scrolling_box">
+					<widget class="container" id="indw">
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+						<!-- We programatically add our induction widgets here -->
+					</widget>
+				</container>
+			</container>
+
+			<container class="inner_subtle_box" id="mexp" hidden="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="4" vertical_alignment="bottom,extend" />
+
+				<widget class="text" id="expt" alignment="centre" multiline="true" colour="faded text" auto_size="vertical" />
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+					<widget class="button" click_event="SetE" auto_size="all">
+						<translation id="text" translation_id="468955" type="use" value="Set to Experienced[COMMENT:tutorial- action button for setting user to experienced]" />
+					</widget>
+				</container>
+			</container>
+		</container>
+		
+		<container>
+			<attachment_group class="button_arrangement_right" />
+			<widget class="icon_button" id="canc" auto_size="all" controller_button="b_button">
+				<translation id="text" translation_id="249644" type="use" value="Close[COMMENT - Button to close tutorial dialog]" />
+			</widget>
+		</container>
+	</container>
+</panel>

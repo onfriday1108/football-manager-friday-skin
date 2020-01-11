@@ -1,0 +1,7 @@
+﻿<panel>
+  <attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+  <container height="730" file="non_player/non player coaching course panel">
+  </container>
+
+</panel>

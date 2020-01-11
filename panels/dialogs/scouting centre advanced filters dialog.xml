@@ -1,0 +1,112 @@
+﻿<panel  width="1006" height="780">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="inner_box" appearance="boxes/popup/standard/paper">
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="10"/>
+
+		<container class="scrolling_box" >
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_gap="4" vertical_inset="4" horizontal_offset="0"/>
+				<container>
+					<attachment_group class="vertical_arrange_autosize" />
+
+					<container class="scouting_centre_advanced_filter_category_box" id="Scoc">
+						<translation id="title" translation_id="458567" type="use" value="Scouts[COMMENT: filter option to show only scout suggestions in scouting centre; fr 22700]" />
+
+						<widget class="table" id="scot" layout="-1" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" row_height="30">
+
+						</widget>
+
+					</container>
+
+					<container class="scouting_centre_advanced_filter_category_box" id="Anac">
+						<translation id="title" translation_id="450794" type="use" value="Analysts[COMMENT scouting centre filter option]" />
+						<widget class="table" id="anat" layout="-1" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" row_height="30">
+
+						</widget>
+
+					</container>
+
+				</container>
+				<container>
+					<attachment_group class="vertical_arrange_autosize" />
+
+
+
+					<container class="scouting_centre_advanced_filter_category_box">
+						<translation id="title" translation_id="437040" type="use" value="Recruitment Team[COMMENT: FR]" />
+						<widget class="table" id="doft" layout="-1" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" row_height="30">
+
+						</widget>
+					</container>
+
+					<container class="scouting_centre_advanced_filter_category_box">
+						<translation id="title" translation_id="336167" type="use" value="Agent Offers[COMMENT: interaction maanger; interaction topic]" />
+						<widget class="table" id="agst" layout="-1" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" row_height="30">
+
+						</widget>
+
+					</container>
+					<container class="scouting_centre_advanced_filter_category_box">
+						<translation id="title" translation_id="458570" type="use" value="Agent Notifications[COMMENT: filter option to show only agents notifications in scouting centre; fr 22700]" />
+						<widget class="table" id="agnt" layout="-1" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" row_height="30">
+
+						</widget>
+
+					</container>
+					<container class="scouting_centre_advanced_filter_category_box" id="Frec">
+						<translation id="title" translation_id="458571" type="use" value="Free Agents[COMMENT: filter option to show only free agents approaches in scouting centre; fr 22700]" />
+						<widget class="table" id="frat" layout="-1" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" row_height="30">
+
+						</widget>
+
+					</container>
+
+					<container class="scouting_centre_advanced_filter_category_box">
+						<translation id="title" translation_id="242350" type="use" value="Other" />
+
+						<widget class="table" id="otht" layout="-1" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" row_height="30">
+
+						</widget>
+
+					</container>
+				</container>
+			</container>
+
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+
+			<widget class="button" auto_size="all" click_event="erdp">
+				<translation id="text" translation_id="230013" type="use" value="Reset" />
+			</widget>
+
+			<widget class="button" id="UndO"  auto_size="all" click_event="UNDO" disabled="true">
+				<translation id="text" value="Undo" translation_id="230251" type="use"/>
+			</widget>
+
+			<container>
+				<attachment_group class="button_arrangement_right" />
+
+				<widget class="primary_icon_tick_button" id="ok">
+					<translation id="text" translation_id="229829" type="use" value="Ok" />
+				</widget>
+
+				<widget class="button" id="canc" auto_size="all">
+					<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				</widget>
+
+
+			</container>
+			
+		</container>
+
+
+	
+
+	</container>
+
+
+
+</panel>

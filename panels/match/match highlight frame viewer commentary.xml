@@ -1,0 +1,27 @@
+<panel>
+
+	<flags id="styl" value="no_border, darkened" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="cmpc" tran="1">
+		<flags id="styl" value="thin_border" />
+
+		<widget class="picture" file="boxes/custom/match/commentary/bar" id="cmbi" height="35" rthr="85">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+		</widget>
+
+		<!-- commentary widget -->
+		<widget class="label" id="cmnt" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+			<translation id="text" value="" />
+			<integer id="size" value="12" />
+			<flags id="algn" value="centre" />
+			<colour id="colour" name="text" />
+		</widget>
+
+	</container>
+</panel>

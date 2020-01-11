@@ -1,0 +1,74 @@
+<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="inner_box" >
+		<translation id="title" translation_id="248362" type="use" value="Allow Extended Leave[COMMENT: heading on training holiday instruction panel; set a player's holiday instructions]" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<widget class="subtle_button" id="shwA" click_event="shwA" auto_size="all" embed_in_frame="true">
+				<translation id="text" translation_id="342772" type="use" value="Show All [COMMENT: training holiday instruction panel; button to use physio's recommended course of action]" />
+			</widget>
+			<widget class="subtle_button" id="uprb" click_event="uprb" auto_size="all" embed_in_frame="true">
+				<translation id="text" translation_id="330742" type="use" value="Use Physio Recommendation [COMMENT: training holiday instruction panel; button to use physio's recommended course of action]" />
+			</widget>
+
+		</container>
+
+		<container id="reco">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<widget class="table" id="leag" auto_size_rows="true" layout="-1,-1,-1" mode="fill_rows,stripe_rows">
+
+				<list id="headings">
+					<record>
+						<translation id="text" translation_id="227765" type="use" value="Name[comment - Person Name]" />
+						<flags id="algn" value="left,centre_y" />
+						<translation id="hint" translation_id="247479" type="use" value="Person Name" />
+					</record>
+					<record>
+						<translation id="text" translation_id="248363" type="use" value="Physio Recommendation[COMMENT: heading on training holiday instruction panel; physio's recommended course of action]" />
+						<flags id="algn" value="left,centre_y" />
+					</record>
+					<record>
+						<translation id="text" translation_id="248042" type="use" value="Instruction" />
+						<flags id="algn" value="left,centre_y" />
+					</record>
+				</list>
+
+				<list id="column_widget_properties">
+					<record indx="0" spec="text" />
+					<record indx="1" spec="text" alignment="left,centre_y" />
+				</list>
+
+			</widget>
+
+			<container>
+				<attachment_group class="button_arrangement_right" />
+
+				<widget class="primary_icon_tick_button" id="fini" click_event="fini">
+					<translation id="text" translation_id="229918" type="use" value="Confirm" />
+				</widget>
+				<widget class="button" id="ifcn" click_event="ifcn" auto_size="all">
+					<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				</widget>
+			</container>
+
+		</container>
+
+		<container id="norc">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="label" size="large" auto_size="all" alignment="centre" style="bold">
+				<translation id="text" translation_id="325854" type="use" value="No players are currently in need of extended leave.[COMMENT: text shown when a human club has no players that require extended leave]" />
+			</widget>
+		</container>
+
+	</container>
+</panel>

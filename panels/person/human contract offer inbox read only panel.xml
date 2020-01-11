@@ -1,0 +1,89 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize"/>
+
+  <container id="huco" draw_horizontal_dividers="true">
+    <attachment_group class="vertical_arrange_autosize" vertical_gap="20"/>
+
+    <container id="flin">
+      <attachment_group class="vertical_arrange_autosize"/>
+
+      <widget class="contract_offer_details_panel" id="HcoD" hidden="true" file="human/human contract offer details inbox read only panel" auto_size="vertical"/>
+
+    </container>
+
+    <container>
+      <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1"/>
+
+      <container class="vertical_label_value_pair" value_widget="vtbl" label_widget="vtbt">
+        <attachment_group class="vertical_arrange_autosize"/>
+        
+        <widget class="text" id="vtbt" auto_size="vertical" alignment="left,centre_y" >
+          <translation id="text" translation_id="291309" type="use" value="Transfer Budget[COMMENT:Transfer budget label]" />
+        </widget>
+
+        <widget class="cash_cell" id="vtbl" auto_size="vertical" alignment="left,centre_y" ccrs="4" cusv="true">
+
+        </widget>
+        
+      </container>
+
+      <container class="vertical_label_value_pair" value_widget="vwbl" label_widget="vwbt">
+        <attachment_group class="vertical_arrange_autosize"/>
+        <widget class="text" id="vwbt" auto_size="vertical" alignment="left,centre_y">
+          <translation id="text" translation_id="291308" type="use" value="Wage Budget[COMMENT:Wage budget label]" />
+        </widget>
+
+        <widget class="wage_label" format="2" id="vwbl" auto_size="vertical" alignment="left,centre_y">
+
+        </widget>
+      </container>
+
+    </container>
+
+    <container >
+      <attachment_group class="vertical_arrange_autosize" vertical_gap="12"/>
+
+      <container>
+        <attachment_group class="vertical_arrange_autosize"/>
+        
+        <widget class="text" id="borl" spec="text" font="label" colour="faded text" auto_size="vertical" alignment="left,centre_y">
+          <translation id="text" translation_id="395132" type="use" value="Agreed Board Requests[COMMENT: FR 6573 - Revamp Human Contract Offer screen inc. News Item]" />
+        </widget>
+
+        <widget class="table" id="bort" layout="-1" mode="fill_rows" auto_size="vertical" fixed_size_rows="false" auto_size_rows="true">
+          <list id="column_widget_properties">
+            <record indx="0" alignment="left,centre_y" spec="text" style="bold" multiline="true"/>
+          </list>
+        </widget>
+        
+      </container>
+
+      <container>
+        <attachment_group class="vertical_arrange_autosize"/>
+
+        <widget class="text" id="borl" spec="text" font="label" colour="faded text" auto_size="vertical" alignment="left,centre_y">
+          <translation id="text" translation_id="320154" type="use" value="Promises[COMMENT: player status panel; panel header title for a section listing all promises a manager has made to a player]" />        
+        </widget>
+
+        <widget class="table" id="prmt" layout="-1" mode="fill_rows" auto_size="vertical" fixed_size_rows="false" auto_size_rows="true">
+          <list id="column_widget_properties">
+            <record indx="0" alignment="left,centre_y" spec="text" style="bold" multiline="true"/>
+          </list>
+        </widget>
+
+      </container>
+
+      <container>
+        <attachment_group class="vertical_arrange_autosize"/>
+
+        <widget class="text" spec="text" font="label" colour="faded text" auto_size="vertical" alignment="left,centre_y">
+          <translation id="text" translation_id="395325" type="use" value="Staff Changes[COMMENT: FR 6573 - Revamp Human Contract Offer screen inc. News Item]" />
+        </widget>
+
+        <widget class="text" id="stcl" auto_size="vertical" spec="text" style="bold" multiline="true"/>
+      </container>
+    </container>
+      
+  </container>
+
+</panel>

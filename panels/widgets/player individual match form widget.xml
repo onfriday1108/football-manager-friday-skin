@@ -1,0 +1,84 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  <container class="bordered_box_no_margin" >
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="-2"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <!--header-->
+    <container class="bordered_box_no_margin" height="30">
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" gap="2" offset="8" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <!--opposition team-->
+      <widget class="team_button" id="oppL" alignment="left,centre_y" font="title" colour="text" icon_enabled="false" auto_size="horizontal" />
+
+      <!--scoreline-->
+      <widget class="text" alignment="right,centre_y" multiline="false" font="title" id="resL"/>
+    </container>
+
+    <container>
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" gap="10" offset="8" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+      <!--opposition shield-->
+      <widget class="object_portrait_picture" scale_picture="true" keep_aspect_ratio="true" alignment="centre" image_alignment="centre" width="35" id="oppS" />
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        <!--didnt play container-->
+        <container id="dtPC">
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+          <widget class="text" alignment="centre" spec="text" size="small" >
+            <translation id="text" translation_id="249426" type="use" value="N/A[COMMENT: Not Applicable, abbreviation]"/>
+          </widget>
+        </container>
+        <!--played container-->
+        <container id="rtCn">
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+          <layout class="arrange_vertical_attachment" alignment="middle" gap="4" offset="0" />
+
+          <!--rating-->
+          <container>
+            <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="4"/>
+
+            <widget class="number_label" alignment="left,centre_y" style="bold" auto_size="all" id="ratL"/>
+
+            <widget class="label" alignment="left,centre_y" spec="text" colour="faded text" auto_size="all">
+              <translation id="text" translation_id="233158" type="use" value="Average Rating"/>
+            </widget>
+          </container>
+
+          <widget class="horizontal_divider" height="2"/>
+
+            <!--outfield-->
+            <container id="outC">
+              <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1"/>
+
+              <!--goals scored-->
+              <container>
+                <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="4"/>
+                <widget class="picture" file="icons/16px/goal" auto_size="all" image_alignment="centre"/>
+                <widget class="label" id="golL" alignment="left,centre_y" spec="text" size="small" auto_size="all"/>
+              </container>
+
+              <!--assists-->
+              <container>
+                <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="4"/>
+                <widget class="picture" file="icons/16px/assist"  auto_size="all" image_alignment="centre"/>
+                <widget class="label" id="assL" alignment="left,centre_y" spec="text" size="small" auto_size="all"/>
+              </container>
+
+            </container>
+            <!--keeper-->
+            <container id="golC" hidden="true">
+              <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+              <layout class="arrange_horizontal_attachment" alignment="left,extend" gap="2" offset="2" />
+              <widget class="picture" file="icons/16px/goal" auto_size="horizontal" image_alignment="centre"/>
+              <widget class="label" id="conL" alignment="left,centre_y" spec="text" size="small"/>
+            </container>
+
+        </container>
+      </container>
+    </container>
+
+  </container>
+</panel>

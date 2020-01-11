@@ -1,0 +1,39 @@
+<panel>
+
+  <widget id="find" class="edit_box" appearance="edit boxes/custom/search/box" spec="text" width="300" colour="searchbox text" event_delay="100" style="semi_bold" escape_event="cloe" clear_text_event="DELE" show_clear_text_icon="true">
+    <attachment class="max_length_attachment" length="130"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+    <!-- sent the return/enter key event to the screen: it causes a quick search to be performed -->
+    <event id="return_event">
+      <flags id="event_id" value="DBSR"/>
+      <flags id="event_target" value="prnt"/>
+    </event>
+
+    <!-- sent the edit event to the screen: will store the search text to set in the next screen (could be the match title bar) -->
+    <event id="edit_event">
+      <flags id="event_id" value="DBSC"/>
+      <flags id="event_target" value="scrC"/>
+    </event>
+
+    <!-- send the text changed event to the clear button: if the text is empty, the clear button is disabled or removed -->
+    <event id="changed_event">
+      <flags id="event_id" value="chtx"/>
+      <flags id="event_target" value="prnt"/>
+    </event>
+  </widget>
+
+  <!-- search icon -->
+  <widget class="icon_button" id="srch" appearance="none" icon="icons/16px/search" auto_size="all" >
+    <record id="primary_icon_properties" red_replacement="normal_icon"/>
+    <layout class="stick_to_sides_attachment" alignment="left" inset="9"/>
+    <layout class="centre_in_parent_attachment" alignment="vertical" />
+
+    <!--for the click event, we send a return to the edit box-->
+    <event id="click_event">
+      <flags id="event_id" value="keyp"/>
+      <flags id="event_target" value="find"/>
+      <flags id="code" value="5"/>
+    </event>
+  </widget>
+</panel>

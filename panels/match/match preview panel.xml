@@ -1,0 +1,639 @@
+<panel>
+
+	<boolean id="save_session_state" value="true" />
+	<flags id="topa" value="buttons/custom/match preview/highlighted/button" />
+	<flags id="otha" value="buttons/custom/match preview/normal/button" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="horizontal_adaptive_container" inset="0" offset="0" >
+		<global id="gap" name="ui.main_box_gap"/>
+
+		<!--left hand side - head to head and team report-->
+		<container class="vertical_arrange_container" default_width="-600" minimum_width="600" priority="1" alignment="bottom,extend" offset="0" inset="0" gap="8">
+
+			<!--head to head-->
+			<container class="main_subtle_box">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<!--container for badges, behind everything else-->
+				<container>
+					<!--home team badge-->
+					<widget class="object_portrait_picture" id="picH" height="60" width="60" scale_picture="true">
+						<boolean id="keep_aspect_ratio" value="true" />
+						<flags id="image_alignment" value="centre" />
+
+						<record id="object_property">
+							<integer id="get_property" value="home" />
+							<integer id="set_property" value="objt" />
+						</record>
+
+						<layout class="stick_to_sides_attachment" alignment="left,top" inset="6,10" />
+					</widget>
+
+					<widget class="kit_picture" id="T_hk" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="150" height="168">
+						<boolean id="always_use_latest_object_list" value="true"/>
+						<record id="object_property">
+							<list id="get_properties">
+								<record id="object_property" get_property="hkID" set_property="ktid" />
+								<record id="object_property" get_property="home" set_property="Ttea" />
+							</list>
+						</record>
+
+						<layout class="stick_to_sides_attachment" alignment="left,top" inset="40,20" />
+					</widget>
+
+					<!--away team badge-->
+					<widget class="object_portrait_picture" id="picA" height="60" width="60" scale_picture="true">
+						<boolean id="keep_aspect_ratio" value="true" />
+						<flags id="image_alignment" value="centre" />
+
+						<record id="object_property">
+							<integer id="get_property" value="away" />
+							<integer id="set_property" value="objt" />
+						</record>
+
+						<layout class="stick_to_sides_attachment" alignment="right,top" inset="6,10" />
+					</widget>
+
+					<widget class="kit_picture" id="T_ak" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="150" height="168">
+						<boolean id="always_use_latest_object_list" value="true"/>
+						<record id="object_property">
+							<list id="get_properties">
+								<record id="object_property" get_property="akID" set_property="ktid" />
+								<record id="object_property" get_property="away" set_property="Ttea" />
+							</list>
+						</record>
+
+						<layout class="stick_to_sides_attachment" alignment="right,top" inset="40,20" />
+					</widget>
+				</container>
+
+				<!--container for kit 3D models-->
+				<container>
+
+				</container>
+
+				<!--container for all the head to head stats-->
+				<container class="scrolling_box">
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!--fixture name-->
+						<widget class="fixture_name_text" id="Name" auto_size="vertical" alignment="centre" colour="faded text" size="small">
+							<record id="object_property">
+								<integer id="get_property" value="FxNm" />
+							</record>
+						</widget>
+
+						<!--team names-->
+						<container height="30">
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="middle,fill" horizontal_offset="0" />
+
+
+							<!--home team-->
+							<widget class="team_button" id="home" alignment="right,centre_y" icon_enabled="false" size="xlarge" style="bold" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="home" />
+								</record>
+							</widget>
+
+							<!--v-->
+							<widget class="text" alignment="centre" colour="faded text" auto_size="all">
+								<translation id="text" translation_id="242324" type="use" value="v[versus]" />
+							</widget>
+
+							<!--away team-->
+							<widget class="team_button" id="away" alignment="left,centre_y" icon_enabled="false" size="xlarge" style="bold" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="away" />
+								</record>
+							</widget>
+
+
+						</container>
+
+						<widget class="spacer" height="4" />
+
+						<!--odds-->
+						<container id="oddS" height="53">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="1" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<!--provider-->
+							<widget class="text" id="oddp" alignment="centre" auto_size="vertical" font="title" />
+
+							<!--actual odds-->
+							<container height="30">
+								<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="4" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<!--home odds-->
+								<widget class="button" id="oddh" width="60" alignment="centre" />
+
+								<!--draw odds-->
+								<widget class="button" id="oddd" width="60" alignment="centre" />
+
+								<!--away odds-->
+								<widget class="button" id="odda" width="60" alignment="centre" />
+
+							</container>
+						</container>
+						<widget class="text" id="nood" auto_size="vertical" alignment="centre" colour="faded text" size="small">
+							<translation id="text" translation_id="441071" type="use" value="No match odds[COMMENT: text for when no match odds are available]" />
+						</widget>
+
+						<widget class="spacer" height="4" />
+
+						<!--league position-->
+						<container id="lpsC" height="53">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="1" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="text" id="lpti" alignment="centre" auto_size="vertical" font="title">
+								<translation id="text" translation_id="284395" type="use" value="League Position[COMMENT: French attacking league table; league position heading hint]" />
+							</widget>
+
+							<container height="30">
+								<layout class="arrange_horizontal_attachment" alignment="middle,fill" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<!--home position-->
+								<container>
+									<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<widget class="button" id="homl" alignment="right,centre_y" auto_size="horizontal">
+										<string id="format" value="[%number#1-nth]" />
+										<record id="object_property">
+											<integer id="get_property" value="homl" />
+										</record>
+									</widget>
+								</container>
+
+								<!--vertical divider-->
+								<widget class="vertical_divider"/>
+
+								<!--away position-->
+								<container>
+									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<widget class="button" id="awal" alignment="left,centre_y" auto_size="horizontal">
+										<string id="format" value="[%number#1-nth]" />
+										<record id="object_property">
+											<integer id="get_property" value="awal" />
+										</record>
+									</widget>
+								</container>
+
+							</container>
+
+						</container>
+
+						<widget class="spacer" height="4" />
+
+						<!--recent form-->
+						<widget class="text" alignment="centre" auto_size="vertical" font="title">
+							<translation id="text" translation_id="344664" type="use" value="Recent Form" />
+						</widget>
+						<container height="30">
+							<layout class="arrange_horizontal_attachment" alignment="middle,fill" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+							<!--home form-->
+							<container>
+								<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="1" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<widget class="team_recent_form_widget" id="homF" alignment="right,centre_y" show_description_text="true" auto_size="horizontal" colour="text">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="homF" />
+												<integer id="set_property" value="valu" />
+												<boolean id="dont_set_object" value="true" />
+											</record>
+											<record>
+												<integer id="get_property" value="home" />
+												<integer id="set_property" value="objt" />
+											</record>
+										</list>
+									</record>
+								</widget>
+							</container>
+
+							<!--vertical divider-->
+							<widget class="vertical_divider"/>
+
+							<!--away form-->
+							<container>
+								<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<widget class="team_recent_form_widget" id="awaF" alignment="left,centre_y" show_description_text="true" auto_size="horizontal" colour="text">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="awaF" />
+												<integer id="set_property" value="valu" />
+												<boolean id="dont_set_object" value="true" />
+											</record>
+											<record>
+												<integer id="get_property" value="away" />
+												<integer id="set_property" value="objt" />
+											</record>
+										</list>
+									</record>
+								</widget>
+							</container>
+						</container>
+
+						<widget class="spacer" height="4" />
+
+						<!--previous meetings-->
+						<widget class="text" alignment="centre" auto_size="vertical" font="title">
+							<translation id="text" translation_id="344616" type="use" value="Previous Meetings[COMMENT: title for a box containing information on previous meetings between two sides]" />
+						</widget>
+						<widget class="match_previous_matches_panel" id="mpmp" file="none">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="4" />
+							<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="4" />
+
+							<widget class="text" id="noma" auto_size="all" alignment="centre" colour="faded text" size="small">
+								<translation id="text" translation_id="344371" type="use" value="No previous matches played between these sides.[COMMENT: information on previous meetings between two sides]" />
+							</widget>
+
+							<!--bar chart-->
+							<widget class="horizontal_stacked_bar_chart_with_key_panel" id="matc" file="none">
+								<layout class="arrange_vertical_attachment" alignment="top" offset="10" />
+								<layout class="fit_children_attachment" alignment="vertical,fill" offset="10" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+								<!--bar chart-->
+								<widget class="horizontal_stacked_bar_chart" id="barc" height="10" width="400">
+									<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+								</widget>
+
+								<!--labels-->
+								<container id="keys">
+									<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+									<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="4"/>
+									<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="4"/>
+									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+									<!-- Records defining the widgets to use for the key picture and key text -->
+									<record id="keyp" class="picture">
+										<record id="properties" auto_size="all" file="icons/16px/circle"/>
+									</record>
+									<record id="keyt" class="text">
+										<record id="properties" auto_size="all" multiline="false"/>
+									</record>
+								</container>
+							</widget>
+
+
+						</widget>
+
+						<widget class="spacer" height="4" />
+
+						<!--preferred formation-->
+						<widget class="text" alignment="centre" auto_size="vertical" font="title">
+							<translation id="text" translation_id="229988" type="use" value="Preferred Formation" />
+						</widget>
+						<container height="26">
+							<layout class="arrange_horizontal_attachment" alignment="middle,fill" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+							<!--home preferred formation-->
+							<widget class="formation_label" id="PFmH" alignment="right,centre_y" style="semi_bold">
+								<record id="object_property">
+									<integer id="get_property" value="PFmH" />
+								</record>
+							</widget>
+
+							<!--vertical divider-->
+							<widget class="vertical_divider"/>
+
+							<!--away preferred formation-->
+							<widget class="formation_label" id="PFmA" alignment="left,centre_y" style="semi_bold">
+								<record id="object_property">
+									<integer id="get_property" value="PFmA" />
+								</record>
+							</widget>
+
+						</container>
+
+						<widget class="spacer" height="4" />
+
+						<!--team news-->
+						<widget class="text" alignment="centre" auto_size="vertical" font="title">
+							<translation id="text" translation_id="344976" type="use" value="Team News[COMMENT: team report panel; team news ahead of the next match]" />
+						</widget>
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="arrange_horizontal_attachment" alignment="middle,fill" offset="0" />
+
+							<!--home team news-->
+							<widget class="fixture_news_text" id="hnws" alignment="right,centre_y" icon_alignment="right,centre_y" auto_size="vertical" auto_size_rows="true" >
+								<record id="object_property">
+									<integer id="get_property" value="FxHN" />
+								</record>
+								<record id="default_properties">
+									<symbol id="multiline" value="false" />
+								</record>
+							</widget>
+
+							<!--vertical divider-->
+							<widget class="vertical_divider"/>
+
+							<!--away team news-->
+							<widget class="fixture_news_text" id="anws" alignment="left,centre_y" icon_alignment="left,centre_y" auto_size="vertical"  auto_size_rows="true">
+								<record id="object_property">
+									<integer id="get_property" value="FxAN" />
+								</record>
+								<record id="default_properties">
+									<symbol id="multiline" value="false" />
+								</record>
+							</widget>
+
+						</container>
+
+					</container>
+				</container>
+			</container>
+
+			<container height="250">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<!--team report-->
+				<container class="tabbed_container" id="tmtb" hide_selector_if_one_or_fewer_items="true" height="210">
+					<widget class="team_report_pre_match_panel" id="hmTR" team_index="0" file="team/team report pre match panel no title" />
+					<widget class="team_report_pre_match_panel" id="awTR" team_index="1" file="team/team report pre match panel no title" />
+				</container>
+
+				<widget class="team_report_pre_match_panel" id="geTR" team_index="0" height="210" />
+			</container>
+		</container>
+
+		<!--right - meetings/conditions/referee/rules-->
+		<container default_width="-300" minimum_width="300" priority="1" draw_horizontal_dividers="true">
+			<attachment_group clas="vertical_arrange" vertical_alignment="top,extend" >
+				<global id="vertical_gap" name="ui.main_box_gap"/>
+			</attachment_group>
+
+			<!--match information-->
+			<container class="main_box">
+				<translation id="title" translation_id="233151" type="use" value="Match Information" />
+
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--conditions-->
+				<widget class="match_conditions_panel" id="matc">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+
+				<widget class="horizontal_subtle_divider" />
+
+				<!--weather icon-->
+				<widget class="weather_indicator_panel" id="FxWe" file="match/weather indicator with wind horizontal">
+					<record id="object_property">
+						<integer id="get_property" value="FxWe" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</widget>
+
+				<!-- separator image -->
+				<widget class="horizontal_subtle_divider" />
+
+				<!--referee-->
+				<widget class="referee_profile_panel" id="refp">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="FRef" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+			</container>
+
+			<!--home team fixtures-->
+			<container id="FLPh" height="146" class="main_box">
+				<attachment_group clas="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<list id="properties_to_forward">
+					<record get_property="titl" set_property="text" target="hlin" />
+				</list>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="left" horizontal_inset="0" />
+
+					<widget class="link_button_title" id="hlin" section="TeFi" auto_size="all">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="home" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<widget class="fixtures_list_panel" id="flph" file="" fixtures_ahead="3" fixtures_previous="0">
+					<boolean id="save_session_state" value="true" />
+
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="home" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+
+					<!-- Styles -->
+					<flags id="friendly_appearance" value="tables/custom/fixtures/friendly/row" />
+					<flags id="continental_appearance" value="tables/custom/fixtures/continental/row" />
+					<flags id="cup_appearance" value="tables/custom/fixtures/cup/row" />
+
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="client_object_list_table" id="pltb" database_table_type="53" select_event="self" fixed_size_rows="true" auto_size_rows="false" mode="fill_rows, stripe_rows">
+
+						<!-- default sort -->
+						<list id="default_sort_column">
+							<integer value="fxdt" />
+						</list>
+
+						<record id="viewed_property_ids">
+							<record id="fdRE" />
+							<record id="FxVn" />
+							<record id="fopt" />
+							<record id="FxNm" />
+						</record>
+
+					</widget>
+				</widget>
+			</container>
+
+			<!--away team fixtures-->
+			<container id="FLPa" height="145" class="main_box">
+				<attachment_group clas="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<list id="properties_to_forward">
+					<record get_property="titl" set_property="text" target="alin" />
+				</list>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="left" horizontal_inset="0" />
+
+					<string id="skin_style" value="title link" />
+
+					<widget class="link_button" id="alin" auto_size="all" alignment="left,centre_y" font="title" section="TeFi">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="away" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<widget class="fixtures_list_panel" id="flpa" file="" fixtures_ahead="3" fixtures_previous="0">
+					<boolean id="save_session_state" value="true" />
+
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="away" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+
+					<!-- Styles -->
+					<flags id="friendly_appearance" value="tables/custom/fixtures/friendly/row" />
+					<flags id="continental_appearance" value="tables/custom/fixtures/continental/row" />
+					<flags id="cup_appearance" value="tables/custom/fixtures/cup/row" />
+
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="client_object_list_table" id="pltb" database_table_type="53" select_event="self" fixed_size_rows="true" auto_size_rows="false" mode="fill_rows, stripe_rows">
+
+						<!-- default sort -->
+						<list id="default_sort_column">
+							<integer value="fxdt" />
+						</list>
+
+						<record id="viewed_property_ids">
+							<record id="fdRE" />
+							<record id="FxVn" />
+							<record id="fopt" />
+							<record id="FxNm" />
+						</record>
+
+					</widget>
+				</widget>
+			</container>
+
+			<!--table-->
+			<container class="main_box" id="cost">
+
+				<attachment_group clas="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+
+					<string id="skin_style" value="title link" />
+
+					<widget class="link_button" id="tlin" auto_size="all" alignment="left,centre_y" font="title">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="fxCo" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<widget class="competition_stage_panel" id="leag" file="competition/competition overview stage" show_fixture_teams_on_league_table="true">
+					<record id="object_property">
+						<list id="get_properties">
+							<record get_property="cssi" set_property="cssi" dont_set_object="true" />
+							<record get_property="cmsi" set_property="cmsi" dont_set_object="true" />
+							<record get_property="comp" set_property="objt" />
+							<record get_property="objt" set_property="fixt" />
+						</list>
+					</record>
+				</widget>
+			</container>
+
+			<!--fixtures-->
+			<container class="main_box" id="FxCn" hidden="true">
+				<translation id="title" translation_id="324243" type="use" value="Today's Fixtures[COMMENT: how to system; help string]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="competition_fixtures_panel" id="fixt" file="competition/competition fixtures match preview" svsl="false">
+					<record id="object_property">
+						<list id="get_properties">
+							<record get_property="cssi" set_property="cssi" dont_set_object="true" />
+							<record get_property="cmsi" set_property="cmsi" dont_set_object="true" />
+							<record get_property="comp" set_property="objt" />
+						</list>
+					</record>
+
+				</widget>
+			</container>
+		</container>
+
+		<!--adaptive extra right side panel-->
+		<container class="vertical_arrange_container" id="adap" default_width="-300" minimum_width="300" priority="2" alignment="top,extend">
+
+			<!--media-->
+			<container class="main_box" height="400">
+				<translation id="title" translation_id="227745" type="use" value="Media" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="competition_news_panel" file="competition/competition news mini panel" id="news" number_of_stories_to_request="12" show_daily_news_request="true" popup_parent="pmpv">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</container>
+			</container>
+
+			<!--fixtures-->
+			<container class="main_box">
+				<translation id="title" translation_id="324243" type="use" value="Today's Fixtures[COMMENT: how to system; help string]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="competition_fixtures_panel" id="fixr" file="competition/competition fixtures match preview" svsl="false">
+					<record id="object_property">
+						<list id="get_properties">
+							<record get_property="cssi" set_property="cssi" dont_set_object="true" />
+							<record get_property="cmsi" set_property="cmsi" dont_set_object="true" />
+							<record get_property="comp" set_property="objt" />
+						</list>
+					</record>
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

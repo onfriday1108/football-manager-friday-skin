@@ -1,0 +1,133 @@
+﻿<panel>
+	<!-- Colours for the control boxes-->
+	<string id="human_colour" value="manager responsibility" />
+	<string id="staff_colour" value="staff responsibility" />
+	
+	<list id="draw_order">
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at0e" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at0:" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container entity_layout_id="at00" id="at00" height="70">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container class="inner_subtle_box" entity_layout_id="at01" appearance="boxes/custom/responsibilities/paper" id="rspN" height="70">
+			<string id="text" value="-" />
+			<string id="red_replacement" value="subtle_box_background" />
+			<string id="colour" value="text" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="inner_box_no_margin" entity_layout_id="at02" auto_size="vertical" id="rspB" width="300" height="40" name="staff responsible">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="text" entity_layout_id="at0e" id="at0e" width="300" height="40">
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+				</widget>
+				<widget class="popup_button" entity_layout_id="at06" appearance="buttons/custom/responsibility/button" id="delc" height="40">
+					<string id="select_event" value="DELC" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</widget>
+				<widget class="picture" entity_layout_id="at05" file="icons/26px/staff respo" id="srpc" width="26" height="26">
+					<string id="image_alignment" value="centre" />
+					<layout class="stick_to_object_attachment" id="align_left" offset="6" get_side="left" set_side="left" move_side="true" target="main" />
+					<layout class="centre_in_parent_attachment" id="align_centre_vert" alignment="vertical" offset="0" />
+				</widget>
+				<container class="person_button_with_job_description" entity_layout_id="at0:" id="pwjd">
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" target="at05" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-44" get_side="right" set_side="right" target="main" />
+				</container>
+			</container>
+			<container entity_layout_id="at09" id="at09" width="150" height="40">
+				<layout class="stick_to_object_attachment" id="align_top" offset="6" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="right" set_side="left" move_side="true" target="at02" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="subtle_button" entity_layout_id="at08" auto_size="vertical" id="tkec" hidden="true" needs_height="true" name="take control">
+					<string id="click_event" value="TKEC" />
+					<translation id="text" translation_id="247759" type="use" value="Take Control" />
+					<layout class="stick_to_object_attachment" id="align_top" offset="1" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</widget>
+				<widget class="subtle_popup_button" entity_layout_id="at03" appearance="buttons/subtle/split/right/button" auto_size="vertical" id="dele" width="40" needs_height="true" name="delegate button">
+					<string id="select_event" value="DELE" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" move_side="true" target="main" />
+				</widget>
+				<widget class="subtle_button" entity_layout_id="at07" appearance="buttons/subtle/split/left/button" alignment="centre_x,centre_y" id="drec" auto_size="vertical" needs_height="true">
+					<string id="click_event" value="DREC" />
+					<translation id="text" translation_id="492049" type="use" value="Delegate[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None NOTE: Button label that allows human to choose staff member responsible for this task]" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" target="at03">
+						<global id="offset" name="ui.split_button_row_gap" />
+					</layout>
+				</widget>
+			</container>
+			<widget class="text" entity_layout_id="at04" id="description" alignment="centre_y,left" height="40" name="description">
+				<string id="colour" value="faded text" />
+				<string id="wrap_widgets" value="true" />
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" offset="15" get_side="right" set_side="left" target="at09" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-5" get_side="right" set_side="right" target="main" />
+			</widget>
+		</container>
+	</container>
+</panel>

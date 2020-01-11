@@ -1,0 +1,181 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container>
+
+		<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- Top Deadline Day Deals within your division -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="arrange_vertical_attachment" layout="115,240,-1" offset="0"  />
+
+			<!-- Transfer Window Information for division -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0"  />
+
+				<container class="main_box">
+
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="label" auto_size="vertical" font="title">
+						<translation id="text" translation_id="336245" type="use" value="Deals[COMMENT: transfer deadline day screen, text displaying transfer deals]" />
+					</widget>
+
+					<widget class="label" id="nbtr" size="22" style="bold" alignment="left" auto_size="vertical" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+
+						<widget class="label" auto_size="all" font="label">
+							<translation id="text" translation_id="412439" type="use" value="Most Players Bought[COMMENT: FR 15125]" />
+						</widget>
+
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+							<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+
+							<widget class="team_button" id="mpbt">
+
+							</widget>
+
+							<widget class="label" id="mpbv" auto_size="horizontal" size="12">
+
+							</widget>
+
+						</container>
+
+					</container>
+
+				</container>
+
+				<container class="main_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+					<widget class="label" auto_size="vertical" font="title">
+						<translation id="text" translation_id="336037" type="use" value="Spent" />
+					</widget>
+
+					<widget class="cash_cell" id="tots" size="22" style="bold" alignment="left,top" auto_size="vertical" />
+
+					<container>
+
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+
+						<widget class="label" auto_size="all" font="label">
+							<translation id="text" translation_id="412440" type="use" value="Biggest Spenders[COMMENT: FR 15125]" />
+						</widget>
+
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+							<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+
+							<widget class="team_button" id="bist" />
+
+							<widget class="cash_cell" id="bisv" auto_size="horizontal" size="12" alignment="centre" />
+
+						</container>
+
+					</container>
+
+				</container>
+
+				<container class="main_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+					<widget class="label" auto_size="vertical" font="title">
+						<translation id="text" translation_id="343281" type="use" value="Average Transfer Value[COMMENT: transfer deadline day screen; info about the average expenditure in a country throughout one transfer window]" />
+					</widget>
+
+					<widget class="cash_cell" id="aved" size="22" style="bold" alignment="left" auto_size="vertical" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+
+						<widget class="label" auto_size="all" font="label">
+							<translation id="text" translation_id="412441" type="use" value="Highest Transfer Fee[COMMENT: FR 15125]" />
+						</widget>
+
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+							<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+
+							<widget class="team_button" id="hfet" />
+
+							<widget class="cash_cell" id="hfee" auto_size="horizontal" size="12" alignment="centre" />
+
+						</container>
+
+					</container>
+
+				</container>
+
+
+
+			</container>
+
+			<container class="main_box">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+
+				<widget class="label" auto_size="all" font="title">
+					<translation id="text" translation_id="297333" type="use" value="Major Transfers" />
+				</widget>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="8" />
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0"  />
+
+					<container class="property_list_viewer_xml_panel" file="widgets/deadline day major transfer details widget" id="mtb1" />
+					<container class="property_list_viewer_xml_panel" file="widgets/deadline day major transfer details widget" id="mtb2"/>
+					<container class="property_list_viewer_xml_panel" file="widgets/deadline day major transfer details widget" id="mtb3" />
+				</container>
+
+			</container>
+
+			<container class="main_box">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+
+				<widget class="table" id="deat" mode="fill_rows, stripe_rows" layout="50,-1,-1,-1,150" save_session_state="true" default_sort_column="time">
+
+					<list id="headings">
+						<record>
+							<translation id="text" translation_id="293649" type="use" value="Time" />
+						</record>
+						<record>
+							<translation id="text" translation_id="227765" type="use" value="Name[comment - Person Name]" />
+						</record>
+						<record>
+							<translation id="text" translation_id="242854" type="use" value="From" />
+						</record>
+						<record>
+							<translation id="text" translation_id="242855" type="use" value="To" />
+						</record>
+						<record>
+							<translation id="text" translation_id="230121" type="use" value="Fee" />
+						</record>
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0" id="time" sort_ascending="false" />
+					</list>
+				</widget>
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

@@ -1,0 +1,179 @@
+<panel>
+	<translation id="title" translation_id="306487" type="use" value="Debug Info" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="main_box">
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="tabbed_container" id="tabs" default_item="tbbx" save_session_state="true">
+
+		<container id="mibx">
+			<string id="title" value="Misc" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="mitb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+				<list id="column_table_properties">
+					<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="tbbx">
+			<string id="title" value="General" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="gitb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+				<list id="column_table_properties">
+					<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="pebx">
+			<string id="title" value="Personal/Club" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="petb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+				<list id="column_table_properties">
+					<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="pibx">
+			<string id="title" value="Player Information" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="pitb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0" save_session_state="true">
+				<list id="column_table_properties">
+					<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="nibx">
+			<string id="title" value="Non-Player Information" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="nitb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+				<list id="column_table_properties">
+					<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="atbx">
+			<string id="title" value="Attributes" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="attb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+				<list id="column_table_properties">
+					<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="tdbx">
+			<string id="title" value="Tendencies" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="tdtb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+				<list id="column_table_properties">
+					<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="rlbx">
+			<string id="title" value="Relationships" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="rltb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+				<list id="column_table_properties">
+					<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="phbx">
+			<string id="title" value="Player Happiness" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="phtb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+				<list id="column_table_properties">
+					<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="ctbx">
+			<string id="title" value="Contract and Transfer Info" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="cttb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+				<list id="column_table_properties">
+					<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="dnbx">
+			<string id="title" value="Dual Nationality Interest" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="dntb" mode="fill_rows, stripe_rows,keyboard" layout="-1,-1,-8" auto_size_rows="true" row_spacing="0">
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<string id="text" value="Nation" />
+					</record>
+					<record alignment="left,centre_y">
+						<string id="text" value="Interest" />
+					</record>
+					<record alignment="left,centre_y">
+						<string id="text" value="Reasons" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<container id="anbx">
+			<string id="title" value="All Nation Interest" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="antb" mode="fill_rows, stripe_rows,keyboard" layout="-1,-1,-8" auto_size_rows="true" row_spacing="0">
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<string id="text" value="Nation" />
+					</record>
+					<record alignment="left,centre_y">
+						<string id="text" value="Interest" />
+					</record>
+					<record alignment="left,centre_y">
+						<string id="text" value="Reasons" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<container id="prbx">
+			<layout class="arrange_vertical_attachment" layout="35, 35, 35, -1" offset="0" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<string id="title" value="Methods of Communication" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<container class="main_box">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+				<widget class="label" id="hier"/>
+			</container>
+			<container class="main_box">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+				<widget class="label" id="cliq"/>
+			</container>
+			<container class="main_box">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+				<widget class="label" id="stro"/>
+			</container>
+			<container class="main_box">
+				<widget class="table" id="prtb" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+					<list id="column_table_properties">
+						<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+					</list>
+				</widget>
+			</container>
+		</container>
+
+	</container>
+	</container>
+</panel>

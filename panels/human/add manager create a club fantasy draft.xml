@@ -1,0 +1,212 @@
+<panel>
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="middle" gap="8" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container width="880">
+			<layout class="arrange_vertical_attachment" alignment="middle" gap="8" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container height="80" />
+
+
+			<container class="client_object_viewer_xml_panel" id="fCFI" height="500">
+				<layout class="arrange_vertical_attachment" alignment="top" gap="8" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container height="500">
+					<layout class="arrange_horizontal_attachment" layout="-1,-2" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<!--club details-->
+					<container class="main_box">
+						<layout class="arrange_vertical_attachment" layout="32,55,34, 155,-1" gap="10" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget id="pPbu" class="popup_button" icon="icons/16px/club" />
+
+						<!--Name-->
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+							<container height="18">
+								<layout class="arrange_horizontal_attachment" layout="10,-1" gap="0" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+								<widget class="label" font="title" alignment="left,centre_y" colour="accent">
+									<translation id="hint" translation_id="300786" type="use" value="All items with a * must be filled in[COMMENT:indicator to the user that the coloured asterisk indicates that the user must fill in this field]" />
+									<translation id="text" translation_id="248129" type="use" value="*" />
+								</widget>
+
+								<widget class="label" font="title" auto_size="vertical" colour="accent">
+									<translation id="text" translation_id="292795" type="use" value="Club Name" />
+								</widget>
+
+							</container>
+
+							<widget class="edit_box" id="nEDB" edit_event="nEDB" changed_event="nEDB">
+								<colour id="red_replacement" name="edit_box_background" />
+								<colour id="green_replacement" name="edit_box_shadow" />
+								<colour id="blue_replacement" name="edit_box_border" />
+								<list id="attachments">
+									<record class="max_length_attachment">
+										<integer id="length" value="18" />
+									</record>
+								</list>
+							</widget>
+
+						</container>
+
+
+						<container>
+							<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" gap="0" offset="0" />
+
+							<widget class="radio_toggle_switch_left" id="alL2" auto_size="vertical">
+								<translation id="text" translation_id="395050" type="use" value="Use game-generated logo[COMMENT: create a club, option to use a default unlicenced logo for the team]" />
+								<record id="click_event">
+									<integer id="event_id" value="loRo" />
+									<integer id="index" value="1" />
+								</record>
+							</widget>
+							<widget class="radio_toggle_switch_right" id="alL3" auto_size="vertical">
+								<translation id="text" translation_id="447535" type="use" value="Custom Logo[COMMENT: fantasy draft create a club - choose own logo]" />
+								<record id="click_event">
+									<integer id="event_id" value="loRo" />
+									<integer id="index" value="2" />
+								</record>
+							</widget>
+						</container>
+
+						<!--logo-->
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="4" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+							<container class="inner_subtle_box_no_margin">
+								<layout class="arrange_vertical_attachment" layout="-1,25" gap="6" offset="4" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+
+								<container>
+									<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+									<widget class="picture" id="clOL" scale_picture="true" image_alignment="centre" />
+								</container>
+
+								<!-- container showing left, number, right widgets -->
+								<container id="iccn">
+									<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+									<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" />
+									<widget class="icon_button" id="lfic" show_button_appearance="false" width="30" height="30" click_event="lflg" icon="icons/16px/left" icon_alignment="centre">
+										<record id="primary_icon_properties" red_replacement="text" />
+									</widget>
+									<widget class="label" id="cric" alignment="centre" width="35" colour="faded text" />
+									<widget class="icon_button" id="rgic" show_button_appearance="false" width="30" height="30" click_event="rglg" icon="icons/16px/right" icon_alignment="centre">
+										<record id="primary_icon_properties" red_replacement="text" />
+									</widget>
+								</container>
+							</container>
+
+							<widget class="icon_button" icon="icons/16px/import" alignment="centre" click_event="imLG" auto_size="vertical">
+								<translation id="text" translation_id="395023" type="use" value="Import your own logo[COMMENT: create a club, option to use an already imported custom logo]" />
+								<global id="hidden" name="platform_is_stadia"/>
+							</widget>
+						</container>
+
+						<container height="120">
+							<layout class="arrange_vertical_attachment" layout="55, 55" gap="4" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+							<!--Nickname-->
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+								<widget class="label" font="title" height="18" colour="accent">
+									<translation id="text" translation_id="319435" type="use" value="Nickname[COMMENT: heading; team information panel; club nickname]" />
+								</widget>
+
+								<widget class="edit_box" id="nicB" edit_event="nicB">
+									<list id="attachments">
+										<record class="max_length_attachment">
+											<integer id="length" value="15" />
+										</record>
+									</list>
+								</widget>
+							</container>
+
+							<!--Stadium Name-->
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+								<container height="18">
+									<layout class="arrange_horizontal_attachment" layout="10,-1" gap="0" offset="0" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+									<widget class="label" font="title" alignment="left,centre_y" colour="accent">
+										<translation id="hint" translation_id="300786" type="use" value="All items with a * must be filled in[COMMENT:indicator to the user that the coloured asterisk indicates that the user must fill in this field]" />
+										<translation id="text" translation_id="248129" type="use" value="*" />
+									</widget>
+
+									<widget class="label" font="title" auto_size="vertical" colour="accent">
+										<translation id="text" translation_id="349091" type="use" value="Stadium Name[COMMENT: team stadium name]" />
+									</widget>
+
+								</container>
+
+								<widget class="edit_box" id="SEDB" edit_event="SEDB" changed_event="SEDB">
+									<list id="attachments">
+										<record class="max_length_attachment">
+											<integer id="length" value="18" />
+										</record>
+									</list>
+								</widget>
+
+							</container>
+						</container>
+					</container>
+
+					<!--Kits information-->
+					<container class="main_box">
+						<translation id="title" translation_id="319448" type="use" value="Kits[COMMENT: title for the club kits the club overview panel]" />
+
+						<layout class="arrange_vertical_attachment" alignment="fill" gap="0" offset="0" />
+
+						<!--Kits pictures-->
+						<widget class="club_overview_kits_panel" id="gsts">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+						</widget>
+
+						<widget class="button" auto_size="all" embed_in_frame="true">
+							<layout class="stick_to_sides_attachment" alignment="right,top" inset="4" />
+							<translation id="text" translation_id="447536" type="use" value="Advanced[COMMENT:button text inside Fantasy Club panel; giving the ability to the user to edit advanced kit details of the selected club]" />
+							<record id="click_event">
+								<string id="event_id" value="edKD" />
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<container class="bordered_box_no_margin" id="errM" height="40">
+					<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="0.0" end_value="1.0" duration="0.3" end_mode="hold_auto_reverse_hold" />
+					<layout class="arrange_horizontal_attachment" layout="26,-1" gap="6" offset="6" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+
+					<widget class="picture" file="icons/26px/urgent" width="26" colour="negative" image_alignment="centre" />
+					<widget class="label" alignment="left,centre_y" colour="negative" style="semi_bold" auto_size="vertical">
+						<translation id="text" translation_id="447537" type="use" value="Choose a name for the club. The name cannot match that of a real club.[COMMENT:create a club, message to tell the user they need to choose a club name and city before continuing]" />
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<widget class="label" colour="white" spec="text" size="xxlarge" font="title" auto_size="all">
+		<layout class="stick_to_sides_attachment" alignment="left,top" inset="4" />
+		<translation id="text" translation_id="447538" type="use" value="Create Your Club[COMMENT: FR18768 fantasy draft create a club - title message, cannot be feminised]" />
+	</widget>
+
+</panel>

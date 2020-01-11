@@ -1,0 +1,91 @@
+<panel height="140">
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <container class="inner_subtle_box" id="titl">
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="12"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+    <!--badge-->
+    <widget class="object_portrait_picture" id="logo" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="60">
+      <record id="object_property">
+        <integer id="get_property" value="objt" />
+        <integer id="set_property" value="objt" />
+      </record>
+    </widget>
+
+    <!--team info-->
+    <container width="150">
+      <layout class="arrange_vertical_attachment" alignment="middle" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+      <!--team name-->
+      <widget class="team_button" id="TteV" size="large" height="26" style="semi_bold" alignment="left,centre_y" icon_enabled="false"  navigation_focus_target="true">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+        </record>
+      </widget>
+      
+      <!--division-->
+      <widget class="comp_button" id="TdiV" auto_size="vertical" alignment="left,centre_y" icon_enabled="false">
+        <record id="object_property">
+          <integer id="get_property" value="Tdiv" />
+        </record>
+      </widget>
+      
+      <container height="4"/>
+
+      <!--reputation-->
+		<widget class="label" id="TrsL" auto_size="vertical" font="label">
+			<record id="object_property">
+				<integer id="get_property" value="Trst" />
+				<boolean id="name" value="true" />
+			</record>
+		</widget>
+      <widget class="club_reputation_stars_label" id="TrsV" auto_size="vertical" alignment="left"  navigation_focus_target="false">
+        <record id="object_property">
+          <integer id="get_property" value="Trst" />
+        </record>
+      </widget>
+    </container>
+
+    <!--fee/income-->
+    <container width="120">
+      <layout class="arrange_vertical_attachment" alignment="middle" gap="0" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+      <!--fee-->
+      <widget class="label" auto_size="vertical" font="label">
+        <translation id="text" translation_id="230121" type="use" value="Fee" />
+      </widget>
+      <widget class="cash_cell" id="fee " auto_size="vertical" alignment="left" ccrs="4" font="value" alternate_text="-"/>
+
+      <container height="5"/>
+
+      <!--income-->
+      <widget class="label" auto_size="vertical" font="label">
+        <translation id="text" translation_id="242366" type="use" value="Income" />
+      </widget>
+      <widget class="cash_cell" id="inco" auto_size="vertical" alignment="left" ccrs="4" font="value" alternate_text="-"/>
+    </container>
+
+    <!--venue/rules-->
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="middle" gap="0" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+      <!--venue-->
+      <widget class="label" auto_size="vertical" font="label">
+        <translation id="text" translation_id="247233" type="use" value="Venue" />
+      </widget>
+      <widget class="text" id="venu" auto_size="vertical" alignment="left" font="value" multiline="false"/>
+      
+      <container height="5"/>
+
+      <!--rules-->
+      <widget class="label" auto_size="vertical" font="label">
+        <translation id="text" translation_id="247256" type="use" value="Match Rules" />
+      </widget>
+      <widget class="text" id="rule" auto_size="vertical" alignment="left" font="value"/>
+    </container>
+  </container>
+</panel>

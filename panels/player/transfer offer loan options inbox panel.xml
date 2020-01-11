@@ -1,0 +1,16 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" gap="4" offset="1"/>
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="1"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<widget class="text" auto_size="vertical" font="title">
+		<translation id="text" translation_id="248394" type="use" value="Loan Options"/>
+	</widget>
+
+	<widget class="table" id="losp" layout="-1" mode="fill_rows, fill_custom_rows" auto_size_rows="false" fixed_size_rows="true" auto_size="vertical" row_height="23">
+		<flags id="row_appearance" value="tables/standard/row/divider/row"/>
+	</widget>
+
+</panel>

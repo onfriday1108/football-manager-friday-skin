@@ -1,0 +1,24 @@
+<panel>
+	<!-- Filter panel for different types of competition (Cup, League etc.) -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="filter_check_box_list_container" auto_size="vertical" id="nctr" ahdn="false">
+		<translation id="text" translation_id="348814" type="use" value="Division Types[COMMENT: filter option on the domestic divisions screen]" />
+		<translation id="title" translation_id="316555" type="use" value="All Types[COMMENT: filter option on the competitions screen]" />
+	
+		<list id="objL">
+			
+				<record id="tdiv">
+					<translation id="text" translation_id="316557" type="use" value="Top Divisions[COMMENT: filter option on the competitions screen]" />
+				</record>
+				
+				<record id="odiv">
+					<translation id="text" translation_id="316558" type="use" value="Other Divisions[COMMENT: filter option on the competitions screen]" />
+				</record>
+			
+		</list>
+			
+	</container>
+		
+	
+</panel>

@@ -1,0 +1,11 @@
+﻿<panel>
+  <flags id="selected_appearance" value="boxes/custom/tactics kit/selected/paper"/>
+  <flags id="appearance" value="boxes/custom/tactics kit/paper"/>
+  <boolean id="should_force_refresh" value="true"/>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!--pos/role/duty indicator-->
+	<widget class="position_role_duty_suitability_pie" id="prdF" width="24" height="24">
+	</widget>
+</panel>

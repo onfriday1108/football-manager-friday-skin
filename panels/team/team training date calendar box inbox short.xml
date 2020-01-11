@@ -1,0 +1,66 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="hlfC" >
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0"  />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container id="barR" class="inner_box_no_margin" />
+
+		<container id="barL" class="inner_box_no_margin">
+			<layout class="stick_to_object_attachment" target="barR" get_side="right" set_side="left" offset="-1" />
+		</container>
+	</container>
+
+	<container class="inner_box_no_margin" appearance="boxes/custom/calendar/cell/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- notification bar for today date and training camp days (atm) -->
+		<container height="4">
+			<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<container background_colour="title" id="toda" height="6" hidden="true" />
+		</container>
+
+		<container height="2" />
+
+		<!-- top part the description of box and the calendar date -->
+		<container height="22">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="3" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container width="30">
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<widget class="text" id="dias" alignment="centre" auto_size="vertical"/>
+			</container>
+
+			<widget class="spacer" />
+		</container>
+
+		<!-- centre container mode 1 -->
+		<container id="Cco1">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+			<!-- team logo on match days -->
+			<widget class="object_portrait_picture" id="foto" scale_picture="true" image_alignment="centre" keep_aspect_ratio="true" alignment="centre" style="bold">
+				<string id="text" value="Match Logo" />
+			</widget>
+		</container>
+
+		<!-- centre container mode 2 -->
+		<container id="Cco2" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+			<widget class="object_portrait_picture" id="fot2" scale_picture="true" image_alignment="centre" keep_aspect_ratio="true" alignment="centre" style="bold" />
+		</container>
+	</container>
+
+	<container id="inHI"   hidden="true" />
+</panel>

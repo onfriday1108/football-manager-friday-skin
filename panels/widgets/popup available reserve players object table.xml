@@ -1,0 +1,28 @@
+﻿<panel id="ppar">
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="10" vertical_gap="10" horizontal_inset="10" />
+		<widget class="label" id="titT" font="title" auto_size="vertical" colour="accent">
+			<translation id="text" translation_id="308589" type="use" value="Next Match[COMMENT: Text on match preparation fixture tab]" />
+		</widget>
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="2" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+			<container class="team_upcoming_fixture_widget" id="ydnf" auto_size="vertical"  />
+			<widget class="label" auto_size="vertical" multiline="true" width="450" id="txtL" />
+		</container>
+		<widget class="label" auto_size="vertical" font="title" colour="accent">
+			<translation id="text" translation_id="492054" type="use" value="Available Players[COMMENT: AREA: Development Centre; SUB-AREA: Youth Team Tactics; FR-BN: 28435; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: label for popup widget showing all players available for the next fixture.]" />
+		</widget>
+
+		<widget class="available_reserve_players_object_table" id="arpl">
+			<record id="object_property">
+				<integer id="get_property" value="objL" />
+				<integer id="set_property" value="objL" />
+			</record>
+		</widget>
+	</container>
+
+</panel>

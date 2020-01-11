@@ -1,0 +1,95 @@
+﻿<panel id="fxco" height="60">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="horizontal_adaptive_container" inset="10" offset="6" gap="6">
+
+		<!-- Kick off time-->
+		<widget class="button" id="time" appearance="boxes/custom/result/time/paper" colour="white" alignment="centre" wants_mouse_events="false" auto_size="vertical" default_width="50" minimum_width="50" maximum_width="50" priority="4">
+		</widget>
+
+		<!-- Home position or nation -->
+		<container height="40" default_width="80" minimum_width="80" maximum_width="80" priority="3">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="10" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true"/>
+
+			<widget id="hpos" class="text" colour="league position" font="text" size="10" alignment="left,top" auto_size="vertical"/>
+			<widget id="hnat" class="nation_button" hidden="true" font="text" size="10" auto_size="vertical"/>
+		</container>
+
+		<!-- Home team & scorers -->
+		<container default_width="-1" minimum_width="80" maximum_width="550" priority="1">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="8" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2" apply_to_children="true"/>
+
+			<!-- Home team name -->
+			<widget id="hnam" class="team_button" icon_enabled="false" size="large" colour="text" font="bold" alignment="right,top" auto_size="vertical"/>
+		</container>
+
+		<!-- Home team logo -->
+		<widget id="hlog" class="object_portrait_picture" scale_picture="true" alignment="centre_x,top" image_alignment="centre" height="35" default_width="60" minimum_width="60" maximum_width="60" priority="2"/>
+
+		<!-- Score / Result-->
+		<container id="ScRe" default_width="114" minimum_width="114" maximum_width="114" priority="1">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-2" horizontal_alignment="horizontal" horizontal_inset="12" />
+
+			<!-- JT: This setup is quite fiddly. We are trying to get the aggregate score to overlap either the result from the second leg or the 'attend fixture' button -->
+			<!-- Getting this to look the way it does in the mockup might be tricky. Give me a shout if you need help -->
+
+			<!-- Match result-->
+			<container id="rmat" class="inner_box" appearance="boxes/custom/result/standard/paper" auto_size="vertical">
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<layout class="arrange_horizontal_attachment" layout="17, -1, 17" offset="0" gap="0"/>
+
+				<!-- Home result -->
+				<widget id="hres" class="text" font="text" alignment="right,centre_y" size="large" colour="yellow" auto_size="vertical"/>
+				<!-- Score -->
+				<widget id="scor" class="text" colour="white" font="bold" size="12" alignment="centre" auto_size="vertical"/>
+				<!-- Away result -->
+				<widget id="ares" class="text" font="text" alignment="left,centre_y" size="large" colour="yellow" auto_size="vertical"/>
+			</container>
+
+			<!-- View fixture button-->
+			<widget id="attd" class="button" appearance="boxes/custom/result/standard/paper" red_replacement="standard_button" size="large" alignment="centre" auto_size="vertical"/>
+
+			<!-- Aggregate total result -->
+			<container class="inner_box" id="ragg" appearance="boxes/custom/result/aggregate/paper">
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<layout class="arrange_horizontal_attachment" layout="16, -1, 16" offset="0" gap="0"/>
+
+				<!-- Home aggregate win due to most away goals scores -->
+				<widget id="hagw" class="label" font="bold" alignment="right,centre_y" size="large" colour="yellow" auto_size="vertical"/>
+				<!-- Aggregate score -->
+				<widget id="scra" class="text" colour="white" font="bold" alignment="centre" auto_size="vertical"/>
+				<!-- Away aggregate win due to most away goals scores -->
+				<widget id="aagw" class="label" font="bold" alignment="left,centre_y" size="large" colour="yellow" auto_size="vertical"/>
+			</container>
+		</container>
+
+		<!-- Away team logo -->
+		<widget id="alog" class="object_portrait_picture" scale_picture="true" alignment="centre_x,top" image_alignment="centre" height="35" default_width="60" minimum_width="60" maximum_width="60" priority="2"/>
+
+		<!-- Away team & scorers -->
+		<container default_width="-1" minimum_width="80" maximum_width="550" priority="1">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" do_not_size="true"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2" apply_to_children="true"/>
+
+			<container height="8"/>
+
+			<!-- Away team name -->
+			<widget id="anam" class="team_button" icon_enabled="false" size="large" font="bold" colour="text" auto_size="all"/>
+		</container>
+
+		<!-- Away position or nation -->
+		<container height="40" default_width="80" minimum_width="80" maximum_width="80" priority="3">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="10" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true"/>
+
+			<widget id="apos" class="text" colour="league position" font="text" size="10" alignment="left,top" auto_size="vertical"/>
+			<widget id="anat" class="nation_button" hidden="true" font="text" size="10" auto_size="vertical" />
+		</container>
+
+	</container>
+
+</panel>

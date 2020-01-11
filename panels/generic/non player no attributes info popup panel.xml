@@ -1,0 +1,65 @@
+<panel>
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+	<container height="60" width="200">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<widget class="table" id="layt" layout="130, -1" fixed_size_rows="true" row_spacing="0" row_height="20" mode="fill_rows">
+			<flags id="auto_size" value="vertical" />
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y"/>
+				<record index="1" alignment="right,centre_y"/>
+			</list>
+
+			<!-- Job -->
+			<widget class="job_label" id="jobl" row="0" col="0">
+				<record id="object_property">
+					<integer id="get_property" value="PcJj"/>
+				</record>
+			</widget>
+
+			<!-- Age in years -->
+			<widget class="dob_label" id="ages" row="0" col="1" display_format="2">
+				<record id="object_property">
+					<integer id="get_property" value="Pdob"/>
+				</record>
+			</widget>
+
+			<!-- Club -->
+			<widget class="club_button" id="team" row="1" col="0">
+				<record id="object_property">
+					<integer id="get_property" value="Pclb"/>
+				</record>
+			</widget>
+
+			<!-- Reputation -->
+			<widget class="global_reputation_stars_label" id="rept" row="1" col="1">
+				<record id="object_property">
+					<integer id="get_property" value="NrSr"/>
+				</record>
+			</widget>
+
+			<!-- Nation -->
+			<widget class="person_nationality_button" id="natp" row="2" col="0">
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</widget>
+
+			<!-- Wage -->
+			<widget class="wage_label" id="wage" row="2" col="1">
+				<record id="object_property">
+					<integer id="get_property" value="Pcww"/>
+				</record>
+			</widget>
+
+		</widget>
+	</container>
+
+</panel>

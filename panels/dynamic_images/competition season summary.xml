@@ -1,0 +1,37 @@
+<!-- A dynamic image with single centrally aligned logo about a season and year string -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- Background image -->
+	<widget class="picture" id="bgim" file="photos/dynamic/comp summary/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+
+	<container id="verC">
+		<layout class="arrange_vertical_attachment" layout="-3,-12,-4, -4, -3" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="spacer" />
+
+		<!-- Logo/Portrait -->
+		<widget class="object_portrait_picture" id="logo" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+			<!-- PROP_COMP -->
+			<record id="object_property" get_property="comp" set_property="objt" />
+		</widget>
+
+		<widget class="spacer" />
+
+		<!-- Season string -->
+		<widget class="game_formatted_label" id="text" alignment="centre,auto_fit" font="awards title" colour="white">
+			<record id="format">
+				<integer id="var1" value="vf_football_season" />
+				<translation id="text" translation_id="416345" type="use" value="Season [%season_year#1][COMMENT: dynamic news image; end of season summary string]" />
+			</record>
+			<!-- PROP_YEAR -->
+			<record id="object_property" get_property="year" set_property="value" />
+		</widget>
+
+		<widget class="spacer" />
+
+	</container>
+
+
+</panel>

@@ -1,0 +1,82 @@
+<panel width="500">
+
+  <layout class="arrange_vertical_attachment" alignment="vertical" offset="0" gap="0" />
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <container class="main_box" appearance="boxes/popup/standard/player suitability/paper">
+
+    <layout class="arrange_vertical_attachment" alignment="vertical" offset="0" gap="10" />
+    <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="10" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+      <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+      <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+
+      <container id="spac">
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+        <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="4" gap="0" />
+
+        <widget class="text" id="plna" alignment="right" auto_size="vertical" size="10" font="fonts/panel_title" />
+      </container>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+        <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="4" gap="0" />
+
+        <widget class="text" id="plpo" auto_size="vertical" size="10" font="fonts/letterpressed" />
+      </container>
+    </container>
+
+    <!--role and duty popups-->
+    <container id="rads">
+      <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="10" />
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+      <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="10" />
+
+      <container>
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="5" />
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+        <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="5" />
+
+        <widget class="text" multiline="false" height="24" auto_size="horizontal" alignment="left,centre_y" size="8" style="semi_bold">
+          <translation id="hint" translation_id="300790" type="use" value="Select a role for the player[COMMENT: team instructions: role hint]" />
+          <translation id="text" translation_id="298050" type="use" value="Role" />
+        </widget>
+        <widget class="role_table_popup_button" id="prol" />
+
+      </container>
+
+      <container>
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="5" />
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+        <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="5" />
+
+        <widget class="text" multiline="false" height="24" auto_size="horizontal" alignment="left,centre_y" size="8" style="semi_bold">
+          <translation id="hint" translation_id="300791" type="use" value="Select a duty for the player[COMMENT: team instructions: duty hint]" />
+          <translation id="text" translation_id="298052" type="use" value="Duty" />
+        </widget>
+        <widget class="duty_table_popup_button" id="pdut" />
+
+      </container>
+
+    </container>
+
+    <!--container for the two panels we switch between-->
+    <container class="tabbed_container" id="PlPi" auto_size="vertical">
+
+      <widget class="player_attributes_panel" id="patp" allow_no_player="true" file="player/player attributes tactics panel" height="320" highlight_attributes="true">
+        <translation id="title" translation_id="333986" type="use" value="Player Suitability[COMMENT: name for a button to show the list of suitable players for a position and role]" />
+      </widget>
+
+      <widget class="team_report_squad_depth_player_list_panel" id="trpl" file="team/team report squad depth player list panel small">
+        <translation id="title" translation_id="316743" type="use" value="Squad Depth[COMMENT: team report; squad depth heading]" />
+      </widget>
+    </container>
+  </container>
+
+</panel>

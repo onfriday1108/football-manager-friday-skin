@@ -1,0 +1,18 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+  
+  <container>
+    <layout class="arrange_horizontal_attachment" layout="5, 70, 50, 30, -1, 60" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+    
+    <container id="colR" />
+    <widget class="text" id="dayD" alignment="centre"/>
+    <widget class="text" id="tWdg" alignment="centre"/>
+    <widget class="text" id="vnUe" alignment="left,centre_y"/>
+    <widget class="text" id="deaT" alignment="left,centre_y"/>
+    <widget class="fixture_full_result_text" id="scrL" alignment="centre" format="[%scoreline#1-home_away]" reverse_teams="false" hidden="true" />
+  </container>
+
+  <widget width="150" class="text" id="divT" hidden="true" alignment="left,centre_y"/>
+</panel>

@@ -1,0 +1,10 @@
+﻿<panel  wants_mouse_events="false" disable_animations="true">
+  <translation id="title" translation_id="247728" type="use" value="Team Instructions" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="tactics_tactical_style_popup_button" id="TcSt" widget_type="tactics_tactical_style_popup_panel" popup_alignment="left, bottom" font="title" size="large" appearance="" alignment="centre" colour="white" secondary_icon_colour="white" secondary_icon_alignment="centre_right, centre_y" multiline="false">
+		<translation id="text" translation_id="346803" type="use" value="Presets...[COMMENT: item selection dialog popup button text]" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+	</widget>
+</panel>

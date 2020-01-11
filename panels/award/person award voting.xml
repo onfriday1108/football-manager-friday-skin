@@ -1,0 +1,62 @@
+<!-- person award voting -->
+<panel>
+	
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<!-- Save who has been voted for -->
+	<boolean id="save_session_state" value="true" />
+
+	<!-- subsection box: note that the title should be "Votes", but I had to nick a translated string from elsewhere - needs fixing -->
+	<container class="main_box" alignment="left">
+
+		<translation id="title" translation_id="258205" type="use" value="Vote[COMMENT:award_voting_screen; selection popup button]" />
+
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,-1" horizontal_offset="0" vertical_offset="0"/>
+
+		<widget class="table" id="pavt" mode="fill_rows, stripe_rows, drop_on_rows" layout="-1, -1, -6" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+
+			<list id="headings">
+				<record alignment="left,centre_y" column_span="1">
+					<translation id="hint" translation_id="257309" type="use" value="The position the selected player is to be voted for in.[COMMENT:person_award_voting_panel]" />
+					<translation id="text" translation_id="257308" type="use" value="Pos.[COMMENT:person_award_voting_panel; abbrev - position]" />
+				</record>
+				<record alignment="left,centre_y" column_span="1">
+					<translation id="hint" translation_id="276321" type="use" value="The points the selected player gets for this vote.[COMMENT:person_award_voting_panel]" />
+					<translation id="text" translation_id="257310" type="use" value="Pts.[COMMENT:person_award_voting_panel; abbrev - points]" />
+				</record>
+				<record alignment="left,centre_y" column_span="1">
+					<translation id="text" translation_id="229350" type="use" value="Person" />
+				</record>
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" />
+				<record index="1" alignment="left,centre_y" />
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" sort_disabled="true" />
+				<record indx="1" sort_disabled="true" />
+				<record indx="2" sort_disabled="true" />
+			</list>
+
+		</widget>
+
+		<!-- group box containing buttons at bottom right corner -->
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" horizontal_offset="0" vertical_alignment="top" vertical_inset="0" />
+
+			<widget class="primary_icon_tick_button" id="vote" click_event="vote">
+				<translation id="text" translation_id="229918" type="use" value="Confirm" />
+			</widget>
+			<widget class="button" id="rset" auto_size="all" click_event="rset">
+				<translation id="text" translation_id="230013" type="use" value="Reset" />
+			</widget>
+			<widget class="button" id="canc" auto_size="all" click_event="canc">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

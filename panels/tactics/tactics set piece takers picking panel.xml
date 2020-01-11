@@ -1,0 +1,20 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="vertical_split_container" starting_layout="-5, -3" save_default_state="true" min_width_left="525" min_width_right="425">
+
+		<widget class="team_squad_panel" id="tesq" file="tactics/team squad set piece views" />
+
+
+
+			<container id="titl">
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<!--set piece takers list-->
+				<widget class="set_piece_takers_panel" id="take" />
+
+			</container>
+	</container>
+
+</panel>

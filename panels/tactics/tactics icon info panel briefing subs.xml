@@ -1,0 +1,24 @@
+﻿<panel height="28">
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0"/>
+	<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<container class="main_contrast_box_no_margin" id="nmcn">
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="4" gap="4"/>
+		<layout class="fit_children_attachment" alignment="horizontal,fill" offset="4" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!--number-->
+		<widget class="text" id="bsnm" auto_size="horizontal" style="semi_bold" alignment="left,centre_y" />
+
+		<!--name-->
+		<widget class="text" id="name" format="[%person#1-initial_surname]" size="small" alignment="left,centre_y,can_scale" multiline="false" height="14"  auto_size="horizontal"/>
+
+		<!--reaction-->
+		<widget class="picture" id="ReWi" auto_size="horizontal" image_alignment="centre"/>
+
+		<!--morale-->
+		<widget class="morale_label" id="Mora" smpc="true" ShTx="false" auto_size="horizontal"/>
+	</container>
+
+</panel>

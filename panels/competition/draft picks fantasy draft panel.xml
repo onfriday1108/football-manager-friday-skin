@@ -1,0 +1,37 @@
+﻿<panel>
+	<boolean id="save_session_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- group box of fixed height-->
+	<container id="pick">
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container id="draf">
+
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,0,0,25" />
+			<widget class="object_portrait_picture" id="face" width="50" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false"/>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<widget class="object_portrait_picture" id="logo" width="25" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false"/>
+				<widget class="text" id="draD" alignment="left,centre_y" />
+			</container>
+		</container>
+
+		<widget class="label" id="nost" alignment="centre" size="12">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			<translation id="text" translation_id="331851" type="use" value="Draft not started[COMMENT: MLS draft panel; text for info panel showing the draft hasn't begun]" />
+			<layout class="centre_in_parent_attachment" alignment="vertical" />
+		</widget>
+
+		<widget class="widget_popup_button" width="20" id="fdPp" popup_alignment="left,bottom" widget_type="container" appearance="">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="8" />
+			<record id="widget_properties" file="competition/draft picks fantasy draft expanded panel" width="600" height="440" />
+			<record id="modal_popup_properties" file="modal popup panel auto sized" />
+		</widget>
+	</container>
+</panel>

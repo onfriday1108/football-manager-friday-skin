@@ -1,0 +1,13 @@
+﻿<record>
+	<list id="column_table_properties">
+		<record id="icon" width="20">
+			<record id="widget_info" class="picture" alignment="centre"  image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="20" />
+		</record>
+
+		<record id="text" width="-1">
+			<record id="widget_info" class="text" alignment="left,centre_y"  multiline="true" auto_size="vertical"/>
+		</record>
+
+	</list>
+
+</record>

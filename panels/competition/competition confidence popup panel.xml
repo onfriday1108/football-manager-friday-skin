@@ -1,0 +1,42 @@
+<panel width="900">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="standard_popup_box" id="main">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="200,100,-1" horizontal_offset="12" horizontal_gap="20" vertical_inset="10"/>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize"  horizontal_alignment="horizontal" horizontal_inset="0" />
+			
+			<widget class="text" font="label" colour="accent" auto_size="vertical">
+				<translation id="text" translation_id="341675" type="use" value="Minimum Expectation[COMMENT: Boardroom confidence panel; table column header for board's competition expectations]" />
+			</widget>
+
+			<widget class="text" id="mine" font="value"  auto_size="vertical">
+				<record id="object_property" get_property="ext1" set_property="text" />
+			</widget>
+			
+			<widget class="spacer" height="20"/>
+				
+			<widget class="text" font="label" colour="accent"  auto_size="vertical">
+				<translation id="text" translation_id="395178" type="use" value="Currently[COMMENT: FR 11767, board confidence section label, shows whether a manager is on course to achieve the minimum competition expectation or not by listing the stage/position they're in for that competition]" />
+			</widget>
+
+			<widget class="text"  id="curr" font="value"  auto_size="vertical">
+				<record id="object_property" get_property="ext2" set_property="text" />
+			</widget>
+		
+		</container>
+	
+
+		<widget class="object_portrait_picture" id="comp" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="100">
+			<record id="object_property" get_property="comp" set_property="objt" />
+		</widget>
+
+		<widget class="text" id="desc" auto_size="vertical" alignment="left,centre_y" multiline="true" size="10">
+			<record id="object_property" get_property="desc" set_property="text" />
+		</widget>
+
+
+	</container>
+
+</panel>

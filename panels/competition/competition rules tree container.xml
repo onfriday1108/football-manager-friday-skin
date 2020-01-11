@@ -1,0 +1,13 @@
+﻿<panel>
+	<layout class="fit_children_attachment" alignment="all" offset="10"/>
+	
+	<container entity_layout_id="at00" id="csGC" name="competition_stages_graph_container">
+		<layout class="stick_to_sides_attachment" alignment="top, left" inset="0"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		
+		<container class="vertical_arrange_container" auto_size="vertical" entity_layout_id="at01" id="csgc">
+			<layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="0"/>
+			<layout class="centre_in_parent_attachment" alignment="horizontal" inset="0"/>
+		</container>
+  </container>
+</panel>

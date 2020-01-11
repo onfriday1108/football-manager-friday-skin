@@ -1,0 +1,87 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<container class="inner_box">
+	    <attachment_group class="vertical_arrange_autosize">
+	    	<global id="vertical_gap" name="ui.main_contrast_box_gap" />
+	    </attachment_group>
+
+		<widget class="link_button" appearance="buttons/link/title/button" section="tcon" alignment="left,centre_y" auto_size="all">
+			<translation id="text" translation_id="491845" type="use" value="Monthly Manager Performance Summary[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: If Applicable, otherwise None; REF-ID: n/a; NOTE: inbox title]" />
+			<record id="object_property" get_property="objt" />
+		</widget>
+
+		<widget class="performance_grade_box" id="smgb" auto_size="vertical">
+
+		</widget>
+
+		<container class="inner_subtle_box">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_gap="20" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" />
+
+				<widget class="text" font="title" colour="performance highlight positive" auto_size="vertical">
+					<translation id="text" translation_id="491846" type="use" value="Notable Highlights[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: If Applicable, otherwise None; REF-ID: n/a; NOTE: title for best aspects of recent managerial performance]" />
+				</widget>
+
+				<widget class="table" id="hitb" layout="20,-1" mode="fill_rows" auto_size="vertical">
+					<list id="column_widget_properties">
+						<record indx="0" alignment="centre" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" />
+						<record indx="1" alignment="left,centre_y" />
+					</list>
+				</widget>
+
+				<widget class="text" id="mhtx" auto_size="vertical" />
+
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" />
+
+				<widget class="text" font="title" colour="performance highlight negative" auto_size="vertical">
+					<translation id="text" translation_id="491847" type="use" value="Notable Criticisms[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: If Applicable, otherwise None; REF-ID: n/a; NOTE: title for worst aspects of recent managerial performance]" />
+				</widget>
+
+
+				<widget class="table" id="crtb" layout="20,-1" mode="fill_rows" auto_size="vertical">
+					<list id="column_widget_properties">
+						<record indx="0" alignment="centre" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" />
+						<record indx="1" alignment="left,centre_y" />
+					</list>
+				</widget>
+
+
+				<widget class="text" id="mctx" auto_size="vertical" />
+
+			</container>
+
+		</container>
+
+	</container>
+
+	<container class="inner_box">
+		<translation id="title" translation_id="383267" type="use" value="Breakdown[COMMENT: Finances panel]" />
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="6" />
+
+		<widget class="table" id="ctab" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" layout="180,-1,90" column_spacing="8" row_spacing="6" auto_size="vertical">
+			<!--headings-->
+
+			<list id="column_table_properties">
+				<record index="0" id="itmc" alignment="left,centre_y" />
+				<record index="1" id="grdc" alignment="centre" />
+				<record index="2" id="typc" alignment="right,centre_y" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" appearance="buttons/link/title/button" colour="text" red_replacement="text" />
+				<record index="1" alignment="left,centre_y" />
+				<record index="2" alignment="right,centre_y" appearance="" font="title" />
+
+			</list>
+
+		</widget>
+	</container>
+
+</panel>

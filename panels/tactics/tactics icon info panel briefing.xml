@@ -1,0 +1,66 @@
+﻿<panel>
+  <flags id="selected_appearance" value="boxes/custom/tactics kit/selected/paper"/>
+  <flags id="appearance" value="boxes/custom/tactics kit/paper"/>
+  <boolean id="should_force_refresh" value="true"/>
+
+  <attachment_group class="vertical_arrange"/>
+
+	<container class="main_contrast_box_no_margin" id="nmcN" red_replacement="cyan 900" >
+    
+    <attachment_group class="vertical_arrange_autosize"/>
+
+		<container height="22" >
+
+			<!--role/duty-->
+			<widget class="role_duty_popup_button_mini" id="rodu" size="7" secondary_icon="icons/custom/misc/small down" alignment="centre_y, centre_x">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			</widget>
+
+			<container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+        <!--pos/role/duty indicator-->
+        <widget class="position_role_duty_suitability_pie" id="prdF" width="19" height="19">
+          <layout class="stick_to_sides_attachment" alignment="left" inset="2"/>
+          <layout class="stick_to_sides_attachment" alignment="top" inset="1"/>
+        </widget>
+      </container>
+
+    </container>
+
+    <container>
+    
+      <attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+			<!--name-->
+      <widget class="player_picker_button" id="plPB" height="22" file="widgets/player selection button tacitcs">
+        <string id="draggable" value="false"/>
+      </widget>
+			
+			<!--info - reaction, morale-->
+			<container height="20">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="4" gap="8"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<!--reaction-->
+				<widget class="picture" id="ReWi" auto_size="horizontal" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre"/>
+
+				<!--morale-->
+				<widget class="morale_label" id="Mora" smpc="true" colour="faded white" ShTx="false" auto_size="horizontal"/>
+			</container>
+
+      <container height="4"/>
+
+		</container>
+  </container>
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+    <!--injury/red/yellow card -->
+     
+    <container class="inner_box_no_margin" id="inji" width="16" height="16" icon_alignment="right,top">
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+    </container>
+  </container>
+</panel>

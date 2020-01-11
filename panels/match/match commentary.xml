@@ -1,0 +1,39 @@
+<panel>
+
+  <flags id="styl" value="no_border, darkened" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  
+  <container id="cmpc" tran="1">
+
+    <widget class="picture" file="boxes/custom/match/commentary/bar" id="cmbi" rthr="85" colour="neutral commentary background">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+    </widget>
+
+    <!-- battery indicator, only shows up for laptops -->
+    <widget class="battery_power_indicator" width="20" height="20">
+      <layout class="stick_to_sides_attachment" alignment="left,top" inset="8" />
+    </widget>
+
+    <!-- commentary widget -->
+    <widget class="label" id="cmnt" hidden="true">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0,10,4,10" />
+
+      <translation id="text" value="" />
+      <integer id="size" value="12" />
+      <flags id="algn" value="centre" />
+      <colour id="colour" name="text" />
+    </widget>
+
+    <widget class="possession_bar" id="ls5m" rthr="85">
+      <translation id="text" translation_id="232839" type="use" value="Last 5 Mins" />
+      <integer id="maxv" value="100" />
+      <integer id="gap " value="40" />
+      <integer id="inse" value="100" />
+      <colour id="colour" name="white" />
+
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0,10,4,10" />
+    </widget>
+
+  </container>
+</panel>

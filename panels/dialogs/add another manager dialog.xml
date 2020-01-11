@@ -1,0 +1,53 @@
+<panel id="dlog" width="600" height="180">
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" />
+
+	<layout class="centre_in_parent_attachment" alignment="all" />
+
+	<widget class="text" id="text" auto_size="vertical" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+		<widget class="check_box" id="atcc" hidden="true">
+			<translation id="text" translation_id="301057" type="use" value="Don't show this message again.[COMMENT: The title of a checkbox displayed in a dialog, which allows the user to request that the dialog isn't displayed again.]" />
+		</widget>
+
+		<container id="btns">
+
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-4,-5" horizontal_offset="0" vertical_offset="0" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left" horizontal_offset="0" vertical_offset="0" />
+
+				<widget class="icon_button" id="no" hidn="true" event_id="no" auto_size="all">
+					<translation id="text" translation_id="231460" type="use" value="No" />
+				</widget>
+
+				<widget class="primary_icon_tick_button" id="ok" hidn="true" auto_size="all">
+					<translation id="text" translation_id="229829" type="use" value="Ok" />
+				</widget>
+
+
+			</container>
+
+			<container>
+
+				<attachment_group class="button_arrangement_right" />
+
+				<widget class="primary_icon_tick_button" id="yes" hidn="true" event_id="yes" auto_size="all">
+					<translation id="text" translation_id="242044" type="use" value="Yes" />
+				</widget>
+
+				<widget class="icon_button" id="canc" hidn="true" event_id="canc" auto_size="all">
+					<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				</widget>
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

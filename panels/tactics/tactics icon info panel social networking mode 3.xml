@@ -1,0 +1,44 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="-10"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2" apply_to_children="true"/>
+
+	<container>
+		<widget class="tactics_kit_picture" id="kitp" number_inset_left="2" number_inset_right="2" number_inset_top="2" number_inset_bottom="2">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+
+		<!--containers for the indicators-->
+		<!--injury/red/yellow card-->
+		<container id="inji" width="14" height="14">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="15"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="2"/>
+		</container>
+		<!--captain icon-->
+		<widget class="picture" id="capi" scale_picture="true" file="icons/16px/captain" width="14" height="14">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="9"/>
+		</widget>
+
+	</container>
+
+	<!--name-->
+	<container id="nmcN">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<container id="nmcn">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<widget class="text" id="name" spec="pitch" size="normal" alignment="centre,can_scale" auto_size="vertical" multiline="false" style="semi_bold"/>
+			<container id="rodu" height="10">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<widget class="tactical_role_label" id="role" abbt="false" size="xxsmall" alignment="centre,can_scale" height="10" colour="faded white"/>
+			</container>
+		</container>
+
+	</container>
+
+</panel>

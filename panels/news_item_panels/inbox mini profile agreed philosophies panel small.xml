@@ -1,0 +1,19 @@
+<panel>
+	<flags id="appearance" value="boxes/inner/standard/paper"/>
+
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="label" auto_size="vertical" spec="text" size="small" font="label" alignment="left">
+		<translation id="text" translation_id="421088" type="use" value="Philosophies[COMMENT: FR 15413 Player/Staff Comparison Revamp: shortened pro/con description]"/>
+	</widget>
+
+	<widget class="table" id="phtb" layout="-1" mode="fill_rows" auto_size="vertical" fixed_size_rows="false" >
+		<list id="column_table_properties">
+			<record index="0" font="value"/>
+		</list>
+		<list id="column_widget_properties">
+			<record index="0" alignment="left,centre_y" font="value" auto_size="vertical" />
+		</list>
+	</widget>
+
+</panel>

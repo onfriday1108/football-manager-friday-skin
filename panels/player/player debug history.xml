@@ -1,0 +1,42 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<container class="inner_box">
+		<translation id="title" translation_id="247565" type="use" value="Attribute History" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<!-- this container holds the graph and list of attributes -->
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" />
+
+		<!-- attributes graph -->
+		<widget class="main_box" id="ttbx">
+			<translation id="text" translation_id="247567" type="use" value="Graph" />
+			<widget class="graph" id="grph">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+		</widget>
+		<widget class="graph" id="grph">
+			<record id="default_series_properties" type="line" colour="graph line 1" line_width="2" />
+			<record id="x_axis" max_value="11">
+				<translation id="text" translation_id="258238" type="use" value="Month[COMMENT: Awards Panel; past winners data header]" />
+			</record>
+			<record id="y_axis" interval="1" min_value="1" max_value="20">
+				<translation id="text" translation_id="242637" type="use" value="Level[COMMENT - y title for attributes history panel on person screen]" />
+			</record>
+			<list id="grid_line_styles">
+				<record colour="graph row" />
+				<record colour="transparent" />
+			</list>
+		</widget>
+		<!-- attributes table -->
+		<widget class="main_box" id="atbx" width="200">
+			<widget class="table" id="attb" layout="-1, 40" mode="fill_rows, stripe_rows" auto_size_rows="true" row_spacing="0">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+
+			</widget>
+		</widget>
+
+	</container>
+</panel>

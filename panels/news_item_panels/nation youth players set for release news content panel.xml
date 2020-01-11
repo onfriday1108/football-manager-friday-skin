@@ -1,0 +1,29 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+
+			<boolean id="check_for_multiple_requests" value="true"/>
+
+			<widget class="inbox_body_text" id="bdtx" />
+
+			<widget class="client_object_list_table" id="lstb" fixed_size_rows="true" auto_size="vertical" database_table_type="1" row_height="28">
+				<flags id="mode" value="fill_rows, select_rows, stripe_rows, show_bullets, select_multiple"/>
+				<integer id="contextual_handler_column_id" value="Pnms"/>
+				<record id="viewed_property_ids">
+					<record id="Pnms"/>
+					<record id="PSag"/>
+					<record id="Pnat"/>
+					<record id="Ppos"/>
+					<record id="Pclb"/>
+				</record>
+			</widget>
+
+		</container>
+	</container>
+</panel>
+

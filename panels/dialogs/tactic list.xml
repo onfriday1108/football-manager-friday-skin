@@ -1,0 +1,81 @@
+<panel>
+
+	<translation id="title" translation_id="292582" type="use" value="Manage Tactics[COMMENT - manage tactics dialog title, for importing, exporting, deleting and renaming team tactics]" />
+	<!-- stick all items to width of box -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+
+	<!-- add custom icon to top right corner of dialog -->
+	<widget class="picture" id="cico" file="icons/dialog/tactics" auto_size="all" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true" />
+	</widget>
+
+	<!-- table containing tactics (name) -->
+	<widget class="table" id="tatb" mode="fill_rows, stripe_rows, select_rows,  select_multiple, show_bullets" layout="-1, 40">
+		<flags id="scroll_bar_class" value="scroll_bar_vertical_blue" />
+
+		<record id="select_event">
+			<flags id="event_id" value="slrw" />
+		</record>
+	</widget>
+
+	<!-- row of buttons -->
+	<widget class="container" id="btns">
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+		<record id="default_properties" auto_size="all" />
+		
+		<!-- import button -->
+		<widget class="icon_button" id="impo" icon="icons/16px/import">
+			<translation id="text" translation_id="393319" type="use" value="Load...[COMMENT: complement to string #233104 - menu item for loading a file]" />
+			<record id="click_event">
+				<flags id="event_id" value="timp" />
+			</record>
+		</widget>
+
+		<!-- export button -->
+		<widget class="icon_button" id="expo" icon="icons/16px/export">
+			<translation id="text" translation_id="247112" type="use" value="Save As..." />
+			<record id="click_event">
+				<flags id="event_id" value="texp" />
+			</record>
+		</widget>
+
+		<!-- delete button -->
+		<widget class="icon_button" id="dele" icon="icons/16px/delete">
+			<translation id="text" translation_id="306557" type="use" value="Remove[COMMENT: remove button on banned ip table of preferences screen]" />
+			<record id="click_event">
+				<flags id="event_id" value="dele" />
+			</record>
+		</widget>
+
+		<!-- copy button -->
+		<widget class="icon_button" id="tcop" icon="icons/16px/copy">
+			<translation id="text" translation_id="255086" type="use" value="Copy[COMMENT: tactic list dialog: button used to make a copy of the selected item]" />
+			<record id="click_event">
+				<flags id="event_id" value="tcop" />
+			</record>
+		</widget>
+
+		<!-- rename button -->
+		<widget class="icon_button" id="rena" icon="icons/16px/rename">
+			<translation id="text" translation_id="255087" type="use" value="Rename[COMMENT: tactic list dialog: button used to rename the selected item]" />
+			<record id="click_event">
+				<flags id="event_id" value="rena" />
+			</record>
+		</widget>
+
+	</widget>
+	<!-- button row -->
+
+	<widget class="container">
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+		<container class="inner_box_no_margin" file="tactics/tactic list buttons" />
+	</widget>
+
+</panel>
+<!-- tactic list panel -->

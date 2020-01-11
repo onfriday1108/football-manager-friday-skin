@@ -1,0 +1,198 @@
+﻿<panel id="dlog" width="540" height="750">
+	<translation id="title" translation_id="450726" type="use" value="Create Custom Pool[COMMENT: how to system; help string]" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="4" gap="6" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+
+	<!-- File to use for filter items -->
+	<string id="item_file" value="game/fantasy draft database size item panel" />
+	<boolean id="use_comp_id_for_box" value="true"/>
+
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container class="main_box" id="nati">
+				<translation id="text" translation_id="227841" type="use" value="Nationality"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" vertical_inset="0" horizontal_offset="8"/>
+
+					<!-- the profile menu -->
+					<widget class="embedded_popup_button" id="anat" sele="adit" auto_size="horizontal" height="30" width="30" fixed="true" embed_in_frame="true" file="icons/16px/plus" icon_alignment="centre" secondary_icon_enabled="false"/>
+				</container>
+
+				<container id="ncbx">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+					<!-- items dynamically added in code -->
+				</container>
+			</container>
+
+			<container class="main_box" id="loca">
+				<translation id="text" translation_id="376424" type="use" value="Based In[COMMENT: player personal information; nation player is based in]" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" vertical_inset="0" horizontal_offset="8"/>
+
+					<!-- the profile menu -->
+					<widget class="embedded_popup_button" id="adlc" sele="adit" auto_size="horizontal" height="30" width="30" fixed="true" embed_in_frame="true" file="icons/16px/plus" icon_alignment="centre" secondary_icon_enabled="false"/>
+				</container>
+
+				<container id="lcbx">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+					<!-- items dynamically added in code -->
+				</container>
+			</container>
+
+			<container class="main_box" id="cont">
+				<translation id="title" translation_id="291532" type="use" value="Continents[COMMENT: search filter dialog region list submenu]" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" vertical_inset="3" horizontal_offset="6"/>
+
+					<!-- the profile menu -->
+					<widget class="embedded_popup_button" id="adcn" sele="adit" auto_size="horizontal" height="30" fixed="true" embed_in_frame="true" file="icons/16px/plus" secondary_icon_enabled="false"/>
+				</container>
+
+				<container id="cnbx">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+					<!-- items dynamically added in code -->
+				</container>
+			</container>
+
+			<container class="main_box" id="rgns">
+				<translation id="title" translation_id="231444" type="use" value="Regions[COMMENT: search filter dialog region list submenu]" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" vertical_inset="3" horizontal_offset="6"/>
+
+					<!-- the profile menu -->
+					<widget class="embedded_popup_button" id="adrg" sele="adit" auto_size="horizontal" height="30" fixed="true" embed_in_frame="true" file="icons/16px/plus" icon_alignment="centre" secondary_icon_enabled="false"/>
+				</container>
+
+				<container id="rgbx">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+					<!-- items dynamically added in code -->
+				</container>
+			</container>
+
+			<container class="main_box" id="ntns">
+				<translation id="title" translation_id="231443" type="use" value="Nations[COMMENT: search filter dialog 'other' nationality list submenu]" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" vertical_inset="3" horizontal_offset="6"/>
+
+					<!-- the profile menu -->
+					<widget class="widget_popup_button" id="adnt" widget_type="database_size_nation_selector_panel" auto_size="horizontal" height="30" fixed="true" embed_in_frame="true" icon_alignment="centre" appearance="buttons/subtle/normal/button" file="icons/16px/plus"/>
+				</container>
+
+				<container id="ntbx">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+					<!-- items dynamically added in code -->
+				</container>
+			</container>
+
+			<container class="main_box" id="dvns">
+				<translation id="title" translation_id="247185" type="use" value="Divisions" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" vertical_inset="0" horizontal_offset="8"/>
+
+					<!-- the profile menu -->
+					<widget class="embedded_popup_button" id="addv" sele="adit" auto_size="horizontal" height="30" width="30" fixed="true" embed_in_frame="true" icon="icons/16px/plus" icon_alignment="centre" secondary_icon_enabled="false"/>
+				</container>
+
+				<container id="dvbx">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="5" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+					<!-- items dynamically added in code -->
+				</container>
+			</container>
+
+			<container class="main_box" id="filt">
+				<translation id="title" translation_id="227806" type="use" value="Value" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" vertical_inset="0" horizontal_offset="8"/>
+
+					<!-- the add rule menu -->
+					<widget class="icon_button" id="advb" auto_size="horizontal" width="30" height="30" embed_in_frame="true" file="icons/16px/plus" icon_alignment="centre" secondary_icon_enabled="false" />
+				</container>
+
+				<container class="filter_table" id="fcrt" auto_size="vertical" allow_filter_type_change="false" show_move_buttons="false" />
+			</container>
+		</container>
+	</container>
+
+	<!-- 2nd bottom container showing person count -->
+	<container class="inner_subtle_box_no_margin">
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="right" offset="6" />
+
+		<widget class="text" auto_size="all" size="large">
+			<translation id="text" translation_id="292332" type="use" value="Approximate Player Count[COMMENT: nation league selection panel; label showing approximate number of players]" />
+		</widget>
+		<widget class="text" auto_size="all" size="large">
+			<string id="text" value=" : " />
+		</widget>
+
+		<widget class="text" id="pncn" auto_size="all" style="bold" size="large" />
+	</container>
+
+	<!-- bottom row of buttons -->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+
+		<widget class="icon_button" id="clea" auto_size="all">
+			<translation id="text" translation_id="230013" type="use" value="Reset" />
+			<record id="click_event">
+				<flags id="event_id" value="clea" />
+			</record>
+		</widget>
+
+		<widget class="icon_button" id="ldsu" auto_size="all">
+			<translation id="text" translation_id="364601" type="use" value="Load[COMMENT: button text on file dialog; would you believe that after twenty years we don't actually have Load translated as a standlone word?]" />
+			<record id="click_event">
+				<flags id="event_id" value="ldfd" />
+			</record>
+		</widget>
+
+		<widget class="icon_button" id="svsu" auto_size="all">
+			<translation id="text" translation_id="247111" type="use" value="Save" />
+			<record id="click_event">
+				<flags id="event_id" value="svfd" />
+			</record>
+		</widget>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+			<widget class="primary_icon_tick_button" id="ok  ">
+				<translation id="text" translation_id="229829" type="use" value="Ok" />
+			</widget>
+
+			<widget class="button" id="canc" auto_size="all">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

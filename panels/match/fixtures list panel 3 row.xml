@@ -1,0 +1,20 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+  <integer id="fixtures_ahead" value="3"/>
+  <integer id="fixtures_previous" value="0"/>
+
+  <widget class="client_object_list_table" id="pltb" database_table_type="53" layout="30, 30, -1, -1" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows, hide_headings">
+    
+    <!-- default sort -->
+    <list id="default_sort_column">
+      <integer value="fxdS"/>
+    </list>
+
+    <record id="viewed_property_ids">
+      <record id="fxdS"/>
+      <record id="FxVn" width="25"/>
+      <record id="fopt"/>
+      <record id="FxNm"/>
+    </record>
+  </widget>
+</panel>

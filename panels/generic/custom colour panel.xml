@@ -1,0 +1,28 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+  <!--colour picker widgets-->
+  <container>
+    <layout class="arrange_horizontal_attachment" alignment="fill" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <widget class="popup_colour_button" id="popu" dont_show_hsl_edit_boxes="true" colour_selected_event="cbch" appearance="buttons/custom/colour picker/button"/>
+    <widget class="edit_box" id="red " edit_event="ccmR">
+      <attachment class="is_number_attachment" max_value="255"/>
+    </widget>
+    <widget class="edit_box" id="gree" edit_event="ccmG">
+      <attachment class="is_number_attachment" max_value="255"/>
+    </widget>
+    <widget class="edit_box" id="blue" edit_event="ccmB">
+      <attachment class="is_number_attachment" max_value="255"/>
+    </widget>
+    <widget class="edit_box" id="alph" edit_event="ccmA">
+      <attachment class="is_number_attachment" max_value="255"/>
+    </widget>
+  </container>
+  
+  <!--text using the colour-->
+  <widget class="label" id="colt" width="180"/>
+  
+</panel>

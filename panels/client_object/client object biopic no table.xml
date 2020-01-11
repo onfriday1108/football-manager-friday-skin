@@ -1,0 +1,15 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<!--title-->
+	<widget class="text" id="titl" size="large"  auto_size="vertical" multiline="false"/>
+
+	<!--profile picture-->
+	<widget class="object_portrait_picture" id="picT">
+
+		<boolean id="scale_picture" value="true"/>
+		<boolean id="keep_aspect_ratio" value="true"/>
+		<flags id="image_alignment" value="centre"/>
+	</widget>
+</panel>

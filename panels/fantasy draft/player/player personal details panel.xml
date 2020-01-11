@@ -1,0 +1,111 @@
+﻿<!-- A panel showing various bits of information about a player -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+			<layout class="arrange_horizontal_attachment" layout="400,-2, -3" offset="0" gap="8"/>
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" layout="130, 90, -1" offset="0" gap="2" />
+
+				<!-- Back of kit -->
+				<widget id="cKit" class="kit_icon" image_alignment="top" keep_aspect_ratio="true" scale_picture="true" kit_path="zoomed/large" kit_number_path="large" >
+					<record id="object_property" get_property="Pers" set_property="objt"/>
+				</widget>
+
+				<!-- Profile picture -->
+				<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x">
+					<record id="object_property">
+						<list id="get_properties">
+							<!--Facegen data request-->
+							<record get_property="fcgn" />
+							<!--Fake name request-->
+							<record get_property="Pfke" />
+							<record get_property="prpc" set_property="valu" />
+						</list>
+					</record>
+				</widget>
+
+				<!-- Personal Details -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<record id="icon_properties"  red_replacement="primary"/>
+
+					<!-- Get player status flags-->
+					<record id="object_property" get_property="Pnfo" dont_set_object="true" dont_set_hint="true"/>
+
+					<!--club-->
+					<widget class="club_button" style="bold" id="pare" alignment="left,centre_y" display_format="1" auto_size="vertical" icon_enabled="true">
+						<record id="object_property" dont_set_hint="true" get_property="Pclb" />
+					</widget>
+
+					<!-- Age & DoB-->
+					<container hidden="true">
+						<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="3" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+						<!-- Age -->
+						<!-- We use an editable panel here just to make it disappear when editing-->
+						<!-- fixed height as an attempt to fix 152615 -->-->
+						<widget class="editable_client_object_property_panel" id="age " height="20" auto_size="horizontal" >
+							<record id="widget_info" class="formatted_label" alignment="left,centre_y" height="20" auto_size="horizontal">
+								<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+							</record>
+							<record id="widget_properties" width="0" height="0"/>
+							<record id="object_property" get_property="Page" />
+						</widget>
+
+						<!-- DoB -->
+						<widget class="editable_client_object_property_panel" id="dobl" auto_size="vertical" >
+							<record id="widget_info" class="game_formatted_label" alignment="left,centre_y" auto_size="vertical" auto_size_minimum_height="20" format="([%date#1-short])" colour="faded text"/>
+							<record id="widget_properties" height="24"/>
+							<record id="object_property" get_property="Pdob" />
+						</widget>
+					</container>
+
+					<widget class="position_label" display_format="0" auto_size="vertical" colour="faded text" alignment="left,centre_y" >
+						<record id="object_property" dont_set_hint="true" get_property="Ppos"/>
+					</widget>
+
+					<!-- Nationality -->
+					<widget class="editable_client_object_property_panel" id="intc " auto_size="vertical" >
+						<record id="widget_info" class="nation_button" icon_enabled="true" auto_size="vertical" colour="faded text" format="[%nation#1-nationality]"/>
+						<record id="widget_properties" auto_size="vertical"/>
+						<record id="object_property" dont_set_hint="true" get_property="PNat" />
+					</widget>
+
+				</container>
+			</container>
+
+			<!-- coach report info-->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!-- Set icon to only show: Sct-->
+				<record id="widget_properties" type="2" />
+
+				<container class="player_scout_reports_panel" id="psco" file="fantasy draft/player/player scout reports small">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</container>
+			</container>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="12" apply_to_children="true" />
+
+				<widget class="player_physical_stats_panel" id="phsp" file="player/player physical stats panel inbox">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

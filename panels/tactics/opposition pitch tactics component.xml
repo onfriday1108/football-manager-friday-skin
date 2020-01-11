@@ -1,0 +1,288 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container
+	 class="main_contrast_box"
+	 entity_layout_id="it15" id="bakC"
+	 red_replacement="dark_box_background"
+	 wants_mouse_events="true" inset="6"/>
+
+	<container  navigation_container="true">
+		<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="8"/>
+
+		<container class="client_object_viewer_xml_panel" id="opTM" file="none">
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="11"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="false" />
+
+			<!-- Opposition team name -->
+			<container class="main_contrast_box" id="othd" height="30" red_replacement="primary">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="tbcl" />
+							<integer id="set_property" value="rrep" />
+						</record>
+					</list>
+				</record>
+				<widget class="team_button" id="otcn" alignment="left, centre_y" icon_alignment="left">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="tbcl" />
+								<boolean id="dont_set_property" value="true" />
+								<!--we don't use this, we just get it so that the title colour can be calculated correctly for contrast-->
+							</record>
+							<record>
+								<integer id="get_property" value="ttcl" />
+								<integer id="set_property" value="colr" />
+							</record>
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</list>
+					</record>
+				</widget>
+			</container>
+
+			<!-- Reputation -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="text" font="label" auto_size="vertical">
+					<translation id="text" translation_id="227963" type="use" value="Reputation" />
+				</widget>
+
+				<widget class="client_object_property_panel" property="Trst" size="small" alignment="left, centre_y" height="20" navigation_focus_target="false">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- Form -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="label" font="label" auto_size="all" alignment="left, bottom">
+					<translation id="text" translation_id="227813" type="use" value="Form" />
+				</widget>
+
+				<widget class="team_recent_form_widget" alignment="left, bottom">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="Tfrm"/>
+								<integer id="set_property" value="valu"/>
+							</record>
+							<record>
+								<integer id="get_property" value="objt"/>
+								<integer id="set_property" value="objt"/>
+							</record>
+						</list>
+					</record>
+				</widget>
+			</container>
+
+			<!-- Past positions -->
+			<container class="league_positions_panel" id="lpos" file="team/team competitions overview past positions panel" rqat="false" should_force_request_properties="true" height="60">
+				<record id="object_property">
+					<list id="get_properties">
+						<!-- PROP_TEAM_CURRENT_DIVISION -->
+						<record get_property="Tdiv" set_property="objt"/>
+						<record get_property="objt" set_property="team"/>
+					</list>
+				</record>
+			</container>
+
+			<widget class="horizontal_divider"/>
+
+			<!-- Opposition team strength/weakness-->
+			<container id="otin">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="11"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="11"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="team_main_pro_con_panel" id="oPTR" file="none">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="text" font="label" alignment="left, bottom" auto_size="vertical">
+						<translation id="text" translation_id="434997" type="use" value="Biggest Strength[COMMENT: Team Report strength header, bug 153070]" />
+					</widget>
+
+					<widget class="text" id="npro" hidden="true" alignment="left, bottom" auto_size="vertical">
+						<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+					</widget>
+
+					<!--Pros-->
+					<container class="scout_report_pro_con_widget" id="mpro" file="none" height="35">
+						<layout class="arrange_horizontal_attachment" layout="25,-1" offset="0" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+
+						<widget class="picture" id="icon" scale_picture="true" image_alignment="centre"/>
+						<widget class="label" id="titl" alignment="left, centre_y" style="bold"/>
+					</container>
+
+					<container height="11"/>
+
+					<widget class="text" font="label" alignment="left, bottom" auto_size="vertical" multiline="false">
+						<translation id="text" translation_id="423840" type="use" value="Potential Weakness[COMMENT: team report weakness header]" />
+					</widget>
+
+					<widget class="text" id="ncon" hidden="true" alignment="left, bottom" auto_size="vertical">
+						<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+					</widget>
+
+					<!--Cons-->
+					<container class="scout_report_pro_con_widget" id="mcon" file="none" height="35">
+						<layout class="arrange_horizontal_attachment" layout="25,-1" offset="0" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5,0,0,0" />
+
+						<widget class="picture" id="icon" scale_picture="true" image_alignment="centre"/>
+						<widget class="label" id="titl" alignment="left, centre_y" style="bold"/>
+					</container>
+				</widget>
+
+				<widget class="horizontal_divider"/>
+
+				<!-- Team Stats -->
+				<container id="tmst">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+						<widget class="picture" file="icons/16px/goal" auto_size="all" />
+
+						<widget class="text" auto_size="vertical" alignment="left, bottom" icon_alignment="left, bottom" font="label">
+							<record id="object_property">
+								<boolean id="name" value="true"/>
+								<!--PROP_TEAM_STAT_OVERALL_TOP_GOALSCORER-->
+								<integer id="get_property" value="Tstg" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</widget>
+					</container>
+
+					<widget class="player_stat_text" auto_size="vertical" alignment="left, bottom" icon_alignment="left, bottom" style="bold">
+						<record id="object_property">
+							<!--PROP_TEAM_STAT_OVERALL_TOP_GOALSCORER-->
+							<integer id="get_property" value="Tstg" />
+							<integer id="set_property" value="valu" />
+						</record>
+					</widget>
+
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+						<widget class="picture" file="icons/16px/assist" auto_size="all" />
+						<widget class="text" auto_size="vertical" alignment="left, bottom" icon_alignment="left, bottom" font="label">
+							<record id="object_property">
+								<boolean id="name" value="true"/>
+								<!--PROP_TEAM_STAT_OVERALL_MOST_ASSISTS-->
+								<integer id="get_property" value="Tsma" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</widget>
+					</container>
+
+					<widget class="player_stat_text" auto_size="vertical" alignment="left, bottom" icon_alignment="left, bottom" style="bold">
+						<record id="object_property">
+							<!--PROP_TEAM_STAT_OVERALL_MOST_ASSISTS-->
+							<integer id="get_property" value="Tsma" />
+							<integer id="set_property" value="valu" />
+						</record>
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+						<widget class="picture" file="icons/16px/whistle" auto_size="all" />
+						<widget class="text" alignment="left, bottom" icon_alignment="left, bottom" font="label" auto_size="vertical" multiline="false">
+							<record id="object_property">
+								<boolean id="name" value="true"/>
+								<!-- PROP_TEAM_STAT_OVERALL_TOP_PASS_COMPLETION_RATIO -->
+								<integer id="get_property" value="Tsrc" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</widget>
+					</container>
+
+					<widget class="player_stat_text" auto_size="vertical" alignment="left, bottom" icon_alignment="left, bottom" style="bold">
+						<record id="object_property">
+							<!-- PROP_TEAM_STAT_OVERALL_TOP_PASS_COMPLETION_RATIO -->
+							<integer id="get_property" value="Tsrc" />
+							<integer id="set_property" value="valu" />
+						</record>
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+						<widget class="picture" file="icons/16px/assist" auto_size="all" />
+						<widget class="text" auto_size="vertical" alignment="left, bottom" icon_alignment="left, bottom" font="label">
+							<record id="object_property">
+								<boolean id="name" value="true"/>
+								<!--PROP_TEAM_STAT_OVERALL_MOST_DRIBBLES_PER_MATCH-->
+								<integer id="get_property" value="TmDm" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</widget>
+					</container>
+
+					<widget class="player_stat_text" auto_size="vertical" alignment="left, bottom" icon_alignment="left, bottom" style="bold">
+						<record id="object_property">
+							<!--PROP_TEAM_STAT_OVERALL_MOST_DRIBBLES_PER_MATCH-->
+							<integer id="get_property" value="TmDm" />
+							<integer id="set_property" value="valu" />
+						</record>
+					</widget>
+				</container>
+			</container>
+
+			<!-- UI for in-match-->
+			<widget class="match_analysis_panel" file="match/match analysis opposition tactics component" id="obin" />s
+		</container>
+
+		<widget class="link_button" id="otrl" section="TRsm" auto_size="all">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="8" apply_to_children="false" />
+			<translation id="text" translation_id="321152" type="use" value="Team Report[COMMENT: Manager Main/Top Menu; link to team report screen]" />
+		</widget>
+	</container>
+</panel>

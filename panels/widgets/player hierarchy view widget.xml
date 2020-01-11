@@ -1,0 +1,16 @@
+﻿<panel>
+  <list id="properties_to_forward">
+    <record get_property="colr" set_property="colr" target="hirL"/>
+    <record get_property="size" set_property="size" target="hirL"/>
+  </list>
+  <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4"/>
+  <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="vertical" inset="0"/>
+  <!--Hierarchy level colour-->
+  <container class="main_box" id="pClr" appearance="tables/custom/dynamics/hierarachy indicator/row" width="4" />
+
+  <container>
+    <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="0"/>
+
+    <widget class="link_text" id="hirL" multiline="false" alignment="left,centre_y" />
+  </container>
+</panel>

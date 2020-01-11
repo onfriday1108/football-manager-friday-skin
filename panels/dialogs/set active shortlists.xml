@@ -1,0 +1,22 @@
+<panel id="esdg">
+
+	<translation id="title" translation_id="247721" type="use" value="Set Active Shortlists" />
+	<!-- stick all items to width of box -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	<layout class="arrange_vertical_attachment" alignment="middle,extend" />
+
+	<!-- text box at top with a comment -->
+	<widget class="text" auto_size="all" spec="text">
+		<translation_list id="text">
+			<translation translation_id="247722" type="use">Choose the shortlists you want to make active.</translation>
+		<translation translation_id="247723" type="use">You will be informed of news on any player inside an active shortlist.</translation>
+		</translation_list>
+	</widget>
+	
+	<!-- table containing shortlists -->
+	<widget class="table" id="tabl" mode="fill_rows, stripe_rows" layout="-1" />
+	
+	<!-- row of buttons -->
+	<container id="btns" file="human/set active buttons" />
+
+</panel>

@@ -1,0 +1,48 @@
+<panel height="120" width="380">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+	<animation class="fade_on_hide_animation"/>
+
+	<container  class="inner_box_no_margin" background_colour="instant hint colour">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5"/>
+		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" duration="0.6" start_value="1, 0" end_value="0, 0"/>
+	</container>
+
+	<container class="property_list_viewer_xml_panel" id="hntV">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="5" gap="5" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<container width="70" >
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+			<widget class="object_portrait_picture" id="foto" scale_picture="true" image_alignment="centre" keep_aspect_ratio="true" alignment="centre" style="bold">
+				<record id="object_property" get_property="tmRF" set_property="objt"/>
+			</widget>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="4" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<record id="default_properties" colour="hint" height="20" auto_size="none" />
+
+			<widget class="label" id="txtP" alignment="right,can_scale" size="12">
+				<record id="object_property" get_property="text" set_property="text"/>
+			</widget>
+			<widget class="label" id="txtN" alignment="right,centre_y" size="9">
+				<record id="object_property" get_property="mtNU" set_property="text"/>
+			</widget>
+			<widget class="date_cell" id="dtWD" alignment="right,centre_y" size="9">
+				<record id="object_property" get_property="mtDT" set_property="valu"/>
+			</widget>
+			<widget class="label" id="txtL" alignment="right,centre_y" size="9">
+				<record id="object_property" get_property="mtLM" set_property="text"/>
+			</widget>
+			<widget class="label" id="txtG" alignment="right,centre_y" size="9">
+				<record id="object_property" get_property="mtGl" set_property="text"/>
+			</widget>
+			<widget class="label" id="txLP" alignment="right,centre_y" size="9" >
+				<record id="object_property" get_property="mtLP" set_property="text"/>
+			</widget>
+		</container>
+	</container>
+
+</panel>

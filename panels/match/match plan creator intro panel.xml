@@ -1,0 +1,14 @@
+<panel>
+	<!-- wizard panel title, header and footer strings -->
+	<translation id="wizard_panel_title" translation_id="308609" type="use" value="Introduction[COMMENT: set piece creator wizard: introduction, title]" />
+  <translation_list id="wizard_panel_header">
+    <translation translation_id="345573" type="use">Welcome to the Match Plan Creator.[COMMENT: match plan creator wizard: instructional text]</translation>
+    <translation />
+    <translation translation_id="345016" type="use">The Match Plan Creator allows the user to set out a plan for their backroom staff to implement team tactics according to how a match unfolds.[COMMENT: match plan creator wizard: instructional text]</translation>
+    <translation />
+    <translation translation_id="345469" type="use">Using a match plan can give a team a significant boost during matches at which the manager cannot be present.[COMMENT: match plan creator wizard: instructional text]</translation>
+    <translation />
+    <translation translation_id="345194" type="use">The more hands-on manager will have several match plans at their disposal for use in fixtures they do not wish to attend and leave to their backroom staff.[COMMENT: match plan creator wizard: instructional text]</translation>
+  </translation_list>
+  <translation id="wizard_panel_step_text" translation_id="344927" type="use" value="Step 1: Introduction[COMMENT: match plan creator wizard: Short description of introduction match plan step in the wizard]" />
+</panel>

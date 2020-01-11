@@ -1,0 +1,55 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box" id="cftb">
+		<translation id="title" translation_id="494174" type="use" value="Trade Reactions[COMMENT: AREA: Confidence and Performance; SUB-AREA: Reactions; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: confidence summary header text, can be from fans or board, collective group of people]" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="table" id="ctab" mode="fill_rows,stripe_rows,printable" fixed_size_rows="true" auto_size_rows="false" row_height="30" default_sort_column="0" layout="100,-1,110">
+			<!--headings-->
+
+			<list id="column_table_properties">
+				<record index="0" id="bar ">
+					<flags id="top" value="5" />
+					<flags id="bottom" value="5" />
+					<flags id="left" value="5" />
+					<flags id="right" value="5" />
+					<record id="column_heading">
+						<translation id="text" translation_id="230116" type="use" value="Confidence" />
+						<!--don't add comment to this string-->
+						<flags id="alignment" value="left,centre_y" />
+						<flags id="column" value="0" />
+					</record>
+				</record>
+				<record id="text">
+					<record id="column_heading">
+						<translation id="text" translation_id="229408" type="use" value="Team" />
+						<flags id="alignment" value="left,centre_y" />
+						<flags id="column" value="1" />
+					</record>
+				</record>
+				<record>
+					<flags id="alignment" value="right,centre_y" />
+					<boolean id="sort_disabled" value="true" />
+					<record id="column_heading">
+						<translation id="text" value="" />
+						<flags id="alignment" value="right,centre_y" />
+						<flags id="column" value="2" />
+					</record>
+				</record>
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0">
+					<boolean id="sort_ascending" value="true" />
+					<flags id="alignment" value="centre" />
+				</record>
+				<record indx="1" alignment="left,centre_y" />
+				<record indx="2" alignment="left,centre_y" />
+
+			</list>
+
+		</widget>
+
+	</container>
+</panel>

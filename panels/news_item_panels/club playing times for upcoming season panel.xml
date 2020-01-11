@@ -1,0 +1,26 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<widget class="table" id="tabl" mode="fill_rows,stripe_rows" layout="200,-1,100" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" row_spacing="4">
+		<list id="column_table_properties">
+			<record index="0" id="name" alignment="centre">
+				<record id="column_heading">
+					<translation id="text" translation_id="227966" type="use" value="Player"/>
+				</record>
+			</record>
+			<record index="1" id="plat" alignment="centre">
+				<record id="column_heading" column_span="2">
+					<translation id="text" translation_id="423877" type="use" value="Playing Time[COMMENT: FR 14013, contract promise type]"/>
+				</record>
+			</record>
+			<record index="2" id="chab" alignment="centre">
+				
+			</record>
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="2"/>
+		</list>
+	</widget>
+	
+</panel>

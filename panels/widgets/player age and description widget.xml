@@ -1,0 +1,7 @@
+﻿<panel>
+  <attachment_group class="horizontal_arrange_autosize_vertical_centre"/>
+  
+  <widget class="text" id="mtxt" auto_size="all">
+    <translation id="text" translation_id="347559" type="use" value="[%number#1] year-old [%player_description#1][COMMENT: inbox person information panel; person description]" />
+  </widget>
+</panel>

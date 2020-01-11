@@ -1,0 +1,212 @@
+﻿<panel>
+	<boolean id="should_force_refresh" value="true" />
+
+	<!--colour used to set background colour of player details in reco -->
+	<flags id="pbkc" value="green1" />
+	<flags id="1crd" value="boxes/custom/scouting/card/1/paper" />
+	<flags id="2crd" value="boxes/custom/scouting/card/2/paper" />
+	<flags id="3crd" value="boxes/custom/scouting/card/3/paper" />
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container id="nsec" hidden="true">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="text" auto_size="vertical" alignment="centre" style="semi_bold" size="large">
+			<translation id="text" translation_id="443663" type="use" value="No recommendations[COMMENT: FR 21760, no recommendations are made by the scouting team]" />
+		</widget>
+		<widget class="manager_text" colour="faded text" auto_size="vertical" alignment="centre">
+			<translation id="text" translation_id="450793" type="use" value="[%person#1-Your] scouting team is working hard to bring [%person#1-you] more recommendations of this type soon.[COMMENT: FR 21760, 'status pending' sort of string indicating that the scouting team are at work]" />
+		</widget>
+	</container>
+
+	<container id="nosc" hidden="true">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="text" auto_size="vertical" alignment="centre" style="semi_bold" size="large">
+			<translation id="text" translation_id="443663" type="use" value="No recommendations[COMMENT: FR 21760, no recommendations are made by the scouting team]" />
+		</widget>
+		<widget class="text" colour="faded text" auto_size="vertical" alignment="centre">
+			<translation id="text" translation_id="447500" type="use" value="There are currently no recruitment staff employed by the club. Therefore, reports cannot be provided.[COMMENT: club scouting assignments; explanatory text for situations where a club has no scouts]" />
+		</widget>
+	</container>
+
+	<container id="scrc">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container height="50">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="4" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="object_portrait_picture" id="senp" width="40">
+				<boolean id="scale_picture" value="true" />
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre" />
+			</widget>
+
+			<container>
+        <attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="5" vertical_inset="0"/>
+
+				<container>
+          <attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle" vertical_offset="0" vertical_gap="0"/>
+
+					<container height="22">
+						<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="0" vertical_inset="0"/>
+
+						<widget class="client_object_property_panel" id="senn" auto_size="horizontal">
+							<record id="widget_properties" auto_size="horizontal" alignment="left,centre_y" colour="faded text" enforce_style="true" size="small"/>
+						</widget>
+
+            <container>
+              <attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="2" vertical_inset="0"/>
+
+              <widget class="text" auto_size="horizontal" colour="faded text"  alignment="left,centre_y" size="small">
+                <string id="text" value="-"/>
+              </widget>
+
+              <widget class="client_object_property_panel" id="senj" property="PcJj" size="small"  auto_size="horizontal">
+                <record id="widget_properties"  colour="faded text" alignment="left,centre_y"  auto_size="horizontal"/>
+              </widget>
+
+              <widget class="client_object_property_panel" id="senh" property="THic" height="20" size="small"  auto_size="horizontal">
+                <record id="widget_properties" colour="faded text"  alignment="left,centre_y" show_category_colour="false" size="small"  auto_size="horizontal"/>
+              </widget>
+
+            
+            </container>
+					</container>
+
+					<container height="22">
+						<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="4" vertical_inset="0"/>
+
+						<widget class="text" id="titl" alignment="left,top" auto_size="horizontal" style="semi_bold" colour="text">
+						</widget>
+
+						<widget class="text" id="date" auto_size="horizontal" colour="faded text"  alignment="left,top" size="small">
+
+						</widget>
+					</container>
+
+
+
+				</container>
+
+				<container id="ASAc">
+          <attachment_group class="horizontal_arrange" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="5" vertical_inset="0"/>
+
+					<container id="asnc">
+						<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="4" />
+						<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+
+						<widget class="text" alignment="left,bottom" font="label" auto_size="all">
+							<translation id="text" translation_id="377813" type="use" value="Assignment[COMMENT: scouting assignment title]" />
+						</widget>
+
+						<widget class="text" id="assw" alignment="left,top" font="value" auto_size="all">
+
+						</widget>
+
+					</container>
+
+					<widget class="spacer" width="10"/>
+
+					<widget class="client_object_property_labelled_panel" id="sjca" property="NpJA" auto_size="horizontal">
+						<record id="value_widget_properties" auto_size="all" />
+						<record id="label_widget_properties" auto_size="all" />
+					</widget>
+
+					<widget class="client_object_property_labelled_panel" id="sjpa" property="NpJP" auto_size="horizontal">
+						<record id="value_widget_properties" auto_size="all" />
+						<record id="label_widget_properties" auto_size="all" />
+					</widget>
+
+					<!--<widget class="client_object_property_labelled_panel" id="arel" property="AREL" auto_size="horizontal">
+						<record id="value_widget_properties" auto_size="all" auto_size_maximum_width="220" multiline="false"/>
+						<record id="label_widget_properties" auto_size="all"  abbt="true" />
+					</widget>-->
+
+					<container id="altc">
+						<layout class="arrange_vertical_attachment" alignment="top" gap="1" offset="0" />
+						<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+
+						<widget class="text" alignment="left,bottom" font="label" auto_size="all">
+							<translation id="text" translation_id="447632" type="use" value="Led to offer[COMMENT: FR 21109 Scouting centre, past tense string showing what happened to a scouting report that was previously filed]" />
+						</widget>
+
+						<widget class="text" id="alto" alignment="left,top" font="value" auto_size="all">
+
+						</widget>
+
+					</container>
+
+					<container id="adic">
+						<layout class="arrange_vertical_attachment" alignment="top" gap="1" offset="0" />
+						<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+
+						<widget class="text" alignment="left,bottom" font="label" auto_size="all">
+							<translation id="text" translation_id="447633" type="use" value="Discarded[COMMENT: FR 21109 Scouting centre, past tense string showing what happened to a scouting report that was previously filed]" />
+						</widget>
+
+						<widget class="text" id="adis" alignment="left,top" font="value" auto_size="all">
+
+						</widget>
+
+					</container>
+
+				</container>
+
+
+			</container>
+
+		</container>
+
+		<container class="main_box" id="crdc" navigation_container="true">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<container >
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget id="recc" class="property_list_viewer_xml_panel" file="widgets/scouting centre recommendation card">
+
+				</widget>
+
+				<widget id="assc" class="property_list_viewer_xml_panel" file="widgets/scouting centre assignment card">
+
+				</widget>
+
+				<widget id="cmpc" class="property_list_viewer_xml_panel" file="widgets/scouting centre comp suggestion card">
+
+				</widget>
+
+				<widget id="mesc" class="property_list_viewer_xml_panel" file="widgets/scouting centre message card">
+
+				</widget>
+
+			</container>
+
+			<container height="6"/>
+
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="primary_icon_button" id="rrnb" click_event="Clea" auto_size="horizontal" alignment="left,centre_y" icon="icons/16px/cross" icon_alignment="right" size="small" red_replacement="grey 300" blue_replacement="blue grey 300" icon_colour="grey 600" colour="grey 600">
+					<translation id="hint" translation_id="451325" type="use" value="Clear All[COMMENT: button text to clear all previously given touchline shouts]" />
+				</widget>
+
+			</container>
+
+
+		</container>
+
+	</container>
+
+</panel>

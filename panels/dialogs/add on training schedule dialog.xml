@@ -1,0 +1,9 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="training_schedule_week_widget" entity_layout_id="at04" clickable="false"  id="scTM" name="schedule week table" session_description_column="true" shortened="true">
+    <string id="selectable" value="false"/>
+    <string id="draggable" value="false"/>
+    <string id="schedule_header_file" value=""/>
+  </container>
+</panel>

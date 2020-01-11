@@ -1,0 +1,10 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0, 90, 0, 90"/>
+
+	<container class="club_vision_viewer_panel" id="cvvw" type="1" show_objective_importance="true" show_objective_type="true" show_objective_status="false"/>
+	<container class="club_vision_negotiation_panel" id="cvng" type="1" show_objective_importance="true" show_objective_type="true" show_objective_status="false" read_only="true" should_disable_comp_expectations="true"/>
+
+	<widget class="button" id="accd" appearance="buttons/custom/conversation/statement/button" alignment="left, centre_y" multiline="true" blue_replacement="tone calm"/>
+	<widget class="button" id="mkch" appearance="buttons/custom/conversation/statement/button" alignment="left, centre_y" multiline="true" blue_replacement="tone calm"/>
+</panel>

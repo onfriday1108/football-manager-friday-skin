@@ -1,0 +1,134 @@
+﻿<panel height="250">
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at0="/>
+		<record entity_layout_id="at0&gt;"/>
+		<record entity_layout_id="at0;"/>
+		<record entity_layout_id="at02"/>
+		<record entity_layout_id="at03"/>
+		<record entity_layout_id="at08"/>
+		<record entity_layout_id="at07"/>
+		<record entity_layout_id="at09"/>
+		<record entity_layout_id="at0:"/>
+		<record entity_layout_id="at04"/>
+		<record entity_layout_id="at05"/>
+		<record entity_layout_id="at06"/>
+		<record entity_layout_id="at0&lt;"/>
+		<record entity_layout_id="at01"/>
+		<record entity_layout_id="at22"/>
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<widget class="picture" entity_layout_id="at0&lt;" id="at0&lt;" scale_picture="true" width="100" height="100" name="empty_picture">
+		<string id="value" value="pictures/person/none/male/player/portrait"/>
+		<layout class="stick_to_object_attachment" id="align_top" offset="11" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+	</widget>
+	<container entity_layout_id="at00" id="pliC" width="490" name="player_info_container">
+		<layout class="stick_to_object_attachment" id="align_top" offset="11" get_side="top" set_side="top" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="-9" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" offset="1" get_side="right" set_side="left" move_side="true" target="at0&lt;"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<widget class="text" entity_layout_id="at0=" alignment="centre_y,left" id="plNm" width="470" height="30" name="player_name">
+			<string id="font" value="value"/>
+			<string id="size" value="xxlarge"/>
+			<string id="colour" value="faded text"/>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+		</widget>
+		<widget class="text" entity_layout_id="at0&gt;" alignment="left,top" id="plAP" width="470" height="30" name="player_age_position">
+			<string id="colour" value="faded text"/>
+			<string id="size" value="large"/>
+			<layout class="stick_to_object_attachment" id="align_top" offset="29" get_side="top" set_side="top" move_side="true" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+		</widget>
+		<widget class="horizontal_divider" entity_layout_id="at0;" id="hdvi" width="470" height="10">
+			<layout class="stick_to_object_attachment" id="align_top" offset="57" get_side="top" set_side="top" move_side="true" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+		</widget>
+		<widget class="nation_button" entity_layout_id="at02" id="ntnB" width="100" height="30" name="nation_button">
+			<layout class="stick_to_object_attachment" id="align_top" offset="5" get_side="bottom" set_side="top" move_side="true" target="at0;"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+		</widget>
+		<widget class="club_button" entity_layout_id="at03" id="ntmB" width="370" height="30" name="new_club_button">
+			<layout class="stick_to_object_attachment" id="align_top" offset="5" get_side="bottom" set_side="top" move_side="true" target="at0;"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="right" set_side="left" move_side="true" target="at02"/>
+		</widget>
+		<widget class="text" entity_layout_id="at08" alignment="left,bottom" id="paLb" auto_size="all" width="100" height="20" name="potential_ability_label">
+			<string id="text" value="Potential Ability"/>
+			<string id="font" value="title"/>
+			<string id="colour" value="faded text"/>
+			<string id="size" value="small"/>
+			<layout class="stick_to_object_attachment" id="align_top" offset="18" get_side="bottom" set_side="top" move_side="true" target="at03"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="120" get_side="left" set_side="left" move_side="true" target="main"/>
+		</widget>
+		<widget class="text" entity_layout_id="at07" alignment="left,bottom" id="caLb" width="100" height="20" name="current_ability_label">
+			<string id="text" value="Current Ability"/>
+			<string id="font" value="title"/>
+			<string id="colour" value="faded text"/>
+			<string id="size" value="small"/>
+			<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="bottom" set_side="top" move_side="true" target="at02"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+		</widget>
+		<widget class="scout_stars_label" entity_layout_id="at09" alignment="left" id="casL" width="100" height="30" name="current_ability_stars_label">
+			<layout class="stick_to_object_attachment" id="align_top" offset="8" get_side="bottom" set_side="top" move_side="true" target="at07"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+		</widget>
+		<widget class="scout_stars_label" entity_layout_id="at0:" alignment="left" id="pasL" auto_size="horizontal" width="100" height="30" name="potential_ability_stars_label">
+			<string id="font" value="title"/>
+			<string id="colour" value="faded text"/>
+			<string id="size" value="small"/>
+			<layout class="stick_to_object_attachment" id="align_top" offset="9" get_side="bottom" set_side="top" move_side="true" target="at08"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="20" get_side="right" set_side="left" move_side="true" target="at09"/>
+		</widget>
+	</container>
+	<widget class="text" entity_layout_id="at05" alignment="left" id="oncl" width="270" height="20" name="original_new_club_label">
+		<string id="font" value="title"/>
+		<string id="colour" value="faded text"/>
+		<string id="size" value="small"/>
+		<layout class="stick_to_object_attachment" id="align_top" offset="11" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" offset="18" get_side="right" set_side="left" move_side="true" target="at00"/>
+	</widget>
+	<widget class="club_button" entity_layout_id="at04" id="ontb" width="270" height="30" name="original_new_team_button">
+		<string id="font" value="value"/>
+		<string id="size" value="xxlarge"/>
+		<layout class="stick_to_object_attachment" id="align_top" offset="-5" get_side="bottom" set_side="top" move_side="true" target="at05"/>
+		<layout class="stick_to_object_attachment" id="align_left" offset="18" get_side="right" set_side="left" move_side="true" target="at00"/>
+	</widget>
+	<widget class="text" entity_layout_id="at06" alignment="left,top" id="dfIT" height="180" name="development_fee_info_text">
+		<layout class="stick_to_object_attachment" id="align_top" offset="-10" get_side="bottom" set_side="top" move_side="true" target="at04"/>
+		<layout class="stick_to_object_attachment" id="align_left" offset="610" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" offset="-10" get_side="right" set_side="right" target="main"/>
+	</widget>
+	<container entity_layout_id="at01" id="tsic" height="50" name="signed_poached_widget_container">
+		<layout class="stick_to_object_attachment" id="align_top" offset="11" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" offset="11" get_side="right" set_side="left" target="at04"/>
+		<layout class="stick_to_object_attachment" id="align_right" offset="-5" get_side="right" set_side="right" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<container class="inner_box" entity_layout_id="at22" id="spIB" appearance="labels/standard/label" file="widgets/transfer status widget" width="0" height="0">
+			<string id="red_replacement" value="red"/>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" move_side="true" target="main"/>
+		</container>
+	</container>
+</panel>

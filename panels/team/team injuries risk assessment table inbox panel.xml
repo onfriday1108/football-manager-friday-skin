@@ -1,0 +1,46 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+	<widget class="table" id="tabl" layout="-2, -2, -2, -2, -3" mode="fill_rows, stripe_rows" all_content_same_height="false" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" row_spacing="1" save_session_state="true">
+		<list id="headings">
+			<record index="0">
+				<translation id="text" translation_id="227966" type="use" value="Player"/>
+			</record>
+			<record index="1">
+				<translation id="text" translation_id="450783" type="use" value="Match Load[COMMENT: FR 20159; team injury risk assessment; table column header for player's recent match workload]"/>
+			</record>
+			<record index="2">
+				<translation id="text" translation_id="450784" type="use" value="Training Load[COMMENT: FR 20159; team injury risk assessment; table column header for player's recent training workload]"/>
+			</record>
+			<record index="3">
+				<translation id="text" translation_id="450785" type="use" value="Injury Susceptibility[COMMENT: FR 20159; player injury panel; table column header for player's susceptibility to injury]"/>
+			</record>
+			<record index="4">
+				<translation id="text" translation_id="450806" type="use" value="Overall Risk[COMMENT: FR 20159; team injury risk assessment; table column header for player's overall inujury risk assessment]"/>
+			</record>
+		</list>
+
+		<list id="column_table_properties">
+			<record indx="0" id="play" auto_hide_priority="1">
+				<boolean id="sort_ascending" value="true"/>
+			</record>
+			<record indx="1" id="MaLo" auto_hide_priority="1">
+				<boolean id="sort_ascending" value="false"/>
+			</record>
+			<record indx="2" id="TrLo" auto_hide_priority="1">
+				<boolean id="sort_ascending" value="false"/>
+			</record>
+			<record indx="3" id="InSu" auto_hide_priority="1">
+				<boolean id="sort_ascending" value="false"/>
+			</record>
+			<record indx="4" id="OvRi" auto_hide_priority="1">
+				<boolean id="sort_ascending" value="false"/>
+			</record>
+		</list>
+
+		<list id="sort">
+			<integer value="OvRi"/>
+		</list>
+	</widget>
+
+</panel>

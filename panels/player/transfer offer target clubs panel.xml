@@ -1,0 +1,24 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+		<widget class="text" auto_size="all" size="11" font="panel_title">
+			<layout class="stick_to_sides_attachment" alignment="left,top"/>
+			<translation id="text" translation_id="259862" type="use" value="Clubs To Propose To[COMMENT: transfer offer screen; title of panel showing which clubs are being offered a player to]"/>
+		</widget>
+
+		<widget class="popup_button" id="adcw" select_event="aprc" auto_size="all" fixed="true">
+			<translation id="text" translation_id="229715" type="use" value="Add"/>
+			<layout class="stick_to_sides_attachment" alignment="right,top" inset="0"/>
+		</widget>
+	</container>
+
+	<widget class="table" id="clst" height="75" layout="-1, 25" mode="fill_rows, stripe_rows" fixed_size_rows="true"/>
+</panel>

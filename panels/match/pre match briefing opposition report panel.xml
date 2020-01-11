@@ -1,0 +1,109 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="6" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<!--mentality and fluidity-->
+		<container class="inner_subtle_box">
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+			<!--mentality-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="2" />
+
+				<widget class="text" auto_size="vertical" font="label" colour="white">
+					<translation id="text" translation_id="348204" type="use" value="Mentality[Comment: prefix used before mentality type text on quick tactical instruction button during match]" />
+				</widget>
+
+				<widget class="mentality_label" id="menT" auto_size="all" spec="text" />
+			</container>
+
+			<!--fluidity-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="2" />
+
+				<widget class="text" auto_size="vertical" font="label" colour="white">
+					<translation id="text" translation_id="465563" type="use" value="Team Fluidity[COMMENT: team tactical instruction, reference ID 364787, team shape is now team fluidity]" />
+				</widget>
+
+				<widget class="fluidity_label" id="fluI" auto_size="all" spec="text" />
+			</container>
+		</container>
+
+		<!--pitch-->
+		<widget class="pitch_with_tactics" height="335" id="otpc" player_icon_file="tactics/tactics icon opposition match briefing" icon_flags="show_name,dont_colour_names,dont_fade_icons" pitch_base_appearance="" pitch_pattern="ui circles" vertical="true" />
+
+		<!--pros and cons-->
+		<container class="inner_subtle_box">
+
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="team_main_pro_con_panel" id="tmpc" file="none">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+					<widget class="link_button" auto_size="all" id="VFlr" appearance="buttons/link/title/button" colour="white" red_replacement="white">
+						<translation id="text" translation_id="447577" type="use" value="Full Report[COMMENT: match briefing opposition report; link through to full oppositon report]" />
+					</widget>
+				</container>
+
+				<container class="scrolling_box">
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+
+						<!--strengths-->
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" />
+
+							<widget class="label" alignment="left" auto_size="vertical" font="label" colour="positive light">
+								<translation id="text" translation_id="434997" type="use" value="Biggest Strength[COMMENT: Team Report strength header, bug 153070]" />
+							</widget>
+
+							<container class="scout_report_pro_con_widget" id="mpro" pisp="true" item="1" file="widgets/team pro con opposition match briefing">
+							</container>
+
+							<widget class="text" id="npro" alignment="left,centre_y" colour="white" auto_size="vertical" >
+								<translation id="text" translation_id="227378" type="use" value="Unknown" />
+							</widget>
+
+						</container>
+
+						<!--weaknesses-->
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" />
+
+							<widget class="label" alignment="left" auto_size="vertical" font="label" colour="negative light">
+								<translation id="text" translation_id="423840" type="use" value="Potential Weakness[COMMENT: team report weakness header]" />
+							</widget>
+
+							<container class="scout_report_pro_con_widget" id="mcon" pisp="false" item="1" file="widgets/team pro con opposition match briefing">
+							</container>
+
+							<widget class="text" id="ncon" alignment="left,centre_y" colour="white" auto_size="vertical" >
+								<translation id="text" translation_id="227378" type="use" value="Unknown" />
+							</widget>
+
+						</container>
+					</container>
+				</container>
+
+			</widget>
+
+		</container>
+
+	</container>
+
+
+</panel>

@@ -1,0 +1,169 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+	<container height="55">
+		<layout class="arrange_horizontal_attachment" layout="-1, 50" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true"/>
+
+		<!-- Position and Role-->
+		<container>
+			<container width="400">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0"/>
+
+				<widget class="position_label" id="posl" size="large" auto_size="all" value="0" alignment="left,centre_y" style="semi_bold" display_format="0" />
+
+				<container height="10" width="140">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-1,14" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<widget class="tactical_role_label" id="tacl" value="0" size="7" alignment="left,centre_y" font="title" />
+						<container id="rfil" />
+					</container>
+
+					<widget class="embedded_popup_button" id="rswi" appearance="" alignment="right" inset="4" select_event="ersl" fixed="true">
+						<boolean id="save_session_state" value="true" />
+						<boolean id="auto_tick_exclusive" value="true" />
+					</widget>
+
+				</container>
+
+			</container>
+
+			<!--Scouting button-->
+			<container width="400">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="right,vertical" inset="0"/>
+
+				<widget class="icon_button" id="1stt" click_event="nack" icon="icons/16px/search" auto_size="all" >
+					<layout class="stick_to_sides_attachment" alignment="right" />
+				</widget>
+
+			</container>
+		</container>
+
+		<!--Close button-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="icon_button" id="ok" auto_size="all" icon="icons/16px/cross" />
+		</container>
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+
+		<!--Included Player Table-->
+		<widget class="table" id="intb" mode="fill_rows, stripe_rows, printable" layout="100, -1, 105, 100, 100, 130, 45, 45, 45, 25" auto_size_rows="false" row_height="25" fixed_size_rows="false" row_spacing="0">
+
+			<!-- headings -->
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="316728" type="use" value="Current Ability[COMMENT:team report, player rating in that position]" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="316793" type="use" value="Name[COMMENT: default properties.xml; list header for any game object name - a game object is anything the user can interact with]" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="230082" type="use" value="Positions" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="293292" type="use" value="Potential Ability" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="396452" type="use" value="Role Suitability[COMMENT: scout report panel label for showing how good a player in a given role, quite similar to string ID 394571 but shorter so refer to that string for translation context]" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="420609" type="use" value="Best Role In Position[COMMENT: Squad Depth Position Dialog]" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="227770" type="use" value="Age[comment - person age]" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+				</record>
+				<record alignment="left,centre_y">
+				</record>
+			</list>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record indx="0" left="4" sort_disabled="false" />
+				<record indx="1" sort_disabled="false" sort_ascending="false" />
+				<record indx="2" sort_disabled="false" sort_ascending="false" />
+				<record indx="3" sort_disabled="false" sort_ascending="false" />
+				<record indx="4" sort_disabled="false" sort_ascending="false" />
+				<record indx="5" sort_disabled="false" sort_ascending="false" />
+				<record indx="6" sort_disabled="false" sort_ascending="false" />
+				<record indx="7" sort_disabled="false" sort_ascending="false" />
+				<record indx="8" sort_disabled="false" sort_ascending="false" />
+			</list>
+		</widget>
+
+		<!--excluded Player Table-->
+		<container id="exCn" hidden="false">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<widget class="label" id="nmlb" alignment="left,centre_y" auto_size="horizontal" font="title" style="semi_bold">
+				<translation id="text" translation_id="420610" type="use" value="Excluded Players[COMMENT: team report squad depth dialog;  Excluded Players header]" />
+			</widget>
+
+			<widget class="table" id="extb" mode="fill_rows, stripe_rows, printable" layout="70, 100, 60, 70, 70, 90, 10, 10, 10, 70" row_height="25" auto_size_rows="false" fixed_size_rows="false" row_spacing="0">
+
+				<!-- headings -->
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="316728" type="use" value="Current Ability[COMMENT:team report, player rating in that position]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="316793" type="use" value="Name[COMMENT: default properties.xml; list header for any game object name - a game object is anything the user can interact with]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="230082" type="use" value="Positions" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="293292" type="use" value="Potential Ability" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="396452" type="use" value="Role Suitability[COMMENT: scout report panel label for showing how good a player in a given role, quite similar to string ID 394571 but shorter so refer to that string for translation context]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="420609" type="use" value="Best Role In Position[COMMENT: Squad Depth Position Dialog]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="227770" type="use" value="Age[comment - person age]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+					</record>
+				</list>
+
+				<!-- column display properties -->
+				<list id="column_table_properties">
+					<record indx="0" left="4" sort_disabled="false" />
+					<record indx="1" sort_disabled="true" sort_ascending="false" />
+					<record indx="2" sort_disabled="true" sort_ascending="false" />
+					<record indx="3" sort_disabled="false" sort_ascending="false" />
+					<record indx="4" sort_disabled="false" sort_ascending="false" />
+					<record indx="5" sort_disabled="true" sort_ascending="false" />
+					<record indx="6" sort_disabled="true" sort_ascending="false" />
+					<record indx="7" sort_disabled="true" sort_ascending="false" />
+					<record indx="8" sort_disabled="true" sort_ascending="false" />
+				</list>
+			</widget>
+		</container>
+	</container>
+</panel>

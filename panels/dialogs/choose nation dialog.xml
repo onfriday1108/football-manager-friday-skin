@@ -1,0 +1,30 @@
+<panel>
+	<translation id="title" translation_id="324475" type="use" value="Choose Nations[COMMENT: how to system; help string]" />
+
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="50"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+
+		<widget class="choose_nation_panel" id="chna" />
+	</container>
+
+	<container id="btns">
+		<attachment_group class="button_arrangement_right" />
+
+		<flags id="okap" value="buttons/primary/normal/button"/>
+		<flags id="tici" value="icons/16px/tick"/>
+
+		<widget class="primary_icon_tick_button" id="ok" click_event="ok">
+			<translation id="text" translation_id="229918" type="use" value="Confirm" />
+		</widget>
+		<widget class="button" id="canc" click_event="canc" auto_size="all">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+		</widget>
+	</container>
+
+</panel>

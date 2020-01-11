@@ -1,0 +1,51 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="collapsable_box" id="tstb" save_default_state="true" save_session_state="true" allow_single_bar_click="true">
+		<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- buttons area -->
+		<container id="btna" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" horizontal_offset="30" vertical_inset="6"/>
+
+			<widget class="text" width="120" auto_size="vertical" alignment="centre_x" embed_in_frame="true" spec="title" size="small">
+				<translation id="text" translation_id="392666" type="use" value="Current Squad[COMMENT: fantasy draft screen; section showing current players chosen]" />
+			</widget>
+		</container>
+
+		<container height="26">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="label" spec="text">
+				<translation id="text" translation_id="242822" type="use" value="Squad Numbers Assigned:" />
+			</widget>
+			<widget class="label" id="scct" spec="text" auto_size="horizontal" alignment="right,centre_y"/>
+			<widget class="picture" id="wrnp" auto_size="all" file="icons/16px/warning"/>
+		</container>
+
+		<container class="table" id="tsit" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" layout="-1, 38, 25, 20, 130">
+			<flags id="auto_size" value="vertical" />
+
+			<list id="column_widget_properties">
+				<record index="0" id="rule" alignment="left,centre_y" spec="text" multiline="false" />
+				<record index="1" id="icon" auto_size="all" />
+				<record index="2" id="valu" alignment="right,centre_y" spec="text" colour="selection" multiline="false" style="bold" />
+				<record index="3" id="warn"/>
+				<record index="4" id="fval" alignment="right,centre_y" spec="text" colour="selection" multiline="false" style="bold" />
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="rule" sort_disabled="true"/>
+				<record index="1" id="icon" alignment="right,centre_y"/>
+				<record index="2" id="valu"/>
+				<record index="3" id="warn"/>
+				<record index="4" id="aval"/>
+			</list>
+		</container>
+	</container>
+</panel>

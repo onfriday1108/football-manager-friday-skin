@@ -1,0 +1,91 @@
+﻿<panel>
+  <attachment_group class="vertical_arrange" vertical_alignment="top" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
+
+  <widget class="text" auto_size="all" colour="accent" font="title">
+    <translation id="text" translation_id="491952" type="use" value="Fixture Rearrangement[COMMENT: AREA:Inbox; SUB-AREA: Fixture rearranged news item; FR: 13376; TONE: Formal; CHARLIMIT: None; NOTE: title of box]" />
+  </widget>
+
+	<widget class="text" id="fRaR" colour="negative" alignment="centre" auto_size="vertical">
+
+	</widget>
+
+  <container height="60">
+    <attachment_group class="horizontal_arrange" horizontal_layout="-1,30,-1" horizontal_offset="0" vertical_inset="0" />
+
+    <container>
+      <attachment_group class="horizontal_arrange" horizontal_layout="-1,50" horizontal_gap="10" horizontal_offset="0" vertical_inset="0" />
+
+      <container>
+        <attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
+
+        <widget class="client_object_label" height="28" spec="text" size="large" colour="text" alignment="right,centre_y">
+          <record id="object_property" get_property="home" set_property="valu" />
+        </widget>
+
+				<widget class="text" id="homl" alignment="right,centre_y" auto_size="vertical" colour="faded text">
+					<string id="format" value="[%number#1-nth]" />
+				</widget>
+
+      </container>
+
+      <widget class="object_portrait_picture" scale_picture="true" image_alignment="centre">
+        <record id="object_property" get_property="home" set_property="objt" />
+      </widget>
+    </container>
+
+    <widget class="text" auto_size="all" alignment="centre" colour="text" style="semi_bold" size="18">
+      <translation id="text" translation_id="242324" type="use" value="v[versus]" />
+    </widget>
+
+    <container>
+      <attachment_group class="horizontal_arrange" horizontal_layout="50,-1" horizontal_gap="10" horizontal_offset="0" vertical_inset="0" />
+
+      <widget class="object_portrait_picture" scale_picture="true" image_alignment="centre">
+        <record id="object_property" get_property="away" set_property="objt" />
+      </widget>
+
+      <container>
+        <attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
+
+        <widget class="client_object_label" height="28" spec="text" size="large" colour="text" alignment="left,centre_y">
+          <record id="object_property" get_property="away" set_property="valu" />
+        </widget>
+
+				<widget class="text" id="awal" alignment="left,centre_y" auto_size="vertical" colour="faded text">
+					<string id="format" value="[%number#1-nth]" />
+				</widget>
+      </container>
+
+
+    </container>
+
+  </container>
+
+  <widget class="fixture_name_text" id="FxNm" alignment="centre_x" auto_size="vertical">
+    <record id="object_property" get_property="FxNm" />
+  </widget>
+
+  <container height="30">
+    <attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="2" horizontal_offset="0" vertical_inset="0" />
+
+    <!--stadium-->
+    <widget class="stadium_button" id="stad" auto_size="horizontal" colour="faded text">
+      <translation id="no_object_text" translation_id="227505" type="use" value="Unknown Stadium" />
+      <record id="object_property" get_property="stad" />
+    </widget>
+
+    <widget class="text" auto_size="horizontal" alignment="centre" colour="faded text">
+      <string id="text" value="-" />
+    </widget>
+    
+    <!--date-->
+    <widget class="date_cell" id="fxdt" alignment="centre" auto_size="horizontal" colour="faded text">
+      <string id="format" value="[%date#1-long]" />
+      <record id="object_property" get_property="fxdt" />
+    </widget>
+    
+  </container>
+
+  <widget class="horizontal_divider" />
+  
+</panel>

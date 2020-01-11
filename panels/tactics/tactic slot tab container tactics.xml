@@ -1,0 +1,39 @@
+<panel>
+
+  <layout class="arrange_vertical_attachment" layout="25,-1,-1,-1" offset="6" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="12,10" apply_to_children="true" />
+
+  <container>
+    <layout class="arrange_horizontal_attachment" layout="16,-1" offset="0" gap="4" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+    <widget class="picture"  file="icons/16px/tactics" image_alignment="centre" red_replacement="white"/>
+
+    <widget class="text" alignment="left,centre_y" font="title" colour="white">
+      <translation id="text" translation_id="230056" type="use" value="Tactics" />
+    </widget>
+    
+  </container>
+
+
+
+
+  <!--starting tactic clot button-->
+  <widget class="tactic_slot_button" id="tsb0" tactics_slot="0" colour="white">
+    <flags id="selected_appearance" value="buttons/custom/tactics/pitch switch/left/button_selected" />
+    <flags id="unselected_appearance" value="buttons/custom/tactics/pitch switch/left/button" />
+  </widget>
+
+  <!--match prep slot 1-->
+  <widget class="tactic_slot_button" id="tsb1" tactics_slot="1" >
+    <flags id="selected_appearance" value="buttons/custom/tactics/pitch switch/left/button_selected" />
+    <flags id="unselected_appearance" value="buttons/custom/tactics/pitch switch/left/button" />
+  </widget>
+
+  <!--match prep slot 2-->
+  <widget class="tactic_slot_button" id="tsb2" tactics_slot="2" >
+    <flags id="selected_appearance" value="buttons/custom/tactics/pitch switch/left/button_selected" />
+    <flags id="unselected_appearance" value="buttons/custom/tactics/pitch switch/left/button" />
+  </widget>
+
+</panel>

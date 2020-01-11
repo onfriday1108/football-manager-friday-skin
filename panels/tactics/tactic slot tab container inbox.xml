@@ -1,0 +1,24 @@
+<panel width="400">
+    <boolean id="show_inactive_buttons" value="false"/>
+    <layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="5"/>
+    <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="5"/>
+
+    <widget class="text" auto_size="vertical" font="title" colour="accent" height="20">
+        <translation id="text" translation_id="346873" type="use" value="Tactics Being Trained[COMMENT: match preparation news item; section heading for tactic preparation choice]"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="18"/>
+        <layout class="stick_to_sides_attachment" alignment="top" inset="10"/>
+    </widget>
+
+    <widget class="spacer" height="10"/>
+
+	<widget class="tactic_slot_button" id="tsb0" file="tactics/tactic slot button inbox" height="60" tactics_slot="0">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+	</widget>
+    <widget class="tactic_slot_button" id="tsb1" file="tactics/tactic slot button inbox" height="60" tactics_slot="1">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+	</widget>
+    <widget class="tactic_slot_button" id="tsb2" file="tactics/tactic slot button inbox" height="60" tactics_slot="2">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+	</widget>
+
+</panel>

@@ -1,0 +1,41 @@
+<panel id="dlog" width="600" height="300">
+
+	<!-- add custom icon to top right corner of dialog (actual icon image gets set in code) -->
+	<widget class="picture" id="cico" auto_size="all" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true" />
+	</widget>
+
+	<!-- arrange items vertically, with text at top -->
+	<layout class="arrange_vertical_attachment" alignment="top" gap="8" />
+
+	<!-- the height of the dialog has now been set, so centre the dialog vertically -->
+	<layout class="centre_in_parent_attachment" alignment="vertical" />
+
+	<!-- fit the height of the dialog to the height of its components -->
+	<layout class="fit_children_attachment" alignment="vertical,fill" gap="8"/>
+
+	<!-- stretch everything to the sides of the dialog -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="12"/>
+
+	<!-- first we centre the dialog horizontally, the width will not change so this will position the dialog correctly -->
+	<layout class="centre_in_parent_attachment" alignment="horizontal" />
+
+	<!-- text field - should resize vertically to ensure
+	     that it's contents fit -->
+	<widget class="text" id="text" size="large" auto_size="vertical" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+		<widget class="button" id="bgHL" height="30">
+			<translation id="text" translation_id="380139" type="use" value="Beginner - Guide me through the most important aspects of playing Football Manager[COMMENT: Help level option; the beginner option, explaining to the user what kind of helps they going to provided during the game - cannot be feminised]" />
+		</widget>
+		<widget class="button" id="exLe" height="30">
+			<translation id="text" translation_id="380187" type="use" value="Expert - Only notify me about new and advanced concepts inside the game[COMMENT: Help level option; the expert option, explaining to the user what kind of helps they going to provided during the game - cannot be feminised]" />
+		</widget>
+		<widget class="button" id="noNo" height="30">
+			<translation id="text" translation_id="380168" type="use" value="Don't notify me of any new concepts added or how to play the game[COMMENT: Help level option; turning off the helps to be displayed during the game]" />
+		</widget>
+
+	</container>
+
+</panel>

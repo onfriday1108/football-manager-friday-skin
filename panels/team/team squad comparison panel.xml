@@ -1,0 +1,38 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="main_box" force_title_borders="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<string id="skin_style" value="title link" />
+
+		<widget class="link_button" section="atan" id="sclw" auto_size="all" alignment="left,centre_y" embed_in_frame="true">
+			<translation id="text" translation_id="420686" type="use" value="Squad Comparison[COMMENT: Squad Comparison tab on team report title]" />
+			<layout class="stick_to_sides_attachment" alignment="left" embed_in_frame="true" inset="10"/>
+			<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="8"/>
+		</widget>
+
+		<widget class="table" id="sftb" name="Squad Comparison">
+			<flags id="layout" value="-5, -4, -4, -4" />
+
+			<flags id="mode" value="fill_rows,printable" />
+			<integer id="row_spacing" value="0" />
+			<boolean id="fixed_size_rows" value="false" />
+			<boolean id="save_session_state" value="true" />
+
+			<!-- default properties adopted by every item in table -->
+			<record id="defp">
+				<flags id="algn" value="left,centre_y" />
+			</record>
+
+			<list id="column_widget_properties">
+				<record indx="0">
+					<flags id="offset" value="10" />
+				</record>
+			</list>
+
+		</widget>
+
+	</container>
+
+</panel>

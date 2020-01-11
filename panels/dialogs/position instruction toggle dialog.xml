@@ -1,0 +1,96 @@
+﻿<panel id="dlog" disable_animations="true">
+
+	<record id="widget_info">
+		<flags id="alignment" value="centre_x" />
+		<symbol id="class" value="container" />
+	</record>
+
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+	<container class="standard_popup_box" id="mBox" width="430">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="4" horizontal_alignment="horizontal" horizontal_inset="4" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+			
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="30,-1" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="picture" id="pIic" image_alignment="centre"/>
+				<widget class="text" id="pInD" show_button_appearance="false" auto_size="vertical" />
+
+			</container>
+
+			<container class="inner_subtle_box" height="45">
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="text" alignment="left,centre_y" auto_size="horizontal" font="title" colour="faded text">
+					<translation id="text" translation_id="363709" type="use" value="Position/Role/Duty[COMMENT: FR 8989 - Player position, role and duty]" />
+				</widget>
+
+				<widget class="text" alignment="left,centre_y" auto_size="horizontal" font="title" colour="faded text" text=":">
+				</widget>
+
+				<container width="4"/>
+
+				<widget class="role_or_duty_suitability_button" id="rSbu" width="25" appearance="none" >
+					<flags id="TISP" value="true" />
+				</widget>
+
+				<container class="tactical_role_label" id="cRsu"  alignment="left,centre_y" size="normal"/>
+			</container>
+
+			<container class="inner_subtle_box">
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="2" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="text" alignment="left,centre_y" auto_size="all" font="title" colour="faded text">
+					<translation id="text" translation_id="343974" type="use" value="Instructions[COMMENT: title for a table that shows additional instructions to be employed by the team]" />
+				</widget>
+
+				<widget class="text" alignment="left,centre_y" auto_size="all" font="title" colour="faded text" text=":">
+				</widget>
+
+				<container width="4"/>
+
+				<container class="text" id="aPin" alignment="left,centre_y" auto_size="vertical" style="semi_bold"/>
+			</container>
+
+		</container>
+
+		<container height="28">
+
+			<layout class="arrange_horizontal_attachment" layout="-2,-3" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" apply_to_children="true" />
+
+				<widget class="button" click_event="shPI" auto_size="all">
+					<translation id="text" translation_id="382596" type="use" value="Edit Instructions[COMMENT: button text for the user to edit instructions in a list]" />
+				</widget>
+
+			</container>
+
+			<!--Dont show this again checkbox-->
+			<widget class="check_box" id="atcc" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+				<translation id="text" translation_id="301057" type="use" value="Don't show this message again.[COMMENT: The title of a checkbox displayed in a dialog, which allows the user to request that the dialog isn't displayed again.]" />
+			</widget>
+
+		</container>
+
+		<container height="1">
+			<widget class="button" id="ok" click_event="ok" hidden="true">
+			</widget>
+		</container>
+
+	</container>
+
+
+</panel>

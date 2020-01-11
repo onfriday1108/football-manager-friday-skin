@@ -1,0 +1,51 @@
+﻿<panel>
+	<boolean id="GTBT" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="8" />
+		<container class="scrolling_box">
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+				<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" />
+
+					<widget class="picture" file="icons/26px/squad" width="26" height="26">
+						<string id="red_replacement" value="title" />
+					</widget>
+					<widget class="text" alignment="centre_y,left" auto_size="vertical" name="title" font="title" colour="title">
+						<string id="size" value="large" />
+						<translation id="text" translation_id="492027" type="use" value="First Team Squad Responsibilities[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+					</widget>
+				</container>
+
+				<container class="group_responsibility_list_widget" id="Rmed" file="team/staff responsibility summary panel" name="media" />
+		
+				<widget class="horizontal_divider" id="at05" height="10" />
+
+				<container class="group_responsibility_list_widget" id="Rtra" file="team/staff responsibility summary panel" name="training" />
+
+				<widget class="horizontal_divider" id="at06" height="10" />
+
+				<container class="group_responsibility_list_widget" id="Rtac" file="team/staff responsibility summary panel" name="tactics" />
+
+				<widget class="horizontal_divider" id="at07" height="10" />
+
+				<container class="group_responsibility_list_widget" id="Rfrn" file="team/staff responsibility summary panel" name="friendlies" />
+
+				<widget class="check_box_button" id="fmar" click_event="arfr" auto_size="vertical" needs_height="true" name="assistant friendlies">
+					<translation id="text" translation_id="492028" type="use" value="Backroom staff arrange friendly matches for the first-team squad[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+				</widget>
+				
+				<widget class="horizontal_divider" entity_layout_id="at08" id="at08" height="10" />
+
+				<container class="group_responsibility_list_widget" entity_layout_id="at09" file="team/staff responsibility summary panel" id="Rmat" name="match day" />
+			</container>
+
+		</container>
+		<container class="inner_box" file="generic/simple form with confirmation buttons" />
+	</container>
+</panel>

@@ -1,0 +1,40 @@
+<panel id="adbd" width="400">
+
+	<translation id="title" translation_id="251225" type="use" value="Add Bookmark[COMMENT: Add Bookmark dialog title]" />
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+	<!-- table containing bookmarks -->
+	<widget class="table" id="shtb" mode="0" layout="-1,-4" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" row_spacing="4">
+
+		<widget row="0" col="0" class="label" alignment="left,centre_y">
+			<translation id="text" translation_id="251226" type="use" value="Name[COMMENT: Bookmark name field in 'add bookmark' dialog]" />
+		</widget>
+		<widget row="0" col="1" class="edit_box" id="bnam" auto_size="vertical" maximum_width="70" />
+
+		<widget row="1" col="0" class="label" alignment="left,centre_y">
+			<translation id="text" translation_id="343708" type="use" value="Folder[COMMENT: Bookmark folder/location field in 'add bookmark' dialog]" />
+		</widget>
+		<widget row="1" col="1" class="popup_button" id="bloc" auto_size="vertical" />
+
+	</widget>
+
+	<!-- row of buttons -->
+	<widget class="container" id="btns">
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+		<!-- new folder button -->
+		<widget class="icon_button" id="newf" fixed="true" auto_size="all" icon="icons/16px/new folder">
+			<translation id="text" translation_id="251228" type="use" value="New Folder[COMMENT: 'new folder' button on bookmarks add dialog]" />
+			<record id="click_event">
+				<flags id="event_id" value="adbf" />
+			</record>
+		</widget>
+
+		<!-- row of buttons -->
+		<container id="btns" file="add cancel buttons" />
+
+	</widget>
+
+</panel>

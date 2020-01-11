@@ -1,0 +1,161 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 14, 42, 30" row_height="22" row_spacing="1" default_sort_column="name">
+		<list id="column_table_properties">
+			<!-- Attribute name -->
+			<record index="0" id="name" left="8" top="4">
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false"/>
+			</record>
+			<!-- Attribute training improvement offset -->
+			<record index="1" id="offs" sort_disabled="true">
+				<record id="widget_info" class="training_improvement" />
+			</record>
+			<!-- Attribute value -->
+			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="8">
+				<record id="widget_info" class="attribute_label" alignment="right,centre_y" style="semi_bold" multiline="false"/>
+			</record>
+			<!-- Attribute edit widget -->
+			<record index="3" id="edit" sort_disabled="true">
+				<record id="widget_info" class="editable_client_object_property_panel" />
+			</record>
+		</list>
+	</record>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		<container class="horizontal_adaptive_container" inset="0" offset="0" gap="15" >
+
+			<container priority="1" default_width="-3">
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1"/>
+
+				<!-- Technical Table -->
+				<widget class="table" id="pltt" layout="-1">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true">
+							<translation id="text" translation_id="229413" type="use" value="Technical"/>
+						</record>
+					</list>
+				</widget>
+				<!-- Goalkeeping Table -->
+				<widget class="table" id="plgk" layout="-1">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true">
+							<translation id="text" translation_id="230024" type="use" value="Goalkeeping" />
+						</record>
+					</list>
+				</widget>
+				<!-- Mental Table -->
+				<widget class="table" id="plmt" layout="-1">
+					<list id="headings">
+						<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true">
+							<translation id="text" translation_id="230106" type="use" value="Mental"/>
+						</record>
+					</list>
+				</widget>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<!-- Physical Table -->
+						<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+							<list id="headings">
+								<record index="0" alignment="left,centre_y" column_span="5" hide_sorting="true" disabled="true">
+									<translation id="text" translation_id="230003" type="use" value="Physical"/>
+								</record>
+							</list>
+						</widget>
+
+						<!-- Extra technical table for GK -->
+						<widget class="table" id="plgt" layout="-1" auto_size="vertical">
+							<list id="headings">
+								<record index="0" alignment="left,centre_y" column_span="5">
+									<translation id="text" translation_id="229413" type="use" value="Technical"/>
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<container class="vertical_adaptive_container" inset="0" offset="0" gap="0">
+
+						<!-- Separator -->
+						<widget class="horizontal_divider" />
+
+						<!-- Additional attributes table -->
+						<container class="client_object_viewer_xml_panel" id="attT" default_height="50">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+							<widget class="table" layout="-1, 80" mode="fill_rows, printable" row_height="22" row_spacing="0">
+								<list id="column_table_properties">
+									<record index="0" left="8" sort_disabled="true"/>
+									<record index="1" right="8" sort_disabled="true"/>
+								</list>
+
+								<!-- Height-->
+								<widget class="label" row="0" column="0" >
+									<record id="object_property" get_property="Phei" name="true"/>
+								</widget>
+								<widget class="editable_client_object_property_panel" id="Phei" row="0" column="1" style="semi_bold">
+									<record id="object_property" get_property="Phei"/>
+									<record id="widget_properties" alignment="right,centre_y" />
+								</widget>
+								<!-- Weight-->
+								<widget class="label" row="1" column="0" >
+									<record id="object_property" get_property="Pwei" name="true"/>
+								</widget>
+								<widget class="editable_client_object_property_panel" id="Pwei" row="1" column="1" style="semi_bold">
+									<record id="object_property" get_property="Pwei"/>
+									<record id="widget_properties" alignment="right,centre_y" />
+								</widget>
+							</widget>
+						</container>
+
+						<!--footedness tables-->
+						<container default_height="-2" minimum_height="80">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true"/>
+							<widget class="table" layout="30, -1" auto_size_rows="true" auto_size="vertical" row_spacing="0">
+								<!-- Left foot strength -->
+								<widget class="picture" file="icons/custom/footed/left" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" col="0" row="0" row_span="2" />
+								<widget class="label" auto_size="all" col="1" row="0" colour="faded text">
+									<translation id="text" translation_id="230000" type="use" value="Left Foot" />
+								</widget>
+								<widget class="footedness_label" id="ftLc" auto_size="all" format="[%string#1]" col="1" row="1">
+									<record id="object_property">
+										<integer id="get_property" value="PlfG" />
+									</record>
+								</widget>
+							</widget>
+
+							<widget class="table" layout="30, -1" auto_size_rows="true" auto_size="vertical" row_spacing="0">
+								<!-- Right foot strength -->
+								<widget class="picture" file="icons/custom/footed/right" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" col="0" row="0" row_span="2" />
+								<widget class="label" auto_size="all" col="1" row="0" colour="faded text">
+									<translation id="text" translation_id="230001" type="use" value="Right Foot" />
+								</widget>
+								<widget class="footedness_label" auto_size="all" id="ftRc" format="[%string#1]" col="1" row="1">
+									<record id="object_property">
+										<integer id="get_property" value="PrfG" />
+									</record>
+								</widget>
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<!-- More attribute stuff-->
+			<container class="client_object_viewer_xml_panel" id="atT2" file="player/player additional attributes panel" default_width="-1" minimum_width="140" priority="5"/>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,43 @@
+﻿<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<!--confirm changes-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="right" gap="4" offset="6"  />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="6,6,6,6" />
+
+		<widget class="icon_button" id="uchc" icon="icons/16px/reset" icon_alignment="centre" width="24" controller_button="x_button" appearance="buttons/standard/flex/button" red_replacement="purple 900" blue_replacement="purple 900" primary_icon_red_replacement="white" icon_colour="white">
+			<translation id="hint" translation_id="230251" type="use" value="Undo"/>
+			<record id="click_event">
+				<flags id="event_id" value="uchc" />
+			</record>
+		</widget>
+
+		<container id="CONF">
+			<layout class="arrange_horizontal_attachment" alignment="right" gap="4" offset="0"  />
+			<layout class="fit_children_attachment" alignment="horizontal, fill"  gap="4" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!--cancel-->
+			<widget class="icon_button" id="cntt"  controller_button="b_button" click_event="cntt" icon_alignment="centre" width="24" icon="icons/16px/cross" red_replacement="negative dark" blue_replacement="negative dark" primary_icon_red_replacement="white" icon_colour="white" appearance="buttons/standard/flex/button"/>
+
+			<!--various confirm buttons-->
+			<container width="147">
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<!--confirm-->
+				<widget class="icon_tick_button" auto_size="none" id="conf" controller_button="y_button" alignment="centre" icon_alignment="centre_left, centre_y" click_event="aptt" red_replacement="positive dark" blue_replacement="positive dark" colour="white" icon_colour="white" appearance="buttons/standard/flex/button">
+					<record id="primary_icon_properties" red_replacement="white"/>
+				</widget>
+
+				<!--confirm + team talk-->
+				<widget class="icon_button" id="cftt" alignment="centre" icon_alignment="centre_left, centre_y" click_event="cftt" red_replacement="positive dark" blue_replacement="positive dark" icon="icons/16px/speech bubble" colour="white" icon_colour="white" appearance="buttons/standard/flex/button">
+					<translation id="text" translation_id="441067" type="use" value="Give Team Talk[COMMENT: FR21700, confirm a tactical change and confirm that you want to give a team talk to the players brought on]" />
+				</widget>
+			</container>
+		</container>
+	</container>
+
+</panel>

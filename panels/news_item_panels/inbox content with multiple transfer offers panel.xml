@@ -1,0 +1,32 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<widget class="transfer_offer_player_details_panel" id="pldt" file="player/transfer offer player details inbox panel" height="95"/>
+
+	<!-- Agent feedback -->
+	<container class="agent_transfer_feedback_panel" id="AgFb" file="player/agent transfer feedback two lines panel"/>
+
+	<!-- table containing transfer offer details -->
+	<widget class="table" id="tran" fixed_size_rows="false" auto_size_rows="true" select_event="strw" save_session_state="true" save_default_state="true" auto_size="vertical" row_spacing="4">
+		<string id="layout" value="-1, 20"/>
+		<flags id="mode" value=""/>
+	</widget>
+
+	<container height="30">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" horizontal_offset="0" vertical_inset="4">
+			<global id="horizontal_gap" name="ui.button_row_gap"/>
+		</attachment_group>
+
+		<widget class="subtle_popup_button" id="alpu" fixed="true" auto_size="all" hidden="false">
+			<translation id="text" translation_id="336622" type="use" value="Respond to all offers[COMMENT: transfer centre; option text]"/>
+		</widget>
+		<widget class="subtle_popup_button" id="topu" fixed="true" auto_size="all" hidden="true">
+			<translation id="text" translation_id="336024" type="use" value="Respond to transfer offers[COMMENT: transfer centre; option text]"/>
+		</widget>
+		<widget class="subtle_popup_button" id="lopu" fixed="true" auto_size="all" hidden="true">
+			<translation id="text" translation_id="336022" type="use" value="Respond to loan offers[COMMENT: transfer centre; option text]"/>
+		</widget>
+	</container>
+</panel>

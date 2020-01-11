@@ -1,0 +1,51 @@
+﻿<panel>
+
+  <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <!--clip length-->
+  <container height="50">
+    <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2" />
+
+    <!--line-->
+    <widget class="horizontal_divider" />
+
+    <!--text-->
+    <widget class="text" id="leng" auto_size="vertical" multiline="false" alignment="centre"/>
+  </container>
+  
+  <!--description-->
+  <container class="main_box" id="mnbx">
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+    <!--description and close button-->
+    <container height="30">
+      <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <!--title-->
+      <widget class="text" id="titl" multiline="true" alignment="left,centre_y" style="semi_bold"/>
+      
+      <!--close button-->
+      <widget class="icon_button" id="dele" icon="icons/16px/clear" width="30" icon_alignment="centre">
+      </widget>
+    </container>
+
+    <!--time and camera-->
+    <container height="30">
+      <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <!--match time-->
+      <widget class="text" id="time" alignment="left,centre_y"/>
+
+      <!--camera button-->
+      <widget class="popup_button" id="came" auto_size="horizontal">
+      </widget>
+    </container>
+
+  </container>
+
+</panel>

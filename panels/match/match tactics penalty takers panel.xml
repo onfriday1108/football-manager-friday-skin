@@ -1,0 +1,33 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<widget class="tactics_set_piece_takers_picking_panel" id="tacc" file="tactics/tactics penalty takers picking panel match" penalty_takers="true"/>
+
+	<!--Confirm/undo/cancel buttons-->
+	<container id="Bctn" class="inner_box_no_margin">
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="conf">
+			<translation id="text" translation_id="256896" type="use" value="Confirm Changes[COMMENT: match screen; confirmation button for combined team talk and tactical changes]" />
+			<record id="click_event">
+				<flags id="event_id" value="aptt" />
+			</record>
+		</widget>
+
+		<widget class="button" id="uchc" auto_size="all" appearance="buttons/custom/match/standard/normal/button">
+			<translation id="text" translation_id="248353" type="use" value="Undo Last" />
+			<record id="click_event">
+				<flags id="event_id" value="uchc" />
+			</record>
+		</widget>
+
+		<widget class="button" id="cntt" auto_size="all" appearance="buttons/custom/match/standard/normal/button">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			<record id="click_event">
+				<flags id="event_id" value="cntt" />
+			</record>
+		</widget>
+
+	</container>
+</panel>

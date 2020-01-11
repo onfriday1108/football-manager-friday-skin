@@ -1,0 +1,22 @@
+﻿<panel>
+	<translation id="title" translation_id="466542" type="use" value="Coach Responsibilities[COMMENT: team training, coach section, responsibilities for coaches in different areas of training]" />
+
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="30" />
+
+	<widget class="team_training_coaches_panel" id="cocP" />
+
+	<container id="btns">
+		<attachment_group class="button_arrangement_right" />
+
+		<flags id="okap" value="buttons/primary/normal/button" />
+		<flags id="tici" value="icons/16px/tick" />
+
+		<widget class="primary_icon_tick_button" id="ok" click_event="ok">
+			<translation id="text" translation_id="229829" type="use" value="Ok" />
+		</widget>
+	</container>
+
+</panel>

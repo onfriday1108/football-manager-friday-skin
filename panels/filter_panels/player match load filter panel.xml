@@ -1,0 +1,28 @@
+﻿<panel>
+	<!-- Hide player filter rule panel -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="450783" type="use" value="Match Load[COMMENT: FR 20159; team injury risk assessment; table column header for player's recent match workload]"/>
+		
+
+		<list id="objL">
+
+			<record  id="mlLo">
+				<translation id="text" translation_id="242840" type="use" value="Light[COMMENT - training workload]"/>
+			</record>
+			<record  id="mlAv">
+				<translation id="text" translation_id="242841" type="use" value="Medium[COMMENT - training workload]"/>
+			</record>
+			<record  id="mlHi">
+				<translation id="text" translation_id="242842" type="use" value="Heavy[COMMENT - training workload]"/>
+			</record>
+			<record  id="mlVh">
+				<translation id="text" translation_id="242843" type="use" value="Very Heavy[COMMENT - training workload]"/>
+			</record>
+			
+		</list>
+		
+	</container>
+
+</panel>

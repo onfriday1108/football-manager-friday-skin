@@ -1,0 +1,10 @@
+<panel>
+
+  <layout class="fit_children_attachment" alignment="none" gap="0" offset="0" />
+
+  <!--play/pause-->
+  <widget class="icon_button" id="PBtn">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </widget>
+
+</panel>

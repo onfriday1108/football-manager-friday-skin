@@ -1,0 +1,19 @@
+<panel height="300" width="400">
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="main_box">
+    <translation id="title" translation_id="324089" type="use" value="Competition Rules[COMMENT: how to system; help string]" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <widget class="fixture_rules_text" id="ruls">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="FxRl" />
+            <integer id="set_property" value="valu" />
+          </record>
+        </list>
+      </record>
+    </widget>
+  </container>
+</panel>

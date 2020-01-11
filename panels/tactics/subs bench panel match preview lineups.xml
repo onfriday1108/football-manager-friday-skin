@@ -1,0 +1,26 @@
+﻿<panel>
+	<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="5" gap="10" />
+
+	<container class="main_transparent_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_layout="30,-1" vertical_gap="6" />
+
+		<widget class="text" spec="text" alignment="centre" auto_size="all" font="title">
+			<translation id="text" translation_id="318313" type="use" value="Substitutes[COMMENT: subs bench panel; subsection box which will list any designated substitutes]" />
+		</widget>
+
+		<widget class="subs_bench_icon_panel" id="subs" file="none" icon_flags="show_name,show_number,colour_names_for_team,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="tactics/tactics icon info panel match sub preview lineups">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<container id="icns">
+				<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" gap="4" />
+				<layout class="arrange_horizontal_attachment" alignment="left" wrap_widgets="true" offset="0" gap="4"/>
+			</container>
+
+		</widget>
+
+	</container>
+</panel>

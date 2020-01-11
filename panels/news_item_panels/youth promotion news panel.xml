@@ -1,0 +1,19 @@
+﻿<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<list id="draw_order">
+		<record entity_layout_id="at01"/>
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container entity_layout_id="at01" minimum_height="80" file="news_item_panels/youth promotion panel" id="at01" auto_size="vertical" needs_height="true">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+	</container>
+</panel>

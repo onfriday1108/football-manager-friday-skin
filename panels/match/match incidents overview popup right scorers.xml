@@ -1,0 +1,19 @@
+﻿<panel>
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" gap="4" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<widget class="table" id="miit" layout="18,-1" mode="fill_rows" row_spacing="0" auto_size_rows="true" fixed_size_rows="false">
+
+		<list id="column_widget_properties">
+			<record index="0" alignment="right" auto_size="none"/>
+			<record index="1" spec="text" auto_size="none" alignment="left,centre_y" auto_size_minimum_height="28"/>
+		</list>
+
+		<list id="column_table_properties">
+			<record index="0" id="icon"/>
+			<record index="1" id="text"/>
+		</list>
+
+	</widget>
+
+</panel>

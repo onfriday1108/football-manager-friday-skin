@@ -1,0 +1,20 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!-- Duration -->
+	<container height="40" id="ducn">
+		<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0"/>
+		<layout class="fit_children_attachment" alignment="vertical,fill" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="text" auto_size="vertical" font="title">
+			<translation id="text" translation_id="230113" type="use" value="Duration" />
+		</widget>
+		<widget class="text" id="lelt" auto_size="vertical" />
+	</container>
+
+</panel>

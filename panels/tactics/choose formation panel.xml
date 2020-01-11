@@ -1,0 +1,22 @@
+<panel width="500">
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <container height="40">
+    <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+    <widget class="text" font="fonts/panel_title" size="12">
+      <translation id="text" translation_id="363603" type="use" value="Based on formation[COMMENT: FR 8989 - choose formation panel - title for a popup that allows the user to create a new tactic based on a preset formation]" />
+    </widget>
+
+    <widget class="icon_button" id="assm" show_button_appearance="false">
+      <translation id="text" translation_id="363716" type="use" value="Recommended by Assistant Manager[COMMENT: FR 8989 - choose formation panel - text for a legend on the panel to highlight which formations have been recommended by the assistant manager]" />
+    </widget>
+  </container>
+
+  <widget class="table" id="FrmT" layout="-1,-1,-1" mode="fill_rows" auto_size="vertical">
+    
+  </widget>
+</panel>

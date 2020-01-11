@@ -1,0 +1,146 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <!-- headline container -->
+  <container file="news_item_panels/inbox headline panel" id="hlpn"/>
+  <string id="skin_style" value="title link" />
+
+  <widget class="text" auto_size="vertical" colour="text" id="bdtx" />
+
+  <!-- content area -->
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top,extend" gap="20" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+    <!--Top Area-->
+    <container height="100">
+      <layout class="arrange_horizontal_attachment" layout="-1,-1" gap="20" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+      <container>
+        <layout class="arrange_horizontal_attachment" layout="-1,-1" gap="20" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+        <!--Duration Container-->
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-1,-1" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+          <widget class="text" font="title" colour="accent">
+            <translation id="text" translation_id="255373" type="use" value="Duration[COMMENT: scout assignments table; column header for nation/region/etc]" />
+          </widget>
+          <widget class="text" id="dLAB" />
+          
+        </container>
+        
+        <!--Estimated Cost Container-->
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-1,-1" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+          <widget class="text" font="title" colour="accent">
+            <translation id="text" translation_id="335037" type="use" value="Estimated Cost[COMMENT: scout report panel label]" />
+          </widget>
+          <widget class="text" id="esCL" />
+
+        </container>
+        
+      </container>
+
+      <container>
+        <layout class="arrange_horizontal_attachment" layout="-1,-1" gap="20" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+        <!--Squad Size Container-->
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-1,-1" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+          <widget class="text" font="title" colour="accent">
+            <translation id="text" translation_id="388931" type="use" value="Squad Size[COMMENT: FR 8517, the size of the current squad]" />
+          </widget>
+          <widget class="text" id="sqSL" />
+
+        </container>
+
+        <!--Available Slot Container-->
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-1,-1" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+          <widget class="text" font="title" colour="accent">
+            <translation id="text" translation_id="420682" type="use" value="Available Slots[COMMENT: title text; Avaialbe Slots in the upcoming training camp]" />
+          </widget>
+          <widget class="label" id="aVsL" />
+
+        </container>
+
+      </container>
+      
+     
+    </container>
+   
+    <!--Bottom Area-->
+    <container>
+      <layout class="arrange_horizontal_attachment" layout="-1,-1" gap="20" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+
+      <!--Training Information-->
+      <container class="training_overview_panel" file="none" id="TOvR">
+        <layout class="arrange_vertical_attachment" layout="-1,-1" gap="20" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+        <container class="team_training_overview_panel" file="none" id="tOPN">
+          <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+          <container id="mCON">
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+            <container id="barc">
+              <layout class="arrange_vertical_attachment" alignment="fill" gap="0" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<record id="default_properties" file="team/team training week schedule bar inbox short" />
+				
+              <container class="team_training_week_schedule_bar" id="fBAR" />
+
+              <container class="team_training_week_schedule_bar" />
+
+              <container class="team_training_week_schedule_bar" />
+
+
+            </container>
+
+          </container>
+
+          <container id="sesB">
+
+            <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+            <widget class="text" id="brTX" alignment="centre" size="11" />
+          </container>
+          <container id="seMB">
+
+            <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+            <widget class="text" id="mbTX" alignment="centre" size="11" />
+          </container>
+        </container>
+
+
+        <container class="team_training_tactic_panel">
+        </container>
+      </container>
+
+      <!--Players Missing the Camp Information-->
+      <container>        
+      </container>
+      
+    </container>
+
+  </container>
+
+</panel>

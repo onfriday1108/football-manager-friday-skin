@@ -1,0 +1,11 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="arrange_horizontal_attachment" layout="26,-1" offset="0" gap="4" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<widget class="picture" file="icons/26px/urgent" red_replacement="title" image_alignment="centre" />
+
+	<widget class="text" id="info" auto_size="vertical" multiline="true" colour="title">
+		<translation id="text" translation_id="447534" type="use" value="To sync your save games to the cloud please return to the main menu and select the 'Cross-Sync' option. From there you can upload and download your items.[COMMENT: instruction on how to access cross-sync cloud storage sync functionality on the load and save files, can't be feminised as outside of saved game]" />
+	</widget>
+</panel>

@@ -1,0 +1,10 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" vertical_gap="0"/>
+
+	<container class="inner_subtle_box_no_margin"  height="30">
+		<layout class="stick_to_sides_attachment" inset="0" alignment="all" apply_to_children="true" />
+
+		<widget class="text" id="Stts" alignment="centre" size="small" />
+	</container>
+
+</panel>

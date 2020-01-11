@@ -1,0 +1,142 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container id="main">
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- General -->
+			<widget class="inner_subtle_box">
+				<translation id="title" translation_id="329984" type="use" value="General[COMMENT: preferences: General settings section title]" />
+
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--start server-->
+				<widget class="game_settings_viewer_panel">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<record id="table_properties">
+						<integer id="row_spacing" value="5" />
+					</record>
+					<list id="viewed_property_ids">
+						<symbol value="start_server" />
+					</list>
+				</widget>
+
+				<!--explanatory text-->
+				<widget class="text" spec="text" colour="selection" multiline="true" auto_size="vertical">
+					<translation id="text" translation_id="451441" type="use" value="Determine whether other users can join your game; choose from No, Friends Only, or Anyone.[COMMENT: online game settings help text, cannot be feminised]" />
+				</widget>
+
+				<!--server name/password-->
+				<widget class="game_settings_viewer_panel">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<record id="table_properties">
+						<integer id="row_spacing" value="5" />
+					</record>
+					<list id="viewed_property_ids">
+						<symbol value="server_name" />
+						<symbol value="password" />
+					</list>
+				</widget>
+
+				<!--banned users-->
+				<widget class="table" id="bnip" mode="fill_columns, fill_rows,stripe_rows" layout="-1, 130" auto_size_rows="true">
+					<list id="headings">
+						<record alignment="left,centre_y" column_span="3">
+							<translation id="text" translation_id="442845" type="use" value="Banned Managers[COMMENT: preferences: network/internet settings section title, was ID 341069 but we're trying to get away from the term 'user']" />
+						</record>
+					</list>
+				</widget>
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!-- Gameplay -->
+				<widget class="inner_subtle_box">
+					<translation id="title" translation_id="376470" type="use" value="Gameplay[COMMENT: preferences: General settings section title, Gameplay-specific options in online game preferences]" />
+
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!--disable dubscribing to other humans-->
+					<widget class="game_settings_viewer_panel">
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<record id="table_properties">
+							<integer id="row_spacing" value="5" />
+						</record>
+						<list id="viewed_property_ids">
+							<symbol value="force_assistant_press_conferences"/>
+							<symbol value="disable_control_of_friendlies" />
+							<symbol value="disable_importing" />
+							<symbol value="disable_subscribing_to_other_humans" />
+						</list>
+					</widget>
+
+					<!--explanatory text-->
+					<widget class="text" spec="text" colour="selection" multiline="true" auto_size="vertical">
+						<translation id="text" translation_id="442847" type="use" value="If ticked, managers will not be able to subscribe to other managers via the news subscriptions system. Subscribing to other humans can potentially give managers advanced warning via the news inbox of transfer dealings etc. that they are involved in.[COMMENT: network settings panel; network game options, help text, was ID 376483 but we're trying to get away from the term 'user']" />
+					</widget>
+
+				</widget>
+
+				<!-- Matches -->
+				<widget class="inner_subtle_box" id="cura">
+					<translation id="title" translation_id="333923" type="use" value="Matches[COMMENT: preferences: Match (3D match view) settings section title]" />
+
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!--speeds-->
+					<widget class="game_settings_viewer_panel">
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<record id="table_properties">
+							<integer id="row_spacing" value="3" />
+						</record>
+						<list id="viewed_property_ids">
+							<symbol value="match_scheduling_mode" />
+							<symbol value="slowest_highlights_type" />
+							<symbol value="slowest_match_speed" />
+							<symbol value="slowest_replays_type" />
+							<symbol value="slowest_replay_speed" />
+						</list>
+					</widget>
+
+				</widget>
+
+				<!-- Processing -->
+				<widget class="inner_subtle_box">
+					<translation id="title" translation_id="334004" type="use" value="Processing[COMMENT: preferences: User Interface settings section title]" />
+
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="game_settings_viewer_panel" id="set4" auto_size="none">
+
+						<record id="table_properties">
+							<integer id="row_spacing" value="3" />
+							<flags id="auto_size" value="none" />
+						</record>
+						<list id="viewed_property_ids">
+							<symbol value="forced_continue_enabled" />
+							<symbol value="forced_continue_countdown" />
+							<symbol value="pre_match_countdown" />
+							<symbol value="in_match_countdown" />
+							<symbol value="unresponded_news_countdown" />
+							<symbol value="unresponded_longer_news_countdown" />
+							<symbol value="auto_stop_game_percentage" />
+							<symbol value="auto_stop_game_max_stop_time" />
+							<symbol value="auto_stop_game_min_time_between_stops" />
+							<symbol value="continue_idle_user" />
+						</list>
+					</widget>
+				</widget>
+			</container>
+		</container>
+
+	</container>
+</panel>

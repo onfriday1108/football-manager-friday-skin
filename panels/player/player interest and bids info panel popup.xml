@@ -1,0 +1,36 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<layout class="fit_children_attachment" alignment="all" offset="0" gap="0" />
+
+	<container class="standard_popup_box">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+		<layout class="fit_children_attachment" alignment="horizontal" offset="10" gap="0" />
+		<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="4" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="4" gap="4" />
+
+		<widget class="label" id="toto" height="25" spec="text" size="large" colour="text" auto_size="horizontal">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="titl" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+
+		<widget class="text" id="tata" spec="text" size="large" colour="text" auto_size="all">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="text" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+	</container>
+
+</panel>

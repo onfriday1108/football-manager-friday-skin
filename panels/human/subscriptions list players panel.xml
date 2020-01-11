@@ -1,0 +1,101 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1, -2" offset="0" gap="1"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<!-- object list -->
+		<container class="main_box" appearance="boxes/sidebar/standard/left/paper">
+			<layout class="arrange_vertical_attachment" layout="-1, 30" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="table" id="oltb" layout="-1, 100" mode="fill_rows, stripe_rows, select_rows, select_multiple, dont_allow_empty_selection, show_bullets" row_height="30">
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="229689" type="use" value="Name"/>
+					</record>
+					<record alignment="centre">
+						<translation id="text" translation_id="336577" type="use" value="Players on List[COMMENT: manage subscriptions panel; table header; how many players are on the shortlist]"/>
+					</record>
+				</list>
+
+				<list id="column_table_properties">
+					<record index="0" id="name" left="10"/>
+				</list>
+
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y"/>
+					<record indx="1" alignment="centre"/>
+				</list>
+			</widget>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+
+				<widget class="button" auto_size="all">
+					<translation id="text" translation_id="336234" type="use" value="Create New Shortlist[COMMENT: manage subscriptions panel; button text for creating new shortlist]"/>
+					<translation id="hint" translation_id="336234" type="use" value="Create New Shortlist[COMMENT: manage subscriptions panel; button text for creating new shortlist]"/>
+					<record id="click_event">
+						<flags id="event_id" value="newl"/>
+					</record>
+				</widget>
+
+			</container>
+		</container>
+
+		<!-- subscription categories -->
+		<container class="main_box" id="sbox">
+
+			<container id="stba" embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_right" />
+
+				<widget class="icon_tick_button" id="sacc" click_event="sacc" embed_in_frame="true"/>
+				<widget class="icon_button" id="sacc" auto_size="horizontal" icon="icons/16px/cross" click_event="sncc" embed_in_frame="true"/>
+				<widget class="link_appearance_button" id="vlst" embed_in_frame="true">
+					<translation id="text" translation_id="257906" type="use" value="View Shortlist[COMMENT:Award voting news link button]"/>
+				</widget>
+			</container>
+
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+
+				<widget class="label" auto_size="all">
+					<translation id="text" translation_id="336608" type="use" value="Receive News About: [COMMENT: manage subscriptions panel; label indicating which news items are selected]"/>
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+				</widget>
+			</container>
+
+			<container class="scrolling_box">
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0"/>
+
+					<container id="col0">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal"  />
+					</container>
+
+					<container id="col1">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal"  />
+					</container>
+
+					<container id="col2">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal"  />
+					</container>
+				</container>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

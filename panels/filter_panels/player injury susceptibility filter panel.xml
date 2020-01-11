@@ -1,0 +1,36 @@
+﻿<panel>
+	<!-- Hide player filter rule panel -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="450785" type="use" value="Injury Susceptibility[COMMENT: FR 20159; player injury panel; table column header for player's susceptibility to injury]"/>
+		
+		<list id="objL">
+
+			<record id="isVl">
+				<translation id="text" translation_id="448751" type="use" value="Very Low[COMMENT: description for player injury proneness level]"/>
+			</record>
+			<record id="isLo">
+				<translation id="text" translation_id="441761" type="use" value="Low[COMMENT: description for player injury proneness level]"/>
+			</record>
+			<record id="isBa">
+				<translation id="text" translation_id="448750" type="use" value="Below Average[COMMENT: description for player injury proneness level]"/>
+			</record>
+			<record id="isAv">
+				<translation id="text" translation_id="448749" type="use" value="Average[COMMENT: description for player injury proneness level]"/>
+			</record>
+			<record id="isAa">
+				<translation id="text" translation_id="448748" type="use" value="Above Average[COMMENT: description for player injury proneness level]"/>
+			</record>
+			<record id="isHi">
+				<translation id="text" translation_id="448747" type="use" value="High[COMMENT: description for player injury proneness level]"/>
+			</record>
+			<record id="isVH">
+				<translation id="text" translation_id="448746" type="use" value="Very High[COMMENT: description for player injury proneness level]"/>
+			</record>
+
+		</list>
+
+	</container>
+
+</panel>

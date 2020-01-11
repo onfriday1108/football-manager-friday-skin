@@ -1,0 +1,37 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+
+	<container class="filter_check_box_list_container" id="othp" auto_size="vertical" ahdn="false">
+		<translation id="title" translation_id="247571" type="use" value="Fitness" />
+
+		<list id="objL">
+			<record id="mfcb">
+				<translation id="text" translation_id="351432" type="use" value="Match Fit[COMMENT: Training overview panel; title for number of players that are match fit]" />
+			</record>
+			<record id="tmcb">
+				<translation id="text" translation_id="351563" type="use" value="Tired after Last Match[COMMENT: Training overview panel; title for number of players that are tired after last match]" />
+			</record>
+			<record id="lmcb">
+				<translation id="text" translation_id="351425" type="use" value="Lacking Match Fitness[COMMENT: Training overview panel; title for number of players that are Lacking Match Fitness]" />
+			</record>
+			<record id="slcb">
+				<translation id="text" translation_id="351496" type="use" value="Severely Lacking Match Fitness[COMMENT: Training overview panel; title for number of players that are Sevrely Lacking Match Fitness]" />
+			</record>
+			<record id="ticb">
+				<translation id="text" translation_id="351564" type="use" value="Tired[COMMENT: Training overview panel; title for number of players that are Tired]" />
+			</record>
+			<record id="ircb">
+				<translation id="text" translation_id="420624" type="use" value="Injured - In Rehabilitation Phase[COMMENT: Training overview panel; title for number of players that are Injured but Rehabilitating]" />
+			</record>
+			<record id="ilcb">
+				<translation id="text" translation_id="351413" type="use" value="Injured In Light Training[COMMENT: Training overview panel; title for number of players that are Injured In Light Training]" />
+			</record>
+			<record id="incb">
+				<translation id="text" translation_id="351414" type="use" value="Injured[COMMENT: Training overview panel; title for number of players that are Injured]" />
+			</record>
+
+		</list>
+
+	</container>
+</panel>

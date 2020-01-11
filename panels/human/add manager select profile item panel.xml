@@ -1,0 +1,27 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <container class="main_box" id="fany" appearance="buttons/standard/normal/button">
+
+    <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <animation class="scale_animation" start_value="0.8" end_value="0.8" centre="0.5,0.5" duration="0.3" />
+    <animation class="scale_animation" trigger_start="mpSd" trigger_end="mpUd" start_value="1.0" end_value="1.25" centre="0.5,0.5" end_mode="hold_auto_reverse" duration="0.3" />
+
+    <widget class="icon_button" appearance="none" icon="icons/16px/close" auto_size="all" id="clos" embed_in_frame="true" hidden="true">
+      <layout class="stick_to_sides_attachment" alignment="right,top" embed_in_frame="true" inset="10" />
+      <record id="click_event">
+        <flags id="event_id" value="atch" />
+      </record>
+    </widget>
+
+    <!-- Default picture is used for 'Add new profile' -->
+    <widget class="picture" id="pict" wants_mouse_events="false" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,bottom" file="icons/custom/add manager/add" red_replacement="normal_icon"/>
+  </container>
+
+  <widget class="text" id="name" auto_size="vertical" font="text" size="normal" alignment="centre" wants_mouse_events="false">
+    <translation id="text" translation_id="361098" type="use" value="Create New Profile[COMMENT: add manager choose profile; text displayed under item user selects to create a new profile]" />
+  </widget>
+</panel>

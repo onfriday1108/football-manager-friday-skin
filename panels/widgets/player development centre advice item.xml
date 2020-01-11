@@ -1,0 +1,56 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+	<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0"  >
+
+		<boolean id="save_immediate_state" value="true"/>
+
+		<container default_width="-6" priority="1">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<!-- No advice container-->
+			<container id="Navc" hidden="true" >
+				<!-- Advice text -->
+				<widget class="text" id="dNav" alignment="centre_y, left" size="large" colour="faded white">
+					<translation id="text" translation_id="233089" type="use" value="-" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="5"/>
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0"/>
+				<container  width="16">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+					<container id="dutc">
+						<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_inset="0"/>
+						<widget class="icon_button" id="preA" icon="icons/16px/up" show_button_appearance="false" click_event="preA" />
+						<widget class="icon_button" id="nxtA" icon="icons/16px/down" show_button_appearance="false"   click_event="nxtA" />
+					</container>
+				</container>
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right, extend" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0"/>
+
+					<!-- A wipe container setup to create a new widget when it receievs PROP_TEXT and to forward that data onto an embedded widget ('Atxt') -->
+					<container class="animated_wipe_down_container" id="advc" wipe_data_trigger_id="text" wipe_data_target_id="Atxt"
+								 remove_widget_after_wipe="true" draw_embedded_in_reverse_order="true" duration="0.7">
+						<!-- We don't want a wipe in -->
+						<record id="wipe_in_animation"/>
+						<!-- This widget will be created everytime we recieve PROP_TEXT -->
+						<record id="widget_properties"  class="plain_box" file="player/player development centre advice item text" />
+					</container>
+
+					<widget class="icon_button" id="dapb" icon="icons/16px/tick" hidden="true" auto_size="horizontal" show_button_appearance="false" />
+				</container>
+			</container>
+		</container>
+		<container class="client_object_viewer_xml_panel" default_width="-1" minimum_width="50" priority="100" id="staf">
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6"/>
+
+			<!-- Portrait -->
+			<widget class="object_portrait_picture" id="objP" scale_picture="true" image_alignment="centre" height="40" width="40">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+		</container>
+	</container>
+</panel>

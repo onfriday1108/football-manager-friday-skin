@@ -1,0 +1,124 @@
+<panel>
+    <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <container class="table" id="info" layout="-3, 7, -5, 32, -3, -5" mode="stripe_rows" row_spacing="6">
+        <boolean id="fixed_size_rows" value="false" />
+        <boolean id="auto_size_rows" value="true" />
+
+        <!-- default properties for everything in a table -->
+        <record id="default_properties">
+            <flags id="alignment" value="left,centre_y" />
+			<flags id="auto_size" value="vertical" />
+        </record>
+
+        <list id="column_table_properties">
+            <record indx="0" left="4" alignment="left,centre_y"/>
+            <record indx="1" alignment="left,centre_y" />
+			<record indx="2" alignment="left,centre_y" />
+			<record indx="3" alignment="left,centre_y" />
+			<record indx="4" alignment="left,centre_y" />
+			<record indx="5" alignment="left,centre_y" />
+        </list>
+
+        <list id="column_widget_properties">
+            <record indx="1" spec="text" alignment="left,centre_y" />
+            <record indx="2" spec="text" alignment="left,centre_y" />
+			<record indx="4" alignment="left,centre_y" />
+            <record indx="5" spec="text" alignment="left,centre_y" />
+        </list>
+
+        <widget class="label" row="0" col="0">
+            <translation id="text" translation_id="248017" type="use" value="Game Name" />
+        </widget>
+        <widget class="text" row="0" col="2" id="gana" column_span="3" />
+
+        <widget class="label" row="1" col="0">
+            <translation id="text" translation_id="248018" type="use" value="Last Saved" />
+        </widget>
+        <widget class="text" row="1" col="2" id="lsav" column_span="3" />
+
+        <widget class="label" row="2" col="0">
+            <translation id="text" translation_id="343485" type="use" value="Date Created[COMMENT: game information panel text, date of saved game creation in real life]" />
+        </widget>
+        <widget class="text" row="2" col="2" id="gcde" />
+
+        <widget class="label" row="2" col="4">
+            <translation id="text" translation_id="343733" type="use" value="Game Created on Version[COMMENT: game information panel text, will print the version of the game which the save was created on next to this string]" />
+        </widget>
+        <widget class="text" row="2" col="5" id="gcvn" />
+
+        <widget class="label" row="3" col="0">
+            <translation id="text" translation_id="343465" type="use" value="Current Version[COMMENT: game information panel text; displays the current version of the game running]" />
+        </widget>
+        <widget class="text" row="3" col="2">
+            <attachment class="get_global_attachment" get_property="lver" set_property="text" />
+        </widget>
+
+        <widget class="label" row="3" col="4">
+            <translation id="text" translation_id="295850" type="use" value="Game Date[COMMENT: game information screen; label to indicate the date in game]" />
+        </widget>
+        <widget class="date_cell" row="3" col="5" id="date">
+            <attachment class="get_global_attachment" get_property="date" set_property="valu" />
+        </widget>
+
+        <widget class="label" row="4" col="0">
+            <translation id="text" translation_id="248019" type="use" value="Game Time" />
+        </widget>
+        <widget class="text" row="4" col="2" id="time" />
+
+        <widget class="label" row="4" col="4">
+            <translation id="text" translation_id="248020" type="use" value="Addictedness Rating" />
+        </widget>
+        <widget class="text" row="4" col="5" id="addc" />
+
+        <widget class="label" row="5" col="0">
+            <translation id="text" translation_id="258294" type="use" value="Database Size[COMMENT: game status screen; label for showing db size]" />
+        </widget>
+        <widget class="text" row="5" col="2" column_span="2" id="dbsz" />
+
+        <widget class="label" row="5" col="4" id="dbcl">
+            <translation id="text" translation_id="293616" type="use" value="Database Changes" />
+        </widget>
+        <widget class="text" row="5" col="5" id="dbch" />
+
+        <widget class="label" row="6" col="0">
+            <translation id="text" translation_id="248025" type="use" value="Database Version" />
+        </widget>
+        <widget class="text" row="6" col="2" id="dver" auto_size="vertical" column_span="3" />
+
+        <widget class="label" row="7" col="0">
+            <translation id="text" translation_id="344776" type="use" value="Selected Nations[COMMENT: game information screen; details of the nations running in a saved game]" />
+        </widget>
+        <widget class="text" row="7" col="2" column_span="4" id="legs" auto_size="vertical">
+            <translation id="text" translation_id="248024" type="use" value="Example" />
+        </widget>
+
+        <widget class="label" row="8" col="0">
+            <translation id="text" translation_id="251925" type="use" value="Manageable Teams[COMMENT: game status screen; label for popup button showing nations or divisions which can be manageable]" />
+        </widget>
+        <widget class="popup_button" row="8" col="1" id="mgcl" auto_size="vertical" select_event="mgcl" column_span="2" colour="standard_button_text"/>
+
+        <widget class="check_box" row="8" col="4" id="rndl" column_span="2" click_event="rncl">
+            <translation id="text" translation_id="343266" type="use" value="Assign Random Teams to all Human Managers[COMMENT: game status screen; label for checkbox for assigning clubs to humans]" />
+        </widget>
+
+        <widget class="label" row="9" col="0">
+            <translation id="text" translation_id="357233" type="use" value="In-Game Editor Allowed[COMMENT: Label - Is the in game editor allowed to be used in this save]" />
+        </widget>
+        <widget class="label" row="9" col="2" id="igal" />
+
+        <widget class="label" row="9" col="4">
+            <translation id="text" translation_id="357235" type="use" value="In-Game Editor Used[COMMENT: Label - Has the in game editor been used in this save]" />
+        </widget>
+        <widget class="label" row="9" col="5" id="igeu" />
+
+        <widget class="label" row="10" col="0">
+            <string id="text" value="ID" />
+        </widget>
+        <widget class="text" row="10" col="2" id="stid" auto_size="vertical" />
+
+
+    </container>
+
+</panel>

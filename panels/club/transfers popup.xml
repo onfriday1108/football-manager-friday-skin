@@ -1,0 +1,70 @@
+﻿<panel width="600" >
+
+	<attachment_group class="vertical_arrange_autosize" />
+
+
+	<boolean id="should_force_refresh" value="true"/>
+	<boolean id="save_immediate_state" value="true"/>
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" />
+
+		<container height="60">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" vertical_inset="0"/>
+
+			<widget class="object_portrait_picture" width="40" height="40">
+				<boolean id="scale_picture" value="true" />
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre" />
+				<record id="object_property" get_property="objt" />
+			</widget>
+
+			<container >
+				<attachment_group class="vertical_arrange_autosize" vertical_inset="0" vertical_alignment="middle" vertical_gap="0"/>
+
+				<widget class="club_button" auto_size="all" icon_enabled="false">
+					<record id="object_property" get_property="objt" set_property="valu" />
+				</widget>
+
+				<widget class="text" id="trnb" auto_size="vertical" colour="faded text">
+
+				</widget>
+
+			</container>
+
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" />
+
+			<widget class="table" id="trin" mode="fill_rows, stripe_rows, printable, keyboard" auto_size_rows="true" auto_size="vertical" wants_lazy_load="true">
+				<!-- default properties adopted by every item in table -->
+				<record id="default_properties">
+					<flags id="alignment" value="left,centre_y"/>
+				</record>
+
+			</widget>
+
+			<widget class="table" id="trou" save_session_state="true" mode="fill_rows, stripe_rows, printable, keyboard" auto_size_rows="true" auto_size="vertical" wants_lazy_load="true">
+				<!-- default properties adopted by every item in table -->
+				<record id="default_properties">
+					<flags id="alignment" value="left,centre_y"/>
+				</record>
+			</widget>
+
+
+
+
+		</container>
+
+
+
+
+	</container>
+
+
+
+
+
+
+</panel>

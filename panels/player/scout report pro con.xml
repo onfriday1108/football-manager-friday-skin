@@ -1,0 +1,19 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="10"/>
+
+	<container id="outr">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" horizontal_gap="6"/>
+
+		<widget class="picture" id="icon" width="35" height="35" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+
+		<container id="iner">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_inset="0" />
+
+			<widget class="label" id="titl" font="label" auto_size="vertical"  />
+			<widget class="text" id="desc" auto_size="vertical"/>
+		</container>
+
+	</container>
+
+	<widget class="horizontal_divider" />
+</panel>

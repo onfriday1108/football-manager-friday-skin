@@ -1,0 +1,49 @@
+﻿<panel width="220">
+  <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" vertical_offset="0" horizontal_gap="8"/>
+  <list id="draw_order">
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at02"/>
+		<record entity_layout_id="at01"/>
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container class="bordered_box_no_margin" entity_layout_id="at00" id="aftb" appearance="boxes/custom/solid/rounded/paper" height="40">
+		<string id="red_replacement" value="blue 400"/>
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<widget class="primary_icon_button" entity_layout_id="at02" id="aftX" click_event="esUn" appearance="buttons/standard/normal/button" icon_alignment="centre_x,centre_y" width="40">
+			<string id="icon" value="icons/16px/cross"/>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="-5" get_side="right" set_side="right" move_side="true" target="main"/>
+		</widget>
+		<widget class="widget_popup_button" entity_layout_id="at01" id="aftp" appearance="buttons/standard/normal/button">
+			<string id="widget_type" value="client_object_viewer_xml_panel"/>
+			<string id="set_property" value="objL"/>
+			<record id="object_list">
+				<string id="get_property" value="objL"/>
+			</record>
+			<record id="widget_properties" file="widgets/popup available reserve players object table" width="600"/>
+			<record id="modal_popup_properties" file="modal popup panel auto sized"/>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" target="at02"/>
+		</widget>
+	</container>
+</panel>

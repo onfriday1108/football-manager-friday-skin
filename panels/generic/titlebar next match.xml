@@ -1,0 +1,78 @@
+<panel>
+  <!--container shown when there is a next match available-->
+  <container class="inner_box" appearance="pitch/scoreboard/bar" height="30" id="nemc">
+    <layout class="stick_to_sides_attachment" alignment="top" />
+    <layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+    <layout class="fit_children_attachment" alignment="horizontal,fill" />
+
+    <container>
+      <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" />
+      <layout class="fit_children_attachment" alignment="horizontal,fill" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" />
+
+      <widget class="picture" id="otpi" height="16" width="24" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+        <layout class="arrange_horizontal_attachment" alignment="right" />
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+      </widget>
+
+      <widget class="text" id="otna" alignment="centre" auto_size="all" multiline="false" spec="text" size="8" colour="white">
+        <layout class="arrange_horizontal_attachment" alignment="right" />
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+      </widget>
+
+      <widget class="text" id="loca" alignment="centre" auto_size="all" multiline="false" spec="text" size="8" colour="white">
+        <layout class="arrange_horizontal_attachment" alignment="right" />
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+      </widget>
+
+      <widget class="text" alignment="centre" auto_size="all" multiline="false" spec="text" size="8" colour="white">
+        <translation id="text" translation_id="233089" type="use" value="-" />
+        <layout class="arrange_horizontal_attachment" alignment="right" />
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+      </widget>
+
+      <widget class="text" id="comp" alignment="centre" auto_size="all" multiline="false" spec="text" size="8" colour="white">
+        <layout class="arrange_horizontal_attachment" alignment="right" />
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+      </widget>
+
+      <widget class="text" alignment="centre" auto_size="all" multiline="false" spec="text" size="8" colour="white">
+        <translation id="text" translation_id="233089" type="use" value="-" />
+        <layout class="arrange_horizontal_attachment" alignment="right" />
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+      </widget>
+
+      <widget class="text" id="nMat" alignment="centre" auto_size="all" multiline="false" spec="text" size="8" colour="white" format="days_only">
+        <layout class="arrange_horizontal_attachment" alignment="right" />
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+      </widget>
+      
+    </container>
+  </container>
+
+  <!--container shown when there is no next match-->
+  <container class="inner_box" appearance="pitch/scoreboard/bar" height="30" id="nonm">
+    <layout class="stick_to_sides_attachment" alignment="top" />
+    <layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+    <layout class="fit_children_attachment" alignment="horizontal,fill" />
+
+    <container>
+      <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" />
+      <layout class="fit_children_attachment" alignment="horizontal,fill" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" />
+
+      <!--explanatory text-->
+      <widget class="text" alignment="centre" auto_size="all" multiline="false" spec="text" size="8" colour="white">
+        <translation id="text" translation_id="296342" type="use" value="You currently don't have any matches planned." />
+        <layout class="arrange_horizontal_attachment" alignment="right" />
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+      </widget>
+
+    </container>
+  </container>
+
+</panel>

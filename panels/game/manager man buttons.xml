@@ -1,0 +1,72 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at06" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="main_transparent_box" entity_layout_id="at03" id="at03" auto_size="horizontal" height="50">
+		<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="group_align_right" get_side="right" set_side="right" use_own_content_rectangle="true" use_children_to_size="true" target="at06" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<widget class="icon_button" entity_layout_id="at01" appearance="buttons/subtle/normal/button" icon_alignment="centre_x,centre_y" id="at01" width="45" name="camera button">
+			<string id="icon" value="icons/16px/camera" />
+			<string id="click_event" value="cTGl" />
+			<translation id="hint" translation_id="468956" type="use" value="Change the camera angle[COMMENT: tooltip for adding face to the manager man profile, camera angle button]" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+		</widget>
+		<widget class="toggle_button" entity_layout_id="at02" appearance="buttons/subtle/normal/button" icon_alignment="centre_x,centre_y" id="tDtB" width="45" name="texture button">
+			<string id="icon_colour" value="text" />
+			<string id="icon" value="icons/custom/add manager/face" />
+			<string id="click_event" value="tGDT" />
+			<translation id="hint" translation_id="468957" type="use" value="Toggle whether to use the Photofit or build your appearance from scratch.[COMMENT: tooltip for adding face to the manager man profile, toggle between modes]" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="right" set_side="left" move_side="true" target="at01" />
+		</widget>
+		<widget class="icon_button" entity_layout_id="at04" icon_alignment="centre_x,centre_y" id="at04" appearance="buttons/subtle/normal/button" width="45" name="save_appearance_icon_button">
+			<global id="hidden" name="platform_is_stadia"/>
+			<string id="icon" value="icons/custom/highlights/save" />
+			<string id="hint" value="Save Avatar" />
+			<string id="click_event" value="svAp" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="right" set_side="left" move_side="true" target="at02" />
+		</widget>
+		<widget class="icon_button" entity_layout_id="at00" id="at00" appearance="buttons/subtle/normal/button" icon_alignment="centre_x,centre_y" width="45" name="load_appearance_icon_buttons">
+			<global id="hidden" name="platform_is_stadia"/>
+			<string id="icon" value="icons/16px/folder" />
+			<string id="hint" value="Load Avatar" />
+			<string id="click_event" value="unch" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="right" set_side="left" move_side="true" target="at04" />
+		</widget>
+
+		<widget class="spacer" entity_layout_id="at06" id="at06" width="1"  name="spacer_container">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="right" set_side="left" move_side="true" target="at00" />
+		</widget>
+	</container>
+</panel>

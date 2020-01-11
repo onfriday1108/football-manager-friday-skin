@@ -1,0 +1,10 @@
+<panel>
+  <!-- Get player status flags-->
+  <record id="object_property" get_property="Pnfo" dont_set_object="true" dont_set_hint="true"/>
+  
+  <widget class="player_status_all_button" id="secw" appearance="buttons/custom/status round" alignment="bottom" offset_x="0" offset_y="4" gap="-4" maximised="false" max_items_per_row_or_column="3" embed_in_frame="true">
+    <layout class="stick_to_sides_attachment" alignment="left,top" inset="4" embed_in_frame="true" />
+
+    <widget class="picture" id="icow" width="26" height="26" image_alignment="centre" embed_in_frame="true"/>
+  </widget>
+</panel>

@@ -1,0 +1,40 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="Ttea" set_property="objt" target="stpa" />  
+	</list>
+	
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" />
+		<widget class="text" text="" colour="faded text" auto_size="vertical" font="title">
+			<translation id="text" translation_id="447700" type="use" value="Scouting Centre[COMMENT: FR 19770; transfer centre; scouting centre link button text]" />
+		</widget>&gt;
+		<widget class="text" id="scCs" auto_size="vertical" />
+		<widget class="text" id="recs" auto_size="vertical" />
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="120,-1" />
+			<container file="widgets/tutorial/dummy scout recommendation widget" />
+			<widget class="text" id="rats" auto_size="vertical">
+				<layout class="centre_in_parent_attachment" alignment="vertical" />
+			</widget>
+		</container>
+	</container>
+
+	<!-- Manual height set for now. I am going to refactor this and have added it as a task -->
+	<container class="inner_subtle_box" height="180">
+		<attachment_group class="vertical_arrange" vertical_alignment="top"/>
+		<widget class="text" auto_size="vertical" colour="faded text" font="title">
+			<translation id="text" translation_id="227995" type="use" value="Player Search" />
+		</widget>
+		<widget class="text" auto_size="vertical">
+			<translation id="text" translation_id="450762" type="use" value="The packages owned determine the number of players available to search through as well as increasing the knowledge level and player role visibility of players covered. Youth packages cover players aged 21 and under.[COMMENT: FR 22281, scouting package help]" />
+		</widget>
+		<widget class="scouting_top_panel" file="team/scouting top bar packages" height="75" id="stpa">
+			<list id="visible_items">
+				<flags value="scpc" />
+				<flags value="yosp" />
+			</list>
+		</widget>
+	</container>
+</panel>

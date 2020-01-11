@@ -1,0 +1,13 @@
+﻿<panel height="20">
+  <layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <list id="properties_to_forward">
+    <record get_property="text" set_property="text" target="crTx"/>
+  </list>
+
+  <widget class="label" id="crTx" auto_size="vertical" alignment="left, centre_y" size="xsmall" multi_line="false">
+    <layout class="centre_in_parent_attachment" alignment="vertical"/>
+  </widget>
+
+</panel>

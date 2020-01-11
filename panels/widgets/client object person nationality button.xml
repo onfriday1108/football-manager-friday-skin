@@ -1,0 +1,11 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <!-- person nationality -->
+  <widget class="person_nationality_button" alignment="left,centre_y" format="[%nation#1-nationality]">
+    <record id="object_property">
+      <integer id="get_property" value="objt"/>
+      <integer id="set_property" value="objt"/>
+    </record>
+  </widget>
+</panel>

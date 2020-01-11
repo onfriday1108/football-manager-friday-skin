@@ -1,0 +1,64 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+	<!-- the transfer clause details collapsable panel -->
+	<widget class="collapsable_box" id="tccb">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" />
+
+		<boolean id="save_session_state" value="true" />
+		<boolean id="save_default_state" value="true" />
+
+		<container class="scrolling_box" height="80" id="tcsb">
+
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			<container>
+
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="table" id="tcdt" mode="fill_rows, stripe_rows" layout="-1,-3">
+
+					<flags id="auto_size" value="vertical" />
+					<boolean id="all_content_same_height" value="false" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<list id="column_widget_properties">
+						<record index="0" auto_size="all" alignment="left,centre_y" spec="text" />
+						<record index="1" spec="text" colour="selection" alignment="left,centre_y" auto_size="vertical" />
+					</list>
+
+					<!-- table isn't sortable -->
+					<list id="column_table_properties">
+						<record index="0" alignment="left,centre_y" left="4" />
+						<record index="1" top="2" bottom="2" right="4" />
+					</list>
+
+					<widget class="text" id="desw" col="0" row="0" column_span="2" />
+					<widget class="label" col="0" row="1">
+						<translation id="text" translation_id="230121" type="use" value="Fee" />
+					</widget>
+					<widget class="text" id="feew" col="1" row="1" />
+				</widget>
+				<!-- table -->
+
+				<!-- group box containing buttons at bottom right corner -->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+
+					<widget class="button" id="cfsb" auto_size="all" click_event="acct">
+						<translation id="text" translation_id="296331" type="use" value="Sell Clause" />
+					</widget>
+					<widget class="button" id="cfbb" auto_size="all" click_event="acct">
+						<translation id="text" translation_id="296332" type="use" value="Buy Clause" />
+					</widget>
+				</container>
+			</container>
+
+		</container>
+		<!-- scrolling box -->
+	</widget>
+</panel>

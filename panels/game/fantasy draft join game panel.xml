@@ -1,0 +1,208 @@
+﻿<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+	<container class="inner_subtle_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<translation id="title" translation_id="447530" type="use" value="Join Draft[COMMENT: Fantasy Draft, FR 18768; Button to join existing game]" />
+
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+			<!-- Competition format-->
+			<widget class="label" alignment="centre" font="title" auto_size="vertical">
+				<translation id="text" translation_id="445098" type="use" value="Format[COMMENT: FR 18768 - format of the new versus/fantasy draft competition]" />
+			</widget>
+			<container id="vsCC">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+				<!-- Properties for comp type radio buttons -->
+				<!-- Note that the appearance given here will have left/normal/right appended according to each button's position -->
+				<record id="widget_properties" appearance="switches/toggle/" colour="text" style="bold" alignment="centre" icon_enabled="false" auto_size="vertical" show_button_appearance="true" />
+			</container>
+
+			<!-- Other filters -->
+			<container>
+				<layout class="centre_in_parent_attachment" alignment="horizontal" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+				<!-- Squad budget -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<widget class="label" alignment="left" auto_size="vertical">
+						<translation id="text" translation_id="450737" type="use" value="Budget[COMMENT: Join Fantasy draft - filter by budget header]" />
+					</widget>
+					<widget class="popup_button" id="sqbd" sele="sear" auto_size="vertical">
+						<list id="items">
+							<!-- ANY-->
+							<record id="1000">
+								<translation id="text" translation_id="338919" type="use" value="All[COMMENT - club reputation filter text, for all clubs]" />
+							</record>
+							<!-- SQUAD_BUDGET_SHOESTRING-->
+							<record id="0">
+								<translation id="text" translation_id="423800" type="use" value="Shoestring[COMMENT: FR11478 Draft option; option to set all the clubs as shoestring ie an exceptionally small budget]" />
+							</record>
+							<!-- SQUAD_BUDGET_POOR-->
+							<record id="1">
+								<translation id="text" translation_id="423801" type="use" value="Poor[COMMENT: FR11478 Fantasy Draft option; option to set all the clubs as poor]" />
+							</record>
+							<!-- SQUAD_BUDGET_OKAY-->
+							<record id="2">
+								<translation id="text" translation_id="227328" type="use" value="Okay" />
+							</record>
+							<!-- SQUAD_BUDGET_RICH-->
+							<record id="3">
+								<translation id="text" translation_id="423802" type="use" value="Rich[COMMENT: FR11478 Fantasy Draft option; option to set all the clubs as rich]" />
+							</record>
+						</list>
+						<integer id="selection" value="1000" />
+					</widget>
+				</container>
+				<!-- Server name -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" alignment="left" auto_size="vertical">
+						<translation id="text" translation_id="335293" type="use" value="Server name[COMMENT: find network game; server name field]" />
+					</widget>
+					<widget class="edit_box" id="name" return_event="sear" auto_size="vertical" />
+				</container>
+				<!-- Friends only -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="20" do_not_size="true" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="20" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="check_box" id="frnd" click_event="frnd">
+						<translation id="hint" translation_id="466423" type="use" value="Choose whether or not to include only games involving your friends.[COMMENT: hint for a drop down allowing the user to filter search results of available online games. Cannot be feminised]" />
+						<translation id="text" translation_id="336655" type="use" value="Show only friends[COMMENT: Leaderboard panel; check box text for showing only your friends in the high scores leaderboards]" />
+					</widget>
+				</container>
+				<!-- Passwords -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="20" do_not_size="true" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="20" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="check_box" id="pass">
+						<translation id="hint" translation_id="342026" type="use" value="Choose whether or not to include passworded games in the filter results.[COMMENT: hint for a drop down allowing the user to filter search results of available online games]" />
+						<translation id="text" translation_id="335196" type="use" value="No password[COMMENT: find network game; filter field]" />
+					</widget>
+				</container>
+				<!-- Search button -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="right" inset="0" apply_to_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+					<widget class="primary_button" click_event="sear" auto_size="all">
+						<translation id="text" translation_id="247194" type="use" value="Search" />
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<widget class="main_box" id="sslb">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="table" id="Srec" select_event="sltr" double_click_event="join">
+				<flags id="layout" value="20,-1,120,120,120,120,120,120" />
+				<flags id="mode" value="select_rows, show_bullets" />
+				<boolean id="auto_size_rows" value="true" />
+
+
+				<list id="headings">
+					<record alignment="centre">
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="229689" type="use" value="Name" />
+						<translation id="hint" translation_id="342110" type="use" value="The name of the server game.[COMMENT: join network screen; hint for field showing the name of the network host game]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="335014" type="use" value="Created by[COMMENT: join network screen; field showing creator of network game]" />
+						<translation id="hint" translation_id="342111" type="use" value="The name of the user who created the game.[COMMENT: join network screen; hint for field showing creator of network game]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="335987" type="use" value="Game type[COMMENT: find network game; game type field, asks the user to select a type of network game to play, any, an fm career, an fmc career, or a versus competition]" />
+						<translation id="hint" translation_id="342116" type="use" value="The type of game being played.[COMMENT: find network game; hint for game type field, asks the user to select a type of network game to play, any, an fm career, an fmc career, or a versus competition]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="334998" type="use" value="Club managers[COMMENT: join network screen; field showing number of managers]" />
+						<translation id="hint" translation_id="342114" type="use" value="The number of human managers in the game.[COMMENT: join network screen; hint for field showing number of managers]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="242853" type="use" value="Status" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="388930" type="use" value="Squad Budget[COMMENT: FR 8517, the total budget for the team which is a combination of the current value of the player plus his contract fees]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="390518" type="use" value="Player Pool[COMMENT: versus competition panel, label text for list of players available for selection]" />
+					</record>
+
+				</list>
+
+				<list id="column_widget_properties">
+					<record indx="0">
+						<flags id="algn" value="centre" />
+					</record>
+					<record indx="1">
+						<flags id="algn" value="left,centre_y" />
+						<flags id="spec" value="text" />
+					</record>
+					<record indx="2">
+						<flags id="algn" value="left,centre_y" />
+					</record>
+					<record indx="3">
+						<flags id="algn" value="left,centre_y" />
+					</record>
+					<record indx="4">
+						<flags id="algn" value="left,centre_y" />
+					</record>
+					<record indx="5">
+						<flags id="algn" value="left,centre_y" />
+					</record>
+					<record indx="6">
+						<flags id="spec" value="text" />
+						<flags id="algn" value="left,centre_y" />
+					</record>
+					<record indx="7">
+						<flags id="spec" value="text" />
+						<flags id="algn" value="left,centre_y" />
+					</record>
+				</list>
+			</widget>
+		</widget>
+	</container>
+
+	<!-- buttons panel -->
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+		<!-- cancel button-->
+		<widget class="button" id="cncl" auto_size="all">
+			<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="0" />
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			<record id="click_event" event_id="cfDj" />
+		</widget>
+
+		<!-- rest of buttons on right -->
+
+		<widget class="primary_icon_button" id="join" auto_size="all">
+			<layout class="stick_to_sides_attachment" alignment="right,bottom" inset="0" />
+			<translation id="text" translation_id="248408" type="use" value="Join Game" />
+			<record id="click_event">
+				<flags id="event_id" value="join" />
+			</record>
+		</widget>
+
+	</container>
+</panel>

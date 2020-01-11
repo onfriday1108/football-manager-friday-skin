@@ -1,0 +1,38 @@
+<panel>
+<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+<container class="inner_subtle_box">
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	
+	<widget class="table" id="gatb" mode="fill_rows, stripe_rows" layout="150, 150, 150, -1" fixed_size_rows="false" auto_size_rows="true">
+		
+		<list id="headings">
+			<record alignment="left,centre_y">
+				<translation id="text" translation_id="229773" type="use" value="Year" />
+			</record>
+			<record alignment="left,centre_y">
+				<translation id="text" translation_id="247947" type="use" value="Month" />
+			</record>
+			<record alignment="left,centre_y">
+				<translation id="text" translation_id="258239" type="use" value="Week[COMMENT: Awards Panel; past winners data header]" />
+			</record>
+			<record alignment="left,centre_y">
+				<translation id="text" translation_id="229526" type="use" value="Details" />
+			</record>
+		</list>
+		
+		<list id="column_table_properties">
+			<record index="0" id="year" sort_disabled="true" />
+			<record index="1" id="monh" sort_disabled="true" />
+			<record index="2" id="week" sort_disabled="true" />
+			<record index="3" id="desc" sort_disabled="true" top="4" bottom="4" />
+		</list>		
+		
+		<record id="default_properties">
+			<flags id="alignment" value="left,centre_y" />
+		</record>
+
+	</widget>
+</container>
+
+</panel>

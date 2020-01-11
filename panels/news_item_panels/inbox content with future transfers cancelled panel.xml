@@ -1,0 +1,10 @@
+﻿<panel>
+
+  <layout class="fit_children_attachment" alignment="vertical" gap="0" offset="10"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="10"/>
+
+  <!-- grid -->
+  <widget class="table" id="fttb" layout="-1" mode="fill_rows" fixed_size_rows="true" auto_size="vertical" column_spacing="1" row_spacing="4" row_height="90"/>
+
+
+</panel>

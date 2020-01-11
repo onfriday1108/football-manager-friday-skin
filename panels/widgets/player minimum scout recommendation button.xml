@@ -1,0 +1,17 @@
+﻿<panel height="26" width="26">
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <widget class="picture" id="icon" file="icons/custom/scouting/recommendation compact" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" >
+    <record id="object_property" get_property="rrep" set_property="rrep" />
+  </widget>
+
+  <widget class="text" alignment="centre" style="semi_bold, shadowed" size="8" colour="white">
+    <record id="object_property" get_property="text" set_property="text" />
+  </widget>
+
+  <widget class="button" appearance="buttons/custom/over state only/button" >
+    <record id="object_property" get_property="clke" set_property="clke" />
+  </widget>
+
+
+</panel>

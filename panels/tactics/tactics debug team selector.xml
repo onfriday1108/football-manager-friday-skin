@@ -1,0 +1,364 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<container id="subs" class="main_box">
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+
+			<widget class="label" id="time" auto_size="horizontal" embed_in_frame="true"/>
+
+			<widget class="button" click_event="upla" auto_tick_exclusive="true" auto_size="horizontal" fixed="false" embed_in_frame="true">
+				<string id="text" value="Reload Top RA"/>
+			</widget>
+
+			<widget class="button" id="pBut" click_event="pBut" auto_size="all" embed_in_frame="true" fixed="true">
+				<string id="text" value="Check Reserve Match"/>
+			</widget>
+
+			<!-- player view menu -->
+			<widget class="button" click_event="rebu" auto_tick_exclusive="true" auto_size="horizontal" fixed="false" embed_in_frame="true">
+				<string id="text" value="Rebuild"/>
+			</widget>
+
+		</container>
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<container class="tabbed_container" id="main" default_item="norm" save_session_state="true" changed_event="chrt">
+
+			<container id="norm">
+				<string id="title" value="Squad Selection"/>
+
+				<layout class="arrange_vertical_attachment" alignment="top,extend" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<container height="200">
+
+					<layout class="arrange_horizontal_attachment" layout="-1, -1"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+					<!--The fixture panel -->
+					<container>
+
+						<layout class="arrange_horizontal_attachment" layout="-1, -1"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+						<!--Container-->
+						<container id="fixN" class="main_box">
+
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+							<!--AI's fixture list...-->
+							<widget class="table" id="fixt" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="5">
+								<list id="column_table_properties">
+									<record index="0" alignment="left" />
+								</list>
+
+							</widget>
+						</container>
+
+						<!--Manager Info-->
+						<container class="main_box" height="150">
+							<string id="title" value="Manager Info"/>
+
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+							<!--Managers Useful Info...-->
+							<widget class="table" id="mang" layout="-1" mode="fill_rows" fixed_size_rows="true" row_height="18" row_spacing="0">
+
+							</widget>
+
+						</container>
+
+					</container>
+
+					<!--Table with scoring info...-->
+					<container class="tabbed_container" id="main" height="200" default_item="role" save_session_state="true" changed_event="chrt">
+
+						<container id="role">
+							<string id="title" value="Role"/>
+
+							<layout class="arrange_horizontal_attachment" layout="-2, -3"/>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+							<container>
+
+								<layout class="fit_children_attachment" alignment="vertical,fill" />
+								<layout class="arrange_vertical_attachment" alignment="top" gap="4" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+								<widget class="table" layout="-1, -1" auto_size_rows="true" auto_size="vertical" column_gap="5" column_spacing="10" row_spacing="5">
+
+									<list id="column_widget_properties">
+										<record indx="0" alignment="left,centre_y" />
+										<record indx="1" alignment="left,centre_y" auto_size="all" spec="text" colour="selection" />
+									</list>
+
+									<record id="default_properties" auto_size="all" fixed="false" />
+
+									<!--Position-->
+									<widget class="position_popup" id="posi" select_event="posi" row="0" col="0">
+										<string id="text" value="Position"/>
+									</widget>
+
+									<!--Role-->
+									<widget class="popup_button" id="rolp" disabled="true" select_event="rolp" row="1" col="0">
+										<string id="text" value="Role"/>
+									</widget>
+
+									<!--Duty-->
+									<widget class="popup_button" id="dutp" disabled="true" select_event="dutp" row="2" col="0">
+										<string id="text" value="Duty"/>
+									</widget>
+
+									<!--Label Position-->
+									<widget class="label" id="posl" select_event="posi" row="0" col="1">
+										<string id="text" value="Position"/>
+									</widget>
+
+									<!--Label Role-->
+									<widget class="label" id="roll" select_event="posi" row="1" col="1">
+										<string id="text" value="Role"/>
+									</widget>
+
+									<!--Label Duty-->
+									<widget class="label" id="dutl" select_event="posi" row="2" col="1">
+										<string id="text" value="Duty"/>
+									</widget>
+
+								</widget>
+
+								<widget class="button" id="BOSH" auto_size="all" click_event="BOSH">
+									<string id="text" value="ACTIVATE!"/>
+								</widget>
+
+							</container>
+
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="top,extend" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+								<widget class="table" id="pplr" layout="-3, -1" mode="fill_rows, stripe_rows" auto_size_rows="true" row_height="18" row_spacing="0">
+
+									<integer id="default_sort_column" value="stpl" />
+
+									<list id="column_table_properties">
+										<record index="0" alignment="left" />
+										<record index="1" alignment="left" id="stpl" sort_disabled="false" sort_ascending="false" />
+									</list>
+
+									<list id="headings">
+										<record alignment="left,centre_y" column="0">
+											<string id="text" value="Role" />
+										</record>
+										<record alignment="left,centre_y" column="1">
+											<string id="text" value="RA Score" />
+										</record>
+									</list>
+
+								</widget>
+
+							</container>
+						</container>
+
+						<container id="scos">
+
+							<string id="title" value="Scoring"/>
+							<!--<layout class="fit_children_attachment" alignment="vertical" />-->
+							<layout class="arrange_horizontal_attachment" layout="-1" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+							<widget class="table" id="scor" layout="-1,-1" mode="fill_rows"  fixed_size_rows="true" row_height="18" row_spacing="0">
+								<list id="column_table_properties">
+									<record index="0" alignment="left" />
+									<record index="1" alignment="left" />
+								</list>
+							</widget>
+
+
+						</container>
+
+					</container>
+
+				</container>
+
+				<!--Split this into two-->
+				<!-- These were set but make no practical sense and don't match any properties - min_width_top="100" min_width_bottom="100" -->
+				<container class="vertical_split_container" starting_layout="-1, -1" save_session_state="true" save_default_state="true" >
+
+					<container class="main_box">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+						<container embed_in_frame="true">
+							<attachment_group class="title_embedded_panel_right" />
+
+							<!-- player view menu -->
+							<widget class="popup_button" id="vieL" select_event="view" auto_tick_exclusive="true" auto_size="horizontal" fixed="false" embed_in_frame="true"/>
+							<widget class="popup_button" id="rigL" select_event="slit" auto_tick_exclusive="true" auto_size="horizontal" fixed="false" embed_in_frame="true"/>
+
+						</container>
+
+						<!--Final Selection-->
+						<widget class="tactics_debug_team_selector_player_list_panel" id="left"/>
+
+					</container>
+
+
+					<container class="main_box">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+						<container embed_in_frame="true">
+							<attachment_group class="title_embedded_panel_right" />
+
+							<!-- player view menu -->
+							<widget class="popup_button" id="vieR" select_event="view" auto_tick_exclusive="true" auto_size="horizontal" fixed="false" embed_in_frame="true"/>
+							<widget class="popup_button" id="rigR" select_event="slit" auto_tick_exclusive="true" auto_size="horizontal" fixed="false" embed_in_frame="true"/>
+
+						</container>
+
+						<!--The Panel-->
+						<widget class="tactics_debug_team_selector_player_list_panel" id="righ"/>
+
+					</container>
+
+				</container>
+			</container>
+
+			<container id="ntea" class="main_box">
+				<string id="title" value="Team Selection Algorithm"/>
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" />
+
+					<record id="default_properties" embed_in_frame="true" />
+
+					<widget class="button" click_event="StSb" auto_size="horizontal" fixed="false" tkex="true">
+						<string id="text" value="Switch To 11/Subs"/>
+					</widget>
+
+					<widget class="check_box" id="quiP" click_event="quiP" auto_size="horizontal" fixed="false">
+						<string id="text" value="Quick Pick Mode"/>
+					</widget>
+
+					<widget class="check_box" id="sVmt" click_event="sVmT" auto_size="horizontal" fixed="false">
+						<string id="text" value="Score Via Match"/>
+					</widget>
+
+					<widget class="check_box" click_event="ntps" auto_size="all">
+						<string id="text" value="NULL tactic positions"/>
+					</widget>
+
+					<!-- player view menu -->
+					<widget class="button" click_event="newt" auto_size="horizontal" fixed="false" tkex="true">
+						<string id="text" value="Calculate Team Selector"/>
+					</widget>
+
+				</container>
+
+				<layout class="arrange_vertical_attachment" layout="-2, -3"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1, -1"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+					<!-- useful panel...-->
+					<widget class="position_superiority_panel" id="pssp"/>
+
+					<!-- useful panel...-->
+					<widget class="player_lost_potential_panel" id="pslp"/>
+
+				</container>
+
+				<widget class="team_selector_solution_panel" id="tssp"/>
+
+			</container>
+
+
+			<container id="rols" class="main_box">
+				<string id="title" value="Role Selector Algorithm"/>
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" />
+
+
+					<!-- player view menu -->
+					<widget class="button" click_event="Ract" auto_size="horizontal" fixed="false" tkex="true" embed_in_frame="true">
+						<string id="text" value="Calculate Roles"/>
+					</widget>
+
+				</container>
+
+				<layout class="arrange_vertical_attachment" layout="-3, -5"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1, -1"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+					<!-- useful panel...-->
+					<widget class="position_superiority_panel" id="Rssp" is_role_selector_mode="true"/>
+
+					<!-- useful panel...-->
+					<widget class="player_lost_potential_panel" id="Rslp" is_role_selector_mode="true"/>
+
+				</container>
+
+				<widget class="team_selector_solution_panel" id="RsoL" is_role_selector_mode="true"/>
+
+			</container>
+
+      <container id="rasp" class="main_box">
+        <string id="title" value="Team Selection Reasons/Stats"/>
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+        <container class="scrolling_box">
+          <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+          <widget class="table" id="ditb" layout="-1, -1, -1" mode="fill_rows, stripe_rows,printable" auto_size_rows="true" fixed_size_rows="false" row_spacing="0" auto_size="vertical">
+
+            <list id="headings">
+              <record alignment="left,centre_y">
+                <string id="text" value="Name" />
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Pros" />
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Cons" />
+              </record>
+            </list>
+
+            <record id="default_properties">
+              <flags id="alignment" value="left,centre_y" />
+            </record>
+
+            <list id="column_table_properties">
+              <record indx="0" sort_disabled="true"  />
+              <record indx="1" sort_disabled="true"  />
+              <record indx="2" sort_disabled="true"  />
+            </list>
+
+          </widget>
+        </container>
+        
+        <!-- buttons area -->
+        <container id="btna" embed_in_frame="true">
+          <attachment_group class="title_embedded_panel_right" />
+
+          <!-- buttons -->
+          <widget class="subtle_button" id="relo" auto_size="all" embed_in_frame="true" click_event="load">
+            <string id="text" value="Reload Selection" />
+          </widget>
+        </container>
+
+      </container>
+   </container>
+
+	</container>
+
+</panel>

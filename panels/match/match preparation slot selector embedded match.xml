@@ -1,0 +1,10 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="8" embed_in_frame="true"/>
+  <layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="true"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" embed_in_frame="true"/>
+
+  <widget class="view_menu_label_match" id="labl" auto_size="horizontal" font="fonts/panel_title" size="large" >
+		<translation id="text" translation_id="316591" type="use" value="Instructions For" />
+	</widget>
+	<widget class="view_menu_popup_match" id="popu" />
+</panel>

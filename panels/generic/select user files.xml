@@ -1,0 +1,73 @@
+<panel save_session_state="true">
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="inner_subtle_box">
+		<translation id="title" translation_id="320504" type="use" value="Editor Data Files[COMMENT: start new game screen; select user files section]" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container class="main_box">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- the panel -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" />
+
+				<widget class="table" id="tabl" mode="keyboard" fixed_size_rows="true" auto_size_rows="true" layout="-1, 150, 25, 70, 120, -1">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					<integer id="default_sort_column" value="file" />
+
+					<!-- headings -->
+					<list id="headings">
+						<record>
+							<translation id="text" translation_id="291329" type="use" value="File[COMMENT: select user files screen; file column header]" />
+							<flags id="algn" value="left,centre_y" />
+						</record>
+						<record>
+							<translation id="text" translation_id="308082" type="use" value="Nation / Continent[COMMENT: select user files screen; nation column header]" />
+							<flags id="algn" value="left,centre_y" />
+							<integer id="column_span" value="2" />
+						</record>
+						<record>
+							<translation id="text" translation_id="345479" type="use" value="Verified[COMMENT: select user files screen; header for column showing if rules are verified]" />
+							<flags id="algn" value="left,centre_y" />
+						</record>
+						<record>
+							<translation id="text" translation_id="293616" type="use" value="Database Changes" />
+							<flags id="algn" value="left,centre_y" />
+						</record>
+						<record>
+							<translation id="text" translation_id="230236" type="use" value="Description" />
+							<flags id="algn" value="left,centre_y" />
+						</record>
+					</list>
+
+					<list id="column_table_properties">
+						<record id="file" />
+						<record id="nati" />
+						<record id="-" />
+						<record id="chan" />
+						<record id="desc" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record index="0" id="file">
+							<flags id="alignment" value="left,centre_y" />
+						</record>
+
+						<record index="1">
+							<flags id="icon_alignment" value="left" />
+						</record>
+
+					</list>
+				</widget>
+			</container>
+
+			<!-- the buttons -->
+			<container file="generic/select editor files buttons" />
+		</container>
+	</container>
+
+
+</panel>

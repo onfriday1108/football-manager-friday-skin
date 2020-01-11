@@ -1,0 +1,67 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<container height="270">
+		<attachment_group class="vertical_arrange" vertical_layout="135,-1" vertical_gap="4"/>
+
+		<!--top bit with captain, key player and some stats-->
+		<container class="inner_subtle_box">
+			<attachment_group class="horizontal_arrange" horizontal_layout="-2,4,-1" />
+
+			<!--players of note - captain, key player etc-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_layout="-1,4,-1" />
+
+				<!--captain, key player-->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"  />
+
+					<!--captain-->
+					<widget class="squad_induction_player_stats_widget" id="capW" value="0" />
+
+					<!--key player-->
+					<widget class="squad_induction_player_stats_widget" id="kypW" value="2" />
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<!--hot prospect, top earner-->
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill"  />
+
+					<!--hot prospect-->
+					<widget class="squad_induction_player_stats_widget" id="hotW" value="1" />
+
+					<!--top earner-->
+					<widget class="squad_induction_player_stats_widget" id="topW" value="3" />
+				</container>
+			</container>
+
+			<widget class="vertical_divider" />
+
+			<!--team stats-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+				<!--average age-->
+				<widget class="container" id="avaW" file="tutorial/widgets/squad induction facts widget" />
+
+				<!--current internationals-->
+				<widget class="container" id="cinW" file="tutorial/widgets/squad induction facts widget" />
+			</container>
+		</container>
+		
+		<!--bottom bit with player statuses-->
+		<container class="inner_subtle_box" id="ssss">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4"/>
+
+			<!--how many players in the squad-->
+			<widget class="text" id="sqco" auto_size="vertical" font="title" colour="text"/>
+			
+			<!--squad statuses-->
+			<container class="squad_status_snapshot_panel" id="ssta" team_only="true" disable_person_links="true" >
+
+			</container>
+		</container>
+	</container>
+</panel>

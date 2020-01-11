@@ -1,0 +1,85 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- titled box -->
+	<widget class="main_box" alignment="left" force_title_borders="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- buttons area -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="labl" >
+				<translation id="text" translation_id="247942" type="use" value="Past Winners" />
+			</widget>
+
+			<!-- the comp menu -->
+			<widget class="view_menu_popup" id="cmps" sele="cmps" />
+		</container>
+
+		<!-- main table -->
+		<widget class="table" id="hptb" mode="fill_rows, stripe_rows" layout="65,130,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" fixed_size_rows="false" row_spacing="0" save_session_state="true">
+
+			<!-- headings -->
+			<list id="headings">
+				<record>
+					<translation id="text" translation_id="229773" type="use" value="Year" />
+				</record>
+				<record>
+					<translation id="text" translation_id="227740" type="use" value="Competition" />
+				</record>
+				<record>
+					<translation id="text" translation_id="230273" type="use" value="Stage[COMP stage type for menu]" />
+				</record>
+				<record>
+					<translation id="text" translation_id="229712" type="use" value="Winner" />
+				</record>
+				<record>
+					<translation id="text" translation_id="259420" type="use" value="Premiers[COMMENT: League winners in Australia NSL]" />
+				</record>
+				<record>
+					<translation id="text" translation_id="229713" type="use" value="Runner Up" />
+				</record>
+				<record>
+					<translation id="text" translation_id="242816" type="use" value="Third Placed" />
+				</record>
+				<record>
+					<translation id="text" translation_id="331944" type="use" value="Playoff Winners[COMMENT: competition history panel; table heading]" />
+				</record>
+				<record>
+					<translation id="text" translation_id="247165" type="use" value="Minor Premiers[COMMENT comp history panel: Australian NSL history style heading]" />
+				</record>
+				<record id="htvn" />
+				<record id="htsd" />
+			</list>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record index="0" id="yerc" left="4" />
+				<record index="1" id="comp" left="4" />
+				<record index="2" id="stag" />
+				<record index="3" id="winc" />
+				<record index="4" id="prem" />
+				<record index="5" id="runc" />
+				<record index="6" id="thic" />
+				<record index="7" id="plwn" />
+				<record index="8" id="mnpr" />
+				<record index="9" id="hosc" spec="text" right="4" />
+				<record index="10" id="hstc" spec="text" right="4" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" />
+				<record index="1" alignment="left,centre_y" />
+				<record index="2" alignment="left,centre_y" />
+				<record index="9" spec="text" alignment="left,centre_y" />
+				<record index="10" spec="text" alignment="left,centre_y" />
+			</list>
+
+		</widget>
+
+	</widget>
+	<!-- titled box -->
+
+</panel>

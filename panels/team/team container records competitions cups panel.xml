@@ -1,0 +1,37 @@
+<panel>
+	<!--for competitions/cup history, landmarks, league positions, attendances, results, sequences, players, transfers-->
+	<widget class="table" id="tabl" layout="120,-1" mode="fill_rows,keyboard,select_rows" auto_size_rows="true" fixed_size_rows="false" save_session_state="true" select_event="ysel">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+		<list id="column_table_properties">
+			<record indx="0" left="4" sort_disabled="false"/>
+			<record indx="1" sort_disabled="false"/>
+		</list>
+		<list id="column_widget_properties">
+			<record index="0" alignment="left,centre_y" spec="text"/>
+			<record index="1" alignment="left,centre_y" spec="text" colour="selection"/>
+		</list>
+	</widget>
+
+	<!-- Fixture list for selected year -->
+	<container class="client_object_viewer_xml_panel" id="fixt" width="400" alignment="left" hidden="true" should_force_refresh="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="right,vertical" inset="0"/>
+
+		<!-- Make panel slide in from the right-->
+		<animation class="translate_animation" start_value="1.0, 0.0" end_value ="0.0, 0.0" duration="0.8" end_mode="hold_auto_reverse_hold"/>
+
+		<container class="main_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<translation id="title" translation_id="242258" type="use" value="Fixtures" />
+
+			<widget class="simple_data_list" set_property="objt">
+				<!-- Get list of fixtures-->
+				<record id="object_property" get_property="TcyF" dont_set_object="true"/>
+				<record id="widget_info" class="client_object_viewer_xml_panel" file="match/fixture details tc cup history" height="26"/>
+			</widget>
+		</container>
+	</container>
+
+</panel>

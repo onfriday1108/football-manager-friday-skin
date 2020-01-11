@@ -1,0 +1,52 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+
+
+	<container class="inner_box" appearance="boxes/titled/compact/paper">
+		<translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- short term future / long term future -->
+		<!-- short term plans -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="label" auto_size="vertical" alignment="left,bottom" font="title" colour="faded text">
+				<translation id="text" translation_id="251277" type="use" value="Short-term Plans[COMMENT: player happiness panel]" />
+			</widget>
+
+			<widget class="table" id="futt" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false">
+				<list id="column_table_properties">
+					<record id="bull">
+						<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="16" />
+					</record>
+					<record id="text">
+						<record id="widget_info" class="text" auto_size="vertical"/>
+					</record>
+				</list>
+			</widget>
+
+		</container>
+		<!-- Long term plans -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="label" auto_size="vertical" alignment="left,bottom" font="title" colour="faded text">
+				<translation id="text" translation_id="251278" type="use" value="Long-term Plans[COMMENT: player happiness panel]" />
+			</widget>
+
+			<widget class="table" id="lftt" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" >
+				<list id="column_table_properties">
+					<record id="bull">
+						<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="16" />
+					</record>
+					<record id="text">
+						<record id="widget_info" class="text" auto_size="vertical"/>
+					</record>
+				</list>
+			</widget>
+		</container>
+	</container>
+	
+</panel>

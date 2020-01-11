@@ -1,0 +1,130 @@
+﻿<panel>
+
+	<layout class="arrange_horizontal_attachment" layout="-1,600,-1" gap="0" offset="25" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<!--this is to forward Shmu (show menu) to hide the text and show the menu if true, and vice versa-->
+	<list id="properties_to_forward">
+		<record get_property="Shmu" set_property="hidn" target="ShoT" />
+		<record get_property="Shmu" set_property="Shwn" target="ShoP" />
+	</list>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="middle" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container height="450">
+			<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="10" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container height="10" />
+
+			<widget class="text" height="25" alignment="right, centre_y" style="bold,shadowed">
+				<translation id="text" translation_id="495211" type="use" value="Not in use[COMMENT: AREA: UI; SUB-AREA: Gamepad button layout; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: gamepad button is not in use]" />
+			</widget>
+
+			<container height="25" />
+
+			<widget class="text" height="25" alignment="right, centre_y" style="bold,shadowed">
+				<translation id="text" translation_id="247672" type="use" value="Back" />
+			</widget>
+
+			<container height="125" />
+
+			<widget class="text" auto_size="vertical" alignment="right" style="bold,shadowed">
+				<translation id="text" translation_id="452612" type="use" value="Move Cursor[COMMENT: controller map options for Switch skin, please refer to terminology sheet where appropriate]" />
+			</widget>
+
+			<container height="40" />
+
+			<widget class="text" auto_size="vertical" alignment="right" style="bold,shadowed">
+				<translation id="text" translation_id="452613" type="use" value="List Navigation[COMMENT: controller map options for Switch skin, please refer to terminology sheet where appropriate]" />
+			</widget>
+
+		</container>
+
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		<widget class="picture" file="icons/custom/controller/nintendo/map" scale_picture="true" image_alignment="centre" />
+		<container height="30">
+			<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--bottom line of text-->
+			<container width="210" />
+
+			<widget class="text" auto_size="horizontal" alignment="right, top" style="bold,shadowed">
+				<translation id="text" translation_id="495211" type="use" value="Not in use[COMMENT: AREA: UI; SUB-AREA: Gamepad button layout; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: gamepad button is not in use]" />
+			</widget>
+
+
+			<container width="70" />
+
+			<widget class="text" auto_size="horizontal" alignment="right, top" style="bold,shadowed">
+				<translation id="text" translation_id="230337" type="use" value="Options" />
+			</widget>
+
+
+		</container>
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="middle" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container height="450">
+			<layout class="arrange_vertical_attachment" gap="0" offset="20" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="text" height="25" alignment="right, centre_y" style="bold,shadowed">
+				<translation id="text" translation_id="243222" type="use" value="Continue" />
+			</widget>
+
+			<container height="15" />
+
+			<widget class="text" height="25" alignment="right, centre_y" style="bold,shadowed">
+				<translation id="text" translation_id="396542" type="use" value="Forward[COMMENT: browser/procedural instruction relating to direction, opposite of 247672 Back]" />
+			</widget>
+
+			<container height="45" />
+
+			<widget class="text" height="25" alignment="right, centre_y" style="bold,shadowed">
+				<translation id="text" translation_id="452616" type="use" value="Contextual Action[COMMENT: controller map options for Switch skin, please refer to terminology sheet where appropriate]" />
+			</widget>
+
+			<container height="30" />
+
+			<widget class="text" height="25" alignment="right, centre_y" style="bold,shadowed">
+				<translation id="text" translation_id="452616" type="use" value="Contextual Action[COMMENT: controller map options for Switch skin, please refer to terminology sheet where appropriate]" />
+			</widget>
+
+
+			<container height="10" />
+
+			<widget class="text" height="25" alignment="right, centre_y" style="bold,shadowed">
+				<translation id="text" translation_id="249631" type="use" value="Select" />
+			</widget>
+
+
+			<container height="10" />
+
+			<widget class="text" height="25" alignment="right, centre_y" style="bold,shadowed">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+
+			<container height="8" />
+
+			<widget class="text" height="25" alignment="right, centre_y" style="bold,shadowed">
+				<translation id="text" translation_id="452615" type="use" value="Context Menu[COMMENT: controller map options for Switch skin, please refer to terminology sheet where appropriate]" />
+			</widget>
+
+
+		</container>
+
+	</container>
+
+
+</panel>

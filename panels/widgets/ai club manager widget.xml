@@ -1,0 +1,88 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<container class="inner_subtle_box_no_margin" >
+
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		<layout class="arrange_horizontal_attachment" layout="240,10,15,-1" offset="0" gap="0" />
+
+
+		<!--Manager Personal Details-->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="12" gap="4" />
+
+			<!--Manager profile pic-->
+			<widget class="picture" id="pic1" scale_picture="true" width="100" keep_aspect_ratio="true" image_alignment="left,bottom" />
+
+			<!--Manager profile details-->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+				<layout class="arrange_vertical_attachment" alignment="bottom" offset="12" gap="2"/>
+
+				<!--Player Name-->
+				<widget class="label" id="pnam" spec="text" alignment="left,centre_y" auto_size="vertical" style="bold"/>
+
+				<!--Nationality-->
+				<widget class="person_nationality_button" id="pnat" spec="text" size="small" alignment="left,centre_y" height="20" colour="faded text"/>
+
+				<!--age-->
+				<widget class="label" id="page" spec="text" size="small" alignment="left,centre_y" auto_size="vertical" colour="faded text"/>
+			</container>
+		</container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<widget class="vertical_divider" />
+		</container>
+
+		<widget class="spacer" />
+
+		<!--Club details-->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="12" gap="4" />
+
+
+
+			<!--Club profile details-->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="12" gap="2" />
+
+
+				<container height="20" >
+					<layout class="arrange_horizontal_attachment" layout="20,-1" offset="0" gap="4" />
+
+					<!--Club Shirt pic-->
+					<widget class="kit_picture" id="T_hk" kit_id="0" kit_use_db_preview="true" scale_picture="true" width="80"  keep_aspect_ratio="true" image_alignment="bottom">
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+						<boolean id="always_use_latest_object_list" value="true"/>
+						<!-- needed for fantasty draft create club changes -->
+						<record id="object_property">
+							<integer id="get_property" value="Tftm" />
+							<integer id="set_property" value="Ttea" />
+						</record>
+					</widget>
+
+					<!--Club Name-->
+					<widget class="label" id="cnam" spec="text" alignment="left,bottom" auto_size="vertical" style="bold">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" />
+					</widget>
+
+				</container>
+
+				<!--Stadium-->
+				<container height="20">
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4" />
+					<widget class="picture" file="icons/48px/stadium" height="20" width="20" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,top" red_replacement="grey2"  blue_replacement="normal_icon" green_replacement="black"/>
+					<widget class="label" id="csta" spec="text" size="small" alignment="left,centre_y" auto_size="vertical" colour="faded text" />
+				</container>
+				<!--Formation-->
+				<widget class="label" id="cfor" spec="text" size="small" alignment="left,centre_y" auto_size="vertical" colour="faded text" />
+
+			</container>
+		</container>
+	</container>
+</panel>

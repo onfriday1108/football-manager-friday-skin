@@ -1,0 +1,99 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0" />
+
+			<widget class="check_box" id="shoF" click_event="shoF" auto_size="all" save_session_state="true">
+				<translation id="text" translation_id="336655" type="use" value="Show only friends[COMMENT: Leaderboard panel; check box text for showing only your friends in the high scores leaderboards]" />
+			</widget>
+
+			<container width="2" height="1" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="right" gap="0" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+				<widget class="button" id="shYS" click_event="shYS" auto_size="all" >
+					<translation id="text" translation_id="336654" type="use" value="Show Yourself[COMMENT: Leaderboard panel; popup button text for skipping to range of scores that contain the human manager, but this can be accessed outside of the saved game so cannot be feminised]" />
+          <translation id="hint" translation_id="336654" type="use" value="Show Yourself[COMMENT: Leaderboard panel; popup button text for skipping to range of scores that contain the human manager, but this can be accessed outside of the saved game so cannot be feminised]" />
+				</widget>
+
+				<container width="4" />
+
+				<widget class="icon_button" id="frpg" click_event="frpg" width="35" icon="icons/16px/reset" auto_size="vertical">
+        <translation id="hint" translation_id="230251" type="use" value="Undo" />
+				</widget>
+
+				<container width="4" />
+
+         <container>
+            <attachment_group class="horizontal_arrange_autosize_all_centre" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0">
+              <global id="horizontal_gap" name="ui.split_button_row_gap" />
+            </attachment_group>
+				<widget class="icon_button" id="prpg" click_event="prpg" auto_size="all" appearance="buttons/standard/split/left/button" icon="icons/16px/left">
+				</widget>
+				<widget class="button" id="pglb" auto_size="all"  appearance="buttons/standard/split/middle/button">
+					<translation id="text" value="" />
+				</widget>
+				<widget class="icon_button" id="nxpg" click_event="nxpg" auto_size="all" appearance="buttons/standard/split/right/button" icon="icons/16px/right">
+				</widget>
+         </container>
+			</container>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="5" />
+
+			<widget class="text" size="10" id="lbon" auto_size="vertical" />
+			<widget class="text" style="semi_bold" size="14" auto_size="vertical">
+				<translation id="text" translation_id="335141" type="use" value="Leaderboard[COMMENT: Leaderboard panel; panel title]" />
+			</widget>
+		</container>
+
+		<widget class="table" id="lbtb" layout="45, -5, -2, 90, 90" save_session_state="true" dont_restore_selection="true" auto_size_rows="true">
+
+			<list id="column_table_properties">
+				<record indx="0" sort_disabled="true" alignment="left,centre_y" />
+				<record indx="1" sort_disabled="true" alignment="left,centre_y" />
+				<record indx="2" id="team" sort_disabled="true" alignment="left,centre_y" />
+				<record indx="3" id="poin" sort_disabled="true" alignment="right,centre_y" />
+				<record indx="4" id="numb" sort_disabled="true" alignment="right,centre_y" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="0" colour="selection" />
+				<record indx="1" colour="text" />
+				<record indx="2" colour="selection" multiline="false" />
+				<record indx="3" colour="selection" />
+				<record indx="4" colour="selection" />
+			</list>
+
+			<list id="headings">
+				<record alignment="left,centre_y" />
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="336479" type="use" value="Manager[COMMENT - Hall of fame column heading]" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="229408" type="use" value="Team" />
+				</record>
+				<record alignment="right,centre_y">
+					<translation id="text" translation_id="336596" type="use" value="Points[COMMENT - Hall of fame score column heading]" />
+				</record>
+				<record alignment="right,centre_y">
+					<translation id="text" translation_id="313125" type="use" value="Number" />
+				</record>
+			</list>
+		</widget>
+
+	</container>
+
+</panel>

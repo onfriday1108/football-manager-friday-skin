@@ -1,0 +1,38 @@
+<panel>
+
+	<flags id="btpo" value="tables/custom/league/bottom playoff/row"/>
+	<flags id="rleg" value="tables/custom/league/relegation/row"/>
+
+	<layout class="arrange_horizontal_attachment" alignment="top" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!-- titled box -->
+	<widget class="inner_box" id="atbo" alignment="left" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<!-- main table -->
+		<widget class="table" id="atbl" mode="fill_rows, stripe_rows"  layout="50,-1,70,70,70,70,70,70,80,80" auto_size_rows="true" row_spacing="0">
+
+			<record id="default_properties">
+				<flags id="algn" value="left,centre_y" />
+			</record>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record indx="0" id="posc" left="4"/>
+				<record indx="1" id="temc"/>
+				<record indx="2" id="ye1c"/>
+				<record indx="3" id="ye2c"/>
+				<record indx="4" id="ye3c"/>
+				<record indx="5" id="ye4c"/>
+				<record indx="6" id="ye5c"/>
+				<record indx="7" id="ye6c"/>
+				<record indx="8" id="gamc"/>
+				<record indx="9" id="ptgc" right="4"/>
+			</list>
+		</widget>
+
+	</widget>
+	<!-- titled box -->
+
+</panel>

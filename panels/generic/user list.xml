@@ -1,0 +1,127 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container id="ulbx" class="main_box">
+		<translation id="titl" translation_id="251239" type="use" value="Managers[COMMENT: manager list screen; filter section; managers box title]" />
+
+		<!-- embedded buttons -->
+		<container id="focC" embed_in_frame="true">
+
+			<attachment_group class="title_embedded_panel_right" />
+
+			<widget class="embedded_popup_button" id="foCa" auto_size="all" select_event="foCE" embed_in_frame="true" fixed="true">
+				<translation id="text" translation_id="306806" type="use" value="Force Continue All" />
+				<list id="items">
+					<record id="5">
+						<translation id="text" translation_id="248183" type="use" value="5 Seconds" />
+					</record>
+					<record id="30">
+						<translation id="text" translation_id="248229" type="use" value="30 Seconds" />
+					</record>
+					<record id="60">
+						<translation id="text" translation_id="248230" type="use" value="1 Minute" />
+					</record>
+					<record id="120">
+						<translation id="text" translation_id="248231" type="use" value="2 Minutes" />
+					</record>
+					<record id="180">
+						<translation id="text" translation_id="248232" type="use" value="3 Minutes" />
+					</record>
+					<record id="240">
+						<translation id="text" translation_id="248233" type="use" value="4 Minutes" />
+					</record>
+					<record id="300">
+						<translation id="text" translation_id="248234" type="use" value="5 Minutes" />
+					</record>
+					<record id="360">
+						<translation id="text" translation_id="329639" type="use" value="6 Minutes" />
+					</record>
+					<record id="420">
+						<translation id="text" translation_id="329641" type="use" value="7 Minutes" />
+					</record>
+					<record id="480">
+						<translation id="text" translation_id="329644" type="use" value="8 Minutes" />
+					</record>
+					<record id="540">
+						<translation id="text" translation_id="329646" type="use" value="9 Minutes" />
+					</record>
+					<record id="600">
+						<translation id="text" translation_id="329609" type="use" value="10 Minutes" />
+					</record>
+				</list>
+			</widget>
+
+		</container>
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="table" id="tabl" row_spacing="0" row_height="60">
+
+			<flags id="mode" value="fill_rows,stripe_rows,keyboard,select_rows,select_multiple,dont_ask_for_focus" />
+			<flags id="layout" value="-2,-5,-4,-6,90,90,100,120,120,140,40,20" />
+
+			<boolean id="auto_size_rows" value="false" />
+
+			<flags id="heading_class" value="column_heading_alternative" />
+
+			<list id="headings">
+				<record column_span="2">
+					<flags id="algn" value="left,centre_y" />
+					<translation id="text" translation_id="227981" type="use" value="Manager" />
+				</record>
+				<record>
+					<flags id="algn" value="left,centre_y" />
+					<translation id="text" translation_id="338607" type="use" value="User[COMMENT: manager list panel; column showing the steam user name]" />
+				</record>
+				<record>
+					<flags id="algn" value="left,centre_y" />
+					<translation id="text" translation_id="248027" type="use" value="Club / Nation" />
+				</record>
+				<record>
+					<flags id="algn" value="left,centre_y" />
+					<translation id="text" translation_id="342607" type="use" value="Countdown[COMMENT: Game status screen; idle column showing seconds left/current match for each user]" />
+				</record>
+				<record>
+					<flags id="algn" value="left,centre_y" />
+					<translation id="text" translation_id="330401" type="use" value="Requested Stop Time[COMMENT: Game status screen; column showing requested stop time for each user]" />
+				</record>
+				<record>
+					<flags id="algn" value="left,centre_y" />
+					<translation id="text" translation_id="251927" type="use" value="Idle Time[COMMENT: Game status screen; idle column showing seconds idle for each user]" />
+				</record>
+				<record>
+					<flags id="algn" value="left,centre_y" />
+					<translation id="text" translation_id="242853" type="use" value="Status" />
+				</record>
+				<record>
+					<flags id="algn" value="left,centre_y" />
+				</record>
+				<record>
+					<flags id="algn" value="left,centre_y" />
+					<translation id="text" translation_id="247149" type="use" value="Password" />
+				</record>
+				<record>
+					<flags id="algn" value="centre" />
+					<translation id="text" translation_id="420651" type="use" value="Admin[COMMENT: person actions menu; option which is ticked if a user is set as administrator in a network game]" />
+					<translation id="hint" translation_id="337973" type="use" value="Is Game Administrator[COMMENT: person actions menu; option which is ticked if a user is set as administrator in a network game]" />
+				</record>
+				<!--no heading for the remove column-->
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" spec="text" alignment="centre" />
+				<record index="1" spec="text" alignment="left,centre_y" />
+				<record index="2" spec="text" alignment="left,centre_y" />
+				<record index="3" spec="text" alignment="left,centre_y" />
+				<record index="4" spec="text" alignment="left,centre_y" />
+				<record index="5" spec="text" alignment="left,centre_y" />
+				<record index="6" spec="text" alignment="left,centre_y" />
+				<record index="7" spec="text" alignment="left,centre_y" />
+				<record index="10" auto_size="all" />
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="10" alignment="centre" />
+			</list>
+		</widget>
+	</container>
+</panel>

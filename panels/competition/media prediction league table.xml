@@ -1,0 +1,70 @@
+<!-- A table showing the teams in a division and comparing their current position to the media predicted finish position and odds to win at the satrt of the season -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="table" id="tabl" layout="44,20,140,-1, 150" mode="fill_rows, stripe_rows" save_session_state="true">
+		<list id="headings">
+			<record alignment="left,centre_y" index="0">
+				<translation id="text" translation_id="242883" type="use" value="Pos" />
+				<translation id="hint" translation_id="343461" type="use" value="Current Position[COMMENT: column heading for the position a player was playing in during a match - e.g. if a player was playing in a match at centre back, the column heading is 'Current Position', the column contents would be 'DC']" />
+			</record>
+			<record alignment="left,centre_y" column_span="2" index="1">
+				<translation id="text" translation_id="243509" type="use" value="Media Prediction" />
+			</record>
+			<record alignment="left,centre_y" index="3">
+				<translation id="text" translation_id="316793" type="use" value="Name[COMMENT: default properties.xml; list header for any game object name - a game object is anything the user can interact with]" />
+			</record>
+			<record alignment="left,centre_y" index="3">
+				<translation id="text" translation_id="230320" type="use" value="Odds" />
+				<translation id="hint" translation_id="434477" type="use" value="Odds to win the competition[COMMENT: media prediciton; column hint]" />
+			</record>
+		</list>
+
+		<!-- default properties adopted by every item in table -->
+		<record id="default_properties" spec="text" alignment="left,centre_y" />
+
+		<list id="column_table_properties">
+			<!-- Current position -->
+			<record id="Cpos" index="0">
+				<record id="widget_info">
+					<symbol id="class" value="dashed_formatted_label" />
+				</record>
+			</record>
+			<!-- Up/down arrow comparing media prediction to current position-->
+			<record id="Mico" index="1">
+				<record id="widget_info">
+					<symbol id="class" value="picture" />
+				</record>
+			</record>
+			<!-- Media predicted position -->
+			<record id="Mpos" index="2">
+				<record id="widget_info">
+					<symbol id="class" value="dashed_formatted_label" />
+				</record>
+			</record>
+			<!-- Team -->
+			<record id="ttea" index="3">
+				<record id="widget_info">
+					<symbol id="class" value="team_button" />
+				</record>
+			</record>
+			<!-- Odds -->
+			<record id="Mods" index="4">
+				<record id="widget_info">
+					<symbol id="class" value="odds_label" />
+					<translation id="hint" translation_id="434477" type="use" value="Odds to win the competition[COMMENT: media prediciton; column hint]" />
+				</record>
+			</record>
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="0" format="[%number#1-nth]" />
+			<record index="1" image_alignment="right,centre_y" />
+			<record index="2" format="[%number#1-nth]" />
+		</list>
+
+		<list id="default_sort_column">
+			<integer value="Cpos" />
+		</list>
+	</widget>
+</panel>

@@ -1,0 +1,367 @@
+﻿<panel>
+	<boolean id="GTBT" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="8" />
+		<container class="scrolling_box">
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+				<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" />
+
+					<widget class="picture" file="icons/16px/whistle" width="16" height="16" image_alignment="centre">
+						<string id="red_replacement" value="title" />
+					</widget>
+					<widget class="text" alignment="centre_y,left" height="26" name="title" font="title" colour="title">
+						<string id="size" value="large" />
+						<translation id="text" translation_id="482710" type="use" value="Match Day[COMMENT:AREA: Responsibilities; SUB - AREA: Responsibility Panel; FR : 28191; TONE: Formal; CHARLIMIT: None]" />
+					</widget>
+				</container>
+
+				<!-- first team responsibilities -->
+				<container id="ftmc">
+					<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+					<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+					
+					<container class="group_responsibility_list_widget" file="team/staff responsibility summary panel" id="Rmat" name="match day" />
+
+					<widget class="horizontal_divider" entity_layout_id="at08" id="at08" height="10" />
+
+					<container class="group_responsibility_list_widget" id="Rfrn" file="team/staff responsibility summary panel" name="friendlies" />
+
+					<widget class="check_box_button" id="fmar" click_event="arfr" auto_size="vertical" needs_height="true" name="assistant friendlies">
+						<translation id="text" translation_id="492028" type="use" value="Backroom staff arrange friendly matches for the first-team squad[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+					</widget>
+
+					<widget class="horizontal_divider" entity_layout_id="at08" id="at08" height="10" />
+				</container>
+
+				<container id="team" draw_horizontal_dividers="true">
+					<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+					<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<!-- team 2 box -->
+					<container id="tea2">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<!-- match day -->
+						<container class="group_responsibility_list_widget" file="team/staff responsibility summary panel" id="dmdg" name="dev team match day" />
+
+						<container id="resv" height="60" name="1st team availability">
+							<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+							<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+							<widget class="text" auto_size="all" name="first team player title" font="title" colour="title">
+								<translation id="text" translation_id="492024" type="use" value="First Team Player Availability[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+							</widget>
+
+							<container height="30">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" />
+								<layout class="arrange_horizontal_attachment" alignment="left" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+								<widget class="label" id="LFRp" auto_size="horizontal" name="available label">
+									<translation id="text" translation_id="492025" type="use" value="Ask which first team players are available for this team:[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+								</widget>
+
+								<widget class="subtle_popup_button" auto_size="horizontal" id="rrnm" name="avaialble popup">
+									<string id="select_event" value="srrn" />
+									<layout class="stick_to_object_attachment" id="align_top" offset="25" get_side="top" set_side="top" move_side="true" target="main" />
+									<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0B" />
+								</widget>
+							</container>
+
+							<widget class="check_box" id="amap" auto_size="vertical" needs_height="true">
+								<string id="click_event" value="amap" />
+								<translation id="text" translation_id="492026" type="use" value="Automatically make unfit first team players available for this team[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+							</widget>
+						</container>
+
+						<!--friendlies-->
+						<container class="group_responsibility_list_widget" id="dfrg" file="team/staff responsibility summary panel" name="friendlies group" />
+						<container id="at0=" height="70" name="friendly frequency">
+							<layout class="arrange_vertical_attachment" alignment="top" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+							<widget class="check_box" id="fmar" click_event="arfr" auto_size="vertical" name="arranges friendlies" />
+							<container height="30">
+								<layout class="arrange_horizontal_attachment" alignment="left" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+								<widget class="label" id="at0D" auto_size="horizontal" name="frequency">
+									<translation id="text" translation_id="492022" type="use" value="Frequency:[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None NOTE: Label for popup for frequency of which will friendlies will be arranged for development teams]" />
+								</widget>
+								<widget class="subtle_popup_button" id="arff" auto_size="horizontal" name="frequency popup">
+									<string id="select_event" value="affe" />
+								</widget>
+								<widget class="label" id="at0F" height="30" name="friendly desc">
+									<translation id="text" translation_id="492023" type="use" value="All friendlies will be arranged around competitive fixtures in order to avoid any clashes.[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+								</widget>
+							</container>
+						</container>
+					</container>
+
+					<!-- team 3 box -->
+					<container id="tea3">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<!-- match day -->
+						<container class="group_responsibility_list_widget" file="team/staff responsibility summary panel" id="dmdg" name="dev team match day" />
+
+						<container id="resv" height="60" name="1st team availability">
+							<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+							<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+							<widget class="text" auto_size="all" name="first team player title" font="title" colour="title">
+								<translation id="text" translation_id="492024" type="use" value="First Team Player Availability[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+							</widget>
+
+							<container height="30">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" />
+								<layout class="arrange_horizontal_attachment" alignment="left" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+								<widget class="label" id="LFRp" auto_size="horizontal" name="available label">
+									<translation id="text" translation_id="492025" type="use" value="Ask which first team players are available for this team:[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+								</widget>
+
+								<widget class="subtle_popup_button" auto_size="horizontal" id="rrnm" name="avaialble popup">
+									<string id="select_event" value="srrn" />
+									<layout class="stick_to_object_attachment" id="align_top" offset="25" get_side="top" set_side="top" move_side="true" target="main" />
+									<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0B" />
+								</widget>
+							</container>
+
+							<widget class="check_box" id="amap" auto_size="vertical" needs_height="true">
+								<string id="click_event" value="amap" />
+								<translation id="text" translation_id="492026" type="use" value="Automatically make unfit first team players available for this team[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+							</widget>
+						</container>
+
+						<!--friendlies-->
+						<container class="group_responsibility_list_widget" id="dfrg" file="team/staff responsibility summary panel" name="friendlies group" />
+						<container id="at0=" height="70" name="friendly frequency">
+							<layout class="arrange_vertical_attachment" alignment="top" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+							<widget class="check_box" id="fmar" click_event="arfr" auto_size="vertical" name="arranges friendlies" />
+							<container height="30">
+								<layout class="arrange_horizontal_attachment" alignment="left" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+								<widget class="label" id="at0D" auto_size="horizontal" name="frequency">
+									<translation id="text" translation_id="492022" type="use" value="Frequency:[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None NOTE: Label for popup for frequency of which will friendlies will be arranged for development teams]" />
+								</widget>
+								<widget class="subtle_popup_button" id="arff" auto_size="horizontal" name="frequency popup">
+									<string id="select_event" value="affe" />
+								</widget>
+								<widget class="label" id="at0F" height="30" name="friendly desc">
+									<translation id="text" translation_id="492023" type="use" value="All friendlies will be arranged around competitive fixtures in order to avoid any clashes.[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+								</widget>
+							</container>
+						</container>
+					</container>
+
+					<!-- team 4 box -->
+					<container id="tea4">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<!-- match day -->
+						<container class="group_responsibility_list_widget" file="team/staff responsibility summary panel" id="dmdg" name="dev team match day" />
+
+						<container id="resv" height="60" name="1st team availability">
+							<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+							<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+							<widget class="text" auto_size="all" name="first team player title" font="title" colour="title">
+								<translation id="text" translation_id="492024" type="use" value="First Team Player Availability[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+							</widget>
+
+							<container height="30">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" />
+								<layout class="arrange_horizontal_attachment" alignment="left" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+								<widget class="label" id="LFRp" auto_size="horizontal" name="available label">
+									<translation id="text" translation_id="492025" type="use" value="Ask which first team players are available for this team:[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+								</widget>
+
+								<widget class="subtle_popup_button" auto_size="horizontal" id="rrnm" name="avaialble popup">
+									<string id="select_event" value="srrn" />
+									<layout class="stick_to_object_attachment" id="align_top" offset="25" get_side="top" set_side="top" move_side="true" target="main" />
+									<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0B" />
+								</widget>
+							</container>
+
+							<widget class="check_box" id="amap" auto_size="vertical" needs_height="true">
+								<string id="click_event" value="amap" />
+								<translation id="text" translation_id="492026" type="use" value="Automatically make unfit first team players available for this team[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+							</widget>
+						</container>
+
+						<!--friendlies-->
+						<container class="group_responsibility_list_widget" id="dfrg" file="team/staff responsibility summary panel" name="friendlies group" />
+						<container id="at0=" height="70" name="friendly frequency">
+							<layout class="arrange_vertical_attachment" alignment="top" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+							<widget class="check_box" id="fmar" click_event="arfr" auto_size="vertical" name="arranges friendlies" />
+							<container height="30">
+								<layout class="arrange_horizontal_attachment" alignment="left" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+								<widget class="label" id="at0D" auto_size="horizontal" name="frequency">
+									<translation id="text" translation_id="492022" type="use" value="Frequency:[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None NOTE: Label for popup for frequency of which will friendlies will be arranged for development teams]" />
+								</widget>
+								<widget class="subtle_popup_button" id="arff" auto_size="horizontal" name="frequency popup">
+									<string id="select_event" value="affe" />
+								</widget>
+								<widget class="label" id="at0F" height="30" name="friendly desc">
+									<translation id="text" translation_id="492023" type="use" value="All friendlies will be arranged around competitive fixtures in order to avoid any clashes.[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+								</widget>
+							</container>
+						</container>
+					</container>
+
+					<!-- team 5 box -->
+					<container id="tea5">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<!-- match day -->
+						<container class="group_responsibility_list_widget" file="team/staff responsibility summary panel" id="dmdg" name="dev team match day" />
+
+						<container id="resv" height="60" name="1st team availability">
+							<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+							<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+							<widget class="text" auto_size="all" name="first team player title" font="title" colour="title">
+								<translation id="text" translation_id="492024" type="use" value="First Team Player Availability[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+							</widget>
+
+							<container height="30">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" />
+								<layout class="arrange_horizontal_attachment" alignment="left" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+								<widget class="label" id="LFRp" auto_size="horizontal" name="available label">
+									<translation id="text" translation_id="492025" type="use" value="Ask which first team players are available for this team:[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+								</widget>
+
+								<widget class="subtle_popup_button" auto_size="horizontal" id="rrnm" name="avaialble popup">
+									<string id="select_event" value="srrn" />
+									<layout class="stick_to_object_attachment" id="align_top" offset="25" get_side="top" set_side="top" move_side="true" target="main" />
+									<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0B" />
+								</widget>
+							</container>
+
+							<widget class="check_box" id="amap" auto_size="vertical" needs_height="true">
+								<string id="click_event" value="amap" />
+								<translation id="text" translation_id="492026" type="use" value="Automatically make unfit first team players available for this team[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+							</widget>
+						</container>
+
+						<!--friendlies-->
+						<container class="group_responsibility_list_widget" id="dfrg" file="team/staff responsibility summary panel" name="friendlies group" />
+						<container id="at0=" height="70" name="friendly frequency">
+							<layout class="arrange_vertical_attachment" alignment="top" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+							<widget class="check_box" id="fmar" click_event="arfr" auto_size="vertical" name="arranges friendlies" />
+							<container height="30">
+								<layout class="arrange_horizontal_attachment" alignment="left" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+								<widget class="label" id="at0D" auto_size="horizontal" name="frequency">
+									<translation id="text" translation_id="492022" type="use" value="Frequency:[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None NOTE: Label for popup for frequency of which will friendlies will be arranged for development teams]" />
+								</widget>
+								<widget class="subtle_popup_button" id="arff" auto_size="horizontal" name="frequency popup">
+									<string id="select_event" value="affe" />
+								</widget>
+								<widget class="label" id="at0F" height="30" name="friendly desc">
+									<translation id="text" translation_id="492023" type="use" value="All friendlies will be arranged around competitive fixtures in order to avoid any clashes.[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+								</widget>
+							</container>
+						</container>
+					</container>
+
+					<!-- team 6 box -->
+					<container id="tea6">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<!-- match day -->
+						<container class="group_responsibility_list_widget" file="team/staff responsibility summary panel" id="dmdg" name="dev team match day" />
+
+						<container id="resv" height="60" name="1st team availability">
+							<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+							<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+							<widget class="text" auto_size="all" name="first team player title" font="title" colour="title">
+								<translation id="text" translation_id="492024" type="use" value="First Team Player Availability[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+							</widget>
+
+							<container height="30">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" />
+								<layout class="arrange_horizontal_attachment" alignment="left" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+								<widget class="label" id="LFRp" auto_size="horizontal" name="available label">
+									<translation id="text" translation_id="492025" type="use" value="Ask which first team players are available for this team:[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+								</widget>
+
+								<widget class="subtle_popup_button" auto_size="horizontal" id="rrnm" name="avaialble popup">
+									<string id="select_event" value="srrn" />
+									<layout class="stick_to_object_attachment" id="align_top" offset="25" get_side="top" set_side="top" move_side="true" target="main" />
+									<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0B" />
+								</widget>
+							</container>
+
+							<widget class="check_box" id="amap" auto_size="vertical" needs_height="true">
+								<string id="click_event" value="amap" />
+								<translation id="text" translation_id="492026" type="use" value="Automatically make unfit first team players available for this team[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+							</widget>
+						</container>
+
+						<!--friendlies-->
+						<container class="group_responsibility_list_widget" id="dfrg" file="team/staff responsibility summary panel" name="friendlies group" />
+						<container id="at0=" height="70" name="friendly frequency">
+							<layout class="arrange_vertical_attachment" alignment="top" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+							<widget class="check_box" id="fmar" click_event="arfr" auto_size="vertical" name="arranges friendlies" />
+							<container height="30">
+								<layout class="arrange_horizontal_attachment" alignment="left" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+								<widget class="label" id="at0D" auto_size="horizontal" name="frequency">
+									<translation id="text" translation_id="492022" type="use" value="Frequency:[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None NOTE: Label for popup for frequency of which will friendlies will be arranged for development teams]" />
+								</widget>
+								<widget class="subtle_popup_button" id="arff" auto_size="horizontal" name="frequency popup">
+									<string id="select_event" value="affe" />
+								</widget>
+								<widget class="label" id="at0F" height="30" name="friendly desc">
+									<translation id="text" translation_id="492023" type="use" value="All friendlies will be arranged around competitive fixtures in order to avoid any clashes.[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+								</widget>
+							</container>
+						</container>
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+		<container class="inner_box" file="generic/simple form with confirmation buttons" />
+	</container>
+</panel>

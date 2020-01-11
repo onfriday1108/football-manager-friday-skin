@@ -1,0 +1,21 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container id="rpbx">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+	</container>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="5" />
+		<layout class="arrange_horizontal_attachment" layout="50,-1"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+		<widget class="picture" id="wrPI" file="icons/26px/info" red_replacement="text" image_alignment="centre" height="55" scale_picture="false"/>
+
+		<widget class="inbox_body_text" id="adtx" auto_size="vertical" size="normal">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="10"/>
+		</widget>
+	</container>
+
+
+</panel>

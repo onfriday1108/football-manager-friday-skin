@@ -1,0 +1,27 @@
+<panel>
+    <flags id="appearance" value="boxes/bordered/standard/paper"/>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+    <container height="20">
+        <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+        <layout class="arrange_horizontal_attachment" layout="15, -1, 20" />
+
+        <!-- lock -->
+        <widget class="check_box" id="lock" label_disabled="true" width="15" alignment="right,centre_y" icon="switches/lock/button">
+            <translation id="hint" translation_id="350950" type="use" value="Select to mark this as non-negotiable[COMMENT: contract offer panel and transfer offer panel; offer condition lock; the contract term or transfer condition is not negotiable, i.e. the wage, squad status etc]" />
+        </widget>
+        <!-- Type of item label -->
+        <widget class="label" id="type" alignment="left,centre_y"/>
+        <!-- Remove item cross -->
+        <widget class="icon_button" id="remv" file="icons/16px/cross" show_button_appearance="false" icon_alignment="centre" auto_size="horizontal"/>
+    </container>
+
+    <!-- Actual data widget will be added to this container in code -->
+    <container id="data">
+        <layout class="arrange_vertical_attachment" alignment="top" gap="0"/>
+        <layout class="fit_children_attachment" alignment="vertical" gap="0"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+    </container>
+</panel>

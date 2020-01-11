@@ -1,0 +1,30 @@
+<panel>
+  <boolean id="save_session_state" value="true" />
+  
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <widget class="team_report_request_report_panel" id="nort" />
+
+  <container class="inner_box" id="sort">
+    <translation id="title" translation_id="343346" type="use" value="By Position[COMMENT: team report squad depth panel; position breakdown]" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <!-- buttons area -->
+    <container id="btna" embed_in_frame="true">
+		<attachment_group class="title_embedded_panel_right" />
+
+      <widget class="label" id="perl" embed_in_frame="true" auto_size="horizontal">
+        <translation id="text" translation_id="320537" type="use" value="Squad Depth Opinion of: [COMMENT: team report squad depth panel; text leading into a dropdown list of backroom staff user can choose to compile team report, please leave space in string, it is intentional]" />
+      </widget>
+      <widget class="embedded_popup_button" id="pers" auto_size="horizontal" embed_in_frame="true" select_event="pers" fixed="false" height="30">
+        <boolean id="save_session_state" value="true" />
+        <boolean id="auto_tick_exclusive" value="true" />
+      </widget>
+    </container>
+
+    <container id="sdtv" class="team_report_squad_depth_edit_panel">
+      <translation id="title" translation_id="343346" type="use" value="By Position[COMMENT: team report squad depth panel; position breakdown]" />
+    </container>
+
+  </container>
+</panel>

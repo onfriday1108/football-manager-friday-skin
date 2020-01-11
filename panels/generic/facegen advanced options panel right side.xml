@@ -1,0 +1,147 @@
+﻿<panel id="dlog" wants_mouse_events="false" disable_animations="true">
+
+	 <record id="widget_info">
+		<flags id="alignment" value="centre_x" />
+		<symbol id="class" value="container" />	  
+	</record>
+
+
+	<animation class="slide_in_right_animation"/>
+
+	<attachment_group class="horizontal_arrange" horizontal_layout="-4,-6" horizontal_offset="0" horizontal_gap="0" />
+	
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<widget class="spacer" />
+
+	<container class="main_contrast_box" red_replacement="box_background"  wants_mouse_events="true">
+
+		<attachment_group class="vertical_arrange" vertical_layout="10,-1,40" vertical_offset="4" vertical_gap="10" horizontal_inset="4" />
+
+		<widget class="spacer" />
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container class="tabbed_container" appearance="">
+
+
+				<!--Face Options-->
+				<container id="FCOp" class="main_box">
+					<translation id="title" translation_id="396021" type="use" value="Face[COMMENT: Face options; customising your character's look and feel]" />
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="10" vertical_gap="0" horizontal_inset="0" />
+				</container>
+
+
+				<!--Eyes Options-->
+				<container class="main_box">
+					<translation id="title" translation_id="396018" type="use" value="Eyes[COMMENT: Eye options; customising your character's look and feel]" />
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="10" vertical_gap="0" horizontal_inset="0" />
+
+					<container id="EYOp" height="350">
+						<translation id="title" translation_id="396018" type="use" value="Eyes[COMMENT: Eye options; customising your character's look and feel]" />
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="10" vertical_gap="0" horizontal_inset="0" />					</container>
+				</container>
+
+				<!--Nose Options-->
+				<container id="tBCc" class="scrolling_box">
+					<translation id="title" translation_id="396092" type="use" value="Nose[COMMENT: nose options; customising your character's look and feel]" />
+
+					<container id="nSOp" class="main_box">
+						<translation id="title" translation_id="396092" type="use" value="Nose[COMMENT: nose options; customising your character's look and feel]" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="10" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+					</container>
+
+				</container>
+
+				<!--Mouth Options-->
+				<container id="mScr" class="scrolling_box">
+					<translation id="title" translation_id="396082" type="use" value="Mouth[COMMENT: mouth options; customising your character's look and feel]" />
+
+					<container id="MTOp" class="main_box">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="10" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+						<translation id="title" translation_id="396082" type="use" value="Mouth[COMMENT: mouth options; customising your character's look and feel]" />
+					</container>
+				</container>
+
+				<!--Jaw Options-->
+				<container id="JWOp" class="main_box">
+					<translation id="title" translation_id="396056" type="use" value="Jaw[COMMENT: jaw options; customising your character's look and feel]" />
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="10" vertical_gap="0" horizontal_inset="0" />				</container>
+
+				<!--Forehead Options-->
+				<container id="FHOp" class="main_box">
+					<translation id="title" translation_id="396029" type="use" value="Forehead[COMMENT: Forhead options; customising your character's look and feel]" />
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="10" vertical_gap="0" horizontal_inset="0" />				</container>
+
+
+				<!--Chin Options-->
+				<container id="CHOp" class="main_box">
+					<translation id="title" translation_id="395981" type="use" value="Chin[COMMENT: Chin options; customising your character's look and feel]" />
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="10" vertical_gap="0" horizontal_inset="0" />				</container>
+
+				<!--Cheekbones Options-->
+				<container id="CBOp" class="main_box">
+					<translation id="title" translation_id="395979" type="use" value="Cheeks[COMMENT: Cheeks options; customising your character's look and feel]" />
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="10" vertical_gap="0" horizontal_inset="0" />				</container>
+
+			</container>
+
+
+		</container>
+		<!-- standard buttons / these get shown & hidden by subclasses -->
+		<container id="btns">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container>
+				<!-- stick buttons to bottom of box -->
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+				<!-- fit box to the height of the biggest button -->
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+				<!-- arrange items horizontally, left aligned -->
+				<layout class="arrange_horizontal_platform_attachment" alignment="left" offset="0" />
+
+				
+				<widget class="icon_button" icon="icons/26px/transfer" click_event="rdNS" auto_size="all" >
+					<translation id="text" translation_id="396554" type="use" value="Randomise Face[COMMENT: Button hint;Randomises the manager man face]" />
+				</widget>
+
+			</container>
+
+
+			<container>
+				<attachment_group class="button_arrangement_right" />
+
+				<container hidden="true">
+					<!--temporary until moved inside the code here-->
+					<translation id="hint" translation_id="396593" type="use" value="Facial hair[COMMENT: Facial hair options; customising your character's look and feel]" />
+				</container>
+
+				<widget class="primary_icon_tick_button" id="ok" hidn="true">
+					<translation id="text" translation_id="229829" type="use" value="Ok" />
+				</widget>
+
+				<widget class="primary_icon_tick_button" id="yes" hidn="true" event_id="yes" >
+					<translation id="text" translation_id="229918" type="use" value="Confirm" />
+				</widget>
+
+				<widget class="button" id="revr" click_event="revr" auto_size="all">
+					<translation id="text" translation_id="321118" type="use" value="Reset[COMMENT - clear filter menu item]" />
+				</widget>
+
+
+				<widget class="button" id="no" hidn="true" event_id="no" auto_size="all">
+					<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				</widget>
+
+				<widget class="button" id="canc" hidn="true" event_id="canc" auto_size="all">
+					<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				</widget>
+
+			</container>
+		</container>
+	</container>
+
+	
+</panel>

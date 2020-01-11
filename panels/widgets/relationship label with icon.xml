@@ -1,0 +1,7 @@
+﻿<panel>
+	<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+	<widget class="icon_button" id="hrcI" auto_size="horizontal" file="icons/16px/relationship" image_alignment="centre" scale_picture="false" keep_aspect_ratio="true" show_button_appearance="false"/>
+	<widget class="relationship_label" id="relL" alignment="left, centre_y" auto_size="none"/>
+</panel>

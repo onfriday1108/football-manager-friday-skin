@@ -1,0 +1,25 @@
+<panel>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+	<flags id="selected_appearance" value="switches/toggle/normal/button_selected"/>
+	<flags id="unselected_appearance" value="switches/toggle/normal/button"/>
+
+	<container class="inner_box">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="arrange_horizontal_attachment" layout="170,-1,-1,-1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+		<widget class="label" id="comp" size="10" style="semi_bold" alignment="left,centre_y">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+		</widget>
+
+		<widget class="button" id="lobs" auto_size="vertical" alignment="centre"/>
+		<widget class="button" id="mebs" auto_size="vertical" alignment="centre"/>
+		<widget class="button" id="hibs" auto_size="vertical" alignment="centre"/>
+	</container>
+
+</panel>

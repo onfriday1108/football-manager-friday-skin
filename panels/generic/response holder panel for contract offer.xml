@@ -1,0 +1,43 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="5" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+  <widget class="object_portrait_picture" id="lcpi" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre"  width="60"  >
+    
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="valu" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </list>
+    </record>
+  </widget>
+  
+  <container id="buiD" class="conversation_appearance_box">
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="cprs" />
+          <integer id="set_property" value="cprs" />
+        </record>
+      </list>
+    </record>
+
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+    <container width="17"/>
+    
+    <widget class="text" alignment="left,centre_y" colour="white">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="text" />
+            <integer id="set_property" value="valu" />
+          </record>
+        </list>
+      </record>
+    </widget>
+  </container>
+</panel>

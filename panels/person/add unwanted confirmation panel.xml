@@ -1,0 +1,59 @@
+<panel width="600">
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="20" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<container class="standard_popup_box" id="cont">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="10" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" layout="38, -1" offset="10" gap="10"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="picture" file="icons/48px/tick" height="38" scale_picture="true" keep_aspect_ratio="true" red_replacement="text"/>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" size="xlarge" style="bold" auto_size="all">
+					<translation id="text" translation_id="350714" type="use" value="Added to Unwanted List[COMMENT: add to unwanted list confirmation popup FR 6123 6124 6125]" />
+				</widget>
+
+				<widget class="text" id="desc" multiline="true" auto_size="vertical" colour="faded text" />
+
+			</container>
+
+		</container>
+
+		<container height="5" />
+
+		<widget class="horizontal_divider" />
+
+		<container height="2" />
+
+		<widget class="player_unwanted_details_panel" id="deta" file="player/player unwanted details" />
+
+		<container height="5" />
+
+		<widget class="horizontal_divider" />
+
+		<container height="5" />
+
+		<!-- Buttons-->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" layout="-2, -1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="check_box" id="atcc" click_event="dnsh" hidden="false">
+				<translation id="text" translation_id="301057" type="use" value="Don't show this message again.[COMMENT: The title of a checkbox displayed in a dialog, which allows the user to request that the dialog isn't displayed again.]" />
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+			</widget>
+
+			<widget class="link_appearance_button" id="gotl" click_event="gotl">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+			</widget>
+		</container>
+
+	</container>
+</panel>

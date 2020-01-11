@@ -1,0 +1,58 @@
+<panel width="100" height="150">
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  
+  <container class="inner_box_no_margin" id="arBi" >
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <container class="main_box" appearance="boxes/custom/calendar/cell/paper">
+      <layout class="arrange_vertical_attachment" layout="20,26,32,-1,-1,-1" offset="0" gap="1" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2" />
+
+      <widget class="date_cell" alignment="centre" colour="faded text" size="small" format="[%date#1-date_short_month]" >
+        <record id="object_property">
+          <integer id="get_property" value="fxdt" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </widget>
+
+      <widget class="fixture_availability_label" colour="faded text" font="text" size="small" alignment="centre">
+		  
+		  <!-- we have one embedded widget here (e.g. a radio button) so we need to make sure that we have the right attachment on it -->
+		  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		 
+		  <record id="object_property" dont_set_hint="true" >
+          <integer id="get_property" value="Fxda" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </widget>
+
+      <widget class="fixture_opponent_picture" scale_picture="true" image_alignment="centre" >
+        <record id="object_property" dont_set_object="true" dont_set_hint="true">
+          <integer id="get_property" value="fopP" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </widget>
+
+      <widget class="fixture_opponent_team_button" icon_alignment="left" alignment="centre" icon_enabled="false" show_button_appearance="false" >
+        <record id="object_property" dont_set_hint="true">
+          <integer id="get_property" value="fopt" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </widget>
+
+      <widget class="fixture_venue_label" alignment="centre" format="0" colour="faded text" size="small">
+        <record id="object_property" dont_set_hint="true" >
+          <integer id="get_property" value="FxVn" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </widget>
+
+      <widget class="fixture_name_text" alignment="centre" colour="faded text" size="small">
+        <record id="object_property" dont_set_hint="true">
+          <integer id="get_property" value="FxNm" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </widget>
+    </container>
+  </container>
+</panel>

@@ -1,0 +1,16 @@
+﻿<panel>
+
+	<flags id="selected_appearance" value="buttons/custom/tactics/pitch switch/left/button" />
+	<flags id="unselected_appearance" value="buttons/custom/tactics/pitch switch/left/button" />
+	
+  <layout class="stick_to_sides_attachment" alignment="all" inset="8" apply_to_children="true" />
+
+	<widget class="table" id="tatb" mode="fill_rows, select_rows, show_bullets" layout="-1,220" fixed_size_rows="true" auto_size_rows="false" row_height="35">
+		<list id="column_table_properties">
+			<record indx="0" left="4" top="3" bottom="3"/>
+			<record indx="1" top="2" bottom="2"/>
+		</list>
+	</widget>
+
+
+</panel>

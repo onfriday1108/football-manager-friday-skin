@@ -1,0 +1,24 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <widget class="pitch_with_player_positions" id="ppip" 
+          pitch_vertical_padding="6" 
+          pitch_alignment="centre_x,top" 
+          show_position_strength="true">
+    <boolean id="vertical" value="true" />
+
+    <boolean id="pitch_draw_goals" value="false" />
+    <boolean id="pitch_draw_markings" value="true" />
+    <integer id="pitch_player_radius" value="6" />
+    <!-- This is now a percentage of the default pitch width, which is: (750 feet / 68.58 metres) -->
+    <integer id="pitch_width_percentage" value="110" />
+    <integer id="pitch_show_names" value="false" />
+    <!-- We want to hide the positions as this panel is too small to show the position text -->
+    <boolean id="hide_player_positions" value="true" />
+    <boolean id="show_position_strength" value="false" />
+    
+    <string id="pitch_kit_icon" value="pitch/icons/dots" />
+    
+  </widget>
+</panel>

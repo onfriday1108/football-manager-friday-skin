@@ -1,0 +1,10 @@
+﻿<panel width="145">
+		<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+
+  <widget class="object_portrait_picture" id="cmlg" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x, bottom" clickable="false" height="32"/>
+
+  <container height="5"/>
+
+  <widget class="text" id="cmpn" auto_size="vertical" alignment="centre" style="bold"/>
+  <widget class="text" id="finp" auto_size="vertical" alignment="centre" size="small"/>
+</panel>

@@ -1,0 +1,29 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  
+  <!--container shown when there is a next match available-->
+  <container id="nemc" hidden="true">
+    <layout class="arrange_horizontal_attachment" alignment="right"/>
+    <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+      
+    <widget class="button" id="nMbt" auto_size="all" alignment="centre" size="10" click_event="Dtnm">
+      <translation id="text" translation_id="247353" type="use" value="Next Match"/>
+      <layout class="centre_in_parent_attachment" alignment="vertical" />
+    </widget>
+
+    <widget class="text" id="nMdy" alignment="centre" auto_size="all" multiline="false" spec="text" format="days_only"/>
+    <widget class="text" id="nMov" alignment="centre" auto_size="all" multiline="false" spec="text" size="9" />
+  </container>
+
+  <!-- shown when there is no next match -->
+  <container class="inner_box_no_margin" id="nonm" hidden="true">
+    <layout class="arrange_horizontal_attachment" alignment="right"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <widget class="text" alignment="centre" auto_size="all" multiline="false" spec="text" size="8" >
+      <translation id="text" translation_id="296342" type="use" value="You currently don't have any matches planned."/>
+      <layout class="centre_in_parent_attachment" alignment="vertical"/>
+    </widget>
+  </container>
+
+</panel>

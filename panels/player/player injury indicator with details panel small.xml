@@ -1,0 +1,31 @@
+﻿<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+	<list id="properties_to_forward">
+		<record get_property="Pers" set_property="Pers" target="InPr"/>
+		<record get_property="InPr" set_property="injr" target="InPr"/>
+		<record get_property="InNm" set_property="text" target="InNm"/>
+		<record get_property="InDt" set_property="text" target="InDt"/>
+	</list>
+
+	<container id="staf" >
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" layout="50, -1" offset="0" />
+
+		<!-- Portrait -->
+		<widget class="player_injury_indicator_picture" id="InPr" height="50"/>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+			<!-- Person name -->
+			<widget class="text" id="InNm" alignment="left,bottom" style="bold" colour="injury_body_colour_injured" auto_size="vertical" />
+
+			<!-- text label -->
+			<widget class="text" id="InDt" alignment="left,top" size="small" colour="faded text" auto_size="vertical" />
+
+		</container>
+	</container>
+</panel>

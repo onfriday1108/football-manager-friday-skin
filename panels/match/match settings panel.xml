@@ -1,0 +1,359 @@
+<panel width="1000" height="545">
+	<flags id="cancel_mouse_hide" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="standard_popup_box">
+
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="8" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
+
+		<!--camera-->
+		<container class="inner_subtle_box" height="95" id="CSCT">
+			<translation id="text" translation_id="306797" type="use" value="Camera[COMMENT: button which offers the user options to change the camera angle]" />
+
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="20" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--camera-->
+			<container width="200">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" font="title" colour="faded text" alignment="left,centre_y" auto_size="vertical" multiline="false">
+					<translation id="text" translation_id="306797" type="use" value="Camera[COMMENT: button which offers the user options to change the camera angle]" />
+				</widget>
+
+				<widget class="left_right_list" id="cams" select_event="chcm" value="2" width="150" height="30">
+					<translation id="text" translation_id="284289" type="use" value="Camera[COMMENT - view selection popup for match screen]" />
+				</widget>
+			</container>
+
+			<!--camera height-->
+			<container width="200">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" font="title" colour="faded text" alignment="left,centre_y" auto_size="vertical">
+					<translation id="text" translation_id="441072" type="use" value="Camera Height[COMMENT: button which offers the user options to change the camera height]" />
+				</widget>
+
+				<container height="22">
+					<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" alignment="middle,extend" offset="0" />
+					<widget class="picture" file="icons/16px/minus" height="16" width="16" red_replacement="normal_icon">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3" />
+					</widget>
+					<widget class="slider_horizontal" id="CaHe" height="22" width="160" max_value="5" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" final_changed_event="CaHe" />
+					<widget class="picture" file="icons/16px/plus" height="16" width="16" red_replacement="normal_icon">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3" />
+					</widget>
+				</container>
+			</container>
+
+			<!--camera zoom-->
+			<container width="200">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" font="title" colour="faded text" alignment="left,centre_y" auto_size="vertical">
+					<translation id="text" translation_id="441073" type="use" value="Camera Zoom[COMMENT: button which offers the user options to change the camera zoom]" />
+				</widget>
+
+				<container height="22">
+					<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" alignment="middle,extend" offset="0" gap="4" />
+					<widget class="picture" file="icons/16px/minus" height="16" width="16" red_replacement="normal_icon">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3" />
+					</widget>
+					<widget class="slider_horizontal" id="CaZo" height="22" width="160" max_value="5" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" final_changed_event="CaZo" />
+					<widget class="picture" file="icons/16px/plus" height="16" width="16" red_replacement="normal_icon">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="3" />
+					</widget>
+				</container>
+			</container>
+
+			<!--other camera options-->
+			<container width="200">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--camera mirror-->
+				<widget class="check_box" id="CaMi" click_event="CaMi" auto_size="vertical">
+					<translation id="text" translation_id="321098" type="use" value="Reversed[COMMENT - camera type]" />
+				</widget>
+
+				<!--camera auto-mirror-->
+				<widget class="check_box" id="CaAM" click_event="CaAM" auto_size="vertical">
+					<translation id="text" translation_id="447496" type="use" value="Auto-Reversed[COMMENT - camera type, similar to 321098]" />
+				</widget>
+
+			</container>
+
+		</container>
+
+		<!--everything else-->
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--watching-->
+			<container class="inner_subtle_box">
+				<translation id="text" translation_id="441074" type="use" value="Watching[COMMENT: FR21688 - title for an area of match settings for how to watch the match]" />
+
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--highlight mode-->
+				<container id="hlmC">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" font="title" colour="faded text" alignment="left,centre_y" auto_size="vertical" multiline="false">
+						<translation id="text" translation_id="298240" type="use" value="Show[COMMENT: Text on button in Customise View Panel that makes a field visible]" />
+					</widget>
+
+					<widget class="popup_button" id="hlmf" select_event="hmsl" fixed="false" auto_tick_exclusive="true" value="0" auto_size="vertical">
+						<list id="items">
+							<record id="HMfm" tkex="true">
+								<translation id="name" translation_id="247337" type="use" value="Full Match" />
+							</record>
+							<record id="HMex" tkex="true">
+								<translation id="name" translation_id="441075" type="use" value="Comprehensive Highlights[COMMENT: match highlights type]" />
+							</record>
+							<record id="HMky" tkex="true">
+								<translation id="name" translation_id="441076" type="use" value="Extended Highlights[COMMENT: match highlights type]" />
+							</record>
+							<record id="HMga" tkex="true">
+								<translation id="text" translation_id="441077" type="use" value="Key Highlights[COMMENT: match highlights type]" />
+							</record>
+							<record id="HMoc" tkex="true">
+								<translation id="name" translation_id="247340" type="use" value="Only Commentary" />
+							</record>
+						</list>
+					</widget>
+				</container>
+
+				<!--view highlights mode-->
+				<container id="vlmC">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" font="title" colour="faded text" alignment="left,centre_y" auto_size="vertical" multiline="false">
+						<translation id="text" translation_id="227629" type="use" value="View Highlights" />
+					</widget>
+
+					<widget class="popup_button" id="vlmf" select_event="hmsl" fixed="true" auto_tick_exclusive="true" value="0" height="30">
+						<translation id="text" translation_id="242438" value="Choose..." type="use" />
+						<list id="items">
+							<record id="vgls" event_id="vgls" type="5">
+								<translation id="name" translation_id="227857" type="use" value="Goals" />
+							</record>
+							<record id="vkey" event_id="vkey" type="3">
+								<translation id="name" translation_id="330180" type="use" value="Key[COMMENT: match highlights type]" />
+							</record>
+							<record id="vext" event_id="vext" type="2">
+								<translation id="name" translation_id="329930" type="use" value="Extended[COMMENT: match highlights type]" />
+							</record>
+							<record id="vcom" event_id="vcom" type="1">
+								<translation id="name" translation_id="329863" type="use" value="Comprehensive[COMMENT: match highlights type]" />
+							</record>
+							<record id="----" />
+							<record id="exit" event_id="exit">
+								<translation id="text" translation_id="247354" type="use" value="Exit Highlights" />
+							</record>
+						</list>
+					</widget>
+				</container>
+
+				<!--separator-->
+				<widget class="horizontal_divider" />
+
+				<!--match speed-->
+				<container id="HlSS">
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="5" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!--during 3d highlights-->
+					<widget class="text" auto_size="vertical" font="title" colour="faded text" multiline="false">
+						<translation id="text" translation_id="348200" type="use" value="Match Speed During Highlights[COMMENT:highlights speed control on match screen]" />
+					</widget>
+					<widget class="text" id="fhSP" auto_size="vertical" font="value">
+					</widget>
+					<widget class="delayed_slider_horizontal" id="fhsp" height="22" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" final_changed_event="sped" disable_animations="true" />
+
+					<!--during text-only highlights-->
+					<widget class="text" id="ftTi" auto_size="vertical" font="title" colour="faded text" multiline="false">
+						<translation id="text" translation_id="491930" type="use" value="Match Speed During Text-Only Highlights[COMMENT: AREA: Preferences; SUB-AREA: In-Game Preferences; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: 348200; NOTE: preference strings and explanations]" />
+					</widget>
+					<widget class="text" id="ftSP" auto_size="vertical" font="value">
+					</widget>
+					<widget class="delayed_slider_horizontal" id="ftsp" height="22" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" final_changed_event="tspe" disable_animations="true" />
+
+					<!--between highlights-->
+					<widget class="text" id="BtwH" auto_size="vertical" font="title" colour="faded text" multiline="false">
+						<translation id="text" translation_id="348199" type="use" value="Match Speed Between Highlights[COMMENT:match text speed control on match screen for when no highlights are being shown]" />
+					</widget>
+					<widget class="text" id="fmSP" auto_size="vertical" font="value">
+					</widget>
+					<widget class="delayed_slider_horizontal" id="fmsp" height="22" max_value="5" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" final_changed_event="mspd" animation_file="true" />
+				</container>
+
+				<!--separator-->
+				<widget class="horizontal_divider" />
+
+				<!--match speed-->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!--sound options-->
+					<widget class="text" auto_size="vertical" font="title" colour="faded text">
+						<translation id="text" translation_id="332277" type="use" value="Sounds[COMMENT:Label for selecting whether sound is on or off]" />
+					</widget>
+					<widget class="check_box" id="Socb" spec="text" size="small" alignment="left,centre_y" click_event="SoCh">
+					</widget>
+
+				</container>
+
+			</container>
+
+			<!--replays/notifications-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--replays-->
+				<container class="inner_subtle_box">
+					<translation id="text" translation_id="334019" type="use" value="Replays[Label for selecting highlights mode]" />
+
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--match speed-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!--replay camera-->
+						<widget class="text" font="title" colour="faded text" alignment="left,centre_y" auto_size="vertical">
+							<translation id="text" translation_id="441078" type="use" value="Replay Camera[COMMENT: button which offers the user options to change the replay camera angle]" />
+						</widget>
+						<widget class="popup_button" id="camr" fixed="true" select_event="chrc" auto_tick_exclusive="true" value="2" width="150" auto_size="vertical">
+						</widget>
+
+					</container>
+
+					<!--separator-->
+					<widget class="horizontal_divider" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!--replay config-->
+						<widget class="text" auto_size="vertical" font="title" colour="faded text" alignment="left,centre_y">
+							<translation id="text" translation_id="334019" type="use" value="Replays[Label for selecting highlights mode]" />
+						</widget>
+
+						<container>
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+							<widget class="check_box" id="rpon" click_event="rpon" auto_size="all">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+							</widget>
+
+							<widget class="widget_popup_button" id="rpmf" widget_type="match_settings_replay_types_panel" popup_alignment="right,top" auto_size="all" appearance="buttons/standard/normal/button">
+								<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+								<translation id="text" translation_id="441079" type="use" value="Replay Events...[COMMENT: FR21688, title for a button to allow the user to choose which events are replayed automatically]" />
+							</widget>
+						</container>
+
+					</container>
+
+				</container>
+
+				<!--notifications-->
+				<container class="inner_subtle_box">
+					<translation id="text" translation_id="441080" type="use" value="Notifications[COMMENT: FR21688 - title for an area of match settings for how to receive notifications]" />
+
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!--timing-->
+						<widget class="text" font="title" colour="faded text" alignment="left,centre_y" auto_size="vertical">
+							<translation id="text" translation_id="330455" type="use" value="Show For[COMMENT: title for a popup button to change the duration of a match feed popup - it means 'show each popup for...' then we have a popup button for the number of seconds to show each notification]" />
+						</widget>
+						<widget class="popup_button" id="dura" auto_size="vertical" select_event="dura" />
+
+					</container>
+
+					<!--separator-->
+					<widget class="horizontal_divider" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!--notification config-->
+						<widget class="text" auto_size="vertical" font="title" colour="faded text" alignment="left,centre_y">
+							<translation id="text" translation_id="441080" type="use" value="Notifications[COMMENT: FR21688 - title for an area of match settings for how to receive notifications]" />
+						</widget>
+
+						<container>
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+							<widget class="check_box" id="mfon" click_event="mfon" auto_size="all">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+							</widget>
+
+							<widget class="button" id="mfse" click_event="chse" auto_size="all">
+								<translation id="text" translation_id="441081" type="use" value="Notification Settings[COMMENT: FR21688 - title for editing the settings for the match feed]" />
+								<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+							</widget>
+						</container>
+
+					</container>
+
+				</container>
+			</container>
+
+			<!--match ui-->
+			<container class="inner_subtle_box">
+				<translation id="text" translation_id="441082" type="use" value="Match User Interface[COMMENT: FR21688 - title for an area of match settings]" />
+
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--show player condition-->
+				<container height="30">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="check_box" id="PCcb" alignment="left,centre_y" click_event="PCCh">
+						<translation id="text" translation_id="390546" type="use" value="Show player condition during match[COMMENT: Preferences screen: option that will display each player's condition during the match]" />
+					</widget>
+				</container>
+
+				<!--highlight popup-->
+				<container height="30">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="check_box" id="Pocb" alignment="left,centre_y" click_event="PoCh">
+						<translation id="text" translation_id="344852" type="use" value="Show match info between highlights[COMMENT: preferences: if ticked, game displays a popup with extra information in it during lulls in the match action]" />
+					</widget>
+
+				</container>
+
+				<!--widgets during replays-->
+				<container height="30">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="check_box" id="HWcb" alignment="left,centre_y" click_event="HWCh">
+						<translation id="text" translation_id="360173" type="use" value="Hide pitch windows during replays[COMMENT: preferences: if ticked, game will hide pitch widgets when replays are shown]" />
+					</widget>
+
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,73 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+	<container class="main_transparent_box" height="120">
+		<attachment_group class="vertical_arrange" vertical_layout="20, 30, 40" vertical_offset="0" horizontal_inset="0"/>
+
+		<widget class="text" id="TaTx" auto_size="all" size="large" alignment="centre"/>
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="75, -1, 75" vertical_offset="0" horizontal_inset="0" horizontal_gap="12"/>
+
+			<widget class="spacer"/>
+			<widget class="horizontal_percentage_bar" id="TaPr" height="10" alignment="bottom, centre_x" label_width="0" bar_value_colour="orange" bar_filler_colour="grey"/>
+			<widget class="text" id="TaNm" auto_size="all" size="xxlarge" style="bold" alignment="left, centre_x"/>
+		</container>
+		
+		<container height="80">
+			<attachment_group class="horizontal_arrange" vertical_offset="0" vertical_alignmnet="vertical" horizontal_inset="0"/>
+			<widget class="button" id="AcTx" auto_size="horizontal" height="80" appearance="labels/standard/Points Target Progression" alignment="centre_y, centre_x"/>
+		</container>
+	</container>
+
+	<!-- fixtures -->
+	<container class="main_transparent_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_layout="20, -1" vertical_offset="0" horizontal_inset="0"/>
+
+		<container height="20">
+			<attachment_group class="horizontal_arrange" horizontal_inset="0" vertical_offset="0"/>
+			<widget class="link_button_title" section="TeFi" auto_size="all">
+				<translation id="text" translation_id="336492" type="use" value="Matches[COMMENT: title of fixtures section of competition overview]"/>
+			</widget>
+		</container>
+
+		<widget class="table" id="fixt" layout="60, 60, -1, 30, 40, -1, 50" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows" auto_size="vertical">
+			<list id="headings">
+				<record index="0">
+					<translation id="text" translation_id="316797" type="use" value="Date[COMMENT: date of a fixture]"/>
+					<flags id="alignment" value="left, centre_y"/>
+				</record>
+				<record index="1">
+					<translation id="text" translation_id="316799" type="use" value="Time[COMMENT: date of a fixture]"/>
+					<flags id="alignment" value="left, centre_y"/>
+				</record>
+				<record index="2">
+					<translation id="text" translation_id="316801" type="use" value="Opposition[COMMENT: team that the current team is playing in a fixture]"/>
+					<flags id="alignment" value="left, centre_y"/>
+				</record>
+				<record index="3">
+					<translation id="text" translation_id="316808" type="use" value="TV[COMMENT: whether or not the match is televised]"/>
+					<flags id="alignment" value="centre"/>
+				</record>
+				<record index="4">
+					<translation id="text" translation_id="316802" type="use" value="Venue[COMMENT: where the current team is playing the fixture - home/away/neutral]"/>
+					<flags id="alignment" value="centre"/>
+				</record>
+				<record index="5">
+					<translation id="text" translation_id="316800" type="use" value="Competition[COMMENT: competition a fixture is played in]"/>
+					<flags id="alignment" value="left, centre_y"/>
+				</record>
+				<record index="6">
+					<translation id="text" translation_id="316806" type="use" value="Result[COMMENT: the outcome of the game]"/>
+					<flags id="alignment" value="centre"/>
+				</record>
+			</list>
+
+			<!-- default sort -->
+			<list id="default_sort_column">
+				<integer value="fxdt"/>
+			</list>
+		</widget>
+	</container>
+
+</panel>

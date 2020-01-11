@@ -1,0 +1,48 @@
+<panel height="650" width="800">
+
+	<translation id="title" translation_id="395006" type="use" value="Add Player[COMMENT: FR 8517 button text for adding a specific player to a fantasy club]" />
+
+	<layout class="arrange_vertical_attachment" layout="-1,35" offset="8" gap="5" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
+	<layout class="centre_in_parent_attachment" alignment="all" />
+	
+	<widget class="person_search_panel" id="pSpn" type="1"  file="person/person search list create a club" />
+
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="5" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="5"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container class="main_box" id="sqBC" appearance="boxes/custom/warning/rounded/paper" >
+				<layout class="fit_children_attachment" alignment="horizontal" offset="5"/>
+				<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="5" apply_to_children="true" />
+				<widget class="text" alignment="centre" id="sqBR" auto_size="horizontal" />
+			</container>
+
+			<container class="main_box" id="PRsC" appearance="boxes/custom/warning/rounded/paper"  >
+				<layout class="fit_children_attachment" alignment="horizontal" offset="5" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="5" apply_to_children="true" />
+				<widget class="text" alignment="centre" id="PRsB" auto_size="horizontal" />
+			</container>
+		</container>
+
+		<container>
+			<attachment_group class="button_arrangement_right" />
+
+			<widget class="primary_icon_tick_button" id="ok" controller_button="y_button">
+				<translation id="text" translation_id="395006" type="use" value="Add Player[COMMENT: FR 8517 button text for adding a specific player to a fantasy club]" />
+			</widget>
+
+			<widget class="icon_button" id="canc" auto_size="all" controller_button="b_button">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				<record id="click_event">
+					<flags id="event_id" value="canc" />
+				</record>
+			</widget>
+		</container>
+	</container>
+</panel>

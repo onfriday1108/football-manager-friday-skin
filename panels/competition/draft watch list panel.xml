@@ -1,0 +1,31 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<widget class="client_object_list_table" id="wltb" database_table_type="1" customisation_context="play" mode="fill_rows, stripe_rows">
+		<boolean id="save_session_state" value="true"/>
+		<integer id="contextual_handler_column_id" value="Pnms"/>
+		<boolean id="save_default_state" value="true"/>
+
+		<list id="default_sort_column">
+			<integer value="Pnms"/>
+		</list>
+
+		<flags id="default_view" value="geni"/>
+
+		<list id="viws">
+			<record id="geni">
+				<record id="view">
+					<flags id="Pnms"/>
+					<!-- person name -->
+					<flags id="PpsC"/>
+					<!-- position -->
+					<flags id="Dftd"/>
+					<!-- has been picked? -->
+				</record>
+			</record>
+		</list>
+	</widget>
+
+</panel>

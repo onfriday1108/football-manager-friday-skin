@@ -1,0 +1,59 @@
+<panel>
+	<!-- wizard panel title, header and footer strings -->
+	<translation id="wizard_panel_title" translation_id="465563" type="use" value="Team Fluidity[COMMENT: team tactical instruction, reference ID 364787, team shape is now team fluidity]" />
+	<translation_list id="wizard_panel_header">
+		<translation translation_id="466458" type="use">Please choose the team fluidity with which to start the match.[COMMENT: match plan creator wizard: instructional text, reference ID 364667 as Team Shape is now Team Fluidity]</translation>
+		<translation />
+		<translation />
+		<translation translation_id="466459" type="use">Any team fluidity chosen here may be overridden by scenario-specific options during the match.[COMMENT: match plan creator explanation text, reference ID 364224 as Team Shape is now team Fluidity]</translation>
+	</translation_list>
+	<translation id="wizard_panel_step_text" translation_id="466460" type="use" value="Step 8: Set Team Fluidity[COMMENT: match plan creator wizard: Short description of selecting a fluidity step in the wizard, reference ID 364768 as Team Shape is now Team Fluidity]" />
+
+	<!-- centre the widgets vertically, but align them to the left side -->
+	<layout class="arrange_horizontal_attachment" layout="-1, -2" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+		<record id="default_properties" auto_size="vertical" />
+		
+		<widget class="radio_button" id="phvr">
+			<translation id="text" translation_id="364490" type="use" value="Highly Structured[COMMENT: tactical team instructions; team philosophy]" />
+			<record id="click_event">
+				<integer id="event_id" value="styl" />
+				<integer id="index" value="0" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="phmr">
+			<translation id="text" translation_id="364774" type="use" value="Structured[COMMENT: tactical team instructions; team philosophy]" />
+			<record id="click_event">
+				<integer id="event_id" value="styl" />
+				<integer id="index" value="1" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="phbl">
+			<translation id="text" translation_id="364391" type="use" value="Flexible[COMMENT: tactical team instructions; team philosophy]" />
+			<record id="click_event">
+				<integer id="event_id" value="styl" />
+				<integer id="index" value="2" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="phmf">
+			<translation id="text" translation_id="298085" type="use" value="Fluid[COMMENT: Tactics Creator; philosophy type]" />
+			<record id="click_event">
+				<integer id="event_id" value="styl" />
+				<integer id="index" value="3" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="phvf">
+			<translation id="text" translation_id="298086" type="use" value="Very Fluid[COMMENT: Tactics Creator; philosophy type]" />
+			<record id="click_event">
+				<integer id="event_id" value="styl" />
+				<integer id="index" value="4" />
+			</record>
+		</widget>
+	</container>
+
+	<widget class="text" id="desc" />
+</panel>

@@ -1,0 +1,52 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="main_box">
+
+		<translation id="title" translation_id="230056" type="use" value="Tactics" />
+		<layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+    <widget class="pitch_with_tactics" id="attp" vertical="true" icon_flags="show_selection_image,show_position_role_duty_suitability,show_position_level_tooltip"
+            pitch_alignment="centre_x,top" 
+            pitch_override_icon_size="3" 
+            pitch_dont_draw_indicators="true"
+            allow_y_score_adjustment_for_roles="false"
+            pitch_is_read_only="true" >
+                <string id="pitch_kit_icon" value="pitch/icons/dots" />
+
+    </widget>
+
+
+		<widget class="table" id="tacT" layout="-1" mode="fill_rows" row_height="22">
+
+            <record id="default_properties" col="0" />
+			<widget class="label" row="0" font="label" colour="faded text" alignment="left,bottom">
+				<translation id="text" translation_id="229988" type="use" value="Preferred Formation" />
+			</widget>
+			<widget class="label" row="2" font="label" colour="faded text" alignment="left,bottom">
+				<translation id="text" translation_id="242539" type="use" value="Playing Mentality" />
+			</widget>
+			<widget class="label" row="4" font="label" colour="faded text" alignment="left,bottom">
+				<translation id="text" translation_id="242534" type="use" value="Pressing Style" />
+			</widget>
+			<widget class="label" row="6" font="label" colour="faded text" alignment="left,bottom">
+				<translation id="text" translation_id="242547" type="use" value="Marking Style" />
+			</widget>
+			<widget class="label" row="8" font="label" colour="faded text" alignment="left,bottom">
+				<translation id="text" translation_id="242543" type="use" value="Coaching Style" />
+			</widget>
+
+			<widget class="label" id="prfo" row="1" />
+			<widget class="label" id="plma" row="3" />
+			<widget class="label" id="prst" row="5" />
+			<widget class="label" id="mars" row="7" />
+			<widget class="label" id="coas" row="9" />
+
+		</widget>
+
+	</widget>
+
+</panel>

@@ -1,0 +1,14 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container class="inner_subtle_box" id="mnbx">
+
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- sub panels will be added here -->
+	</container>
+
+</panel>

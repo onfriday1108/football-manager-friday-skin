@@ -1,0 +1,188 @@
+<panel save_immediate_state="true">
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- panel for no available feeder clubs-->
+	<container class="empty_state" id="nofc" header_widget="BShe" body_widget="BSbo">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="316560" type="use" value="You currently don't have any clubs under consideration for affiliation with your club." />
+		</widget>
+		<widget class="label" id="BSbo">
+			<translation id="text" translation_id="316561" type="use" value="To ask your board to look for potential club affiliations, please head to the board room." />
+		</widget>
+	</container>
+
+
+	<container class="main_box" id="fcpp" hidden="true">
+		<translation id="title" translation_id="316559" type="use" value="Proposed Affiliated Clubs[COMMENT: heading for feeder club proposal panel]" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- panel for available feeder clubs-->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="250,-1,250" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="inner_subtle_box">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<widget class="table" id="tfed" fixed_size_rows="false" auto_size_rows="true" select_event="slrw">
+					<string id="layout" value="-1" />
+					<flags id="mode" value="stripe_rows, select_rows, fill_rows, dont_allow_empty_selection" />
+
+					<record id="shown_event">
+						<flags id="event_id" value="REQF" />
+						<flags id="event_target" value="self" />
+					</record>
+
+					<list id="column_table_properties">
+						<record id="0" top="5" bottom="5">
+							<flags id="sort_disabled" value="true" />
+							<flags id="alignment" value="centre" />
+							<record id="column_widget_properties">
+								<flags id="auto_size" value="vertical" />
+							</record>
+						</record>
+					</list>
+
+				</widget>
+			</container>
+
+			<container class="inner_subtle_box">
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!--parent club-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="label" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" style="semi_bold">
+							<translation id="text" translation_id="377286" type="use" value="Senior Affiliate[COMMENT: interaction manager; type of interaction, this is formerly Parent Club, legal request to change to something less divisive than Parent/Feeder]" />
+						</widget>
+						<widget class="club_button" spec="text" id="pare" alignment="centre_x,bottom" auto_size="vertical" icon_enabled="false" />
+					</container>
+
+					<!--feeder club-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="label" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" style="semi_bold">
+							<translation id="text" translation_id="376841" type="use" value="Affiliate Club[COMMENT: interaction manager; type of interaction, this is formerly Feeder Club, legal request to change to something less divisive than Parent/Feeder]" />
+						</widget>
+						<widget class="club_button" spec="text" id="feed" size="13" alignment="centre_x,bottom" auto_size="vertical" icon_enabled="false" />
+					</container>
+
+					<!--link type-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="label" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" style="semi_bold">
+							<translation id="text" translation_id="344137" type="use" value="Link Type[COMMENT: label for some text saying what kind of affiliate club link is being shown]" />
+						</widget>
+						<widget class="text" spec="text" id="type" size="13" alignment="centre_x,bottom" auto_size="vertical" />
+					</container>
+
+					<!--citizenship-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="label" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" style="semi_bold">
+							<translation id="text" translation_id="258281" type="use" value="Days To Gain Nationality[COMMENT: Work Permit qualification rules]" />
+						</widget>
+						<widget class="text" id="citi" spec="text" size="14" alignment="centre_x,bottom" auto_size="vertical" />
+					</container>
+
+					<!--annual fee-->
+					<container height="65">
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<!--annual fee-->
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="label" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" style="semi_bold">
+								<translation id="text" translation_id="343228" type="use" value="Annual Fee[COMMENT: label for some text showing how much is paid per year to have this club affiliation]" />
+							</widget>
+							<widget class="cash_cell" id="annf" spec="text" colour="title" size="14" alignment="centre_x,bottom" auto_size="vertical" />
+						</container>
+
+					</container>
+
+					<!--description of link-->
+					<widget class="table" id="tafi" fixed_size_rows="false" auto_size="vertical">
+
+						<flags id="layout" value="-1" />
+
+						<boolean id="auto_size_rows" value="true" />
+						<boolean id="all_content_same_height" value="false" />
+
+						<record id="default_properties">
+							<flags id="alignment" value="left,centre_y" />
+						</record>
+
+						<list id="column_table_properties">
+							<record index="0" sort_disabled="true" left="4" top="3" bottom="3" />
+						</list>
+
+						<list id="column_widget_properties">
+							<record index="0" spec="text" size="normal"/>
+						</list>
+					</widget>
+
+					<!--potential loan targets-->
+					<container class="main_box" id="pltC">
+						<translation id="text" translation_id="412429" type="use" value="Players potentially available for loan:[COMMENT: FR 9820 - feeder club proposal, list of players the user might be interested in loaning from the proposed club]" />
+
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<widget class="client_object_list_table" id="pltl" database_table_type="1" mode="fill_rows, stripe_rows, printable, keyboard">
+							<!--default view-->
+							<flags id="default_view" value="loan" />
+
+							<list id="viws">
+								<record id="loan">
+									<translation id="name" translation_id="275856" type="use" value="Details[COMMENT: button in view_menu on squad screens; choose to view loan/coownership details]" />
+									<!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+									<record id="view">
+										<flags id="Pnfo" />
+										<!-- player status/info -->
+										<flags id="Pnms" />
+										<!-- person name -->
+										<flags id="Page" />
+										<!-- age -->
+										<flags id="PpsC" />
+										<!-- position -->
+										<flags id="Pcab" />
+										<!-- ability -->
+									</record>
+								</record>
+							</list>
+						</widget>
+					</container>
+				</container>
+
+				<!-- group box containing buttons at bottom right corner -->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+
+					<widget class="primary_icon_tick_button" id="Recc" click_event="set ">
+						<translation id="text" translation_id="251920" type="use" value="Recommend Team[COMMENT: action button in feeder club proposal.xml]" />
+					</widget>
+					<widget class="button" id="Reje" auto_size="all" click_event="Reje">
+						<translation id="text" translation_id="251921" type="use" value="Reject Recommendations[COMMENT: action button in feeder club proposal.xml]" />
+					</widget>
+				</container>
+			</container>
+
+			<widget class="club_overview_details_panel" id="cluI" file="club/club overview details panel affiliate proposal" />
+		</container>
+
+	</container>
+
+</panel>

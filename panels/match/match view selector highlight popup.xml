@@ -1,0 +1,30 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="inner_box" id="titl" appearance="boxes/custom/match/between highlights/paper">
+
+    <translation id="title" translation_id="332286" type="use" value="Waiting for next highlight...[COMMENT: title for a box containing information to look at between highlights]" />
+    <!-- buttons area -->
+    <container embed_in_frame="true">
+		<attachment_group class="title_embedded_panel_left" />
+      <!-- the loading animation - GPU rendering -->
+      <widget class="picture" id="anmG" auto_size="all" file="progress/circular/spinner_match" frame_duration="100000" frame_width="36" embed_in_frame="true" red_replacement="title">
+        <animation class="rotate_animation" end_mode="repeat" start_value="0" end_value="360" tween="linear" apply_to_mouse="false" />
+      </widget>
+    </container>
+
+    <widget class="popup_button" id="popv" width="25" click_event="msis" height="20" appearance="buttons/custom/customise panel/button" fixed="true" embed_in_frame="true">
+      <layout class="arrange_horizontal_attachment" alignment="right" embed_in_frame="true" gap="0" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="right,top" embed_in_frame="true" inset="16" />
+
+    </widget>
+
+    <container class="main_box" id="SUBP" appearance="boxes/subsection/match/paper">
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+    </container>
+
+  </container>
+
+</panel>

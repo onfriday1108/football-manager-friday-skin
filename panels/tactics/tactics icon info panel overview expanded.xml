@@ -1,0 +1,53 @@
+<panel>
+	<list id="cnvs">
+		<record id="it10" name="background" height="50">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="true" offset="0"/>
+		</record>
+		<record id="it02" editor_group_id="it10" name="player picker" height="25">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0" use_content_rectangle="true"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0" use_content_rectangle="true"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="25" use_content_rectangle="true"/>
+		</record>
+		<record id="it04" editor_group_id="it10" name="position_duty" height="25">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0" use_content_rectangle="true"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0" use_content_rectangle="true"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0" use_content_rectangle="true"/>
+		</record>
+		<record id="it11" editor_group_id="it10" name="personalised instruction" width="26" height="26">
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="true" offset="0" use_content_rectangle="true"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="true" offset="-50" use_content_rectangle="true"/>
+		</record>
+		<record id="it03" editor_group_id="it10" name="pie" width="25" height="25">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="true" offset="0" use_content_rectangle="true"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="true" offset="-25" use_content_rectangle="true"/>
+		</record>
+		<record id="it05" hidden="true">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="true" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="it06" hidden="true">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="true" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="it07" hidden="true">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="true" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="it08" hidden="true">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="true" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="it09" name="injury" width="30" height="30">
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="true" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+    <record id="it01" name="kit picture">
+      <record target="main" id="top " set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+      <record target="main" id="botm" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-40"/>
+      <record target="main" id="rght" set_side="none,right" get_side="none,right" move_side="true" offset="0"/>
+      <record target="main" id="left" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+    </record>
+	</list>
+</panel>

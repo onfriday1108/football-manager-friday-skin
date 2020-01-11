@@ -1,0 +1,8 @@
+﻿<panel>
+  <layout class="centre_in_parent_attachment" alignment="all" offset="0" apply_to_children="true" />
+
+  <widget class="icon_button"  icon="icons/16px/add shortlist" height="35" width="35" icon_alignment="centre"  keep_aspect_ratio="true" appearance="buttons/custom/add shortlist/button">
+    <translation id="hint" translation_id="243350" type="use" value="Add To Shortlist" />
+  </widget>
+
+</panel>

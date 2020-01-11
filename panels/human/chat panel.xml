@@ -1,0 +1,72 @@
+<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="10" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+	<!--main container for chat text and user list-->
+	<container>
+
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--chat text-->
+		<widget class="main_box" id="hstp">
+			<translation id="title" translation_id="247123" type="use" value="Manager Chat" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="table" id="chat" layout="-1" auto_size_rows="true" fixed_size_rows="false" mode="fill_rows,stripe_rows,printable">
+
+				<list id="column_table_properties">
+					<record indx="0" sort_disabled="true" left="4" right="4" top="2" bottom="2" />
+				</list>
+
+			</widget>
+		</widget>
+
+		<!--user list-->
+		<widget class="main_box" width="400">
+			<translation id="title" translation_id="247953" type="use" value="Managers In Chat" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="table" id="user" sele="htsl" layout="-1,-1,-1" auto_size_rows="true">
+				<flags id="mode" value="fill_rows,stripe_rows" />
+
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="227981" type="use" value="Manager" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="338607" type="use" value="User[COMMENT: manager list panel; column showing the steam user name]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="229408" type="use" value="Team" />
+					</record>
+				</list>
+
+				<record id="default_properties">
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="multiline" value="false" />
+				</record>
+
+			</widget>
+		</widget>
+
+	</container>
+
+	<!--area for entering messages-->
+	<container class="inner_box_no_margin">
+
+		<translation id="title" translation_id="248403" type="use" value="Message[COMMENT - message to other manager in transfer offer screen]" />
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+		<widget class="edit_box" id="edit" auto_size="vertical">
+			<flags id="return_event" value="nwct" />
+			<flags id="changed_event" value="edct" />
+			<attachment class="max_length_attachment" length="1000" />
+		</widget>
+
+	</container>
+
+</panel>

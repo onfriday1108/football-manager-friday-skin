@@ -1,0 +1,38 @@
+<panel height="25">
+
+	<layout class="arrange_vertical_attachment" alignment="fill" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<!--versus-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!--opposition-->
+		<widget class="fixture_opponent_team_button" id="fopt">
+			<record id="object_property">
+				<integer id="get_property" value="fopt"/>
+			</record>
+		</widget>
+
+		<!--date-->
+		<widget class="date_cell"  auto_size="horizontal" format="[%date#1-abbr_day]">
+			<record id="object_property">
+				<integer id="get_property" value="fxdt"/>
+			</record>
+		</widget>
+
+		<widget class="date_cell" auto_size="horizontal" format="[%date#1-shortest_no_year_leading_zero]">
+			<record id="object_property">
+				<integer id="get_property" value="fxdt"/>
+			</record>
+		</widget>
+		<widget class="date_cell" auto_size="horizontal" format="[%date#1-time]">
+			<record id="object_property">
+				<integer id="get_property" value="fxdt"/>
+			</record>
+		</widget>
+	</container>
+
+
+</panel>

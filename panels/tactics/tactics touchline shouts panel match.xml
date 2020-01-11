@@ -1,0 +1,284 @@
+<panel>
+	<translation id="title" type="new" value="Team Tactics Panel" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<flags id="unselected_appearance" value="tables/standard/normal" />
+	<flags id="selected_appearance" value="tables/custom/squad/substitute/row" />
+
+	<container>
+
+		<layout class="arrange_horizontal_attachment" layout="-3,-7" gap="10" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+		<container class="inner_box" font="fonts/match_panel_title">
+
+			<translation id="title" translation_id="326992" type="use" value="Shouts[COMMENT:title for the custom touchline instructions list]" />
+			<layout class="arrange_vertical_attachment" alignment="top,extend" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="text" auto_size="vertical" size="9">
+				<translation id="text" translation_id="451315" type="use" value="Shouts allow tactics to be quickly adjusted during a match.[COMMENT: hint text for the Shouts button, reintroduced to the UI late in development]" />
+			</widget>
+
+			<!--table of current preset shouts-->
+			<widget class="table" id="touc" layout="-1,70" mode="fill_rows, select_rows, show_bullets" select_event="selt">
+				<flags id="auto_size" value="vertical" />
+				<boolean id="fixed_size_rows" value="true" />
+				<integer id="row_height" value="28" />
+
+				<record id="default_properties" spec="text" />
+
+				<list id="column_table_properties">
+					<record indx="0">
+						<boolean id="sort_disabled" value="true" />
+						<record id="column_widget_properties">
+							<flags id="alignment" value="left,centre_y" />
+						</record>
+					</record>
+					<record indx="1" sort_disabled="true" top="2" bottom="2" right="2" />
+				</list>
+
+			</widget>
+
+			<container id="btna">
+				<layout class="arrange_horizontal_attachment" alignment="right" gap="5" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="2" apply_to_children="true" />
+
+				<!-- create new instruction -->
+				<widget class="primary_button" click_event="Cren" auto_size="all">
+					<translation id="text" translation_id="319519" type="use" value="Create New[COMMENT: button text for creating a new custom touchline instruction]" />
+				</widget>
+
+			</container>
+		</container>
+
+		<!--list of available shouts in check boxes-->
+		<container class="inner_box" id="touB" font="fonts/match_panel_title">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" gap="5" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- buttons area -->
+			<container id="btna" embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_right" />
+
+				<!-- create new instruction -->
+				<widget class="button" click_event="Rena" auto_size="all" embed_in_frame="true" appearance="button/match/button">
+					<translation id="text" translation_id="319521" type="use" value="Rename[COMMENT: button text for renaming a custom touchline instruction]" />
+				</widget>
+
+			</container>
+
+			<container class="main_box" appearance="boxes/subsection/match/paper">
+
+				<translation id="title" translation_id="298010" type="use" value="Strategy" />
+				<layout class="arrange_vertical_attachment" alignment="top" gap="5" offset="0" />
+				<layout class="fit_children_attachment" alignment="vertical" gap="5" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!-- General Strategies table -->
+				<widget class="table" mode="fill_rows" layout="-1,-1">
+
+					<record id="default_properties" spec="text" />
+
+					<boolean id="fixed_size_rows" value="true" />
+					<integer id="row_height" value="22" />
+					<flags id="auto_size" value="vertical" />
+
+					<record id="default_properties">
+						<flags id="spec" value="text" />
+					</record>
+
+					<list id="column_table_properties">
+
+						<record>
+							<boolean id="sort_disabled" value="true" />
+							<record id="column_widget_properties">
+								<flags id="alignment" value="left,centre_y" />
+							</record>
+						</record>
+
+						<record>
+							<boolean id="sort_disabled" value="true" />
+							<record id="column_widget_properties">
+								<flags id="alignment" value="left,centre_y" />
+							</record>
+						</record>
+					</list>
+
+					<widget class="check_box" row="0" col="0" id="chst" spec="text" style="bold" click_event="chst">
+						<translation id="hint" translation_id="330672" type="use" value="Tick this box to change your team's strategy when applying this shout." />
+						<translation id="text" translation_id="329752" type="use" value="Change Strategy to[COMMENT:check box label for when the user wants to change their team's strategy]" />
+					</widget>
+					<widget class="popup_button" row="0" col="1" id="strp" disabled="true" appearance="menus/standard/match/button">
+						<translation id="hint" translation_id="298053" type="use" value="Select your match strategy[COMMENT: team instructions: match strategy hint]" />
+						<flags id="sele" value="selS" />
+						<list id="items">
+							<record id="5">
+								<translation id="name" translation_id="465557" type="use" value="Very Defensive[COMMENT: tactical team instructions; team mentality, order is Very Defensive, Defensive, Cautious, Balanced, Positive, Attacking, Very Attacking]" />
+							</record>
+							<record id="6">
+								<translation id="name" translation_id="298126" type="use" value="Defensive[COMMENT: tactical team instructions; team strategy]" />
+							</record>
+							<record id="41">
+                <translation id="name" translation_id="465558" type="use" value="Cautious[COMMENT: tactical team instructions; team mentality, order is Very Defensive, Defensive, Cautious, Balanced, Positive, Attacking, Very Attacking]" />
+							</record>
+							<record id="7">
+                <translation id="name" translation_id="465559" type="use" value="Balanced[COMMENT: tactical team instructions; team mentality, order is Very Defensive, Defensive, Cautious, Balanced, Positive, Attacking, Very Attacking]" />
+							</record>
+							<record id="8">
+                <translation id="name" translation_id="465560" type="use" value="Positive[COMMENT: tactical team instructions; team mentality, order is Very Defensive, Defensive, Cautious, Balanced, Positive, Attacking, Very Attacking]" />
+							</record>
+							<record id="9">
+								<translation id="name" translation_id="298130" type="use" value="Attacking[COMMENT: tactical team instructions; team strategy]" />
+							</record>
+							<record id="10">
+                <translation id="name" translation_id="465561" type="use" value="Very Attacking[COMMENT: tactical team instructions; team mentality, order is Very Defensive, Defensive, Cautious, Balanced, Positive, Attacking, Very Attacking]" />
+							</record>
+						</list>
+						<flags id="slct" value="7" />
+					</widget>
+
+				</widget>
+
+			</container>
+
+			<container class="main_box" appearance="boxes/subsection/match/paper">
+
+				<translation id="title" translation_id="319627" type="use" value="Shouts[COMMENT: sections.xml, touchline shoust header text]" />
+				<layout class="arrange_vertical_attachment" alignment="top" gap="5" offset="0" />
+				<layout class="fit_children_attachment" alignment="vertical" gap="5" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="table" id="insT" layout="-1,-1,-1,-1,-1" mode="fill_rows">
+
+					<record id="default_properties" spec="text" />
+					<boolean id="fixed_size_rows" value="true" />
+					<integer id="row_height" value="25" />
+					<flags id="auto_size" value="vertical" />
+
+					<list id="column_widget_properties">
+						<record index="0" alignment="left,centre_y" style="bold" />
+						<record index="1" alignment="left,centre_y" spec="text" />
+						<record index="2" alignment="left,centre_y" spec="text" />
+						<record index="3" alignment="left,centre_y" spec="text" />
+						<record index="4" alignment="left,centre_y" spec="text" />
+					</list>
+
+					<widget class="check_box" row="0" column="0" id="in03" click_event="takb" />
+
+					<widget class="label" row="1" column="0" column_span="5" spec="text" size="small">
+						<translation id="text" translation_id="337959" type="use" value="If this is ticked, instructions with a * cannot be shouted.[COMMENT: tactics shout panel; instruction text for the availability of shouts]" />
+					</widget>
+
+					<widget class="label" row="2" column="0" group="0" style="bold">
+						<translation id="text" translation_id="319522" type="use" value="Defensive Distribution[COMMENT:title for an area to choose defensive passing options for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="2" column="1" group="0" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="2" column="2" group="0" id="in25" click_event="radc" />
+					<widget class="radio_button" row="2" column="3" group="0" id="in15" click_event="radc" />
+					<widget class="radio_button" row="2" column="4" group="0" id="in16" click_event="radc" />
+
+					<widget class="label" row="3" column="0" group="1" style="bold">
+						<translation id="text" translation_id="319523" type="use" value="Defensive Line[COMMENT:title for an area to choose defensive line options for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="3" column="1" group="1" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="3" column="2" group="1" id="in06" click_event="radc" />
+					<widget class="radio_button" row="3" column="3" group="1" id="in07" click_event="radc" />
+
+					<widget class="label" row="4" column="0" group="2" style="bold">
+						<translation id="text" translation_id="319524" type="use" value="Tackling[COMMENT:title for an area to choose tackling options for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="4" column="1" group="2" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="4" column="2" group="2" id="in09" click_event="radc" />
+					<widget class="radio_button" row="4" column="3" group="2" id="in10" click_event="radc" />
+
+					<widget class="label" row="5" column="0" group="3" style="bold">
+						<translation id="text" translation_id="319525" type="use" value="Passing[COMMENT:title for an area to choose passing options for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="5" column="1" group="3" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="5" column="2" group="3" id="in13" click_event="radc" />
+					<widget class="radio_button" row="5" column="3" group="3" id="in14" click_event="radc" />
+
+					<widget class="label" row="6" column="0" group="4" style="bold">
+						<translation id="text" translation_id="319526" type="use" value="Width[COMMENT:title for an area to choose width options for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="6" column="1" group="4" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="6" column="2" group="4" id="in04" click_event="radc" />
+					<widget class="radio_button" row="6" column="3" group="4" id="in05" click_event="radc" />
+
+					<!--<widget class="label" row="7" column="0" group="5" text="Adventurousness[COMMENT:title for an area to choose risk options for the touchline instructions]" style="bold"/>
+        <widget class="radio_button" row="7" column="1" group="5" selected="true" id="nopa" click_event="radc" text="None"/>
+        <widget class="radio_button" row="7" column="2" group="5" id="in21" click_event="radc"/>
+        <widget class="radio_button" row="7" column="3" group="5" id="in22" click_event="radc"/>-->
+
+					<widget class="label" row="7" column="0" group="6" style="bold">
+						<translation id="text" translation_id="319528" type="use" value="Attacking[COMMENT:title for an area to choose attacking options for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="7" column="1" group="6" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="7" column="2" group="6" id="in23" click_event="radc" />
+					<widget class="radio_button" row="7" column="3" group="6" id="in24" click_event="radc" />
+
+					<widget class="label" row="8" column="0" group="7" style="bold">
+						<translation id="text" translation_id="319529" type="use" value="Shooting[COMMENT:title for an area to choose shooting options for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="8" column="1" group="7" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="8" column="2" group="7" id="in17" click_event="radc" />
+					<widget class="radio_button" row="8" column="3" group="7" id="in18" click_event="radc" />
+
+					<widget class="label" row="9" column="0" group="8" style="bold">
+						<translation id="text" translation_id="319530" type="use" value="Wing Play[COMMENT:title for an area to choose options for the wingers for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="9" column="1" group="8" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="9" column="2" group="8" id="in26" click_event="radc" />
+					<widget class="radio_button" row="9" column="3" group="8" id="in19" click_event="radc" />
+
+					<widget class="label" row="10" column="0" group="9" style="bold">
+						<translation id="text" translation_id="319531" type="use" value="Possession[COMMENT:title for an area to choose possession options for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="10" column="1" group="9" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="10" column="2" group="9" id="in01" click_event="radc" />
+					<widget class="radio_button" row="10" column="3" group="9" id="in02" click_event="radc" />
+
+					<widget class="label" row="11" column="0" group="10" style="bold">
+						<translation id="text" translation_id="319532" type="use" value="Pressing[COMMENT:title for an area to choose pressing options for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="11" column="1" group="10" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="11" column="2" group="10" id="in20" click_event="radc" />
+					<widget class="radio_button" row="11" column="3" group="10" id="in08" click_event="radc" />
+
+					<widget class="label" row="12" column="0" group="11" style="bold">
+						<translation id="text" translation_id="319533" type="use" value="Midfield Distribution[COMMENT:title for an area to choose midfield distribution options for the touchline instructions]" />
+					</widget>
+					<widget class="radio_button" row="12" column="1" group="11" selected="true" id="nopa" click_event="radc">
+						<translation id="text" translation_id="227487" type="use" value="None" />
+					</widget>
+					<widget class="radio_button" row="12" column="2" group="11" id="in11" click_event="radc" />
+					<widget class="radio_button" row="12" column="3" group="11" id="in12" click_event="radc" />
+
+				</widget>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

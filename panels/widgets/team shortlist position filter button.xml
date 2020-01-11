@@ -1,0 +1,30 @@
+﻿<panel>
+	<flags id="SELA" value="buttons/custom/shortlist pitch/selected/button"/>
+	<flags id="USEA" value="buttons/custom/shortlist pitch/normal/button"/>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container id="main">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<widget class="icon_button" id="butt" click_event="PosS"/>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="2" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="3" />
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="text" id="post"  alignment="centre_x" wants_mouse_events="false" style="bold" colour="white" auto_size="vertical"/>
+
+				<widget class="text" id="nupt"  alignment="centre_x" wants_mouse_events="false" size="small" colour="faded white" auto_size="vertical"/>
+
+			</container>
+
+			<widget class="popup_button" id="rolb" height="26" select_event="sdst" appearance="buttons/custom/shortlist pitch/normal/button" alignment="centre" colour="white" secondary_icon_colour="white" />
+
+		</container>
+
+	</container>
+
+</panel>

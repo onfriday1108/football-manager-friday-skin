@@ -1,0 +1,70 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container >
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="6" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container class="inner_subtle_box" height="40" >
+			<layout class="arrange_horizontal_attachment" alignment="left" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="check_box" id="chk1" auto_size="horizontal" needs_width="true" hidden="true">
+				<record id="clke">
+					<string id="event_id" value="eUcs" />
+					<integer id="index" value="0" />
+				</record>
+			</widget>
+			
+			<container class="horizontal_arrange_container" auto_size="horizontal" id="mch1"/>
+
+			<widget class="check_box" id="chk2" auto_size="horizontal" needs_width="true" hidden="true">
+				<record id="clke">
+					<string id="event_id" value="eUcs" />
+					<integer id="index" value="1" />
+				</record>
+			</widget>
+
+			<container class="horizontal_arrange_container" auto_size="horizontal" id="mch2"/>
+
+			<widget class="check_box" id="chk3" auto_size="horizontal" needs_width="true" hidden="true">
+				<record id="clke">
+					<string id="event_id" value="eUcs" />
+					<integer id="index" value="2" />
+				</record>
+			</widget>
+
+			<container class="horizontal_arrange_container" auto_size="horizontal" id="mch3"/>
+			
+		</container>
+		
+
+		<widget class="chalkboard_pitch" id="CSit" height="335" select_event="slic" animate_size_and_position="true" pitch_draw_ads="false" pitch_draw_arrows="true" pitch_keep_selected_icons="false" pitch_draw_grass="false" pitch_player_icon_font="match pitch players" pitch_touchline_width_percentage="100" vertical="false" force_left_to_right_events="true" />
+
+		<container height="335">
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container class="scrolling_box">
+				<layout class="arrange_vertical_attachment" layout="top" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container class="vertical_arrange_container" id="posC" auto_size="vertical" needs_height="true">
+					<integer id="vertical_gap" value="4" />
+				</container>
+
+			</container>
+
+			<container class="scrolling_box">
+				<layout class="arrange_vertical_attachment" layout="top" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container class="vertical_arrange_container" id="negC" auto_size="vertical" needs_height="true">
+					<integer id="vertical_gap" value="4" />
+				</container>
+
+			</container>
+		</container>
+	</container>
+</panel>

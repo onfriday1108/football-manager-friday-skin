@@ -1,0 +1,19 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--player list-->
+		<widget class="client_object_list_table" id="lstb" fixed_size_rows="true" auto_size="vertical" database_table_type="1" row_height="28">
+			<flags id="mode" value="fill_rows, stripe_rows"/>
+			<integer id="contextual_handler_column_id" value="Pnms"/>
+			<record id="viewed_property_ids">
+				<record id="Pnms"/>
+				<record id="FAcb"/> <!-- PROP_PLAYER_NEXT_FINE_AMOUNT_CUMULATIVE_BOOKING -->
+			</record>
+		</widget>
+
+	</container>
+
+</panel>

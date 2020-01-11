@@ -1,0 +1,107 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<boolean id="check_for_multiple_requests" value="true" />
+	<boolean id="should_force_refresh" value="true" />
+
+	<container navigation_container="true">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- some descriptive text for the table below -->
+		<widget class="text" id="titl" auto_size="vertical" spec="text" colour="text" font="fonts/inbox_body" size="11" />
+
+		<widget class="table" id="list" layout="300, 130, 78, 78, 40, 40, 40, 45, 100, 120, 75, 130" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple, dont_ask_for_focus" fixed_size_rows="false" auto_size="vertical" row_spacing="2" navigation_focus_target="true">
+			<list id="headings">
+				<record index="0" alignment="left, centre_y">
+					<translation id="text" translation_id="227765" type="use" value="Name[comment - Person Name]" />
+					<translation id="hint" translation_id="247479" type="use" value="Person Name" />
+				</record>
+				<record index="1" alignment="left, centre_y">
+					<translation id="text" translation_id="227737" type="use" value="Club" />
+					<translation id="hint" translation_id="227737" type="use" value="Club" />
+				</record>
+				<record index="2" alignment="centre">
+					<translation id="text" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]" />
+					<translation id="hint" translation_id="257318" type="use" value="Assistant manager's opinion of this player's current ability[COMMENT - person list view column heading hint]" />
+				</record>
+				<record index="3" alignment="centre">
+					<translation id="text" translation_id="314427" type="use" value="Potential[COMMENT: player popup info panel - scout potential ability rating]" />
+					<translation id="hint" translation_id="257319" type="use" value="Assistant manager's opinion of this player's potential ability[COMMENT - person list view column heading hint]" />
+				</record>
+				<record index="4" alignment="centre">
+					<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
+					<translation id="hint" translation_id="227845" type="use" value="Appearances" />
+				</record>
+				<record index="5" alignment="centre">
+					<translation id="text" translation_id="227856" type="use" value="Gls" />
+					<translation id="hint" translation_id="227857" type="use" value="Goals" />
+				</record>
+				<record index="6" alignment="centre">
+					<translation id="text" translation_id="227846" type="use" value="Ast[comment - Assists]" />
+					<translation id="hint" translation_id="227847" type="use" value="Assists" />
+				</record>
+				<record index="7" alignment="centre">
+					<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+					<translation id="hint" translation_id="227853" type="use" value="Average rating" />
+				</record>
+				<record index="8" alignment="left, centre_y">
+					<translation id="text" translation_id="376512" type="use" value="Loan Happiness[COMMENT: person properties; text header for loan report news item]" />
+					<translation id="hint" translation_id="376512" type="use" value="Loan Happiness[COMMENT: person properties; text header for loan report news item]" />
+				</record>
+				<record index="9" alignment="centre">
+					<translation id="text" translation_id="491977" type="use" value="Interest in Extension[COMMENT: AREA: Loan report extension interest text; SUB-AREA: Loan contract expiring news item; FR-BN: 15859]" />
+					<translation id="hint" translation_id="491978" type="use" value="Interest in Extension[COMMENT: AREA: Loan report extension interest hint; SUB-AREA: Loan contract expiring news item; FR-BN: 15859]" />
+				</record>
+				<record index="10" alignment="centre" />
+				<record index="11" alignment="centre">
+					<translation id="text" translation_id="335267" type="use" value="Report[COMMENT: scout report panel box heading]" />
+					<translation id="hint" translation_id="335267" type="use" value="Report[COMMENT: scout report panel box heading]" />
+				</record>
+
+			</list>
+
+			<!-- use the col id for the property to view -->
+			<list id="column_table_properties">
+				<record index="0" id="Pnms" auto_hide_priority="10" minimum_width="129" />
+				<!--Name-->
+				<record index="1" id="Pclb" auto_hide_priority="1400" />
+				<!--Club-->
+				<record index="2" id="Pcac" auto_hide_priority="1000" minimum_width="78" />
+				<!--Ability-->
+				<record index="3" id="Pppc" auto_hide_priority="1010" minimum_width="78" />
+				<!--Potential-->
+				<record index="4" id="PSpE" auto_hide_priority="15" />
+				<!--Apps-->
+				<record index="5" id="PSle" auto_hide_priority="1020" />
+				<!--Gls-->
+				<record index="6" id="PSse" auto_hide_priority="1020" />
+				<!--Assists-->
+				<record index="7" id="PSae" auto_hide_priority="15" />
+				<!--Av Rat-->
+				<record index="8" id="Phps" auto_hide_priority="15" minimum_width="100" />
+				<!--Loan Happiness-->
+				<record index="9" id="PlES" auto_hide_priority="16" minimum_width="50" />
+				<!--Interest In Extension-->
+				<record index="10" id="PhLw" auto_hide_priority="16" minimum_width="100" />
+				<!--Extension button-->
+				<record index="11" id="PlRP" auto_hide_priority="16" minimum_width="100" />
+				<!--Loan Report-->
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left, centre_y" />
+				<record index="1" alignment="left, centre_y" />
+				<record index="2" alignment="centre" />
+				<record index="3" alignment="centre" />
+				<record index="4" alignment="centre" />
+				<record index="5" alignment="centre" />
+				<record index="6" alignment="centre" />
+				<record index="7" alignment="centre" />
+				<record index="8" alignment="left, centre_y" />
+				<record index="9" alignment="centre" />
+				<record index="10" alignment="centre" />
+				<record index="11" alignment="centre" />
+			</list>
+		</widget>
+	</container>
+</panel>

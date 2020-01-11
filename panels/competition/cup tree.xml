@@ -1,0 +1,51 @@
+<!-- panel for a single tie in a cup tree -->
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<integer id="cup_tree_container_height" value="60" />
+
+	<string id="round_header_appearance" value="none" />
+	<string id="tie_background_appearance" value="" />
+	<record id="round_title_text_properties">
+		<integer id="size" value="10" />
+		<flags id="auto_size" value="vertical" />
+		<flags id="alignment" value="centre" />
+	</record>
+
+
+	<container class="scrolling_box">
+		<!-- horizontal sizing mode should be "fit contents" -->
+		<boolean id="fith" value="true" />
+		<boolean id="fitv" value="true" />
+		<boolean id="save_session_state" value="true" />
+
+		<container>
+			<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0"/>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="10"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+
+			<!-- Round headings -->
+			<container id="titl" height="30">
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="10"/>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="10"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			</container>
+			<!-- rounds container -->
+			<container id="rnds">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="10"/>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="10"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+				<!-- define the appearence the panels containing the team in each round -->
+				<!-- Note: The appearence of each tie within the round is defined in cup_tree_tie.xml -->
+				<!-- Round Panel width -->
+				<integer id="rndw" value="220" />
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

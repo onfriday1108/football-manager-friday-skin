@@ -1,0 +1,16 @@
+﻿<!--This file is used for person property PsnC as the xml for a PROPERTY_LIST_VIEWER_XML_PANEL-->
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <widget class="picture" id="inot" scale_picture="false" image_alignment="centre">
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="InOt"/>
+          <integer id="set_property" value="file"/>
+        </record>
+      </list>
+    </record>
+  </widget>
+
+</panel>

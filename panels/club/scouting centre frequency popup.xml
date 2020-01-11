@@ -1,0 +1,281 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<container class="standard_popup_box" id="Sfrp">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="3" horizontal_inset="4" />
+
+		<container class="inner_subtle_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+			<container class="inner_box">
+				<translation id="title" translation_id="450761" type="use" value="Inbox delivery options[COMMENT: 21109 Scouting Centre, customise how often you receive updates to your scouting centre inbox]" />
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_inset="4" />
+
+				<widget class="text" auto_size="vertical">
+					<record id="object_property" get_property="SCFt" set_property="text" />
+				</widget>
+
+				<widget class="text" alignment="left,centre_y" auto_size="vertical" colour="faded text">
+					<record id="object_property" get_property="twic" set_property="hidn" />
+					<translation id="text" translation_id="451319" type="use" value="Transfer window is currently open[COMMENT: FR 21209 Scouting centre, transfer window open/closed status]" />
+				</widget>
+
+				<widget class="text" alignment="left,centre_y" auto_size="vertical" colour="faded text">
+					<record id="object_property" get_property="twio" set_property="hidn" />
+					<translation id="text" translation_id="451320" type="use" value="Transfer window is currently closed[COMMENT: FR 21209 Scouting centre, transfer window open/closed status]" />
+				</widget>
+
+				<container class="inner_subtle_box" height="70">
+					<translation id="title" translation_id="451317" type="use" value="During transfer window[COMMENT: FR 21209 Scouting centre, scouting report frequency option, how often you want to receive updates]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<container>
+						<layout class="grid_layout_attachment" row_layout="-1," mode="auto" vertical_gap="2">
+							<list id="column_layout">
+								<record>
+									<string id="column_layout" value="-1,30,-1" />
+									<integer id="horizontal_gap" value="10" />
+								</record>
+							</list>
+						</layout>
+
+						<widget class="popup_button" select_event="DWfs" auto_size="none">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="DUit" />
+										<integer id="set_property" value="itms" />
+									</record>
+									<record>
+										<integer id="get_property" value="DWfr" />
+										<integer id="set_property" value="slct" />
+									</record>
+									<record>
+										<integer id="get_property" value="DWfs" />
+										<integer id="set_property" value="sele" />
+									</record>
+
+								</list>
+							</record>
+						</widget>
+
+						<widget class="text" alignment="centre">
+							<translation translation_id="249808" type="use" id="text" value="Or[COMMENT - used to combine filter rules together]" />
+						</widget>
+
+						<widget class="popup_button" auto_size="none">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="URit" />
+										<integer id="set_property" value="itms" />
+									</record>
+									<record>
+										<integer id="get_property" value="DWur" />
+										<integer id="set_property" value="slct" />
+									</record>
+									<record>
+										<integer id="get_property" value="DWus" />
+										<integer id="set_property" value="sele" />
+									</record>
+								</list>
+							</record>
+						</widget>
+					</container>
+
+				</container>
+
+				<container class="inner_subtle_box" height="70">
+					<translation id="title" translation_id="451318" type="use" value="Outside of transfer window[COMMENT: FR 21209 Scouting centre, scouting report frequency option, how often you want to receive updates]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<container>
+						<layout class="grid_layout_attachment" row_layout="-1," mode="auto" vertical_gap="2">
+							<list id="column_layout">
+								<record>
+									<string id="column_layout" value="-1,30,-1" />
+									<integer id="horizontal_gap" value="10" />
+								</record>
+							</list>
+						</layout>
+
+						<widget class="popup_button" auto_size="none">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="DUit" />
+										<integer id="set_property" value="itms" />
+									</record>
+									<record>
+										<integer id="get_property" value="OWfr" />
+										<integer id="set_property" value="slct" />
+									</record>
+									<record>
+										<integer id="get_property" value="OWfs" />
+										<integer id="set_property" value="sele" />
+									</record>
+								</list>
+							</record>
+						</widget>
+
+						<widget class="text" auto_size="horizontal" alignment="centre">
+							<translation translation_id="249808" type="use" id="text" value="Or[COMMENT - used to combine filter rules together]" />
+						</widget>
+
+						<widget class="popup_button" auto_size="none">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="URit" />
+										<integer id="set_property" value="itms" />
+									</record>
+									<record>
+										<integer id="get_property" value="OWur" />
+										<integer id="set_property" value="slct" />
+									</record>
+									<record>
+										<integer id="get_property" value="OWus" />
+										<integer id="set_property" value="sele" />
+									</record>
+								</list>
+							</record>
+						</widget>
+
+					</container>
+
+				</container>
+
+
+			</container>
+		</container>
+
+		<container class="inner_subtle_box" height="150">
+				<translation id="title" translation_id="466398" type="use" value="Action Buttons[COMMENT: FR 22700, scouting centre button text]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4,0" />
+				<container>
+					<layout class="grid_layout_attachment" row_layout="-1,-1,-1" mode="auto" vertical_gap="2">
+						<list id="column_layout">
+							<record>
+								<string id="column_layout" value="-1,-2" />
+								<integer id="horizontal_gap" value="10" />
+							</record>
+							<record>
+								<string id="column_layout" value="-1,-2" />
+								<integer id="horizontal_gap" value="10" />
+							</record>
+              <record>
+                <string id="column_layout" value="-1,-2" />
+                <integer id="horizontal_gap" value="10" />
+              </record>
+						</list>
+					</layout>
+
+					<widget class="text" alignment="left,centre_y">
+						<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+					</widget>
+
+					<widget class="popup_button">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="SCit" />
+									<integer id="set_property" value="itms" />
+								</record>
+								<record>
+									<integer id="get_property" value="SCur" />
+									<integer id="set_property" value="slct" />
+								</record>
+								<record>
+									<integer id="get_property" value="SCus" />
+									<integer id="set_property" value="sele" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+					<widget class="text" alignment="left,centre_y">
+						<translation translation_id="451230" type="use" id="text" value="Keep Scouting[COMMENT: Scouting centre action]" />
+					</widget>
+
+					<widget class="popup_button">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="KSit" />
+									<integer id="set_property" value="itms" />
+								</record>
+								<record>
+									<integer id="get_property" value="KSur" />
+									<integer id="set_property" value="slct" />
+								</record>
+								<record>
+									<integer id="get_property" value="KSus" />
+									<integer id="set_property" value="sele" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+          <widget class="text" alignment="left,centre_y">
+            <translation id="text" translation_id="243344" type="use" value="Offer Trial" />
+          </widget>
+
+          <widget class="popup_button">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="OTit" />
+                  <integer id="set_property" value="itms" />
+                </record>
+                <record>
+                  <integer id="get_property" value="OTur" />
+                  <integer id="set_property" value="slct" />
+                </record>
+                <record>
+                  <integer id="get_property" value="OTus" />
+                  <integer id="set_property" value="sele" />
+                </record>
+              </list>
+            </record>
+          </widget>
+          
+				</container>
+		</container>
+
+		<container class="inner_subtle_box" height="120">
+				<translation id="title" translation_id="227743" type="use" value="Transfers" />
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="2" horizontal_inset="0" />
+
+				<widget class="check_box" height="30">
+					<translation id="text" translation_id="466399" type="use" value="Stop scouting if player is transferred to another club[COMMENT: FR 22912, scouting centre option]" />
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="SSTs" />
+								<integer id="set_property" value="slct" />
+							</record>
+							<record>
+								<integer id="get_property" value="SSTe" />
+								<integer id="set_property" value="sele" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<widget class="check_box" height="30">
+					<translation id="text" translation_id="466400" type="use" value="Stop scouting if player is loaned to another club[COMMENT: FR 22912, scouting centre option]" />
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="SSLs" />
+								<integer id="set_property" value="slct" />
+							</record>
+							<record>
+								<integer id="get_property" value="SSLe" />
+								<integer id="set_property" value="sele" />
+							</record>
+						</list>
+					</record>
+				</widget>
+		</container>
+	</container>
+</panel>

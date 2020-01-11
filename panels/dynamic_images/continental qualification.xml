@@ -1,0 +1,60 @@
+<panel>
+	<!-- A base panel dynamic images with 2 logos side by side-->
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<!-- Background image layer -->
+		<container id="laye">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			<!-- Background image -->
+			<widget class="value_based_picture" id="bgim" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+				<list id="value_list">
+					<!-- AFRICA_CONTINENT_ID -->
+					<record value="1" file="photos/dynamic/cont qual/africa"/>
+					<!-- ASIA_CONTINENT_ID -->
+					<record value="2" file="photos/dynamic/cont qual/asia"/>
+					<!-- EUROPE_CONTINENT_ID -->
+					<record value="3" file="photos/dynamic/cont qual/europe"/>
+					<!-- NORTH_AMERICA_CONTINENT_ID -->
+					<record value="4" file="photos/dynamic/cont qual/north america"/>
+					<!-- OCEANIA_CONTINENT_ID -->
+					<record value="5" file="photos/dynamic/cont qual/oceania"/>
+					<!-- SOUTH_AMERICA_CONTINENT_ID -->
+					<record value="6" file="photos/dynamic/cont qual/south america"/>
+					<!-- WORLD_CONTINENT_ID -->
+					<record value="7" file="photos/dynamic/cont qual/world"/>
+				</list>
+				<!-- PROP_CONTINENT -->
+				<record id="object_property" get_property="cont" set_property="value"/>
+			</widget>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,-3,-1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<widget class="spacer" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,-3,-1,-3,-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<widget class="spacer" />
+				<!-- Logo/Portrait -->
+				<widget class="object_portrait_picture" id="log1" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+					<!-- PROP_TEAM -->
+					<record id="object_property" get_property="Ttea" set_property="objt"/>
+				</widget>
+				<widget class="spacer" />
+				<!-- Logo/Portrait -->
+				<widget class="object_portrait_picture" id="log2" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+					<!-- PROP_COMP -->
+					<record id="object_property" get_property="comp" set_property="objt"/>
+				</widget>
+				<widget class="spacer" />
+			</container>
+
+			<widget class="spacer" />
+
+		</container>
+</panel>

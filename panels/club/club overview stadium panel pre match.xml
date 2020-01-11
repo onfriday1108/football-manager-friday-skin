@@ -1,0 +1,23 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<!--piccy-->
+	<widget class="stadium_picture" id="STAp" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" priority="1" height="240">
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+		</record>
+	</widget>
+	<!--name-->
+	<widget class="client_object_label" spec="text" style="bold" id="namV" size="14" alignment="centre_x,bottom" auto_size="vertical" font="fonts/letterpressed">
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+		</record>
+	</widget>
+	<!--town-->
+	<widget class="city_label" id="namL" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" font="fonts/letterpressed">
+		<record id="object_property">
+			<integer id="get_property" value="SctI" />
+		</record>
+	</widget>
+
+</panel>

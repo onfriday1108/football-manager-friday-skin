@@ -1,0 +1,19 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <container id="none" hidden="true">
+    <layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true"/>
+    <!--explanatory text-->
+    <widget class="text" id="hidr" alignment="centre" spec="text" size="xlarge" auto_size="all" colour="faded text"/>
+  </container>
+  
+  <container id="yesm">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+    
+    <container class="team_meeting_conversation_panel" id="conv" converter_class="team_meeting_converter">
+      <flags id="type" value="7"/>
+    </container>
+  </container>
+
+</panel>

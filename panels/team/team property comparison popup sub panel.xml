@@ -1,0 +1,38 @@
+﻿<panel height="140">
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="label" auto_size="all" font="title" style="semi_bold">
+		<record id="object_property" get_property="subt" set_property="value" />
+	</widget>
+
+	<widget class="label" auto_size="all" size="large" style="semi_bold">
+		<record id="object_property" get_property="RatT" set_property="value" />
+	</widget>
+
+	<widget class="label" height="20" colour="faded text" size="small">
+		<record id="object_property" get_property="text" set_property="value" />
+	</widget>
+
+	<widget class="spacer" height="10" />
+	
+	<widget class="horizontal_divider" />
+
+	<widget class="table" layout="-1, -1" mode="fill_rows">
+		<widget class="label" row="0" col="0" font="title" colour="faded text">
+			<translation id="text" translation_id="374007" type="use" value="Best"/>
+		</widget>
+
+		<widget class="team_button" id="best" row="1" col="0">
+			<record id="object_property" get_property="frst" set_property="value" />
+		</widget>
+
+		<widget class="label" row="0" col="1" font="title" colour="faded text">
+			<translation id="text" translation_id="374390" type="use" value="Worst[COMMENT: Player status panel; showing the worst average rating in the matches played]"/>
+		</widget>
+
+		<widget class="team_button" id="last" row="1" col="1">
+			<record id="object_property" get_property="last" set_property="value" />
+		</widget>
+	</widget>
+
+</panel>

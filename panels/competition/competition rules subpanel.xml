@@ -1,0 +1,132 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_layout="20, 120, -1" vertical_offset="0" vertical_gap="0" vertical_inset="0"/>
+
+	<widget class="horizontal_divider" alignment="centre" id="hzDV">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+	</widget>
+
+	<widget class="text" entity_layout_id="ag00" alignment="bottom,left" id="srtl" height="40" name="rules_subpanel_title">
+		<string id="size" value="large" />
+		<string id="font" value="title" />
+		<string id="colour" value="accent" />
+
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+	</widget>
+	
+	<container id="at01" entity_layout_id="at01" auto_size="vertical">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, -1" horizontal_offset="10" horizontal_gap="20" vertical_gap="0" vertical_inset="0" />
+
+		<container auto_size="vertical" name="left_parent_parent">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" vertical_inset="0" />
+
+			<container entity_layout_id="ag06" id="csmr" auto_size="vertical" name="stage_structure_parent">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, -1" vertical_gap="0" vertical_inset="0" />
+
+				<container class="vertical_arrange_container" auto_size="vertical" entity_layout_id="ag07" id="csmR" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, -1" vertical_gap="0" vertical_inset="0" />
+					<container class="vertical_arrange_container" auto_size="vertical" id="dtsD" />
+					<container class="vertical_arrange_container" auto_size="vertical" id="dteD" />
+				</container>
+			</container>
+			
+			<container entity_layout_id="at00" id="mpnP" auto_size="vertical" name="mini_panels_parent">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, -1" vertical_offset="0" vertical_gap="0" vertical_inset="0" />
+
+				<container entity_layout_id="ag08" id="mimP" name="match_info_mini_panel_parent">
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" />
+
+					<container class="vertical_arrange_container" auto_size="vertical" entity_layout_id="ag09" id="mimp">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</container>
+				</container>
+
+				<container entity_layout_id="ag0:" id="psmP" name="points_mini_panel_parent">
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" />
+
+					<container class="vertical_arrange_container" auto_size="vertical" entity_layout_id="ag0;" id="psmp">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</container>
+				</container>
+			</container>
+
+			<container entity_layout_id="ag01" id="ltSP" auto_size="vertical" name="left_main_parent">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				<layout class="fit_children_attachment" alignment="vertical" gap="0" />
+
+				<container class="vertical_arrange_container" entity_layout_id="ag02" id="rspc" auto_size="vertical">
+					<layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="0" />
+				</container>
+			</container>
+
+		</container>
+
+		<container entity_layout_id="ag03" id="rtSP" auto_size="vertical" name="right_main_parent">
+			<attachment_group class="vertical_arrange_autosize" vertical_layout="-1, -1" vertical_offset="0" vertical_gap="0" vertical_inset="0" />
+
+			<container class="table" entity_layout_id="ag05" id="grtb" auto_size="vertical" layout="-2,-5,-6,-3" mode="fill_rows, stripe_rows" needs_height="true">
+				<string id="auto_size_rows" value="true" />
+				<string id="fixed_size_rows" value="false" />
+				<list id="column_table_properties">
+					<record id="posC">
+						<integer id="index" value="0" />
+						<string id="sort_disabled" value="true" />
+						<integer id="left" value="5" />
+						<integer id="top" value="5"/>
+						<integer id="bottom" value="5"/>
+						<record id="column_heading">
+							<translation id="text" translation_id="306610" type="use" value="Pos[COMMENT: competitions reputation in a continent]" />
+						</record>
+					</record>
+					<record id="quaC">
+						<integer id="index" value="1" />
+						<string id="sort_disabled" value="true" />
+						<integer id="left" value="5" />
+						<integer id="top" value="5"/>
+						<integer id="bottom" value="5"/>
+						<record id="column_heading">
+							<translation id="text" translation_id="491884" type="use" value="Qualification/Promotion/Relegation[COMMENT: AREA: Table heading for rules that show qualification/relegation rules etc; SUB-AREA: Competition Rules Screen; FR-BN: 27410]" />
+						</record>
+					</record>
+					<record id="quAC">
+						<integer id="index" value="2"/>
+						<string id="sort_disabled" value="true"/>
+						<integer id="left" value="5"/>
+						<integer id="top" value="5"/>
+						<integer id="bottom" value="5"/>
+					</record>
+					<record id="priC">
+						<integer id="index" value="3" />
+						<string id="sort_disabled" value="true" />
+						<integer id="left" value="5" />
+						<integer id="top" value="5"/>
+						<integer id="bottom" value="5"/>
+						<record id="column_heading" />
+					</record>
+				</list>
+				<list id="column_widget_properties">
+					<record alignment="centre_y,left" auto_size_minimum_height="35">
+						<integer id="index" value="0" />
+					</record>
+					<record alignment="centre_y,left" auto_size_minimum_height="35">
+						<integer id="index" value="1" />
+					</record>
+					<record alignment="centre_y,left" auto_size_minimum_height="35">
+						<integer id="index" value="2" />
+					</record>
+					<record alignment="centre_y,left" auto_size_minimum_height="35">
+						<integer id="index" value="3" />
+					</record>
+				</list>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</container>
+			
+			<container class="vertical_arrange_container" entity_layout_id="ag04" id="rspC" auto_size="vertical">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</container>
+			
+		</container>
+	</container>
+</panel>

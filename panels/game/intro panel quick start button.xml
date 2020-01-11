@@ -1,0 +1,24 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<container height="50" class="inner_box" appearance="main menu/boxes/middle/paper">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="10"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!-- New -->
+		<container width="60" id="newI">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+			<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true"/>
+		</container>
+
+		<!-- Button Text -->
+		<widget class="text_button" id="titl" multiline="false" spec="text" font="fonts/main menu"  alignment="left,centre_y" auto_size="horizontal"/>
+
+		<!-- Button (spans across entire parent container) -->
+		<widget class="button" id="hnBT" appearance="main menu/button/button">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+	</container>
+
+</panel>

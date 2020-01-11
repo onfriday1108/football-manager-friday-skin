@@ -1,0 +1,59 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<container>
+		<layout class="arrange_vertical_attachment" layout="30, 2, -1" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container height="30">
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="1" vertical_offset="0" />
+
+			<!-- search filter popup -->
+			<widget class="popup_button" id="addc" auto_size="all" fixed="true" >
+				<translation id="text" translation_id="249819" type="use" value="Add Condition[COMMENT - person search filter dialog text]" />
+				<event id="menu_layout_notification_event" event_id="adtg" event_target="addc" />
+			</widget>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0" />
+				
+				<!-- Attributes label -->
+				<widget class="label" alignment="left,centre_y" auto_size="all" font="title">
+					<translation id="text" translation_id="229822" type="use" value="Attributes"/>
+				</widget>
+
+				<!-- Pick attributes -->
+				<widget class="button" id="attr" auto_size="all" icon="icons/16px/attributes">
+					<translation id="hint" translation_id="321116" type="use" value="Show the full list of attributes that your search can be narrowed by[COMMENT: player search; button label hint for attribute chooser]"/>
+					<translation id="text" translation_id="247188" type="use" value="Pick"/>
+					<record id="click_event">
+						<flags id="event_id" value="attr"/>
+					</record>
+				</widget>
+
+
+				<container height="30">
+					<attachment_group class="horizontal_arrange_autosize">
+          <global id="horizontal_gap" name="ui.split_button_row_gap" />
+          </attachment_group>
+
+					<!-- Plus and minus buttons -->
+					<widget class="icon_button" id="att-" alignment="centre" icon_alignment="centre" appearance="buttons/standard/split/left/button" click_event="at-e" width="30" icon="icons/16px/minus" height="30">
+						<record id="primary_icon_properties" red_replacement="normal_icon"/>
+					</widget>
+					<widget class="icon_button" id="att+" alignment="centre" icon_alignment="centre" appearance="buttons/standard/split/right/button" click_event="at+e" width="30" icon="icons/16px/plus" height="30">
+						<record id="primary_icon_properties" red_replacement="normal_icon"/>
+					</widget>
+				</container>
+
+				<!-- Match attributes widget -->
+				<widget class="popup_button" id="atmw" select_event="atme" auto_size="all" />
+			</container>
+		</container>
+
+		<widget class="horizontal_divider" />
+
+		<!-- table containing filter compare rules -->
+		<widget class="filter_table" id="fcrt" show_compare_rules="true" auto_update_filter="true" mode="fill_rows" row_spacing="2" ignore_interest_rules="true" />
+
+	</container>
+</panel>

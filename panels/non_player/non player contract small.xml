@@ -1,0 +1,75 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="inner_box_no_margin">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="table" mode="fill_rows, stripe_rows" id="npft" layout="-1,-1,-1" auto_size="vertical">
+			<boolean id="fixed_size_rows" value="false" />
+			<boolean id="auto_size_rows" value="true" />
+
+			<boolean id="save_session_state" value="true" />
+			<boolean id="sdst" value="true" />
+
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y" />
+				<record indx="1" colour="selection" alignment="right,centre_y" />
+				<record indx="2" alignment="left,centre_y" />
+				<record indx="3" colour="selection" alignment="right,centre_y" />
+				<record indx="4" colour="selection" alignment="right,centre_y" />
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" left="4" sort_disabled="true" />
+				<record indx="1" right="4" sort_disabled="true" />
+				<record indx="2" left="4" sort_disabled="true" />
+				<record indx="3" sort_disabled="true" />
+				<record indx="4" right="4" sort_disabled="true" />
+			</list>
+
+			<widget class="label" spec="text" row="0" col="0">
+				<translation id="text" translation_id="229400" type="use" value="Type" />
+			</widget>
+			<widget class="text" id="typw" row="0" col="1" column_span="2" spec="text" />
+
+			<widget class="label" spec="text" row="1" col="0" auto_size="all">
+				<translation id="text" translation_id="242353" type="use" value="Wages" />
+			</widget>
+			<widget class="editable_client_object_property_panel" id="wawt" row="1" col="1">
+				<record id="object_property">
+					<integer id="get_property" value="Pcww" />
+				</record>
+				<record id="widget_properties" format="20" />
+			</widget>
+			<widget class="text" id="wagw" spec="text" row="1" col="2" />
+
+
+			<widget class="label" spec="text" row="2" col="0">
+				<translation id="text" translation_id="247433" type="use" value="Started" />
+			</widget>
+			<widget class="text" id="staw" alignment="right,centre_y" spec="text" row="2" col="2" />
+
+			<widget class="label" spec="text" row="3" col="0">
+				<translation id="text" translation_id="227784" type="use" value="Expires" />
+			</widget>
+			<widget class="container" row="3" col="2" >
+				<layout class="arrange_vertical_attachment" layout="-1" offset="5" gap="0" />
+				<widget class="editable_client_object_property_panel" id="expw" >
+					<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+					<record id="object_property">
+						<integer id="get_property" value="Pcex" />
+					</record>
+					<record id="widget_properties" auto_size="all" colour="selection"/>
+				</widget>
+			</widget>
+
+			<widget class="label" spec="text" row="4" col="0">
+				<translation id="text" translation_id="251276" type="use" value="Future Contract[COMMENT - person screen; player transfer panel; row showing an arranged future contract for his team]" />
+			</widget>
+			<widget class="text" id="ftct" row="4" col="1"  spec="text" />
+
+		</widget>
+
+	</container>
+</panel>

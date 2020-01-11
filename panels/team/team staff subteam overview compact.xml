@@ -1,0 +1,15 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <container>
+    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" vertical_gap="0"/>
+
+    <string id="skin_style" value="title link" />
+
+    <widget class="link_button" height="25" id="tlnk" auto_size="horizontal" colour="secondary" red_replacement="secondary"/>
+
+    <widget class="team_staff_little_guys_panel" id="tslg" file="team/team staff little guys icons only"/>
+
+  </container>
+
+</panel>

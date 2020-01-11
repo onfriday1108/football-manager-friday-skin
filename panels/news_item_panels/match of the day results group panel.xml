@@ -1,0 +1,28 @@
+<!-- A panel that can display a single match result. Designed to be used with an XML viewer panel-->
+<panel>
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1, 20, 10, 20, -1" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!-- Home team name -->
+		<widget class="team_button" icon_enabled="false">
+			<record id="object_property" get_property="home" dont_set_object="true"/>
+		</widget>
+		<!-- scoreline -->
+		<widget class="text" size="large" alignment="centre" auto_size="horizontal">
+			<record id="object_property" get_property="FxRs" dont_set_object="true"/>
+		</widget>
+		<!-- Away team name -->
+		<widget class="team_button" icon_enabled="false">
+			<record id="object_property" get_property="away" dont_set_object="true"/>
+		</widget>
+	</container>
+
+	<widget class="icon_button" click_event="viwR">
+		<record id="object_property" get_property="fixi" dont_set_object="false"/>
+		<translation id="hint" translation_id="227629" type="use" value="View Highlights" />
+	</widget>
+</panel>

@@ -1,0 +1,54 @@
+<panel>
+
+	<string id="skin_style" value="subtle box" />
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" />
+			<layout class="arrange_horizontal_attachment" layout="-1, 250" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical,fill" />
+				<layout class="arrange_vertical_attachment" layout="40, -1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1, -1, -1" gap="6" />
+					<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+
+					<widget class="text" auto_size="vertical" alignment="right,centre_y" spec="text" size="large" colour="text" multiline="true">
+						<translation id="text" translation_id="247322" type="use" value="Job Status" />
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+					</widget>
+
+					<widget class="horizontal_percentage_bar" id="jstb" width="100" height="18" alignment="centre">
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+					</widget>
+
+					<widget class="text" id="jstt" auto_size="vertical" alignment="left,centre_y" spec="text" size="large" colour="text">
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+					</widget>
+				</container>
+
+				<widget class="inbox_body_text" id="bdtx" />
+			</container>
+
+			<container class="inner_subtle_box">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="8" horizontal_alignment="horizontal" />
+
+				<widget class="text" auto_size="vertical" spec="text" size="large" colour="text">
+					<translation id="text" translation_id="491844" type="use" value="Performance[COMMENT: AREA: Boardroom; SUB-AREA: Appraisal of Performance; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short, one word; REF-ID: n/a; NOTE: this is replacing Confidence as the singular term relating to the Boardroom and the evaluation of managerial performance]" />
+				</widget>
+
+				<widget class="table" id="ctab" mode="fill_rows, printable" fixed_size_rows="true" row_height="20" column_spacing="8" row_spacing="4" layout="-1, -2" auto_size="vertical" />
+			</container>
+
+		</container>
+	</container>
+
+</panel>

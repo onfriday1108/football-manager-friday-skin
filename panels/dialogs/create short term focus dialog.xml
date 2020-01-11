@@ -1,0 +1,245 @@
+﻿<panel height="600" width="1000">
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="4,10" apply_to_children="true" />
+
+	<container draw_horizontal_dividers="true">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="24"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+		<container height="50" draw_vertical_dividers="true">
+			<layout class="arrange_horizontal_attachment" layout="-5,-3,-3,-5" offset="0" gap="24"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+
+				<widget class="text" font="label" colour="accent" auto_size="all">
+					<translation id="text" translation_id="227770" type="use" value="Age[comment - person age]" />
+				</widget>
+
+				<container height="30">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					<layout class="arrange_horizontal_attachment" layout="-1,20,-1" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="selection_list" id="mina" use_menu_for_plus_minus="false" height="30" select_event="mias" />
+
+
+					<widget class="text" alignment="centre">
+						<string id="text" value="-" />
+					</widget>
+
+					<widget class="selection_list" id="maxa" use_menu_for_plus_minus="false" height="30" select_event="maas" />
+
+
+				</container>
+
+			</container>
+
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" font="label" colour="accent" auto_size="all">
+					<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+				</widget>
+
+				<widget class="popup_button" id="cura" height="30" select_event="mcas">
+
+				</widget>
+
+			</container>
+
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" font="label" colour="accent" auto_size="all">
+					<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]" />
+				</widget>
+
+				<widget class="popup_button" id="pota" height="30" select_event="mpas">
+
+				</widget>
+
+			</container>
+
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" auto_size="vertical" font="label" colour="accent">
+					<translation id="text" translation_id="447515" type="use" value="Availability[COMMENT FR 21760, set the framework of availability for the scouting assignment, can ignore/exclude players deemed to be unavailable for example]" />
+				</widget>
+
+				<container height="30">
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="-8" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="radio_button" id="aval" icon_enabled="false" appearance="switches/toggle/left/button" show_button_appearance="true" click_event="seal" selected="true" />
+					<widget class="radio_button" id="avno" icon_enabled="false" appearance="switches/toggle/middle/button" show_button_appearance="true" click_event="seno" />
+					<widget class="radio_button" id="avty" icon_enabled="false" appearance="switches/toggle/right/button" show_button_appearance="true" click_event="sety" />
+				</container>
+
+			</container>
+
+		</container>
+
+		<container draw_vertical_dividers="true">
+			<layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" gap="24"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" layout="50,-1" offset="10" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					
+					<widget class="text" auto_size="all" font="title" colour="accent">
+						<translation id="text" translation_id="491894" type="use" value="Fits Tactic[COMMENT: AREA: Scouting panel; SUB-AREA: when creating new assignment for the scout; FR-BN: 26219; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE; Creating an assignment that fits the current tactics created by the user]" />
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="-10" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<widget class="radio_button" id="radB" icon_enabled="false" appearance="switches/toggle/left/button" alignment="centre" show_button_appearance="true" selected="true" width="100">
+							<event id="click_event" event_id="tcCn" selection="-1" />
+							<translation id="text" translation_id="339570" type="use" value="Any[COMMENT: join network game - any league to search for]" />
+						</widget>
+						<widget class="tactic_popup_button" id="tctp" appearance="switches/toggle/right/button" auto_size="horizontal"/>
+						
+					</container>
+				</container>
+
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="text" font="title" auto_size="vertical" colour="accent">
+							<translation id="text" translation_id="227884" type="use" value="Position" />
+						</widget>
+
+						<widget class="pitch_with_all_positions" id="ppip" vertical="true" pitch_show_names="false" pitch_allow_multiple_select_no_modifiers="false" pitch_touchline_width_percentage="0" pitch_vertical_padding="8" pitch_horizontal_padding="0" pitch_base_appearance="" pitch_pattern="ui circles" line_width="1" pitch_draw_goals="false" pitch_alignment="centre,can_scale" />
+
+						<widget class="pitch_with_tactics" id="dtps" hidden="true" vertical="true" icon_flags="show_selection_image,dont_allow_player_links,show_number" pitch_alignment="centre,can_scale" pitch_override_icon_size="3" pitch_dont_draw_indicators="true" allow_y_score_adjustment_for_roles="false" pitch_draw_grass="true" pitch_base_appearance="" pitch_pattern="ui circles" pitch_is_read_only="true">
+							<string id="pitch_kit_icon" value="pitch/icons/dots" />
+						</widget>
+					</container>
+
+					<container>
+						<layout class="arrange_vertical_attachment" layout="-3,-2" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<container id="robo" hidden="true">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+							<widget class="text" font="title" auto_size="vertical" colour="accent">
+								<translation id="text" translation_id="316816" type="use" value="Role[COMMENT - person list view column heading]" />
+							</widget>
+
+							<widget class="table" id="rolt" layout="-1" mode="fill_rows, select_rows, select_multiple" select_event="eros"/>
+
+						</container>
+
+						<container class="inner_box" id="stbo">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+							<widget class="text" auto_size="vertical" font="title" colour="accent">
+								<translation id="text" translation_id="447513" type="use" value="Player Style[COMMENT FR 21760, set the style of player to be found by the scout]" />
+							</widget>
+
+							<widget class="table" id="styt" layout="-1" mode="fill_rows, select_rows" height="25" />
+						</container>
+
+						<container class="inner_box" id="gkbo">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+							<widget class="text" auto_size="vertical" font="title" colour="accent">
+								<translation id="text" translation_id="447514" type="use" value="Goalkeeper Style[COMMENT FR 21760, set the style of goalkeeper to be found by the scout]" />
+							</widget>
+
+							<widget class="table" id="gkst" layout="-1" mode="fill_rows, select_rows, dont_allow_clear_selection" height="25" />
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container class="inner_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="text" auto_size="vertical" font="label" colour="accent">
+						<translation id="text" translation_id="227842" type="use" value="Based" />
+					</widget>
+
+					<widget class="team_container_scouting_range_popup" id="basp" />
+
+				</container>
+
+				<container height="50">
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container class="inner_box">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="text" auto_size="vertical" font="label" colour="accent">
+							<translation id="text" translation_id="230113" type="use" value="Duration" />
+						</widget>
+
+						<widget class="popup_button" id="durp" height="30" />
+					</container>
+
+					<container class="inner_box">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="text" auto_size="vertical" font="label" colour="accent">
+							<translation id="text" translation_id="466416" type="use" value="Scouts Assigned[COMMENT: scouting centre label, shows scouts currently out on assignment]" />
+						</widget>
+
+						<widget class="popup_button" id="scop" height="30" />
+					</container>
+				</container>
+
+				<container />
+
+				<container>
+					<attachment_group class="button_arrangement_right" />
+
+					<widget class="button" id="canc" auto_size="horizontal" height="30">
+						<translation id="text" translation_id="229828" type="use" value="Cancel" />
+						<record id="click_event">
+							<flags id="event_id" value="canc" />
+						</record>
+					</widget>
+
+					<widget class="primary_icon_button" id="ok  " auto_size="horizontal" icon="icons/16px/search" height="30">
+						<translation id="text" translation_id="447516" type="use" value="Set Focus[COMMENT: FR 21109, scouting centre option to set the focus for the assignment]" />
+						<record id="click_event">
+							<flags id="event_id" value="ok  " />
+						</record>
+					</widget>
+
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

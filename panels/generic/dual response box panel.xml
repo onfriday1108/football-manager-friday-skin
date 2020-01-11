@@ -1,0 +1,7 @@
+<panel>
+  <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+  <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1"/>
+  <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+  <!-- dual person response box panels created here. -->
+</panel>

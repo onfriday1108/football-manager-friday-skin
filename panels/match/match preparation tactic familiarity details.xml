@@ -1,0 +1,31 @@
+<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="2" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<widget class="label" id="name" auto_size="horizontal" alignment="left,centre_y"/>
+		<widget class="label" id="fami" auto_size="none" alignment="right,centre_y" colour="faded text"/>
+	</container>
+
+	<container background_colour="black" id="fmiL" height="14">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true"/>
+
+		<container class="horizontal_stacked_bar_chart" id="valu" height="12">
+
+			<list id="colour">
+				<record value="tactical_familiarity_colour_1" />
+				<record value="tactical_familiarity_colour_2" />
+				<record value="black" />
+			</list>
+
+		</container>
+
+	</container>
+
+
+</panel>

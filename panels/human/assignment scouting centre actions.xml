@@ -1,0 +1,22 @@
+﻿<panel>
+  <boolean id="should_force_refresh" value="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<widget class="primary_button" id="rest" alignment="centre" auto_size="horizontal" appearance="buttons/custom/inbox/button">
+			<translation id="text" translation_id="255452" type="use" value="Restart[COMMENT: team scouting panel; button for restarting a new assignment]" />
+
+		</widget>
+		<widget class="primary_button" id="stop" icon_alignment="centre" alignment="centre" auto_size="horizontal" red_replacement="red 800" blue_replacement="red 800" icon="icons/16px/pause" colour="white">
+			<translation id="text" translation_id="317871" type="use" value="Stop" />
+
+		</widget>
+		<widget class="primary_button" id="ackn" auto_size="horizontal" red_replacement="blue 700" blue_replacement="blue 700" colour="white">
+			<translation id="text" translation_id="447507" type="use" value="Acknowledge[COMMENT: Scouting centre action, acknowledges a report without necessarily performing a further action on it]" />
+
+		</widget>
+
+	</container>
+</panel>

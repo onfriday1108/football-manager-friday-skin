@@ -1,0 +1,10 @@
+﻿<panel>
+  <attachment_group class="horizontal_arrange" horizontal_layout="47,-1" horizontal_gap="8"/>
+
+  <widget class="picture" id="faic" scale_picture="false" image_alignment="centre" />
+  <container>
+    <attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0" />
+    <widget class="text" id="fana" font="title" style="bold" colour="text" size="small" alignment="bottom,left" auto_size="vertical"/>
+    <widget class="text" id="fada" style="bold" size="xxlarge" auto_size="vertical"/>
+  </container>
+</panel>

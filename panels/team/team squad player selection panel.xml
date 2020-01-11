@@ -1,0 +1,302 @@
+<panel>
+
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="standard_popup_box">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container class="inner_subtle_box" height="48">
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="6" />
+
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="6" />
+				<layout class="centre_in_parent_attachment" alignment="vertical" />
+				<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+
+
+				<widget class="position_label" id="poSl" auto_size="all" display_format="2" pUac="true">
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+				</widget>
+
+				<widget class="view_menu_popup" id="plvi" auto_tick_exclusive="true" fixed="false" embed_in_frame="false">
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+				</widget>
+
+			</container>
+
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="2" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+				<layout class="centre_in_parent_attachment" alignment="vertical" />
+
+				<widget class="text" auto_size="all">
+					<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+					<translation id="text" translation_id="298050" type="use" value="Role" />
+				</widget>
+
+				<widget class="text" text=":" auto_size="all">
+					<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+				</widget>
+
+
+				<widget class="popup_button" id="coRO" auto_size="all">
+					<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+				</widget>
+			</container>
+
+
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
+
+			<widget class="tactic_player_list_table" id="pltb" customisation_context="play" database_table_type="1" mode="fill_rows, stripe_rows, printable, select_rows, show_insert_column_popup" column_mode="resize_columns, move_columns,custom_views" select_event="Selp" auto_size_maximum_height="320" row_height="34" row_spacing="2" column_spacing="0">
+
+				<flags id="auto_size" value="vertical" />
+				<boolean id="auto_size_rows" value="false" />
+				<boolean id="fixed_size_rows" value="true" />
+				<boolean id="dont_restore_selection" value="true" />
+				<boolean id="save_session_state" value="true" />
+				<boolean id="save_default_state" value="true" />
+				<boolean id="force_refresh_on_object_list" value="true" />
+				<boolean id="should_force_refresh" value="true" />
+
+				<integer id="contextual_handler_column_id" value="PlSC" />
+
+				<list id="disallowed_view_property_ids">
+					<!-- never allow any sort of edit column-->
+					<flags value="Pssi" />
+					<flags value="TPRD" />
+					<flags value="Psne" />
+					<flags value="PtsL" />
+				</list>
+
+				<!-- default sort by playing position (primary), then picked position, then name -->
+				<list id="default_sort_column">
+					<integer value="PXrR" />
+					<integer value="Pshp" />
+					<integer value="PpsC" />
+					<integer value="Pnms" />
+				</list>
+
+				<!--properties for each object we always want to request, regardless of whether or not they're displayed 
+							(this can help when for example supplying a selected object to another panel to display further info)-->
+				<!--these can be omitted, they're just a time saver-->
+				<list id="Spid">
+					<integer value="PPra" />
+          <integer value="rrpi" />
+				</list>
+
+				<!--default view-->
+				<flags id="default_view" value="sltn" />
+
+				<!--available views-->
+				<list id="viws">
+
+					<record id="sltn">
+						<translation id="name" translation_id="326989" type="use" value="Selection Info[COMMENT: button in view_menu on squad screens; choose to view club stats]" />
+						<record id="view">
+							<record id="Pshp" colour="white"/>
+							<!-- current position -->
+							<record id="PCXT" width="50" appearance="buttons/custom/tactics/role picker/mid/button" show_button_appearance="true" />
+							<!-- context position -->
+							<record id="PXpQ" width="40" icon_alignment="centre" appearance="buttons/custom/tactics/role picker/mid/button" />
+							<!--role/duty suitability-->
+							<record id="CcoR" width="60" abbt="true" appearance="buttons/custom/tactics/role picker/mid/button" show_button_appearance="true" />
+							<!-- Context Role -->
+							<record id="PCPr" appearance="buttons/custom/tactics/role picker/mid/button" />
+							<!-- Role Ability -->
+							<record id="PlSC" />
+							<!-- person name -->
+							<record id="Pnfo" DisP="true" />
+							<!-- status info -->
+							<record id="PRCF" auto_hide_priority="1130" width="35"/>
+							<!-- player condition/Fitness -->
+							<record id="Pmor" auto_hide_priority="1120" width="30" ShTx="false" />
+							<!-- player morale -->
+							<record id="PpsC" auto_hide_priority="1140" />
+							<!-- position -->
+							<record id="Poav" auto_hide_priority="1140" />
+							<!-- overall average rating -->
+						</record>
+					</record>
+					<!-- shown for international teams -->
+					<record id="csln">
+						<translation id="name" translation_id="275847" type="use" value="Club Selection[COMMENT: button in view_menu on squad screens; choose to view club stats]" />
+						<record id="view">
+							<!-- current position -->
+							<record id="Pnfo" DisP="true" />
+							<!-- player status/info -->
+							<flags id="PXrR" />
+							<!-- ability -->
+							<record id="PXpQ" appearance="" />
+							<!-- role/duty suitability -->
+							<record id="PlSC" />
+							<!-- person name -->
+							<record id="PRCF" auto_hide_priority="1010" width="35" />
+							<!-- player condition/fitness -->
+							<record id="Pmor" auto_hide_priority="1050" ShTx="false" width="20" />
+							<!-- player morale -->
+							<record id="Pfrm" auto_hide_priority="1100" />
+							<!-- player form -->
+							<flags id="PpsC" />
+							<!-- position -->
+							<flags id="Poap" />
+							<!-- overall appearances -->
+							<flags id="Pogl" />
+							<!-- overall goals -->
+							<record id="Poav" auto_hide_priority="1020" width="34" />
+							<!-- overall average rating -->
+						</record>
+
+						<record id="object_list_view_context">
+							<integer id="player_stats_scope" value="5" />
+						</record>
+					</record>
+
+					<!-- shown for international teams -->
+					<record id="intf">
+						<translation id="name" translation_id="275848" type="use" value="International Selection[COMMENT: button in view_menu on squad screens; choose to view international stats]" />
+						<record id="view">
+							<record id="Pnfo" DisP="true" />
+							<!-- player status/info -->
+							<flags id="PXrR" />
+							<!-- ability -->
+							<record id="PXpQ" appearance="" />
+							<!-- role/duty suitability -->
+							<record id="PlSC" />
+							<!-- person name -->
+							<record id="PRCF" auto_hide_priority="1010" width="35" />
+							<!-- player condition/fitness -->
+							<record id="Pmor" auto_hide_priority="1050" ShTx="false" width="20" />
+							<!-- player morale -->
+							<record id="Pfrm" auto_hide_priority="1100" />
+							<!-- player form -->
+							<flags id="PpsC" />
+							<!-- position -->
+							<flags id="Poap" />
+							<!-- overall appearances -->
+							<flags id="Pogl" />
+							<!-- overall goals -->
+							<record id="Poav" auto_hide_priority="1020" width="34" />
+							<!-- overall average rating -->
+						</record>
+
+						<record id="object_list_view_context">
+							<integer id="player_stats_scope" value="7" />
+						</record>
+					</record>
+
+					<record id="coac">
+						<translation id="name" translation_id="292814" type="use" value="Reports[COMMENT: top level menu title for player reports screens]" />
+						<record id="view">
+							<record id="Pnfo" DisP="true" />
+							<!-- player status/info -->
+							<flags id="PXrR" />
+							<!-- ability -->
+							<record id="PXpQ" appearance="" />
+							<!-- role/duty suitability -->
+							<flags id="PlSC" />
+							<!-- person name -->
+							<flags id="Pbpc" />
+							<!-- best position -->
+							<flags id="Pbrc" />
+							<!-- role -->
+							<flags id="Pbdc" />
+							<!-- duty -->
+							<flags id="Page" />
+							<!-- age -->
+							<flags id="Pcac" />
+							<!-- currant ability -->
+							<flags id="Pppc" />
+							<!-- potential ability -->
+						</record>
+					</record>
+
+					<record id="fitn">
+						<translation id="name" translation_id="247571" type="use" value="Fitness" />
+						<record id="view">
+							<record id="Pnfo" DisP="true" />
+							<!-- player status/info -->
+							<record id="PXpQ" appearance="" />
+							<!-- role/duty suitability -->
+							<flags id="PlSC" />
+							<!-- person name -->
+							<record id="Pcon" auto_hide_priority="900" />
+							<!-- player condition -->
+							<record id="Pfit" auto_hide_priority="1000" />
+							<!-- player fitness-->
+							<record id="Pcsr" auto_hide_priority="1100" />
+							<!-- player condition string (match fit, lacking match fitness etc.)-->
+						</record>
+					</record>
+
+					<record id="mora">
+						<translation id="name" translation_id="227839" type="use" value="Morale" />
+						<boolean id="tick" value="false" />
+						<record id="view">
+							<record id="Pnfo" DisP="true" />
+							<!-- status info -->
+							<record id="PXpQ" appearance="" />
+							<!-- role/duty suitability -->
+							<flags id="PlSC" />
+							<!-- person name -->
+							<record id="Pmor" auto_hide_priority="900" ShTx="true" />
+							<!-- player morale -->
+							<record id="Pfrm" auto_hide_priority="1100" />
+							<!-- player form -->
+							<record id="PRCF" auto_hide_priority="1000" />
+							<!-- player condition/fitness -->
+						</record>
+
+						<record id="object_list_view_context">
+							<integer id="player_stats_scope" value="5" />
+						</record>
+					</record>
+				</list>
+
+			</widget>
+
+
+		</container>
+
+		<container class="inner_subtle_box" height="45">
+			<layout class="arrange_horizontal_attachment" alignment="left, extend" />
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+
+			<widget class="icon_button" id="remp" auto_size="all" click_event="remp" icon="icons/16px/remove from list" icon_colour="text" appearance="buttons/view/normal/button" alignment="left,centre_y" icon_alignment="left,centre_y">
+				<translation id="text" translation_id="441114" type="use" value="Clear Position[COMMENT: reset option on the tactics screen when adding a player is assigned to a position]" />
+				<translation id="hint" translation_id="243534" type="use" value="Remove From Position" />
+			</widget>
+
+			<container>
+
+		      <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_gap="10"/>
+
+			  <widget class="check_box" id="cbXI" auto_size="all" click_event="hiel" alignment="right,centre_y" icon_alignment="left,centre_y">
+				<translation id="text" translation_id="453034" type="use" value="Hide Starting XI[COMMENT: allows users to only show players who are not in the starting XI]" />
+			  </widget>
+
+			  <widget class="picture" file="dividers/standard/vertical/line" height="20" width="2"/>
+
+			  <!-- This widget is wrapped in a container as it may be hidden and if so we want to preserve the relative layout specified for the other widgets -->
+			  <widget class="icon_button" id="rrep" hidden="true" auto_size="all" icon="icons/16px/staff" show_button_appearance="false" icon_colour="positive" alignment="left,centre_y" icon_alignment="left,centre_y" colour="text" spec="text"/>
+
+		   </container>
+		</container>
+	</container>
+
+</panel>
