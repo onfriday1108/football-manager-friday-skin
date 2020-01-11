@@ -1,0 +1,115 @@
+<!-- A popup panel used for displaying information about a future or current player ban. To be used with a PROPERTY_LIST_VIEWER_XML_PANEL -->
+<panel width="300">
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="5" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="5" />
+
+		<!-- Labels and start date-->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+			<!-- Status label for future bans-->
+			<widget class="label" id="stat" auto_size="vertical" font="title" colour="faded text">
+				<translation id="text" translation_id="275853" type="use" value="Status[COMMENT: Work Permit qualification rules]" />
+				<!-- Hide for current bans -->
+				<record id="object_property" get_property="curr" set_property="hidn"/>
+			</widget>
+			<!-- Reason label for current bans-->
+			<widget class="label" id="reas" auto_size="vertical" font="title" colour="faded text">
+				<translation id="text" translation_id="281372" type="use" value="Reason[COMMENT: table heading; reason for press conference]" />
+				<!-- Hide for upcoming bans -->
+				<record id="object_property" get_property="futr" set_property="hidn"/>
+			</widget>
+			<!-- Start date / fixture -->
+			<widget class="label" id="stdf" auto_size="all">
+				<record id="object_property" get_property="bstd" set_property="text"/>
+			</widget>
+		</container>
+
+		<!-- Ban description -->
+		<container>
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+			
+			<widget class="picture" id="carY" file="icons/26px/yellow card" scale_picture="false" auto_size="all">
+				<!-- Hide for current bans -->
+				<record id="object_property" get_property="curr" set_property="hidn"/>
+			</widget>
+			<widget class="picture" id="carR" file="icons/26px/red card" scale_picture="false" auto_size="all">
+				<!-- Hide for upcoming bans -->
+				<record id="object_property" get_property="futr" set_property="hidn"/>
+			</widget>
+			<!-- Current ban description -->
+			<widget class="text" auto_size="vertical" size="large" style="semi_bold" colour="red card">
+				<record id="object_property">
+					<list id="get_properties">
+						<record get_property="desc" set_property="text"/>
+						<!-- Hide for upcoming bans -->
+						<record id="object_property" get_property="futr" set_property="hidn"/>
+					</list>
+				</record>
+			</widget>
+			<!-- Upcoming ban description -->
+			<widget class="text" auto_size="vertical" size="large" style="semi_bold" colour="yellow card">
+				<record id="object_property">
+					<list id="get_properties">
+						<record get_property="desc" set_property="text"/>
+						<!-- Hide for current bans -->
+						<record id="object_property" get_property="curr" set_property="hidn"/>
+					</list>
+				</record>
+			</widget>
+		</container>
+
+		<container height="10"/>
+
+		<!-- Scope / matches / end date-->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+			<!-- End date / matches to go-->
+			<container id="con1" width="127">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- Hide for upcoming bans -->
+				<record id="object_property" get_property="futr" set_property="hidn"/>
+
+				<!-- End date label-->
+				<widget class="label" id="endL" auto_size="vertical" font="title" colour="faded text">
+					<translation id="text" translation_id="374051" type="use" value="End Date[COMMENT: FR 3717; comp suspensions panel; column heading; end date of ban]" />
+					<!-- Show end date? -->
+					<record id="object_property" get_property="send" set_property="Shwn"/>
+				</widget>
+				<!-- Matches banned for label-->
+				<widget class="label" id="matL" auto_size="vertical" font="title" colour="faded text">
+					<translation id="text" translation_id="296528" type="use" value="Matches[COMMENT: section title; contains fixtures and results on competition screen]" />
+					<!-- Show end date? -->
+					<record id="object_property" get_property="send" set_property="hidn"/>
+				</widget>
+				<!-- Matches banned / ban end date label-->
+				<widget class="label" id="bdur" auto_size="vertical">
+					<record id="object_property" get_property="bdur" set_property="text"/>
+				</widget>
+			</container>
+
+			<!-- Ban Scope-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="scoL" auto_size="vertical" font="title" colour="faded text">
+					<translation id="text" translation_id="433554" type="use" value="Scope[COMMENT: competition suspensions panel, indicates the competition scope the ban is for, was ID 308447 but some languages require a specific version]"/>
+				</widget>
+				<widget class="label" id="scop" auto_size="vertical">
+					<record id="object_property" get_property="scop" set_property="text"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

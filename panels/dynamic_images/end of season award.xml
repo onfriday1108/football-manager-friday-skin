@@ -1,0 +1,46 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- Background seat colour image -->
+	<container class="client_object_viewer_xml_panel" id="bgim">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		<!-- PROP_TEAM -->
+		<record id="object_property" get_property="Ttea" set_property="objt"/>
+
+		<widget class="picture" id="CoPi" file="photos/dynamic/generic/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<!-- PROP_BACKGROUND_COLOUR -->
+			<record id="object_property" get_property="oDAC" set_property="rrep"/>
+		</widget>
+	</container>
+
+	<widget class="picture" id="CSha" file="photos/dynamic/club awards/shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-3,-12,-3, -4, -3" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="spacer" />
+
+		<!-- Logo/Portrait -->
+		<widget class="object_portrait_picture" id="logo" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+			<!-- PROP_TEAM -->
+			<record id="object_property" get_property="Ttea" set_property="objt" />
+		</widget>
+
+		<widget class="spacer" />
+
+		<!-- Season string -->
+		<widget class="game_formatted_label" id="text" alignment="centre,auto_fit" font="awards title" colour="white">
+			<record id="format">
+				<integer id="var1" value="vf_football_season" />
+				<translation id="text" translation_id="416347" type="use" value="[%season_year#1] Awards[COMMENT: dynamic news image; end of season awards]" />
+			</record>
+			<!-- PROP_YEAR -->
+			<record id="object_property" get_property="year" set_property="valu" />
+		</widget>
+
+		<widget class="spacer" />
+	</container>
+</panel>

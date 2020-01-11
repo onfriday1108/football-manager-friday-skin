@@ -1,0 +1,19 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+    <widget class="picture" id="bsic" scale_picture="true" file="pitch/icons/kit/large/kit" image_alignment="centre_x,bottom">
+    </widget>
+
+    <widget class="picture" id="Pinj" image_alignment="left,top" hidden="false" width="16" height="16"/>
+    <widget class="picture" id="PNba" file="icons/16px/yellow card" image_alignment="left,top" hidden="true" width="16" height="16"/>
+    <widget class="picture" id="bssl" scale_picture="true" file="pitch/icons/person_highlight" image_alignment="centre_x,bottom">
+    </widget>
+
+    <widget class="text" id="bsnm" alignment="centre" />
+
+  </container>
+</panel>

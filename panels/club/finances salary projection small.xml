@@ -1,0 +1,50 @@
+﻿<panel>
+	<boolean id="save_session_state" value="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1, -2" offset="0" gap="10"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<widget class="finance_history_panel" id="fnh1" show_instant_hint="true"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="fnpw" select_event="slrw">
+
+				<flags id="layout" value="-6, -4, -4, -4" />
+				<flags id="mode" value="fill_rows, stripe_rows,printable,select_rows,select_multiple,show_bullets,dont_allow_empty_selection" />
+				<flags id="bullet_multi_appearance" value="icons/16px/row graph" />
+				<flags id="bullet_multi_selected_appearance" value="icons/16px/row graph_selected" />
+
+				<!-- default properties adopted by every item in table -->
+				<record id="default_properties">
+					<flags id="alignment" value="left,centre_y" />
+				</record>
+
+				<!-- disable sorting on all columns -->
+				<list id="column_table_properties">
+					<record indx="0" sort_disabled="true" left="5"/>
+					<record indx="1" sort_disabled="true" />
+					<record indx="2" sort_disabled="true" />
+					<record indx="3" sort_disabled="true" />
+				</list>
+
+				<list id="headings">
+					<record alignment="left,centre_y" column_span="1">
+						<translation id="text" translation_id="339823" type="use" value="Player Wage Total[COMMENT - Total amount of player wages]" />
+					</record>
+					<record id="hwt1" alignment="left,centre_y" column_span="1">
+						<translation id="text" translation_id="335496" type="use" value="This season[COMMENT: financial projections; table heading]" />
+					</record>
+					<record id="hwt2" alignment="left,centre_y" column_span="1">
+						<translation id="text" translation_id="335193" type="use" value="Next season[COMMENT: financial projections; table heading]" />
+					</record>
+					<record id="hwt3" alignment="left,centre_y" column_span="1">
+						<translation id="text" translation_id="335279" type="use" value="Season after[COMMENT: financial projections; table heading]" />
+					</record>
+				</list>
+			</widget>
+		</container>
+	</container>
+</panel>

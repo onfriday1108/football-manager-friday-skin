@@ -1,0 +1,224 @@
+<panel>
+	<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" offset="0"/>
+
+	<container class="table" layout="54, 54, 54, 54, 54" width="275" column_spacing="1" row_spacing="1" fixed_size_rows="true" row_height="52" id="stfn" auto_size_rows="false" auto_size="vertical">
+
+
+		<record id="default_properties">
+			<list id="attachments">
+				<record class="arrange_vertical_attachment" layout="30,-1" offset="0" gap="0"/>
+				<record class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+			</list>
+
+			<record id="default_properties">
+				<flags id="alignment" value="centre" />
+				<flags id="style" value="semi_bold,embossed" />
+				<flags id="size" value="large" />
+			</record>		
+
+		</record>
+
+
+		<container col="0" row="0">
+			<widget class="label">
+				<flags id="background_colour" value="result_table_0_0_colour" />
+				<string id="text" value="0-0" />
+			</widget>
+			<container id="0" class="container" file="competition/league result table item" />
+		</container>
+
+		<container col="1" row="0" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_0_1_colour" />
+				<string id="text" value="0-1" />
+			</widget>
+			<container id="1" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="2" row="0" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_0_2_colour" />
+				<string id="text" value="0-2" />
+			</widget>
+			<container id="2" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="3" row="0" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_0_3_colour" />
+				<string id="text" value="0-3" />
+			</widget>
+			<container id="3" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="4" row="0" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_0_4_colour" />
+				<string id="text" value="0-≥4" />
+			</widget>
+			<container id="4" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="0" row="1" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_1_0_colour" />
+				<string id="text" value="1-0" />
+			</widget>
+			<container id="5" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="1" row="1" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_1_1_colour" />
+				<string id="text" value="1-1" />
+			</widget>
+			<container id="6" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="2" row="1" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_1_2_colour" />
+				<string id="text" value="1-2" />
+			</widget>
+			<container id="7" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="3" row="1" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_1_3_colour" />
+				<string id="text" value="1-3" />
+			</widget>
+			<container id="8" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="4" row="1" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_1_4_colour" />
+				<string id="text" value="1-≥4" />
+			</widget>
+			<container id="9" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="0" row="2" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_2_0_colour" />
+				<string id="text" value="2-0" />
+			</widget>
+			<container id="10" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="1" row="2" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_2_1_colour" />
+				<string id="text" value="2-1" />
+			</widget>
+			<container id="11" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="2" row="2" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_2_2_colour" />
+				<string id="text" value="2-2" />
+			</widget>
+			<container id="12" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="3" row="2" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_2_3_colour" />
+				<string id="text" value="2-3" />
+			</widget>
+			<container id="13" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="4" row="2" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_2_4_colour" />
+				<string id="text" value="2-≥4" />
+			</widget>
+			<container id="14" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="0" row="3" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_3_0_colour" />
+				<string id="text" value="3-0" />
+			</widget>
+			<container id="15" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="1" row="3" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_3_1_colour" />
+				<string id="text" value="3-1" />
+			</widget>
+			<container id="16" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="2" row="3" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_3_2_colour" />
+				<string id="text" value="3-2" />
+			</widget>
+			<container id="17" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="3" row="3" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_3_3_colour" />
+				<string id="text" value="3-3" />
+			</widget>
+			<container id="18" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="4" row="3" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_3_4_colour" />
+				<string id="text" value="3-≥4" />
+			</widget>
+			<container id="19" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="0" row="4" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_4_0_colour" />
+				<string id="text" value="≥4-0" />
+			</widget>
+			<container id="20" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="1" row="4" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_4_1_colour" />
+				<string id="text" value="≥4-1" />
+			</widget>
+			<container id="21" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="2" row="4" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_4_2_colour" />
+				<string id="text" value="≥4-2" />
+			</widget>
+			<container id="22" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="3" row="4" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_4_3_colour" />
+				<string id="text" value="≥4-3" />
+			</widget>
+			<container id="23" class="container"  file="competition/league result table item" />
+		</container>
+
+		<container col="4" row="4" >
+			<widget class="label">
+				<flags id="background_colour" value="result_table_4_4_colour" />
+				<string id="text" value="≥4-≥4" />
+			</widget>
+			<container id="24" class="container"  file="competition/league result table item" />
+		</container>
+
+	</container>
+
+</panel>

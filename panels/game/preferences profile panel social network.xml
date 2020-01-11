@@ -1,0 +1,29 @@
+<panel height="400">
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="titled_box">
+    <translation id="title" translation_id="316579" type="use" value="Social Networks[COMMENT: Button where user can select social networks]"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <container class="inner_subtle_box" >
+      <translation id="name" translation_id="316579" type="use" value="Social Networks[COMMENT: Button where user can select social networks]"/>
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <!--popup button for choosing the user-->
+      <container id="usar">
+        <layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+        <widget class="label" auto_size="horizontal">
+          <translation id="text" translation_id="348262" type="use" value="Preferences for[COMMENT: label for choosing the user to edit preferences for]" />
+        </widget>
+        <widget class="popup_button" id="usrP" auto_size="all" select_event="usse" />
+      </container>
+
+      <widget class="manager_profile_panel" id="mpmp" file="generic/social network details panel" />
+    </container>
+
+  </container>
+
+</panel>

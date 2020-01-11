@@ -1,0 +1,33 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- titled box -->
+	<container class="titled_box" id="fxtt" alignment="left">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="4" />
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="comp_button" id="cmpb" auto_size="all" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="4,4" embed_in_frame="true" />
+		</widget>
+
+		<!-- No fixtures panel-->
+		<container id="nomt" hidden="true">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="spacer" height="10" />
+
+			<widget class="text" alignment="left" spec="text" size="large" style="semi_bold, embossed" auto_size="all">
+				<translation id="text" translation_id="412461" type="use" value="No fixtures scheduled on this date[COMMENT competition fixtures panel, no fixtures on specific date]" />
+			</widget>
+		</container>
+
+		<container id="fsbg">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+		</container>
+
+	</container>
+
+</panel>

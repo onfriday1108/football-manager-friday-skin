@@ -1,0 +1,29 @@
+<panel width="640" height="480">
+
+  <!-- make dialog moveable -->
+
+  <record id="closed_event" event_id="clos" />
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+  <container>
+    <layout class="arrange_vertical_attachment" layout="40,-1,40" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+
+    <!-- main panel and buttons -->
+    <container>
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<!-- Use a custom file which doesn't create a client object table, we don't want them to click the links-->
+      <container class="db_record_search_box" id="sebx" dfol="true" lpfi="widgets/predictive search list ige"/>
+
+    </container>
+
+    <container class="search_panel" id="sepl" file="generic/search dialog panel" />
+
+    <!-- row of buttons -->
+    <container id="btns" file="ok cancel buttons" />
+  </container>
+
+</panel>

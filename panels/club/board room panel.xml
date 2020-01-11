@@ -1,0 +1,111 @@
+<panel draw_vertical_dividers="true">
+	<boolean id="save_session_state" value="true" />
+	<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1">
+		<global id="horizontal_gap" name="ui.main_box_gap" />
+	</attachment_group>
+
+	<container class="main_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="10" />
+
+		<container>
+          <attachment_group class="horizontal_arrange_vertical_autosize" vertical_gap="0" />
+          <widget class="link_button" appearance="buttons/link/title/button" section="Cvis" size="medium" alignment="left,centre_y" auto_size="all">
+            <translation id="text" translation_id="491850" type="use" value="Club Vision[COMMENT: AREA: Club vision panel; SUB-AREA: Panel heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the club vision panel]" />
+            <record id="object_property" get_property="objt" />
+          </widget>
+        </container>
+
+		<container class="club_vision_viewer_panel" id="cvis" show_objective_type="true" show_objective_importance="true" show_objective_status="true" use_performance_data="true"/>
+	</container>
+	
+
+	<container draw_horizontal_dividers="true">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="20" />
+
+		<!--Manager Performance-->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="10" />
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" />
+				<widget class="link_button" appearance="buttons/link/title/button" id="tcon" section="tcon" size="medium" alignment="left,centre_y" auto_size="all">
+
+				</widget>
+			</container>
+			
+			<widget class="board_confidence_panel" id="boco" file="club/board confidence snapshot autosize" auto_size="vertical">
+
+			</widget>
+			
+		</container>
+
+		<container draw_horizontal_dividers="true">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" />
+
+			<!-- Board Request Status -->
+			<container class="main_box" navigation_container="true">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="30" horizontal_inset="0" />
+				
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_left" />
+					<widget class="text" font="title" colour="accent" auto_size="all" embed_in_frame="true" size="medium">
+						<translation id="text" translation_id="255092" type="use" value="Board Requests[COMMENT: team feeder club info - button to search for new one]" />
+					</widget>
+					<widget class="subtle_popup_button" id="brvm" embed_in_frame="true" auto_size="all" select_event="brvc">
+						<list id="items">
+							<record id="0">
+								<translation id="text" translation_id="331818" type="use" value="All[COMMENT - Staff Panel; title of club tab]" />
+							</record>
+							<record id="1">
+								<translation id="text" translation_id="494111" type="use" value="Ongoing[COMMENT: AREA: Club Vision; SUB-AREA: Type of Vision, Timed vs Ongoing; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: 254535; NOTE: this is a bespoke version of the referenced ID as this can mean something different in other languages]" />
+							</record>
+							<record id="2">
+								<translation id="text" translation_id="310338" type="use" value="Completed[COMMENT: board request status; the board request has been completed]" />
+							</record>
+						</list>
+					</widget>
+				</container>
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" horizontal_offset="0" />
+
+					<widget class="subtle_popup_button" id="brBU" auto_size="all" fixed="true" embed_in_frame="true">
+						<translation id="text" translation_id="333910" type="use" value="Make Board Request[COMMENT: popup button to make a board request]" />
+						<string id="icon" value="icons/16px/speech bubble" />
+					</widget>
+				</container>
+				
+				<!-- Either one or the other, not both-->
+				<widget class="table" layout="-1" id="brst" auto_size_rows="true" fixed_size_rows="false" mode="fill_rows, stripe_rows" default_sort_column="defo">
+					<list id="column_table_properties">
+						<record id="defo" sort_ascending="false" />
+					</list>
+				</widget>
+				<widget class="label" id="brsn" hidden="true" alignment="centre">
+					<translation id="text" translation_id="454738" type="use" value="No pending board requests[COMMENT: For when you have no board request for your status, revision to ID 308031 as some were confused that this previously meant that they had never made a request]" />
+				</widget>
+
+				<!-- Chairman Status -->
+				<container class="inner_box" priority="3" colour="text">
+					<translation id="title" translation_id="394525" type="use" value="Owner Status[COMMENT: heading; team_information_panel; owner's confidence in the club]" />
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="3" horizontal_inset="0" />
+
+					<widget class="text" auto_size="vertical" id="chst" spec="text" size="normal" colour="faded text" />
+				</container>
+				
+			</container>
+
+			<!-- Budget Adjustment -->
+
+			<container class="title_link_box" id="reqb" hide_view_menu="true" link_click_event="vflp" navigation_container="true">
+				<attachment class="show_medium_vertical" min_value="900" />
+				<translation id="link_title" translation_id="256882" type="use" value="Budget Adjustment[COMMENT::dialog title; this will be used on the dialog where the manager will be able to choose how to adjust his financial budget]" />
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+				<widget class="budget_adjustment_panel" id="bapl" />
+			</container>
+		</container>
+			
+		
+		
+	</container>
+</panel>

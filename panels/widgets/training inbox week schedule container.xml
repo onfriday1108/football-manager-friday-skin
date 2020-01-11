@@ -1,0 +1,16 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<string id="skin_style" value="subtle box" />
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+		<container class="training_calendar_week_schedule_row" id="WtsW"  file="widgets/training schedule week row inbox" />
+		<container>
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="right" />
+			<widget class="widget_popup_button" auto_size="all" id="shwS" appearance="buttons/standard/normal/button" popup_alignment="left,bottom" widget_type="client_object_viewer_xml_panel" secondary_icon_enabled="false">
+				<record id="widget_properties" file="widgets/popup training schedule week" width="700" />
+				<record id="modal_popup_properties" file="modal popup panel auto sized" attempt_to_reposition="true" />
+				<translation id="text" translation_id="466576" type="use" value="View original schedule[COMMENT:Training schedule changed email - view the original schedule before the change]" />
+			</widget>
+		</container>
+	</container>
+</panel>

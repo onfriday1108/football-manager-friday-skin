@@ -1,0 +1,16 @@
+<panel>
+
+  <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="10"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+  <container class="main_box" id="hmts" appearance="boxes/titled/match/paper">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+    <widget class="match_team_stats_panel" id="HMts" file="match/match team stats short no heading" team_index="0"/>
+  </container>
+
+  <container class="main_box" id="amts" appearance="boxes/titled/match/paper">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+    <widget class="match_team_stats_panel" id="AMts" file="match/match team stats short no heading" team_index="1"/>
+  </container>
+
+</panel>

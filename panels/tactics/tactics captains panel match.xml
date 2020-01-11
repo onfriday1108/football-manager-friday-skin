@@ -1,0 +1,82 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="vertical_split_container" starting_layout="-4, -3" save_default_state="true" min_width_left="425" min_width_right="425" gap="10">
+
+		<widget class="match_team_squad_panel" id="tesq" file="match/match team squad captain views" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container class="main_transparent_box">
+				<translation id="title" translation_id="247736" type="use" value="Captains" />
+				<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0" />
+				<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--  group box holding instruction table for layout purposes  -->
+				<widget class="table" id="sptt" mode="fill_custom_rows,drop_on_rows" layout="40, -1, 30" sort_disabled="true" row_height="30">
+
+					<flags id="auto_size" value="vertical" />
+
+					<!-- Captain and Vice-Captin rows coloured differently -->
+					<list id="row_properties">
+						<record index="0" appearance="tables/custom/league/champions/row" />
+						<record index="0" appearance="tables/custom/league/promotion/row" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record index="0" appearance="buttons/custom/match/standard/normal/button">
+							<boolean id="sort_ascending" value="false" />
+							<flags id="alignment" value="centre" />
+							<flags id="spec" value="control" />
+							<flags id="size" value="small"/>
+						</record>
+						<record index="1" id="Pers" >
+							<boolean id="sort_ascending" value="false" />
+							<flags id="alignment" value="left,centre_y" />
+						</record>
+						<record index="2" appearance="buttons/custom/match/standard/normal/button">
+							<boolean id="sort_ascending" value="false" />
+							<flags id="alignment" value="centre, centre_y" />
+						</record>
+					</list>
+
+					<list id="column_table_properties">
+						<record index="0">
+							<boolean id="sort_disabled" value="true" />
+						</record>
+						<record index="1">
+							<boolean id="sort_disabled" value="true" />
+						</record>
+						<record index="2">
+							<boolean id="sort_disabled" value="true" />
+						</record>
+					</list>
+
+					<widget class="picture" row="0" column="0" drag="false" file="icons/custom/promises/captain" image_alignment="centre" width="40">
+					</widget>
+					<widget class="popup_button" id="capp" row="0" column="1" auto_tick_exclusive="true">
+						<record id="select_event" event_id="chca" index="0" />
+					</widget>
+
+					<widget class="picture" row="1" column="0" file="icons/custom/promises/vice captain" image_alignment="centre" width="40">
+					</widget>
+					<widget class="popup_button" id="vcap" row="1" column="1" auto_tick_exclusive="true">
+						<record id="select_event" event_id="chca" index="1" />
+					</widget>
+				</widget>
+			</container>
+
+			<container class="main_transparent_box">
+				<translation id="title" translation_id="344908" type="use" value="Stand-Ins[COMMENT: title for an area to pick who you want as your stand-in captains if your regular captain and vice captain are unavailable]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="set_piece_takers_panel" id="capt" captains="true" file="tactics/set piece takers match" />
+			</container>
+
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,25 @@
+<panel width="200">
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="left" horizontal_inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+	<record id="PbPr">
+		<integer id="height" value="22"/>
+		<integer id="width" value="500"/>
+		<integer id="max_value" value="100"/>
+		<integer id="label_width" value="70"/>
+		<integer id="show_label_on_bar" value="false"/>
+		<integer id="bar_chart_label_type" value="bclF"/>
+		<integer id="alignment" value="left,centre_y"/>
+		<integer id="font_colour" value="black"/>
+		<integer id="poll_1_bar_colour" value="hashtag"/>
+		<integer id="poll_1_font_colour" value="text"/>
+		<integer id="poll_2_bar_colour" value="hashtag"/>
+		<integer id="poll_2_font_colour" value="text"/>
+		<integer id="poll_3_bar_colour" value="hashtag"/>
+		<integer id="poll_3_font_colour" value="text"/>
+		<integer id="poll_4_bar_colour" value="hashtag"/>
+		<integer id="poll_4_font_colour" value="text"/>
+
+	</record>
+
+</panel>

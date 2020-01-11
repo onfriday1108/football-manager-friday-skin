@@ -1,0 +1,39 @@
+﻿<container>
+	<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1,-1,-1" horizontal_gap="-15"/>
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" />
+		<widget class="picture" file="icons/custom/scouting/recommendation" red_replacement="orange" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" wants_mouse_events="false" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="all" />
+		</widget>
+		<widget class="text" text="52" auto_size="all" style="bold" colour="white">
+			<layout class="centre_in_parent_attachment" />
+		</widget>
+	</container>
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" />
+		<widget class="picture" file="icons/custom/scouting/recommendation" red_replacement="yellow2" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" wants_mouse_events="false" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="all" />
+		</widget>
+		<widget class="text" text="64" auto_size="all" style="bold" colour="white">
+			<layout class="centre_in_parent_attachment" />
+		</widget>
+	</container>
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" />
+		<widget class="picture" file="icons/custom/scouting/recommendation" red_replacement="green2" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" wants_mouse_events="false" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="all" />
+		</widget>
+		<widget class="text" text="78" auto_size="all" style="bold" colour="white">
+			<layout class="centre_in_parent_attachment" />
+		</widget>
+	</container>
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" />
+		<widget class="picture" file="icons/custom/scouting/recommendation" red_replacement="green" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" wants_mouse_events="false" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="all" />
+		</widget>
+		<widget class="text" text="90" auto_size="all" style="bold" colour="white">
+			<layout class="centre_in_parent_attachment" />
+		</widget>
+	</container>
+</container>

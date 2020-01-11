@@ -1,0 +1,65 @@
+<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at00" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="horizontal_arrange_container" entity_layout_id="at05" id="btns" height="30">
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+		<layout class="stick_to_sizes_attachment" width="85.000000" />
+	</container>
+	<container entity_layout_id="at04" id="ovvw">
+		<string id="draw_vertical_dividers" value="true" />
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="top" set_side="bottom" target="at05" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container class="team_staff_subteam_panel" entity_layout_id="at01" id="soc1" file="team/team staff subteam vertical">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+			<layout class="stick_to_sizes_attachment" width="32.910156" />
+		</container>
+		<container class="team_staff_subteam_panel" entity_layout_id="at02" id="soc2" file="team/team staff subteam vertical">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="14" get_side="right" set_side="left" move_side="true" target="at01" />
+			<layout class="stick_to_sizes_attachment" width="32.910156" />
+		</container>
+		<container class="team_staff_subteam_panel" entity_layout_id="at03" id="soc3" file="team/team staff subteam vertical">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="14" get_side="right" set_side="left" target="at02" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		</container>
+	</container>
+	<widget class="widget_popup_button" entity_layout_id="at00" id="staR" auto_size="all" needs_width="true" needs_height="true" appearance="buttons/subtle/normal/button">
+		<translation id="text" translation_id="335274" type="use" value="Responsibilities[COMMENT: Manager main/top menu: national team options when team name is not visible]" />
+		<string id="icon" value="icons/16px/staff respo" />
+		<string id="popup_alignment" value="centre_x, top" />
+		<string id="widget_type" value="group_responsibility_list_widget" />
+		<record id="widget_properties" file="team/staff responsibility summary popup panel" width="800" height="520" />
+		<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at04" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-5" get_side="right" set_side="right" move_side="true" target="main" />
+	</widget>
+</panel>

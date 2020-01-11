@@ -1,0 +1,27 @@
+<panel  >
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+ 
+  <container class="container_with_mouse_events" >
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <widget class="create_assignment_scout_picker_popup_panel" id="tata">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="slct" />
+            <integer id="set_property" value="slct" />
+          </record>
+          <record>
+            <integer id="get_property" value="ISAn" />
+            <integer id="set_property" value="ISAn" />
+          </record>
+          <record>
+            <integer id="get_property" value="Ttea" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </list>
+      </record>
+    </widget>
+   
+  </container>
+</panel>

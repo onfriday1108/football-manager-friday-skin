@@ -1,0 +1,26 @@
+<panel>
+
+	<translation id="title" translation_id="284283" type="use" value="Performance" />
+
+	<container id="MANp">
+
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<widget class="table" id="tble" mode="fill_rows" layout="10,-8" auto_size_rows="true" fixed_size_rows="false" row_spacing="2">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<list id="column_table_properties">
+				<record indx="0" left="4" top="3" sort_disabled="trye" alignment="left,centre_y" />
+				<record indx="1" right="4" top="2" alignment="left,centre_y" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="1"  />
+			</list>
+
+		</widget>
+
+	</container>
+
+</panel>

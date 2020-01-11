@@ -1,0 +1,20 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container height="32">
+			<layout class="arrange_horizontal_attachment" layout="-1, 35" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="label" id="titl" auto_size="none" size="11"/>
+			<widget class="icon_button" icon="icons/16px/remove from list" id="rmit">
+			</widget>
+		</container>
+	</container>
+</panel>

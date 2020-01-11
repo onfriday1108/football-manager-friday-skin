@@ -1,0 +1,196 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box">
+
+		<translation id="title" translation_id="247436" type="use" value="Personal Details" />
+		<layout class="arrange_vertical_attachment" layout="180,-1,-1" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<container>
+
+			<!-- profile picture -->
+			<widget class="picture" id="prop">
+				<boolean id="scale_picture" value="true" />
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre" />
+
+				<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+					<list id="value">
+						<boolean value="false" />
+					</list>
+				</attachment>
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="fcgn" />
+							<!--Facegen data request-->
+						</record>
+						<record>
+							<integer id="get_property" value="Pfke" />
+							<!--Fake name request-->
+						</record>
+						<record>
+							<integer id="get_property" value="prpc" />
+							<integer id="set_property" value="valu" />
+						</record>
+					</list>
+				</record>
+			</widget>
+
+			<!-- non player retired age-->
+			<container width="100" id="npra">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" />
+
+				<record id="object_property">
+					<!-- Hide if not applicable to this guy -->
+					<integer id="get_property" value="RpHn" />
+					<integer id="set_property" value="hidn" />
+				</record>
+
+				<widget class="text" spec="text" size="small" auto_size="vertical">
+					<translation id="text" translation_id="374218" type="use" value="Retired as Staff[COMMENT: Retired persons screen, column header indicating the date the retired person quit as a staff member]" />
+				</widget>
+
+				<widget class="label" id="nage" spec="text" style="bold" size="14" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="Rnag" />
+					</record>
+				</widget>
+			</container>
+
+
+			<!--player retired age-->
+			<container width="100" id="plra">
+				<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+				<layout class="stick_to_sides_attachment" alignment="right,top" />
+
+				<record id="object_property">
+					<!-- Hide if not applicable to this guy -->
+					<integer id="get_property" value="RpHp" />
+					<integer id="set_property" value="hidn" />
+				</record>
+
+				<widget class="text" spec="text" size="small" alignment="right" auto_size="vertical">
+					<translation id="text" translation_id="374217" type="use" value="Retired as Player[COMMENT: title for displaying a player's age on the player profile panel]" />
+				</widget>
+
+				<widget class="label" id="page" alignment="right" spec="text" style="bold" size="14">
+					<record id="object_property">
+						<integer id="get_property" value="Rpag" />
+					</record>
+				</widget>
+			</container>
+
+		</container>
+
+		<!--international stats row-->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,-1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<!--int apps-->
+				<widget class="international_appearances_label" spec="text" size="small" id="inta" alignment="centre_x,bottom">
+					<integer id="int_apps_label_format" value="1" />
+					<!-- 1 is for apps -->
+					<record id="object_property">
+						<integer id="get_property" value="Pist" />
+					</record>
+				</widget>
+
+				<!--int goals-->
+				<widget class="international_appearances_label" spec="text" size="small" id="intg" alignment="centre_x,top">
+					<integer id="int_apps_label_format" value="2" />
+					<!-- 2 is goals -->
+					<record id="object_property">
+						<integer id="get_property" value="Pist" />
+					</record>
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<widget class="dob_label" spec="text" size="small" id="dobl" alignment="centre" auto_size="vertical" display_format="0">
+					<record id="object_property">
+						<integer id="get_property" value="Pdob" />
+					</record>
+				</widget>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-5,-2" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<!--national flag-->
+					<widget class="object_portrait_picture" id="pnat" image_alignment="centre_x,bottom" scale_picture="true" keep_aspect_ratio="true">
+						<record id="object_property">
+							<integer id="get_property" value="PNat" />
+						</record>
+					</widget>
+
+					<widget class="person_nationality_button" spec="text" size="small" id="intc" auto_size="vertical" alignment="centre" icon_enabled="false" display_format="3">
+						<record id="object_property">
+							<integer id="get_property" value="objt"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+					</widget>
+				</container>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,-1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<!--youth apps-->
+				<widget class="international_appearances_label" spec="text" size="small" id="youa" alignment="centre_x,bottom">
+					<integer id="int_apps_label_format" value="3" />
+					<!-- 3 is for youth apps -->
+					<record id="object_property">
+						<integer id="get_property" value="Pist" />
+					</record>
+				</widget>
+
+				<!--youth goals-->
+				<widget class="international_appearances_label" spec="text" size="small" id="youg" alignment="centre_x,top">
+					<integer id="int_apps_label_format" value="4" />
+					<!-- 4 is youth goals -->
+					<record id="object_property">
+						<integer id="get_property" value="Pist" />
+					</record>
+				</widget>
+
+			</container>
+		</container>
+
+		<!--playing position row-->
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,-1" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--position-->
+			<widget class="position_label" spec="text" style="bold" id="bpos" size="14" alignment="centre_x,bottom" display_format="0" default_value=" " disable_link="true">
+				<record id="object_property">
+					<integer id="get_property" value="Ppos" />
+				</record>
+			</widget>
+			<!--non playing job-->
+			<widget class="job_label" spec="text" style="bold" size="14" id="jobl" alignment="centre_x,top" default_value=" ">
+				<record id="object_property">
+					<integer id="get_property" value="Pcnj" />
+				</record>
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

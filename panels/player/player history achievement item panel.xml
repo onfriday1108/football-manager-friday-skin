@@ -1,0 +1,56 @@
+<panel height="64">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="main_box" appearance="tables/standard/row/divider/row">
+		<layout class="arrange_horizontal_attachment" layout="80, -1, 40, -1, -1" gap="10" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="4"/>
+
+		<!-- Year -->
+		<widget class="text" id="year" alignment="centre" size="10" style="semi_bold"/>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="25, -1" gap="4" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<!-- Team badge -->
+			<widget class="object_portrait_picture" id="badg" image_alignment="centre" scale_picture="true"/>
+
+			<!-- Team button -->
+			<widget class="team_button" id="tema" icon_enabled="false" size="10" alignment="left,centre_y" multiline="true"/>
+		</container>
+
+		<!-- Award image -->
+		<container>
+			<!-- Has it's own container so it doesn't break the layout if it gets hidden -->
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+      <!-- Trophy picture -->
+			<widget class="comp_award_trophy_picture" id="awad" clickable="true" scale_picture="true" image_alignment="centre"/>
+      <!-- Promotion picture -->
+      <widget class="picture" id="prom" file="icons/16px/up" hidden="true" image_alignment="centre" red_replacement="positive"/>
+      <!-- Relegation picture -->
+      <widget class="picture" id="rele" file="icons/16px/down" hidden="true" image_alignment="centre" red_replacement="negative"/>
+
+    </container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<!-- These are mutually exclusive only one will show at a time-->
+			<!-- Landmark type -->
+			<widget class="text" id="lndT" alignment="left,centre_y" style="semi_bold" />
+			<!-- Other text -->
+			<widget class="text" id="othT"  alignment="left,centre_y" size="9" hidden="true"/>
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="25, -1" gap="4" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<!-- Competition logo-->
+			<widget class="object_portrait_picture" id="colo" image_alignment="centre" scale_picture="true"/>
+			<!-- Competition -->
+			<widget class="comp_button" id="comp" icon_enabled="false" size="10" multiline="true" navigation_focus_target="false" />
+		</container>
+	</container>
+</panel>

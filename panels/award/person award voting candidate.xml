@@ -1,0 +1,54 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- things to show in the table -->
+	<record id="viewed_property_ids">
+		<flags id="Pnms" />
+		<!-- Name -->
+		<flags id="PpsC" />
+		<!-- Position -->
+		<flags id="Pclb" />
+		<!-- Award Club -->
+		<flags id="Pnat" />
+		<!-- Nationality -->
+		<flags id="Poap" />
+		<!-- Apps -->
+		<flags id="Naga" />
+		<!-- Games managed for non-players -->
+		<flags id="Pogl" />
+		<!-- Goals -->
+		<flags id="Poas" />
+		<!-- Assists -->
+		<flags id="Poco" />
+		<!-- Conceded -->
+		<flags id="POcs" />
+		<!-- Clean Sheets -->
+		<flags id="Pomo" />
+		<!-- Man of the Match -->
+		<flags id="Poav" />
+		<!-- Average Rating -->
+		<flags id="Nawr" />
+		<!-- Win Ratio -->
+	</record>
+
+	<widget class="main_box" id="cand" alignment="left">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="table" id="list" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, drag_rows">
+			<!-- default state store values; these can be set on the client object list table container itself, and they will be forwarded to the table -->
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="false" />
+
+			<string id="customise_view_panel_class" value="customise_view_advanced_panel" />
+
+			<!-- Treat any person button as a drag handler -->
+			<boolean id="drag_embeddable_button" value="true" />
+
+			<!-- Don't scroll the table when dragging -->
+			<boolean id="dont_scroll_with_dragging" value="true" />
+
+			<string id="dragging_appearance" value="button/embeddable/null" />
+		</widget>
+	</widget>
+</panel>
+<!-- person award voting candidate panel -->

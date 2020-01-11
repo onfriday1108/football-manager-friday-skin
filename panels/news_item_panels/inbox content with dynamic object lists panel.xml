@@ -1,0 +1,25 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+	<container id="lstc">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- some default properties that can be passed onto each table that gets created -->
+		<!-- override these in the xml for each specific news item type -->
+		<boolean id="database_table_type" value="1"/>
+
+		<list id="viewed_property_ids">
+			<integer value="Pnms"/>
+		</list>
+
+		<record id="table_properties">
+			<boolean id="fixed_size_rows" value="true"/>
+			<flags id="auto_size" value="vertical" />
+			<flags id="mode" value="fill_rows, select_rows, stripe_rows, show_bullets, select_multiple, dont_ask_for_focus"/>
+		</record>
+
+	</container>
+
+
+</panel>

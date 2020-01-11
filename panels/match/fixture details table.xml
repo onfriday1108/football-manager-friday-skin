@@ -1,0 +1,109 @@
+<panel>
+
+	<translation id="title" translation_id="247232" type="use" value="Fixture Details" />
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="table" id="fdtb" hidden="true" mode="fill_rows, stripe_rows" layout="-3,-11">
+		<boolean id="auto_size_rows" value="true" />
+		<boolean id="fixed_size_rows" value="false" />
+		<flags id="auto_size" value="vertical" />    
+
+		<list id="column_widget_properties">
+			<record indx="0" auto_size="vertical" alignment="left,centre_y" spec="text" />
+			<record indx="1" spec="text" colour="selection" alignment="left,centre_y" auto_size="vertical" />
+		</list>
+
+		<!-- table isn't sortable -->
+		<list id="column_table_properties">
+			<record indx="0" left="4" alignment="left,centre_y" />
+			<record index="1" right="4" top="2" bottom="2" />
+		</list>
+
+		<widget class="label" col="0" row="0">
+			<translation id="text" translation_id="230120" type="use" value="Date" />
+		</widget>
+		<widget class="text" id="datw" col="1" row="0" />
+
+		<widget class="label" col="0" row="1">
+			<translation id="text" translation_id="227740" type="use" value="Competition" />
+		</widget>
+		<widget class="text" id="comw" col="1" row="1" />
+
+		<widget class="label" col="0" row="2">
+			<translation id="text" translation_id="247233" type="use" value="Venue" />
+		</widget>
+		<widget class="text" id="venw" col="1" row="2" />
+
+		<widget class="label" col="0" row="3">
+			<translation id="text" translation_id="247235" type="use" value="Aggregate" />
+		</widget>
+		<widget class="text" id="aggw" col="1" row="3" />
+
+		<widget class="label" col="0" row="4">
+			<translation id="text" translation_id="242302" type="use" value="Rules" />
+		</widget>
+		<widget class="text" id="rulw" col="1" row="4" />
+
+		<widget class="label" col="0" row="5">
+			<translation id="text" translation_id="227993" type="use" value="Referee" />
+		</widget>
+		<widget class="text" id="refr" col="1" row="5" />
+
+		<widget class="label" col="0" row="6">
+			<translation id="text" translation_id="247236" type="use" value="Weather Forecast" />
+		</widget>
+		<widget class="text" id="weaw" col="1" row="6" />
+
+		<widget class="label" id="homl" col="0" row="7">
+			<translation id="text" translation_id="247237" type="use" value="Home Team News" />
+		</widget>
+		<widget class="text" id="homw" col="1" row="7" />
+
+		<widget class="label" id="awal" col="0" row="8">
+			<translation id="text" translation_id="247238" type="use" value="Away Team News" />
+		</widget>
+		<widget class="text" id="awaw" col="1" row="8" />
+
+		<widget class="text" id="oddl" col="0" row="9">
+			<translation id="text" translation_id="230320" type="use" value="Odds" />
+		</widget>
+		<widget class="text" id="oddw" col="1" row="9" />
+
+		<widget class="label" col="0" row="10">
+			<translation id="text" translation_id="247239" type="use" value="Line Up" />
+		</widget>
+		<widget class="text" id="luwd" col="1" row="10" />
+
+		<widget class="label" col="0" row="11">
+			<translation id="text" translation_id="247240" type="use" value="Sent Off" />
+		</widget>
+		<widget class="text" id="sowd" col="1" row="11" />
+
+		<widget class="label" col="0" row="12">
+      <translation id="text" translation_id="247377" type="use" value="Goalscorers" />
+		</widget>
+		<widget class="text" id="glwd" col="1" row="12" />
+
+		<widget class="label" col="0" row="13">
+			<translation id="text" translation_id="247242" type="use" value="Attendance" />
+		</widget>
+		<widget class="text" id="atwd" col="1" row="13" />
+
+	</widget>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="right" />
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+		<widget class="link_appearance_button" id="opte" click_event="opte">
+			<translation id="text" translation_id="317867" type="use" value="Opposition Report[COMMENT: pre match screen linking to team report section]" />
+		</widget>
+
+		<!-- debug button for moving the fixture -->
+		<widget class="button" id="mvfx" auto_size="horizontal" click_event="mvfx">
+			<string id="text" value="Move Fixture - debug" />
+		</widget>
+	</container>
+</panel>
+<!-- main container widget -->

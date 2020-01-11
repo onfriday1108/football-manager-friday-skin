@@ -1,0 +1,15 @@
+﻿<panel height="60">
+	<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+  <flags id="child_for_sort" value="name"/>
+	<widget class="object_portrait_picture" width="50" scale_picture="true" keep_aspect_ratio="true">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+
+	<widget class="client_object_viewer_xml_panel" id="name" auto_size="vertical" file="widgets/player name and description widget">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+	
+	
+	
+	
+</panel>

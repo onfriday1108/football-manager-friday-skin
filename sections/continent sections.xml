@@ -1,0 +1,108 @@
+<!--
+this file contains a list of all of the sections in the game
+-->
+<properties>
+  <string id="text" value="Continent" />
+  <list id="items">
+
+    <record id="cono">
+      <translation id="text" translation_id="247414" type="use" value="Overview" />
+      <list id="items">
+        <!--profile-->
+        <record id="CtOv"/>
+        <!--media sources-->
+        <record id="csms"/>
+        <!--season summary-->
+        <record id="ctss"/>
+        <record id="----"/>
+        <!--actions-->
+        <record id="SUBS" item_type="ACTT"/>
+        <record id="USUB" item_type="ACTT"/>
+      </list>
+    </record>
+
+    <!--headlines-->
+    <record id="CtNw"/>
+
+    <record id="ctnn">
+      <translation id="text" translation_id="229364" type="use" value="Nations" />
+      <list id="items">
+        <!--rankings-->
+        <record id="ctnt"/>
+        <!--nation coefficients-->
+        <record id="ccnt"/>
+        <!--agreements-->
+        <record id="cagr"/>
+        <!--nation uefa coefficients-->
+        <record id="ctuc"/>
+        <!--nation concacaf coefficients-->
+        <record id="cCNc"/>
+        <!--nation coefficients-->
+        <record id="ctnc"/>
+        <!--qualification places-->
+        <record id="ccpp"/>
+      </list>
+    </record>
+
+    <record id="ccmp">
+      <translation id="text" translation_id="306915" type="use" value="Competitions[COMMENT: this refers to a panel which lists the top leagues + comps in a continent]" />
+      <list id="items">
+        <!--leagues-->
+        <record id="clea"/>
+        <!--cups-->
+        <record id="cocr"/>
+      </list>
+    </record>
+
+    <record id="ctcb">
+      <translation id="text" translation_id="229361" type="use" value="Clubs" />
+      <list id="items">
+        <!--clubs-->
+        <record id="ctac"/>
+        <!--finances-->
+        <record id="Cfin"/>
+        <!--uefa coefficients-->
+        <record id="CUef"/>
+        <!--concacaf coefficients-->
+        <record id="CCaf"/>
+      </list>
+    </record>
+
+    <!--managers-->
+    <record id="ctmn"/>
+
+    <!--transfers-->
+    <record id="cttr"/>
+
+    <record id="ctaw">
+      <translation id="text" translation_id="292587" type="use" value="Awards[COMMENT: title for top level Awards menu]" />
+      <list id="items">
+        <!--award winners-->
+        <record id="ctwi"/>
+        <!--award voting-->
+        <record id="ctvo"/>
+      </list>
+    </record>
+
+    <record id="ctsh">
+      <translation id="text" translation_id="229719" type="use" value="History" />
+      <list id="items">
+        <!--retirements-->
+        <record id="ctrp"/>
+        <record id="----"/>
+        <!--actions-->
+        <record id="CRNO" item_type="ACTT"/>
+      </list>
+    </record>
+
+    <record id="csdb">
+      <translation id="text" translation_id="247109" type="use" value="Debug" />
+      <boolean id="collapsed" value="true" />
+      <list id="items">
+        <!--debug general-->
+        <record id="cdgG"/>
+      </list>
+    </record>
+  </list>
+
+</properties>

@@ -1,0 +1,86 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<container id="atMc">
+		<attachment_group class="vertical_arrange_autosize" />
+
+		<container class="inner_subtle_box" height="280" id="ctan">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<widget class="text" font="title" alignment="left" auto_size="vertical">
+				<translation id="text" translation_id="450768" type="use" value="Current Tactic Analysis[COMMENT: title of subsection; showing the current tactic's analysis in terms of areas of strenghts, weaknesses and partnership]" />
+			</widget>
+
+			<container auto_size="vertical">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+				<container width="180">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+					<widget class="text" auto_size="vertical" alignment="centre" font="title" colour="pitch good area">
+						<translation id="text" translation_id="450769" type="use" value="Strengths[COMMENT analysis title; showing the major strengths of the tactics on the pitch]" />
+					</widget>
+
+					<widget class="pitch_with_tactics" id="opTS" player_icon_file="" icon_flags="show_name,show_extra_details,use_overview_icons,drop_initial_if_possible,show_position_role_duty_suitability,show_selection_image,show_number,show_role_duty_labels,show_familiarity" pitch_vertical_padding="0" vertical="true" pitch_player_icon_text_size="5" pitch_alignment="can_scale" maximum_player_size="0.22" pitch_line_colour="white" ncol="tactics normal run" dcol="tactics darkened run" gcol="tactics dragged run" pitch_draw_grass="false" pitch_base_appearance="" pitch_pattern="ui circles" pitch_touchline_width_percentage="20" icon_layout_state_id="st07" line_width="1" draw_analysis_overlay="true" analysis_mode="1" pitch_perspective="0.100000" />
+
+				</container>
+				
+				<container width="180">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+					<widget class="text" auto_size="vertical" alignment="centre" font="title" colour="pitch serious problems">
+						<translation id="text" translation_id="450770" type="use" value="Weaknesses[COMMENT analysis title; showing the major weakness of the tactics on the pitch]" />
+					</widget>
+
+					<widget class="pitch_with_tactics" id="opTW" player_icon_file="" icon_flags="show_name,show_extra_details,use_overview_icons,drop_initial_if_possible,show_position_role_duty_suitability,show_selection_image,show_number,show_role_duty_labels,show_familiarity" pitch_vertical_padding="0" vertical="true" pitch_player_icon_text_size="5" pitch_alignment="can_scale" maximum_player_size="0.22" pitch_line_colour="white" ncol="tactics normal run" dcol="tactics darkened run" gcol="tactics dragged run" pitch_draw_grass="false" pitch_base_appearance="" pitch_pattern="ui circles" pitch_touchline_width_percentage="20" icon_layout_state_id="st07" line_width="1" draw_analysis_overlay="true" analysis_mode="2" pitch_perspective="0.100000" />
+
+				</container>
+				
+				<container width="180">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+					
+					<widget class="text" auto_size="vertical" alignment="centre" font="title">
+						<translation id="text" translation_id="450771" type="use" value="Partnerships[COMMENT: Tactical analysis email; showing strong and weak partnerships between players on the pitch]" />
+					</widget>
+
+					<widget class="pitch_with_tactics" id="opTP" player_icon_file="tactics/tactics icon info panel briefing inbox" icon_flags="show_name,show_extra_details,use_overview_icons,drop_initial_if_possible,show_position_role_duty_suitability,show_selection_image,show_number,show_role_duty_labels,show_familiarity" pitch_vertical_padding="0" vertical="true" pitch_player_icon_text_size="5" pitch_alignment="can_scale" maximum_player_size="0.22" pitch_line_colour="white" ncol="tactics normal run" dcol="tactics darkened run" gcol="tactics dragged run" pitch_draw_grass="false" pitch_base_appearance="" pitch_pattern="ui circles" pitch_touchline_width_percentage="20" icon_layout_state_id="st08" line_width="1" draw_analysis_overlay="true" analysis_mode="3" pitch_perspective="0.100000" />
+
+				</container>
+			</container>
+		</container>
+
+
+		<container class="inner_subtle_box" height="280">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+
+			<widget class="text" alignment="left" font="title" auto_size="vertical">
+				<translation id="text" translation_id="491957" type="use" value="Opposition Match Analysis[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: pre match screen linking to team report section]" />
+			</widget>
+
+			<widget class="text" id="noIN" alignment="left" auto_size="vertical">
+				<translation id="text" translation_id="491972" type="use" value="We haven't been able to compile any information on the next opposition.[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: pre match screen linking to team report section]" />
+			</widget>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+				<container class="scrolling_box">
+					<container class="vertical_arrange_container" id="posC" auto_size="vertical" needs_height="true">
+						<integer id="vertical_gap" value="4" />
+					</container>
+				</container>
+
+				<container class="scrolling_box">
+					<container class="vertical_arrange_container" id="negC" auto_size="vertical" needs_height="true">
+						<integer id="vertical_gap" value="4" />
+					</container>
+				</container>
+			</container>
+		</container>
+
+
+	</container>
+
+
+</panel>

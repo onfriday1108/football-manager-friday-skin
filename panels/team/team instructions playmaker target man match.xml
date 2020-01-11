@@ -1,0 +1,62 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container class="main_transparent_box">
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<!-- Playmaker and Target Man Table -->
+		<widget class="table" id="tipl" mode="0" layout="-1,10,-1,10,-1">
+
+			<boolean id="fixed_size_rows" value="true" />
+			<integer id="row_height" value="24" />
+			<flags id="auto_size" value="vertical" />    
+
+			<record id="default_properties">
+				<flags id="spec" value="text" />
+			</record>
+			
+			<record id="default_properties" spec="text"  />
+
+			<widget class="check_box" row="0" col="0" id="cplm" click_event="einc">
+				<translation id="hint" translation_id="328541" type="use" value="Tick this box to assign the team's primary playmaker[COMMENT: hint for a check box that allows the user to select a playmaker for the team to use]" />
+				<translation id="text" translation_id="316694" type="use" value="Playmaker" />
+			</widget>
+			<widget class="popup_button" row="1" col="0" id="plym" appearance="menus/standard/match/button">
+				<flags id="sele" value="eips" />
+			</widget>
+
+			<widget class="check_box" row="0" col="2" id="ctrg" click_event="einc">
+				<translation id="hint" translation_id="328542" type="use" value="Tick this box to assign the team's target man[COMMENT: hint for a check box that allows the user to select a target man for the team to use]" />
+				<translation id="text" translation_id="247644" type="use" value="Target Man" />
+			</widget>
+			<widget class="subtle_popup_button" row="1" col="2" id="trgm" appearance="menus/standard/match/button">
+				<flags id="sele" value="eips" />
+			</widget>
+
+			<widget class="check_box" row="0" col="4" id="ctms" click_event="einc">
+				<translation id="hint" translation_id="247823" type="use" value="Target Man Supply Type[COMMENT: team instructions: target man supply type hint]" />
+				<translation id="text" translation_id="247822" type="use" value="Target Man Supply[COMMENT: team instructions: target man supply type label]" />
+			</widget>
+			<widget class="subtle_popup_button" row="1" col="4" id="mtms" appearance="menus/standard/match/button">
+				<flags id="sele" value="eips" />
+				<list id="items">
+					<record id="26">
+						<translation id="name" translation_id="247619" type="use" value="Mixed" />
+					</record>
+					<record id="27">
+						<translation id="name" translation_id="247824" type="use" value="To Feet" />
+					</record>
+					<record id="28">
+						<translation id="name" translation_id="247825" type="use" value="To Head" />
+					</record>
+					<record id="29">
+						<translation id="name" translation_id="247826" type="use" value="Run Onto Ball" />
+					</record>
+				</list>
+				<flags id="slct" value="26" />
+			</widget>
+		</widget>
+	</container>
+
+</panel>

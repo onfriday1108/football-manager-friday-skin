@@ -1,0 +1,53 @@
+<!--
+	This is an XML that is to be used with Team Upcoming Fixture Panel. It has an alternative layout used on the 
+	Match Preparation Upcoming Fixture (Next Match) panel, and the opponent's recent results intead of the manager's
+	upcoming fixtures.
+-->
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!--container shown when there is a next match available-->
+	<container id="nemc">
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+
+		<widget class="team_button" id="otna" alignment="left,centre_y" auto_size="horizontal" format="[%team#1-short_abb]" />
+
+
+		<widget class="text" id="loca" alignment="centre" auto_size="horizontal" multiline="false" >
+		</widget>
+
+		<widget class="text" width="5" alignment="centre" >
+			<string id="text" value="-" />
+		</widget>
+
+		<widget class="text" id="nMat" auto_size="horizontal" inset="0" format="days_only" alignment="left,centre_y" >
+			<translation id="text" value="" />
+		</widget>
+
+
+	</container>
+
+	<!--container shown when there is no next match-->
+	<container id="nonm">
+		<layout class="arrange_horizontal_attachment" layout="15,-3,-4" offset="0" gap="1" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--team badge-->
+		<widget class="picture" height="20" width="20" id="tepi" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+
+		<!--explanatory text-->
+		<widget class="text" alignment="left,centre_y" spec="text" style="semi_bold, embossed" auto_size="vertical" multiline="false">
+			<translation id="text" translation_id="298048" type="use" value="No upcoming fixtures." />
+		</widget>
+
+		<!--buttons to arrange a friendly-->
+		<widget class="button" id="arcf" multiline="true" >
+			<translation id="text" translation_id="242435" type="use" value="Arrange Friendly" />
+		</widget>
+
+	</container>
+
+</panel>

@@ -1,0 +1,35 @@
+﻿<panel>
+	<boolean id="GTBT" value="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container class="scrolling_box">
+		<container draw_horizontal_dividers="true"  >
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="12"/>
+
+			<container navigation_container="true">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,150" vertical_inset="0" />
+
+				<container id="at01" height="30" name="overview box">
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="text" alignment="centre_y,left" id="ovrh" auto_size="vertical" name="overview text" colour="faded text"/>
+				</container>
+
+				<widget class="subtle_popup_button" entity_layout_id="at06" id="tvrs" auto_size="all" needs_width="true" needs_height="true" name="set all button" fixed="true">
+					<string id="select_event" value="TVRS"/>
+					<translation id="text" translation_id="376571" type="use" value="Set All[COMMENT: FR 8157; Player availability news item; text for button for changing all player's availabilities at once]"/>
+					<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" move_side="true" target="main"/>
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" move_side="true" target="main"/>
+				</widget>
+
+			</container>
+
+			<container id="osta" file="human/human staff responsibility summary panel" name="staff resp"/>
+			<container id="osco" file="human/human staff responsibility summary panel" name="scouting resp"/>
+			<container id="otrc" file="human/human staff responsibility summary panel" name="transfer contract resp" />
+			<container id="omed" file="human/human staff responsibility summary panel" name="media resp"/>
+			<container id="otra" file="human/human staff responsibility summary panel" name="training resp"/>
+			<container id="otac" file="human/human staff responsibility summary panel" name="tactics resp"/>
+			<container id="omat" file="human/human staff responsibility summary panel" name="match resp"/>
+		</container>
+	</container>
+</panel>

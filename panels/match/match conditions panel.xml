@@ -1,0 +1,26 @@
+<panel>
+	<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+
+	<!--icon-->
+	<widget class="picture" width="60" file="icons/48px/stadium" red_replacement="text" green_replacement="grey 300" blue_replacement="grey 500" image_alignment="centre" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--time, place-->
+		<widget class="text" id="tipl" style="bold" auto_size="vertical" />
+
+		<!--tickets-->
+		<widget class="text" id="tiso" auto_size="vertical" colour="faded text" size="small"/>
+
+		<!--pitch condition-->
+		<widget class="pitch_condition_label" id="pico" spec="text" auto_size="vertical" add_suffix="true" colour="faded text" size="small">
+			<record id="object_property">
+				<integer id="get_property" value="Sptc" />
+				<integer id="set_property" value="valu" />
+			</record>
+		</widget>
+
+	</container>
+
+</panel>

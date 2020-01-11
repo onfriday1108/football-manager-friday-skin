@@ -1,0 +1,29 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!-- These are the pictures that are used for the different types of achievments -->
+	<!-- Promotion -->
+	<string id="Ipro" value="icons/custom/staff/timeline/promoted" />
+	<!-- Relegation -->
+	<string id="Irel" value="icons/custom/staff/timeline/relegated" />
+	<!-- Competition win -->
+	<string id="Iwin" value="icons/26px/gold trophy" />
+	<!-- Cup runner up -->
+	<string id="Irun" value="icons/26px/silver trophy" />
+	<!-- Award -->
+	<string id="Iawa" value="icons/26px/gold medal" />
+	<!-- Joined team -->
+	<string id="Ijon" value="icons/custom/staff/timeline/appointed" />
+	<!-- Left team -->
+	<string id="Ilef" value="icons/custom/staff/timeline/resigned" />
+	<!-- Sacked -->
+	<string id="Isak" value="icons/custom/staff/timeline/sacked" />
+
+	<container class="scrolling_box">
+		<container id="tabl">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+			<!-- Filled in code with "person club achievements history list item panel" containers -->
+		</container>
+	</container>
+
+</panel>

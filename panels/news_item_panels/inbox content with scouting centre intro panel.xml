@@ -1,0 +1,71 @@
+﻿<panel save_session_state="true">
+	<string id="skin_style" value="subtle box" />
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="scouting_top_panel" id="stop" >
+		<record id="object_property" get_property="objt" set_property="objt" />
+		<list id="visible_items">
+			<flags value="scbc" />
+			<flags value="rtec" />
+		</list>
+	</widget>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" />
+		<container class="inner_subtle_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="10"/>
+
+			<container embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_right" />
+
+				<widget class="widget_popup_button" id="freq" auto_size="all" embed_in_frame="true" widget_type="property_list_viewer_xml_panel" popup_alignment="right,top" offset_y="2" icon="icons/16px/settings">
+					<record id="widget_properties" width="310" />
+					<translation id="text" translation_id="229824" type="use" value="Preferences" />
+				</widget>
+			</container>
+
+			<container embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_left" />
+
+				<widget class="link_button_title" embed_in_frame="true" section="tssc" >
+					<translation id="text" translation_id="447700" type="use" value="Scouting Centre[COMMENT: FR 19770; transfer centre; scouting centre link button text]" />
+
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+			</container>
+
+			<widget class="text" auto_size="vertical" id="adtx"/>
+		</container>
+	</container>
+
+	<container id="psrC" >
+		<attachment_group class="vertical_arrange_autosize"/>
+
+		<container class="inner_subtle_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="10"/>
+			<container embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_left" />
+
+				<widget class="link_button_title" embed_in_frame="true" section="plas">
+					<translation id="text" translation_id="227995" type="use" value="Player Search" />
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+			</container>
+
+			<widget class="text" auto_size="vertical">
+				<translation id="text" translation_id="450774" type="use" value="The package owned determines the number of players available to search through as well as increasing the level of knowledge about them.[COMMENT: FR 22281, scouting package help]" />
+			</widget>
+
+			<widget class="scouting_top_panel" id="spba" file="team/scouting top bar packages">
+				<record id="object_property" get_property="objt" set_property="objt" />
+				<list id="visible_items">
+					<flags value="scpc" />
+					<flags value="yosp" />
+				</list>
+			</widget>
+
+
+		</container>
+	</container>
+</panel>

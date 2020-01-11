@@ -1,0 +1,108 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!--logo-->
+			<widget class="object_portrait_picture" id="pict" height="130" scale_picture="true">
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre" />
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<!--nickname-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="text" spec="text" style="bold" id="TCnV" size="13" alignment="centre_x,bottom" auto_size="vertical" >
+					<record id="object_property">
+						<integer id="get_property" value="TCnn" />
+					</record>
+				</widget>
+				<widget class="label" id="TCnL" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" >
+					<record id="object_property">
+						<integer id="get_property" value="TCnn" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+			</container>
+
+			<!--year founded-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="dashed_number_label" spec="text" style="bold" id="NafV" size="13" alignment="centre_x,bottom" auto_size="vertical" >
+					<boolean id="NumF" value="0"/>
+					<record id="object_property">
+						<integer id="get_property" value="Nafy" />
+					</record>
+				</widget>
+				<widget class="label" id="NafL" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" >
+					<record id="object_property">
+						<integer id="get_property" value="Nafy" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+			</container>
+
+			<!--joined fifa-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="dashed_number_label" spec="text" style="bold" id="NfaV" size="13" alignment="centre_x,bottom" auto_size="vertical" >
+					<boolean id="NumF" value="0"/>
+					<record id="object_property">
+						<integer id="get_property" value="Nfay" />
+					</record>
+				</widget>
+				<widget class="label" id="NfaL" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" >
+					<record id="object_property">
+						<integer id="get_property" value="Nfay" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+			</container>
+
+			<!--stadium-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="stadium_button" spec="text" style="bold" id="NnsV" mode="1" size="13" alignment="centre_x,bottom" auto_size="vertical" >
+					<record id="object_property">
+						<integer id="get_property" value="NnsR" />
+					</record>
+				</widget>
+				<widget class="label" id="NnsL" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" >
+					<record id="object_property">
+						<integer id="get_property" value="NnsR" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+			</container>
+
+			<!--fifa ranking-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="fifa_ranking_label" spec="text" style="bold" id="NffV" size="13" alignment="centre_x,bottom" auto_size="vertical"  icon_enabled="false">
+					<record id="object_property">
+						<integer id="get_property" value="Nffr" />
+					</record>
+				</widget>
+				<widget class="label" id="NffL" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" >
+					<record id="object_property">
+						<integer id="get_property" value="Nffr" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+</panel>

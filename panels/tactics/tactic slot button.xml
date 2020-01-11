@@ -1,0 +1,53 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="5,0,0,0" apply_to_children="true" />
+
+	<container>
+
+		<layout class="arrange_horizontal_attachment" layout="-1,30,21" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container>
+
+			<container class="main_box" id="borb">
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			</container>
+
+			<widget class="icon_button" id="frmt" alignment="left,centre_y" appearance="none">
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0,10,0,0" />
+
+			</widget>
+
+		</container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container id="SloA">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="popup_button" id="opti" fixed="true" appearance="buttons/custom/tactics/pitch switch/right/button" icon_alignment="centre"/>
+			</container>
+
+		</container>
+
+		<widget class="icon_button" id="remo" click_event="remo" icon="icons/16px/cross" icon_alignment="centre" show_button_appearance="false">
+			<record id="primary_icon_properties" red_replacement="white"/>
+		</widget>
+
+	</container>
+
+
+	<container id="SloI">
+		<layout class="arrange_horizontal_attachment" layout="-1, 21" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<widget class="popup_button" id="CrNw" fixed="true" spec="text" appearance="buttons/custom/tactics/pitch switch/normal/button" colour="faded white" />
+		<widget class="spacer" />
+
+	</container>
+
+
+</panel>

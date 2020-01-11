@@ -1,0 +1,40 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+	
+	<list id="properties_to_forward">
+		<record get_property="titl" target="mbox" set_property="text" />
+		<record get_property="wgTy" target="lstw" set_property="wgTy" />
+		<record get_property="objL" target="lstw" set_property="objL" />
+		<record get_property="ldis" target="lstw" set_property="disa" />
+		<record get_property="itAd" target="lstw" set_property="itAd" />
+		<record get_property="ahdn" target="all " set_property="hidn" />
+	</list>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_offset="0" horizontal_gap="2"/>
+			
+			<widget class="check_box" id="all " hidden="true" group="1" group_child_level="3" is_parent_checkbox="true" auto_size="horizontal" height="30">
+
+			</widget>
+
+			<widget class="text" alignment="left,centre_y"  id="mbox" auto_size="horizontal" font="title" colour="accent" height="30">
+				
+			</widget>
+			
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0,8,0,0" />
+
+			<container class="simple_data_list" id="lstw" auto_size="vertical" set_property="prop" items_added_event="itAe">
+				<record id="widget_properties" class="check_box" group="1" group_parent_level="3"/>
+			</container>
+			
+		</container>
+	
+	</container>
+	
+</panel>

@@ -1,0 +1,13 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="horizontal_split_container" starting_layout="-3, -1">
+
+		<!-- person search panel -->
+		<widget class="person_search_panel" id="prsp" type="5"/>
+
+		<!-- table containing waiver order -->
+		<widget class="waiver_order_panel" id="worp"/>
+	</container>
+
+</panel>

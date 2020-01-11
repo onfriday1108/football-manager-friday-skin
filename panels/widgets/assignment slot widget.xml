@@ -1,0 +1,214 @@
+<panel height="55">
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="main_box" id="asip" hidden="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <!--<widget class="picture" file="pictures/logos/normal/continents/world" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true">
+    </widget>-->
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+      <layout class="arrange_vertical_attachment" layout="50,-1,65" offset="0" gap="0" />
+
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <layout class="arrange_horizontal_attachment" layout="-1,70" offset="0" gap="0" />
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+          <layout class="arrange_vertical_attachment" layout="-1,-1" offset="4" gap="-5" />
+
+          <widget class="label" id="astl" size="10" style="bold" />
+
+          <widget class="label" id="assd" size="10" />
+
+        </container>
+
+        <container id="iprc">
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+          <layout class="arrange_vertical_attachment" layout="-2,-1" offset="0" gap="-10" />
+
+          <widget class="label" id="nbrp" size="18" style="bold" alignment="centre" />
+
+          <widget class="label" alignment="centre_x,top">
+            <translation id="text" translation_id="254774" type="use" value="Reports[COMMENT: assign scouts screen - team screen]" />
+          </widget>
+
+        </container>
+
+      </container>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <layout class="arrange_horizontal_attachment" layout="-2,-3" offset="0" gap="4" />
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+          <widget class="picture" id="afrp" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" />
+          
+        </container>
+        
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+          <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="2" />
+
+          <widget class="label" size="10" alignment="left,bottom">
+            <translation id="text" translation_id="329964" type="use" value="Focus" />
+          </widget>
+          <widget class="text" id="asfr" size="10" style="bold" alignment="left,top" />
+
+        </container>
+
+      </container>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+        <layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="4" />
+
+        <widget class="button" size="10" auto_size="vertical" click_event="cack">
+          <translation id="text" translation_id="348783" type="use" value="Cancel Assignment[COMMENT: scouting assigment widget text, cancel scout assignment]" />
+        </widget>
+        <widget class="link_appearance_button" id="scrb" click_event="vrpb" size="9" auto_size="vertical">
+        </widget>
+
+      </container>
+    </container>
+
+  </container>
+
+  <container class="main_box" id="asfi" hidden="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <!--<widget class="picture" file="pictures/logos/normal/continents/world" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true">
+    </widget>-->
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+      <layout class="arrange_vertical_attachment" layout="50,-1,65" offset="0" gap="0" />
+
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <layout class="arrange_horizontal_attachment" layout="-1,70" offset="0" gap="0" />
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true" />
+          <widget class="label" size="10" style="bold">
+            <translation id="text" translation_id="254539" type="use" value="Finished[COMMENT: scout assignments panel; scout has finished assignments]" />
+          </widget>
+
+        </container>
+        
+
+        <container id="frpc">
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+          <layout class="arrange_vertical_attachment" layout="-2,-1" offset="0" gap="-10" />
+
+          <widget class="label" id="fnbr" size="18" style="bold" alignment="centre" />
+
+          <widget class="label" alignment="centre_x,top">
+            <translation id="text" translation_id="254774" type="use" value="Reports[COMMENT: assign scouts screen - team screen]" />
+          </widget>
+
+        </container>
+
+      </container>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <layout class="arrange_horizontal_attachment" layout="-2,-3" offset="0" gap="4" />
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+          <widget class="picture" id="ffrp" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" />
+
+        </container>
+
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+          <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="2" />
+
+          <widget class="label" size="10" alignment="left,bottom">
+            <translation id="text" translation_id="329964" type="use" value="Focus" />
+          </widget>
+          <widget class="label" id="fafr" size="10" style="bold" alignment="left,top" />
+
+        </container>
+
+      </container>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+        <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+          <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="4" />
+
+          <widget class="button" size="10" auto_size="vertical" click_event="nack">
+            <translation id="text" translation_id="320595" type="use" value="New[COMMENT: only three letters, user clicks button to ask a new 'how to' question]" />
+          </widget>
+
+          <widget class="button" size="10" auto_size="vertical" click_event="rack">
+            <translation id="text" translation_id="255452" type="use" value="Restart[COMMENT: team scouting panel; button for restarting a new assignment]" />
+          </widget>
+          
+        </container>
+
+        
+        <widget class="link_appearance_button" id="fvrb" click_event="vrpb" size="9" auto_size="vertical">
+        </widget>
+
+      </container>
+    </container>
+    
+  </container>
+
+  <container class="main_box" id="assa" hidden="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <!--<widget class="picture" file="pictures/logos/normal/continents/world" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true">
+    </widget>-->
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+      <layout class="arrange_vertical_attachment" layout="50,-1" offset="0" gap="0" />
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true" />
+          <widget class="label" size="10" style="bold">
+            <translation id="text" translation_id="349076" type="use" value="Scout Available[COMMENT: scouting assigment widget text, indicates a scout is available for the assignment]" />
+          </widget>
+
+        </container>
+
+      </container>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+        <layout class="arrange_vertical_attachment" layout="-1,-2" offset="0" gap="8" />
+
+        <widget class="label" size="10" alignment="centre_x,bottom">
+          <translation id="text" translation_id="349014" type="use" value="No assignment in progress[COMMENT: scouting assigment widget text]" />
+        </widget>
+        <widget class="button" id="fafr" size="10" style="bold" alignment="centre" click_event="nack" auto_size="vertical">
+          <translation id="text" translation_id="349094" type="use" value="Start New Assignment[COMMENT: scouting assigment widget text]" />
+        </widget>
+
+      </container>
+
+     
+
+    </container>
+  </container>
+
+</panel>

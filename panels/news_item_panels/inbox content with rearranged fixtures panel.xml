@@ -1,0 +1,39 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" vertical_alignment="top" horizontal_inset="0" />
+
+	<!-- main body text -->
+	<widget class="inbox_body_text" id="bdtx" />
+
+	<widget id="1fix" class="fixture_details_panel" height="160" file="match/fixture rearranged details">
+
+	</widget>
+
+	<container id="mfix">
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
+
+		<widget class="text" auto_size="all" colour="accent" font="title">
+			<translation id="text" translation_id="491973" type="use" value="Fixture Rearrangements[COMMENT: AREA: Inbox; SUB-AREA: Multiple Fixtures rearranged news item; FR: 13376; TONE: Formal; CHARLIMIT: None; NOTE: title of box]" />
+		</widget>
+
+		<widget class="simple_data_list" id="rfxl" set_property="properties" alignment="left">
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_inset="0" vertical_offset="4" vertical_gap="10" />
+			<record id="widget_properties" class="fixture_details_panel" file="match/fixture rearranged details small" height="70" />
+		</widget>
+
+	</container>
+
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" vertical_inset="0" />
+
+		<widget class="link_button" id="schd" auto_size="all" font="title" appearance="buttons/link/title/button">
+			<translation id="text" translation_id="491974" type="use" value="Revised Schedule[COMMENT: AREA: Inbox; SUB-AREA: Fixtures; FR-BN: n/a; TONE: Formal; CHARLIMIT: none; REF-ID: n/a; NOTE: heading for fixture rearrangement news panel]" />
+		</widget>
+	</container>
+
+	<widget class="manager_upcoming_fixtures_panel" id="upfx" height="300" row_count="7">
+
+	</widget>
+
+
+</panel>

@@ -1,0 +1,38 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <container>
+    <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+      <widget class="link_button" height="25" id="titl" auto_size="horizontal" font="title">
+
+      </widget>
+
+      <widget class="label" height="25" id="nump" style="bold" size="11">
+
+      </widget>
+
+      <widget class="text" height="60" id="boac" size="9">
+
+      </widget>
+
+      <container height="20" />
+
+      <widget class="team_staff_little_guys_panel" id="tslg" height="80"/>
+      
+    </container>
+
+
+	  <widget class="vertical_divider" height="8"/>
+    
+    <container id="tsst" class="property_list_viewer_xml_panel" file="team/team staff subteam table" height="80"/>
+
+	  <widget class="horizontal_divider" />
+  </container>
+
+</panel>

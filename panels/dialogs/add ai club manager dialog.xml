@@ -1,0 +1,110 @@
+<panel id="dlog" width="750">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- centre dialog in parent -->
+	<layout class="centre_in_parent_attachment" alignment="all" />
+	
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="50" />
+
+	<container>
+		<!-- stretch everything to the sides of the dialog -->
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+		<!-- arrange items vertically, with text at top -->
+		<layout class="arrange_vertical_attachment" layout="32,-1,32,32" offset="0" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+
+			<container>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="6" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="6" gap="4" />
+
+				<widget class="label" id="srtb" spec="text" alignment="left,centre_y" auto_size="horizontal" font="title">
+					<translation id="text" translation_id="433744" type="use" value="Sort by[COMMENT: Add AI manager dialog - Sort by dropdown label]" />
+				</widget>
+
+				<widget class="popup_button" id="abFC" select_event="srtM" selection="0" auto_size="all">
+					<list id="items">
+						<record id="0">
+							<translation id="text" translation_id="227765" type="use" value="Name[comment - Person Name]" />
+						</record>
+						<record id="1">
+							<translation id="name" translation_id="292795" type="use" value="Club Name" />
+						</record>
+						<record id="2">
+							<translation id="name" translation_id="344778" type="use" value="Selected[COMMENT: label text for a key showing what colour a selected item is]" />
+						</record>
+					</list>
+				</widget>
+
+			</container>
+			
+			<!--search bar-->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+
+				<widget class="edit_box" id="sear" size="large"  style="semi_bold" clear_text_event="srch" changed_event="srch" width="300" auto_size="vertical" show_clear_text_icon="true" ignore_leading_space="true" disabled_colour="grey5" colour="white">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="12" />
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+				</widget>
+
+			</container>
+		</container>
+
+		<widget class="table" id="tltb" mode="select_rows, select_multiple, always_multi_select" layout="-1" row_height="110" row_spacing="1" select_event="imSL" fixed_size_rows="true" />
+
+		<!--Table selected label-->
+		<widget class="label" id="selt" spec="text" alignment="right,centre_y">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="15" />
+		</widget>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="4" />
+
+			<widget class="button" id="canc" event_id="canc" height="30" auto_size="horizontal">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+
+
+			<container id="cntA">
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+				<!--teams label-->
+				<widget class="label" id="tems" spec="text" alignment="left,centre_y" auto_size="horizontal" />
+
+				<!--added teams label (displayed when is greater than max allowed-->
+				<widget class="label" id="tema" spec="text" alignment="left,centre_y" colour="red" auto_size="horizontal" />
+
+				<!--max teams label-->
+				<widget class="label" id="temx" spec="text" alignment="left,centre_y" auto_size="horizontal" />
+			</container>
+
+			<!--select manager dropdown-->
+			<widget class="embedded_popup_button" id="adFC" select_event="AdCc" auto_size="horizontal">
+				<translation id="text" translation_id="433745" type="use" value="Auto-Select[COMMENT: FR17816; Fantasy Draft auto-select AI managers dropdown default title]" />
+				<list id="items">
+					<record id="0" numm="1">
+						<translation id="name" translation_id="433746" type="use" value="1 manager[COMMENT: Fantasy Draft  dialog, auto-select one manager]" />
+					</record>
+					<record id="1" numm="5">
+						<translation id="name" translation_id="420631" type="use" value="5 managers[COMMENT: game status panel, displays details of five managers]" />
+					</record>
+					<record id="2" numm="10">
+						<translation id="name" translation_id="420630" type="use" value="10 managers[COMMENT: game status panel, displays details of ten managers]" />
+					</record>
+				</list>
+			</widget>
+
+			<widget class="primary_icon_tick_button" id="ok">
+				<translation id="text" translation_id="229918" type="use" value="Confirm" />
+			</widget>
+		</container>
+	</container>
+</panel>

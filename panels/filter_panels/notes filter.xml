@@ -1,0 +1,25 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+	
+	<widget class="container">
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="check_box" id="ants" auto_size="horizontal">
+			<translation id="text" translation_id="243329" type="use" value="All notes" />
+			<record id="click_event">
+				<flags id="event_id" value="ants" />
+			</record>
+		</widget>
+
+		<widget class="container" id="ntep">
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<record id="defp">
+				<boolean id="mlti" value="false" />
+			</record>
+
+		</widget>
+	</widget>
+
+</panel>

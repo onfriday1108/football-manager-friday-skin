@@ -1,0 +1,29 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+		<widget class="button" id="undo" auto_size="all" click_event="UNDO">
+			<translation id="text" translation_id="230251" type="use" value="Undo" />
+		</widget>
+		<widget class="button" id="redo" auto_size="all" click_event="REDO">
+			<translation id="text" translation_id="329043" type="use" value="Redo" />
+		</widget>
+	</container>
+
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="set " click_event="conf">
+			<translation id="text" translation_id="229918" type="use" value="Confirm" />
+		</widget>
+		<widget class="button" id="disc" click_event="disc" auto_size="all">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+		</widget>
+	</container>
+</panel>

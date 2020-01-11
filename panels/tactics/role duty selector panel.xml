@@ -1,0 +1,134 @@
+<panel width="720" id="rdse">
+	<string id="left_appearance" value="switches/role toggle/split/left/button"/>
+	<string id="middle_appearance" value="switches/role toggle/split/middle/button"/>
+	<string id="right_appearance" value="switches/role toggle/split/right/button"/>
+	<string id="normal_appearance" value="switches/role toggle/normal/button"/>
+	<string id="role_appearance" value="switches/role toggle/no normal state/button"/>
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+	<container class="standard_popup_box">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="6" gap="6" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="6" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" apply_to_children="true" />
+
+		<container class="inner_subtle_box_no_margin" height="40">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="8" gap="5"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="position_instruction_toggle" id="pITG" file="none" dINt="true" ShTx="true" >
+				<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
+
+				<container id="pita">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
+					<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+
+
+					<widget class="radio_button" auto_size="horizontal" height="26" id="deWI" icon="" show_button_appearance="true" appearance="switches/instruction toggle/large/left/button" >
+						<event id="click_event">
+							<flags id="event_id" value="poTO" />
+							<boolean id="mode" value="false" />
+						</event>
+					</widget>
+
+					<widget class="radio_button" auto_size="horizontal"  height="26" id="peWI" icon="" show_button_appearance="true" appearance="switches/instruction toggle/large/right/button">
+						<event id="click_event">
+							<flags id="event_id" value="poTO" />
+							<boolean id="mode" value="true" />
+						</event>
+					</widget>
+
+				</container>
+
+			</widget>
+
+			<widget class="text" id="foIN" auto_size="horizontal" style="bold" alignment="centre"/>
+
+			<container>
+				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="right"     inset="0" apply_to_children="true" />
+
+				<widget class="icon_button" auto_size="all" id="shPI" click_event="shPI" icon=""   colour="text" alignment="left,centre_y" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true"  secondary_icon_alignment="right">
+					<record id="primary_icon_properties" red_replacement="text"/>
+					<record id="secondary_icon_properties" red_replacement="text"/>
+					<translation id="text" translation_id="382596" type="use" value="Edit Instructions[COMMENT: button text for the user to edit instructions in a list]" />
+				</widget>
+			</container>
+
+
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="4" gap="0"/>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+			<widget class="text" id="INds" auto_size="all" colour="faded text"/>
+		</container>
+
+
+		<container id="RlCn" wants_mouse_events="true">
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="6"/>
+
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+
+			<!--table listing roles-->
+			<widget class="table" id="rltb" layout="1, -1" auto_size="vertical"  auto_size_rows="true" fixed_size_rows="true" width="220" column_spacing="0" row_spacing="1">
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+				<record id="default_properties" auto_size="vertical" />
+			</widget>
+
+			<!--container for radio buttons for selecting the duty-->
+			<container id="dutC">
+				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0"/>
+			</container>
+
+		</container>
+
+		<widget class="horizontal_divider" />
+
+		<!--PIs-->
+		<container height="58">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2" apply_to_children="true" />
+
+			<widget class="text" alignment="left,centre_y" auto_size="vertical" font="title" colour="text">
+				<translation id="text" translation_id="343974" type="use" value="Instructions[COMMENT: title for a table that shows additional instructions to be employed by the team]" />
+			</widget>
+
+			<container class="scrolling_box">
+
+			<!--container for all the icon buttons for each PI-->
+			<container id="PIco">
+				<layout class="fit_children_attachment" alignment="vertical,extend" offset="2" gap="4" />
+				<layout class="arrange_horizontal_attachment" alignment="left" wrap="true" gap="4" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="2" />
+
+				<record id="default_properties" spec="text" size="small"/>
+
+			</container>
+
+			</container>
+		</container>
+
+		<widget class="horizontal_divider" />
+
+		<!--role/duty description-->
+		<container class="collapsable_box" collapsed="true" id="clBX"  allow_single_bar_click="true" appearance="boxes/titled/compact/paper" font="title" colour="text" disable_animations="true">
+			<translation id="title" translation_id="230236" type="use" value="Description" />
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true" />
+
+			<container class="scrolling_box" height="140">
+				<widget class="text" id="dude" auto_size="vertical" colour="faded text" size="small"/>
+			</container>
+		</container>
+
+	</container>
+</panel>

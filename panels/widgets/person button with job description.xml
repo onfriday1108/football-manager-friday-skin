@@ -1,0 +1,6 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="person_button" id="pers" style="bold" auto_size="vertical" navigation_focus_target="false"/>
+	<widget class="job_label" id="jDES" size="small" colour="disabled" auto_size="vertical" multiline="false" />
+</panel>

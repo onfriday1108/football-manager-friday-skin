@@ -1,0 +1,38 @@
+<panel version="1.0">
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="tabbed_container" id="SPcn" save_session_state="true" default_item="tacS">
+
+    <container class="match_tactics_panel_base" id="tacS">
+      <translation id="title" translation_id="247724" type="use" value="Set Piece Takers" />
+      <string id="file" value="match/match tactics all set piece takers picking panel" />
+      <integer id="team_index" value="1" />
+      <record id="object_property" get_property="tact" set_property="tact" />
+    </container>
+    
+      <container class="match_tactics_panel_base" id="tacR">
+      <translation id="title" translation_id="227896" type="use" value="Corners" />
+      <string id="file" value="match/match tactics set pieces panel" />
+      <integer id="team_index" value="1" />
+      <record id="widget_properties" set_piece_area="0" />
+      <record id="object_property" get_property="tact" set_property="tact" />
+    </container>
+
+    <container class="match_tactics_panel_base" id="tacK">
+      <translation id="title" translation_id="227892" type="use" value="Free Kicks" />
+      <string id="file" value="match/match tactics set pieces panel" />
+      <integer id="team_index" value="1" />
+      <record id="widget_properties" set_piece_area="1" />
+      <record id="object_property" get_property="tact" set_property="tact" />
+    </container>
+
+    <container class="match_tactics_panel_base" id="tacH">
+      <translation id="title" translation_id="247690" type="use" value="Throw Ins" />
+      <string id="file" value="match/match tactics set pieces panel" />
+      <integer id="team_index" value="1" />
+      <record id="widget_properties" set_piece_area="2" />
+      <record id="object_property" get_property="tact" set_property="tact" />
+    </container>
+
+  </container>
+</panel>

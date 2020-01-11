@@ -1,0 +1,16 @@
+<panel>
+
+  <layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" />
+  <layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
+  <layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+
+  <record id="plap" value="pitch/buttons/controls/small/play" />
+  <record id="paap" value="pitch/buttons/controls/small/paus" />
+
+  <!--play/pause-->
+  <widget class="match_play_pause_button" id="play" appearance="pitch/buttons/controls/small/play" auto_size="all">
+    <record id="plap" value="pitch/buttons/controls/small/play" />
+    <record id="paap" value="pitch/buttons/controls/small/paus" />
+  </widget>
+
+</panel>

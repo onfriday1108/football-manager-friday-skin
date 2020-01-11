@@ -1,0 +1,45 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<widget class="inner_subtle_box" save_session_state="true" layout="-1,-2" id="titp">
+		<!-- 
+				The layout attachment order here is important:
+					- The attachments are processed in reverse order: bottom-to-top
+					- We need the panels inside the group box (basic confidence panel) to autosize each panel vertically.
+					- Each basic confidence panel has text in it that autosizes verticall (ultimately deciding the height of the basic confidence panel)
+					- For text to work its height out correctly it needs to know its width first, otherwise things go haywire.
+					- For text to be given its width before it tries to autosize, we need to have the stick-to-sides attachmend processed first.
+					- Therefore stick_to_sides_attachment is the bottom attachment, so it is processed first.
+					- Then, when fit_children_attachment is processed, text can work out its height because it has a width.
+			-->
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+		<widget class="text" auto_size="vertical" id="txtw" spec="text" size="normal" />
+
+		<widget class="table" mode="fill_rows" id="tabl" layout="-2,-4,-2" auto_size_rows="true" auto_size="vertical">
+			<boolean id="fixed_size_rows" value="false" />
+			<boolean id="auto_size_rows" value="true" />
+
+			<boolean id="save_session_state" value="true" />
+			<boolean id="sdst" value="true" />
+
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y" />
+				<record indx="2" alignment="left,centre_y" />
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" left="4" />
+				<record indx="1" top="3" bottom="3" right="4" left="4" />
+				<record indx="2" right="4" left="4" />
+			</list>
+
+			<widget class="label" row="0" col="0">
+				<translation id="text" translation_id="491844" type="use" value="Performance[COMMENT: AREA: Boardroom; SUB-AREA: Appraisal of Performance; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short, one word; REF-ID: n/a; NOTE: this is replacing Confidence as the singular term relating to the Boardroom and the evaluation of managerial performance]" />
+			</widget>
+			<widget class="horizontal_percentage_bar" row="0" col="1" id="horp" />
+			<widget class="label" row="0" col="2" id="perl" size="8" />
+		</widget>
+
+	</widget>
+</panel>

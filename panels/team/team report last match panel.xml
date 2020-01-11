@@ -1,0 +1,29 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <widget class="team_report_request_report_panel" id="nort" />
+
+  <container class="main_box" id="sort" >
+    <translation id="title" translation_id="316719" type="use" value="Last Match[COMMENT: team report; box title indicating details of previous match]" />
+    <layout class="arrange_horizontal_attachment" layout="-6, -5" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+    <widget class="team_report_last_match_overview_panel" id="lmop" alignment="horizontal,top" />
+
+    <container class="main_subtle_box" id="trSc" navigation_container="true">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+      <container class="tabbed_container" id="cont" default_item="lmho" save_session_state="true" >
+
+        <widget class="team_report_last_match_player_stats_panel" id="lmho" />
+        <widget class="team_report_last_match_player_stats_panel" id="lmaw" hidden="true" />
+      </container>
+    </container>
+  </container>
+
+  <!-- Usd if team hasn't played a previous match -->
+  <widget class="text" id="nmpd" size="large" alignment="centre_x,top" hidden="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="10,0,0,0" />
+    <translation id="text" translation_id="435253" type="use" value="No match information available.[COMMENT: text explaining lack of info on goal analysis panels]" />
+  </widget>
+</panel>

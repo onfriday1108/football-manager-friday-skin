@@ -1,0 +1,12 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<list id="properties_to_forward">
+		<record get_property="secondary_icon_enabled" target="pop!" set_property="secondary_icon_enabled" />
+		<record get_property="show_button_appearance" target="pop!" set_property="show_button_appearance" />
+	</list>
+	
+	<widget class="check_box" id="team" selected="false" alignment="centre" width="20" click_event="team" double_click_event="NULL" />
+	<widget class="subtle_popup_button" id="pop!" select_event="pise" fixed="true" fixed_icon="true" show_button_appearance="false" secondary_icon_alignment="centre_right" icon_alignment="centre_left" primary_use_icon_app_rep_colour="false"/>
+</panel>

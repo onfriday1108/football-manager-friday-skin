@@ -1,0 +1,54 @@
+﻿<panel>
+	<layout class="fit_children_attachment" alignment="vertical"/>
+	<layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true"/>
+
+	<list id="properties_to_forward">
+		<record get_property="MedS" set_property="objt" target="mslg"/>
+		<record get_property="Jjrn" set_property="valu" target="jrnm"/>
+		<record get_property="MedS" set_property="valu" target="msnm"/>
+		<record get_property="Jjrn" set_property="objt" target="JrRe"/>
+	</list>
+
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+		<layout class="fit_children_attachment" alignment="vertical"/>
+		<layout class="arrange_horizontal_attachment" layout="50, -1" offset="0" gap="8"/>
+
+		<!--media source logo-->
+		<widget class="object_portrait_picture_with_label_and_background" id="mslg" width="50" height="50">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			<record id="portrait_picture_file_overrides">
+				<!--id number maps to specific object type-->
+				<string id="6" value="widgets/object portrait picture news feed media source broadsheet"/>
+				<string id="7" value="widgets/object portrait picture news feed media source tabloid"/>
+				<string id="8" value="widgets/object portrait picture news feed media source magazine"/>
+				<string id="9" value="widgets/object portrait picture news feed media source fanzine"/>
+				<string id="10" value="widgets/object portrait picture news feed media source radio"/>
+				<string id="11" value="widgets/object portrait picture news feed media source tv"/>
+				<string id="12" value="widgets/object portrait picture news feed media source website"/>
+				<string id="13" value="widgets/object portrait picture news feed media source bookmaker"/>
+				<string id="14" value="widgets/object portrait picture news feed media source social media"/>
+			</record>
+		</widget>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+			<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal"  apply_to_children="true"/>
+
+			<!--Person name-->
+			<widget class="client_object_label" id="jrnm" alignment="left, bottom" style="bold" auto_size="vertical" multiline="false"/>
+
+			<!--media source-->
+			<widget class="client_object_label" id="msnm" alignment="left, top" size="small" colour="faded text" auto_size="vertical" multiline="false"/>
+
+			<!--relationship-->
+			<widget class="relationship_label_with_icon" id="JrRe" dspf="2" file="none">
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+				<widget class="icon_button" id="hrcI" auto_size="horizontal" file="icons/16px/relationship" height="16" image_alignment="centre" scale_picture="false" keep_aspect_ratio="true" show_button_appearance="false"/>
+				<widget class="relationship_label" id="relL" alignment="left, centre_y" auto_size="vertical" size="small" multiline="false"/>
+			</widget>
+		</container>
+	</container>
+</panel>

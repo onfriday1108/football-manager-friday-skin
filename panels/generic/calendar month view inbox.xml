@@ -1,0 +1,100 @@
+<panel abbreviated_strings="true" height="700">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container id="mnth" >
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<container id="days">
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+			<record id="default_properties" font="text" auto_size="vertical" size="small" alignment="centre" colour="faded text" />
+
+			<widget class="text">
+				<translation id="text" translation_id="229573" type="use" value="Monday"/>
+			</widget>
+
+			<widget class="text">
+				<translation id="text" translation_id="229574" type="use" value="Tuesday"/>
+			</widget>
+
+			<widget class="text">
+				<translation id="text" translation_id="229575" type="use" value="Wednesday"/>
+			</widget>
+
+			<widget class="text">
+				<translation id="text" translation_id="229576" type="use" value="Thursday"/>
+			</widget>
+
+			<widget class="text">
+				<translation id="text" translation_id="229577" type="use" value="Friday"/>
+			</widget>
+
+			<widget class="text">
+				<translation id="text" translation_id="229578" type="use" value="Saturday"/>
+			</widget>
+
+			<widget class="text">
+				<translation id="text" translation_id="229566" type="use" value="Sunday"/>
+			</widget>
+		</container>
+
+		<container id="mdCn">
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="-1" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<container id="sund">
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="-1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- This day's column widgets are created here. -->
+			</container>
+
+			<container id="mond">
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="-1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- This day's column widgets are created here. -->
+			</container>
+
+			<container id="tues">
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="-1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- This day's column widgets are created here. -->
+			</container>
+
+			<container id="wedn">
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="-1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- This day's column widgets are created here. -->
+			</container>
+
+			<container id="thur">
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="-1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- This day's column widgets are created here. -->
+			</container>
+
+			<container id="frid">
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="-1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- This day's column widgets are created here. -->
+			</container>
+
+			<container id="satu">
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="-1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- This day's column widgets are created here. -->
+			</container>
+
+		</container>
+
+	</container>
+</panel>

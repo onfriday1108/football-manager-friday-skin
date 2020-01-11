@@ -1,0 +1,74 @@
+<panel>
+
+	<translation id="title" translation_id="308033" type="use" value="Club Mini Profile" />
+	<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+	<!-- profile picture -->
+	<widget class="picture" id="prop" width="80" height="65">
+		<boolean id="scale_picture" value="true" />
+		<boolean id="keep_aspect_ratio" value="true" />
+		<flags id="image_alignment" value="centre" />
+
+		<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" />
+		<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+			<list id="value">
+				<boolean value="false" />
+			</list>
+		</attachment>
+
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="prpc" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</list>
+		</record>
+	</widget>
+
+	<widget class="table" layout="-1" fixed_size_rows="true" row_spacing="0" row_height="18" mode="fill_rows" id="layt">
+		<flags id="auto_size" value="vertical" />
+		<!-- custom row graphics -->
+		<list id="row_properties">
+			<record indx="0">
+				<flags id="appearance" value="tables/standard/row/alternate/row" />
+			</record>
+			<record indx="1">
+				<flags id="appearance" value="tables/standard/row/alternate/row" />
+			</record>
+		</list>
+
+		<!-- Nationality -->
+		<widget class="nation_button" id="natp" row="0" col="0" style="semi_bold">
+			<record id="object_property">
+				<integer id="get_property" value="Cnat" />
+			</record>
+		</widget>
+
+		<!-- Stadium -->
+		<widget class="client_object_label" id="inst" row="1" col="0" size="7" alignment="left,centre_y">
+			<record id="object_property">
+				<integer id="get_property" value="Tsre" />
+			</record>
+		</widget>
+
+		<!-- Professional Status -->
+		<widget class="professional_status_label" id="ages" row="2" col="0" display_format="2" style="semi_bold">
+			<record id="object_property">
+				<integer id="get_property" value="Cprs" />
+			</record>
+		</widget>
+
+		<!-- Founded -->
+		<widget class="label" id="ageb" row="3" col="0" size="7">
+			<translation id="text" translation_id="308034" type="use" value="Founded [%date#1-short][COMMENT: club was born on date]" />
+			<record id="object_property">
+				<integer id="get_property" value="Cyfn" />
+			</record>
+		</widget>
+
+	</widget>
+
+</panel>

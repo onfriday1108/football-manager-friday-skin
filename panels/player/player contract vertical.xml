@@ -1,0 +1,61 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at02"/>
+		<record entity_layout_id="at01"/>
+		<record entity_layout_id="at03"/>
+		<record entity_layout_id="at04"/>
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container entity_layout_id="at00" id="at00" file="player/player contract subpanel" name="contract_subpanel">
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
+		<layout class="stick_to_sizes_attachment" height="43.999996"/>
+	</container>
+	<container class="inner_subtle_box" entity_layout_id="at02" id="at02" auto_size="vertical" name="contract_subpanel_options_inner_box_no_margin">
+		<layout class="stick_to_object_attachment" id="alPt" offset="10" get_side="bottom" set_side="top" move_side="true" target="at00"/>
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
+		<layout class="stick_to_object_attachment" id="grAB" get_side="bottom" set_side="bottom" use_own_content_rectangle="true" use_children_to_size="true" target="at01"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<container entity_layout_id="at01" id="at01" file="player/player contract subpanel bonuses options" auto_size="vertical" needs_height="true" name="contract_subpanel_options">
+			<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main"/>
+			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
+		</container>
+	</container>
+	<container class="inner_subtle_box" entity_layout_id="at03" id="at03" auto_size="vertical" name="contract_subpanel_clauses_inner_box_no_margin">
+		<layout class="stick_to_object_attachment" id="alPt" offset="10" get_side="bottom" set_side="top" move_side="true" target="at02"/>
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
+		<layout class="stick_to_object_attachment" id="grAB" get_side="bottom" set_side="bottom" use_own_content_rectangle="true" use_children_to_size="true" target="at04"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<container entity_layout_id="at04" id="at04" file="player/player contract subpanel clauses" auto_size="vertical" needs_height="true" name="contract_subpanel_clauses">
+			<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main"/>
+			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,78 @@
+<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at05" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<widget class="icon_button" entity_layout_id="at02" id="at02" auto_size="all" needs_width="true" controller_button="right_shoulder">
+		<string id="click_event" value="clal" />
+		<translation id="text" value="Remove All" translation_id="248399" type="use" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="8" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" move_side="true" target="main" />
+	</widget>
+	<widget class="icon_button" entity_layout_id="at01" id="at01" auto_size="all" needs_width="true" controller_button="x_button">
+		<string id="click_event" value="auto" />
+		<translation id="text" translation_id="329695" type="use" value="Ask Assistant to Assign[COMMENT: team training coaches panel; ask assistant manager to take control over areas of training]" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="8" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-2" get_side="left" set_side="right" move_side="true" target="at02" />
+	</widget>
+	<container class="table" entity_layout_id="at08" id="hdTB" mode="fill_rows" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" height="80">
+		<string id="fixed_size_rows" value="false" />
+		<string id="auto_size_rows" value="true" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="48" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" target="main" />
+	</container>
+	<container class="main_box" entity_layout_id="at04" id="at04" sub_group_id="0" height="235">
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="-2" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<widget class="text" entity_layout_id="at05" alignment="centre_x,centre_y" id="noCo" hidden="true">
+			<layout class="stick_to_object_attachment" id="align_top" offset="1415" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="1408" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		</widget>
+	</container>
+	<container class="table" entity_layout_id="at09" id="ftTB" mode="fill_rows, select_rows, stripe_rows" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" height="45">
+		<string id="fixed_size_rows" value="false" />
+		<string id="auto_size_rows" value="true" />
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="-6" get_side="top" set_side="bottom" move_side="true" target="at04" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" target="main" />
+	</container>
+	<container class="table" entity_layout_id="at03" id="coTB" msov="crHL" mode="fill_rows, select_rows, stripe_rows, dont_allow_empty_selection" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1">
+		<string id="fixed_size_rows" value="false" />
+		<string id="auto_size_rows" value="true" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="6" get_side="bottom" set_side="top" target="at08" />
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="-6" get_side="top" set_side="bottom" target="at09" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" target="main" />
+	</container>
+	<container class="team_training_coaches_attribute_panel" entity_layout_id="at06" id="ttCP" hidden="true" height="235">
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="-3" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" target="main" />
+	</container>
+</panel>

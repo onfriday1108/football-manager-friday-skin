@@ -1,0 +1,43 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="text" id="nsis" auto_size="vertical" font="title"/>
+
+	<!-- "You receive messages about..." text -->
+	<widget class="text" id="sbin" size="10" auto_size="vertical" alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="horizontal"/>
+	</widget>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="5"/>
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="5" gap="5"/>
+
+		<!-- stop receiving news about player -->
+		<widget class="popup_button" id="dshp" select_event="dshn" auto_size="all" fixed="true" alignment="centre" hidden="true">
+			<translation id="text" translation_id="336260" type="use" value="Don't show items like this[COMMENT:news item subscription information panel; button label for user to stop receiving this type of news item]" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			<list id="items">
+				<record id="shlt">
+					<translation id="text" translation_id="336293" type="use" value="For players on this shortlist only[COMMENT:news item subscription information panel; menu item in the don't show news like this popup]" />
+				</record>
+				<record id="ever">
+					<translation id="text" translation_id="336271" type="use" value="Ever[COMMENT:news item subscription information panel;  this is an option to choose when responding to the news subscription text 'Don't show items like this'...]" />
+				</record>
+			</list>
+		</widget>
+
+		<!-- stop receiving news about other objects -->
+		<widget class="popup_button" id="dshb" select_event="dshn" auto_size="all" fixed="true" alignment="centre" hidden="true">
+			<translation id="text" translation_id="336260" type="use" value="Don't show items like this[COMMENT:news item subscription information panel; button label for user to stop receiving this type of news item]" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			<list id="items">
+				<record id="nfto">
+					<translation id="text" translation_id="336294" type="use" value="For this category[COMMENT:news item subscription information panel; menu item in the don't show news like this popup]" />
+				</record>
+				<record id="ever">
+					<translation id="text" translation_id="336271" type="use" value="Ever[COMMENT:news item subscription information panel;  this is an option to choose when responding to the news subscription text 'Don't show items like this'...]" />
+				</record>
+			</list>
+		</widget>
+	</container>
+</panel>

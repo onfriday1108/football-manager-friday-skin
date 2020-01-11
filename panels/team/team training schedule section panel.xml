@@ -1,0 +1,39 @@
+<panel>
+
+  
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container id="mCON">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <container class="horizontal_adaptive_container" id="barc" inset="0" offset="0" gap="-1">
+
+      <container class="team_training_week_schedule_bar" id="fBAR" default_width="-1" minimum_width="350"  file="team/team training week schedule bar short" priority="1" />
+
+      <container class="team_training_week_schedule_bar" default_width="-1" minimum_width="350"  file="team/team training week schedule bar short" priority="2" />
+
+      <container class="team_training_week_schedule_bar" default_width="-1" minimum_width="350"  file="team/team training week schedule bar short" priority="3" />
+
+      <container class="team_training_week_schedule_bar" default_width="-1" minimum_width="350"  file="team/team training week schedule bar short" priority="4" />
+
+    </container>
+
+  </container>
+
+  <container id="sesB">
+
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <widget class="text" id="brTX" alignment="centre" size="11" />
+  </container>
+
+  <container id="seMB">
+
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <widget class="text" id="mbTX" alignment="centre" size="11" />
+  </container>
+
+</panel>

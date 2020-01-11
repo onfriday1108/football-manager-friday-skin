@@ -1,0 +1,65 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box">
+		<translation id="title" translation_id="293581" type="use" value="Stadiums[COMMENT editor field name]" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="table" id="tabl" mode="fill_rows,stripe_rows" layout="40,-1,-1,150,70,70,70,-1" fixed_size_rows="false" auto_size_rows="true" save_session_state="true">
+			<record id="default_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+
+			<list id="column_table_properties">
+				<record>
+					<record id="column_heading">
+						<translation id="text" translation_id="242883" type="use" value="Pos" />
+						<flags id="column" value="0" />
+					</record>
+				</record>
+				<record>
+					<record id="column_heading">
+						<translation id="text" translation_id="229366" type="use" value="Stadium" />
+						<flags id="column" value="1" />
+					</record>
+				</record>
+				<record>
+					<record id="column_heading">
+						<translation id="text" translation_id="229408" type="use" value="Team" />
+						<flags id="column" value="2" />
+					</record>
+				</record>
+				<record>
+					<record id="column_heading">
+						<translation id="text" translation_id="319589" type="use" value="City[COMMENT: team stadium city, short title]" />
+						<flags id="column" value="3" />
+					</record>
+				</record>
+				<record>
+					<record id="column_heading">
+						<translation id="text" translation_id="375301" type="use" value="Pitch Lth[COMMENT: FR 450, short form of Pitch Length, keep this short please]" />
+						<flags id="column" value="4" />
+					</record>
+				</record>
+				<record>
+					<record id="column_heading">
+						<translation id="text" translation_id="375302" type="use" value="Pitch Wth[COMMENT: FR 450, short form of Pitch Width, keep this short please]" />
+						<flags id="column" value="5" />
+					</record>
+				</record>
+				<record>
+					<record id="column_heading">
+						<translation id="text" translation_id="252902" type="use" value="Capacity[COMMENT: team stadium capacity, short title]" />
+						<flags id="column" value="6" />
+					</record>
+				</record>
+				<record>
+					<record id="column_heading">
+						<translation id="text" translation_id="284339" type="use" value="Surface[COMMENT: heading; team_information_panel; pitch surface type]" />
+						<flags id="column" value="7" />
+					</record>
+				</record>
+			</list>
+		</widget>
+	</container>
+</panel>

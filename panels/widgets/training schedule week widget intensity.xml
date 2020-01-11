@@ -1,0 +1,34 @@
+﻿<panel>
+
+	<string id="skin_style" value="contrast box" />
+	
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at01"/>
+	</list>
+	<widget class="spacer" id="main">
+		<layout class="stick_to_sides_attachment" alignment="none,all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="none,all" inset="0"/>
+	</widget>
+	<container class="table" entity_layout_id="at00" id="tabl" auto_size="none,vertical" mode="fill_rows, stripe_rows, drag_rows, drop_on_rows" layout="-1,-1,-1,-1,-1,-1,-1" name="sessions tabe" needs_height="true">
+		<boolean id="auto_size_rows" value="true"/>
+		<string id="fixed_size_rows" value="false"/>
+		<integer id="row_spacing" value="2"/>
+		<integer id="column_spacing" value="0"/>
+		<layout class="stick_to_object_attachment" id="align_top" get_side="none,top" set_side="none,top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="none,left" set_side="none,left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="none,right" set_side="none,right" target="main"/>
+	</container>
+	<container class="table" entity_layout_id="at01" id="inte" auto_size="none,vertical" mode="fill_rows, stripe_rows" layout="-1,-1,-1,-1,-1,-1,-1" name="intensities table">
+		<boolean id="auto_size_rows" value="true"/>
+		<string id="fixed_size_rows" value="false"/>
+		<integer id="row_spacing" value="2"/>
+		<integer id="column_spacing" value="0"/>
+		<layout class="stick_to_object_attachment" id="align_top" offset="8" get_side="none,bottom" set_side="none,top" target="at00"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="none,bottom" set_side="none,bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="none,left" set_side="none,left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="none,right" set_side="none,right" target="main"/>
+	</container>
+</panel>

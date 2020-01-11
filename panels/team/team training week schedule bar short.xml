@@ -1,0 +1,40 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container id="tabl">
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="-1" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<record id="default_properties" file="team/team training date calendar box short" />
+
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+		</container>
+
+		<container class="inner_box_no_margin" id="seBr" background_colour="training season break colour" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<widget class="text" alignment="centre">
+				<translation id="text" translation_id="241285" type="use" value="Squad end of season break[COMMENT: END_OF_SEASON_HOLIDAY_NEWS; players begin post-season holiday; headline]" />
+			</widget>
+		</container>
+
+		<container class="inner_box_no_margin" id="seMb" background_colour="training season break colour" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<widget class="text" alignment="centre">
+				<translation id="text" translation_id="447664" type="use" value="Squad mid-season break[COMMENT: TEAM TRAINING SCHEDULE; players mid-season holiday; headline]" />
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

@@ -1,0 +1,27 @@
+﻿<panel width="70">
+	<list id="properties_to_forward">
+		<record get_property="colr" set_property="colr" target="grad"/>
+		<record get_property="text" set_property="text" target="grad"/>
+		<record get_property="brep" set_property="brep" target="grad"/>
+		<record get_property="rrep" set_property="rrep" target="grad"/>
+		<record get_property="atxt" set_property="text" target="scrt"/>
+		<record get_property="Topp" set_property="valu" target="Topp"/>
+		<record get_property="colr" set_property="rrep" target="opsb"/>
+	</list>
+
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<widget class="spacer" height="45"/>
+
+	<widget class="container" id="grad" file="widgets/performance grade widget"  width="30" height="30"/>
+	
+	<container id="opsb" class="inner_contrast_box_no_margin">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="middle" horizontal_offset="4" vertical_inset="4"/>
+
+		<widget class="team_button" id="Topp" auto_size="vertical" width="20" icon_only="true" wants_mouse_events="false"/>
+
+		<widget class="text" id="scrt" auto_size="all" alignment="left,centre_y" colour="background" size="large" style="bold"/>
+
+	</container>
+	
+</panel>

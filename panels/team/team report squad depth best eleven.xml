@@ -1,0 +1,89 @@
+<panel save_immediate_state='true'>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="main_box" id="miCO">
+    <layout class="arrange_horizontal_attachment" layout="-2,-3" offset="0" gap="10" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+
+    <widget class="pitch_with_tactics" id="pcTA" icon_flags="show_name,use_player_kits_back,show_number,hide_bordered_box" pitch_is_read_only="true" pitch_dont_draw_indicators="true" pitch_draw_goals="false" pitch_kit_height="32" pitch_touchline_width_percentage="100" pitch_width_percentage="100" vertical="true" pitch_alignment="top" allow_y_score_adjustment_for_roles="false" />
+
+    <container>
+
+      <layout class="arrange_vertical_attachment" layout="30,-1" offset="0" gap="8" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+        <widget class="popup_button" id="cTAC" select_event="pCTA" auto_size="all" />
+
+        <widget class="popup_table_button" id="hipo" item_file="tactics/selected role indicator menu" fixed="true" select_event="uSRC" auto_size="all">
+          <translation id="text" translation_id="395649" type="use" value="Select Roles[COMMENT: tactical instruction text]" />
+        </widget>
+
+      </container>
+
+      <widget class="tactic_player_list_table" id="stfn" customisation_context="play" database_table_type="1" view_setting_name="stored_tactics_view" mode="fill_rows, stripe_rows, printable, store_sort_state, show_insert_column_popup" column_mode="resize_columns, move_columns, custom_views" row_spacing="1" popup_menu_class="popup_button_table_header" row_height="31">
+
+        <boolean id="auto_size_rows" value="false" />
+        <boolean id="fixed_size_rows" value="true" />
+        <boolean id="dont_restore_selection" value="true" />
+        <boolean id="save_session_state" value="true" />
+        <boolean id="save_default_state" value="true" />
+
+        <!-- default sort by playing position (primary)-->
+        <list id="default_sort_column">
+          <integer value="Pshp" />
+        </list>
+
+        <list id="disallowed_view_property_ids">
+          <!-- never allow squad selection, squad number selection or team selection -->
+          <flags value="Pssi"/>
+          <flags value="PtsL"/>
+          <flags value="Psne"/>
+        </list>
+        <list id="required_view_property_ids">
+          <!-- always require position -->
+          <flags value="Pshp"/>
+        </list>
+
+        <!--default view-->
+        <flags id="default_view" value="sltn" />
+
+        <!--available views-->
+        <list id="viws">
+
+          <record id="sltn">
+            <translation id="name" translation_id="326989" type="use" value="Selection Info[COMMENT: button in view_menu on squad screens; choose to view club stats]" />
+            <record id="view">
+              <record id="Pshp" />
+              <!-- position -->
+              <record id="TPrl" />
+              <!-- role -->
+              <flags id="TPdt" />
+              <!-- duty -->
+              <record id="PCrR" auto_hide_priority="1000"/>
+              <record id="PCpQ" auto_hide_priority="1020"/>
+              <!-- role/duty suitability -->
+              <record id="Pers" />
+              <!-- person name -->
+              <record id="Ppos" auto_hide_priority="1010"/>
+              <!-- player position -->
+              <record id="Page" auto_hide_priority="1030"/>
+              <!-- player age -->
+              <record id="Pnat" auto_hide_priority="1040"/>
+              <!-- nationality -->
+              <record id="Pdva" auto_hide_priority="1035"/>
+              <!-- value -->
+            </record>
+          </record>
+
+        </list>
+
+      </widget>
+
+    </container>
+  </container>
+
+</panel>

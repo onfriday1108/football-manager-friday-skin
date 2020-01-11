@@ -1,0 +1,54 @@
+<panel height="150" width="415">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="inner_box_no_margin">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!--dynamic image here please-->
+		<container id="Dyni" width="230">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="12"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<widget class="comp_button" auto_size="vertical" icon_enabled="false" font="title">
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="valu"/>
+				</record>
+			</widget>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="text" auto_size="vertical" font="label">
+					<translation id="text" translation_id="385506" type="use" value="Holders[COMMENT: FR 9550 - holders, i.e. last winners of a competition]"/>
+				</widget>
+
+				<widget class="team_button" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="CLwR"/>
+						<integer id="set_property" value="valu"/>
+					</record>
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="text" auto_size="vertical" font="label">
+					<translation id="text" translation_id="227963" type="use" value="Reputation" />
+				</widget>
+
+				<widget class="comp_reputation_stars_label" alignment="left,centre_y" >
+					<record id="object_property">
+						<integer id="get_property" value="crps"/>
+					</record>
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

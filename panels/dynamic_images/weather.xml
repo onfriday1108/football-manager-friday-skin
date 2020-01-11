@@ -1,0 +1,25 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- Weather shading overlay -->
+	<widget class="value_based_picture" id="weat" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+		<list id="value_list">
+			<!-- SUNNY_1 -->
+			<record value="0" file="photos/dynamic/weather/sunny1" default_value="true"/>
+			<!-- SUNNY_2 -->
+			<record value="1" file="photos/dynamic/weather/sunny2" />
+			<!-- CLOUDY -->
+			<record value="2" file="photos/dynamic/weather/cloudy" />
+			<!-- OVERCAST -->
+			<record value="3" file="photos/dynamic/weather/overcast" />
+			<!-- DOWNPOUR -->
+			<record value="4" file="photos/dynamic/weather/downpour" />
+			<!-- NIGHT_CLEAR -->
+			<record value="5" file="photos/dynamic/weather/night clear" />
+			<!-- NIGHT_DOWNPOUR -->
+			<record value="6" file="photos/dynamic/weather/downpour night" />
+		</list>
+		<!-- PROP_WEATHER-->
+		<record id="object_property" get_property="weat" set_property="valu"/>
+	</widget>
+</panel>

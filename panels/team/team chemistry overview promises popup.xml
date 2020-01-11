@@ -1,0 +1,13 @@
+﻿<panel width="300">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="main_box" appearance="boxes/hints/standard/paper">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="simple_data_list" gap="6" auto_size="vertical">
+			<record id="object_property" get_property="itms" set_property="valu" />
+
+			<record id="widget_properties" class="property_list_viewer_xml_panel" file="human/manager promises item panel manager home" height="85"/>
+		</widget>
+	</container>
+</panel>

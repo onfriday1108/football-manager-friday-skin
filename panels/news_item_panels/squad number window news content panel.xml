@@ -1,0 +1,54 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<!-- headline container -->
+	<container file="news_item_panels/inbox headline panel" id="hlpn"/>
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+
+			<boolean id="check_for_multiple_requests" value="true"/>
+
+			<!--text-->
+			<widget class="inbox_body_text" id="bdtx" />
+
+			<container class="inner_subtle_box">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+
+				<!--title button link-->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+
+					<string id="skin_style" value="title link" />
+
+					<widget class="link_button" id="sqrl" auto_size="all" alignment="left,centre_y" font="title" section="*ssl">
+						<translation id="text" translation_id="316860" type="use" value="Squad Registration[COMMENT: competition schedule panel; date of squad registration]" />
+					</widget>
+				</container>
+
+				<!--player list-->
+				<widget class="client_object_list_table" id="lstb" fixed_size_rows="true" auto_size="vertical" database_table_type="1" row_height="28">
+					<flags id="mode" value="fill_rows, stripe_rows"/>
+					<integer id="contextual_handler_column_id" value="Pnms"/>
+					<record id="viewed_property_ids">
+						<record id="Pnfo"/>
+						<record id="Pnms"/>
+						<record id="PSag"/>
+						<record id="Pnat"/>
+						<record id="Pcpt"/>
+						<record id="Ppos"/>
+						<record id="Pdva"/>
+					</record>
+				</widget>
+
+				<!--rules-->
+				<widget class="squad_selection_info_panel" id="tsip" include_future_transfers_column="false"/>
+
+			</container>
+
+		</container>
+	</container>
+</panel>

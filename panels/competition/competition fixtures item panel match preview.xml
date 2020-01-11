@@ -1,0 +1,36 @@
+<panel height="32" id="fcov">
+	<string id="title" value="Fixture Competition overview" />
+	<!-- Note: Height defined statically ^ -->
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-12,-2,-2,50,-2,-2,-12" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!-- Team name -->
+		<widget id="hnam" class="team_button" alignment="left,centre_y" icon_enabled="true" />
+		<!-- Result -->
+		<widget id="hres" class="label" alignment="right" colour="fixture outcome" />
+		<!-- Aggregate Score -->
+		<widget id="hagg" class="label" colour="result aggregate" alignment="right,centre_y" />
+
+		<!-- *** Score *** -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget id="scor" class="text" colour="fixture score separator" spec="text" size="large" alignment="centre" />
+			<widget id="attd" class="text_button" colour="fixture score separator" spec="text" size="large" alignment="centre" hidden="true" />
+		</container>
+
+		<!-- *** Away Team *** -->
+		<!-- Aggregate Score -->
+		<widget id="aagg" class="label" colour="result aggregate" />
+		<!-- Result -->
+		<widget id="ares" class="label" colour="fixture outcome" />
+		<!-- Team name -->
+		<widget id="anam" class="team_button" icon_enabled="true" />
+	</container>
+
+	<widget class="horizontal_divider" />
+</panel>

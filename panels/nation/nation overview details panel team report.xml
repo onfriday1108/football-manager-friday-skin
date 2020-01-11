@@ -1,0 +1,118 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+	<!--Team logo, name and league pos-->
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"  />
+		<!--logo-->
+		<widget class="object_portrait_picture" id="pict" height ="60" width="60" scale_picture="true" keep_aspect_ratio="true">
+			<flags id="image_alignment" value="centre" />
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<!--Team name and tournament pos-->"
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="client_object_label" id="tmnm" auto_size="vertical" alignment="left,centre_y" spec="text" colour="text" font="text" style="semi_bold" size="11">
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="get_property" value="Tlna" />
+				</record>
+			</widget>
+
+			<widget class="text" id="lgps" auto_size="vertical" spec="text" colour="disabled" font="text" size="9" multiline="false"/>
+		</container>
+	</container >
+
+	<!--year founded and joined fifa-->
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"  />
+
+		<!--year founded-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="dashed_number_label" spec="text" style="bold" id="NafV" size="13" alignment="centre_x,bottom" auto_size="vertical" >
+				<boolean id="NumF" value="0"/>
+				<record id="object_property">
+					<integer id="get_property" value="Nafy" />
+				</record>
+			</widget>
+			<widget class="label" id="NafL" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" >
+				<record id="object_property">
+					<integer id="get_property" value="Nafy" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+		</container>
+
+		<!--joined fifa-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="dashed_number_label" spec="text" style="bold" id="NfaV" size="13" alignment="centre_x,bottom" auto_size="vertical" >
+				<boolean id="NumF" value="0"/>
+				<record id="object_property">
+					<integer id="get_property" value="Nfay" />
+				</record>
+			</widget>
+			<widget class="label" id="NfaL" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" >
+				<record id="object_property">
+					<integer id="get_property" value="Nfay" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+		</container>
+	</container>
+
+	<!--Team form and league pos graph-->
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"  />
+
+		<!--stadium-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="stadium_button" spec="text" style="bold" id="NnsV" mode="1" size="13" alignment="centre_y" auto_size="vertical" >
+				<record id="object_property">
+					<integer id="get_property" value="NnsR" />
+				</record>
+			</widget>
+			<widget class="label" id="NnsL" spec="text" alignment="centre_x,top" auto_size="vertical" >
+				<record id="object_property">
+					<integer id="get_property" value="NnsR" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+		</container>
+
+		<!--fifa ranking-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="fifa_ranking_label" spec="text" style="bold" id="NffV" size="13" alignment="centre_x,bottom" auto_size="vertical"  icon_enabled="false">
+				<record id="object_property">
+					<integer id="get_property" value="Nffr" />
+				</record>
+			</widget>
+			<widget class="label" id="NffL" spec="text" size="small" alignment="centre_x,top" auto_size="vertical" >
+				<record id="object_property">
+					<integer id="get_property" value="Nffr" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+		</container>
+	</container>
+
+</panel>

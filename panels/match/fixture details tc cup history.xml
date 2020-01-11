@@ -1,0 +1,57 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+
+    <!-- teams and score -->
+    <widget class="client_object_viewer_xml_panel" id="badg" file="none">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+      <record id="object_property">
+        <integer id="get_property" value="objt"/>
+        <integer id="set_property" value="objt"/>
+      </record>
+
+      <!--container for the team badges-->
+      <container id="tbdg">
+        <layout class="arrange_horizontal_attachment" layout="-1, 24, 40, 24, -1" offset="0" gap="8"/>
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+        <!--home team-->
+        <widget class="team_button" id="htnm" icon_enabled="false" auto_size="none" alignment="right,centre_y" multiline="false" mode="1">
+          <record id="object_property">
+            <integer id="get_property" value="home"/>
+            <integer id="set_property" value="valu"/>
+          </record>
+        </widget>
+
+        <widget class="object_portrait_picture" id="htpi" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+          <record id="object_property">
+            <integer id="get_property" value="home"/>
+            <integer id="set_property" value="objt"/>
+          </record>
+        </widget>
+
+        <!-- score -->
+        <widget class="fixture_button" id="FxFR" format="[%scoreline#1-home_away]" style="bold" alignment="centre" reverse_teams="false" FxCV="true" swap_for_context_team="false">
+          <record id="object_property">
+            <integer id="get_property" value="FxFR"/>
+          </record>
+        </widget>
+
+        <!--away team-->
+        <widget class="object_portrait_picture" id="atpi" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+          <record id="object_property">
+            <integer id="get_property" value="away"/>
+            <integer id="set_property" value="objt"/>
+          </record>
+        </widget>
+
+        <widget class="team_button" id="atnm" icon_enabled="false" auto_size="none" alignment="left,centre_y" multiline="false" mode="1">
+          <record id="object_property">
+            <integer id="get_property" value="away"/>
+            <integer id="set_property" value="valu"/>
+          </record>
+        </widget>
+      </container>
+    </widget>
+</panel>

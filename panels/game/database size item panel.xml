@@ -1,0 +1,22 @@
+<panel width="400">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container height="32">
+			<layout class="arrange_horizontal_attachment" layout="-1, 45" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="label" id="titl" auto_size="none" size="11"/>
+			<widget class="icon_button" icon="icons/16px/remove from list" id="rmit">
+			</widget>
+		</container>
+
+		<container id="itmb">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+		</container>
+
+	</container>
+
+</panel>

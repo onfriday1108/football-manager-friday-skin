@@ -1,0 +1,66 @@
+<panel>
+  <attachment_group class="vertical_arrange_autosize" />
+
+  <boolean id="should_force_refresh" value="true"/>
+  <colour id="asking_price_set_colour" name="secondary"/>
+  <colour id="asking_price_not_set_colour" name="primary"/>
+
+    <container class="inner_subtle_box">
+      <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+
+      <widget class="client_object_viewer_xml_panel" id="ppic" file="widgets/player picture name nationality and description" auto_size="vertical">        
+      </widget>
+
+      <container>
+        <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+        <container height="50">
+          <layout class="arrange_horizontal_attachment" layout="-1, -1, -1" gap="2" offset="0"/>
+          <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+
+          <!-- wage -->
+          <container height="40">
+            <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+            <widget class="text" alignment="left,centre_y" auto_size="vertical" font="label" size="small" >
+              <translation id="text" translation_id="227799" type="use" value="Wage"/>
+            </widget>
+            <widget class="text" id="plwg" alignment="left,centre_y,can_scale" multiline="false" font="value" auto_size="vertical"/>
+          </container>
+
+          <!-- value -->
+          <container height="40">
+            <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+            <widget class="text" alignment="left,centre_y" auto_size="vertical" font="label" size="small" >
+              <translation id="text" translation_id="227806" type="use" value="Value"/>
+            </widget>
+            <widget class="text" id="plvl" alignment="left,centre_y,can_scale" multiline="false" font="value" auto_size="vertical"/>
+          </container>
+
+          <!-- asking price -->
+          <container class="inner_box" appearance="boxes/custom/transfer offer/asking/subtle/paper" height="50">
+            <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+            <widget class="label" alignment="left,centre_y" auto_size="vertical" font="label" size="small" >
+              <translation id="text" translation_id="227778" type="use" value="Asking Price" />
+              <translation id="hint" translation_id="227778" type="use" value="Asking Price"/>
+            </widget>
+            <widget class="text" id="plas" alignment="left,centre_y,can_scale" multiline="false" font="value" auto_size="vertical"/>
+
+          </container>
+        </container>
+
+        <!--<widget class="player_status_all_button" id="plsf" auto_size="vertical" maxi="true"/>-->
+      </container>
+
+        <widget class="transfer_offer_player_transfer_status_panel" id="ptsc" height="30"/>
+        <widget class="transfer_offer_interest_panel" id="ptin" height="30"/>
+
+    </container>
+
+</panel>

@@ -1,0 +1,42 @@
+<panel id="dlog" width="400" height="200">
+
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="standard_popup_box">
+
+		<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+		<container class="manager_profile_panel" id="mPpa" file="none" check_profile="true">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+			<widget class="label" id="admL" alignment="left,centre_y" font="title" colour="accent" />
+			<widget class="popup_button" id="adma" sele="adma" height="30"/>
+
+			<!-- password -->
+			<widget class="label" alignment="left,centre_y" font="title" colour="accent" >
+				<translation id="text" translation_id="247149" type="use" value="Password" />
+			</widget>
+
+			<widget class="edit_box" id="pass" hide_text="true" changed_event="pass" height="30">
+				<translation id="description" translation_id="247149" type="use" value="Password" />
+			</widget>
+
+			<widget class="label" alignment="left,centre_y" font="title" colour="accent">
+				<translation id="text" translation_id="292608" type="use" value="Verify[COMMENT: add manager panel; label to re-type your password in order to verify it]" />
+			</widget>
+
+			<widget class="edit_box" id="veri" hide_text="true" changed_event="veri" height="30">
+				<translation id="description" translation_id="292608" type="use" value="Verify[COMMENT: add manager panel; label to re-type your password in order to verify it]" />
+			</widget>
+
+
+		</container>
+
+
+	</container>
+
+</panel>

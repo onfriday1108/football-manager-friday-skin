@@ -1,0 +1,122 @@
+<!-- club award details -->
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+	<!-- Table containing data about the club -->
+	<widget class="table" id="padt" mode="fill_rows, stripe_rows" layout="1,-5, -6" auto_size_rows="false" fixed_size_rows="true" auto_size="vertical" row_height="22">
+
+		<flags id="row_appearance" value="tables/custom/fmc/default/row" />
+		<flags id="row_over_appearance" value="tables/custom/fmc/over/row" />
+		<flags id="stripe_appearance" value="tables/custom/fmc/stripe/row" />
+		<flags id="selected_appearance" value="tables/custom/fmc/selected/row" />
+
+		<list id="headings">
+			<record id="hedi" alignment="left,centre_y" column_span="3" />
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="1" alignment="left,centre_y" />
+			<record index="2" alignment="right,centre_y" colour="selection" />
+		</list>
+
+		<list id="column_table_properties">
+			<record indx="0" sort_disabled="true" />
+			<record indx="1" left="2" sort_disabled="true" />
+			<record indx="2" sort_disabled="true" />
+		</list>
+
+		<!-- These match upto the rows defined in the table -->
+		<!-- if the widgets order is changed, update this	-->
+		<list id="row_properties">
+			<record indx="4" initial_id="rwyf" />
+			<record indx="5" initial_id="rwlp" />
+			<record indx="6" initial_id="rwmp" />
+			<record indx="7" initial_id="rwdp" />
+		</list>
+
+		<!-- Club Badge -->
+		<widget class="picture" id="ppic" scale_picture="true" image_alignment="centre" column_span="2" row_span="4" col="0" row="0">
+			<!-- only show the picture if we should show logos -->
+			<attachment class="test_setting_attachment" get_setting="show_badges" default_value="true" set_property="hidn">
+				<boolean id="value" value="false" />
+			</attachment>
+		</widget>
+
+		<!-- Club -->
+		<widget class="label" col="1" row="0">
+			<translation id="text" translation_id="227737" type="use" value="Club" />
+			<!-- only show the label if we should not show portraits -->
+			<attachment class="test_setting_attachment" get_setting="show_badges" default_value="true" set_property="hidn">
+				<boolean id="value" value="true" />
+			</attachment>
+		</widget>
+		<widget class="team_button" id="accb" col="2" row="0" icon_alignment="far_right" />
+
+		<!-- Nationality -->
+		<widget class="label" col="1" row="1">
+			<translation id="text" translation_id="229390" type="use" value="Nation" />
+			<!-- only show the label if we should not show portraits -->
+			<attachment class="test_setting_attachment" get_setting="show_badges" default_value="true" set_property="hidn">
+				<boolean id="value" value="true" />
+			</attachment>
+		</widget>
+		<widget class="nation_button" id="acna" col="2" row="1" icon_alignment="far_right" dspf="1" />
+
+		<!-- Main division -->
+		<widget class="label" col="1" row="2">
+			<translation id="text" translation_id="229392" type="use" value="Division" />
+			<!-- only show the label if we should not show portraits -->
+			<attachment class="test_setting_attachment" get_setting="show_badges" default_value="true" set_property="hidn">
+				<boolean id="value" value="true" />
+			</attachment>
+		</widget>
+		<widget class="comp_button" id="acmd" col="2" row="2" icon_alignment="far_right" />
+
+		<!-- Empty row to prop up the table -->
+		<widget class="label" col="1" row="3" />
+
+		<!-- Year founded -->
+		<widget class="label" col="1" row="4">
+			<translation id="text" translation_id="257214" type="use" value="Year Founded" />
+		</widget>
+		<widget class="label" id="acyf" col="2" row="4" />
+
+		<!-- Final Position -->
+		<widget class="label" col="1" row="5">
+			<translation id="text" translation_id="436451" type="use" value="Final Position[COMMENT: Final position in the domestic division; BN 154313]" />
+		</widget>
+		<widget class="label" id="aclp" col="2" row="5" />
+
+		<!-- Media expected position -->
+		<widget class="label" col="1" row="6">
+			<translation id="text" translation_id="306470" type="use" value="Media Expectation[COMMENT: teams expected league position]" />
+		</widget>
+		<widget class="label" id="acme" col="2" row="6" />
+
+		<!-- Discipline Points-->
+		<widget class="label" col="1" row="7">
+			<translation id="text" translation_id="306471" type="use" value="Discipline Points[COMMENT: number based on number of yellow and red cards acrued]" />
+		</widget>
+		<widget class="label" id="acdp" col="2" row="7" />
+
+	</widget>
+
+	<!-- Table displaying a message when there is no award for the place -->
+	<widget class="table" id="noCD" mode="fill_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" hidden="true">
+
+		<flags id="row_appearance" value="tables/custom/fmc/default/row" />
+		<flags id="row_over_appearance" value="tables/custom/fmc/over/row" />
+		<flags id="stripe_appearance" value="tables/custom/fmc/stripe/row" />
+		<flags id="selected_appearance" value="tables/custom/fmc/selected/row" />
+
+		<list id="headings">
+			<record id="hedi" alignment="left,centre_y" column_span="3" />
+		</list>
+
+		<widget class="label" col="0" row="5" alignment="centre">
+			<translation id="text" translation_id="308074" type="use" value="No Award" />
+		</widget>
+	</widget>
+
+</panel>

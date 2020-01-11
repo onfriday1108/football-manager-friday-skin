@@ -1,0 +1,37 @@
+<panel>
+
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container class="main_box" id="plti" alignment="left">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- buttons area -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="TitL"/>
+			<!-- view button -->
+			<widget class="view_menu_popup" id="plvi" />
+		</container>
+
+		<!-- buttons area -->
+		<container id="btna" embed_in_frame="true">
+
+			<attachment_group class="title_embedded_panel_right" />
+
+
+			<!-- filter menu -->
+			<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="all" embed_in_frame="true"/>
+
+		</container>
+
+		<widget class="client_object_list_table" id="pltb">
+			<boolean id="save_session_state" value="true" />
+		</widget>
+
+	</container>
+
+</panel>

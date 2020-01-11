@@ -1,0 +1,24 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<boolean id="show_background" value="true"/>
+	<boolean id="show_label_instead_of_portrait" value="false"/>
+	<boolean id="use_object_colours" value="false"/>
+
+	<!-- background -->
+	<widget class="picture" id="obbk" file="boxes/custom/feed/profiles/broadsheet/paper" scale_picture="true" keep_aspect_ratio="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-1,-4,-4" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0,3,0,0"/>
+
+		<widget class="spacer" />
+		<!-- label -->
+		<widget class="client_object_label" id="oblw" colour="black" alignment="left,centre_y" size="10" multiline="false" style="semi_bold" auto_size="horizontal"/>
+		<widget class="spacer" />
+	</container>
+
+
+</panel>

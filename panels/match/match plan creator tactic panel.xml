@@ -1,0 +1,20 @@
+<panel>
+	<!-- wizard panel title, header and footer strings -->
+	<translation id="wizard_panel_title" translation_id="344921" type="use" value="Starting Tactic[COMMENT: match plan creator wizard; instructional text]" />
+  <translation_list id="wizard_panel_header">
+    <translation translation_id="344573" type="use">Please choose the tactics to start the match with.[COMMENT: match plan creator wizard: instructional text]</translation>
+    <translation />
+    <translation translation_id="343233" type="use">Any tactics selected here may be overridden by scenario-specific tactics during the match.[COMMENT: match plan creator text explanation string]</translation>
+  </translation_list>
+  <translation id="wizard_panel_step_text" translation_id="344932" type="use" value="Step 6: Select Starting Tactics[COMMENT: match plan creator wizard: Short description of choose tactics match plan step in the wizard]" />
+
+  <layout class="arrange_horizontal_attachment" layout="-1, -2" offset="0" gap="10" />
+  <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+  <widget class="label" alignment="right,centre_y" height="30">
+    <translation id="text" translation_id="316746" type="use" value="Tactic[COMMENT:team report, tactic name]" />
+  </widget>
+  <widget class="popup_button" id="tact" select_event="tact" auto_size="vertical">
+		<translation id="text" translation_id="242438" type="use" value="Choose..." />
+	</widget>
+</panel>

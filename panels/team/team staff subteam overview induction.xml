@@ -1,0 +1,26 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" horizontal_inset="0" vertical_gap="0" />
+
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" horizontal_inset="0" vertical_gap="0" />
+
+		<string id="skin_style" value="title link" />
+
+
+		<widget class="label" auto_size="vertical" id="titl"  font="title" colour="text" />
+
+		<container height="2"/>
+
+		<widget class="label" auto_size="vertical" id="nump" style="semi_bold" size="large" />
+
+		<widget class="text" auto_size="vertical" id="boac" colour="faded text" />
+
+        <container height="30">
+	  	  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		  <widget class="team_staff_little_guys_panel" height="20" id="tslg" show_popup="false"/>
+		</container>
+
+	</container>
+
+</panel>

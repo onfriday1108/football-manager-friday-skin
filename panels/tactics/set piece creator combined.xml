@@ -1,0 +1,23 @@
+<panel version="1.0">
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="tabbed_container_match" id="SPcn" save_session_state="true" default_item="tacS">
+    <container class="team_tactics_all_set_piece_takers_picking_panel" id="tacS">
+      <translation id="title" translation_id="247724" type="use" value="Set Piece Takers" />
+      <record id="object_property" get_property="tact" set_property="tact" />
+    </container>
+    <container class="team_tactics_set_pieces_panel" id="tacR" set_piece_area="0">
+      <translation id="title" translation_id="227896" type="use" value="Corners" />
+      <record id="object_property" get_property="tact" set_property="tact" />
+    </container>
+    <container class="team_tactics_set_pieces_panel" id="tacK" set_piece_area="1">
+      <translation id="title" translation_id="227892" type="use" value="Free Kicks" />
+      <record id="object_property" get_property="tact" set_property="tact" />
+    </container>
+    <container class="team_tactics_set_pieces_panel" id="tacH" set_piece_area="2">
+      <translation id="title" translation_id="247690" type="use" value="Throw Ins" />
+      <record id="object_property" get_property="tact" set_property="tact" />
+    </container>
+
+  </container>
+</panel>

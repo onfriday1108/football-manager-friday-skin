@@ -1,0 +1,7 @@
+﻿<panel height="36">
+	<translation id="hint" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<widget class="picture" id="pict" file="icons/26px/dynamics" image_alignment="centre" red_replacement="sidebar text"/>
+</panel>

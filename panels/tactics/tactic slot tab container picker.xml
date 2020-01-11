@@ -1,0 +1,41 @@
+﻿<panel>
+	<boolean id="show_inactive_buttons" value="false" />
+
+  <attachment_group class="horizontal_arrange_autosize" horizontal_gap="-7" horizontal_offset="0" vertical_inset="0"/>
+
+  <!--starting tactic clot button-->
+  <widget class="tactic_slot_button" file="tactics/tactic slot button picker" id="tsb0" tactics_slot="0" auto_size="horizontal" >
+
+  </widget>
+
+  <!--match prep slot 1-->
+  <widget class="tactic_slot_button" file="tactics/tactic slot button picker" id="tsb1" tactics_slot="1" auto_size="horizontal">
+
+  </widget>
+
+  <!--match prep slot 2-->
+  <widget class="tactic_slot_button" file="tactics/tactic slot button picker" id="tsb2" tactics_slot="2" auto_size="horizontal">
+
+  </widget>
+
+  <widget class="popup_button" secondary_icon_enabled="false" id="AddT" width="40" icon="icons/16px/plus" icon_colour="white" select_event="STcr" icon_alignment="centre"  appearance="buttons/primary/split/right/button" red_replacement="tactic_slot">
+		<list id="items">
+			<record id="1">
+				<translation id="name" translation_id="363617" type="use" value="Create New Tactic[COMMENT: FR 8989 - match preparation training tactics; button to create a new tactic based on a preset formation]" />
+			</record>
+			<record id="2">
+				<translation id="name" translation_id="435139" type="use" value="Load Tactic[COMMENT: title for a dialog from which to load a tactic]" />
+			</record>
+		</list>
+  </widget>
+
+  <widget class="icon_button" secondary_icon_enabled="false" id="AdTS" width="40" icon="icons/16px/plus" icon_colour="white" icon_alignment="centre"  appearance="buttons/primary/split/right/button" red_replacement="tactic_slot">
+    <event id="click_event">
+      <flags id="event_id" value="STcr" />
+      <flags id="id" value="1" />
+    </event>
+  </widget>
+
+
+
+</panel>

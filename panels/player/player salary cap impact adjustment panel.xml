@@ -1,0 +1,80 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="inner_subtle_box">
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <widget class="label" id="scic" auto_size="vertical" font="title" colour="accent">
+
+    </widget>
+
+    <container height="50">
+      <layout class="arrange_horizontal_attachment" offset="0" gap="10" alignment="fill" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <container height="50">
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+        
+        <widget class="label" alignment="right,bottom" font="label" colour="secondary_text" size="small">
+          <translation id="text" translation_id="348287" type="use" value="Salary Cap Impact[COMMENT: squad registration panel; column header to indicate the cash value of a players salary cap impact]" />
+        </widget>
+
+        <widget class="label" id="pcap" alignment="right" ccrs="4" font="value">
+        </widget>
+      </container>
+
+
+
+      <!--sliders for adjusting budgets-->
+      <widget class="slider_horizontal" id="slid" changed_event="buch" height="20">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="0" />
+      </widget>
+
+      <container height="60">
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="label" alignment="left,bottom" font="label" colour="secondary_text" size="small">
+          <translation id="text" translation_id="416364" type="use" value="Remaining General Allocation Money[COMMENT: FR 16538; MLS specific]" />
+        </widget>
+
+        <widget class="label" id="rgam" alignment="left" auto_size="horizontal" font="value">
+
+        </widget>
+      </container>
+
+
+    </container>
+
+    <widget class="horizontal_divider" />
+
+
+    <container height="50">
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <container class="client_object_property_labelled_panel_grid" id="grid" row_count="1">
+        <record id="label_widget_properties" font="title" colour="secondary_text" size="small" />
+      
+      </container>
+
+
+
+    </container>
+
+    <container height="30">
+      <layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+      <widget class="button" id="caba" auto_size="horizontal" height="30" click_event="caba" disabled="true">
+        <translation id="text" translation_id="229828" type="use" value="Cancel" />
+      </widget>
+      <widget class="primary_icon_tick_button" id="coba" auto_size="horizontal" click_event="conf" disabled="true">
+        <translation id="text" translation_id="229918" type="use" value="Confirm" />
+      </widget>
+    </container>
+
+  </container>
+  
+</panel>

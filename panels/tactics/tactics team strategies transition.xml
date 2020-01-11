@@ -1,0 +1,263 @@
+﻿<panel wants_mouse_events="false" disable_animations="true">
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!--transition-->
+	<container draw_vertical_dividers="true">
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0">
+			<global id="gap" name="ui.inner_box_gap"/>
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--transition-->
+		<container class="inner_box" colour="white" alignment="centre">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="text" font="title" colour="white" alignment="centre" auto_size="vertical">
+				<translation id="text" translation_id="466518" type="use" value="When possession has been lost[COMMENT: team tactical strategy setting]" />
+			</widget>
+
+			<container>
+	        	<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="1"/>
+
+				<widget class="tactics_pitch_button" height="28" itID="TI_DEFENCE_TRANSITION_COUNTER_PRESS">
+					<record id="click_event" event_id="sele" itID="TI_DEFENCE_TRANSITION_COUNTER_PRESS" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="TI_DEFENCE_TRANSITION_REGROUP">
+					<record id="click_event" event_id="sele" itID="TI_DEFENCE_TRANSITION_REGROUP" />
+				</widget>
+
+			</container>
+
+			<container height="21" />
+
+			<container height="255">
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<widget class="pitch_with_tactics" id="plpi" icon_flags="dont_fade_icons, dont_use_player_instructions_menu, use_own_colours, dont_allow_player_links">
+					<boolean id="pitch_is_read_only" value="true" />
+					<string id="vertical" value="true" />
+					<string id="pitch_alignment" value="can_scale" />
+					<string id="pitch_line_colour" value="white" />
+					<integer id="pitch_touchline_width_percentage" value="0" />
+					<integer id="line_width" value="1" />
+					<boolean id="pitch_draw_grass" value="false" />
+					<boolean id="pitch_dont_draw_indicators" value="true" />
+			</widget>
+
+		</container>
+
+		</container>
+
+		<container class="inner_box">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="text" font="title" colour="white" alignment="centre" auto_size="vertical">
+				<translation id="text" translation_id="466519" type="use" value="When possession has been won[COMMENT: team tactical strategy setting]" />
+			</widget>
+
+			<container>
+	        	<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="1"/>
+
+				<!--Attacking Transition-->
+
+				<widget class="tactics_pitch_button" height="28" itID="TI_ATTACK_TRANSITION_COUNTER">
+					<record id="click_event" event_id="sele" itID="TI_ATTACK_TRANSITION_COUNTER" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="TI_ATTACK_TRANSITION_HOLD_SHAPE">
+					<record id="click_event" event_id="sele" itID="TI_ATTACK_TRANSITION_HOLD_SHAPE" />
+				</widget>
+
+			</container>
+
+			<container height="21" />
+
+			<container height="255">
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<widget class="pitch_with_tactics" id="pwpi" icon_flags="dont_fade_icons, dont_use_player_instructions_menu, use_own_colours,dont_allow_player_links">
+					<boolean id="pitch_is_read_only" value="true" />
+					<string id="vertical" value="true" />
+					<string id="pitch_alignment" value="can_scale" />
+					<string id="pitch_line_colour" value="white" />
+					<integer id="pitch_touchline_width_percentage" value="20" />
+					<integer id="line_width" value="1" />
+					<boolean id="pitch_draw_grass" value="false" />
+					<boolean id="pitch_dont_draw_indicators" value="true" />
+				</widget>
+
+			</container>
+
+
+		</container>
+
+		<container class="inner_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="text" font="title" colour="white" alignment="centre" auto_size="vertical">
+				<translation id="text" translation_id="466520" type="use" value="Goalkeeper in Possession[COMMENT: team tactical strategy setting]" />
+			</widget>
+
+			<container>
+	        	<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="1"/>
+
+				<!--Goalkeeper distribution-->
+				<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_PACE_QUICK">
+					<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_PACE_QUICK" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_PACE_SLOW">
+					<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_PACE_SLOW" />
+				</widget>
+
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="8" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="popup_button" id="gkSp" show_button_appearance="false" selection="0" select_event="gksp" auto_size="vertical" alignment="centre" font="title"  colour="white" secondary_icon_alignment="centre_right, centre_y">
+					<list id="items">
+						<record id="0" alignment="centre">
+							<translation id="text" translation_id="466521" type="use" value="Distribute to Area/Player[COMMENT:Title for player instructions to do with a goalkeeper's behaviour when distributing the ball]" />
+						</record>
+						<record id="1" alignment="centre">
+							<translation id="text" translation_id="395583" type="use" value="Distribute To Position[COMMENT: FR 10778 - title for player instructions to do with a goalkeeper's behaviour when distributing the ball - slight change to old string, use top 10 matches]" />
+						</record>
+					</list>
+				</widget>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<!--area pitch-->
+					<container id="ArPl" hidden="true" height="255">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<!--Goalkeeper distribution pitch-->
+						<container id="imgk" height="255">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,0,0" />
+
+							<widget class="pitch" height="255" icon_flags="dont_fade_icons, dont_use_player_instructions_menu, use_own_colours">
+								<boolean id="pitch_is_read_only" value="true" />
+								<string id="vertical" value="true" />
+								<string id="pitch_alignment" value="can_scale" />
+								<string id="pitch_line_colour" value="white" />
+								<integer id="pitch_touchline_width_percentage" value="0" />
+								<integer id="pitch_touchline_length_percentage" value="0" />
+								<integer id="line_width" value="1" />
+								<boolean id="pitch_draw_grass" value="false" />
+								<boolean id="pitch_dont_draw_indicators" value="true" />
+								<boolean id="pitch_draw_goals" value="false" />
+							</widget>
+
+							<!--container for the buttons-->
+							<container>
+								<layout class="arrange_vertical_attachment" layout="-2,-5,-2,-1" offset="8" gap="1" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="7" />
+
+
+								<container>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="2,2,0,2" apply_to_children="true" />
+
+									<!--Over Opposition Defence-->
+									<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_TARGET_CLEAR_OPPOSITION_DEFENCE" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_TARGET_CLEAR_OPPOSITION_DEFENCE" />
+									</widget>
+								</container>
+
+								<container>
+									<layout class="arrange_horizontal_attachment" layout="-3,-3,-3" offset="2" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<!--distribute to left flank-->
+									<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_TARGET_FLANKS" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_TARGET_FLANKS" />
+									</widget>
+
+									<container>
+										<layout class="arrange_vertical_attachment" layout="-2,-3" offset="0" gap="1" />
+										<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+										<!--To Target Man-->
+										<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_TARGET_TARGET_MAN" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+											<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_TARGET_TARGET_MAN" />
+										</widget>
+										<!--To Playmaker-->
+										<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_TARGET_PLAYMAKER" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+											<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_TARGET_PLAYMAKER" />
+										</widget>
+									</container>
+
+									<!--distribute to right flank-->
+									<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_TARGET_FLANKS" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_TARGET_FLANKS" />
+									</widget>
+
+								</container>
+
+								<container>
+									<layout class="arrange_horizontal_attachment" layout="-3,-3,-3" offset="2" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+									<!--to fullbacks-->
+									<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_TARGET_FULL_BACKS" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_TARGET_FULL_BACKS" />
+									</widget>
+									<!--to CB-->
+									<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_TARGET_CENTRE_BACKS" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_TARGET_CENTRE_BACKS" />
+									</widget>
+									<!--to fullbacks-->
+									<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_TARGET_FULL_BACKS" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_TARGET_FULL_BACKS" />
+									</widget>
+								</container>
+
+								<container />
+							</container>
+						</container>
+					</container>
+					<!--position pitch-->
+					<container id="posP" hidden="false" height="255">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,6,0,6" />
+
+						<widget class="pitch_with_tactics" id="dtps" icon_flags="show_selection_image,dont_allow_player_links,show_number" pitch_alignment="left,top" pitch_override_icon_size="3" pitch_dont_draw_indicators="true" allow_y_score_adjustment_for_roles="false" pitch_draw_grass="true" pitch_base_appearance="" pitch_is_read_only="true" goalkeeper_selectable="false">
+							<string id="pitch_kit_icon" value="pitch/icons/dots" />
+							<string id="pitch_alignment" value="can_scale" />
+							<integer id="line_width" value="1" />
+							<boolean id="pitch_draw_grass" value="false" />
+							<boolean id="vertical" value="true" />
+						</widget>
+					</container>
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="1" vertical_offset="6" />
+
+					<widget class="text" height="20" alignment="centre" font="title"  colour="white">
+						<translation id="text" translation_id="394393" type="use" value="Distribution Type[COMMENT: FR 10778 - title for player instructions to do with a goalkeeper's behaviour when distributing the ball]" />
+					</widget>
+
+					<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_METHOD_ROLL_OUT">
+						<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_METHOD_ROLL_OUT" />
+					</widget>
+					<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_METHOD_THROW_LONG">
+						<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_METHOD_THROW_LONG" />
+					</widget>
+
+					<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_METHOD_KICK_SHORT">
+						<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_METHOD_KICK_SHORT" />
+					</widget>
+					<widget class="tactics_pitch_button" height="28" itID="TI_GK_DISTRIBUTION_METHOD_LONG_KICK">
+						<record id="click_event" event_id="sele" itID="TI_GK_DISTRIBUTION_METHOD_LONG_KICK" />
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

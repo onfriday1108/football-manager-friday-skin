@@ -1,0 +1,177 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="inner_box_no_margin">
+		<layout class="arrange_vertical_attachment" layout="60,-1" gap="10" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<translation id="title" translation_id="343742" type="use" value="Get Add-Ons[COMMENT: add ons panel; section to allow the user to go to seek add-ons like graphics]" />
+			<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,240" offset="0" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<!-- workshop button -->
+
+				<widget class="button" appearance="buttons/custom/store/standard/normal/button" colour="store_dialog_text" id="dst0">
+					<record id="click_event">
+						<flags id="event_id" value="brWS" />
+					</record>
+					<translation id="text" translation_id="466431" type="use" value="Download add-ons directly from [%string#1][COMMENT: add-ons panel; button text for installing downloading for the game, string client is where you can download from, e.g. Steam or WeGame]" />
+				</widget>
+				<widget class="button" appearance="buttons/custom/store/standard/normal/button" colour="store_dialog_text" id="dst1">
+					<record id="click_event">
+						<flags id="event_id" value="brOF" />
+					</record>
+					<translation id="text" translation_id="466432" type="use" value="Download Official add-ons directly from [%string#1][COMMENT: add-ons panel; button text for directing the user to workshop page with all the official workshop items, string client is where you can download from, e.g. Steam or WeGame]" />
+				</widget>
+
+				<!-- Removing this functionality for now as it didn't do anything -->
+				<!--<widget class="button">
+                        <record id="click_event">
+                            <flags id="event_id" value="" />
+                        </record>
+                        <translation id="text" translation_id="355494" type="use" value="Install add-ons that have already been downloaded[COMMENT: add-ons panel; button text for installing downloaded add-ons for the game; no game running at this point so can't tell male or female]" />
+                    </widget>-->
+
+				<!-- publish button -->
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+						<widget class="text" id="clti" auto_size="vertical" alignment="right" style="semi_bold" colour="store_dialog_text">
+							<translation id="text" translation_id="353874" type="use" value="Cloud Storage[COMMENT: file select dialog: table header for the cloud storage details]" />
+						</widget>
+						<widget class="text" id="clST" auto_size="vertical" alignment="right" colour="store_dialog_text" />
+					</container>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+						<widget class="text" id="TlST" auto_size="vertical" alignment="right" style="semi_bold" colour="store_dialog_text">
+							<translation id="text" translation_id="354181" type="use" value="Total Space[COMMENT: file select dialog: the amount of total space available in the cloud storage]" />
+						</widget>
+						<widget class="text" id="Tlti" auto_size="vertical" alignment="right" colour="store_dialog_text" />
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="inner_subtle_box" appearance="boxes/titled/store/paper" size="10" font="panel_title_store" colour="store_dialog_text">
+				<translation id="title" translation_id="343972" type="use" value="Installed Add-Ons[COMMENT: add-ons panel; button text for installing downloaded add-ons for the game]" />
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" />
+
+					<widget class="icon_button" id="dele" auto_size="all" fixed="true" embed_in_frame="true" icon="icons/16px/delete" appearance="buttons/custom/store/standard/normal/button" colour="store_dialog_text">
+						<translation id="text" translation_id="247202" type="use" value="Delete" />
+						<record id="click_event">
+							<flags id="event_id" value="dlWI" />
+						</record>
+					</widget>
+
+					<widget class="button" id="scGr" auto_size="all" click_event="sFgr" fixed="true" embed_in_frame="true" appearance="buttons/custom/store/standard/normal/button" colour="store_dialog_text">
+						<translation id="text" translation_id="466433" type="use" value="Scan for Graphics[COMMENT: workshop panel text, scans existing folder for graphic files]" />
+					</widget>
+
+					<widget class="popup_button" id="scGR" auto_size="all" hidden="true" fixed="true" embed_in_frame="true" appearance="buttons/custom/store/standard/normal/button" colour="store_dialog_text">
+						<translation id="text" translation_id="466434" type="use" value="Publish current Graphics[COMMENT: workshop publishing panel, button text]" />
+						<flags id="sele" value="sPcG" />
+					</widget>
+
+				</container>
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget id="sWtb" class="table" mode="fill_rows, select_rows, stripe_rows" row_height="35" select_event="slCC" row_spacing="2">
+
+					<flags id="layout" value="-4, -2" />
+
+					<!-- make sure row height always matches largest object -->
+					<boolean id="fixed_size_rows" value="true" />
+
+					<list id="headings">
+						<translation translation_id="466435" type="use" value="Title[COMMENT: publish TO workshop panel; name of the content downloaded or published or subscribed from Workshop]" />
+						<translation type="use" translation_id="338607" value="User[COMMENT: manager list panel; column showing the steam user name]" />
+					</list>
+
+					<list id="column_table_properties">
+						<record index="0" left="5" id="titl" auto_size="all">
+							<record id="column_heading" colour="store_dialog_text">
+
+								<flags id="column" value="0" />
+							</record>
+						</record>
+
+						<record index="1" id="usNa" auto_size="all">
+							<record id="column_heading" colour="store_dialog_text">
+
+								<flags id="column" value="1" />
+							</record>
+						</record>
+
+
+					</list>
+
+					<record id="default_properties" alignment="left,centre_y" colour="store_dialog_text" />
+
+				</widget>
+
+				<container id="nIad">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="text" style="semi_bold" colour="store_dialog_text" size="10" auto_size="all" alignment="centre">
+						<translation id="text" translation_id="349236" type="use" value="You don't have any items created or installed[COMMENT: add-ons panel; title of the sub panel saying no addons being installed yet]" />
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					</widget>
+					<widget class="text" multiline="true" colour="store_dialog_text" size="10" auto_size="horizontal" height="45" auto_size_maximum_width="400" alignment="centre" id="dst2">&gt;
+						<translation id="text" translation_id="466436" type="use" value="You can download add-ons online from one of our many affiliated fan sites, or subscribe to them directly from the [%string#1] and then install them[COMMENT: add-ons panel; description of panel saying no addons being installed yet, string client contains the place you download from, e.g. Steam or WeGame]" />
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					</widget>
+					<widget class="button" auto_size="all" click_event="brOF" appearance="buttons/custom/store/standard/normal/button" colour="store_dialog_text">
+						<translation id="text" translation_id="466437" type="use" value="Official Items[COMMENT: button text in Workshop panel; linking to the official items in the workshop webpage]" />
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					</widget>
+					<widget class="button" auto_size="all" click_event="brWS" appearance="buttons/custom/store/standard/normal/button" colour="store_dialog_text" id="dst3">&gt;
+						<string id="text" value="[%string#1]" />
+            <layout class="centre_in_parent_attachment" alignment="horizontal" />
+					</widget>
+				</container>
+
+			</container>
+
+			<container width="240" id="siBr" class="main_contrast_box" red_replacement="store_background">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container height="200">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="10" apply_to_children="true" />
+					<widget class="picture" id="adPI" scale_picture="true" image_alignment="centre" />
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<container class="scrolling_box">
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						<widget class="text" id="adDE" font_colour="store_dialog_text" auto_size="vertical" />
+					</container>
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+
+</panel>

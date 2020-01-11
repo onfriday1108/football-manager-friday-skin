@@ -1,0 +1,76 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  <container class="main_box" id="titl">
+
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+    <container height="30">
+      <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+
+      <!-- Edit width/height-->
+      <widget class="label" alignment="right,centre_y" auto_size="horizontal">
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+        <string id="text" value="Image Width:"/>
+      </widget>
+      <widget class="number_edit_box" id="widE" allf="false" allm="false" auto_size="all" width="60">
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+      </widget>
+      <widget class="label" alignment="right,centre_y" auto_size="horizontal">
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+        <string id="text" value="Image Height:"/>
+      </widget>
+      <widget class="number_edit_box" id="higE" allf="false" allm="false" auto_size="all" width="60">
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+      </widget>
+      <!-- Choose condition -->
+      <widget class="label" alignment="right,centre_y" auto_size="horizontal">
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+        <string id="text" value="Weather Conditions:"/>
+      </widget>
+      <widget class="popup_button" id="conP" auto_size="all">
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+
+        <list id="items">
+          <record id="0">
+            <string id="text" value="Sunny 1 (0)"/>
+          </record>
+          <record id="1">
+            <string id="text" value="Sunny 2 (1)"/>
+          </record>
+          <record id="2">
+            <string id="text" value="Cloudy (2)"/>
+          </record>
+          <record id="3">
+            <string id="text" value="Overcast (3)"/>
+          </record>
+          <record id="4">
+            <string id="text" value="Downpour (4)"/>
+          </record>
+          <record id="5">
+            <string id="text" value="Night Clear (5)"/>
+          </record>
+          <record id="6">
+            <string id="text" value="Night Downpour (6)"/>
+          </record>
+        </list>
+        <integer id="value" value="0"/>
+      </widget>
+      <!-- Repopulate button-->
+      <widget class="button" auto_size="all" click_event="Repo">
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+        <string id="text" value="Repopulate"/>
+      </widget>
+      <!-- Random Repopulate button-->
+      <widget class="button" auto_size="all" click_event="RRep">
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+        <string id="text" value="Randomise"/>
+      </widget>
+    </container>
+
+    <container class="scrolling_box">
+      <container class="horizontal_arrange_container" id="dynC" wrap="true" auto_size="vertical" />
+    </container>
+
+  </container>
+</panel>

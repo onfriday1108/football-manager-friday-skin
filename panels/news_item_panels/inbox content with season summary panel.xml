@@ -1,0 +1,137 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<string id="skin_style" value="subtle box"/>
+	<boolean id="save_session_state" value="true"/>
+
+	<!-- content area -->
+	<container id="ctbx">
+		<layout class="arrange_vertical_attachment" layout="-2, -5" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!-- media summary -->
+		<container class="inner_subtle_box_no_margin">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="2"/>
+
+			<container class="inner_subtle_box" appearance="boxes/custom/quotation/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container class="scrolling_box">
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle"/>
+						<widget class="inbox_body_text" id="bdtx" alignment="centre" auto_size="vertical"/>
+					</container>
+
+				</container>
+			</container>
+		</container>
+
+		<!-- comp performance and review -->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<container class="inner_subtle_box">
+				<layout class="arrange_vertical_attachment" layout="-1,1,100" offset="0" gap="2"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+				<!-- comp performance -->
+				<container class="scrolling_box">
+					<container id="cplb">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+					</container>
+				</container>
+
+				<widget class="horizontal_divider"/>
+
+				<container class="inner_subtle_box" appearance="boxes/titled/compact/paper">
+					<layout class="arrange_vertical_attachment" alignment="bottom"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+					<translation id="title" translation_id="232109" type="use" value="League Positions"/>
+
+					<!--Past positions-->
+					<container class="league_positions_panel" id="psgr" file="team/team competitions overview past positions panel" height="80">
+						<record id="delayed_properties">
+							<integer id="y_axis" interval="5"/>
+
+						</record>
+					</container>
+				</container>
+			</container>
+
+			<container class="inner_subtle_box">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="-2" gap="3"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+				<!-- best result -->
+				<container class="inner_subtle_box" height="75" appearance="boxes/titled/compact/paper">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<translation id="title" translation_id="388197" type="use" value="Match of the Season[COMMENT: season summary panel header text]"/>
+
+					<widget class="fixture_details_panel" id="bsmt" file="match/fixture details panel small" />
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<!-- worst result -->
+				<container class="inner_subtle_box" height="75" appearance="boxes/titled/compact/paper">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<translation id="title" translation_id="388209" type="use" value="Moment to Forget[COMMENT: season summary panel header text]"/>
+
+					<widget class="fixture_details_panel" id="wsmt" file="match/fixture details panel small" />
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<!-- Attendance -->
+				<container height="60">
+					<layout class="arrange_horizontal_attachment" layout="70, -1" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+					<!-- stadium image-->
+					<widget class="picture" file="icons/custom/team stats/stadium" height="55" scale_picture="false" keep_aspect_ratio="true" image_alignment="centre"/>
+
+					<!-- attendances -->
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="middle" gap="0" offset="2"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+						<widget class="text" auto_size="vertical" font="label" colour="accent">
+							<translation id="text" translation_id="229804" type="use" value="Average Attendance"/>
+						</widget>
+						<widget class="text" id="atvl" auto_size="vertical" font="value"/>
+						<widget class="text" id="atpc" auto_size="vertical" colour="faded text"/>
+					</container>
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<!-- Players used -->
+				<container height="60">
+					<layout class="arrange_horizontal_attachment" layout="70, -1" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+					<!-- stadium image-->
+					<widget class="picture" file="icons/custom/season review/players used" height="55" scale_picture="false" keep_aspect_ratio="true" image_alignment="centre"/>
+
+					<!-- attendances -->
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="middle" gap="0" offset="2"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+						<widget class="text" font="label" colour="accent" auto_size="vertical">
+							<translation id="text" translation_id="388416" type="use" value="Total Players Used[COMMENT: end of season summary panel, header text for section on how many players the team used]"/>
+						</widget>
+						<widget class="text" id="tpus" font="value" auto_size="vertical"/>
+						<widget class="text" id="pusp" colour="faded text" multiline="false" auto_size="vertical"/>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

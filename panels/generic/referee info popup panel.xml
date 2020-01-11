@@ -1,0 +1,82 @@
+<panel>
+  <layout class="arrange_vertical_attachment" layout="85, 125"/>
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+
+  <container class="inner_subtle_box">
+    <layout class="arrange_horizontal_attachment" layout="-1" offset="10" gap="10"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+
+    <widget class="table" id="pld1" layout="75, 30 -6" mode="fill_rows" auto_size_rows="false" row_height="20" column_spacing="10">
+
+      <!-- Player Picture -->
+      <widget class="picture" id="ppic" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" col="0" row="0" row_span="3"/>
+
+      <container col="1" row="0" row_span="3">
+        <layout class="arrange_vertical_attachment" alignment="top"/>
+
+        <!-- Player status icon with a fitness donut as first item-->
+        <widget class="picture" id="nacc" file="icons/26px/circle" width="30" height="30" image_alignment="centre_x,top" keep_aspect_ratio="true" scale_picture="true">
+          <layout class="stick_to_sides_attachment" alignment="top" inset="6"/>
+          <layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+        </widget>
+
+        <!-- National flag image -->
+        <widget class="object_portrait_picture" id="nafg" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" width="18" height="18">
+          <layout class="stick_to_sides_attachment" alignment="top" inset="12"/>
+          <layout class="stick_to_sides_attachment" alignment="left" inset="6"/>
+        </widget>
+      </container>
+      
+      <!-- age and dob -->
+      <widget class="label" id="agdb" auto_size="none" col="2" row="0" colour="text"/>
+
+      <!-- Nationality -->
+      <widget class="person_nationality_button" id="pfna" auto_size="vertical" icon_enabled="false" size="small" colour="faded text" display_format="0" col="2" row="1">
+      </widget>
+
+      <!-- Reputation -->
+      <widget class="global_reputation_stars_label" id="prps" alignment="left" col="2" row="2"/>
+    </widget>
+  </container>
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="10"/>
+
+    <widget class="table" id="opst" layout="-1, -1, -1" mode="fill_rows" auto_size_rows="false" row_height="25">
+      <widget class="label" font="title" colour="faded text" alignment="left,bottom" col="0" row="0">
+        <translation id="text" translation_id="247159" type="use" value="Games"/>
+      </widget>
+      <widget class="label" id="Prgc" size="large" style="bold" alignment="left,top" col="0" row="1"/>
+
+      <widget class="label" font="title" colour="red card" alignment="left,bottom" col="1" row="0">
+        <translation id="text" translation_id="247392" type="use" value="Red Cards"/>
+      </widget>
+      <widget class="label" id="Prrc" size="large" style="bold" colour="red card" alignment="left,top" col="1" row="1"/>
+
+      <widget class="label" font="title" colour="yellow card" alignment="left,bottom" col="2" row="0">
+        <translation id="text" translation_id="247391" type="use" value="Yellow Cards"/>
+      </widget>
+      <widget class="label" id="Pryc" size="large" style="bold" colour="yellow card" alignment="left,top" col="2" row="1"/>
+
+      <widget class="label" font="title" colour="faded text" alignment="left,bottom" col="0" row="2">
+        <translation id="text" translation_id="247466" type="use" value="Home Penalties"/>
+      </widget>
+      <widget class="label" id="Prhp" size="large" style="bold" alignment="left,top" col="0" row="3"/>
+
+      <widget class="label" font="title" colour="faded text" alignment="left,bottom" col="1" row="2">
+        <translation id="text" translation_id="247467" type="use" value="Away Penalties"/>
+      </widget>
+      <widget class="label" id="Prap" size="large" style="bold" alignment="left,top" col="1" row="3"/>
+
+      <widget class="label" font="title" colour="faded text" alignment="left,bottom" col="2" row="2">
+        <translation id="text" translation_id="233158" type="use" value="Average Rating"/>
+      </widget>
+      <widget class="label" id="Prra" size="large" style="bold" alignment="left,top" col="2" row="3"/>
+
+    </widget>
+  </container>
+
+</panel>

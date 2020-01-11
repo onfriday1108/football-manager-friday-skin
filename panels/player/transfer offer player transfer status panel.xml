@@ -1,0 +1,19 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+	<flags id="listed_box_appearance" value="boxes/custom/listed/yes/paper"/>
+	<flags id="not_listed_box_appearance" value="boxes/custom/listed/no/paper"/>
+
+	<container class="inner_box_no_margin">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1"/>
+
+			<widget class="button" id="plts" alignment="centre" height="28" navigation_focus_target="false"/>
+			<widget class="button" id="plls" alignment="centre" height="28" navigation_focus_target="false"/>
+		</container>
+	</container>
+
+</panel>

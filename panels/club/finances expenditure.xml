@@ -1,0 +1,183 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="75,250, -1" offset="0">
+			<global id="gap" name="ui.main_box_gap"/>
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container class="main_subtle_box">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+			<widget class="table" layout="-100, -40, -40, -40, -40" auto_size_rows="true" fixed_size_rows="false" >
+
+				<record id="default_properties">
+					<flags id="auto_size" value="vertical" />
+				</record>
+				<!--First column -->
+				<widget class="label" row="1" col="0" size="large">
+					<translation id="text" translation_id="383812" type="use" value="Total Expenditure[COMMENT: FR 10982, content for Finances Screen]" />
+				</widget>
+
+				<widget class="label" row="2" col="0">
+
+				</widget>
+
+				<!--Second column -->
+				<widget class="label" row="0" col="1" font="label" colour="faded text">
+					<translation id="text" translation_id="247210" type="use" value="This Month" />
+				</widget>
+
+				<widget class="cash_cell" alignment="left,centre_y" id="tetm" row="1" col="1" size="large">
+
+				</widget>
+
+				<widget class="cash_cell" alignment="left,centre_y" id="tutm" row="2" col="1">
+
+				</widget>
+
+				<!--Third column -->
+				<widget class="label" row="0" col="2" font="label" colour="faded text">
+					<translation id="text" translation_id="247211" type="use" value="Last Month" />
+				</widget>
+
+				<widget class="cash_cell" alignment="left,centre_y" id="telm" row="1" col="2" size="large">
+
+				</widget>
+
+				<widget class="cash_cell" alignment="left,centre_y" id="tulm" row="2" col="2">
+
+				</widget>
+
+				<!--Fourth column -->
+				<widget class="label" row="0" col="3" font="label" colour="faded text">
+					<translation id="text" translation_id="232145" type="use" value="This Season" />
+				</widget>
+
+				<widget class="cash_cell" alignment="left,centre_y" id="tets" row="1" col="3" size="large">
+
+				</widget>
+
+				<widget class="cash_cell" alignment="left,centre_y" id="tuts" row="2" col="3">
+
+				</widget>
+
+				<!--Fifth column -->
+				<widget class="label" row="0" col="4" font="label" colour="faded text">
+					<translation id="text" translation_id="247212" type="use" value="Last Season" />
+				</widget>
+
+				<widget class="cash_cell" alignment="left,centre_y" id="tels" row="1" col="4" size="large">
+
+				</widget>
+
+				<widget class="cash_cell" alignment="left,centre_y" id="tuls" row="2" col="4">
+
+				</widget>
+
+
+			</widget>
+		</container>
+
+		<container class="main_box" red_replacement="light_box_background">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="finance_history_panel" id="fnhs" stacked_graph="true" mouse_hovering_event="fhgh" mouse_exited_event="fhgh" draw_highlight_point="false">
+
+			</widget>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<record id="smry">
+				<flags id="mode" value="1" />
+				<!-- draw box -->
+				<flags id="bsty" value="no_border" />
+				<!-- box style -->
+				<colour id="bcol" name="black" />
+				<!-- box colour -->
+				<real id="btrn" value="0.2" />
+			</record>
+
+			<container class="main_box">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="table" id="fnex" name="Expenditure" select_event="slrw" save_session_state="true" navigation_focus_target="true">
+
+					<flags id="layout" value="-100, -40, -40, -40, -40" />
+					<flags id="mode" value="fill_rows, stripe_rows,fill_custom_rows,printable,select_rows,show_bullets,select_multiple,dont_allow_empty_selection" />
+					<flags id="bullet_multi_appearance" value="icons/16px/row graph" />
+					<flags id="bullet_multi_selected_appearance" value="icons/16px/row graph_selected" />
+
+					<!-- default properties adopted by every item in table -->
+					<record id="default_properties">
+						<flags id="algn" value="right,centre_y" />
+					</record>
+
+					<!-- table headings -->
+					<list id="headings">
+						<record>
+							<translation id="text" translation_id="247209" type="use" value="Item" />
+							<flags id="algn" value="left,centre_y" />
+						</record>
+						<record>
+							<translation id="text" translation_id="247210" type="use" value="This Month" />
+							<flags id="algn" value="right,centre_y" />
+						</record>
+						<record>
+							<translation id="text" translation_id="247211" type="use" value="Last Month" />
+							<flags id="algn" value="right,centre_y" />
+						</record>
+						<record>
+							<translation id="text" translation_id="232145" type="use" value="This Season" />
+							<flags id="algn" value="right,centre_y" />
+						</record>
+						<record>
+							<translation id="text" translation_id="247212" type="use" value="Last Season" />
+							<flags id="algn" value="right,centre_y" />
+						</record>
+					</list>
+
+					<!-- column properties -->
+					<list id="column_widget_properties">
+						<record indx="0">
+							<flags id="algn" value="left,centre_y" />
+							<flags id="spec" value="text" />
+							<flags id="navigation_focus_target" value="false" />
+						</record>
+					</list>
+
+					<!-- disable sorting on all columns -->
+					<list id="column_table_properties">
+						<record indx="0">
+							<boolean id="sort_ascending" value="true" />
+						</record>
+						<record indx="1" id="toto">
+							<boolean id="sort_ascending" value="false" />
+						</record>
+						<record indx="2">
+							<boolean id="sort_ascending" value="false" />
+						</record>
+						<record indx="3">
+							<boolean id="sort_ascending" value="false" />
+						</record>
+						<record indx="4">
+							<boolean id="sort_ascending" value="false" />
+						</record>
+					</list>
+
+					<!-- default sort -->
+					<list id="default_sort_column">
+						<integer value="toto" />
+					</list>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+</panel>

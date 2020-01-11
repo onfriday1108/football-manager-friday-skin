@@ -1,0 +1,18 @@
+﻿<panel>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" do_not_size="true" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <container>
+    <layout class="arrange_horizontal_attachment" layout="32,-1,32" offset="0" gap="0" do_not_size="true" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+    <widget class="text" id="homS" alignment="left,centre_y" style="semi_bold"/>
+
+    <widget class="text" id="titl" alignment="centre" />
+
+    <widget class="text" id="awaS" alignment="right,centre_y" style="semi_bold"/>
+  </container>
+
+  <widget class="horizontal_comparison_bar" id="horb" height="4" animation_file="none">
+  </widget>
+</panel>

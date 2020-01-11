@@ -1,0 +1,40 @@
+<panel width="200">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="10" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="10" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container id="cobx">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" font="label" alignment="centre" auto_size="vertical" multiline="false">
+				<translation id="text" translation_id="420648" type="use" value="Minimum Cost[COMMENT: FR15241 - label for showing the minimum amount that is guaranteed to be received for a transfer]" />
+			</widget>
+			<widget class="cash_cell" id="GnCs" ccrs="8" font="value" alignment="centre" auto_size="vertical" />
+
+			<widget class="spacer" height="4" />
+			
+			<widget class="text" font="label" alignment="centre" auto_size="vertical" multiline="false">
+				<translation id="text" translation_id="420649" type="use" value="Potential Cost Inc. Add Ons[COMMENT: FR15241 - label for showing the potential amount that could be received for a transfer including any add ons and clauses]" />
+			</widget>
+			<widget class="cash_cell" id="PoCs" ccrs="8" font="value" alignment="centre" auto_size="vertical" />
+
+			<widget class="spacer" height="4" />
+			
+			<widget class="text" font="label" alignment="centre" auto_size="vertical" multiline="false">
+				<translation id="text" translation_id="420650" type="use" value="Cost So Far[COMMENT: FR15241 - label for showing the amount received so far for a transfer]" />
+			</widget>
+			<widget class="cash_cell" id="AsPr" ccrs="8" font="value" alignment="centre" auto_size="vertical" />
+		</container>
+
+		<container id="pexp" hidden="true">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" font="label" alignment="centre" auto_size="vertical" multiline="false">
+				<translation id="text" translation_id="491921" type="use" value="P/Ex Players[COMMENT: AREA: Transfers; SUB-AREA: Transfer Tooltip Informatio; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: 232204; NOTE: label for showing part-exchanged players, see referenced ID for previous translation of P/Ex]" />
+			</widget>
+			<!-- p/ex player list added here -->
+		</container>
+	</container>
+
+</panel>

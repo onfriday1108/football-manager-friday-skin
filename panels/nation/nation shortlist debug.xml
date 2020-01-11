@@ -1,0 +1,132 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+  <container class="tabbed_container" id="tabs" changed_event="stch" default_item="cush">
+
+    <container class="main_box" id="cush">
+      <string id="title" value="Current Shortlists" />
+      <layout class="arrange_vertical_attachment" alignment="top,extend" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+      <widget class="popup_button" id="cspo" select_event="csce" auto_size="vertical"/>
+      
+      <widget class="table" id="cstb" mode="fill_rows, stripe_rows,keyboard" layout="-1, -1, -1, -1, 50" auto_size_rows="true" row_spacing="0">
+
+        <!-- headings -->
+        <list id="headings">
+          <record alignment="left,centre_y">
+            <string id="text" value="Shortlisted Position"/>
+          </record>
+          <record alignment="left,centre_y">
+            <string id="text" value="Person"/>
+          </record>
+          <record alignment="left,centre_y">
+            <string id="text" value="Player Importance"/>
+          </record>
+          <record alignment="left,centre_y">
+            <string id="text" value="Club"/>
+          </record>
+          <record alignment="left,centre_y">
+            <string id="text" value="Age"/>
+          </record>
+        </list>
+
+      </widget>
+      
+    </container>
+
+    <container class="main_box" id="lshu">
+      <string id="title" value="Live Shortlist Update" />
+      <layout class="arrange_vertical_attachment" alignment="top,extend" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+      <widget class="popup_button" id="lspo" select_event="lsce" auto_size="vertical"/>
+
+      <container class="tabbed_container" id="lsta" default_item="lshl">
+
+        <container id="lshl">
+          <string id="title" value="Shortlist" />
+          <layout class="arrange_vertical_attachment" alignment="top,extend" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+          
+          <widget class="check_box" click_event="sudn" selected="true" auto_size="vertical">
+            <string id="text" value="Show uninterested dual nationality players" />
+          </widget>
+
+          <widget class="table" id="lstb" mode="fill_rows, stripe_rows,keyboard" layout="-2, 50, -2, -3, -2, -2, 50" auto_size_rows="true" row_spacing="0">
+
+            <!-- headings -->
+            <list id="headings">
+              <record alignment="left,centre_y">
+                <string id="text" value="Person"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Score"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Shortlisted Position"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Reason Rejected"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Player Importance"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Club"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Age"/>
+              </record>
+            </list>
+
+          </widget>
+
+        </container>
+
+        <container id="ldni">
+          <string id="title" value="Dual Nationality Interest" />
+          <layout class="arrange_vertical_attachment" alignment="top,extend" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+          <widget class="check_box" click_event="dnni" selected="true" auto_size="vertical">
+            <string id="text" value="Nation showing interest in player" />
+          </widget>
+
+          <widget class="table" id="dnis" mode="fill_rows, stripe_rows,keyboard" layout="-5, 100, -6, 60, -15, -5, 60, -5" auto_size_rows="true" row_spacing="4">
+
+            <!-- headings -->
+            <list id="headings">
+              <record alignment="left,centre_y">
+                <string id="text" value="Person"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Position"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Reason Rejected"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Interest"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Reasons"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Preferred Nation"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Interest"/>
+              </record>
+              <record alignment="left,centre_y">
+                <string id="text" value="Committed Nation"/>
+              </record>
+            </list>
+
+          </widget>
+          
+        </container>
+
+      </container>
+    </container>
+    
+  </container>
+
+</panel>

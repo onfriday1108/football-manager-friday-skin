@@ -1,0 +1,60 @@
+﻿<!-- header panel to be used during live press conferences and the tunnel interviews --><panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <boolean id="should_force_refresh" value="true" />
+
+  <container class="main_box" appearance="boxes/custom/full screen header/paper">
+    <layout class="arrange_horizontal_attachment" alignment="left, extend" offset="10" gap="10" />
+    <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+    <!-- Back Button -->
+    <widget class="screen_history_button" id="back" fixed="true" width="30" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/back" icon_alignment="centre">
+      <attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
+      <record id="primary_icon_properties" red_replacement="text" />
+      <record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
+
+      <attachment class="test_global_attachment" get_property="MnuS" mode="1" value="true" set_property="hidn" skip_if_null="true" />
+    </widget>
+
+    <widget class="vertical_divider" />
+
+    <container height="52">
+      <layout class="arrange_horizontal_attachment" alignment="right, extend" offest="10" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+      <!-- main logos container -->
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="20" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+        <widget class="label" size="large" auto_size="horizontal">
+          <translation id="text" translation_id="276325" type="use" value="Press Conference[COMMENT: player happiness panel]" />
+        </widget>
+
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+          <widget class="picture" file="icons/16px/bullet" alignment="centre" auto_size="all" red_replacement="red 500">
+            <layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+          </widget>
+
+          <widget class="label" colour="red 500" alignment="left, centre_y" auto_size="horizontal">
+            <translation id="text" translation_id="466452" type="use" value="Live[COMMENT: FR 22941; press conference; label indicating the press conference is in progress]" />
+          </widget>
+        </container>
+      </container>
+
+      <widget class="label" id="QuRe" font="title" auto_size="horizontal">
+        <translation id="text" translation_id="466453" type="use" value="Questions Remaining[COMMENT: FR 22941; press conference; number of questions remaining in the press conference]" />
+      </widget>
+
+      <widget class="percentage_pie_chart" value_colour="glue grey 500" filler_colour="text" is_donut_chart="true" layout="-6,-3,-1" height="30" width="30">
+        <attachment class="get_global_attachment" get_property="QuRm" set_property="valu" />
+        <attachment class="get_global_attachment" get_property="QuCt" set_property="maxv" />
+      </widget>
+    </container>
+  </container>
+
+</panel>

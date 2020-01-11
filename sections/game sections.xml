@@ -1,0 +1,47 @@
+<!--
+this file contains a list of all of the sections in the game
+-->
+<properties>
+  <string id="text" value="Game"/>
+  <list id="items">
+
+    <record id="Gdlt">
+      <translation id="text" translation_id="329981" type="use" value="Game" />
+      <list id="items">
+        <!--status-->
+        <record id="stat"/>
+        <!--add new manager-->
+        <record id="Gadm"/>
+        <!--add remove leagues-->
+        <record id="Gcar"/>
+        <!--detail level-->
+        <record id="Gdlp"/>
+      </list>
+    </record>
+    <!--search-->
+    <record id="Gsrh"/>
+    <!--manager chat-->
+    <record id="GMch"/>
+    <record id="ghof">
+      <translation id="text" translation_id="319618" type="use" value="Hall of Fame[COMMENT: game news items; use top matches as string has changed a very minor amount]" />
+      <list id="items">
+        <!--worldwide-->
+        <record id="wwhf"/>
+        <!--continent-->
+        <record id="cthf"/>
+        <!--nation-->
+        <record id="nthf"/>
+        <!--nationality-->
+        <record id="nlhf"/>
+      </list>
+    </record>
+    <!--achievements-->
+    <record id="Gach"/>
+    <!-- game demo end section -->
+    <record id="Gded"/>
+    <record id="----"/>
+    <!--actions-->
+    <record id="ADDm" appearance="buttons/standard/normal/button" stick_to_side="right" icon="icons/16px/manager" item_type="ACTT"/>
+
+  </list>
+</properties>

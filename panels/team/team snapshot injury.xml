@@ -1,0 +1,14 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <widget class="label" id="noin" hidden="true" alignment="centre">
+    <translation id="text" translation_id="295798" type="use" value="There are currently no injuries[COMMENT; injury snapshot panel: no players]" />
+  </widget>
+
+  <!-- This panel will create an embedded panel for each object it is given -->
+  <container class="simple_data_list" id="list" maximum_items="50" set_property="objt">
+    <record id="widget_properties" class="property_list_viewer_xml_panel" file="team/team snapshot injury item panel" height="46" />
+  </container>
+
+</panel>

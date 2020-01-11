@@ -1,0 +1,101 @@
+﻿<panel>
+  <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+  <!-- content area -->
+  <container class="scrolling_box">
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" gap="25"/>
+      <layout class="fit_children_attachment" alignment="vertical, fill" gap="25"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+      <boolean id="save_session_state" value="true"/>
+
+      <widget class="inbox_body_text" id="bdtx"/>
+
+      <container class="horizontal_arrange_container" layout="250, -1" auto_size="vertical" gap="40" inset="0">
+
+        <container id="Dyni" height="150" width="250">
+          <layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+          <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+        </container>
+
+        <!-- quote section -->
+        <container id="QtBx" class="vertical_arrange_container" alignment="top, extend" auto_size="vertical" inset="0" offset="0">
+          <widget class="text" id="QInt" auto_size="vertical">
+            <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+          </widget>
+
+          <container class="inner_box_no_margin" id="QtxB">
+            <layout class="arrange_vertical_attachment" alignment="top"/>
+            <layout class="fit_children_attachment" alignment="vertical, fill"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+            <widget class="text" id="QQtx" auto_size="vertical" size="large">
+              <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+            </widget>
+          </container>
+
+          <widget class="text" id="AInt" auto_size="vertical">
+            <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+          </widget>
+
+          <container class="inner_box_no_margin" id="AtxB">
+            <layout class="arrange_vertical_attachment" alignment="top"/>
+            <layout class="fit_children_attachment" alignment="vertical, fill"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+            <widget class="text" id="AQtx" auto_size="vertical" size="large">
+              <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+            </widget>
+          </container>
+
+          <widget class="text" id="PInt" auto_size="vertical">
+            <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+          </widget>
+
+          <container class="inner_box_no_margin" id="PQtB">
+            <layout class="arrange_vertical_attachment" alignment="top"/>
+            <layout class="fit_children_attachment" alignment="vertical, fill"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+            <widget class="text" id="PQtx" auto_size="vertical" size="large">
+              <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+            </widget>
+          </container>
+
+        </container>
+      </container>
+
+      <!-- player reactions -->
+      <container class="inner_box" id="ReBx" appearance="boxes/inner/titled small/paper">
+        <layout class="arrange_vertical_attachment" alignment="top, extend"/>
+        <layout class="fit_children_attachment" alignment="vertical, fill"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+        <translation id="title" translation_id="331950" type="use" value="Reactions[COMMENT: person properties; text header for team talk screen which will list full feedback from individual players]"/>
+
+        <widget class="table" id="ReTb" layout="-1, 35, -1, 16, -1" mode="fill_rows" auto_size="vertical" fixed_size_rows="false" auto_size_rows="true">
+          <list id="headings">
+            <record>
+              <translation id="text" translation_id="247229" type="use" value="Player Name"/>
+            </record>
+            <record>
+              <translation id="text" translation_id="227737" type="use" value="Club"/>
+            </record>
+            <record>
+              <translation id="text" translation_id="447635" type="use" value="Hierarchy[COMMENT: The column name representing the Player Hierarchy details of the person]"/>
+            </record>
+            <record column_span="2">
+              <translation id="text" translation_id="331949" type="use" value="Reaction[COMMENT: person properties; text header for team talk screen which will list any feedback from individual players]"/>
+            </record>
+          </list>
+          <list id="column_table_properties">
+            <record index="2" alignment="left, centre_y"/>
+          </list>
+        </widget>
+      </container>
+    </container>
+  </container>
+
+</panel>

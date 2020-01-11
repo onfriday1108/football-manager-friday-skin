@@ -1,0 +1,44 @@
+<panel>
+	<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+	<!--badge-->
+	<widget class="object_portrait_picture" id="logo" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="60" height="60">
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>
+
+	<!--team info-->
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+		<!--team name-->
+		<widget class="team_button" id="TteV" size="large" auto_size="vertical" style="semi_bold" alignment="left,centre_y">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+			</record>
+		</widget>
+
+		<!--division-->
+		<widget class="comp_button" id="TdiV" auto_size="vertical" style="semi_bold" alignment="left,centre_y">
+			<record id="object_property">
+				<integer id="get_property" value="Tdiv" />
+			</record>
+		</widget>
+
+		<!--reputation-->
+		<widget class="label" id="TrsL" auto_size="vertical" size="8">
+			<record id="object_property">
+				<integer id="get_property" value="Trst" />
+				<boolean id="name" value="true" />
+			</record>
+		</widget>
+		<widget class="club_reputation_stars_label" id="TrsV" auto_size="vertical" alignment="left">
+			<record id="object_property">
+				<integer id="get_property" value="Trst" />
+			</record>
+		</widget>
+	</container>
+
+</panel>

@@ -1,0 +1,22 @@
+<panel>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+		<widget class="label" auto_size="vertical" spec="text" size="large" colour="text" alignment="centre">
+			<translation id="text" translation_id="348202" type="use" value="Matching Philosophies[COMMENT: contract offer screen - philosophies which they player meets that the manager has to fulfill]"/>
+		</widget>
+
+		<widget class="table" id="phtb" layout="-1" mode="fill_rows" auto_size="vertical" fixed_size_rows="false" row_spacing="0">
+			<list id="column_table_properties">
+				<record index="0" alignment="centre"/>
+			</list>
+		</widget>
+
+	</container>
+
+</panel>

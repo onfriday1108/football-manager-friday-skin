@@ -1,0 +1,101 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="50,-1" offset="0" gap="8"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<widget class="picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="50">
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="icon" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</list>
+		</record>
+	</widget>
+
+	<container height="80">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="1" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="text" multiline="true" font="label" alignment="left,centre_y" auto_size="vertical">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="titl" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<container>
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+
+			<widget class="cash_cell" size="xlarge" style="bold" cusv="true" auto_size="all">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="csto" />
+							<integer id="set_property" value="valu" />
+						</record>
+					</list>
+				</record>
+			</widget>
+
+			<widget class="picture" image_alignment="centre" auto_size="all">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="updo" />
+							<integer id="set_property" value="valu" />
+						</record>
+					</list>
+				</record>
+			</widget>
+
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="0" />
+
+			<widget class="text" auto_size="vertical" colour="faded text" alignment="left,centre_y" size="small">
+				<translation translation_id="247212" id="text" type="use" value="Last Season" />
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="lsst" />
+              <integer id="set_property" value="valu" />
+            </record>
+            <record>
+              <integer id="get_property" value="hlst" />
+              <integer id="set_property" value="hidn" />
+            </record>
+          </list>
+        </record>
+			</widget>
+
+			<widget class="cash_cell"  cusv="true" auto_size="vertical" colour="faded text" size="small">
+				<translation id="alternate_text" translation_id="242522" type="use" value="N/A"/>
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="lsto" />
+							<integer id="set_property" value="valu" />
+						</record>
+						<record>
+							<integer id="get_property" value="hlst" />
+							<integer id="set_property" value="hidn" />
+						</record>
+					</list>
+				</record>
+			</widget>
+		</container>
+
+
+
+	</container>
+
+
+</panel>

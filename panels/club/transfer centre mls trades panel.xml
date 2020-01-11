@@ -1,0 +1,84 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="4"/>
+
+	<widget class="manager_text" id="notr" alignment="centre_x,top" hidden="true">
+		<translation id="text" translation_id="352336" type="use" value="There are no trade offers requiring [%person#1-your] attention.[COMMENT: transfer centre MLS trade; text diaplyed when there no active trades]" />
+	</widget>
+
+	<widget class="table" id="tabl" mode="fill_rows, stripe_rows" layout="-2, -1, -1, -2, 80, 24, 24, 120" auto_size_rows="true" fixed_size_rows="false" row_spacing="0">
+		<list id="headings">
+			<record>
+				<translation id="text" translation_id="348164" type="use" value="Items Offered[COMMENT: mls trade panel; heading for section containing offered items]" />
+			</record>
+			<record>
+				<translation id="text" translation_id="229408" type="use" value="Team" />
+			</record>
+			<record>
+				<translation id="text" translation_id="229408" type="use" value="Team" />
+			</record>
+			<record>
+				<translation id="text" translation_id="348164" type="use" value="Items Offered[COMMENT: mls trade panel; heading for section containing offered items]" />
+			</record>
+		</list>
+
+		<!-- Setup columns, including the widget type to use for each-->
+		<list id="column_table_properties">
+			<!-- Offer contents -->
+			<record id="toff" top="3" bottom="3">
+				<record id="widget_info" class="text" />
+			</record>
+			<!-- Offering club -->
+			<record id="offc" alignment="left,centre_y" top="3" bottom="3">
+				<record id="widget_info" class="club_button" />
+			</record>
+			<!-- Recieving club club -->
+			<record id="resc" alignment="left,centre_y" top="3" bottom="3">
+				<record id="widget_info" class="club_button" />
+			</record>
+			<!-- What they want in return-->
+			<record id="twnt" top="3" bottom="3" alignment="left,centre_y" >
+				<record id="widget_info" class="text" />
+			</record>
+			<!-- Current state. eg. 'In negotiation'-->
+			<record id="stat" alignment="left,centre_y">
+				<record id="widget_info" class="text" />
+			</record>
+			<!-- Accept offer button -->
+			<record id="accb" alignment="left,centre_y">
+				<record id="widget_info" class="button" />
+			</record>
+			<!-- Reject offer button -->
+			<record id="rejb" alignment="left,centre_y">
+				<record id="widget_info" class="button" />
+			</record>
+			<!-- View offer button-->
+			<record id="vewb" alignment="left,centre_y">
+				<record id="widget_info" class="button" />
+			</record>
+		</list>
+
+		<!-- Properties to apply to set on all widgets-->
+		<record id="default_properties" auto_size="vertical" />
+
+		<!-- Properties for specific columns -->
+		<list id="column_widget_properties">
+			<record indx="3" auto_size="vertical" multiline="true"/>
+			<record indx="5" appearance="icons/16px/tick" />
+			<record indx="6" appearance="icons/16px/cross" />
+			<record indx="7" alignment="right,centre_y" appearance="buttons/link/button">
+				<translation id="text" translation_id="257095" type="use" value="View Offer[COMMENT: transfer centre screen; button for viewing a transfer offer]" />
+			</record>
+		</list>
+	</widget>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+		<layout class="arrange_horizontal_attachment" alignment="right" gap="4" offset="0"/>
+
+		<widget class="button" id="rjaa" click_event="rjaa" auto_size="vertical">
+			<translation id="text" translation_id="227484" type="use" value="Reject all offers" />
+		</widget>
+	</container>
+</panel>

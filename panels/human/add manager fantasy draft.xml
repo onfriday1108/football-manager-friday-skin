@@ -1,0 +1,194 @@
+<panel>
+	<layout class="arrange_vertical_attachment" layout="60,-1" offset="0" gap="8" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!--header box-->
+	<container id="shDS">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<string id="skin_style" value="contrast box" />
+
+		<container class="bordered_box_no_margin">
+			<layout class="arrange_horizontal_attachment" layout="155,-2, -1, -1, -1" offset="0" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!--timer-->
+			<container class="main_box" appearance="boxes/custom/interface/draft bar/clock/paper">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="6" gap="-4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6" />
+
+				<widget class="text" alignment="left,top" auto_size="vertical" font="title" multiline="false">
+					<translation id="text" translation_id="447539" type="use" value="Shortlisting[COMMENT: Fantasy Draft Shortlisting header]" />
+				</widget>
+
+				<container height="30">
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+
+					<widget class="picture" width="26" file="icons/48px/time" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" red_replacement="white" />
+
+					<widget class="text" id="timi" alignment="left,centre_y" size="xlarge" style="bold" />
+				</container>
+
+			</container>
+
+			<!--Comp name and type-->
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="12" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+
+				<widget class="picture" id="cmpI" width="40" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="4" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+					<widget class="text" id="nmmA" alignment="left,top" auto_size="vertical" size="xlarge" multiline="false" style="bold" colour="white" />
+
+					<widget class="text" id="nTyA" alignment="left,top" auto_size="vertical" colour="faded text" font="title" />
+
+				</container>
+			</container>
+			<!--Budget-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="4" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+				<widget class="text" alignment="left,top" auto_size="vertical" colour="faded text" font="title">
+					<translation id="text" translation_id="291309" type="use" value="Transfer Budget[COMMENT:Transfer budget label]" />
+				</widget>
+
+				<widget class="cash_cell" id="sbsh" cusv="true" auto_size="vertical" alignment="left,bottom" size="large" style="bold" colour="white">
+				</widget>
+			</container>
+
+			<!--Draft round limit-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="4" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+				<widget class="text" alignment="left,top" auto_size="vertical" colour="faded text" font="title">
+					<translation id="text" translation_id="447524" type="use" value="Draft Round Limit[COMMENT: Fantasy Draft - Competition Draft timer limit]" />
+				</widget>
+
+				<widget class="text" id="drLm" auto_size="vertical" alignment="left,bottom" size="large" style="bold" colour="white" />
+			</container>
+
+			<!-- Player Pool-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="4" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+				<widget class="text" alignment="left,top" auto_size="vertical" colour="faded text" font="title">
+					<translation id="text" translation_id="390518" type="use" value="Player Pool[COMMENT: versus competition panel, label text for list of players available for selection]" />
+				</widget>
+
+				<widget class="text" id="ppCn" auto_size="vertical" alignment="left,bottom" size="large" style="bold" colour="white" />
+
+			</container>
+		</container>
+
+	</container>
+
+	<container id="DrfD">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container class="main_box" hidden="true">
+			<layout class="arrange_horizontal_attachment" layout="-1, 150,150" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="12" />
+			<animation class="translate_animation" start_value="0.0, -0.2" end_value="0, 0" duration="0.8" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_screen" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1, -1" offset="8" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+				<widget class="text">
+					<translation id="text" translation_id="396159" type="use" value="The draft pick order has been chosen at random. Each manager takes turns to pick one player to add to their squad.[COMMENT: FR11478, the description of the panel, letting the user now what they have to do and how the order of picking is been done]" />
+				</widget>
+
+				<container id="clIN">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="8" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="8" />
+
+				</container>
+			</container>
+		</container>
+
+		<container class="inner_subtle_box">
+			<layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+			<widget class="cash_cell" id="sbdr" cusv="true" alignment="centre" size="large" style="bold">
+			</widget>
+
+			<widget class="text" alignment="centre" colour="faded alt text">
+				<translation id="text" translation_id="395045" type="use" value="Squad Budget Value[COMMENT: FR 8517 Fantasy Club;total budget avaiable for the selected club to spend on the players]" />
+			</widget>
+
+		</container>
+
+		<container class="inner_subtle_box">
+			<layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+			<widget class="text" id="tSbd" alignment="centre" size="large" style="bold">
+			</widget>
+
+			<widget class="text" alignment="centre" colour="faded alt text">
+				<translation id="text" translation_id="395044" type="use" value="Squad Budget Spent[COMMENT: FR 8517 Fantasy Club;total budget spend for the current squad selected]" />
+			</widget>
+
+		</container>
+
+	</container>
+
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" layout="40, -1" offset="0" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="radio_button" auto_size="horizontal" height="35" appearance="tabs/standard/normal/top/button" show_button_appearance="true" icon="" secondary_icon_enabled="true" secondary_icon="icons/26px/add shortlist" secondary_icon_alignment="left">
+				<translation id="text" translation_id="227994" type="use" value="Shortlist" />
+				<record id="click_event">
+					<integer id="event_id" value="sVIC" />
+					<integer id="index" value="1" />
+				</record>
+			</widget>
+
+			<widget class="radio_button" icon="" height="35" appearance="tabs/standard/normal/top/button" secondary_icon_enabled="true" show_button_appearance="true" secondary_icon="icons/26px/search" secondary_icon_alignment="left" auto_size="horizontal" selected="true">
+				<translation id="text" translation_id="447505" type="use" value="Find Player[COMMENT:Fantasy draft tab header - player search]" />
+				<record id="click_event">
+					<integer id="event_id" value="sVIC" />
+					<integer id="index" value="0" />
+				</record>
+			</widget>
+
+			<container>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="8" />
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+
+				<widget class="button" click_event="svla" id="svSh" auto_size="horizontal">
+					<translation id="text" type="use" translation_id="242622" value="Save Shortlist..." />
+				</widget>
+
+				<widget class="button" click_event="impF" id="imSh" auto_size="horizontal">
+					<translation id="text" type="use" translation_id="242626" value="Import Shortlist..." />
+				</widget>
+			</container>
+		</container>
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="person_search_panel" file="person/person search panel fantasy draft" id="dfFS" type="1" select_event="psSE" />
+			<widget class="person_search_panel" file="person/person search panel fantasy draft" id="shTL" type="0" hidden="true" />
+
+		</container>
+
+
+	</container>
+
+</panel>

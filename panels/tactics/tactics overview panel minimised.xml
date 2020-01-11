@@ -1,0 +1,5 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  <container id="siPN" file="tactics/tactics overview side panel minimised"/>
+  <container id="tCIP" file="tactics/tactics creator info" hidden="true" name="Tactics creator info"/>
+</panel>

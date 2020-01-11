@@ -1,0 +1,397 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container id="main">
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="main_box">
+				<translation id="title" type="use" translation_id="319074" value="Salary Cap[COMMENT: BUDGET_ADJUSTMENT_DIALOG; special case for MLS to display 'Salary Cap' instead of 'Wage Budget']" />
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container class="vertical_arrange_container" auto_size="vertical" offset="0" gap="0" inset="0">
+					<widget class="label" auto_size="vertical" font="label" colour="faded text">
+						<translation id="text" type="use" translation_id="352093" value="League Salary Cap[COMMENT - salary cap for the whole league; used on finances screen]" />
+					</widget>
+
+					<widget class="wage_label" id="lscv" auto_size="vertical" alignment="left">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="CcSC" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+					<layout clas="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="10" />
+
+					<container class="vertical_arrange_container" auto_size="vertical" offset="0" gap="0" inset="0">
+
+						<widget class="label" auto_size="vertical" font="label" colour="faded text">
+							<translation id="text" translation_id="396342" type="use" value="Team Salary Cap Spend[COMMENT: Finances League specific panel; FR 10982, changed ID 383893 for bug 121386, removed 'weekly' from the string as the Preferences control how this is displayed]" />
+						</widget>
+
+						<widget class="label" id="wscs" alignment="left,centre_y" auto_size="vertical">
+
+						</widget>
+
+						<widget class="horizontal_percentage_bar" id="wspb" height="10">
+
+						</widget>
+
+					</container>
+
+					<container class="vertical_arrange_container" auto_size="vertical" offset="0" gap="0" inset="0">
+
+						<widget class="label" auto_size="vertical" font="label" colour="faded text">
+							<translation id="text" type="use" translation_id="352200" value="Remaining Salary Cap Space[COMMENT - remaining salary cap for the club; used on finances screen]" />
+						</widget>
+
+						<widget class="wage_label" id="rscs" alignment="left,centre_y" format="3" auto_size="vertical">
+
+						</widget>
+
+					</container>
+
+				</container>
+
+        <container class="vertical_arrange_container" auto_size="vertical" offset="0" gap="0" inset="0">
+          <widget class="label" id="bsc1" auto_size="vertical" alignment="left,centre_y" font="label" colour="faded text">
+
+          </widget>
+
+          <widget class="wage_label" id="sc1v" alignment="left,centre_y" auto_size="vertical">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="scb1" />
+                  <integer id="set_property" value="valu" />
+                </record>
+              </list>
+            </record>
+          </widget>
+        </container>
+
+        <container class="vertical_arrange_container" auto_size="vertical" offset="0" gap="0" inset="0">
+          <widget class="label" id="bsc2" auto_size="vertical" alignment="left,centre_y" font="label" colour="faded text">
+
+          </widget>
+
+          <widget class="wage_label" id="sc2v" alignment="left,centre_y" auto_size="vertical">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="scb2" />
+                  <integer id="set_property" value="valu" />
+                </record>
+              </list>
+            </record>
+          </widget>
+        </container>
+
+				<container class="vertical_arrange_container" auto_size="vertical" offset="0" gap="0" inset="0">
+					<widget class="label" id="cipt" auto_size="vertical" alignment="left,centre_y" font="label" colour="faded text">
+
+					</widget>
+
+					<widget class="wage_label" id="cipv" alignment="left,centre_y" auto_size="vertical">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="ijcc" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<container class="vertical_arrange_container" auto_size="vertical" offset="0" gap="0" inset="0">
+					<widget class="label" auto_size="vertical" id="cwpt" alignment="left,centre_y" font="label" colour="faded text" />
+
+					<widget class="wage_label" alignment="left,centre_y" id="cwpv" auto_size="vertical">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="rpcc" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+			</container>
+
+			<container class="main_box">
+				<translation id="title" translation_id="383601" type="use" value="Player Slots[COMMENT: Finances League specific panel; FR 10982']" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="table" id="tabl">
+
+					<flags id="layout" value="-1, 80" />
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<flags id="fixed_size_rows" value="true" />
+					<flags id="row_height" value="30" />
+
+					<!-- disable sorting on all columns -->
+					<list id="column_table_properties">
+						<record indx="0" sort_disabled="true" />
+						<record indx="1" sort_disabled="true" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="right,centre_y" />
+					</list>
+				</widget>
+
+			</container>
+
+		</container>
+
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="main_box" height="100">
+				<translation id="title" translation_id="393624" type="use" value="Transfer Funds[COMMENT: Finances League specific panel; FR 10982']" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="label" id="ratt" auto_size="vertical" font="label" colour="faded text" />
+
+						<widget class="label" id="ratv" alignment="left,centre_y" auto_size="vertical" />
+
+						<widget class="horizontal_percentage_bar" id="ratb" height="10" />
+
+					</container>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="label" id="tfat" auto_size="vertical" font="label" colour="faded text" />
+						
+						<widget class="cash_cell" id="tfav" alignment="left,centre_y" ccrs="8" auto_size="vertical">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Ctfu" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+						</widget>
+
+					</container>
+
+				</container>
+
+			</container>
+
+			<container class="main_box" height="300" id="mls2">
+				<translation id="title" translation_id="416332" type="use" value="General Allocation Money[COMMENT: FR 16538; MLS specific]" />
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="Calg" />
+							<integer id="set_property" value="hidn" />
+						</record>
+					</list>
+				</record>
+
+				<record id="default_properties" auto_size="vertical" offset="0" gap="0" inset="0" />
+
+				<container class="vertical_arrange_container">
+					<widget class="label" auto_size="vertical" font="label" colour="faded text">
+						<translation id="text" translation_id="416333" type="use" value="Available now[COMMENT: Finances League specific panel]" />
+					</widget>
+
+					<widget class="cash_cell" id="Cgam" alignment="left" auto_size="vertical" ccrs="4">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Cgam" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<container class="vertical_arrange_container">
+					<widget class="label" auto_size="vertical" font="label" colour="faded text">
+						<translation id="text" translation_id="416334" type="use" value="Available at season start[COMMENT: Finances League specific panel]" />
+					</widget>
+
+					<widget class="cash_cell" id="Cgas" alignment="left" auto_size="vertical" ccrs="4">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Cgas" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<container class="vertical_arrange_container">
+					<widget class="label" auto_size="vertical" font="label" colour="faded text">
+						<translation id="text" translation_id="491870" type="use" value="Awarded/Traded In[COMMENT: AREA: Trades MLS; SUB-AREA: Finances; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Finances League specific panel; MLS specific]" />
+					</widget>
+
+					<widget class="cash_cell" id="Cgai" alignment="left" auto_size="vertical" ccrs="4">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Cgai" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<container class="vertical_arrange_container">
+					<widget class="label" auto_size="vertical" font="label" colour="faded text">
+						<translation id="text" translation_id="451414" type="use" value="Used/Traded Out[COMMENT: Finances League specific panel; MLS specific to show the salary used or traded out so far this season, revised from ID 416336 to more accurately reflect the league's rules here]" />
+					</widget>
+
+					<widget class="cash_cell" id="Cgao" alignment="left" auto_size="vertical" ccrs="4">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Cgao" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<container class="vertical_arrange_container">
+					<widget class="label" auto_size="vertical" font="label" colour="faded text">
+						<translation id="text" translation_id="383256" type="use" value="Awarded as prize money[COMMENT: Finances League specific panel; FR 10982']" />
+					</widget>
+
+					<widget class="cash_cell" id="Capm" alignment="left" auto_size="vertical" ccrs="4">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Capm" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+
+			</container>
+
+			<container class="main_box" id="brsp">
+				<translation id="title" translation_id="416337" type="use" value="Targeted Allocation Money[COMMENT: COMMENT: MLS trade panel; targeted allocation money are another tradeable item different from the general allocation money]" />
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<record id="default_properties" auto_size="vertical" offset="0" gap="0" inset="0" />
+				
+
+				<container class="vertical_arrange_container">
+					<widget class="label" auto_size="vertical" font="label" colour="faded text">
+						<translation id="text" translation_id="416333" type="use" value="Available now[COMMENT: Finances League specific panel]" />
+					</widget>
+
+					<widget class="cash_cell" id="Ctam" alignment="left" auto_size="vertical" ccrs="4">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Ctam" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<container class="vertical_arrange_container">
+					<widget class="label" auto_size="vertical" font="label" colour="faded text">
+						<translation id="text" translation_id="416334" type="use" value="Available at season start[COMMENT: Finances League specific panel]" />
+					</widget>
+
+					<widget class="cash_cell" id="Ctas" alignment="left" auto_size="vertical" ccrs="4">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Ctas" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<container class="vertical_arrange_container">
+					<widget class="label" auto_size="vertical" font="label" colour="faded text">
+						<translation id="text" translation_id="491870" type="use" value="Awarded/Traded In[COMMENT: AREA: Trades MLS; SUB-AREA: Finances; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Finances League specific panel; MLS specific]" />
+					</widget>
+
+					<widget class="cash_cell" id="Ctai" alignment="left" auto_size="vertical" ccrs="4">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Ctai" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<container class="vertical_arrange_container">
+					<widget class="label" auto_size="vertical" font="label" colour="faded text">
+						<translation id="text" translation_id="451414" type="use" value="Used/Traded Out[COMMENT: Finances League specific panel; MLS specific to show the salary used or traded out so far this season, revised from ID 416336 to more accurately reflect the league's rules here]" />
+					</widget>
+
+					<widget class="cash_cell" id="Ctao" alignment="left" auto_size="vertical" ccrs="4">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Ctao" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

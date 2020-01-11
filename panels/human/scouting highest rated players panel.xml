@@ -1,0 +1,77 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="table" id="hrpt" mode="fill_rows, stripe_rows" row_height="60" layout="80,-1,50,55,40,80" hidden="true">
+
+		<flags id="row_appearance" value="tables/custom/filled/normal/row" />
+		<flags id="stripe_appearance" value="tables/custom/filled/alternate/row" />
+
+		<boolean id="save_session_state" value="true" />
+		<boolean id="sdst" value="true" />
+
+		<list id="column_widget_properties">
+			<record indx="0" alignment="left,centre_y" />
+			<record indx="1" alignment="left,centre_y" />
+			<record indx="2" alignment="left,centre_y" />
+		</list>
+
+		<list id="column_table_properties">
+			<record index="0">
+				<record id="column_heading">
+					<translation id="text" translation_id="255666" type="use" value="Rec[COMMENT - person list view column heading; short for Scout Recommendation]" />
+					<translation id="hint" translation_id="251864" type="use" value="Scout recommendation[COMMENT - person list view column heading hint]" />
+				</record>
+				<flags id="minimum_width" value="80" />
+				<integer id="auto_hide_priority" value="0" />
+			</record>
+			<record index="1">
+				<record id="column_heading">
+					<translation id="text" translation_id="227765" type="use" value="Name[comment - Person Name]" />
+					<translation id="hint" translation_id="247229" type="use" value="Player Name" />
+				</record>
+				<flags id="minimum_width" value="150" />
+				<integer id="auto_hide_priority" value="0" />
+			</record>
+			<record index="2">
+				<record id="column_heading">
+					<translation id="text" translation_id="395147" type="use" value="B. Pos[COMMENT: FR 10252; manager home - scout reports panel; column heading; abbreviation of the player's 'Best Position']" />
+					<translation id="hint" translation_id="332515" type="use" value="Best Position" />
+				</record>
+				<flags id="minimum_width" value="50" />
+				<integer id="auto_hide_priority" value="0" />
+			</record>
+			<record index="3">
+				<record id="column_heading">
+					<flags id="alignment" value="left,centre_y" />
+					<translation id="text" translation_id="227806" type="use" value="Value" />
+					<translation id="hint" translation_id="247495" type="use" value="Player Value" />
+				</record>
+				<flags id="minimum_width" value="55" />
+				<integer id="auto_hide_priority" value="50" />
+			</record>
+			<record index="4">
+				<record id="column_heading">
+					<flags id="alignment" value="left,centre_y" />
+					<translation id="text" translation_id="227770" type="use" value="Age[comment - person age]" />
+					<translation id="hint" translation_id="229407" type="use" value="Age" />
+				</record>
+				<flags id="minimum_width" value="40" />
+				<integer id="auto_hide_priority" value="60" />
+			</record>
+			<record index="5">
+				<record id="column_heading">
+					<flags id="alignment" value="left,centre_y" />
+					<translation id="text" translation_id="337978" type="use" value="L.R.Date[COMMENT: label text for last scout report (Last Report) date, keep short and abbreviated for space reasons]" />
+					<translation id="hint" translation_id="337980" type="use" value="Last Scout Report Match Date[COMMENT: hint text for when a scout report was last filed on a player]" />
+				</record>
+				<flags id="minimum_width" value="80" />
+				<integer id="auto_hide_priority" value="70" />
+			</record>
+		</list>
+
+	</widget>
+
+	<widget class="label" id="nhrp" hidden="true" auto_size="all">
+		<translation id="text" translation_id="350704" type="use" value="A scout report is not yet available.[COMMENT: scouting assignments; text for when a report has been requested but not yet published]" />
+	</widget>
+</panel>

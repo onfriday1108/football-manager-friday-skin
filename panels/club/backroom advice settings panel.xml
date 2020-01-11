@@ -1,0 +1,175 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	    <container class="scrolling_box">
+		<container id="bakA" draw_horizontal_dividers="true">
+  		<attachment_group class="vertical_arrange_autosize" />
+		<container class="main_box" name="transfers contracts" navigation_container="true">
+			<translation id="title" translation_id="491842" type="use" value="Transfers and Contracts[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+  			<attachment_group class="vertical_arrange_autosize" />
+			<container class="table" id="TCtb" name="tc table" layout="-1,-1,-1,-1" mode="show_bullets, select_rows" auto_size_rows="true" auto_size="vertical">
+
+				<list id="column_table_properties">
+					<record id="cate" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416313" type="use" value="Advice Category[COMMENT: FR 17000; backroom advice settings table heading]" />
+							<translation id="hint" translation_id="420564" type="use" value="The area of advice being covered.[COMMENT: FR 17000; backroom advice settings table heading; hint for category advice column]" />
+						</record>
+						<record id="widget_info" class="label" />
+					</record>
+					<record id="gadf" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416314" type="use" value="Get Advice From[COMMENT: FR 17000; backroom advice settings table heading; choose a staff member to give advice to the user]" />
+							<translation id="hint" translation_id="420565" type="use" value="Who provides the advice.[COMMENT: FR 17000; backroom advice settings table heading; hint for advice provider column]" />
+						</record>
+						<record id="widget_info" class="popup_table_button" row_spacing="2" auto_size="vertical">
+							<translation id="text" translation_id="247153" type="use" value="None Selected" />
+							<record id="table_properties" layout="180,140,50,50" fixed_size_rows="true" row_height="25" auto_size_maximum_height="400">
+								<list id="column_table_properties">
+									<!-- Default columns -->
+									<record id="text">
+										<record id="column_heading" alignment="left,centre_y">
+											<translation id="text" translation_id="229689" type="use" value="Name" />
+										</record>
+										<record id="widget_info" class="label" alignment="left,centre_y" />
+									</record>
+									<record id="Pcjo">
+										<record id="column_heading" alignment="left,centre_y">
+											<translation id="text" translation_id="227964" type="use" value="Job" />
+										</record>
+										<record id="widget_info" class="label" alignment="left,centre_y" />
+									</record>
+								</list>
+							</record>
+						</record>
+					</record>
+					<record id="emal" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416315" type="use" value="Email Report[COMMENT: FR 17000; backroom advice settings table heading; how often to generate a report]" />
+							<translation id="hint" translation_id="420566" type="use" value="Determine the frequency with which reports are delivered.[COMMENT: FR 17000; backroom advice settings table heading; hint for email advice column]" />
+						</record>
+						<record id="widget_info" class="popup_button" />
+					</record>
+					<record id="cntx" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416316" type="use" value="Contextual Advice[COMMENT: FR 17000; backroom advice settings table heading; should this advice appear contextually throughout the game]" />
+							<translation id="hint" translation_id="420567" type="use" value="Toggle whether advice should be delivered contextually throughout.[COMMENT: FR 17000; backroom advice settings table heading; hint for contextual advice column]" />
+						</record>
+						<record id="widget_info" class="check_box" />
+					</record>
+				</list>
+			</container>
+		</container>
+		<container class="main_box" name="player reports" navigation_container="true">
+			<translation id="title" translation_id="491843" type="use" value="Player Reports[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+  			<attachment_group class="vertical_arrange_autosize" />
+			<container class="table" id="PRtb" name="pr table" layout="-1,-1,-1,-1" mode="show_bullets, select_rows" auto_size_rows="true" auto_size="vertical">
+				<list id="column_table_properties">
+					<record id="cate" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416313" type="use" value="Advice Category[COMMENT: FR 17000; backroom advice settings table heading]" />
+							<translation id="hint" translation_id="420564" type="use" value="The area of advice being covered.[COMMENT: FR 17000; backroom advice settings table heading; hint for category advice column]" />
+						</record>
+						<record id="widget_info" class="label" />
+					</record>
+					<record id="gadf" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416314" type="use" value="Get Advice From[COMMENT: FR 17000; backroom advice settings table heading; choose a staff member to give advice to the user]" />
+							<translation id="hint" translation_id="420565" type="use" value="Who provides the advice.[COMMENT: FR 17000; backroom advice settings table heading; hint for advice provider column]" />
+						</record>
+						<record id="widget_info" class="popup_table_button" row_spacing="2" auto_size="vertical">
+							<translation id="text" translation_id="247153" type="use" value="None Selected" />
+							<record id="table_properties" layout="180,140,50,50" fixed_size_rows="true" row_height="25" auto_size_maximum_height="400">
+								<list id="column_table_properties">
+									<!-- Default columns -->
+									<record id="text">
+										<record id="column_heading" alignment="left,centre_y">
+											<translation id="text" translation_id="229689" type="use" value="Name" />
+										</record>
+										<record id="widget_info" class="label" alignment="left,centre_y" />
+									</record>
+									<record id="Pcjo">
+										<record id="column_heading" alignment="left,centre_y">
+											<translation id="text" translation_id="227964" type="use" value="Job" />
+										</record>
+										<record id="widget_info" class="label" alignment="left,centre_y" />
+									</record>
+								</list>
+							</record>
+						</record>
+					</record>
+					<record id="emal" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416315" type="use" value="Email Report[COMMENT: FR 17000; backroom advice settings table heading; how often to generate a report]" />
+							<translation id="hint" translation_id="420566" type="use" value="Determine the frequency with which reports are delivered.[COMMENT: FR 17000; backroom advice settings table heading; hint for email advice column]" />
+						</record>
+						<record id="widget_info" class="popup_button" />
+					</record>
+					<record id="cntx" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416316" type="use" value="Contextual Advice[COMMENT: FR 17000; backroom advice settings table heading; should this advice appear contextually throughout the game]" />
+							<translation id="hint" translation_id="420567" type="use" value="Toggle whether advice should be delivered contextually throughout.[COMMENT: FR 17000; backroom advice settings table heading; hint for contextual advice column]" />
+						</record>
+						<record id="widget_info" class="check_box" />
+					</record>
+				</list>
+
+			</container>
+		</container>
+		<container class="main_box" name="misc" navigation_container="true">
+			<translation id="title" translation_id="338005" type="use" value="Misc[COMMENT: club screen - title for a miscellaneous activities submenu]" />
+  			<attachment_group class="vertical_arrange_autosize" />
+			<container class="table" id="misc" name="misc table" layout="-1,-1,-1,-1" mode="show_bullets, select_rows" auto_size_rows="true" auto_size="vertical">
+				<list id="column_table_properties">
+					<record id="cate" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416313" type="use" value="Advice Category[COMMENT: FR 17000; backroom advice settings table heading]" />
+							<translation id="hint" translation_id="420564" type="use" value="The area of advice being covered.[COMMENT: FR 17000; backroom advice settings table heading; hint for category advice column]" />
+						</record>
+						<record id="widget_info" class="label" />
+					</record>
+					<record id="gadf" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416314" type="use" value="Get Advice From[COMMENT: FR 17000; backroom advice settings table heading; choose a staff member to give advice to the user]" />
+							<translation id="hint" translation_id="420565" type="use" value="Who provides the advice.[COMMENT: FR 17000; backroom advice settings table heading; hint for advice provider column]" />
+						</record>
+						<record id="widget_info" class="popup_table_button" row_spacing="2" auto_size="vertical">
+							<translation id="text" translation_id="247153" type="use" value="None Selected" />
+							<record id="table_properties" layout="180,140,50,50" fixed_size_rows="true" row_height="25" auto_size_maximum_height="400">
+								<list id="column_table_properties">
+									<!-- Default columns -->
+									<record id="text">
+										<record id="column_heading" alignment="left,centre_y">
+											<translation id="text" translation_id="229689" type="use" value="Name" />
+										</record>
+										<record id="widget_info" class="label" alignment="left,centre_y" />
+									</record>
+									<record id="Pcjo">
+										<record id="column_heading" alignment="left,centre_y">
+											<translation id="text" translation_id="227964" type="use" value="Job" />
+										</record>
+										<record id="widget_info" class="label" alignment="left,centre_y" />
+									</record>
+								</list>
+							</record>
+						</record>
+					</record>
+					<record id="emal" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416315" type="use" value="Email Report[COMMENT: FR 17000; backroom advice settings table heading; how often to generate a report]" />
+							<translation id="hint" translation_id="420566" type="use" value="Determine the frequency with which reports are delivered.[COMMENT: FR 17000; backroom advice settings table heading; hint for email advice column]" />
+						</record>
+						<record id="widget_info" class="popup_button" />
+					</record>
+					<record id="cntx" sort_disabled="true">
+						<record id="column_heading">
+							<translation id="text" translation_id="416316" type="use" value="Contextual Advice[COMMENT: FR 17000; backroom advice settings table heading; should this advice appear contextually throughout the game]" />
+							<translation id="hint" translation_id="420567" type="use" value="Toggle whether advice should be delivered contextually throughout.[COMMENT: FR 17000; backroom advice settings table heading; hint for contextual advice column]" />
+						</record>
+						<record id="widget_info" class="check_box" />
+					</record>
+				</list>
+			</container>
+		</container>
+	</container>
+</container>
+</panel>

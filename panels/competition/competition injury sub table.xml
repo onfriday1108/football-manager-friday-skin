@@ -1,0 +1,26 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+
+	<integer id="column_span" value="4"/>
+
+	<!-- main table -->
+	<widget class="table" id="cisp" mode="fill_rows"  layout="-6, -5, 80, 160" auto_size_rows="true" fixed_size_rows="false" row_spacing="0" auto_size="vertical">
+		<!-- column display properties -->
+		<list id="column_table_properties">
+			<record indx="0" id="play"/>
+			<record indx="1" id="cond" top="2" bottom="2" />
+			<record indx="2" id="date" right="4"/>
+     		<record indx="3" id="expe" right="4"/>
+		</list>
+
+		<record id="default_properties" alignment="left,centre_y" />
+
+		<list id="column_widget_properties">
+			<record indx="1" spec="text"/>
+			<record indx="2" spec="text"/>
+			<record indx="3" spec="text"/>
+		</list>
+	</widget>
+</panel>

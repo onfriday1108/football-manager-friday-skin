@@ -1,0 +1,19 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+  <boolean id="should_force_refresh" value="true"/>
+
+  <!--dynamic image here please-->
+  <container id="Dyni" height="117" width="160">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  </container>
+
+  <!-- league table link -->
+  <widget class="client_object_label" id="tblk" auto_size="vertical" font="title" alignment="left, centre_y"/>
+
+  <widget class="horizontal_divider"/>
+
+  <!-- league table -->
+  <widget class="competition_stage_panel" id="lgtb" file="team/team competitions overview competition stage panel" height="320"/>
+  
+</panel>

@@ -1,0 +1,18 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- titled box containing pitch-->
+	<widget class="inner_subtle_box" id="tlBX" >
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- the pitch-->
+		<widget	class="pitch_with_tactics" id="pwtc" icon_flags="show_number,show_name_on_hover">
+			<boolean id="vertical" value="false"/>
+			<boolean id="pitch_dont_draw_indicators" value="true"/>
+			<integer id="pitch_override_icon_size" value="3"/>
+			<string id="pitch_kit_icon" value="pitch/icons/dots"/>
+		</widget>
+
+	</widget>
+</panel>

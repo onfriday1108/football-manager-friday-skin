@@ -1,0 +1,7 @@
+<panel height="36">
+  <translation id="hint" translation_id="321152" type="use" value="Team Report[COMMENT: Manager Main/Top Menu; link to team report screen]" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <widget class="picture" id="pict" file="icons/26px/report" image_alignment="centre" red_replacement="sidebar text"/>
+</panel>

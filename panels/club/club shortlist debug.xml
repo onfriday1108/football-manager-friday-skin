@@ -1,0 +1,55 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+		<container class="inner_subtle_box">
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left" horizontal_gap="4" vertical_offset="0" />
+
+			<widget class="text" auto_size="all" auto_size_minimum_height="30" alignment="left,centre_y">
+				<translation id="text" translation_id="229912" type="use" value="Filter" />
+			</widget>
+			
+			<widget class="edit_box" id="nwsf" return_event="chfl" width="300" auto_size="vertical" ignore_leading_space="true" clear_text_event="chfl">
+				<!-- send the text changed event to the clear button: if the text is empty, the clear button is disabled or removed -->
+				<event id="changed_event">
+					<flags id="event_id" value="chtx"/>
+					<flags id="event_target" value="clfl"/>
+				</event>
+			</widget>
+		</container>
+
+		<widget class="spacer" height="10"/>
+
+    <container class="scrolling_box">
+
+      <container>
+        <attachment_group class="vertical_arrange_autosize" />
+
+        <record id="default_properties" auto_size="vertical" />
+
+        <widget class="text" id="dtx1" />
+
+        <widget class="text" id="dtx2" />
+
+        <widget class="text" id="dtx6" />
+
+        <widget class="text" id="dtx3" />
+
+        <widget class="text" id="dtx7" />
+
+        <widget class="text" id="dtx8" />
+
+        <widget class="text" id="dtx4" />
+
+        <widget class="text" id="dtx5" />
+
+      </container>
+
+    </container>
+
+  </container>
+
+</panel>
+

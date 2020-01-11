@@ -1,0 +1,150 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_gap="0" />
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" />
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="10" />
+
+				<container class="vertical_label_value_pair" name="on loan at label pair">
+					<string id="label_widget" value="lnaT" />
+					<string id="value_widget" value="lnaP" />
+					<widget class="text" alignment="centre_y,left" id="lnaT" name="loan at label">
+						<translation id="text" translation_id="301156" type="use" value="On Loan[COMMENT:column header for a column displaying the names of clubs where a player is loaned from or to. Column contents will say 'from Real Madrid' or 'at Getafe' for example.]" />
+					</widget>
+					<container class="client_object_property_panel" id="lnaP" name="loan at value">
+						<string id="property" value="Pcte" />
+						<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+						<record id="dbrp">
+							<string id="get_property" value="objt" />
+							<string id="set_property" value="objt" />
+						</record>
+					</container>
+				</container>
+				<container class="vertical_label_value_pair" name="loan expires label pair">
+					<string id="label_widget" value="lexT" />
+					<string id="value_widget" value="lexP" />
+
+					<widget class="text" alignment="centre_y,left" id="lexT" name="loan expires label">
+						<translation id="text" translation_id="325859" type="use" value="Loan Expires[COMMENT: column heading for a player's loan contract expiry date]" />
+					</widget>
+					<container class="client_object_property_panel" id="lexP" name="loan expires value">
+						<string id="property" value="Pled" />
+						<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" navigation_focus_target="false" />
+						<record id="dbrp">
+							<string id="get_property" value="objt" />
+							<string id="set_property" value="objt" />
+						</record>
+					</container>
+				</container>
+				<container class="vertical_label_value_pair" name="promised playing time label pair">
+					<string id="label_widget" value="pptT" />
+					<string id="value_widget" value="pptP" />
+					<widget class="text" alignment="centre_y,left" id="pptT" name="promised playing timelabel">
+						<translation id="text" translation_id="492002" type="use" value="Agreed Playing Time[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type]" />	</widget>
+					<container class="client_object_property_panel" id="pptP" name="promised playing time value">
+						<string id="property" value="Plte" />
+						<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+						<record id="dbrp">
+							<string id="get_property" value="objt" />
+							<string id="set_property" value="objt" />
+						</record>
+					</container>
+				</container>
+				<container class="vertical_label_value_pair" name="morale label pair">
+					<string id="label_widget" value="morT" />
+					<string id="value_widget" value="morP" />
+
+					<widget class="text" alignment="centre_y,left" id="morT" name="morale label">
+						<translation id="text" translation_id="227839" type="use" value="Morale" />
+
+					</widget>
+					<container class="morale_label" id="morP" name="morale value" auto_size="vertical"  alignment="left,centre_y">
+						<record id="dbrp">
+							<string id="get_property" value="PhrM" />
+							<string id="set_property" value="valu" />
+						</record>
+					</container>
+				</container>
+				<container class="vertical_label_value_pair" name="most recent position label pair">
+					<string id="label_widget" value="mrpT" />
+					<string id="value_widget" value="mrpP" />
+					<widget class="text" alignment="centre_y,left" id="mrpT" name="most recent position label" >
+						<translation id="text" translation_id="492051" type="use" value="Most Recent Position[COMMENT: AREA: development centre; SUB-AREA: Dev Centre Team Overview; TONE: formal; FR-BN 28434; NOTE: Position player has most recently played in]" />
+					</widget>
+					<container class="position_label" id="mrpP" name="most recent position value" alignment="left,centre_y" auto_size="vertical" navigation_focus_target="false">
+						<record id="dbrp">
+							<string id="get_property" value="PlPS" />
+							<string id="set_property" value="value" />
+						</record>
+					</container>
+				</container>
+			</container>
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="10" />
+			<container class="vertical_label_value_pair" name="apps label pair">
+				<string id="label_widget" value="appT" />
+				<string id="value_widget" value="appP" />
+			
+				<widget class="text" alignment="centre_y,left" id="appT" name="apps label">
+					<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
+				</widget>
+				<container class="client_object_property_panel" id="appP" name="apps value">
+					<string id="property" value="PSpE" />
+					<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+					<record id="dbrp">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+				</container>
+			</container>
+			<container class="vertical_label_value_pair" name="wage contributionlabel pair">
+				<string id="label_widget" value="wgcT" />
+				<string id="value_widget" value="wgcP" />
+				<widget class="text" alignment="centre_y,left" id="wgcT" name="wage contirbution label">
+					<translation id="text" translation_id="242405" type="use" value="Wage Contribution" />
+				</widget>
+				<container class="client_object_property_panel" id="wgcP" name="wage contribution value">
+					<string id="property" value="Pwcn" />
+					<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+					<record id="dbrp">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+				</container>
+			</container>
+			<container class="vertical_label_value_pair" name="playing time label pair">
+				<string id="label_widget" value="PptT" />
+				<string id="value_widget" value="PptP" />
+
+				<widget class="text" alignment="centre_y,left" id="PptT" name=" playing timelabel">
+					<translation id="text" translation_id="423877" type="use" value="Playing Time[COMMENT: FR 14013, contract promise type]" />
+			
+				</widget>
+				<container class="client_object_property_panel" id="PptP" name="playing time value">
+					<string id="property" value="Pltp" />
+					<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+					<record id="dbrp">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+				</container>
+			</container>
+			<container class="vertical_label_value_pair" name="loan happiness label pair">
+				<string id="label_widget" value="lnhT" />
+				<string id="value_widget" value="lnhP" />
+			
+				<widget class="text" alignment="centre_y,left" id="lnhT" name="loan happiness label">
+					<translation id="text" translation_id="376512" type="use" value="Loan Happiness[COMMENT: person properties; text header for loan report news item]" />
+				</widget>
+				<container class="client_object_property_panel" id="lnhP" name="loan happiness value">
+					<string id="property" value="Phps" />
+					<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+					<record id="dbrp">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

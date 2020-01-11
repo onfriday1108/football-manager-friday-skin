@@ -1,0 +1,17 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+	<!-- content area -->
+	<container>
+		<attachment_group class="vertical_arrange_autosize" />
+
+		<widget class="inbox_body_text" id="bdtx" colour="inbox_text">
+
+		</widget>
+
+		<widget class="contract_offer_information_panel" id="ofbx" file="person/contract information news content panel">
+
+		</widget>
+
+	</container>
+
+</panel>

@@ -1,0 +1,68 @@
+<panel height="130">
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+  
+  <string id="skin_style" value="subtle box"/>
+
+  <container class="main_box" id="titl">
+    <layout class="arrange_horizontal_attachment" layout="125, -1" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <!--icon/mugshot-->
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+      <!--icon-->
+      <widget class="picture" id="icon" scale_picture="true" width="62">
+        <layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+      </widget>
+
+      <!--mugshot-->
+      <widget class="object_portrait_picture" id="tmbd" width="80" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+        <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="objt"/>
+              <integer id="set_property" value="objt"/>
+            </record>
+          </list>
+        </record>
+      </widget>
+    </container>
+
+    <!--info-->
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+      <!--name-->
+      <widget class="person_button" id="namV" icon_enabled="false" auto_size="vertical" style="semi_bold">
+        <record id="object_property">
+          <integer id="get_property" value="Pnms"/>
+        </record>
+      </widget>
+
+      <!--age-->
+      <widget class="age_label" id="PSaV" icon_enabled="false" auto_size="vertical" colour="faded text">
+        <record id="object_property">
+          <integer id="get_property" value="PSag"/>
+        </record>
+      </widget>
+
+      <!--int apps-->
+      <widget class="international_appearances_label" id="PisV" icon_enabled="false" auto_size="vertical" int_apps_label_format="10" colour="faded text">
+        <record id="object_property">
+          <integer id="get_property" value="Pist"/>
+        </record>
+      </widget>
+
+      <!--club team-->
+      <widget class="team_button" id="PctV" auto_size="vertical" colour="faded text">
+        <string id="no_object_text" value=""/>
+        <string id="format" value="[%team#1-short]" />
+        <record id="object_property" get_property="Pcte"/>
+      </widget>
+    </container>
+  </container>
+</panel>

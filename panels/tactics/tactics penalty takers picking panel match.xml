@@ -1,0 +1,36 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="vertical_split_container" starting_layout="-4, -3" save_default_state="true" min_width_left="300" min_width_right="300">
+
+		<widget class="match_team_squad_panel" id="tesq" file="match/match team squad penalty views" />
+
+		<container class="main_transparent_box">
+
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="right" apply_to_children="true" />
+
+			<!-- buttons area -->
+			<!--auto pick button-->
+			<widget class="subtle_button" id="AuPk" click_event="AuPk" auto_size="all" appearance="buttons/custom/match/standard/normal/button" font="fonts/button">
+				<translation id="text" translation_id="329715" type="use" value="Auto-Pick[COMMENT: button label used to auto-pick penalty takers for a penalty shootout]" />
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,25" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+
+				<!--set piece takers list-->
+				<widget class="set_piece_takers_panel" id="take" file="tactics/set piece takers match" AlLl="false"/>
+
+				<widget class="check_box" id="2Scr" click_event="ChTS">
+					<translation id="text" translation_id="451448" type="use" value="Allow player who has scored 2 goals to take penalty[COMMENT: Checkbox related to penalty takers; Allowing the player who scored two goals to take the penalty]" />
+				</widget>
+
+			</container>
+
+		</container>
+	</container>
+
+</panel>

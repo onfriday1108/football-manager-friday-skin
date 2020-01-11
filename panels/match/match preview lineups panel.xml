@@ -1,0 +1,196 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<boolean id="show_on_timer" value="true"/>
+	
+	<container class="main_box" appearance="boxes/custom/match/fade/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="10"  />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<!--top - match details-->
+		<container height="48" >
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="20" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--comp picture-->
+			<widget class="object_portrait_picture" id="fxCo" scale_picture="true" width="50">
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre_x,top" />
+				<record id="object_property">
+					<integer id="get_property" value="fxCo" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<container width="550">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" gap="-5"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!-- Division -->
+				<widget class="fixture_name_text" id="FxNM" font="title" size="xlarge" auto_size="vertical" style="shadowed" colour="white">
+					<record id="object_property">
+						<integer id="get_property" value="FxNm" />
+					</record>
+				</widget>
+
+				<!--time/place-->
+				<widget class="match_conditions_panel" id="matc" file="">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+
+					<!--time, place-->
+					<widget class="text" id="tipl" alignment="left,centre_y" auto_size="horizontal" colour="white"/>
+
+				</widget>
+			</container>
+
+			<!--weather icon-->
+			<widget class="weather_indicator_panel_horizontal" id="FxWe" width="100" colour="white">
+				<record id="object_property">
+					<integer id="get_property" value="FxWe" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</widget>
+		</container>
+
+		<container id="htbx">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+
+				<animation class="scale_animation" trigger_id="hidden" trigger_value="false" start_value="0,0" end_value="1,1" centre_point="0.5,1" duration="0.5" end_mode="stop"/>
+				<animation class="fade_on_hide_animation" trigger_id="hidden" trigger_value="false" start_value="0.0" duration="0.3" end_mode="stop"/>
+
+				<!-- Home Team Line Up -->
+				<container id="hpco">
+					<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2" apply_to_children="true" />
+
+					<container width="784">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="picture" id="hpic" default_path="boxes/custom/match/lineup pitch/" file="boxes/custom/match/lineup pitch/paper" image_alignment="centre" height="672" scale_picture="true" keep_aspect_ratio="false" >
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						</widget>
+
+						<container>
+							<layout class="arrange_vertical_attachment" layout="-1,25" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="25" apply_to_children="true" />
+
+							<widget class="pitch_with_tactics" id="hpwt" vertical="true" icon_flags="show_name,show_number,colour_names_for_team,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="tactics/tactics icon preview info panel" pitch_draw_goals="false" pitch_draw_markings="false" pitch_draw_grass="false" pitch_line_colour="transparent" pitch_perspective="0.25" pitch_draw_lines="false" pitch_touchline_width_percentage="40">
+								<integer id="tactics_creator_index" value="2" />
+								<boolean id="pitch_dont_draw_indicators" value="true" />
+								<boolean id="pitch_show_captain" value="true" />
+								<integer id="pitch_vertical_padding" value="0"/>
+								<flags id="pitch_alignment" value="can_scale"/>
+
+								<!-- Restrict the max icons size to give more consistency between different formations-->
+								<real id="maximum_player_size" value="0.2"/>
+							</widget>
+
+							<!-- formation text -->
+							<widget class="label" id="htFT" height="30" colour="white" style="semi_bold" alignment="centre"/>
+						</container>
+
+					</container>
+				</container>
+
+				<container id="apco">
+					<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2" apply_to_children="true" />
+
+					<container width="784">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="picture" id="apic" default_path="boxes/custom/match/lineup pitch/" file="boxes/custom/match/lineup pitch/paper" image_alignment="centre" height="672" scale_picture="true" keep_aspect_ratio="false" >
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						</widget>
+
+						<container>
+							<layout class="arrange_vertical_attachment" layout="-1,25" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="25" apply_to_children="true" />
+
+							<widget class="pitch_with_tactics" id="apwt" vertical="true" icon_flags="show_name,show_number,colour_names_for_team,show_captain,dont_fade_icons,dont_show_team_names,show_preview_info_popup" player_icon_file="tactics/tactics icon preview info panel" pitch_draw_goals="false" pitch_draw_markings="false" pitch_draw_grass="false" pitch_line_colour="transparent" pitch_perspective="0.25" pitch_draw_lines="false" pitch_touchline_width_percentage="40">
+								<integer id="tactics_creator_index" value="2" />
+								<boolean id="pitch_dont_draw_indicators" value="true" />
+								<boolean id="pitch_show_captain" value="true" />
+								<integer id="pitch_vertical_padding" value="0"/>
+								<flags id="pitch_alignment" value="can_scale"/>
+
+								<!-- Restrict the max icons size to give more consistency between different formations-->
+								<real id="maximum_player_size" value="0.2"/>
+							</widget>
+
+							<!-- formation text -->
+							<widget class="label" id="atFT" height="30" colour="white" style="semi_bold" alignment="centre"/>
+						</container>
+					</container>
+				</container>
+
+			</container>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+					<widget class="subs_bench_panel" id="hsub" file="tactics/subs bench panel match preview lineups"/>
+
+					<container id="hptx">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal"  />
+
+						<widget class="spacer" height="10" />
+
+						<!--explanatory text-->
+						<widget class="text" alignment="centre" auto_size="vertical" size="12" >
+							<translation id="text" translation_id="342017" type="use" value="Awaiting Line Up...[COMMENT: text displayed instead of an empty pitch before the match starts which we're waiting for the team lineups to be submitted]" />
+						</widget>
+
+					</container>
+				</container>
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+					<widget class="subs_bench_panel" id="asub" file="tactics/subs bench panel match preview lineups"/>
+
+					<!--still awaiting lineup text-->
+					<container id="aptx">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<widget class="spacer" height="10" />
+
+						<!--explanatory text-->
+						<widget class="text" alignment="centre" auto_size="vertical" size="12" >
+							<translation id="text" translation_id="342017" type="use" value="Awaiting Line Up...[COMMENT: text displayed instead of an empty pitch before the match starts which we're waiting for the team lineups to be submitted]" />
+						</widget>
+
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,47 @@
+<panel>
+
+	<translation id="title" translation_id="229361" type="use" value="Clubs" />
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container class="main_box" force_title_borders="true" id="plti" alignment="left">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- buttons area -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="TitL" navigation_focus_target="false" />
+			<!-- view button -->
+			<widget class="view_menu_popup" id="plvi" />
+		</container>
+
+		<!-- buttons area -->
+		<container id="btna" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<!-- filter menu -->
+			<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="all" embed_in_frame="true"/>
+
+		</container>
+
+		<widget class="client_object_list_table" id="pltb" mode="fill_rows, stripe_rows, printable, keyboard, select_rows, select_multiple, show_bullets">
+			<boolean id="save_session_state" value="true" />
+
+			<boolean id="deferred_scrolling" value="true" />
+			<integer id="deferred_scrolling_timeout" value="400" />
+
+			<list id="column_widget_properties">
+				<record indx="1" navigation_focus_target="false" />
+				<record indx="2" navigation_focus_target="false" />
+				<record indx="3" navigation_focus_target="false" />
+				<record indx="5" navigation_focus_target="false" />
+				<record indx="6" navigation_focus_target="false" />
+			</list>
+		</widget>
+
+	</container>
+
+</panel>

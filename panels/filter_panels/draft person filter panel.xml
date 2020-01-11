@@ -1,0 +1,107 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="save_session_state" value="true"/>
+
+	<!-- main area -->
+	<container id="aopn">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<container class="main_box" appearance="none">
+			<layout class="arrange_vertical_attachment" layout="55, 4, -1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<container>
+					<layout class="fit_children_attachment" alignment="horizontal" gap="0"/>
+					<layout class="arrange_vertical_attachment" layout="15, 30" offset="0" gap="5"/>
+					<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0"/>
+
+					<widget class="label" alignment="left" auto_size="horizontal" font="title">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="3"/>
+						<translation id="text" translation_id="333736" type="use" value="Conditions[COMMENT: scouting assigments; details of scouting assignment(s) and specific conditions requested therein]"/>
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0"/>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+						<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+						<widget class="filter_edit_box" id="adce" appearance="edit boxes/custom/selection/box" alignment="left,centre_y" height="30" width="150" flatten_menu_items="true" clear_text_on_select="true" forward_selection_event="true">
+							<flags id="changed_event" value="chct"/>
+							<flags id="select_on_focus" value="true"/>
+							<boolean id="validate_string" value="true"/>
+						</widget>
+
+						<widget class="popup_button" id="addc" auto_size="horizontal" fixed="true" height="30" appearance="buttons/subtle/split/right/button">
+							<event id="menu_layout_notification_event" event_id="adtg" event_target="addc"/>
+						</widget>
+
+						<widget class="subtle_button" id="qsbt" click_event="scdi" auto_size="horizontal" height="30">
+							<translation id="text" translation_id="316605" type="use" value="Quick Search"/>
+						</widget>
+					</container>
+				</container>
+
+				<container width="10"/>
+
+				<widget class="vertical_divider"/>
+
+				<container width="6"/>
+
+				<container>
+					<layout class="fit_children_attachment" alignment="horizontal" gap="0"/>
+					<layout class="arrange_vertical_attachment" layout="15, 30" offset="0" gap="5"/>
+					<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0"/>
+
+					<widget class="label" alignment="left" auto_size="horizontal" font="title">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="3"/>
+						<translation id="text" translation_id="229822" type="use" value="Attributes"/>
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+						<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+						<widget class="button" id="attr" auto_size="horizontal" icon="icons/16px/attributes" height="30">
+							<translation id="hint" translation_id="321116" type="use" value="Show the full list of attributes that your search can be narrowed by[COMMENT: player search; button label hint for attribute chooser]"/>
+							<translation id="text" translation_id="247188" type="use" value="Pick"/>
+							<record id="click_event">
+								<flags id="event_id" value="attr"/>
+							</record>
+						</widget>
+
+						<container width="5"/>
+
+						<widget class="icon_button" id="att-" alignment="centre" icon_alignment="centre" click_event="at-e" width="30" icon="icons/16px/minus" height="30">
+							<record id="primary_icon_properties" red_replacement="normal_icon"/>
+						</widget>
+						<widget class="icon_button" id="att+" alignment="centre" icon_alignment="centre" click_event="at+e" width="30" icon="icons/16px/plus" height="30">
+							<record id="primary_icon_properties" red_replacement="normal_icon"/>
+						</widget>
+					</container>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="15, 30" offset="0" gap="5"/>
+					<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0"/>
+
+					<!-- dummy -->
+					<widget class="label" auto_size="horizontal" alignment="left,centre_y"/>
+					<widget class="popup_button" id="atmw" select_event="atme" auto_size="horizontal" height="30"/>
+				</container>
+			</container>
+
+			<widget class="horizontal_divider" />
+
+			<!-- table containing filter compare rules -->
+			<widget class="filter_table" id="fcrt" show_compare_rules="true" auto_update_filter="true" mode="fill_rows" row_spacing="2"/>
+		</container>
+	</container>
+
+</panel>

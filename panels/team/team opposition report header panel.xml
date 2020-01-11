@@ -1,0 +1,59 @@
+﻿<panel>
+	<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-3,-2,-3" horizontal_offset="0" horizontal_gap="0" vertical_offset="0" />
+
+	<container class="client_object_viewer_xml_panel" id="tbin">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+		<widget class="team_button" id="optm" alignment="left,centre_y" auto_size="all" style="bold" font="text" mode="1">
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+			</record>
+		</widget>
+
+		<widget class="division_position_button" id="opps" display_format="1" colour="faded text" alignment="left,centre_y" size="8" auto_size="vertical">
+			<record id="object_property">
+				<integer id="get_property" value="Tpos" />
+			</record>
+		</widget>
+
+	</container>
+
+	<container class="client_object_viewer_xml_panel" id="otbn">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+		<widget class="label" font="label" alignment="left,centre_y" auto_size="all">
+			<translation id="text" translation_id="344616" type="use" value="Previous Meetings[COMMENT: title for a box containing information on previous meetings between two sides]" />
+		</widget>
+
+		<widget class="team_form_text" id="prme" alignment="left,centre_y" style="semi_bold" auto_size="vertical">
+			<record id="object_property">
+				<integer id="get_property" value="Tpmf" />
+			</record>
+		</widget>
+
+	</container>
+
+	<container class="client_object_viewer_xml_panel" id="fbin">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" horizontal_offset="0" vertical_offset="0" />
+
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+
+
+		<widget class="stadium_button" id="fxsd" icon_alignment="centre" alignment="centre" auto_size="vertical" colour="text" style="bold" font="text">
+      <translation id="no_object_text" translation_id="227505" type="use" value="Unknown Stadium"/>
+			<record id="object_property">
+				<integer id="get_property" value="stad" />
+			</record>
+		</widget>
+
+		<widget class="weather_indicator_panel" id="fxwe" alignment="left,centre_y" width="60" file="match/weather indicator with temp">
+			<record id="object_property">
+				<integer id="get_property" value="FxWe" />
+			</record>
+		</widget>
+
+	</container>
+</panel>

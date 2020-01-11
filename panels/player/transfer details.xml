@@ -1,0 +1,112 @@
+<panel>
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+	<!-- the transfer details collapsable panel -->
+	<widget class="collapsable_box" id="tdep" allow_single_bar_click="true" disable_animations="true">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" />
+
+		<boolean id="save_session_state" value="true" />
+		<boolean id="save_default_state" value="true" />
+
+		<container class="scrolling_box" height="120" id="tdsb">
+
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			<container>
+
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="table" id="tdtb" mode="fill_rows, stripe_rows" layout="-1,-3">
+
+					<flags id="auto_size" value="vertical" />
+					<boolean id="all_content_same_height" value="false" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<list id="column_widget_properties">
+						<record index="0" auto_size="all" alignment="left,centre_y" spec="text" />
+						<record index="1" spec="text" colour="selection" alignment="left,centre_y" auto_size="vertical" />
+					</list>
+
+					<!-- table isn't sortable -->
+					<list id="column_table_properties">
+						<record index="0" alignment="left,centre_y" left="4" />
+						<record index="1" top="2" bottom="2" right="4" />
+					</list>
+
+					<widget class="label" col="0" row="0">
+						<translation id="text" translation_id="230121" type="use" value="Fee" />
+					</widget>
+					<widget class="text" id="feew" col="1" row="0" />
+
+					<widget class="label" col="0" row="1">
+						<translation id="text" translation_id="247986" type="use" value="Transfer Date" />
+					</widget>
+					<widget class="text" id="trdt" col="1" row="1" />
+
+					<widget class="label" col="0" row="2">
+						<translation id="text" translation_id="248368" type="use" value="Playing Team" />
+					</widget>
+					<widget class="text" id="pltm" col="1" row="2" />
+
+					<widget class="label" col="0" row="3">
+						<translation id="text" translation_id="230113" type="use" value="Duration" />
+					</widget>
+					<widget class="text" id="dura" col="1" row="3" />
+
+					<widget class="label" col="0" row="4">
+						<translation id="text" translation_id="242405" type="use" value="Wage Contribution" />
+					</widget>
+					<widget class="text" id="wage" col="1" row="4" />
+
+					<widget class="label" col="0" row="5">
+						<translation id="text" translation_id="230127" type="use" value="Future Fee" />
+					</widget>
+					<widget class="text" id="fufe" col="1" row="5" />
+
+					<widget class="label" col="0" row="6">
+						<translation id="text" translation_id="374075" type="use" value="Future Buy Back Fee[COMMENT: player contract panel; label for a fee set to allow a club to buy a player back in the future]" />
+					</widget>
+					<widget class="text" id="fbbf" col="1" row="5" />
+
+					<widget class="label" col="0" row="7">
+						<translation id="text" translation_id="248394" type="use" value="Loan Options" />
+					</widget>
+					<widget class="text" id="lnop" col="1" row="6" />
+
+					<widget class="label" col="0" row="8">
+						<translation id="text" translation_id="248395" type="use" value="Additional Clauses" />
+					</widget>
+					<widget class="text" id="clas" col="1" row="7" />
+
+					<widget class="label" col="0" row="9">
+						<translation id="text" translation_id="248396" type="use" value="Additional Fees" />
+					</widget>
+					<widget class="text" id="fees" col="1" row="8" />
+
+					<widget class="label" col="0" row="10">
+						<translation id="text" translation_id="248397" type="use" value="Players To Exchange" />
+					</widget>
+					<widget class="text" id="exch" col="1" row="9" />
+
+					<widget class="label" col="0" row="11">
+						<translation id="text" translation_id="248402" type="use" value="Drafts" />
+					</widget>
+					<widget class="text" id="draf" col="1" row="10" />
+
+					<widget class="label" col="0" row="12">
+						<translation id="text" translation_id="247976" type="use" value="Contract Offer" />
+					</widget>
+					<widget class="text" id="coof" col="1" row="11" />
+				</widget>
+				<!-- table -->
+
+			</container>
+		</container>
+		<!-- scrolling box -->
+	</widget>
+</panel>

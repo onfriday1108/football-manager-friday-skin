@@ -1,0 +1,20 @@
+<panel height="24">
+
+  <layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+  <container>
+    <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4"/>
+    <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+    <!--pretty icon-->
+    <widget class="picture" id="icon" image_alignment="left" width="24" scale_picture="true" keep_aspect_ratio="true" />
+
+    <!--description label-->
+    <widget class="label" id="desc" alignment="left,centre_y" auto_size="horizontal"/>
+  </container>
+
+</panel>
+
+

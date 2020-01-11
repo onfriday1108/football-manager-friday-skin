@@ -1,0 +1,140 @@
+<panel column_width="20">
+	<!--appearances for the bordered boxes in the timeline-->
+	<string id="selected_incident_appearance" value="boxes/custom/match/highlight timeline/selected event/paper" />
+	<string id="unselected_incident_appearance" value="boxes/custom/match/highlight timeline/event/paper" />
+
+	<!--appearances for the boxes in the timeline - these should be the vertical separators with the balls on the end, which is why we need ones for single, left, middle and right-->
+	<string id="one_column_appearance" value="boxes/custom/match/highlight timeline/transition indicator/left/paper" />
+	<string id="left_column_appearance" value="boxes/custom/match/highlight timeline/transition indicator/left/paper" />
+	<string id="middle_column_appearance" value="boxes/custom/match/highlight timeline/transition indicator/left/paper" />
+	<string id="right_column_appearance" value="boxes/custom/match/highlight timeline/transition indicator/right/paper" />
+
+	<!--appearances for the ticks across the top of the timeline-->
+	<string id="big_tick_appearance" value="icons/custom/match/highlight timeline/large notch" />
+	<string id="small_tick_appearance" value="icons/custom/match/highlight timeline/small notch" />
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<widget class="match_highlights_panel" id="hilp">
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>
+
+	<widget class="popup_button" id="ahil" auto_size="all" fixed="true">
+		<translation id="text" translation_id="349483" type="use" value="Add Highlight[COMMENT: label for a drop down button allowing the user to choose a highlight to add to an upload package]" />
+	</widget>
+	
+	<!--list of clips-->
+	<container height="400" id="Lcli">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container id="BBox" class="main_box" appearance="boxes/custom/match/highlight timeline/timeline/paper" height="350">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<!--clips table-->
+			<container class="scrolling_box" fit_content_horizontal="true" fit_content_vertical="false">
+				<container id="clip">
+					<layout class="grid_layout_attachment" row_layout="50,20,-1,30" mode="exact" vertical_gap="0" vertical_offset="0" horizontal_gap="1" horizontal_offset="0">
+					</layout>
+        </container>
+			</container>
+		</container>
+
+		<!--package control buttons-->
+		<container id="Pcbu" height="50">
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" apply_to_children="true" />
+
+			<!--total video length-->
+			<container id="TVLN">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+				<layout class="fit_children_attachment" alignment="horizontal" offset="0" />
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0"/>
+
+				<widget class="text" auto_size="all" font="label">
+					<translation id="text" translation_id="336464" type="use" value="Length[COMMENT: select challenge screen - label for the length of the challenge]" />
+				</widget>
+
+				<widget class="text" id="time" alignment="left,centre_y" auto_size="horizontal" height="31" />
+			</container>
+
+			<container width="6" height="1"/>
+
+			<!--quality-->
+			<container id="QUAL">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+				<layout class="fit_children_attachment" alignment="horizontal" offset="0" />
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+
+				<widget class="text" auto_size="all" font="label">
+					<translation id="text" translation_id="447569" type="use" value="Quality[COMMENT: FR21698 - title for a popup button to allow the user to select video quality]" />
+				</widget>
+
+				<widget class="popup_button" id="quLB" auto_size="all" select_event="vqch">
+					<list id="items">
+						<record id="0">
+							<translation id="text" translation_id="329628" type="use" value="360p (low quality)[COMMENT: YouTube video preference, video resolution]" />
+						</record>
+						<record id="1">
+							<translation id="text" translation_id="329634" type="use" value="480p (medium quality)[COMMENT: YouTube video preference, video resolution]" />
+						</record>
+						<record id="2">
+							<translation id="text" translation_id="329643" type="use" value="720p (high quality) [COMMENT: YouTube video preference, video resolution]" />
+						</record>
+						<record id="3">
+							<translation id="text" translation_id="329612" type="use" value="1080p (highest quality)[COMMENT: YouTube video preference, video resolution]" />
+						</record>
+					</list>
+				</widget>
+			</container>
+
+			<container width="6" height="1"/>
+
+			<!--upload this highlight-->
+      <container>
+        <attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0">
+         <global id="horizontal_gap" name="ui.split_button_row_gap" />
+       </attachment_group>
+			<widget class="icon_button" icon="icons/16px/upload" auto_size="all" click_event="ytpn" appearance="buttons/standard/split/left/button">
+				<translation id="text" translation_id="395518" type="use" value="Upload This Highlight[COMMENT: FR 11393 - label for a button allowing the user to upload a match highlight to Youtube]" />
+			</widget>
+      
+
+			<!--export this highlight-->
+			<widget class="popup_button" id="expo" auto_size="horizontal" fixed="true" height="31" appearance="buttons/standard/split/right/button">
+				<list id="items">
+					<record event_id="yteg">
+						<translation id="text" translation_id="395207" type="use" value="Export This Highlight[COMMENT: FR 11393 - label for a button allowing the user to export a match highlight to Youtube]" />
+					</record>
+				</list>
+			</widget>
+      </container>
+
+			<container width="6" height="1"/>
+
+			<!--upload button-->
+      <container>
+      <attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0">
+        <global id="horizontal_gap" name="ui.split_button_row_gap" />
+      </attachment_group>
+			<widget class="icon_button" id="ucmp" icon="icons/16px/upload" auto_size="all" click_event="mhup" appearance="buttons/standard/split/left/button">
+				<translation id="text" translation_id="395517" type="use" value="Upload Package[COMMENT: Upload match highlight package to Youtube]" />
+			</widget>
+
+			<!--export button-->
+			<widget class="popup_button" id="mhep" auto_size="horizontal" fixed="true" height="31" appearance="buttons/standard/split/right/button">
+				<list id="items">
+					<record id="mhep" event_id="mhep">
+						<translation id="text" translation_id="395206" type="use" value="Export Package[COMMENT: Export highlight package to Youtube]" />
+					</record>
+				</list>
+			</widget>
+      </container>
+
+		</container>
+	</container>
+
+</panel>

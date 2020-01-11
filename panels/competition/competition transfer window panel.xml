@@ -1,0 +1,197 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container height="60">
+		<layout class="arrange_horizontal_attachment" layout="-1,380" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container class="main_box">
+
+		</container>
+
+		<widget class="transfer_deadline_panel" id="tdhr" file="competition/transfer deadline weeks days" />
+
+	</container>
+
+	<container height="62">
+		<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<record id="default_properties" red_replacement="dark_box_background" /> 
+		
+		<container class="main_contrast_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" auto_size="vertical" font="label" colour="faded text">
+				<translation id="text" translation_id="336245" type="use" value="Deals[COMMENT: transfer deadline day screen, text displaying transfer deals]" />
+			</widget>
+
+			<widget class="label" id="nbtr" font="value" alignment="left" />
+
+		</container>
+
+		<container class="main_contrast_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" auto_size="vertical" font="label" colour="faded text">
+				<translation id="text" translation_id="412437" type="use" value="Foreign Import[COMMENT: FR 15125]" />
+			</widget>
+
+			<widget class="formatted_label" id="fori" format="[%number#1]%" font="value" alignment="left" />
+
+		</container>
+
+		<container class="main_contrast_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" auto_size="vertical" font="label" colour="faded text">
+				<translation id="text" translation_id="232106" type="use" value="Total Transfer Spending" />
+			</widget>
+
+			<widget class="cash_cell" id="ttrs" font="value" alignment="left" />
+
+		</container>
+
+		<container class="main_contrast_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" auto_size="vertical" font="label" colour="faded text">
+				<translation id="text" translation_id="316862" type="use" value="Net Transfer Spend[COMMENT: team stat title for the amount of money a team has spent during this season]" />
+			</widget>
+
+			<widget class="cash_cell" id="ntrs" font="value" alignment="left" />
+
+		</container>
+
+		<container class="main_contrast_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" auto_size="vertical" font="label" colour="faded text">
+				<translation id="text" translation_id="343281" type="use" value="Average Transfer Value[COMMENT: transfer deadline day screen; info about the average expenditure in a country throughout one transfer window]" />
+			</widget>
+
+			<widget class="cash_cell" id="atrv" font="value" alignment="left" />
+
+		</container>
+
+	</container>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container class="main_box" width="194">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" auto_size="all" font="title" colour="faded text">
+				<translation id="text" translation_id="297333" type="use" value="Major Transfers" />
+			</widget>
+
+			<container class="vertical_adaptive_container" offset="0" id="mtbc">
+
+				<record id="default_properties" file="widgets/transfer window major transfer details widget" height="135" />
+
+				<container class="property_list_viewer_xml_panel" id="mtb1" />
+				<container class="property_list_viewer_xml_panel" id="mtb2" />
+				<container class="property_list_viewer_xml_panel" id="mtb3" />
+				<container class="property_list_viewer_xml_panel" id="mtb4" />
+			</container>
+		</container>
+
+		<container class="main_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" auto_size="all" font="title" colour="faded text">
+				<translation id="text" translation_id="330721" type="use" value="Transfer Activity[COMMENT: how to system; help string]" />
+			</widget>
+
+			<widget class="table" id="tabl" mode="fill_rows, stripe_rows" layout="-1,30,30,-1,-1,90,90,90" save_session_state="true" column_spacing="8">
+
+				<list id="column_table_properties">
+					<record index="0" id="name">
+						<record id="column_heading">
+							<translation id="text" translation_id="227737" type="use" value="Club" />
+							<flags id="column" value="0" />
+						</record>
+						<boolean id="sort_ascending" value="false"/>
+					</record>
+					<record index="1" id="in  ">
+						<record id="column_heading">
+							<translation id="text" translation_id="316758" type="use" value="In[COMMENT - Transfer Centre; title of incoming transfers tab; limited space for text here, 5 characters maximum]" />
+							<flags id="column" value="1" />
+							<flags id="alignment" value="centre" />
+						</record>
+						<boolean id="sort_ascending" value="false"/>
+					</record>
+					<record index="2" id="out ">
+						<record id="column_heading">
+							<translation id="text" translation_id="316759" type="use" value="Out[COMMENT - Transfer Centre; title of outgoing transfers tab; limited space for text here, 5 characters maximum]" />
+							<flags id="column" value="2" />
+							<flags id="alignment" value="centre" />
+						</record>
+					</record>
+					<record index="3" id="bgsg">
+						<record id="column_heading">
+							<translation id="text" translation_id="420589" type="use" value="Biggest Signing[COMMENT - FR 15125, competition transfer window panel section, biggest here means most expensive]" />
+							<flags id="column" value="3" />
+						</record>
+						<boolean id="sort_ascending" value="false"/>
+					</record>
+					<record index="4" id="bgsl">
+						<record id="column_heading">
+							<translation id="text" translation_id="420590" type="use" value="Biggest Sale[COMMENT - FR 15125, competition transfer window panel section, biggest here means most expensive]" />
+							<flags id="column" value="4" />
+						</record>
+						<boolean id="sort_ascending" value="false"/>
+					</record>
+					<record index="5" id="spen">
+						<record id="column_heading">
+							<translation id="text" translation_id="336037" type="use" value="Spent" />
+							<flags id="column" value="5" />
+							<flags id="alignment" value="right,centre_y" />
+						</record>
+						<boolean id="sort_ascending" value="false"/>
+					</record>
+					<record index="6" id="rece">
+						<record id="column_heading">
+							<translation id="text" translation_id="420591" type="use" value="Received[COMMENT - FR 15125, competition transfer window panel section for money received]" />
+							<flags id="column" value="6" />
+							<flags id="alignment" value="right,centre_y" />
+						</record>
+						<boolean id="sort_ascending" value="false"/>
+					</record>
+					<record index="7" id="net ">
+						<record id="column_heading">
+							<translation id="text" translation_id="420588" type="use" value="Net[COMMENT - FR 15125, a Net figure for a financial value e.g. transfer or wage expenditure]" />
+							<flags id="column" value="7" />
+							<flags id="alignment" value="right,centre_y" />
+						</record>
+						<boolean id="sort_ascending" value="false"/>
+					</record>
+				</list>
+
+				<list id="column_widget_properties">
+					<record indx="1" alignment="right,centre_y" />
+					<record indx="2" alignment="right,centre_y" />
+					<record indx="3" alignment="left,centre_y" />
+					<record indx="4" alignment="left,centre_y" />
+					<record indx="5" alignment="right,centre_y" />
+					<record indx="6" alignment="right,centre_y" />
+					<record indx="7" alignment="right,centre_y" />
+				</list>
+
+
+			</widget>
+
+
+		</container>
+	</container>
+</panel>

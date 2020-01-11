@@ -1,0 +1,29 @@
+﻿<panel>
+	<boolean id="GTBT" value="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+		<container class="scrolling_box" >
+			<container >
+				<attachment_group class="vertical_arrange_autosize" draw_horizontal_dividers="true" vertical_gap="-26" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend"/>
+
+					<widget class="picture"  file="icons/16px/board" width="16" height="16" image_alignment="centre">
+						<string id="red_replacement" value="title"/>
+					</widget>
+					<widget class="text"  alignment="centre_y,left" height="26" name="title" font="title" colour="title">
+						<string id="size" value="large"/>
+						<translation id="text" translation_id="482712" type="use" value="Board[COMMENT:AREA: Responsibilities; SUB - AREA: Responsibility Panel; FR : 28191; TONE: Formal; CHARLIMIT: None]"/>
+					</widget>
+				</container>
+
+				<container class="group_responsibility_list_widget" id="Rbrd" file="team/staff responsibility summary panel" name="board" hide_container_title="true" hide_multi_select_button="true" />
+
+
+			</container>
+		</container>
+	</container>
+</panel>

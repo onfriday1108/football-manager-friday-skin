@@ -1,0 +1,173 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<boolean id="save_session_state" value="true"/>
+
+	<container class="main_box">
+
+	  	<attachment_group class="vertical_arrange_autosize" />
+
+		<!--introduction-->
+		<widget class="text" id="intr" auto_size="vertical" style="semi_bold, shadowed" colour="white" alignment="centre"/>
+
+	</container>
+
+	<container class="main_transparent_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+		<container height="95">
+			<layout class="arrange_horizontal_attachment" layout="100, -1"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_layout="-4,-6" horizontal_gap="-40"/>
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="middle"/>
+
+					<widget class="object_portrait_picture_with_label_and_background" id="JMPi" width="50" height="50">
+							<record id="portrait_picture_file_overrides">
+								<!--id number maps to specific object type-->
+								<string id="6" value="widgets/object portrait picture news feed media source broadsheet"/>
+								<string id="7" value="widgets/object portrait picture news feed media source tabloid"/>
+								<string id="8" value="widgets/object portrait picture news feed media source magazine"/>
+								<string id="9" value="widgets/object portrait picture news feed media source fanzine"/>
+								<string id="10" value="widgets/object portrait picture news feed media source radio"/>
+								<string id="11" value="widgets/object portrait picture news feed media source tv"/>
+								<string id="12" value="widgets/object portrait picture news feed media source website"/>
+								<string id="13" value="widgets/object portrait picture news feed media source bookmaker"/>
+								<string id="14" value="widgets/object portrait picture news feed media source social media"/>
+							</record>
+					</widget>
+				</container>
+
+				<!--profile picture-->
+				<widget class="object_portrait_picture" id="JoPi" scale_picture="true" keep_aspect_ratio="true" image_alignment="left, centre_x"/>
+			</container>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="10"/>
+					<layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="0" apply_to_children="true"/>
+
+					<container class="inner_subtle_box" id="queb" appearance="boxes/custom/speech bubble/left/paper" red_replacement="tone none" height="85">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+						<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+						<container class="scrolling_box" height="100">
+							<widget class="text" id="ques" size="large" style="semi_bold" colour="white" alignment="left, centre_y"/>
+						</container>
+					</container>
+				</container>
+
+				<container id="finQ" hidden="true">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top, left" inset="0" apply_to_children="true"/>
+
+					<container class="inner_box_no_margin" height="22" width="200" background_colour="red3">
+						<layout class="fit_children_attachment" alignment="horizontal" offset="6"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="30"/>
+
+						<widget class="label"  id="fnqL" colour="white" alignment="top, centre_y" auto_size="all">
+							<layout class="stick_to_sides_attachment" alignment="left"/>
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<container height="50">
+			<layout class="arrange_horizontal_attachment" layout="-1, -1, -1, -1" gap="6"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+				<widget class="label" font="title" alignment="left, centre_y" auto_size="vertical">
+					<translation id="text" translation_id="262814" type="use" value="Journalist[COMMENT: job title]"/>
+				</widget>
+				<widget class="label" id="name" alignment="left, centre_y" auto_size="vertical"/>
+			</container>
+
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+				<widget class="label" font="title" alignment="left, centre_y" auto_size="vertical">
+					<translation id="text" translation_id="466454" type="use" value="Publication[COMMENT: FR 22941; press conference; title of journalist's media source]"/>
+				</widget>
+				<widget class="text" id="medi" alignment="left, centre_y" auto_size="vertical"/>
+			</container>
+
+			<!-- Personality -->
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+				<widget class="label" font="title" alignment="left, centre_y" auto_size="vertical">
+					<translation id="text" translation_id="247713" type="use" value="Personality"/>
+				</widget>
+				<widget class="label" id="pern" alignment="left, centre_y" auto_size="vertical"/>
+			</container>
+
+			<!-- Relationship -->
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+				<widget class="label" font="title" alignment="left, centre_y" auto_size="vertical">
+					<translation id="text" translation_id="281382" type="use" value="Relationship[COMMENT: Press conference; relationship with journalist]"/>
+				</widget>
+				<widget class="relationship_label_with_icon" id="rela" height="22" dspf="2"/>
+			</container>
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="210,-1" horizontal_gap="6"/>
+
+			<!-- featured object box -->
+			<container class="main_subtle_box" id="FBio">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- bio gets added here -->
+			</container>
+
+			<container height="455">
+				<layout class="arrange_vertical_attachment" layout="-1, 30, 32" gap="8" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- answer box -->
+				<container class="main_box">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+					<container class="response_selector_panel" id="angb" file="generic/press conference response selector panel"/>
+				</container>
+
+				<widget class="edit_box" id="adco" auto_size="none">
+					<attachment class="max_length_attachment" length="100"/>
+					<translation id="placeholder_string" translation_id="308081" type="use" value="Additional Comments.. (Optional)[COMMENT: Press conference; label for text box]"/>
+					<boolean id="save_session_state" value="true"/>
+				</widget>
+
+				<!-- No comment and storm out below the answers -->
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+					<widget class="icon_button" id="sast" click_event="send" auto_size="all" controller_button="y_button"/>
+					<widget class="icon_button" id="ncbu" click_event="noco" auto_size="all" controller_button="x_button" >
+						<translation id="text" translation_id="284304" type="use" value="No Comment[Press Conference; don't want to give an answer]"/>
+					</widget>
+					<widget class="icon_button" id="sobu" click_event="stor" auto_size="all" controller_button="left_trigger">
+						<translation id="text" translation_id="284305" type="use" value="Storm Out[Press Conference; angrily leave conference early]"/>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

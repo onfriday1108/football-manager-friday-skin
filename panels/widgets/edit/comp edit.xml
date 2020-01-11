@@ -1,0 +1,64 @@
+<panel class="client_object_viewer_xml_panel">
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container id="cnt0">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+		<widget class="client_object_label_value_table" id="edtb" edit_mode="true">
+
+			<record id="table_properties" auto_size="none">
+				<flags id="mode" value="fill_rows, stripe_rows, printable" />
+				<boolean id="auto_size_rows" value="true" />
+				<boolean id="fixed_size_rows" value="false" />
+
+				<string id="layout" value="30, -5, -4" />
+				<integer id="row_spacing" value="0" />
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" />
+					<record indx="1" alignment="left,centre_y" />
+					<record indx="2" alignment="left,centre_y" auto_size="vertical" spec="text" colour="selection" />
+				</list>
+
+				<list id="column_table_properties">
+					<record indx="0">
+						<integer id="left" value="8" />
+					</record>
+					<record indx="1">
+						<integer id="left" value="5" />
+					</record>
+					<record indx="2">
+						<flags id="alignment" value="left,centre_y" />
+						<integer id="top" value="2" />
+						<integer id="bottom" value="2" />
+					</record>
+				</list>
+			</record>
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+
+			<list id="viewed_property_ids">
+				<integer value="cnam" />
+				<integer value="csnm" />
+				<integer value="c3ln" />
+				<integer value="crep" />
+				<integer value="cmnl" />
+				<integer value="cmxl" />
+				<integer value="cmnw" />
+				<integer value="cmxw" />
+				<integer value="cuae" />
+				<integer value="csso" />
+				<integer value="wbcl" />
+				<integer value="wbst" />
+				<integer value="wben" />
+			</list>
+
+		</widget>
+
+	</container>
+
+
+</panel>

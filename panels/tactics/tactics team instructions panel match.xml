@@ -1,0 +1,71 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="-1,380" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<container class="vertical_adaptive_container" offset="0" inset="0" gap="10">
+
+		<!--main instructions area-->
+		<widget class="team_instructions_panel" id="tEin" default_height="-1" file="team/team instructions new match" />
+
+	</container>
+
+	<!--pitch and target man area-->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--slot selector-->
+			<widget class="match_preparation_slot_selector" id="mpss" file="match/match preparation slot selector match">
+				<translation id="text" translation_id="316756" type="use" value="Team Instructions For:" />
+			</widget>
+
+			<!--pitch-->
+			<widget class="pitch_with_tactics" id="pwtc" icon_flags="use_player_kits_back,drop_initial_if_possible,show_position_role_duty_suitability,show_position_level_tooltip,show_number">
+				<boolean id="vertical" value="true" />
+				<integer id="pitch_player_icon_text_size" value="4" />
+				<real id="pitch_length_multiplier" value="1.15" />
+				<flags id="pitch_alignment" value="centre_x,top" />
+				<!-- This is now a percentage of the default pitch width, which is: (1100 feet / 100.58 metres) -->
+				<integer id="pitch_length_percentage" value="90" />
+
+				<!-- normal run, darkened run, drag run colours -->
+				<colour id="ncol" name="tactics normal run" />
+				<colour id="dcol" name="tactics darkened run" />
+				<colour id="gcol" name="tactics dragged run" />
+
+			</widget>
+
+		</container>
+
+		<!--Confirm/undo/cancel buttons-->
+		<container class="inner_box_no_margin">
+			<attachment_group class="button_arrangement_right" />
+
+			<widget class="primary_icon_tick_button" id="aptt">
+				<translation id="text" translation_id="256896" type="use" value="Confirm Changes[COMMENT: match screen; confirmation button for combined team talk and tactical changes]" />
+				<record id="click_event">
+					<flags id="event_id" value="aptt" />
+				</record>
+			</widget>
+
+			<widget class="button" id="uchc" auto_size="all">
+				<translation id="text" translation_id="248353" type="use" value="Undo Last" />
+				<record id="click_event">
+					<flags id="event_id" value="uchc" />
+				</record>
+			</widget>
+
+			<widget class="button" id="cntt" auto_size="all">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				<record id="click_event">
+					<flags id="event_id" value="cntt" />
+				</record>
+			</widget>
+
+		</container>
+	</container>
+</panel>

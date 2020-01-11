@@ -1,0 +1,12 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="100"/>
+
+  <container id="cntB">
+    <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+    <widget class="object_portrait_picture" id="perP" scale_picture="true" width="80" height="80" image_alignment="centre" />
+  </container>
+</panel>

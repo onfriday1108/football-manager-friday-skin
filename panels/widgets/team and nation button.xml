@@ -1,0 +1,16 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" gap="0" do_not_size="true"/>
+	<layout class="fit_children_attachment" alignment="vertical,fill" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+  <list id="properties_to_forward">
+    <record get_property="Ttea" set_property="valu" target="teab"/>
+    <record get_property="Nnat" set_property="valu" target="natb"/>
+    <record get_property="icen" set_property="icen" target="teab"/>
+    <record get_property="icen" set_property="icen" target="natb"/>
+  </list>
+  
+	<widget class="team_button" id="teab" icon_enabled="false" spec="text" size="large" auto_size="vertical"/>
+
+	<widget class="nation_button" id="natb" spec="text" style="light_bold" auto_size="vertical"/>
+</panel>

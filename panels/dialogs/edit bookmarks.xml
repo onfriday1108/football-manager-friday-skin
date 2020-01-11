@@ -1,0 +1,75 @@
+<panel id="edbd" height="600" width="700">
+
+	<translation id="title" translation_id="292622" type="use" value="Manage Bookmarks[COMMENT: Manage Bookmarks dialog title]" />
+	<!-- stick all items to width of box -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+
+  <attachment class="moveable_attachment" />
+
+  <!-- add custom icon to top right corner of dialog -->
+  <widget class="picture" id="cico" file="icons/dialog/bookmarks" auto_size="all" embed_in_frame="true">
+    <layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true" />
+  </widget>
+  
+	<widget class="scrolling_box">
+		
+		<widget class="tree_menu" id="bktm" auto_size="vertical" drag="true" allow_submenu_selection="true">
+			<record id="click_event">
+				<flags id="event_id" value="bkse" />
+				<flags id="event_target" value="prnt" />
+			</record>
+		</widget>
+		
+	</widget>
+	
+	<!-- row of buttons -->
+	<widget class="container" id="btns">
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+    <widget class="container">
+      <layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<!-- rename button -->			
+			<widget class="icon_button" id="rena" auto_size="all" icon="icons/16px/rename">
+				<translation id="text" translation_id="247203" type="use" value="Rename" />
+        <record id="click_event">
+					<flags id="event_id" value="rena" />
+				</record>
+			</widget>
+
+			<!-- delete button -->			
+			<widget class="icon_button" id="dele" auto_size="all" icon="icons/16px/delete">
+				<translation id="text" translation_id="247202" type="use" value="Delete" />
+        <record id="click_event">
+					<flags id="event_id" value="dele" />
+				</record>
+			</widget>
+
+			<!-- clear button -->			
+			<widget class="icon_button" id="cler" auto_size="all" icon="icons/16px/clear">
+				<translation id="text" translation_id="318290" type="use" value="Remove All[COMMENT: edit bookmarks.xml; text indicating user can remove all current bookmarks]" />
+        <record id="click_event">
+					<flags id="event_id" value="cler" />
+				</record>
+			</widget>
+
+      <!-- new folder button -->
+      <widget class="icon_button" id="newf" fixed="true" auto_size="all" icon="icons/16px/new folder">
+        <translation id="text" translation_id="251228" type="use" value="New Folder[COMMENT: 'new folder' button on bookmarks add dialog]" />
+        <record id="click_event">
+          <flags id="event_id" value="adbf" />
+        </record>
+      </widget>
+			</widget>
+
+    <!-- row of buttons -->
+    <container id="btns" file="dialog buttons" />
+
+	</widget>
+
+</panel>

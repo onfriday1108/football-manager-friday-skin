@@ -1,0 +1,23 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" layout="36, -1, 30" gap="8"/>
+
+  <widget class="object_portrait_picture_with_label_and_background" id="obpp" request_facegen_data="false" navigation_focus_target="true">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="3"/>
+    <record id="portrait_picture_file_overrides">
+       <!--id number maps to specific object type-->
+      <string id="0" value="widgets/object portrait picture news feed player"/>
+      <string id="1" value="widgets/object portrait picture news feed non player"/>
+      <string id="2" value="widgets/object portrait picture news feed club"/>
+      <string id="3" value="widgets/object portrait picture news feed nation"/>
+      <string id="4" value="widgets/object portrait picture news feed comp"/>
+    </record>
+  </widget>
+
+  <widget class="client_object_label" id="obnl" alignment="left,centre_y">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+  </widget>
+
+  <widget class="news_subscribe_button" id="obfb" icon_alignment="centre" show_button_appearance="true" subscribed_button_appearance="buttons/standard/normal/button" unsubscribed_button_appearance="buttons/standard/normal/button" subscribed_icon_appearance="icons/custom/feed/unfollow" unsubscribed_icon_appearance="icons/custom/feed/follow">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="5"/>
+  </widget>
+</panel>

@@ -1,0 +1,57 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="main_box" id="cftb" red_replacement="dark_box_background">
+		<translation id="text" translation_id="395169" type="use" value="Competition Performance[COMMENT: FR 11767, board confidence section label]" />
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+    <container embed_in_frame="true">
+      <attachment_group class="title_embedded_panel_right"/>
+
+      <widget class="icon_button" icon="icons/26px/board" auto_size="horizontal" icon_colour="performance board tag" appearance="" colour="performance board tag" font="title" embed_in_frame="true">
+        <translation id="text" translation_id="337816" type="use" value="Board[COMMENT: club screen - title for a board related activities submenu]" />
+      </widget>
+
+    </container>
+
+
+    <widget class="performance_grade_box" id="smgb" auto_size="vertical">
+
+		</widget>
+
+	</container>
+
+	<widget class="table" id="cmpt" mode="fill_rows,stripe_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="0" column_spacing="8" layout="300,-1">
+		<!--headings-->
+
+		<list id="column_table_properties">
+			<record index="0" id="comp">
+				<flags id="alignment" value="left,centre_y" />
+				<record id="column_heading">
+					<translation id="text" translation_id="227740" type="use" value="Competition" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="0" />
+				</record>
+			</record>
+
+			<record index="1" id="reac" top="10" bottom="10">
+				<flags id="alignment" value="left,centre_y" />
+				<record id="column_heading">
+					<translation id="text" translation_id="331949" type="use" value="Reaction[COMMENT: person properties; text header for team talk screen which will list any feedback from individual players]" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="1" />
+				</record>
+			</record>
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="0" alignment="left,centre_y"/>
+			<record index="1" alignment="left,centre_y" top="80"/>
+		</list>
+
+	</widget>
+
+
+
+
+</panel>

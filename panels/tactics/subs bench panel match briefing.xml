@@ -1,0 +1,26 @@
+﻿<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="inner_subtle_box">
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="6" />
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="text" spec="text" alignment="centre" auto_size="all" font="title" colour="white">
+			<translation id="text" translation_id="318313" type="use" value="Substitutes[COMMENT: subs bench panel; subsection box which will list any designated substitutes]" />
+		</widget>
+
+		<widget class="subs_bench_icon_panel" id="subs" nnss="true" file="none" icon_flags="show_name,show_number,show_extra_details,number_uses_name_colour,dont_set_name_background_colour,colour_names_for_team" player_icon_file="tactics/tactics icon info panel briefing subs">
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			<container id="icns">
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="4" />
+				<layout class="arrange_horizontal_attachment" alignment="middle" wrap_widgets="true" offset="0" gap="4"/>
+			</container>
+
+		</widget>
+
+	</container>
+</panel>

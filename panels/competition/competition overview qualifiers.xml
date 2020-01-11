@@ -1,0 +1,40 @@
+<panel>
+
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<!-- titled box -->
+	<widget class="main_box" id="qpto" alignment="left">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- main table -->
+		<widget class="table" id="qptb" mode="fill_rows, stripe_rows" layout="-2,-2,-3" auto_size_rows="true" fixed_size_rows="false" row_spacing="2">
+			<boolean id="save_session_state" value="true" />
+
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="229408" type="use" value="Team" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="229390" type="use" value="Nation" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="247169" type="use" value="Seeding" />
+				</record>
+			</list>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record indx="0" id="temc" sort_disabled="false" />
+				<record indx="1" id="natn" sort_disabled="false" />
+				<record indx="2" id="infc" sort_disabled="false" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="2" alignment="left,centre_y" />
+			</list>
+		</widget>
+
+	</widget>
+	<!-- titled box -->
+</panel>

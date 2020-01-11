@@ -1,0 +1,455 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- titled box -->
+	<widget class="inner_box" force_title_borders="true" id="hpto" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="text" multiline="true" auto_size="all" font="fonts/panel_title" size="15" embed_in_frame="true">
+				<string id="text" type="use" value="Injury Stats" />
+			</widget>
+
+			<widget class="view_menu_popup" id="ijwl" sele="sijl">
+				<list id="items">
+					<record id="ijtl">
+						<string id="text" type="use" value="This League" />
+					</record>
+					<record id="----" />
+					<record id="ijtc">
+						<string id="text" type="use" value="This Country" />
+					</record>
+				</list>
+
+				<flags id="default_view" value="ijtl" />
+			</widget>
+
+			<widget class="view_menu_popup" id="ijwt" sele="sijt">
+				<list id="items">
+					<record id="ijpg">
+						<string id="text" type="use" value="Pre-Game" />
+					</record>
+					<record id="----" />
+					<record id="ijls">
+						<string id="text" type="use" value="Last Season" />
+					</record>
+					<record id="----" />
+					<record id="ijss">
+						<string id="text" type="use" value="This Season" />
+					</record>
+					<record id="----" />
+					<record id="ijts">
+						<string id="text" type="use" value="Last 2 Seasons" />
+					</record>
+					<record id="----" />
+					<record id="ijhs">
+						<string id="text" type="use" value="Last 3 Seasons" />
+					</record>
+					<record id="----" />
+					<record id="ijst">
+						<string id="text" type="use" value="Start of Game" />
+					</record>
+					<record id="----" />
+					<record id="ijat">
+						<string id="text" type="use" value="All Time" />
+					</record>
+				</list>
+
+				<flags id="default_view" value="ijss" />
+			</widget>
+
+			<widget class="popup_button" id="cbcx" sele="cbcx" auto_tick_exclusive="true" height="30" auto_size="horizontal" embed_in_frame="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+
+			<widget class="view_menu_popup" id="ijps" sele="inps">
+				<list id="items">
+					<record id="ipal">
+						<string id="text" type="use" value="All Positions" />
+					</record>
+					<record id="----" />
+					<record id="ipao">
+						<string id="text" type="use" value="All Outfield Positions" />
+					</record>
+					<record id="----" />
+					<record id="ipgk">
+						<string id="text" type="use" value="Goalkeepers" />
+					</record>
+					<record id="----" />
+					<record id="ipdf">
+						<string id="text" type="use" value="Defenders" />
+					</record>
+					<record id="----" />
+					<record id="ipmd">
+						<string id="text" type="use" value="Midfielders" />
+					</record>
+					<record id="----" />
+					<record id="ipam">
+						<string id="text" type="use" value="Attacking Midfielders" />
+					</record>
+					<record id="----" />
+					<record id="ipsk">
+						<string id="text" type="use" value="Strikers" />
+					</record>
+				</list>
+
+				<flags id="default_view" value="ipal" />
+			</widget>
+
+			<widget class="view_menu_popup" id="ijos" sele="inos">
+				<list id="items">
+					<record id="ioal">
+						<string id="text" type="use" value="All Outcomes" />
+					</record>
+					<record id="----" />
+					<record id="iosl">
+						<string id="text" type="use" value="Slight" />
+					</record>
+					<record id="----" />
+					<record id="iomi">
+						<string id="text" type="use" value="Minor" />
+					</record>
+					<record id="----" />
+					<record id="iomo">
+						<string id="text" type="use" value="Moderate" />
+					</record>
+					<record id="----" />
+					<record id="ioma">
+						<string id="text" type="use" value="Major" />
+					</record>
+				</list>
+
+				<flags id="default_view" value="ioal" />
+			</widget>
+
+			<widget class="view_menu_popup" id="itos" sele="ints">
+				<list id="items">
+					<record id="itat">
+						<string id="text" type="use" value="Any Time" />
+					</record>
+					<record id="----" />
+					<record id="itps">
+						<string id="text" type="use" value="Pre-season Only" />
+					</record>
+					<record id="----" />
+					<record id="itis">
+						<string id="text" type="use" value="In-season Only" />
+					</record>
+				</list>
+
+				<flags id="default_view" value="itat" />
+			</widget>
+
+			<widget class="check_box" id="ditx" click_event="ecdi" auto_size="all" size="10" selected="false" embed_in_frame="true">
+				<string id="text" type="use" value="Discount Illness" />
+			</widget>
+
+			<widget class="check_box" id="ditz" click_event="eciz" auto_size="all" size="10" selected="false" embed_in_frame="true">
+				<string id="text" type="use" value="Internationals stats" />
+			</widget>
+
+			<widget class="text" id="cbij" auto_size="all" size="10" hidden="true"  embed_in_frame="true">
+			</widget>
+
+			<widget class="text" id="plij" auto_size="all" size="10" hidden="true"  embed_in_frame="true">
+			</widget>
+
+			<widget class="text" id="gmij" auto_size="all" size="10" hidden="true" embed_in_frame="true">
+			</widget>
+
+		</container>
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right"/>
+
+
+			<widget class="view_menu_popup" id="ijvc" sele="invc">
+				<list id="items" alignment="right" >
+					<record id="vovs">
+						<string id="text" type="use" value="View - Overall Stats" />
+					</record>
+					<record id="----" />
+					<record id="vmhs">
+						<string id="text" type="use" value="View - Match Stats" />
+					</record>
+					<record id="----" />
+					<record id="vges">
+						<string id="text" type="use" value="View - Game Stats" />
+					</record>
+					<record id="----" />
+					<record id="vdis">
+						<string id="text" type="use" value="View - Database Info" />
+					</record>
+				</list>
+
+				<flags id="default_view" value="vovs" />
+			</widget>
+
+		</container>
+
+		<!-- Overall Stats table -->
+		<widget class="table" id="otij" mode="fill_rows, stripe_rows" layout="-1, 100, 100, 100, 100, 100, 100, 60, 60, 60, 60" auto_size_rows="true" fixed_size_rows="false" row_spacing="2" save_session_state="true">
+
+			<!-- headings -->
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Injury" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Total Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Expected Total Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Match Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Expected Match Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Training Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Expected Training Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Av. Time Out" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="DB - Occurence Ratio" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="DB - Match %" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="DB - Recurring" />
+				</record>
+			</list>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record indx="0" id="dinj" />
+				<record indx="1" id="dtot" sort_ascending="false"/>
+				<record indx="2" id="exto" />
+				<record indx="3" id="dmat" />
+				<record indx="4" id="exma" />
+				<record indx="5" id="dtra" />
+				<record indx="6" id="etra" />
+				<record indx="7" id="davg" />
+				<record indx="8" id="docr" />
+				<record indx="9" id="dmpc" />
+				<record indx="10" id="drec" />
+			</list>
+
+			<integer id="default_sort_column" value="dtot" />
+
+		</widget>
+
+		<!-- Match Stats table -->
+		<widget class="table" id="mtij" mode="fill_rows, stripe_rows" layout="-1, 80, 80, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 80, 80" auto_size_rows="true" hidden="true" fixed_size_rows="false" row_spacing="2" save_session_state="true">
+
+			<!-- headings -->
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Injury" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Match Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Expected Match Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="C-Tackled" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="C-Tackling" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="C-Hit" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="C-Running" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="C-Heading" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="C-Kicking" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="C-Recurring Flared up" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="C-GK Catching" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="C-GK Saving" />
+				</record>
+        <record alignment="left,centre_y">
+          <string id="text" type="use" value="C-Innocuously" />
+        </record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="C-Recurrence of Recent" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Avg Per Match" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Max per Match (per team)" />
+				</record>
+			</list>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record indx="0" id="dinj" />
+				<record indx="1" id="dmat" sort_ascending="false"/>
+				<record indx="2" id="exma" />
+				<record indx="3" id="cstd"/>
+				<record indx="4" id="cstg"/>
+				<record indx="5" id="csht"/>
+				<record indx="6" id="csrg"/>
+				<record indx="7" id="cshg"/>
+				<record indx="8" id="cskg"/>
+				<record indx="9" id="cswt"/>
+				<record indx="10" id="cscg"/>
+				<record indx="11" id="cssg"/>
+        <record indx="12" id="cinC"/>
+        <record indx="13" id="csrr"/>
+				<record indx="14" id="avma" />
+				<record indx="15" id="mxma" />
+			</list>
+
+			<integer id="default_sort_column" value="dmat" />
+
+		</widget>
+
+		<!-- Game Stats table -->
+		<widget class="table" id="ttij" mode="fill_rows, stripe_rows" layout="-1, 120, 120, 120, 120, 120, 120, 120, 60, 60, 60, 60" auto_size_rows="true" fixed_size_rows="false" hidden="true" row_spacing="2" save_session_state="true">
+
+			<!-- headings -->
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Injury" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Total Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Training Occurences" />
+				</record>`
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Expected Training Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Av. Time Out" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Min Time Out" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Max Time Out" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Recurring" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Slight" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Minor" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Moderate" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Major" />
+				</record>
+			</list>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record indx="0" id="dinj" />
+				<record indx="1" id="dtot" sort_ascending="false"/>
+				<record indx="2" id="dtra" />
+				<record indx="3" id="etra" />
+				<record indx="4" id="davg" />
+				<record indx="5" id="dimn" />
+				<record indx="6" id="dimx"/>
+				<record indx="7" id="drec" />
+				<record indx="8" id="dosl" />
+				<record indx="9" id="domi" />
+				<record indx="10" id="domo" />
+				<record indx="11" id="doma" />
+			</list>
+
+			<integer id="default_sort_column" value="dtot" />
+
+		</widget>
+
+		<!-- Database Stats table -->
+		<widget class="table" id="dtij" mode="fill_rows, stripe_rows" layout="-1, 80, 80, 80, 80, 80, 140, 140, 180, 80, 80" auto_size_rows="true" hidden="true" fixed_size_rows="false" row_spacing="2" save_session_state="true">
+
+			<!-- headings -->
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Injury" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Match Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Training Occurences" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Occurence Ratio" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Match %" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Minimum Days Out" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Category" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Cause" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Seriousness" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Age Rule" />
+				</record>
+				<record alignment="left,centre_y">
+					<string id="text" type="use" value="Recurring" />
+				</record>
+			</list>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record indx="0" id="dinj" />
+				<record indx="1" id="dmat" />
+				<record indx="2" id="dtra" />
+				<record indx="3" id="docr"/>
+				<record indx="4" id="dmpc" />
+				<record indx="5" id="dmno" />
+				<record indx="6" id="dcat" />
+				<record indx="7" id="dcas" />
+				<record indx="8" id="dser"/>
+				<record indx="9" id="dage" />
+				<record indx="10" id="drec" />
+			</list>
+
+			<integer id="default_sort_column" value="dtot" />
+
+		</widget>
+	</widget>
+	<!-- titled box -->
+
+</panel>

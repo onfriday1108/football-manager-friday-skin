@@ -1,0 +1,464 @@
+<panel>
+
+	<flags id="intro_appearance" value="boxes/custom/reactions/intro/paper" />
+	<flags id="manager_comment_appearance" value="boxes/custom/reactions/statement/paper" />
+	<flags id="assistant_manager_suggestion_appearance" value="boxes/custom/reactions/statement/paper" />
+	<flags id="player_reaction_good_appearance" value="boxes/custom/reactions/positive/paper" />
+	<flags id="player_reaction_neutral_appearance" value="boxes/custom/reactions/neutral/paper" />
+	<flags id="player_reaction_bad_appearance" value="boxes/custom/reactions/negative/paper" />
+	<flags id="outro_appearance" value="boxes/custom/reactions/intro/paper" />
+
+	<flags id="individual_talk_done_appearance" value="tables/custom/team talk/done/row" />
+	<flags id="individual_talk_not_done_appearance" value="" />
+	<flags id="just_talked_to_appearance" value="tables/custom/team talk/addressed/row" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="110,-10,-26" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<!--top bit-->
+		<container class="main_transparent_box" draw_vertical_dividers="true" navigation_container="true">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="10" >
+				<global id="gap" name="ui.inner_box_gap"/>
+			</layout>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--badge-->
+			<widget class="object_portrait_picture" id="telo" width="60" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+
+			<!--tactics-->
+			<container class="inner_box" id="Tact" width="320">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<string id="skin_style" value="title link" />
+
+				<container height="20">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<!--title button-->
+					<widget class="link_button" click_event="ShTD" auto_size="all" alignment="left,centre_y" colour="title" red_replacement="title">
+						<translation id="text" translation_id="230056" type="use" value="Tactics" />
+					</widget>
+				</container>
+
+				<!--formation-->
+				<widget class="text" id="Form" auto_size="vertical" multiline="false" style="bold" size="large"/>
+
+				<!--mentality and stuff-->
+				<container height="22">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<!--mentality-->
+					<widget class="mentality_label" id="menT" auto_size="horizontal" colour="text" navigation_focus_target="false" size="normal">
+						<record id="primary_icon_properties" red_replacement="text" />
+					</widget>
+
+					<!--fluidity-->
+					<widget class="fluidity_label" id="fluI" auto_size="horizontal" colour="text" navigation_focus_target="false" size="normal">
+						<record id="primary_icon_properties" red_replacement="text" />
+					</widget>
+				</container>
+			</container>
+
+			<!--post match info-->
+			<container class="inner_box" id="Post" width="150">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--team name-->
+				<widget class="text" id="TeNa" auto_size="vertical" />
+
+				<!--division position-->
+				<widget class="text" id="DiPo" auto_size="vertical" />
+			</container>
+
+			<!--opposition instructions-->
+			<container class="inner_box" id="opin">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<string id="skin_style" value="title link" />
+
+				<!--title button-->
+				<widget class="link_button" click_event="ShOI" auto_size="all" alignment="left,centre_y" colour="title" red_replacement="title">
+					<translation id="text" translation_id="447561" type="use" value="Set Opposition Instructions[COMMENT: title for a button allowing setting of the opposition instructions]" />
+				</widget>
+
+				<!--text counting the opposition instructions-->			
+				<widget class="text" id="blOI" alignment="left,centre_y" auto_size="vertical" colour="faded text"/>
+
+        		<container>
+
+		          <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+		          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		          <widget class="button" auto_size="all" click_event="asop">
+		            <translation id="text" translation_id="331830" type="use" value="Ask Assistant[COMMENT: MLS draft panel; button label for ask your assitant manager for a recommendation]" />
+		          </widget>
+
+              <widget class="popup_button" id="asop" auto_size="vertical" visible="false" />
+
+		          <!-- opposition instructions staff responsibility widget-->
+		          <widget class="widget_popup_button" id="oiRs" auto_size="all" icon="icons/16px/staff respo" appearance="buttons/subtle/normal/button">
+		            <translation id="text" translation_id="335274" type="use" value="Responsibilities[COMMENT: Manager main/top menu: national team options when team name is not visible]" />
+		            <string id="popup_alignment" value="left, bottom" />
+		            <string id="widget_type" value="group_responsibility_list_widget"/>
+		            <record id="WdgP" file="team/staff responsibility summary popup panel" width="1024" height="150"/>
+		            <record id="mopp" file="modal popup panel auto sized" />
+		          </widget>
+
+       			</container>
+
+
+			</container>
+
+			<!--stats and analysis-->
+			<container id="stan">
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="6" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--stats-->
+				<container width="240" class="inner_subtle_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<string id="skin_style" value="title link" />
+
+					<container height="20">
+						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<!--title button-->
+						<widget class="link_button" section="mtst" auto_size="all" alignment="left,centre_y" colour="title" red_replacement="title">
+							<translation id="text" translation_id="247412" type="use" value="Stats" />
+						</widget>
+					</container>
+
+					<container height="22">
+						<layout class="arrange_horizontal_attachment" layout="-1,7,-1" offset="0" gap="4" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<!--home stat-->
+						<container id="hmst">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+							<record id="default_properties" alignment="right,centre_y" style="semi_bold" />
+						</container>
+						<widget class="text" alignment="centre">
+							<translation id="text" translation_id="233089" type="use" value="-" />
+						</widget>
+						<!--away stat-->
+						<container id="awst">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+							<record id="default_properties" alignment="left,centre_y" style="semi_bold" />
+						</container>
+					</container>
+
+					<!--stat name-->
+					<widget class="text" id="sttt" auto_size="vertical" alignment="centre" />
+				</container>
+
+				<!--analysis-->
+				<container class="inner_subtle_box" width="300">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<string id="skin_style" value="title link" />
+
+					<container height="20">
+						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<!--title button-->
+						<widget class="link_button" section="matm" auto_size="all" alignment="left,centre_y" colour="title" red_replacement="title">
+							<translation id="text" translation_id="296334" type="use" value="Analysis[COMMENT: match screen; analysis panel]" />
+						</widget>
+					</container>
+
+					<container class="client_object_viewer_xml_panel" id="BesP">
+						<layout class="arrange_horizontal_attachment" layout="50,-1" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<container>
+							<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<container class="inner_box_no_margin" id="bphR" height="15">
+								<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" inset="0,0" />
+
+								<!-- Rating Text -->
+								<widget class="text" id="bpTx" alignment="left,centre_y" size="large">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="2" />
+								</widget>
+							</container>
+						</container>
+
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="-2" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="client_object_property_panel" property="Pers" alignment="left,centre_y" style="semi_bold" height="22">
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<widget class="client_object_property_panel" property="PpSP" alignment="left,centre_y" height="26">
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+							<!--<widget class="client_object_property_panel" property="PpSN" alignment="right,centre_y">
+                <record id="object_property" get_property="objt" set_property="objt" />
+              </widget>-->
+						</container>
+					</container>
+
+				</container>
+			</container>
+		</container>
+
+		<!-- Conversation summary -->
+		<container id="CONV">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="scrolling_box" id="Conv">
+				<container id="conv">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!-- Player responses created here -->
+					<record id="default_properties">
+
+						<!-- default properties for the containers -->
+						<record id="default_properties">
+							<!-- default properties for the text -->
+							<flags id="colour" value="white" />
+
+						</record>
+					</record>
+				</container>
+			</container>
+
+			<!-- Debug Conversation summary -->
+			<container class="scrolling_box" id="Dcon" hidden="true">
+				<container id="dcon">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!-- Player responses created here -->
+					<record id="default_properties">
+
+						<!-- default properties for the containers -->
+						<record id="default_properties">
+							<!-- default properties for the text -->
+							<flags id="colour" value="white" />
+
+						</record>
+					</record>
+				</container>
+			</container>
+
+			<container class="main_transparent_box_no_margin" height="46" navigation_container="true" default_focus="true">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8"/>
+
+				<container id="btnC">
+					<layout class="arrange_horizontal_attachment" alignment="middle">
+						<global id="gap" name="ui.button_row_gap" />
+					</layout>
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+					<!--addressing text-->
+					<widget class="label" id="adlb" auto_size="horizontal">
+						<translation id="text" translation_id="447562" type="use" value="Addressing[COMMENT: team talk panel; label for a popup button to select who the person is addressing in a team talk]" />
+					</widget>
+
+					<!--speak to whole team button-->
+					<widget class="widget_popup_button" widget_type="match_team_talk_popup_panel" auto_size="horizontal" id="ttPu" popup_alignment="centre_x,top" appearance="buttons/primary/normal/button" icon="icons/16px/speech bubble" >
+						<translation id="text" translation_id="376598" type="use" value="Team Talk[COMMENT: FR9089 - team talk]" />
+						<record id="widget_properties" type="4" width="1024" height="264" />
+					</widget>
+
+					<!--speak to selected players button-->
+					<widget class="widget_popup_button" widget_type="match_team_talk_popup_panel" auto_size="horizontal" id="sePu" popup_alignment="centre_x,top" appearance="buttons/primary/normal/button" icon="icons/16px/speech bubble">
+						<translation id="text" translation_id="452568" type="use" value="Selected Player(s)[COMMENT: team talk panel; option to hand team talks over to the assistant manager for a selection of positions]" />
+						<record id="widget_properties" type="3" width="1024" height="264" />
+					</widget>
+
+					<!--speak to defence button-->
+					<widget class="widget_popup_button" widget_type="match_team_talk_popup_panel" auto_size="horizontal" id="dePu" popup_alignment="centre_x,top" appearance="buttons/primary/normal/button" icon="icons/16px/speech bubble">
+						<translation id="text" translation_id="447565" type="use" value="Defence[COMMENT: team talk panel; option to hand team talks over to the assistant manager for all defensive positions]" />
+						<record id="widget_properties" type="0" width="1024" height="264" />
+					</widget>
+
+					<!--speak to midfield button-->
+					<widget class="widget_popup_button" widget_type="match_team_talk_popup_panel" auto_size="horizontal" id="miPu" popup_alignment="centre_x,top" appearance="buttons/primary/normal/button" icon="icons/16px/speech bubble">
+						<translation id="text" translation_id="447564" type="use" value="Midfield[COMMENT: team talk panel; option to hand team talks over to the assistant manager for all midfield positions]" />
+						<record id="widget_properties" type="1" width="1024" height="264" />
+					</widget>
+
+					<!--speak to attack button-->
+					<widget class="widget_popup_button" widget_type="match_team_talk_popup_panel" auto_size="horizontal" id="atPu" popup_alignment="centre_x,top" appearance="buttons/primary/normal/button" icon="icons/16px/speech bubble">
+						<translation id="text" translation_id="447563" type="use" value="Attack[COMMENT: team talk panel; option to hand team talks over to the assistant manager for all offensive positions]" />
+						<record id="widget_properties" type="2" width="1024" height="264" />
+					</widget>
+
+					<!--hand to assistant-->
+					<widget class="button" id="hdOa" auto_size="horizontal" click_event="hOtA">
+						<translation id="text" translation_id="447559" type="use" value="Hand over to assistant[COMMENT: team talk button text]" />
+					</widget>
+
+					<!-- team talk staff responsibility widget-->
+					<widget class="widget_popup_button" id="ttRs" auto_size="horizontal" icon="icons/16px/staff respo">
+						<string id="popup_alignment" value="centre_x, bottom" />
+						<string id="widget_type" value="group_responsibility_list_widget"/>
+						<record id="WdgP" file="team/staff responsibility summary popup panel" width="800" height="150"/>
+						<record id="mopp" file="modal popup panel auto sized" />
+					</widget>
+
+					<!--end talk-->
+					<widget class="button" id="enTT" auto_size="horizontal" click_event="enTT">
+						<translation id="text" translation_id="447568" type="use" value="End team talk[COMMENT: team talk button text]" />
+					</widget>
+
+					<!--debug player reactions toggle button-->
+					<widget class="button" id="debT" auto_size="horizontal" click_event="debT" hidden="true">
+						<string id="text" value="Talk Reaction Debug Info[COMMENT: team talk reaction debug info toggle]" />
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<!-- Player table subsection bubble -->
+		<container class="main_transparent_box" navigation_container="true">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="tactic_player_list_table" id="teaT" mode="fill_rows,select_rows,show_bullets,select_multiple, drag_rows, drop_on_rows, stripe_rows" select_event="sLsT" row_height="30">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+				</record>
+
+				<list id="default_sort_column">
+					<integer value="Pshp" />
+				</list>
+
+				<flags id="default_view" value="prem" />
+				<list id="views">
+					<record id="prem">
+						<translation id="text" translation_id="376598" type="use" value="Team Talk[COMMENT: FR9089 - team talk]" />
+						<record id="view">
+							<!-- Position -->
+							<record id="Pshp" />
+							<!-- Status -->
+							<record id="Pcar" />
+							<!-- Name -->
+							<record id="Pers"  />
+							<!-- Hierarchy -->
+							<record id="THic" />
+							<!-- Captain -->
+							<record id="PisC" enable_change_captain="false" />
+							<!-- Condition -->
+							<record id="PRCF" auto_hide_priority="999" />
+							<!-- player condition bigger -->
+							<record id="ShPC" auto_hide_priority="1000" />
+							<!-- Morale -->
+							<record id="Pmor" ShTx="false" width="20" />
+							<!-- Appearances -->
+							<record id="Poap" auto_hide_priority="1999" />
+							<!-- Body Language -->
+							<record id="Pmtc" auto_hide_priority="2000" />
+							<!-- Talk popup -->
+							<record id="TPtm" appearance="buttons/subtle/normal/button"/>
+							<!-- Reaction label -->
+							<record id="PMrF" colour="text" />
+							<!-- Reaction -->
+							<record id="PMre" />
+						</record>
+					</record>
+
+					<record id="hlti">
+						<translation id="text" translation_id="376598" type="use" value="Team Talk[COMMENT: FR9089 - team talk]" />
+						<record id="view">
+							<!-- Position -->
+							<record id="Pshp" />
+							<!-- Status -->
+							<record id="Pcar" />
+							<!-- Name -->
+							<record id="Pers" width="100" />
+							<!-- Hierarchy -->
+							<record id="THic" />
+							<!-- Captain -->
+							<record id="PisC" enable_change_captain="false" />
+							<!-- Condition -->
+							<record id="PRCF" auto_hide_priority="9" />
+							<!-- player condition bigger -->
+							<record id="ShPC" auto_hide_priority="10" />
+							<!-- Morale -->
+							<record id="Pmor" ShTx="false" />
+							<!-- Appearances -->
+							<record id="Poap" />
+							<!-- Body Language -->
+							<record id="Pmtc" />
+							<!-- Talk popup -->
+							<record id="TPtm" appearance="buttons/subtle/normal/button"/>
+							<!-- Reaction label -->
+							<record id="PMrF" colour="text" width="130" auto_hide_priority="10" />
+							<!-- Reaction -->
+							<record id="PMre" />
+							<!-- Match goals -->
+							<record id="Pgls" width="40" auto_hide_priority="20" />
+							<!-- Match assists -->
+							<record id="Past" width="40" auto_hide_priority="40" />
+							<!-- Half time Rating -->
+							<record id="Phaf" width="55" auto_hide_priority="10" />
+						</record>
+					</record>
+
+					<record id="fult">
+						<translation id="text" translation_id="376598" type="use" value="Team Talk[COMMENT: FR9089 - team talk]" />
+						<record id="view">
+							<!-- Position -->
+							<record id="Pshp" />
+							<!-- Status -->
+							<record id="Pcar" />
+							<!-- Name -->
+							<record id="Pers" width="100" />
+							<!-- Hierarchy -->
+							<record id="THic" />
+							<!-- Captain -->
+							<record id="PisC" enable_change_captain="false" />
+							<!-- Condition -->
+							<record id="PRCF" auto_hide_priority="9" />
+							<!-- player condition bigger -->
+							<record id="ShPC" auto_hide_priority="10" />
+							<!-- Morale -->
+							<record id="Pmor" auto_hide_priority="10" ShTx="false" />
+							<!-- Appearances -->
+							<record id="Poap" />
+							<!-- Body Language -->
+							<record id="Pmtc" />
+							<!-- Talk popup -->
+							<record id="TPtm" appearance="buttons/subtle/normal/button"/>
+							<!-- Reaction label -->
+							<record id="PMrF" colour="text" auto_hide_priority="10" />
+							<!-- Reaction -->
+							<record id="PMre" auto_hide_priority="10" />
+							<!-- Match goals -->
+							<record id="Pgls" width="40" auto_hide_priority="30" />
+							<!-- Match assists -->
+							<record id="Past" width="40" auto_hide_priority="40" />
+							<!-- Half time Rating -->
+							<record id="Phaf" width="55" auto_hide_priority="20" />
+							<!-- Full time Rating -->
+							<record id="Pful" width="55" auto_hide_priority="10" />
+						</record>
+					</record>
+				</list>
+			</container>
+		</container>
+	</container>
+
+</panel>

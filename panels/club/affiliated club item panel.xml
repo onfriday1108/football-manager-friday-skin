@@ -1,0 +1,54 @@
+<panel>
+
+	<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="80,-1"  />
+
+	<!-- profile picture -->
+	<widget class="object_portrait_picture" id="prop" height="48">
+		<boolean id="scale_picture" value="true" />
+		<boolean id="keep_aspect_ratio" value="true" />
+		<flags id="image_alignment" value="centre" />
+
+		<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+			<list id="value">
+				<boolean value="false" />
+			</list>
+		</attachment>
+
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</list>
+		</record>
+	</widget>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-2" horizontal_inset="0" />
+
+		<record id="default_properties" auto_size="vertical" />
+
+		<widget class="club_button" id="ClNa" style="semi_bold" size="large" icon_enabled="false">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+			</record>
+		</widget>
+
+		<!-- Nationality -->
+		<widget class="nation_button" id="natp" colour="faded text">
+			<record id="object_property">
+				<integer id="get_property" value="Cnat" />
+			</record>
+		</widget>
+
+		<!-- Division -->
+		<widget class="comp_button" id="inst" colour="faded text" icon_enabled="false" comp_display_type="1">
+			<record id="object_property">
+				<integer id="get_property" value="Cdiv" />
+				<boolean id="dont_set_hint" value="true" />
+			</record>
+		</widget>
+	</container>
+
+</panel>

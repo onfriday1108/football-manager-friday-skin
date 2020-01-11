@@ -1,0 +1,4 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+	<container file="news_item_panels/weekly job updates panel"/>
+</panel>

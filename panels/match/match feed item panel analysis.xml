@@ -1,0 +1,142 @@
+﻿<panel>
+
+	<!--this list shows the match feed notification type. We need to match the number here with the list of appearances below. Any appearances that don't appear 
+  in this list will use the unchanged main_box appearance on the bordered box 'skbo'.-->
+	<!--enum NOTIFICATION_TYPE
+{
+	NT_NONE = 0,
+	NT_GOAL = 1,
+	NT_OWN_GOAL = 2,
+	NT_DISALLOWED_GOAL = 3,
+	NT_MISSED_PENALTY = 4,
+	NT_FOUL = 5,
+	NT_YELLOW_CARD = 6,
+	NT_RED_CARD = 7,
+	NT_OFFSIDE = 8,
+	NT_ADDED_TIME = 9,
+	NT_IMPORTANT_SCORE = 10,
+	NT_LEAGUE_POSITION_CHANGE = 11,
+	NT_SERIOUS_INJURY = 12,
+	NT_SLIGHT_INJURY = 13,
+	NT_TACTICS_ADVICE = 14,
+	NT_STATS_ADVICE = 15,
+	NT_PERFORMANCE_ADVICE = 16,
+	NT_TEAM_ADVICE = 17,
+  NT_KNOCK = 18,
+	NT_HALF_TIME = 19,
+	NT_EXTRA_TIME_KICK_OFF = 20,
+	NT_HALF_TIME_EXTRA_TIME = 21,
+	NT_FULL_TIME = 22,
+	NT_SUB = 23,
+  NT_TEAM_STAT = 24,
+  NT_PLAYER_STAT = 25
+	NT_MATCH_PLAN_TACTIC_CHANGE = 26
+	NT_MATCH_PLAN_PHILOSPHY_CHANGE = 27
+	NT_MATCH_PLAN_MENTALITY_CHANGE = 28
+	NT_PENALTY_AWARDED = 29
+	NT_TOUCHLINE_SHOUT = 30
+};
+-->
+	<list id="skns">
+		<record id="1" />
+		<record id="2" />
+		<record id="3" />
+		<record id="4" />
+		<record id="5" />
+		<record id="6" />
+		<record id="7" />
+		<record id="8" />
+		<record id="9" />
+		<record id="10" />
+		<record id="11" />
+		<record id="12" />
+		<record id="13" />
+		<record id="14" />
+		<record id="15" />
+		<record id="16" />
+		<record id="17" />
+		<record id="18" />
+		<record id="19" />
+		<record id="20" />
+		<record id="21" />
+		<record id="22" />
+		<record id="23" />
+		<record id="24" />
+		<record id="25" />
+		<record id="26" />
+		<record id="27" />
+		<record id="28" />
+		<record id="29" />
+		<record id="30" />
+	</list>
+
+	<boolean id="set_seen_when_shown" value="true"/>
+
+	<!-- There is also a GPU animation setup in code -->
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!--person/role/time-->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="arrange_horizontal_attachment" alignment="middle,extend" offset="0" gap="0" />
+
+		<!--person/role-->
+		<widget class="text" id="Pers" size="small" colour="faded text" auto_size="all" />
+
+		<widget class="spacer" />
+
+		<!--time-->
+		<widget class="text" id="time" size="small" colour="faded text" auto_size="all" />
+	</container>
+
+	<container class="bordered_box_no_margin" red_replacement="dark_box_background">
+		<layout class="stick_to_sides_attachment" alignment="top" inset="4" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="4" gap="0" />
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="4" gap="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+			<!--event text-->
+			<widget class="text" id="evtx" size="normal" auto_size="vertical" />
+
+			<container height="10" />
+
+			<!--advice-->
+			<widget class="text" font="title" colour="faded text" auto_size="vertical">
+				<translation id="text" translation_id="309188" type="use" value="Advice[COMMENT: interaction manager; category type]" />
+			</widget>
+			<widget class="text" id="avtx" size="normal" auto_size="vertical" />
+
+			<container height="10" />
+
+			<!--buttons-->
+			<container height="32">
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0">
+         <global id="gap" name="ui.split_button_row_gap" />
+        </layout>
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+        
+				<widget class="button" id="but1" auto_size="horizontal" appearance="buttons/standard/split/left/button" />
+				<widget class="popup_button" id="but2" fixed="true" auto_size="all" appearance="buttons/standard/split/right/button" />
+
+				<!--advice has been taken picture-->
+				<widget class="picture" id="adtk" width="32" image_alignment="centre" file="icons/16px/tick"/>
+			</container>
+		</container>
+
+		<!--pitch-->
+		<container class="main_box" id="ptcC" red_replacement="pitch_box_background" width="200">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="preselected_match_chalkboard_panel" id="pitc" height="150" />
+
+			<widget class="link_button" id="anal" auto_size="vertical">
+				<translation id="text" translation_id="447546" type="use" value="Analyse Data[COMMENT: match analysis, button to allow further analysis of chalkboard data]" />
+			</widget>
+		</container>
+	</container>
+
+</panel>

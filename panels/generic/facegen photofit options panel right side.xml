@@ -1,0 +1,58 @@
+﻿<panel id="dlog" wants_mouse_events="false" disable_animations="true">
+
+	 <record id="widget_info">
+		<flags id="alignment" value="centre_x" />
+		<symbol id="class" value="container" />	  
+	</record>
+
+
+	<!-- make dialog moveable -->
+	<string id="skin_style" value="plain box" />
+
+	<animation class="slide_in_right_animation"/>
+	<layout class="arrange_horizontal_attachment" layout="-38,-62" offset="10" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="10" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<widget class="spacer" />
+
+	<container class="main_contrast_box" wants_mouse_events="true" red_replacement="bg grey darker">
+		<layout class="arrange_vertical_attachment" layout="-1,40" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="facegen_picture_container" id="FRfC">
+
+			</container>
+
+
+
+		</container>
+
+		<container id="btns">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container>
+				<!-- stick buttons to bottom of box -->
+				<layout class="stick_to_sides_attachment" alignment="left,bottom" inset="0" apply_to_children="true" />
+
+				<!-- fit box to the height of the biggest button -->
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+				<container hidden="true">
+					<!--temporary until moved inside the code here-->
+					<translation id="hint" translation_id="396593" type="use" value="Facial hair[COMMENT: Facial hair options; customising your character's look and feel]" />
+				</container>
+
+
+
+			</container>
+		</container>
+
+	</container>
+
+</panel>

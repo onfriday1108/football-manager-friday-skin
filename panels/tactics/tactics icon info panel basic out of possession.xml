@@ -1,0 +1,10 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="picture" id="bsic" scale_picture="false" file="pitch/icons/kit/small/kit" image_alignment="centre">
+	</widget>
+
+	<widget class="picture" id="bssl" scale_picture="false" file="pitch/icons/kit/large/simple highlight" image_alignment="centre">
+	</widget>
+
+</panel>

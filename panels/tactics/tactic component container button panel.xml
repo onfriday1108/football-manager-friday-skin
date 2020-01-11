@@ -1,0 +1,24 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" embed_in_frame="true" />
+  <layout class="arrange_horizontal_attachment" alignment="left" embed_in_frame="true" />
+  <layout class="fit_children_attachment" alignment="vertical" embed_in_frame="true" offset="0" />
+  <layout class="fit_children_attachment" alignment="horizontal,extend" embed_in_frame="true" prio="1" />
+  
+  <widget class="view_menu_label" id="TitL">
+    <translation id="text" translation_id="293691" type="use" value="Test" />
+  </widget>
+
+  <!-- selection menu -->
+  <widget class="embedded_popup_button" id="sele" auto_size="horizontal" fixed="true" embed_in_frame="true" appearance="buttons/embedded/normal/view/button">
+    <translation id="text" translation_id="297258" type="use" value="Selection[COMMENT: team_actions_menu; menu title for team selection related actions]" />
+    <event id="click_notification_event" event_id="SELE" item="NULL" /> 
+    <event id="menu_layout_notification_event" event_id="mlne" event_target="sele" />
+  </widget>
+
+  <!--tactic menu-->
+  <widget class="embedded_popup_button" id="tctM" fixed="true" auto_size="horizontal" embed_in_frame="true">
+    <translation id="text" translation_id="260822" type="use" value="Tactic[COMMENT:]" />
+  </widget>
+
+</panel>

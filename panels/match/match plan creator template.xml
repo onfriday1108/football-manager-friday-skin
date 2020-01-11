@@ -1,0 +1,86 @@
+<panel>
+	<!-- wizard panel title, header and footer strings -->
+	<translation id="wizard_panel_title" translation_id="345007" type="use" value="Template[COMMENT: match plan creator wizard: template, title]" />
+	<translation_list id="wizard_panel_header">
+		<translation translation_id="344569" type="use">Please choose a match plan template.[COMMENT: match plan creator wizard: instructional text]</translation>
+		<translation />
+		<translation translation_id="356990" type="use">Using a template will create a match plan with scenarios using preset tactic strategies for particular situations which develop throughout a match. These scenarios can be changed later if desired.[COMMENT: match plan creator wizard: instructional text, use top 10 matches]</translation>
+	</translation_list>
+	<translation id="wizard_panel_step_text" translation_id="344928" type="use" value="Step 2: Choose A Template[COMMENT: match plan creator wizard: Short description of selecting a template step in the wizard]" />
+
+	<!-- centre the widgets vertically, but align them to the left side -->
+	<layout class="arrange_horizontal_attachment" layout="-1, -2" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="2" horizontal_alignment="horizontal"  />
+
+		<record id="default_properties" auto_size="vertical" />
+		
+		<widget class="radio_button" id="tem/">
+			<integer id="index" value="-1" />
+			<record id="click_event">
+				<integer id="event_id" value="temp" />
+				<integer id="index" value="-1" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="tem0">
+			<integer id="index" value="0" />
+			<record id="click_event">
+				<integer id="event_id" value="temp" />
+				<integer id="index" value="0" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="tem1">
+			<integer id="index" value="1" />
+			<record id="click_event">
+				<integer id="event_id" value="temp" />
+				<integer id="index" value="1" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="tem2">
+			<integer id="index" value="2" />
+			<record id="click_event">
+				<integer id="event_id" value="temp" />
+				<integer id="index" value="2" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="tem3">
+			<integer id="index" value="3" />
+			<record id="click_event">
+				<integer id="event_id" value="temp" />
+				<integer id="index" value="3" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="tem4">
+			<integer id="index" value="4" />
+			<record id="click_event">
+				<integer id="event_id" value="temp" />
+				<integer id="index" value="4" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="tem5">
+			<integer id="index" value="5" />
+			<record id="click_event">
+				<integer id="event_id" value="temp" />
+				<integer id="index" value="5" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="tem6">
+			<integer id="index" value="6" />
+			<record id="click_event">
+				<integer id="event_id" value="temp" />
+				<integer id="index" value="6" />
+			</record>
+		</widget>
+		<widget class="radio_button" id="tem7">
+			<integer id="index" value="7" />
+			<record id="click_event">
+				<integer id="event_id" value="temp" />
+				<integer id="index" value="7" />
+			</record>
+		</widget>
+	</container>
+
+	<widget class="text" id="desc" />
+</panel>

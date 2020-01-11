@@ -1,0 +1,5 @@
+<panel layout="-1" fixed_size_rows="true">
+  <flags id="mode" value="show_bullets, select_rows, select_multiple, stripe_rows"/>
+  <integer id="row_spacing" value="0"/>
+	<boolean id="save_session_state" value="true"/>
+</panel>

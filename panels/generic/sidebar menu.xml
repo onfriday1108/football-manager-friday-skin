@@ -1,0 +1,9 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" />
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_gap="0"/>
+		<widget class="menu" id="prim" fixed="true" navigation_focus_target="true" width="240" clear_on_hide="false" appearance="menus/custom/interface/full screen" inherit_appearance="true" is_modal="false" disable_standalone="true" red_replacement="bg darker">
+			<attachment class="get_global_attachment" get_property="SMen" set_property="itms"/>
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,56 @@
+<panel height="75">
+
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<container class="main_transparent_box">
+
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+		<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<widget class="text" auto_size="horizontal" alignment="centre_y" multiline="false" style="semi_bold" colour="match accent">
+			<translation id="text" translation_id="332267" type="use" value="REPLAY[COMMENT: replay controls label]" />
+		</widget>
+
+		<widget class="vertical_divider"/>
+
+		<!--speed-->
+		<container width="100">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="5" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="text" alignment="left,centre_y" font="title" auto_size="vertical">
+				<translation id="text" translation_id="332278" type="use" value="Speed[COMMENT:replay speed control on match screen]" />
+			</widget>
+
+			<widget class="delayed_slider_horizontal" id="rssl" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" final_changed_event="rspd" height="32"/>
+		</container>
+
+		<!--camera-->
+		<container width="128">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="text" alignment="left,centre_y"  font="title" auto_size="vertical">
+				<translation id="text" translation_id="306797" type="use" value="Camera[COMMENT: button which offers the user options to change the camera angle]" />
+			</widget>
+
+			<widget class="popup_button" id="cams" fixed="true" select_event="chrc" auto_tick_exclusive="true" value="2" width="150" auto_size="vertical">
+				<flags id="menu_appearance" value="menus/standard"/>
+				<flags id="alignment" value="left,centre_y"/>
+				<boolean id="multiline" value="false"/>
+				<translation id="text" translation_id="284289" type="use" value="Camera[COMMENT - view selection popup for match screen]" />
+			</widget>
+		</container>
+
+		<widget class="vertical_divider"/>
+
+		<!-- "skip" button -->
+		<widget class="icon_button" id="exre" click_event="exre" icon="icons/16px/fast forward" auto_size="horizontal"  controller_button="b_button">
+			<translation id="text" translation_id="332276" type="use" value="Skip[COMMENT: match_time_slider; instruction to skip the replay]" />
+			<translation id="hint" translation_id="332275" type="use" value="Skip this replay[COMMENT: match_time_slider; instruction to skip this replay, hint tooltip]" />
+		</widget>
+
+  </container>
+</panel>

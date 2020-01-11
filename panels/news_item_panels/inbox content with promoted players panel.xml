@@ -1,0 +1,27 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+	<boolean id="check_for_multiple_requests" value="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<widget class="table" id="pltb" layout="100, -1, 100, -2" mode="fill_rows, stripe_rows, printable, dont_ask_for_focus" fixed_size_rows="true" auto_size="vertical" column_spacing="8">
+		<list id="headings">
+			<record index="0" alignment="left,centre_y">
+				<translation id="text" translation_id="242883" type="use" value="Pos"/>
+			</record>
+			<record index="1" alignment="left,centre_y">
+				<translation id="text" translation_id="229689" type="use" value="Name"/>
+			</record>
+			<record index="2" alignment="left,centre_y">
+				<translation id="text" translation_id="293291" type="use" value="Current Ability"/>
+			</record>
+			<record index="3" alignment="left,centre_y">
+				<translation id="text" translation_id="232957" type="use" value="Reason"/>
+			</record>
+		</list>
+		<list id="default_sort_column">
+			<integer value="1"/>
+		</list>
+	</widget>
+
+</panel>

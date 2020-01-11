@@ -1,0 +1,14 @@
+<panel height="22">
+  <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+  <widget class="picture" file="icons/8px/bullet" red_replacement="text" auto_size="horizontal" image_alignment="centre" />
+  <container>
+    <layout class="arrange_horizontal_attachment" alignment="right,extend" gap="4" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+    <widget class="text" id="titl" multiline="false" font="text" alignment="left,centre_y"/>
+    <widget class="text" id="date" auto_size="horizontal" colour="faded text" multiline="false" alignment="right,centre_y"/>
+  </container>
+  
+</panel>

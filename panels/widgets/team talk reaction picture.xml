@@ -1,0 +1,9 @@
+﻿<panel>
+  <string id="positive_reaction_picture"  value="icons/16px/thumbs up"/>
+  <string id="negative_reaction_picture"  value="icons/16px/thumbs down"/>
+  <string id="neutral_reaction_picture"   value=""/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="5" apply_to_children="true" />
+
+  <widget class="picture" id="tTrI" />
+</panel>

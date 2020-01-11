@@ -1,0 +1,55 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  
+  <container class="horizontal_adaptive_container" id="aDcn" layout="-1,-1,-1" mode="distribute_equally" offset="0" inset="0">
+
+    <widget class="icon_button" minimum_width="100" icon="icons/16px/thumbs up" red_replacement="positive" icon_enabled="true" always_hide="true" alignment="left,centre_y" appearance="buttons/text/button" text="-" navigation_focus_target="false"/>
+
+    <widget class="icon_button" minimum_width="100" icon="icons/16px/thumbs up" red_replacement="positive" icon_enabled="true" always_hide="true" alignment="left,centre_y" appearance="buttons/text/button" text="-" navigation_focus_target="false"/>
+
+    <widget class="icon_button" minimum_width="100" icon="icons/16px/thumbs up" red_replacement="positive" icon_enabled="true" always_hide="true" alignment="left,centre_y" appearance="buttons/text/button" text="-" navigation_focus_target="false"/>
+
+    <!--<container minimum_width="100" always_hide="true" >
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+      <container width="16">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+        <widget class="picture" id="pimg" file="icons/16px/thumbs up" scale_picture="true" image_alignment="centre" red_replacement="positive" hidden="true" />
+        <widget class="picture" id="nimg" file="icons/16px/thumbs down" scale_picture="true" image_alignment="centre" red_replacement="negative" hidden="true" />
+      </container>
+
+      <widget class="link_text" id="lnkt" alignment="left,centre_y" appearance="buttons/text/button" disabled="true" text="-" />
+    </container>
+
+    <container minimum_width="100" always_hide="true" >
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+      <container width="16">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+        <widget class="picture" id="pimg" file="icons/16px/thumbs up" scale_picture="true" image_alignment="centre" red_replacement="positive" hidden="true" />
+        <widget class="picture" id="nimg" file="icons/16px/thumbs down" scale_picture="true" image_alignment="centre" red_replacement="negative" hidden="true" />
+      </container>
+
+      <widget class="link_text" id="lnkt" alignment="left,centre_y" appearance="buttons/text/button" disabled="true" text="-" />
+    </container>
+
+    <container minimum_width="100" always_hide="true" >
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+      <container width="16">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+        <widget class="picture" id="pimg" file="icons/16px/thumbs up" scale_picture="true" image_alignment="centre" red_replacement="positive" hidden="true" />
+        <widget class="picture" id="nimg" file="icons/16px/thumbs down" scale_picture="true" image_alignment="centre" red_replacement="negative" hidden="true" />
+      </container>
+
+      <widget class="link_text" id="lnkt" alignment="left,centre_y" appearance="buttons/text/button" disabled="true" text="-" />
+    </container>-->
+    
+  </container>
+</panel>

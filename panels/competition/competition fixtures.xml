@@ -1,0 +1,93 @@
+<panel>
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- titled box -->
+	<container class="main_box" id="fxtt" alignment="left" force_title_borders="true">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="10" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- embedded buttons -->
+		<container embed_in_frame="true" id="emdb">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="TitL" >
+				<translation id="text" translation_id="247326" type="use" value="Fixtures &amp; Results" />
+			</widget>
+			<widget class="view_menu_popup" id="vity" sele="vtvm" fixed="false" />
+		</container>
+
+		<!-- embedded buttons -->
+		<container id="btns" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right">
+				<global id="horizontal_gap" name="ui.button_row_gap"/>
+			</attachment_group>
+
+			<record id="default_properties" embed_in_frame="true"/>
+      
+			<widget class="embedded_left_right_list" id="fdat" sele="fdat" height="30" width="260">
+				<translation id="text" translation_id="247161" type="use" value="Dates" />
+			</widget>
+			<widget class="embedded_popup_button" id="fyar" sele="fyar" height="30" width="90" auto_size="none" fixed="false" />
+
+			<widget class="subtle_button" id="lrbt" click_event="fdtl" auto_size="horizontal">
+				<translation id="text" translation_id="247162" type="use" value="Latest Results" />
+			</widget>
+			<widget class="subtle_button" id="nfbt" click_event="fdtr" auto_size="horizontal">
+				<translation id="text" translation_id="247163" type="use" value="Next Fixtures" />
+			</widget>
+		</container>
+
+		<!-- No fixtures panel-->
+		<container id="nomt" hidden="true">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<widget class="spacer" height="10" />
+
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="all">
+				<translation id="text" translation_id="242251" type="use" value="No fixtures scheduled yet[COMMENT competition fixtures panel, no fixtures set up yet]" />
+			</widget>
+		</container>
+
+		<container class="main_box" appearance="" id="fxsb" hidden="true" >
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!-- scrolling box - used if more than 1 table-->
+			<container class="scrolling_box" save_session_state="true">
+				<container id="fsbg">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+				</container>
+			</container>
+		</container>
+
+		<container id="acbt">
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+			<widget class="popup_button" id="vwgl" select_event="vwmt" auto_size="all" fixed="true">
+				<translation id="text" translation_id="251846" type="use" value="Replays[COMMENT: competition fixtures panel; popup menu button text; goals and highlights are the two options]" />
+				<list id="items">
+					<record id="6">
+						<translation id="text" translation_id="227857" type="use" value="Goals" />
+					</record>
+					<!-- MHTM_GOALS -->
+					<record id="3">
+						<translation id="text" translation_id="247164" type="use" value="Highlights" />
+					</record>
+					<!-- MHTM_KEY -->
+				</list>
+			</widget>
+
+		</container>
+
+	</container>
+
+</panel>

@@ -1,0 +1,17 @@
+﻿<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+
+	<integer id="trigger_action_mode" value="2"/>
+	<integer id="trigger_window_width" value="1360"/>
+	<integer id="trigger_window_height" value="767"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container class="transfer_centre_panel" id="trct" file="club/transfer centre inbox panel" is_in_inbox="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</container>
+	<container class="transfer_centre_panel" id="mtrc" file="club/transfer centre min res inbox panel" is_in_inbox="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</container>
+
+</panel>

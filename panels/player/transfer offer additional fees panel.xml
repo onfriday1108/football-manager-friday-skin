@@ -1,0 +1,29 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" do_not_size="true"/>
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+
+		<widget class="text" auto_size="vertical" font="title" alignment="left,centre_y" colour="accent">
+			<translation id="text" translation_id="248396" type="use" value="Additional Fees"/>
+		</widget>
+
+		<widget class="subtle_popup_button" id="adfw" icon="icons/16px/plus" icon_alignment="left" select_event="addf" auto_size="all" fixed="true" alignment="left,centre_y">
+			<translation id="text" translation_id="229715" type="use" value="Add"/>
+		</widget>
+	</container>
+
+	<widget class="table" id="feep" layout="-1" mode="fill_rows, fill_custom_rows" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+		<flags id="row_appearance" value="tables/standard/row/divider/row"/>
+		<list id="column_table_properties">
+			<record index="0" left="0" bottom="2" top="2"/>
+		</list>
+	</widget>
+
+</panel>

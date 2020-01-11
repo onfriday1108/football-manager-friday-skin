@@ -1,0 +1,9 @@
+﻿<panel>
+  <layout class="centre_in_parent_attachment" alignment="all" offset="0" apply_to_children="true" />
+
+
+  <widget class="client_action_icon_button" disabled="true" id="oabt" action_id="draf" height="35" width="35" appearance="buttons/custom/draft/button" text="" icon_alignment="centre_x,centre_y" icon="icons/16px/plus">
+      <record id="object_property" get_property="objt" set_property="objt"/>
+      <translation id="hint" translation_id="243347" type="use" value="Pick Player From Draft" />
+    </widget>
+</panel>

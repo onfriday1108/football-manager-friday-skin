@@ -1,0 +1,274 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at05" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="client_object_viewer_xml_panel" entity_layout_id="at00" id="YCco" name="right_container">
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container entity_layout_id="at01" id="YinC" name="intake_container">
+			<layout class="stick_to_object_attachment" id="alPt" offset="10" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="alPb" offset="-10" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="alPl" offset="5" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="alPr" offset="-5" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container entity_layout_id="at02" id="at02" auto_size="vertical" name="title_container">
+				<layout class="stick_to_object_attachment" id="alPt" offset="14" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="alPl" offset="2" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" offset="-2" get_side="right" set_side="right" target="main" />
+				<layout class="stick_to_object_attachment" id="grAB" get_side="bottom" set_side="bottom" use_own_content_rectangle="true" use_children_to_size="true" target="at03" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container class="embedded_filter_button" entity_layout_id="at03" target="YCco" auto_size="all" id="plsf" needs_width="true" needs_height="true" name="filter_popup" embed_in_frame="true">
+					<layout class="stick_to_object_attachment" id="alPt" embed_in_frame="true" offset="5" get_side="top" set_side="top" move_side="true" target="fmin" />
+					<layout class="stick_to_object_attachment" id="alPr" embed_in_frame="true" offset="-6" get_side="right" set_side="right" move_side="true" target="fmin" />
+				</container>
+				<widget class="view_menu_label" entity_layout_id="at04" id="at0?" needs_width="true" needs_height="true" name="youth_label">
+          <translation id="text" translation_id="321235" type="use" value="Youth Candidates[COMMENT: team of youths graduating from the youth scheme, short name]" />
+          <layout class="stick_to_object_attachment" id="alPt" offset="5" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" offset="5" get_side="left" set_side="left" move_side="true" target="main" />
+				</widget>
+				<widget class="view_menu_popup" entity_layout_id="at05" id="plvi" needs_width="true" needs_height="true" name="view_popup">
+					<layout class="stick_to_object_attachment" id="alPt" offset="5" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" offset="5" get_side="right" set_side="left" move_side="true" target="at04" />
+				</widget>
+			</container>
+			<container class="client_object_list_table" entity_layout_id="at06" auto_size="none" save_session_state="true" id="pltb" name="client_table">
+				<string id="column_mode" value="resize_columns, move_columns, custom_views" />
+				<string id="popup_menu_class" value="popup_button_table_header" />
+				<integer id="database_table_type" value="1" />
+				<string id="mode" value="fill_rows, stripe_rows, printable, keyboard, dont_ask_for_focus" />
+				<string id="fixed_size_row" value="true" />
+				<integer id="row_height" value="40" />
+				<integer id="row_spacing" value="2" />
+				<string id="default_view" value="vpid" />
+				<list id="default_sort_column">
+					<flags value="Pppc" />
+				</list>
+				<list id="views">
+          <record id="vpid">
+            <translation id="text" translation_id="491879" type="use" value="Youth Intake Report[COMMENT: AREA: Development Centre; SUB-AREA: youth_development_club_area; FR-BN: 28187; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: label for a view of young academy player reports]" />
+            <record id="view">
+              <record id="Pnad" width="200" />
+              <record id="PpsC" />
+							<record id="Pnat" />
+							<record id="Phei" auto_hide_priority="4000" />
+							<record id="Pwei" auto_hide_priority="4000" />
+							<record id="Pcac" />
+							<record id="Pppc" />
+						</record>
+					</record>
+					<record id="coac">
+            <translation id="name" translation_id="292814" type="use" value="Reports[COMMENT: top level menu title for player reports screens]" />
+            <record id="view">
+              <record id="Pnad" width="200" />
+              <string id="PpPs" value="" />
+							<string id="Pbpc" value="" />
+							<string id="Pbrc" value="" />
+							<string id="Pbdc" value="" />
+							<string id="Page" value="" />
+							<string id="Pcac" value="" />
+							<string id="Pppc" value="" />
+						</record>
+					</record>
+					<record id="ctof">
+            <translation id="name" translation_id="247859" type="use" value="Contract Offers[COMMENT - team squad view showing details of contract offers to players]" />
+            <record id="view">
+              <record id="Pnad" width="200" />
+              <string id="person_context_contract_weekly_wage" value="" />
+							<string id="person_context_contract_end_date" value="" />
+							<string id="Pcif" value="" />
+							<string id="Pwof" value="" />
+							<string id="Pcof" value="" />
+						</record>
+					</record>
+					<record id="stts">
+						<translation id="text" value="Attributes" translation_id="229822" type="use" />
+						<list id="items">
+							<record id="phat">
+                <translation id="name" translation_id="230003" type="use" value="Physical" />
+                <record id="view">
+                  <record id="Pnad" width="200" />
+                  <record id="Pacc" />
+									<record id="Pagi" />
+									<record id="Pbal" />
+									<record id="Pjum" />
+									<record id="Pnft" />
+									<record id="Ppac" />
+									<record id="Psta" />
+									<record id="Pstr" />
+								</record>
+							</record>
+							<record id="meat">
+                <translation id="name" translation_id="230106" type="use" value="Mental" />
+                <record id="view">
+                  <record id="Pnad" width="200" />
+                  <record id="Pagg" />
+									<record id="Pant" />
+									<record id="Pbra" />
+									<record id="Pcmp" />
+									<record id="Pcnt" />
+									<record id="Pdec" />
+									<record id="Pdet" />
+									<record id="Pfla" />
+									<record id="Pinf" />
+									<record id="Potb" />
+									<record id="Ppsn" />
+									<record id="Ptwr" />
+									<record id="Pcre" />
+									<record id="Pwkr" />
+								</record>
+							</record>
+							<record id="teat">
+                <translation id="name" translation_id="229413" type="use" value="Technical" />
+                <record id="view">
+                  <record id="Pnad" width="200" />
+                  <record id="Pcor" />
+									<record id="Pcro" />
+									<record id="Pdri" />
+									<record id="Pfin" />
+									<record id="Pfrs" />
+									<record id="Pfrk" />
+									<record id="Phea" />
+									<record id="Plsh" />
+									<record id="Plth" />
+									<record id="Pmar" />
+									<record id="Ppas" />
+									<record id="Ppen" />
+									<record id="Ptac" />
+									<record id="Ptec" />
+								</record>
+							</record>
+							<record id="goat">
+                <translation id="name" translation_id="230024" type="use" value="Goalkeeping" />
+                <record id="view">
+                  <record id="Pnad" width="200" />
+									<record id="Paab" />
+									<record id="Pcoa" />
+									<record id="Pcom" />
+									<record id="Pecc" />
+									<record id="Phan" />
+									<record id="Pkic" />
+									<record id="Pooo" />
+									<record id="Pref" />
+									<record id="Prou" />
+									<record id="Pttp" />
+									<record id="Pthr" />
+								</record>
+							</record>
+							<record id="deat">
+                <translation id="name" translation_id="247413" type="use" value="Defensive" />
+                <record id="view">
+                  <record id="Pnad" width="200" />
+                  <record id="Pacc" />
+									<record id="Pant" />
+									<record id="Phea" />
+									<record id="Pjum" />
+									<record id="Pmar" />
+									<record id="Ppac" />
+									<record id="Ppsn" />
+									<record id="Psta" />
+									<record id="Pstr" />
+									<record id="Ptac" />
+								</record>
+							</record>
+							<record id="atat">
+                <translation id="name" translation_id="230042" type="use" value="Attacking" />
+                <record id="view">
+                  <record id="Pnad" width="200" />
+                  <record id="Pcro" />
+									<record id="Pdri" />
+									<record id="Pfrk" />
+									<record id="Pfin" />
+									<record id="Pfrs" />
+									<record id="Pfla" />
+									<record id="Plsh" />
+									<record id="Potb" />
+									<record id="Ppas" />
+									<record id="Pcre" />
+								</record>
+							</record>
+						</list>
+					</record>
+					<record id="debg">
+            <translation id="name" translation_id="247109" type="use" value="Debug" />
+            <record id="view">
+							<record id="duni" />
+							<record id="Pnms" />
+							<record id="PCAB" />
+							<record id="PPAB" />
+							<record id="PPPA" />
+							<record id="PCRP" />
+							<record id="PHRP" />
+							<record id="PWRP" />
+							<record id="PCAP" />
+						</record>
+					</record>
+				</list>
+				<layout class="stick_to_object_attachment" id="alPt" offset="67" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="alPb" offset="-25" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+			</container>
+		</container>
+		<container entity_layout_id="at07" id="noYC" height="140" name="empty_state">
+			<layout class="stick_to_object_attachment" id="alPl" offset="6" get_side="left" set_side="left" move_side="true" target="main" />
+			<layout class="centre_in_parent_attachment" id="alCv" alignment="vertical" offset="0" />
+			<layout class="stick_to_sizes_attachment" width="98.000000" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<widget class="text" entity_layout_id="at08" alignment="centre_x,centre_y" id="at08" height="70" name="no_intake_text">
+				<string id="size" value="large" />
+				<string id="style" value="bold" />
+        <translation id="value" translation_id="491880" type="use" value="List of players in youth intake is not yet available[COMMENT: AREA: Development Centre; SUB-AREA: youth_development_club_area; FR-BN: 28187; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: text for when no academy graduates are ready to join the youth team]" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+				<layout class="centre_in_parent_attachment" id="alCv" alignment="vertical" offset="0" />
+			</widget>
+		</container>
+	</container>
+</panel>

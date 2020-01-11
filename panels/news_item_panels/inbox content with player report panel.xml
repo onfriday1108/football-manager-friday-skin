@@ -1,0 +1,13 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+	<!-- content area -->
+	<widget class="inbox_body_text" id="bdtx"/>
+
+	<container id="rpbx">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+	</container>
+
+	<widget class="inbox_body_text" id="adtx"/>
+
+</panel>

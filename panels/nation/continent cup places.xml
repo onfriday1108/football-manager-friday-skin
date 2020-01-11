@@ -1,0 +1,16 @@
+<panel save_session_state="true">
+	
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box" id="titl">
+		<translation id="text" translation_id="307021" type="use" value="Qualification Places[COMMENT: continent section, continental cup places]" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	
+		<!-- nation co-efficients table -->	
+		<widget class="table" id="tabl" mode="fill_rows, fill_columns, stripe_rows,printable,keyboard" column_mode="horizontal_scrolling" row_spacing="0" top_header="2" save_session_state="true">
+		
+			<record id="default_properties" alignment="centre" />
+        	                   	
+		</widget>
+	</container>
+</panel>

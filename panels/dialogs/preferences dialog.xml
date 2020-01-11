@@ -1,0 +1,9 @@
+﻿<panel id="fblg" width="1000" >
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+  <layout class="stick_to_sides_attachment" alignment="vertical"  />
+  <container id="pCon">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	</container>
+
+</panel>
+

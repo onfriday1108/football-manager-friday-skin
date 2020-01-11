@@ -1,0 +1,81 @@
+﻿<panel>
+	<boolean id="should_force_refresh" value="true" />
+	<!--this is the file to use for the widgets in the pro/con table-->
+	<string id="pcif" value="player/scout report pro con for overview" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- No scout report -->
+	<container id="nsrc">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container id="nocs" height="60">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+
+				<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+			</widget>
+			<widget class="icon_button" id="sctP" click_event="sctc" auto_size="horizontal" height="30" icon="icons/16px/search">
+				<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			</widget>
+		</container>
+
+		<widget id="nocn" class="text" spec="text" size="11" alignment="centre" auto_size="vertical">
+		</widget>
+	</container>
+
+	<!-- Already being scounted -->
+	<container id="Arbs">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" id="arbt" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+		</widget>
+	</container>
+
+	<!-- Already being scouted by pool -->
+	<container id="Pool">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+		</widget>
+	</container>
+
+	<container id="main">
+		<layout class="arrange_vertical_attachment" layout="22,-1,22,-1" offset="0" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container class="inner_subtle_box_no_margin" red_replacement="fg positive">
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,4,0,0" />
+
+			<widget class="text" colour="fg positive" font="title" alignment="left,centre_y" >
+				<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+			</widget>
+
+		</container>
+
+		<widget class="table" mode="fill_rows" id="tpro" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" />
+
+		<container class="inner_subtle_box_no_margin" red_replacement="fg negative">
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,4,0,0" />
+
+			<widget class="text" colour="fg negative" font="title" alignment="left,centre_y">
+				<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]" />
+			</widget>
+
+		</container>
+
+		<widget class="table" mode="fill_rows" id="tcon" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" />
+
+	</container>
+
+</panel>

@@ -1,0 +1,17 @@
+<panel inset="0">
+
+	<global id="gap" name="ui.main_box_gap"/>
+
+	<!-- Comp panels are added and layout is performed in code. Woohoo! -->
+	<widget class="label" id="ncmp" size="large" alignment="centre_x,top" hidden="true"/>
+
+	<!-- Be careful when changing this container it's tied directly to the internal behavior of the TEAM_COMPETITIONS_OVERVIEW_PANEL class -->
+	<container id="main" draw_vertical_dividers="true" >
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill">
+			<global id="horizontal_gap" name="ui.main_box_gap"/>
+		</attachment_group>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	</container>
+
+</panel>

@@ -1,0 +1,28 @@
+﻿<panel>
+
+	<attachment_group class="horizontal_arrange" horizontal_alignment="left,as_needed" vertical_gap="0"/>
+
+	<widget class="text" id="frmt" alignment="left,centre_y" size="small" auto_size="horizontal" style="bold" colour="secondary" red_replacement="secondary"/>
+
+	<!--familiarity-->
+	<container >
+		<attachment_group class="horizontal_arrange_autosize_vertical_centre"  />
+
+		<container class="inner_box" id="fmiL" height="12" width="75" appearance="boxes/custom/tactic fam/paper">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="horizontal_percentage_bar" bar_value_colour="tactical_familiarity_colour_1" id="fami" label_width="0" appearance="charts/bar/custom/tactics" />
+
+			<!--This is a button overlay to make the horizontal percentage bar look more like you can click on it -->
+			<container id="FamB">
+				<translation id="hint" translation_id="326040" type="use" value="Click to see the full breakdown of tactic familiarity levels[COMMENT: hint to the user to tell them that clicking on this widget will show them a panel with their team's levels of tactical familiarity]" />
+			</container>
+
+		</container>
+
+	</container>
+
+
+
+
+</panel>

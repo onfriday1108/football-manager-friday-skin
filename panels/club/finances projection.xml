@@ -1,0 +1,44 @@
+<panel>
+	<boolean id="save_session_state" value="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="table" id="fnps" fixed_size_rows="true" auto_size_rows="false" row_height="104" >
+
+			<flags id="layout" value="-8,-4, 20,-3, 20, -3, 20, -3" />
+			<flags id="mode" value="fill_rows, fill_custom_rows, stripe_rows" />
+
+
+			<!-- default properties adopted by every item in table -->
+			<record id="default_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+
+			<list id="row_properties">
+				<record indx="0" row_height="25">
+				</record>
+			</list>
+
+			<list id="headings">
+				<record indx="0" alignment="left,centre_y" column_span="1">
+					<translation id="text" translation_id="331947" type="use" value="Projection[COMMENT: finances section of tree view; seasonal projection for finances]" />
+				</record>
+				<record indx="1" alignment="left,centre_y" column_span="1">
+					<translation id="text" translation_id="347977" type="use" value="Area[COMMENT: board confidence panel]" />
+				</record>
+				<!-- don't add a comment here, the string exists elsewhere like this and has been translated -->
+				<record indx="2" id="hwt1" alignment="left,centre_y" column_span="2">
+					<translation id="text" translation_id="335496" type="use" value="This season[COMMENT: financial projections; table heading]" />
+				</record>
+				<record indx="4" id="hwt2" alignment="left,centre_y" column_span="2">
+					<translation id="text" translation_id="335193" type="use" value="Next season[COMMENT: financial projections; table heading]" />
+				</record>
+				<record indx="6" id="hwt3" alignment="left,centre_y" column_span="2">
+					<translation id="text" translation_id="335279" type="use" value="Season after[COMMENT: financial projections; table heading]" />
+				</record>
+			</list>
+		</widget>
+	</container>
+</panel>

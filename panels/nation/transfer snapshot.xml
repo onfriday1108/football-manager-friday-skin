@@ -1,0 +1,60 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+
+		<translation id="title" translation_id="297333" type="use" value="Major Transfers" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="table" id="tabl" mode="fill_rows, stripe_rows" layout="-3,-2,-2" auto_size_rows="false" row_height="30">
+
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="298220" type="use" value="Player[COMMENT: transfer list, player column, header]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="298221" type="use" value="From[COMMENT: transfer list, selling team, header]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="298222" type="use" value="To[COMMENT: transfer list, buying team, header]" />
+					</record>
+				</list>
+
+				<record id="default_properties" alignment="left,centre_y" spec="text" navigation_focus_target="true"/>
+
+				<list id="column_table_properties">
+					<record index="0" left="4" />
+					<record index="1" />
+					<record index="2" right="4" />
+				</list>
+
+			</widget>
+
+			<container class="empty_state" header_widget="hedr" id="notr">
+				<widget class="label" id="hedr" alignment="centre" auto_size="vertical">
+					<translation id="text" translation_id="297226" type="use" value="No Transfers.[COMMENT; transfer snapshot panel: no transfers]" />
+				</widget>
+			</container>
+
+		</container>
+
+		<!--button-->
+		<container>
+
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="right" />
+
+			<widget class="link_appearance_button" id="gttr">
+				<translation id="text" translation_id="345483" type="use" value="View All Transfers[COMMENT: text for button that links to the transfers section; Mnior capitalisation cahnge, use top 10 matches]" />
+			</widget>
+
+		</container>
+
+	</container>
+</panel>

@@ -1,0 +1,58 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="1" />
+
+  <!-- Player going on -->
+  <container class="inner_box" appearance="tables/custom/league/promotion/row">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="10" />
+
+    <container>
+      <layout class="fit_children_attachment" alignment="vertical" gap="0" />
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6"/>
+      <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+      <widget class="picture" file="icons/26px/sub on" auto_size="all" alignment="left,centre_y"/>
+      <widget class="person_button" id="p1nm" height="26" style="semi_bold" colour="text" size="13" alignment="left,centre_y"/>
+    </container>
+    <container id="p1tc">
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+
+      <container>
+        <layout class="fit_children_attachment" alignment="horizontal" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+        <layout class="arrange_vertical_attachment" layout="20,30,20,30,20,-1" offset="0" />
+
+        <widget class="label" auto_size="horizontal" alignment="left,bottom">
+          <translation id="text" translation_id="327252" type="use" value="Individual Talk[COMMENT: Match; Label for team talk selector on substitute confirmation dialog]" />
+        </widget>
+        <widget class="player_team_talk_popup" id="p1tt" width="300" height="30">
+          <translation id="text" translation_id="227487" type="use" value="None" />
+        </widget>
+        <widget class="label" auto_size="horizontal" alignment="left,bottom">
+          <translation id="text" translation_id="331949" type="use" value="Reaction[COMMENT: person properties; text header for team talk screen which will list any feedback from individual players]" />
+        </widget>
+        <widget class="team_talk_reaction_label" colour="text" id="p1re" type="0" height="30" alignment="left,centre_y" size="11" auto_size="horizontal" show_highlight="false"/>
+        <widget class="label" auto_size="horizontal" alignment="left,bottom">
+          <translation id="text" translation_id="281372" type="use" value="Reason[COMMENT: table heading; reason for press conference]" />
+        </widget>
+        <widget class="team_talk_reason_label" colour="text" id="p1rs" type="0" alignment="left,top" size="11" width="318"/>
+      </container>
+
+    </container>
+  </container>
+
+  <!-- Player coming off -->
+  <container class="inner_box" appearance="tables/custom/league/relegation/row">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="10" />
+
+    <container>
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="6"/>
+      <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+      <widget class="picture" file="icons/26px/sub off" auto_size="all" />
+      <widget class="person_button" id="p2nm" height="26" style="semi_bold" colour="text" size="13" alignment="left,centre_y"/>
+    </container>
+  </container>
+</panel>

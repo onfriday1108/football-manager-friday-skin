@@ -1,0 +1,63 @@
+<panel>
+	<translation id="title" translation_id="306502" type="use" value="Player Mini Profile" />
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<widget class="table" id="tabl" layout="-1" auto_size="vertical" fixed_size_rows="false" auto_size_rows="true" row_spacing="0" mode="fill_rows, stripe_rows">
+
+		<list id="headings">
+			<record alignment="centre" height="24"/>
+		</list>
+
+		<record id="default_properties" col="0" />
+
+		<!-- League picture -->
+		<container row="0" height="90">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+			<widget class="picture" id="prop" scale_picture="true" image_alignment="centre">
+				<record id="object_property">
+					<integer id="get_property" value="mnpc" />
+				</record>
+			</widget>
+		</container>
+
+		<!-- Nationality -->
+		<container row="1" height="25">
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="4" />
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" />
+
+			<widget class="nation_button" auto_size="horizontal" id="natp">
+				<record id="object_property">
+					<integer id="get_property" value="cnat" />
+				</record>
+			</widget>
+		</container>
+
+
+
+		<container row="2" height="25">
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="1" />
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" />
+
+			<!-- Name -->
+			<widget class="comp_button" id="name" alignment="centre" auto_size="horizontal">
+				<record id="object_property">
+					<integer id="get_property" value="dref" />
+				</record>
+			</widget>
+		</container>
+
+
+		<!-- Holders -->
+		<!-- Set in code -->
+		<widget class="text" id="hold" row="3" alignment="centre" height="25" spec="text" />
+
+		<!-- Stars -->
+		<widget class="comp_reputation_stars_label" id="star" row="4" alignment="centre" height="25" navigation_focus_target="false">
+			<record id="object_property">
+				<integer id="get_property" value="crps" />
+			</record>
+		</widget>
+
+	</widget>
+</panel>

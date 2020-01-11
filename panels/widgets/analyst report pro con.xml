@@ -1,0 +1,107 @@
+﻿<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+  <container>
+    <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+    <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+    <container width="50"/>
+    
+    <widget class="text" auto_size="all" font="title">
+      <record id="object_property" get_property="stts" set_property="text"/>
+    </widget>
+
+    <widget class="text" auto_size="all" font="title">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="upcs" />
+            <integer id="set_property" value="text" />
+          </record>
+          <record>
+            <integer id="get_property" value="Icol" />
+            <integer id="set_property" value="colr" />
+          </record>
+          <record>
+            <integer id="get_property" value="iupc" />
+            <integer id="set_property" value="Shwn" />
+          </record>
+        </list>
+      </record>
+
+    </widget>
+    
+  </container>
+
+
+  <container height="30">
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+    
+    <widget class="picture" width="48" image_alignment="centre_x,bottom" scale_picture="true" keep_aspect_ratio="true">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="icon" />
+            <integer id="set_property" value="file" />
+          </record>
+          <record>
+            <integer id="get_property" value="Icol" />
+            <integer id="set_property" value="rrep" />
+          </record>
+        </list>
+      </record>
+    </widget>
+    
+    
+
+    <widget class="text" style="semi_bold" size="xlarge" auto_size="horizontal" alignment="left,centre_y">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="stvs" />
+            <integer id="set_property" value="text" />
+          </record>
+          <record>
+            <integer id="get_property" value="Icol" />
+            <integer id="set_property" value="colr" />
+          </record>
+        </list>
+      </record>
+    </widget>
+
+    <widget class="text" auto_size="horizontal" alignment="left,centre_y">
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="stps" />
+            <integer id="set_property" value="text" />
+          </record>
+          <record>
+            <integer id="get_property" value="Icol" />
+            <integer id="set_property" value="colr" />
+          </record>
+        </list>
+      </record>
+    </widget>
+   
+    
+  </container>
+
+  <container height="8"/>
+
+  <widget class="text" font="title" auto_size="all">
+    <record id="object_property" get_property="tcts" set_property="text"/>
+  </widget>
+
+  <widget class="text" colour="faded text" auto_size="all">
+    <record id="object_property" get_property="tcvs" set_property="text"/>
+  </widget>
+
+  <container height="4"/>
+  
+  <widget class="horizontal_subtle_divider" />
+</panel>

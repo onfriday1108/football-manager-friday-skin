@@ -1,0 +1,60 @@
+<panel height="70">
+  <layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="0" />
+  <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="vertical" inset="0" />
+
+  <container width="150" />
+
+  <container height="60">
+    <layout class="grid_layout_attachment" row_layout="20,30" mode="exact" vertical_gap="0">
+
+      <list id="column_layout">
+        <record>
+          <string id="column_layout" value="120,150,-1" />
+          <integer id="horizontal_offset" value="0" />
+          <integer id="horizontal_gap" value="5" />
+        </record>
+        <record>
+          <string id="column_layout" value="120,150,-1" />
+          <integer id="horizontal_offset" value="0" />
+          <integer id="horizontal_gap" value="5" />
+        </record>
+      </list>
+    </layout>
+
+    <widget class="label" font="title" col="0" row="0" size="small">
+      <translation id="text" translation_id="425009" type="use" value="Available scouts[COMMENT: Bug 145036]" />
+    </widget>
+
+    <widget class="label" id="knol" font="title" col="1" row="0" size="small">
+    </widget>
+
+    <widget class="label" font="title" col="2" row="0" size="small">
+      <translation id="text" translation_id="251845" type="use" value="Source[COMMENT: team screen; title of panel showing scouting knowledge]" />
+    </widget>
+
+    <widget class="label" id="nbsc" col="0" row="1" alignment="left,centre_y" size="large">
+
+    </widget>
+
+    <container col="1" row="1">
+      <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="0" />
+
+      <widget class="horizontal_percentage_bar" id="know"  height="10" width="140">
+        <layout class="stick_to_sides_attachment" alignment="top" inset="10" />
+      </widget>
+
+      <widget class="label" id="knon"   alignment="left,centre_y" size="large">
+        <translation id="text" translation_id="320493" type="use" value="None currently[COMMENT: text indicating that there is no person to view here currently (e.g. a manager, captain, vice captain etc.)]" />
+      </widget>
+
+    </container>
+    
+
+    <widget class="person_button" id="srcw" col="2" row="1" alignment="left,centre_y" size="large">
+      
+    </widget>
+  </container>
+
+
+
+</panel>

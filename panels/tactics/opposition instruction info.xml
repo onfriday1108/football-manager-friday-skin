@@ -1,0 +1,15 @@
+﻿<panel>
+
+  <layout class="arrange_horizontal_attachment" alignment="middle" gap="4" offset="2" />
+  <layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+
+  <widget class="picture" id="TPgl" file="icons/16px/goal" auto_size="all">
+    <translation id="hint" translation_id="232092" type="use" value="Top Goalscorer" />
+  </widget>
+  <widget class="picture" id="MSAS" file="icons/16px/assist" auto_size="all">
+    <translation id="hint" translation_id="232095" type="use" value="Most Assists" />
+  </widget>
+  <widget class="picture" id="WSDs" file="icons/16px/whistle" auto_size="all">
+    <translation id="hint" translation_id="349785" type="use" value="Most Red Cards[COMMENT: title for table showing players who have the most red cards]" />
+  </widget>
+</panel>

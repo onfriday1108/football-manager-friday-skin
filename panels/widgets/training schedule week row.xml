@@ -1,0 +1,68 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at06"/>
+		<record entity_layout_id="at01"/>
+		<record entity_layout_id="at04"/>
+		<record entity_layout_id="at07"/>
+		<record entity_layout_id="at08"/>
+		<record entity_layout_id="at02"/>
+	</list>
+	<string id="row_normal_appearance" value="boxes/subsection/no margin/paper"/>
+	<string id="row_highlighted_appearance" value="boxes/subsection/no margin/paper"/>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="none,all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="none,all" inset="0"/>
+	</widget>
+	<container class="main_box_no_margin" entity_layout_id="at00" id="subB" sub_group_id="NULL_ID">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="none,top" set_side="none,top" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="none,bottom" set_side="none,bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="none,left" set_side="none,left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="none,right" set_side="none,right" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="none,all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="none,all" inset="0"/>
+		</widget>
+		<container class="main_contrast_box" entity_layout_id="at01" id="brdL" embed_in_frame="true" width="5">
+			<layout class="stick_to_object_attachment" id="align_top" embed_in_frame="true" get_side="none,top" set_side="none,top" target="fmin"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" embed_in_frame="true" get_side="none,bottom" set_side="none,bottom" target="fmin"/>
+			<layout class="stick_to_object_attachment" id="align_left" embed_in_frame="true" get_side="none,left" set_side="none,left" move_side="true" target="fmin"/>
+		</container>
+		<container class="training_schedule_week_widget" entity_layout_id="at04" id="schT" name="schedule week table" session_description_column="true" shortened="true">
+			<string id="draggable" value="true"/>
+			<string id="schedule_header_file" value=""/>
+			<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="none,top" set_side="none,top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="none,bottom" set_side="none,bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="none,right" set_side="none,left" target="at01"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="none,right" set_side="none,right" target="main"/>
+		</container>
+		<widget class="button" entity_layout_id="at07" alignment="centre_x,centre_y" id="pste" click_event="ewPs" auto_size="none,horizontal" hidden="true" embed_in_frame="true" width="60" height="25">
+			<string id="disabled" value="true"/>
+			<translation id="text" translation_id="247115" type="use" value="Paste" />
+			<layout class="stick_to_object_attachment" id="align_top" embed_in_frame="true" offset="5" get_side="none,top" set_side="none,top" move_side="true" target="fmin"/>
+			<layout class="stick_to_object_attachment" id="align_right" embed_in_frame="true" offset="-10" get_side="none,right" set_side="none,right" move_side="true" target="fmin"/>
+		</widget>
+		<widget class="button" entity_layout_id="at08" alignment="centre_x,centre_y" id="copy" click_event="ewCp" hidden="true" embed_in_frame="true" width="60" height="25">
+			<translation id="text" translation_id="247114" type="use" value="Copy" />
+			<layout class="stick_to_object_attachment" id="align_top" embed_in_frame="true" offset="5" get_side="none,top" set_side="none,top" move_side="true" target="fmin"/>
+			<layout class="stick_to_object_attachment" id="align_right" embed_in_frame="true" offset="-4" get_side="none,left" set_side="none,right" move_side="true" target="at07"/>
+		</widget>
+		<widget class="text" entity_layout_id="at06" alignment="centre_x,centre_y" id="wkTx" auto_size="none,horizontal" needs_width="true">
+			<layout class="stick_to_object_attachment" id="align_top" offset="1" get_side="none,top" set_side="none,top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-737" get_side="none,bottom" set_side="none,bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="none,left" set_side="none,left" move_side="true" target="at01"/>
+		</widget>
+		<widget class="link_button" alignment="centre_y,left"  icon_alignment="centre_y,left" id="wkLB" entity_layout_id="at02" name="link to per week" auto_size="horizontal" embed_in_frame="true" appearance="buttons/link/title/button" needs_width="true" height="25">
+			<layout class="stick_to_object_attachment" id="align_top" embed_in_frame="true" offset="6" get_side="none,top" set_side="none,top" move_side="true" target="fmin"/>
+			<layout class="stick_to_object_attachment" id="align_left" embed_in_frame="true" offset="6" get_side="none,left" set_side="none,left" move_side="true" target="fmin"/>
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,10 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+	<widget class="text" alignment="centre_y,left" id="neTX" auto_size="vertical" name="notable_events_text">
+		<translation id="text" translation_id="491971" type="use" value="Notable events[COMMENT: title for news item contents, highlighting notable games that players on loan have had; AREA: Loan roundup news item; BN: 11806]" />
+		<string id="size" value="large" />
+		<string id="font" value="title" />
+		<string id="colour" value="accent" />
+	</widget>
+	<container class="vertical_arrange_container" id="neVC" auto_size="vertical" needs_height="true" name="notable_events_vertical_arrange_container" />
+</panel>

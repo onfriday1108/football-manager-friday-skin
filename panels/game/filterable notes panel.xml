@@ -1,0 +1,132 @@
+<panel>
+
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- main area -->
+		<container id="main">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="main_box" force_title_borders="true" id="plti" navigation_container="true">
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_left"/>
+
+					<widget class="view_menu_label" id="TitL" navigation_focus_target="false">
+						<translation id="text" translation_id="242775" type="use" value="Notes" />
+					</widget>
+					<widget class="view_menu_popup" id="plvi" save_session_state="true" />
+
+				</container>
+
+				<!-- buttons area -->
+				<container id="btna" embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" />
+
+					<!-- filter menu -->
+					<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="all" embed_in_frame="true"/>
+
+				</container>
+
+				<widget class="property_list_table" id="pltb" SelP="objt" select_event="ntse" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_multiple, select_rows, dont_allow_empty_selection" column_mode="resize_columns, move_columns, custom_views">
+					<boolean id="save_session_state" value="true" />
+					<boolean id="save_default_state" value="true" />
+
+					<!-- default sort by playing position (primary), then picked position, then name -->
+					<list id="default_sort_column">
+						<integer value="titl" />
+					</list>
+
+					<record id="Cols" file="properties/note properties" />
+
+					<!--default view-->
+					<flags id="default_view" value="over" />
+
+					<list id="viws">
+						<record id="over">
+							<translation id="name" translation_id="257300" type="use" value="Overview[COMMENT: Overview menu item on the notes view menu]" />
+							<record id="view">
+								<flags id="titl" />
+								<!-- title -->
+								<flags id="dref" />
+								<!-- object name (player,team, etc) -->
+								<flags id="ntgs" />
+								<!-- tags/categories -->
+							</record>
+						</record>
+
+						<record id="catg">
+							<translation id="name" translation_id="257301" type="use" value="Date[COMMENT: Creation date menu item on the notes view menu]" />
+							<record id="view">
+								<flags id="titl" />
+								<!-- title -->
+								<flags id="dref" />
+								<!-- object name (player,team, etc) -->
+								<flags id="ncda" />
+								<!-- tags/categories -->
+							</record>
+						</record>
+
+						<record id="remi">
+							<translation id="name" translation_id="257302" type="use" value="Reminder[COMMENT: Reminder menu item on the notes view menu]" />
+							<record id="view">
+								<flags id="titl" />
+								<!-- title -->
+								<flags id="dref" />
+								<!-- object name (player,team, etc) -->
+								<flags id="nord" />
+								<!-- reminder date -->
+								<flags id="norr" />
+								<!-- reminder recurrence -->
+							</record>
+						</record>
+					</list>
+
+				</widget>
+
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="ui.button_row_gap" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"  />
+
+					<widget class="primary_icon_button" id="crea" auto_size="all" click_event="crno" icon="icons/16px/edit">
+						<translation id="text" translation_id="257274" type="use" value="Create Note[COMMENT: Create Note button text on the note list panel]" />
+					</widget>
+					<widget class="button" id="dupl" auto_size="all" click_event="duno">
+						<translation id="text" translation_id="295866" type="use" value="Create a Copy[COMMENT: button text on the note list panel to Create a Copy of an existing note]" />
+					</widget>
+					<widget class="button" id="edit" auto_size="all" click_event="edno">
+						<translation id="text" translation_id="316563" type="use" value="Edit Note[COMMENT: Edit Note button text on the note list panel]" />
+					</widget>
+					<widget class="button" id="dele" auto_size="all" click_event="deno">
+						<translation id="text" translation_id="257272" type="use" value="Delete Note[COMMENT: Delete Note button text on the note list panel]" />
+					</widget>
+
+				</container>
+
+			</container>
+			<!-- players titled box -->
+
+		</container>
+
+		<!--viewing/editing area-->
+		<container navigation_container="true">
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="note_view_panel" id="novp" />
+			<widget class="note_edit_panel" id="noep" hidden="true" />
+
+		</container>
+
+	</container>
+
+</panel>

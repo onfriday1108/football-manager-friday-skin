@@ -1,0 +1,44 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="4"/>
+	
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+
+		<widget class="tactic_slot_tab_container" id="tact" file="tactics/tactic slot tab container training induction" height="80"/>
+		<widget class="text" text="no tactic set" id="nota" hidden="true" auto_size="vertical"/>
+		<widget class="text" id="body" alignment="centre_y, left" auto_size="vertical"/>
+	</container>
+	<container class="inner_subtle_box" height="110">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+		<container >
+			<attachment_group class="horizontal_arrange" horizontal_layout="61,-1" horizontal_gap="10"/>
+			<widget class="picture" file="icons/custom/scouting/team report card/team_attribute_strength" scale_picture="true" image_alignment="centre" blue_replacement="text" red_replacement="tutorial bg"/>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="2" />
+				<widget class="text" text="facilities" font="label" alignment="bottom,left" auto_size="vertical">
+					<translation id="text" translation_id="316691" type="use" value="Facilities" />
+				</widget>
+				<widget class="training_facilities_description_text" mode="1" font="value" auto_size="vertical" colour="text">
+					<record id="object_property">
+						<integer id="get_property" value="TfcD"/>
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="61,-1" horizontal_gap="10"/>
+			<widget class="picture" file="icons/custom/scouting/team report card/coaching_staff" scale_picture="true" image_alignment="centre" blue_replacement="text" red_replacement="tutorial bg"/>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="2" />
+				<widget class="text" font="label" alignment="bottom,left" auto_size="vertical">
+					<translation id="text" translation_id="388030" type="use" value="Coaching Team[COMMENT: FR 8158, Staff UI revamp, displays details of a team's staff/personnel make-up]" />
+				</widget>
+				<widget class="text" id="staf" font="value" auto_size="vertical" colour="text"/>
+			</container>
+		</container>
+	</container>
+</panel>

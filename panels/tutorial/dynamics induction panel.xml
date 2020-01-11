@@ -1,0 +1,6 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="inbox_content_with_team_dynamics_panel" id="dynP" file="news_item_panels/inbox content with team dynamics panel" />
+</panel>

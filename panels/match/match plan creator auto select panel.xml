@@ -1,0 +1,16 @@
+<panel>
+	<!-- wizard panel title, header and footer strings -->
+	<translation id="wizard_panel_title" translation_id="343279" type="use" value="Auto-Select Team[COMMENT: match plan creator wizard: Panel title of auto select team match plan step in the wizard]" />
+  <translation_list id="wizard_panel_header">
+    <translation translation_id="344575" type="use">Please choose whether the assistant manager should pick the team for the match.[COMMENT: match plan creator wizard: instructional text]</translation>
+    <translation />
+    <translation translation_id="343926" type="use">If this remains unchecked then current team selection will be chosen and the team will need to be re-picked if the current selection is invalid.[COMMENT: match plan creator wizard: instructional text]</translation>
+  </translation_list>
+  <translation id="wizard_panel_step_text" translation_id="469769" type="use" value="Step 8: Auto-Select Team[COMMENT: match plan creator wizard: Short description of auto select team match plan step in the wizard]" />
+
+  <layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+  <widget class="check_box" id="alas" click_event="alas" height="26">
+		<translation id="text" translation_id="333666" type="use" value="Allow assistant to pick team[COMMENT: match plan option, allows assistant to pick team]" />
+	</widget>
+</panel>

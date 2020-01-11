@@ -1,0 +1,23 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!--general match prep-->
+	<container id="cont" hidden="true">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="5" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="text" id="mtFL" auto_size="vertical" alignment="left,top" colour="faded text"/>
+		<widget class="label" alignment="left,top" size="large" style="semi_bold" colour="positive" id="mtFO"/>
+
+	</container>
+
+	<!--last match feedback-->
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="text" auto_size="vertical" alignment="left,centre_y" font="panel_title" colour="accent">
+			<translation id="text" translation_id="348168" type="use" value="Last Match Feedback[COMMENT: feedback about the last match played by your team]" />
+		</widget>
+		<widget class="text" id="fedS" auto_size="vertical"/>
+	</container>
+
+</panel>

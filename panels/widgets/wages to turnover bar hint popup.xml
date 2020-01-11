@@ -1,0 +1,56 @@
+﻿<panel width="450">
+  <attachment_group class="vertical_arrange_autosize" />
+
+  <container class="main_box" appearance="boxes/popup/standard/paper">
+    <attachment_group class="vertical_arrange_autosize" vertical_offset="10"/>
+    
+    <widget class="text" auto_size="vertical" alignment="centre" style="bold" size="large">
+      <record id="object_property" get_property="Ttea" set_property="valu" />
+    </widget>
+
+    <container>
+      <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1,-1" />
+
+      <container>
+        <attachment_group class="vertical_arrange_autosize" />
+
+        <widget class="text" auto_size="vertical" alignment="centre" font="label">
+          <translation id="text" translation_id="242353" type="use" value="Wages" />
+        </widget>
+
+        <widget class="wage_label" auto_size="vertical" alignment="centre" font="value" format="1">
+          <record id="object_property" get_property="Cwwb" set_property="valu" />
+        </widget>
+        
+      </container>
+
+      <container>
+        <attachment_group class="vertical_arrange_autosize" />
+
+        <widget class="text" auto_size="vertical" alignment="centre" font="label">
+          <translation id="text" translation_id="255030" type="use" value="Turnover[COMMENT: finances list panel; turnover view option]" />
+        </widget>
+
+        <widget class="cash_cell" auto_size="vertical" alignment="centre" font="value" ccrs="4" cusv="true">
+          <record id="object_property" get_property="Ctro" set_property="valu" />
+        </widget>
+        
+      </container>
+
+      <container>
+        <attachment_group class="vertical_arrange_autosize" />
+
+        <widget class="text" auto_size="vertical" alignment="centre" font="label">
+          <translation id="text" translation_id="458481" type="use" value="Wages to Turnover[COMMENT: FR 22810]" />
+        </widget>
+
+        <widget class="formatted_label" auto_size="vertical" alignment="centre" font="value" format="[%number#1]%">
+          <record id="object_property" get_property="Btro" set_property="var1" />
+        </widget>
+        
+      </container>
+      
+    </container>
+
+  </container>
+</panel>

@@ -1,0 +1,96 @@
+<!--
+	This is an XML that is to be used with Team Upcoming Fixture Panel. It has an alternative layout used on the 
+	Match Preparation Upcoming Fixture (Next Match) panel, and the opponent's recent results intead of the manager's
+	upcoming fixtures.
+-->
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!--container shown when there is a next match available-->
+	<container id="nemc">
+		<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!-- fixture data and opponents recent result -->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="10" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" layout="50, -1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="object_portrait_picture" id="otpi" height="26" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<widget class="label" id="nMat" auto_size="vertical" spec="title" size="8" inset="0" format="date_and_days">
+						<translation id="text" value="" />
+					</widget>
+
+					<widget class="text" id="otna" alignment="left,centre_y" auto_size="vertical" style="bold">
+						<string id="text" value="Team1" />
+					</widget>
+				</container>
+
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="client_object_list_table" id="tufp" mode="fill_rows, stripe_rows" database_table_type="53" fixed_size_rows="false" auto_size_rows="true" >
+					<record id="viewed_property_ids">
+						<flags id="fxdt" />
+						<flags id="fopt" />
+						<flags id="FxVn" />
+						<flags id="FxRT" />
+						<flags id="FxRs" />
+						<!--<flags id="FxNm" />-->
+					</record>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+	<!--container shown when there is no next match-->
+	<container id="nonm">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<widget class="spacer" />
+
+		<!--team badge-->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" priority="1" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true"/>
+
+			<widget class="picture" height="64" width="64" id="tepi" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+		</container>
+
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" spec="text" style="semi_bold, embossed" auto_size="vertical">
+			<translation id="text" translation_id="298048" type="use" value="No upcoming fixtures." />
+		</widget>
+
+		<!--text describing when the next season/competition starts-->
+		<widget class="text" id="nmpl" auto_size="vertical" alignment="centre" size="8" />
+
+		<!--buttons to arrange a friendly-->
+		<widget class="button" id="arcf" auto_size="horizontal">
+			<translation id="text" translation_id="242435" type="use" value="Arrange Friendly" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+		</widget>
+
+	</container>
+
+</panel>

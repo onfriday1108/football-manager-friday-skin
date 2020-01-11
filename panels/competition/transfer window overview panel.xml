@@ -1,0 +1,38 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+	<layout class="arrange_horizontal_attachment" layout="-1,375" offset="0">
+		<global id="gap" name="ui.main_contrast_box_gap"/>
+	</layout>
+
+	<!-- Appearance container -->
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- selection menu -->
+		<widget class="subtle_popup_button" id="filt" fixed="false" select_event="fich" auto_size="all" primary_use_icon_app_rep_colour="false">
+		</widget>
+
+		<widget class="competition_transfer_window_panel" id="deta" file="competition/competition transfer window panel for overview" />
+
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" >
+			<global id="gap" name="ui.main_contrast_box_gap"/>
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="transfer_deadline_panel" id="tdhr" file="competition/transfer deadline weeks days" height="52" />
+
+		<widget class="world_top_transfers_panel" id="wttp">
+			<translation id="title" translation_id="412444" type="use" value="World Transfers[COMMENT: FR 15125]" />
+
+		</widget>
+
+
+	</container>
+
+
+</panel>

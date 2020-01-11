@@ -1,0 +1,206 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+	<container class="inner_subtle_box" appearance="boxes/custom/setup/paper" font="title" size="xlarge">
+		<translation id="title" translation_id="450728" type="use" value="Create Draft[COMMENT: FR 18768 - title for panel used to create a new fantasy draft game]" />
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" offset="0" />
+
+		<container width="800">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container class="main_box">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="8" horizontal_alignment="horizontal" horizontal_inset="60" />
+
+				<!-- Competition format-->
+				<widget class="label" font="title" alignment="centre" auto_size="vertical" colour="accent">
+					<translation id="text" translation_id="445098" type="use" value="Format[COMMENT: FR 18768 - format of the new versus/fantasy draft competition]" />
+				</widget>
+				<container id="vsCC">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+					<!-- Properties for comp type radio buttons -->
+					<!-- Note that the appearance given here will have left/normal/right appended according to each button's position -->
+					<record id="widget_properties" appearance="switches/toggle/" alignment="centre" icon_enabled="false" auto_size="vertical" show_button_appearance="true" />
+				</container>
+
+				<!-- Selected competition description -->
+				<widget class="text" id="vsCd" alignment="centre" auto_size="vertical" colour="faded alt text" />
+
+				<!-- Comp name and squad budget-->
+				<container height="60">
+					<layout class="grid_layout_attachment" row_layout="-1,-1" column_layout="-1,-1" mode="auto" vertical_gap="4" vertical_offset_start="0" vertical_offset_end="0" horizontal_offset="0" horizontal_gap="15" />
+					<!-- Labels -->
+					<widget class="label" font="title" alignment="centre_x,bottom" colour="accent">
+						<translation id="text" translation_id="333734" type="use" value="Competition Name[COMMENT - name of the new versus competition]" />
+					</widget>
+					<widget class="label" font="title" alignment="centre_x,bottom" colour="accent">
+						<translation id="text" translation_id="388930" type="use" value="Squad Budget[COMMENT: FR 8517, the total budget for the team which is a combination of the current value of the player plus his contract fees]" />
+					</widget>
+					<!-- do-dads -->
+					<widget class="edit_box" id="cpnm" alignment="centre" changed_event="cpnm">
+						<layout class="max_length_attachment" length="25" />
+					</widget>
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<widget class="slider_horizontal" id="sBPO" height="30" red_replacement="fg accent" >
+							<integer id="interval" value="1" />
+							<integer id="page_interval" value="1" />
+							<flags id="alignment" value="centre" />
+							<integer id="min_value" value="0" />
+							<integer id="max_value" value="29" />
+							<integer id="value" value="0" />
+							<boolean id="draw_middle_notch" value="false" />
+							<boolean id="draw_notches" value="false" />
+							<event id="changed_event">
+								<flags id="event_id" value="eSQB" />
+							</event>
+						</widget>
+						<widget class="label" id="SQBv" style="bold" alignment="right" width="70"/>
+					</container>
+				</container>
+
+			</container>
+
+			<!-- Pool and other options-->
+			<container height="300">
+				<layout class="arrange_horizontal_attachment" layout="-2, -1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" vertical_offset="10" apply_to_children="true" inset="0" />
+
+				<!-- Database setup-->
+				<container class="main_box">
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<translation id="title" translation_id="390518" type="use" colour="accent" value="Player Pool[COMMENT: versus competition panel, label text for list of players available for selection]" />
+
+					<!-- Available pools list (items added in code) -->
+					<container class="scrolling_box">
+						<!-- Note the id is important or the radio buttons inside won't work -->
+						<container id="polL">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+							<record id="widget_properties" class="property_list_viewer_xml_panel">
+								<record id="properties" file="game/fantasy draft player pool item panel" height="65" />
+							</record>
+						</container>
+					</container>
+
+					<!-- Buttons -->
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+						<!-- Go to workshop -->
+						<widget class="icon_button" id="work" click_event="work" auto_size="all">
+							<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+							<translation id="text" translation_id="466421" type="use" value="Find More[COMMENT: FR 18768 - create fantasy draft game, find more player pools on the workshop]" />
+						</widget>
+						<!-- Create custom pool -->
+						<widget class="icon_button" auto_size="all" icon="icons/16px/plus">
+							<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+							<translation id="text" translation_id="450730" type="use" value="Create Custom[COMMENT: FR 18768 - create fantasy draft game, create custom player pool]" />
+							<record id="click_event" event_id="dbsz" selection="4" file="dialogs/fantasy draft database size filter dialog" />
+						</widget>
+					</container>
+				</container>
+
+				<!-- Advanced option-->
+				<container class="main_box" >
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<translation id="title" colour="accent" translation_id="450731" type="use" value="Advanced Settings[COMMENT: FR 18768 - create fantasy draft game, additional settings]" />
+
+					<!-- Draft round time limit -->
+					<widget class="label" alignment="left" auto_size="vertical" font="label">
+						<translation id="text" translation_id="390399" type="use" value="Draft Round Time Limit[COMMENT: fantasy draft option to set the time limit for picks]" />
+					</widget>
+					<widget class="popup_button" id="drTL" sele="drTL" auto_size="vertical">
+						<list id="items">
+							<record id="0">
+								<translation id="text" translation_id="248230" type="use" value="1 Minute" />
+							</record>
+							<record id="1">
+								<translation id="text" translation_id="248231" type="use" value="2 Minutes" />
+							</record>
+							<record id="2">
+								<translation id="text" translation_id="248234" type="use" value="5 Minutes" />
+							</record>
+						</list>
+					</widget>
+					<!-- Separator -->
+					<widget class="horizontal_divider" />
+					<!-- Mid-term draft-->
+					<widget class="check_box" id="mddf" alignment="left,centre_y" select_event="mddf" multiline="true" auto_size="vertical" font="label">
+						<translation id="text" translation_id="445108" type="use" value="Use Additional Mid-Term Draft[COMMENT: FR 18768, fantasy draft option to have an additional mid competition draft; change 'competition' to 'term]" />
+						<translation id="hint" translation_id="412449" type="use" value="Adds an extra draft in the middle of the competition for longer competitions[COMMENT: hint for fantasy draft option to have an additional mid competition draft]" />
+					</widget>
+					<!-- Separator -->
+					<widget class="horizontal_divider" />
+					<!-- 2 leg ties-->
+					<widget class="check_box" id="2leg" alignment="left,centre_y" click_event="2leg" auto_size="vertical" font="label">
+						<translation id="text" translation_id="450732" type="use" value="Two-legged ties[COMMENT: FR 18768 - create fantasy draft game, Use 2 legs for cup ties up until final]" />
+						<translation id="hint" translation_id="443658" type="use" value="Use 2 legs for cup ties up until final[COMMENT: FR18760, network settings panel; network game options]" />
+					</widget>
+          <container id="rndc">
+            <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+            <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+            <!-- number of rounds -->
+            <widget class="text" height="30" width="120" font="label">
+              <translation id="text" translation_id="466422" type="use" value="Matches Against Each Team[COMMENT: versus competition panel; setting to control number of times reams play each other for a league]" />
+            </widget>
+            <widget class="slider_horizontal" changed_event="rnds" id="rnds" max_value="5" min_value="2" value="2" notch_frequency="1" draw_notches="true" height="30" text_width="30" show_notch_text="true" />
+          </container>
+          <!-- Probably not needed but kept in case-->
+					<widget class="check_box" id="inlg" alignment="left,centre_y" select_event="inlg" hidden="true" auto_size="vertical" font="label">
+						<translation id="text" translation_id="434644" type="use" value="Include Men United[COMMENT: fantasy draft option to include extra players, this is a charity endeavour and Men United should stay the same in all languages unless clearly translated already in your locale]" />
+						<translation id="hint" translation_id="434646" type="use" value="Add Men United's squad of ambassadors - football legends working to raise the profile of Prostate Cancer UK[COMMENT: hint for fantasy draft option to include extra players, this is a charity endeavour and Men United should stay the same in all languages unless clearly translated already in your locale]" />
+					</widget>
+					<!-- Network options-->
+					<widget class="label" alignment="left" auto_size="vertical" font="label">
+						<translation id="text" translation_id="450733" type="use" value="Who can join?[COMMENT: FR 18768, fantasy draft option to set who can see and join the game (local/hotseat, online friends, online anyone)]" />
+					</widget>
+					<widget class="popup_button" id="gacc" sele="gacc" auto_size="vertical"/>
+					<!-- Separator -->
+					<widget class="horizontal_divider" />
+					<!-- password -->
+					<widget class="icon_button" id="pass" click_event="pass" auto_size="vertical" alignment="centre" icon_alignment="centre">
+						<translation id="text" translation_id="247149" type="use" value="Password" />
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<!-- bottom container with the buttons -->
+		<container height="35">
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" />
+
+			<!-- cancel button-->
+			<widget class="button" id="cncl" auto_size="horizontal">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+				<flags id="icon" value="icons/16px/cancel" />
+				<record id="click_event" event_id="cfDC" />
+			</widget>
+
+			<widget class="primary_icon_button" id="fini" auto_size="horizontal">
+				<translation id="text" translation_id="333753" type="use" value="Create Competition[COMMENT: network versus mode, button text]" />
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+				<flags id="icon" value="icons/16px/confirm" />
+				<record id="click_event">
+					<flags id="event_id" value="fini" />
+				</record>
+			</widget>
+		</container>
+	</container>
+</panel>

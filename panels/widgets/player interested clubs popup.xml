@@ -1,0 +1,34 @@
+﻿<panel width="300">
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" horizontal_inset="6" vertical_offset="4" />
+
+		<widget class="text" font="title" colour="accent" auto_size="vertical">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="text" />
+						<integer id="set_property" value="text" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<container class="simple_data_list" set_property="valu">
+			<attachment_group class="vertical_arrange_autosize"/>
+
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="dreL" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+			<record id="widget_properties" class="club_button" height="30" auto_size="horizontal"/>
+		</container>
+
+	</container>
+
+</panel>

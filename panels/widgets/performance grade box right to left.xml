@@ -1,0 +1,15 @@
+﻿<panel>
+	<symbol id="gbgc" value="background"/>
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<container class="main_contrast_box" id="Mbox">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" horizontal_gap="10"/>
+
+		<widget class="text" id="grds" auto_size="vertical" multiline="true" colour="background" style="bold" alignment="right,centre_y"/>
+
+		<widget class="container" id="grtx" file="widgets/performance grade widget"  width="30" height="30"/>
+
+
+	</container>
+
+</panel>

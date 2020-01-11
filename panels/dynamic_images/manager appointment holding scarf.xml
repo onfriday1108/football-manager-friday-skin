@@ -1,0 +1,134 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="client_object_viewer_xml_panel">
+		<record id="object_property" get_property="Ttea" set_property="objt"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<widget class="picture" file="photos/dynamic/appointment scarf/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+		<widget class="picture" file="photos/dynamic/appointment scarf/shirt" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+		<widget class="picture" file="photos/dynamic/appointment scarf/tie base" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<record id="object_property">
+				<list id="get_properties">
+					<record get_property="oPCL" set_property="rrep"/>
+					<record get_property="oSCL" set_property="brep"/>
+				</list>
+			</record>
+		</widget>
+
+		<!-- club badge (cut off at bottom ) -->
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-8, -1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0, 8, 0 ,0" apply_to_children="true"/>
+
+			<widget class="spacer"/>
+
+			<widget class="object_portrait_picture" image_alignment="centre_x, bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="-5"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+
+		<widget class="picture" file="photos/dynamic/appointment scarf/tie shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+		<widget class="picture" file="photos/dynamic/appointment scarf/jacket" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+		<widget class="picture" file="photos/dynamic/appointment scarf/scarf base" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<record id="object_property">
+				<list id="get_properties">
+					<record get_property="oPCL" set_property="rrep"/>
+					<record get_property="oSCL" set_property="brep"/>
+				</list>
+			</record>
+		</widget>
+
+		<!-- scarf text -->
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-13, -18, -23" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<widget class="spacer"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_layout="-5, -30, -4" horizontal_gap="0"/>
+
+				<widget class="spacer"/>
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_layout="-4, -7" vertical_gap="0"/>
+
+					<!-- nickname -->
+					<widget class="text" id="NkNm" alignment="centre, auto_fit" font="capitals" wants_mouse_events="false">
+						<record id="object_property">
+							<integer id="get_property" value="TCnn"/>
+							<list id="get_properties">
+								<record get_property="oSCL" set_property="colour"/>
+							</list>
+						</record>
+					</widget>
+
+					<!-- short club name -->
+					<widget class="game_formatted_label" alignment="centre, auto_fit" font="capitals_bold" wants_mouse_events="false">
+						<string id="format" value="[%team#1-short]"/>
+						<record id="object_property">
+							<list id="get_properties">
+								<record get_property="oSCL" set_property="colour"/>
+								<record get_property="dref" set_property="valu"/>
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<widget class="spacer"/>
+			</container>
+
+			<widget class="spacer"/>
+		</container>
+
+		<widget class="picture" file="photos/dynamic/appointment scarf/scarf shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+	</container>
+
+	<!-- camera flashes -->
+	<container background_colour="white">
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="1.5" start_value="0.0" end_value="0.75" duration="0.1"/>
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="1.6" start_value="0.75" end_value="0.0" duration="0.1"/>
+	</container>
+
+	<container background_colour="white">
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="1.9" start_value="0.0" end_value="0.75" duration="0.1"/>
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="2.0" start_value="0.75" end_value="0.0" duration="0.1"/>
+	</container>
+
+	<container background_colour="white">
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="2.1" start_value="0.0" end_value="0.75" duration="0.1"/>
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="2.2" start_value="0.75" end_value="0.0" duration="0.1"/>
+	</container>
+
+	<container background_colour="white">
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="3.1" start_value="0.0" end_value="0.75" duration="0.1"/>
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="3.2" start_value="0.75" end_value="0.0" duration="0.1"/>
+	</container>
+
+	<container background_colour="white">
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="6.0" start_value="0.0" end_value="0.75" duration="0.1"/>
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="6.1" start_value="0.75" end_value="0.0" duration="0.1"/>
+	</container>
+
+	<container background_colour="white">
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="6.2" start_value="0.0" end_value="0.75" duration="0.1"/>
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="6.3" start_value="0.75" end_value="0.0" duration="0.1"/>
+	</container>
+
+	<container background_colour="white">
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="6.4" start_value="0.0" end_value="0.75" duration="0.1"/>
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="6.5" start_value="0.75" end_value="0.0" duration="0.1"/>
+	</container>
+
+	<container background_colour="white">
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="6.8" start_value="0.0" end_value="0.75" duration="0.1"/>
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="6.9" start_value="0.75" end_value="0.0" duration="0.1"/>
+	</container>
+
+	<container background_colour="white">
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="8.0" start_value="0.0" end_value="0.6" duration="0.1"/>
+		<animation class="fade_animation" trigger_id="hidden" trigger_value="false" delay="8.1" start_value="0.6" end_value="0.0" duration="0.1"/>
+	</container>
+</panel>

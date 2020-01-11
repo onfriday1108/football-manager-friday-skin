@@ -1,0 +1,16 @@
+﻿<panel appearance="boxes/dialog/standard/paper" width="1010">
+	<translation id="title" translation_id="447520" type="use" value="Edit and share match highlights video[COMMENT: FR21698 - title for a dialog allowing uploading of match videos]" />
+
+	<!-- arrange items vertically, with text at top -->
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="10" />
+	<layout class="centre_in_parent_attachment" alignment="horizontal" />
+
+	<widget class="match_upload_panel" id="uplo" />
+
+	<widget class="icon_button" id="ok" icon="icons/16px/clear" height="30" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="6"/>
+		<layout class="autosize_attachment" />
+	</widget>
+
+</panel>

@@ -1,0 +1,49 @@
+<panel disable_link="true">
+
+	<layout class="arrange_horizontal_attachment" layout="-1,60,60" gap="10" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<!--team name and incidents-->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<!-- team name -->
+		<widget class="text" id="mitn" size="xlarge" style="semi_bold" alignment="right,centre_y" auto_size="vertical"/>
+
+		<widget class="table" id="miit" layout="-1,20" mode="fill_rows" row_spacing="0" auto_size_rows="true" fixed_size_rows="false">
+
+			<list id="column_widget_properties">
+				<record index="0" spec="text" auto_size="vertical" alignment="right,centre_y" size="small"/>
+				<record index="1" alignment="centre" auto_size="vertical" size="small"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="text" top="4" bottom="4" />
+				<record index="1" id="icon" left="4" top="4" bottom="4" />
+			</list>
+
+		</widget>
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<widget class="match_team_logo_picture" id="TeLo" image_alignment="top"/>
+		<widget class="object_portrait_picture" id="Tcol" scale_picture="true" keep_aspect_ratio="true" image_alignment="top"/>
+		<!-- use this one if the panel is supplied a team -->
+	</container>
+
+	<!--scores-->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<!-- score -->
+		<widget class="text" id="mits" alignment="right,centre_y" size="24" auto_size="vertical" multiline="false"/>
+
+		<!-- aggregate score -->
+		<widget class="text" id="mita" spec="title" alignment="right,centre_y" size="16" auto_size="vertical" multiline="false"/>
+	</container>
+
+</panel>

@@ -1,0 +1,24 @@
+﻿<panel>
+  <!--very close relationship colour-->
+  <colour id="pVgC" name="very close relationship" />
+  <!--close relationship colour-->
+  <colour id="pgCl" name="close relationship" />
+  <!--aquaintance relationship colour-->
+  <colour id="pACl" name="aquaintance relationship" />
+  <!--contact relationship colour-->
+  <colour id="pCTr" name="contact relationship" />
+  <!--rival relationship colour-->
+  <colour id="prVr" name="rival relationship" />
+  <!--adversary relationship colour-->
+  <colour id="pAdv" name="adversary relationship" />
+  <!--distant relationship colour-->
+  <colour id="pCds" name="distant relationship" />
+
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+  <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="2"/>
+
+  <widget class="picture" id="hrcI" width="18" file="icons/16px/relationship" image_alignment="centre" scale_picture="false"  keep_aspect_ratio="true" />
+  
+  <!-- person club -->
+  <widget class="label" id="relL" alignment="left,centre_y" auto_size="none" />
+</panel>

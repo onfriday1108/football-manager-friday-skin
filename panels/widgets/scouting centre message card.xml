@@ -1,0 +1,262 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <container >
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+    <!--Player description-->
+    <container height="112">
+      <record id="object_property" get_property="hpde" set_property="hidn" />
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <container class="client_object_viewer_xml_panel">
+        <record id="object_property" get_property="Pers" set_property="objt" />
+
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+        <container>
+          <record id="object_property" get_property="tbcl" set_property="bkcl" />
+        </container>
+
+      </container>
+
+      <container class="client_object_viewer_xml_panel">
+        <record id="object_property" get_property="Pers" set_property="objt" />
+        <layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="10" />
+
+        <widget class="object_portrait_picture" id="ppic" width="80">
+          <boolean id="scale_picture" value="true" />
+          <boolean id="keep_aspect_ratio" value="true" />
+          <flags id="image_alignment" value="centre" />
+          <record id="object_property">
+            <list id="get_properties">
+              <!--Facegen data request-->
+              <record get_property="fcgn" />
+              <!--Fake name request-->
+              <record get_property="Pfke" />
+              <record get_property="prpc" set_property="valu" />
+            </list>
+          </record>
+        </widget>
+
+        <container>
+          <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+          <layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+          <widget class="client_object_property_panel" property="Pnms" auto_size="all">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="ttcl" />
+                  <integer id="set_property" value="colr" />
+                </record>
+                <record>
+                  <integer id="get_property" value="ttcl" />
+                  <integer id="set_property" value="Jcol" />
+                </record>
+
+                <record>
+                  <integer id="get_property" value="objt" />
+                  <integer id="set_property" value="objt" />
+                </record>
+              </list>
+            </record>
+            <record id="widget_info" auto_size="all" alignment="left,centre_y" style="semi_bold" size="large" />
+          </widget>
+
+          <widget class="client_object_property_panel" property="Ppos" auto_size="all">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="ttcl" />
+                  <integer id="set_property" value="colr" />
+                </record>
+                <record>
+                  <integer id="get_property" value="objt" />
+                  <integer id="set_property" value="objt" />
+                </record>
+              </list>
+            </record>
+            <record id="widget_info" auto_size="all" alignment="left,centre_y" size="small" />
+          </widget>
+
+
+          <widget class="client_object_property_panel" property="Page" auto_size="all">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="ttcl" />
+                  <integer id="set_property" value="colr" />
+                </record>
+                <record>
+                  <integer id="get_property" value="objt" />
+                  <integer id="set_property" value="objt" />
+                </record>
+              </list>
+            </record>
+            <record id="widget_info" auto_size="all" alignment="left,centre_y" size="small" />
+          </widget>
+
+          <widget class="client_object_property_panel" property="PNat" auto_size="all">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="ttcl" />
+                  <integer id="set_property" value="colr" />
+                </record>
+                <record>
+                  <integer id="get_property" value="objt" />
+                  <integer id="set_property" value="objt" />
+                </record>
+              </list>
+            </record>
+            <record id="widget_info" auto_size="all" alignment="left,centre_y" size="small" />
+          </widget>
+
+        </container>
+
+        <container width="60" />
+
+        <widget class="client_object_property_panel" property="PSpi" auto_size="all">
+          <record id="object_property" get_property="objt" set_property="objt" />
+        </widget>
+
+        <container >
+          <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+          <layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+          <widget class="client_object_property_panel" property="PExD" auto_size="all">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="ttcl" />
+                  <integer id="set_property" value="colr" />
+                </record>
+                <record>
+                  <integer id="get_property" value="objt" />
+                  <integer id="set_property" value="objt" />
+                </record>
+              </list>
+            </record>
+            <record id="widget_info" auto_size="all" multiline="false" size="small" />
+          </widget>
+
+
+
+          <!--Value-->
+          <widget class="game_formatted_label" id="pval" auto_size="all" style="semi_bold" size="large">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="ttcl" />
+                  <integer id="set_property" value="colr" />
+                </record>
+                <record>
+                  <integer id="get_property" value="Pdva" />
+                  <integer id="set_property" value="var1" />
+                  <boolean id="dont_set_object" value="true" />
+                </record>
+              </list>
+            </record>
+            <list id="format">
+              <record value="0">
+                <string id="format" value="" />
+              </record>
+              <record default_value="true">
+                <translation id="format" translation_id="383826" type="use" value="Valued at [%cash#1-roundsmall-short][COMMENT: FR 10661; player overview; string diaplyed a player's estimated monetary value]" />
+              </record>
+            </list>
+            <record id="forced_formats" var1="vf_cash" />
+          </widget>
+
+          <!--Wage / Expiry date-->
+          <widget class="game_formatted_label" id="wgex" alignment="left,top" size="small" auto_size="all">
+            <record id="object_property">
+              <list id="get_properties">
+                <record get_property="PcMM" set_property="var1" dont_set_object="true" />
+                <record get_property="Pcww" set_property="var2" dont_set_object="true" />
+                <record get_property="Pced" set_property="var3" dont_set_object="true" />
+                <record get_property="ttcl" set_property="colr"  />
+              </list>
+            </record>
+            <list id="format">
+              <record value="-1">
+                <string id="format" value="" />
+              </record>
+              <record value="0">
+                <translation id="format" translation_id="450823" type="use" value="[%wage#2] until [%date#3-short][COMMENT: player overview; wage and contract expiry date string, small change to ID 394401 to remove the 'Earning' part so this can be used in a lot of places]" />
+              </record>
+              <record>
+                <string id="format" value="[%wage#2]" />
+              </record>
+            </list>
+            <record id="forced_formats" var2="vf_wage" />
+          </widget>
+
+          <!-- Proposed playing time-->
+          <widget class="playing_time_label" id="sstl" auto_size="all" size="small" alternate_format="">
+            <record id="object_property">
+              <list id="get_properties">
+                <record get_property="Pcpt" set_property="valu"/>
+                <record get_property="ttcl" set_property="colr"  />
+              </list>
+            </record>
+          </widget>
+
+
+        </container>
+
+      </container>
+
+    </container>
+
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+        <widget class="text" alignment="left,centre_y"  colour="black">
+          <record id="object_property" get_property="text" set_property="text" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="10"/>
+        </widget>
+
+      </container>
+
+      <container height="30">
+        <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0"/>
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+        <widget class="primary_icon_tick_button" id="ackn" auto_size="horizontal"  red_replacement="blue 700" blue_replacement="blue 700" colour="white" icon_colour="white" >
+          <translation id="text" translation_id="229829" type="use" value="Ok" />
+          <record id="object_property">
+            <list id="get_properties">
+              <record>
+                <integer id="get_property" value="SCma" />
+                <integer id="set_property" value="click_event" />
+              </record>
+              <record>
+                <integer id="get_property" value="hint" />
+                <integer id="set_property" value="hint" />
+              </record>
+            </list>
+          </record>
+
+        </widget>
+
+      </container>
+
+      <container height="10"/>
+
+    </container>
+
+  </container>
+
+
+</panel>

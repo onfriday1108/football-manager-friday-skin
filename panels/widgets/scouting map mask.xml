@@ -1,0 +1,10 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <widget class="picture" id="mask" file="pictures/maps/scouting/mask" wants_mouse_events="false" scale_picture="true" image_alignment="centre" keep_aspect_ratio="true" >
+
+  </widget>
+
+
+  
+</panel>

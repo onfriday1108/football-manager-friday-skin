@@ -1,0 +1,21 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<list id="properties_to_forward">
+		<record get_property="inRl" set_property="text" target="ORVl"/>
+		<record get_property="inRf" set_property="text" target="ORDe"/>
+		<record get_property="HdDe" set_property="hidden" target="ORDe"/>
+		<record get_property="ORBc" set_property="red_replacement" target="brbx"/>
+	</list>
+
+	<container class="main_box" id="brbx" appearance="boxes/custom/darken/no margin/paper">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true"/>
+
+		<!-- value -->
+		<widget class="link_text" id="ORVl" section="PInj" auto_size="vertical" style="bold" size="10"/>
+
+		<!-- description -->
+		<widget class="label" id="ORDe" auto_size="none" multiline="true" size="small" colour="faded text" alignment="left,top"/>
+	</container>
+</panel>

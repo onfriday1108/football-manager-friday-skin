@@ -1,0 +1,25 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+	<layout class="arrange_vertical_attachment" alignment="top,extend"/>
+
+
+	<container id="staf" height="50">
+	  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	  <container id="pejo">
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<!-- Person name -->
+      <widget class="person_button" id="pern" colour="text">
+		  <record id="object_property" get_property="Pcjo" set_property="Pcjo"/>
+		  <record id="object_property" get_property="objt" set_property="valu"/>
+	  </widget>
+
+      <!-- Job -->
+      <widget class="job_label" id="pjob" colour="text">
+		  <record id="object_property" get_property="PcJj" set_property="valu"/>
+	  </widget>
+    </container>
+  </container>
+</panel>

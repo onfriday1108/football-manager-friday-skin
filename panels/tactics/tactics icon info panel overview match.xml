@@ -1,0 +1,127 @@
+﻿<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <flags id="selected_appearance" value="boxes/custom/tactics kit/selected/paper"/>
+  <flags id="appearance" value="boxes/custom/tactics kit/paper"/>
+  <boolean id="should_force_refresh" value="true"/>
+
+
+  <container>
+
+    <layout class="stick_to_sides_attachment" alignment="top,right" inset="0" apply_to_children="true"/>
+
+    <!--injury/red/yellow card -->
+    <container class="inner_box_no_margin" id="inji" height="16" width="16">
+    </container>
+
+  </container>
+
+  <container class="main_box" id="nmcN" appearance="boxes/custom/tactics kit/paper">
+    <layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+
+    <container class="main_contrast_box_no_margin" id="bcIM" red_replacement="teal 900" height="48">
+      <layout class="arrange_vertical_attachment" alignment="fill" offset="1" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true"/>
+
+      <container>
+
+        <container id="OUTE" >
+          <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+          <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+          <!--role/duty-->
+          <widget class="role_duty_popup_button_mini" id="rodu" size="8" auto_size="none" secondary_icon="icons/custom/misc/small down" alignment="centre_x, centre_y"/>
+
+          <!--info (morale, rating, condition)-->
+          <container id="info" height="25">
+            <layout class="arrange_horizontal_attachment" layout="12,-1,20" offset="4" gap="2"/>
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="1" apply_to_children="true"/>
+
+            <!--morale-->
+            <widget class="morale_label" id="Mora" smpc="true" width="12" height="12" colour="faded white" ShTx="false" scale_picture="true" />
+
+            <!--rating and position share a slot - show one or the other-->
+            <container>
+              <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+              <widget class="dashed_number_label" id="avra" alignment="centre" size="small" colour="white"/>
+              <widget class="position_label" id="Ppos" alignment="centre" colour="faded white" size="6.4"/>
+            </container>
+
+            <!--condition-->
+            <widget class="pie_condition_label" id="cond" mode="2" file="widgets/pie condition label mixed"/>
+          </container>
+
+
+          <!--familiarity container-->
+          <container id="fmiL" height="25">
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+            <widget class="player_tactical_familiarity_bar" id="fmBR"/>
+          </container>
+
+        </container>
+
+
+
+
+      </container>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+          <!--name-->
+
+          <widget class="player_picker_button" entity_layout_id="it02" id="plPB" widget_type="match_team_squad_player_selection_panel" file="widgets/player selection button tacitcs" editor_group_id="it10">
+            <string id="draggable" value="false"/>
+          </widget>
+
+        </container>
+
+
+      </container>
+
+    </container>
+
+  </container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="4" gap="2"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<widget class="tactics_kit_picture" id="kitp" keep_aspect_ratio="true" alignment="centre" scale_picture="true" number_inset_right="0" number_inset_top="0" number_height="40">
+		</widget>
+
+		<container class="spacer" id="kitS" height="35"/>
+	</container>
+
+	<container id="gpIN">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<widget class="picture" file="icons/custom/player instruction/player pitch" id="PInI" image_alignment="bottom,left" scale_picture="false">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,45,0" />
+		</widget>
+	</container>
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+    <!--pos/role/duty indicator-->
+    <widget class="position_role_duty_suitability_pie" id="prdF" width="24" height="24">
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="bottom" inset="26"/>
+    </widget>
+  </container>
+
+
+</panel>

@@ -1,0 +1,18 @@
+﻿<panel save_session_state="true" save_default_state="true" width="350">
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="3" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="6,0,0,0"/>
+
+	<flags id="cham" value="tables/custom/league/champions/row" />
+
+	<container class="standard_popup_box">
+		<layout class="arrange_vertical_attachment" alignment="top"  />
+		<layout class="fit_children_attachment" alignment="vertical,fill" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="text" alignment="centre" spec="text" size="11" auto_size="vertical" multiline="true">
+			<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+		</widget>
+
+	</container>
+</panel>

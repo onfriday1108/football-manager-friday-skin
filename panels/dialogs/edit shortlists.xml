@@ -1,0 +1,54 @@
+<panel id="esdg">
+
+	<translation id="title" translation_id="292624" type="use" value="Manage Shortlists[COMMENT - manage shortlists menu item, for importing, exporting, deleting and renaming shortlists]" />
+	<!-- stick all items to width of box -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+
+  <!-- add custom icon to top right corner of dialog -->
+  <widget class="picture" id="cico" file="icons/dialog/shortlist" auto_size="all" embed_in_frame="true">
+    <layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true" />
+  </widget>
+
+  <!-- table containing shortlists -->
+	<widget class="table" id="shtb" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" layout="-1">
+	
+		<flags id="scroll_bar_class" value="scroll_bar_vertical_blue" />
+		
+		<record id="select_event">
+			<flags id="event_id" value="slrw" />
+		</record>
+	</widget> <!-- table -->
+	
+	<!-- row of buttons -->
+	<widget class="container" id="btns">
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+    <widget class="container">
+      <layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<!-- delete button -->			
+			<widget class="icon_button" id="dele" auto_size="all" icon="icons/16px/delete">
+				<translation id="text" translation_id="247202" type="use" value="Delete" />
+				<record id="click_event">
+					<flags id="event_id" value="dele" />
+				</record>
+			</widget>
+
+			<!-- rename button -->			
+			<widget class="icon_button" id="rena" auto_size="all" icon="icons/16px/rename">
+				<translation id="text" translation_id="247203" type="use" value="Rename" />
+				<record id="click_event">
+					<flags id="event_id" value="rena" />
+				</record>
+			</widget>
+		</widget>
+
+    <container id="btns" file="ok cancel buttons" />
+    
+	</widget>
+</panel>

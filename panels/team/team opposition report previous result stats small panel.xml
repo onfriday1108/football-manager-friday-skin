@@ -1,0 +1,27 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="inner_subtle_box">
+		<layout class="arrange_vertical_attachment" alignment="top" gap="1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="label" alignment="left,centre_y" auto_size="vertical" font="label">
+			<translation id="text" translation_id="232851" type="use" value="Possession" />
+		</widget>
+
+		<widget class="horizontal_comparison_bar" height="20" id="poSe" show_label_on_bar="true" label_width="100" alignment="left,centre_y" font_colour="black" animation_file="none">
+			<flags id="bar_chart_label_type" value="bcFP"/>
+		</widget>
+
+		<container height="1"/>
+
+		<widget class="label" alignment="left,centre_y" auto_size="vertical" font="label" >
+			<translation id="text" translation_id="247381" type="use" value="Shots" />
+		</widget>
+
+		<widget class="horizontal_comparison_bar" height="20" id="shtS" show_label_on_bar="true" label_width="100" alignment="left,centre_y" animation_file="none">
+			<flags id="bar_chart_label_type" value="bcCF"/>
+		</widget>
+
+	</container>
+</panel>

@@ -1,0 +1,34 @@
+﻿<panel>
+	<boolean id="save_session_state" value="true" />
+	<attachment_group class="vertical_arrange" horizontal_alignment="horizontal" horizontal_inset="0" vertical_alignment="top,extend"/>
+
+	<boolean id="check_for_multiple_requests" value="true"/>
+
+	<!-- main body text -->
+	<widget class="inbox_body_text" id="etxt" auto_size="vertical" hidden="true" font="inbox_body"/>
+
+	<container id="icbx" class="inner_subtle_box" appearance="boxes/custom/inbox attachment/personal/paper">
+		<attachment_group class="vertical_arrange" horizontal_alignment="horizontal" horizontal_inset="0" vertical_alignment="top,extend"/>
+		<!-- inbox content panel gets added here -->
+		<!-- some descriptive text for the table below -->
+		<widget class="text" id="titl"  auto_size="vertical" spec="text" size="large" colour="text"/>
+
+		<widget class="client_object_list_table" id="list" database_table_type="1" mode="fill_rows, stripe_rows, printable, keyboard, dont_ask_for_focus" fixed_size_row="true" row_height="29" auto_size="none" row_spacing="2">
+			<!--available views-->
+			<record id="viewed_property_ids">
+				<record id="Pnms" />
+				<record id="Pnat" />
+				<record id="PpsC"/>
+				<record id="Pdva"/>
+				<record id="PsrK"/>
+				<record id="Pats" auto_hide_priority="1"/>
+			</record>
+
+
+		</widget>
+
+	</container>
+
+
+
+</panel>

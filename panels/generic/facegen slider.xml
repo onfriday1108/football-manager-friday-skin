@@ -1,0 +1,26 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="label" height="25" alignment="centre" colour="accent" id="TSTR"/>
+
+	<container height="50">
+		<layout class="arrange_horizontal_attachment" layout="-1,300,-1" offset="0" gap="20"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<widget class="label" alignment="right,centre_y" id="LSTR" colour="faded text"/>
+
+		<widget class="slider_horizontal" id="trsl" hidden="true">
+			<integer id="notch_frequency" value="1" />
+			<integer id="interval" value="1" />
+			<integer id="page_interval" value="1" />
+			<flags id="alignment" value="centre" />
+			<integer id="min_value" value="0" />
+			<integer id="max_value" value="2" />
+			<integer id="value" value="0" />
+		</widget>
+
+		<widget class="label" alignment="left,centre_y" id="RSTR" colour="faded text"/>
+	</container>
+
+
+</panel>

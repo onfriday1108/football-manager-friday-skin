@@ -1,0 +1,32 @@
+﻿<panel height="80">
+	<boolean id="should_force_refresh" value="true" />
+	<colour id="budget_info_positive_colour" name="positive" />
+	<colour id="budget_info_zero_colour" name="text" />
+	<colour id="budget_info_negative_colour" name="negative" />
+	<colour id="scouting_package_highlight_colour" name="positive" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="inner_subtle_box_no_margin" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="3,0,3,0" />
+
+		<container >
+			<attachment_group class="horizontal_arrange" horizontal_alignment="middle,fill" horizontal_offset="8" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+			<!--Senior package-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" minimum_width="232" id="scpc" type="1" icon="icons/custom/icon box/package" widget_type="property_list_viewer_xml_panel" popup_alignment="left,top" lkhd="true" vdhd="true" tcol="accent" txcl="text" dscl="text"  secondary_icon_colour="text">
+				<translation id="titl" translation_id="447588" type="use" value="Senior Package[COMMENT: FR 21759 scouting package]" />
+				<record id="toto" file="team/scouting package popup" width="450" />
+			</widget>
+
+			<!-- divider -->
+			<widget class="vertical_divider" />
+
+			<!--Youth package-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" minimum_width="232"  id="yosp" icon="icons/custom/icon box/package" widget_type="property_list_viewer_xml_panel" type="2" popup_alignment="left,top" lkhd="true" vdhd="true" tcol="accent" txcl="text" dscl="text"  secondary_icon_colour="text">
+				<translation id="titl" translation_id="450763" type="use" value="Youth Package[COMMENT: FR 21759 scouting package type]" />
+				<record id="toto" file="team/scouting package popup" width="450" />
+			</widget>
+		
+		</container>
+	</container>
+</panel>

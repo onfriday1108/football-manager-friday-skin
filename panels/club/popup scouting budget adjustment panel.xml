@@ -1,0 +1,21 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="10" vertical_gap="10" horizontal_inset="10" />
+
+		<widget class="label" auto_size="vertical" font="title" colour="accent">
+			<translation id="text" translation_id="256882" type="use" value="Budget Adjustment[COMMENT::dialog title; this will be used on the dialog where the manager will be able to choose how to adjust his financial budget]"/>
+		</widget>
+
+		<widget class="budget_adjustment_panel" id="bapl" file="club/scouting budget adjustment panel">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_inset="0" />
+
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+				<integer id="set_property" value="objt"/>
+			</record>
+		</widget>
+	</container>
+
+</panel>

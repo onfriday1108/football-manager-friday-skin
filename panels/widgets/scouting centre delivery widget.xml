@@ -1,0 +1,31 @@
+﻿<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" vertical_inset="0" horizontal_offset="0" horizontal_gap="10" />
+  
+	<widget class="text" id="text" alignment="left,centre_y">
+		
+	</widget>
+
+	<container wants_mouse_events="true">
+		<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="right" vertical_inset="0" horizontal_offset="0" horizontal_gap="-9" />
+
+		<widget class="radio_toggle_switch_left" id="bloc" select_event="epsc" width="40" type="0" secondary_icon="icons/16px/cross" secondary_icon_enabled="true" secondary_icon_alignment="centre">
+      <translation id="hint" translation_id="469791" type="use" value="Don't receive[COMMENT: bug 191174, option to not receive scouting emails]" />
+		</widget>
+
+		<widget class="radio_toggle_switch_middle" id="sccb" select_event="epsc" width="40" type="1" secondary_icon="icons/26px/search" secondary_icon_enabled="true" secondary_icon_alignment="centre">
+			<translation id="hint" translation_id="466568" type="use" value="Show in Scouting Centre[COMMENT: FR 22700, scouting centre button text on a scouting report inbox item, use ID 447700 for Scouting Centre]" />
+		</widget>
+
+		<widget class="radio_toggle_switch_right" id="inbb" select_event="epsc" width="40" type="2" secondary_icon="icons/26px/inbox" secondary_icon_enabled="true" secondary_icon_alignment="centre">
+			<translation id="hint" translation_id="466569" type="use" value="Forward to Inbox[COMMENT: scouting centre option allowing the user to forward a scouting report to their inbox]" />
+			
+		</widget>
+
+		<widget class="radio_toggle_switch_right" id="mixb" width="40" type="3" secondary_icon="icons/26px/transfer" secondary_icon_enabled="true" secondary_icon_alignment="centre">
+			<translation id="hint" translation_id="468393" type="use" value="Mixed delivery[COMMENT: FR 22700, scouting centre report card delivery type, split between inbox and scouting centre]" />
+
+		</widget>
+		
+	</container>
+	
+</panel>

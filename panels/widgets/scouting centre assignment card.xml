@@ -1,0 +1,153 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container >
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--assignment details-->
+		<container height="50">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="20" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="text" alignment="left,centre_y" multiline="true" size="large" style="semi_bold" colour="green 600">
+				<record id="object_property" get_property="SCnm" set_property="text" />
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+				<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+				<widget class="text" font="title" auto_size="all" colour="green 600">
+					<translation id="text" translation_id="450819" type="use" value="Players Found[COMMENT: FR 21109 scouting centre]" />
+				</widget>
+
+				<widget class="text" alignment="left,centre_y" auto_size="all" size="large" colour="green 600">
+					<record id="object_property" get_property="aspf" set_property="valu" />
+				</widget>
+
+			</container>
+
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+				<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+				<widget class="text" font="title" auto_size="all" colour="green 600">
+					<translation id="text" translation_id="230113" type="use" value="Duration" />
+				</widget>
+
+				<widget class="text" alignment="left,centre_y" auto_size="all" size="large" colour="green 600">
+					<record id="object_property" get_property="asdu" set_property="valu" />
+				</widget>
+
+			</container>
+
+
+
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" alignment="left,top" auto_size="vertical" colour="black">
+					<record id="object_property" get_property="text" set_property="text" />
+				</widget>
+
+				<container height="8" />
+
+				<!--fake table header-->
+				<container id="ToPc">
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="12" vertical_ofset="0" />
+
+					<widget class="text" width="212" font="title" colour="grey" style="semi_bold" auto_size="vertical" alignment="left,centre_y">
+						<translation id="text" translation_id="450820" type="use" value="Top Recommendations[COMMENT: FR 21109 Scouting centre]" />
+					</widget>
+
+					<widget class="text" width="180" font="title" colour="grey" auto_size="vertical" alignment="left,centre_y">
+						<translation id="text" translation_id="450821" type="use" value="Position/Role[COMMENT: FR 21109 Scouting centre]" />
+					</widget>
+
+					<widget class="text" width="45" font="title" colour="grey" auto_size="vertical" alignment="centre">
+						<translation id="text" translation_id="227770" type="use" value="Age[comment - person age]" />
+					</widget>
+
+					<widget class="text" width="220" font="title" colour="grey" auto_size="vertical" alignment="left,centre_y">
+						<translation id="text" translation_id="450822" type="use" value="Est. Value/Wage[COMMENT: FR 21109 Scouting centre, short version of Estimated Value/Wage]" />
+					</widget>
+
+					<widget class="text" width="60" font="title" colour="grey" auto_size="vertical" alignment="centre">
+						<translation id="text" translation_id="255666" type="use" value="Rec[COMMENT - person list view column heading; short for Scout Recommendation]" />
+					</widget>
+
+					<container width="4" height="20"/>
+
+				</container>
+
+				<!--list of recommended players-->
+				<widget class="simple_data_list" set_property="objt">
+					<layout class="arrange_vertical_attachment" alignment="top" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="astp" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</list>
+					</record>
+
+					<record id="widget_properties" class="property_list_viewer_xml_panel" file="widgets/assignment card top player widget" />
+				</widget>
+
+			</container>
+
+
+
+			<widget class="assignment_scouting_centre_actions_panel" height="30">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="Ttea" />
+							<integer id="set_property" value="Ttea" />
+						</record>
+						<record>
+							<integer id="get_property" value="SCei" />
+							<integer id="set_property" value="SCei" />
+						</record>
+						<record>
+							<integer id="get_property" value="Pers" />
+							<integer id="set_property" value="Pers" />
+						</record>
+						<record>
+							<integer id="get_property" value="psai" />
+							<integer id="set_property" value="psai" />
+						</record>
+						<record>
+							<integer id="get_property" value="Hhum" />
+							<integer id="set_property" value="objt" />
+						</record>
+            <record>
+              <integer id="get_property" value="fSCe" />
+              <integer id="set_property" value="fSCe" />
+            </record>
+
+					</list>
+				</record>
+			</widget>
+
+			<container height="10" />
+
+		</container>
+
+	</container>
+
+
+</panel>

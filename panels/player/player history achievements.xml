@@ -1,0 +1,92 @@
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<layout class="arrange_horizontal_attachment" layout="380,-1" offset="0">
+			<global id="gap" name="ui.main_box_gap"/>
+		</layout>
+
+		<!-- Left panel - Table of clubs -->
+		<container class="main_subtle_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
+
+			<widget class="table" id="plcl" layout="-1, 80, 80" row_spacing="0" column_spacing="5" row_height="66" save_session_state="true" select_event="sltm" fixed_row_height="26" default_focus="true">
+				<flags id="mode" value="fill_rows, stripe_rows,printable,select_rows,show_bullets,dont_allow_empty_selection" />
+				<boolean id="auto_size_rows" value="false" />
+				<boolean id="fixed_size_rows" value="true" />
+
+				<!-- Title of box -->
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="229408" type="use" value="Team" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="466499" type="use" value="Joined[COMMENT - player achievements panel; column heading for table; shortened version of 'Date Joined']" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="466500" type="use" value="Left[COMMENT - player achievements panel; column heading for table; refers to 'Date Departed']" />
+					</record>
+				</list>
+
+				<record id="default_properties">
+					<flags id="alignment" value="left,centre_y" />
+				</record>
+
+				<!-- column display properties -->
+				<list id="column_table_properties">
+					<record indx="0" sort_disabled="true" top="2" bottom="2" left="5" />
+				</list>
+			</widget>
+		</container>
+
+		<!-- Right panel - Achievements filtered by selected clubs in left panel -->
+		<container class="main_box" navigation_container="true">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- Filter tabs -->
+			<container class="tab_strip" id="view" appearance="tabs/subsection" use_alt_end_tab_appearances="false" alignment="top" select_event="view" auto_size="vertical">
+
+				<list id="items">
+					<record id="-1">
+						<translation id="name" translation_id="232843" type="use" value="Overall" />
+					</record>					
+					<record id="-2">
+						<translation id="name" translation_id="248354" type="use" value="Landmarks" />
+					</record>
+					<record id="1">
+						<translation id="name" translation_id="229368" type="use" value="Awards" />
+					</record>
+					<record id="0">
+						<translation id="name" translation_id="227741" type="use" value="Competitions" />
+					</record>
+					<record id="2">
+						<translation id="name" translation_id="227743" type="use" value="Transfers" />
+					</record>
+					<record id="4">
+						<translation id="name" translation_id="242350" type="use" value="Other" />
+					</record>
+					<record id="-3">
+						<translation id="name" translation_id="295868" type="use" value="Biography[COMMENT: player history panel; title of biography titled box]" />
+					</record>
+				</list>
+				<flags id="selection" value="-1" />
+			</container>
+
+			<!-- List of achievements -->
+			<container class="scrolling_box" id="achl">
+				<container id="lndM">
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!-- Filled in code using 'player history achievement item panel' -->
+				</container>
+			</container>
+
+			<!-- Biography panel-->
+			<container class="person_history_biography_panel" id="biog" hidden="true" />
+		</container>
+
+	</container>
+</panel>

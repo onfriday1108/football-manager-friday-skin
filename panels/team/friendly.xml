@@ -1,0 +1,178 @@
+<panel width="400">
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- titled box at the top -->
+	<container class="inner_box" id="ttlb">
+		<translation id="text" translation_id="242435" type="use" value="Arrange Friendly" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- scrolling box stretches to fit the size of the group box -->
+		<container class="scrolling_box">
+
+			<!-- group box to contain details at the top -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!-- sub section box containing details -->
+				<container class="main_box">
+					<translation id="text" translation_id="247252" type="use" value="Details[Arrange friendly panel details title]" />
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<!-- group box containing type field -->
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-10,-15" offset="0" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+						<!-- type widgets -->
+						<widget class="label">
+							<translation id="text" translation_id="229400" type="use" value="Type" />
+						</widget>
+						<widget class="popup_button" id="frty" fixed="false" select_event="frty" auto_size="vertical">
+							<list id="items">
+								<record id="0" tkex="true">
+									<translation id="text" translation_id="247253" type="use" value="Friendly Match" />
+								</record>
+								<record id="1" tkex="true">
+									<translation id="text" translation_id="247254" type="use" value="Tour" />
+								</record>
+								<record id="2" tkex="true">
+									<translation id="text" translation_id="243512" type="use" value="Cup" />
+								</record>
+								<record id="3" tkex="true">
+									<translation id="text" translation_id="243513" type="use" value="League" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<!-- group box containing date field -->
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-10,-15" offset="0" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+						<!-- date widgets -->
+						<widget class="label">
+							<translation id="text" translation_id="230120" type="use" value="Date" />
+						</widget>
+						<widget class="label" id="date" />
+					</container>
+
+					<!-- group box containing country field -->
+					<container id="coup">
+						<layout class="arrange_horizontal_attachment" layout="-10,-15" offset="0" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+						<!-- tour country widgets -->
+						<widget class="label">
+							<translation id="text" translation_id="247255" type="use" value="Country" />
+						</widget>
+						<widget class="popup_button" id="coun" fixed="false" select_event="chcn" auto_size="vertical" />
+					</container>
+
+					<!-- group box containing venue field -->
+					<container id="venp">
+						<layout class="arrange_horizontal_attachment" layout="-10,-15" offset="0" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+						<!-- venue widgets -->
+						<widget class="label">
+							<translation id="text" translation_id="247233" type="use" value="Venue" />
+						</widget>
+						<widget class="popup_button" id="vnue" fixed="false" select_event="chvn" auto_size="vertical">
+							<list id="items">
+								<record id="1" tkex="true">
+									<translation id="text" translation_id="233964" type="use" value="Home[COMMENT - venue, home or away]" />
+								</record>
+								<record id="0" tkex="true">
+									<translation id="text" translation_id="233965" type="use" value="Away[COMMENT - venue, home or away]" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<!-- group box containing name field -->
+					<container id="namp">
+						<layout class="arrange_horizontal_attachment" layout="-10,-15" offset="0" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+						<!-- name widgets -->
+						<widget class="label">
+							<translation id="text" translation_id="229689" type="use" value="Name" />
+						</widget>
+						<widget class="edit_box" id="name" edit_event="name" />
+					</container>
+
+					<!-- group box containing match rules field -->
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-10,-15" offset="0" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+						<!-- match rule widgets -->
+						<widget class="label">
+							<translation id="text" translation_id="247256" type="use" value="Match Rules" />
+						</widget>
+						<widget class="popup_button" id="mtrl" fixed="false" select_event="mtrl" auto_size="vertical">
+						</widget>
+					</container>
+				</container>
+
+				<!-- table containing teams -->
+				<widget class="table" id="tmst" layout="-1,-1" mode="0" row_height="24" auto_size="vertical">
+
+					<!-- table headings -->
+					<list id="headings">
+						<record>
+							<translation id="text" translation_id="247257" type="use" value="Opposition[COMMENT - arrange friendly panel]" />
+							<flags id="algn" value="left,centre_y" />
+						</record>
+						<record>
+							<translation id="text" translation_id="247258" type="use" value="Fee[COMMENT - fee for friendly opposition on arrange friendly panel]" />
+							<flags id="algn" value="left,centre_y" />
+						</record>
+					</list>
+
+					<!-- column properties -->
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" />
+					</list>
+
+					<!-- column display properties -->
+					<list id="column_table_properties">
+						<record indx="0" left="4" sort_disabled="true" />
+						<record indx="1" sort_disabled="true" />
+					</list>
+
+				</widget>
+
+				<!-- subsection containing comments -->
+				<container class="main_box" id="comm">
+					<translation id="title" translation_id="247259" type="use" value="Comments" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<record id="defp">
+						<flags id="auto_size" value="vertical" />
+						<flags id="spec" value="text" />
+						<colour id="colour" name="selection" />
+					</record>
+
+				</container>
+			</container>
+		</container>
+
+		<container file="team/friendly buttons" />
+	</container>
+</panel>

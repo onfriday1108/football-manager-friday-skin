@@ -1,0 +1,340 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+    <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="3" />
+
+	<!-- Active players button -->
+	<widget class="button" id="plaa" auto_size="all" click_event="plta" appearance="tabs/subsection/selected/button">
+		
+		  <translation id="text" translation_id="232113" type="use" value="Players" />
+		<!-- show other inactive tabs-->		
+          <attachment class="event_relay_attachment" event_id="plta">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="tili" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="plta">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="pili" />
+            </record>
+          </attachment>
+
+		  <!-- hide other active tabs-->
+          <attachment class="event_relay_attachment" event_id="plta">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="tila" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="plta">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="pila" />
+            </record>
+          </attachment>
+
+	</widget>
+	
+	<!-- Inactive formation button -->
+	<widget class="button" id="plai" auto_size="all" click_event="plti" appearance="tabs/subsection/selected/button" hidden="true">
+		
+		  <translation id="text" translation_id="232113" type="use" value="Players" />
+		<!-- hide inactive version of this tab-->
+		  <attachment class="event_relay_attachment" event_id="plti">
+          <record id="action_event">
+            <flags id="event_id" value="hide" />
+            <flags id="event_target" value="plai" />
+          </record>
+        </attachment>
+		
+		  <!-- show active version of this tab-->		
+        <attachment class="event_relay_attachment" event_id="plti">
+          <record id="action_event">
+            <flags id="event_id" value="show" />
+            <flags id="event_target" value="plaa" />
+          </record>
+        </attachment>
+		
+		  <!-- show other inactive tabs-->		
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="tili" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="pili" />
+            </record>
+          </attachment>
+
+		  <!-- hide other active tabs-->
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="tila" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="pila" />
+            </record>
+          </attachment>
+
+	      <!-- formation panel-->
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="plis" />
+            </record>
+          </attachment>
+
+	      <!-- team instructions panel-->
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="tetb" />
+            </record>
+          </attachment>
+
+          <!-- player instructions panel -->
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="pitb" />
+            </record>
+          </attachment>
+
+	</widget>
+
+
+	<!-- Active team instructions button -->
+	<widget class="button" id="tila" auto_size="all" click_event="tlta" appearance="tabs/subsection/selected/button" hidden="true">
+		
+		  <translation id="text" translation_id="247728" type="use" value="Team Instructions" />
+		<!-- show other inactive tabs-->		
+          <attachment class="event_relay_attachment" event_id="tlta">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="plaa" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="tlta">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="pili" />
+            </record>
+          </attachment>
+
+		  <!-- hide other active tabs-->
+          <attachment class="event_relay_attachment" event_id="tlta">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="plaa" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="tlta">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="pila" />
+            </record>
+          </attachment>
+	</widget>
+	
+	<!-- Inactive team instructions button -->
+	<widget class="button" id="tili" auto_size="all" click_event="tlti" appearance="tabs/subsection/selected/button">
+		
+		  <translation id="text" translation_id="247728" type="use" value="Team Instructions" />
+		<!-- hide inactive version of this tab-->
+		  <attachment class="event_relay_attachment" event_id="tlti">
+          <record id="action_event">
+            <flags id="event_id" value="hide" />
+            <flags id="event_target" value="tili" />
+          </record>
+        </attachment>
+		
+		  <!-- show active version of this tab-->		
+        <attachment class="event_relay_attachment" event_id="tlti">
+          <record id="action_event">
+            <flags id="event_id" value="show" />
+            <flags id="event_target" value="tila" />
+          </record>
+        </attachment>
+		
+		  <!-- show other inactive tabs-->		
+          <attachment class="event_relay_attachment" event_id="tlti">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="plai" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="tlti">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="pili" />
+            </record>
+          </attachment>
+
+		  <!-- hide other active tabs-->
+          <attachment class="event_relay_attachment" event_id="tlti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="plaa" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="tlti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="pila" />
+            </record>
+          </attachment>
+
+	      <!-- players panel-->
+          <attachment class="event_relay_attachment" event_id="tlti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="plaa" />
+            </record>
+          </attachment>
+
+	      <!-- team instructions panel-->
+          <attachment class="event_relay_attachment" event_id="tlti">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="tetb" />
+            </record>
+          </attachment>
+
+          <!-- player instructions panel -->
+          <attachment class="event_relay_attachment" event_id="tlti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="pitb" />
+            </record>
+          </attachment>
+
+	</widget>
+
+	<!-- Active player instructions button -->
+	<widget class="button" id="pila" auto_size="all" click_event="plta" appearance="tabs/subsection/selected/button" hidden="true">
+		
+		  <translation id="text" translation_id="247610" type="use" value="Player Instructions" />
+		<!-- show other inactive tabs-->		
+          <attachment class="event_relay_attachment" event_id="plta">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="tili" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="plta">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="plai" />
+            </record>
+          </attachment>
+
+		  <!-- hide other active tabs-->
+          <attachment class="event_relay_attachment" event_id="plta">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="tila" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="plta">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="plaa" />
+            </record>
+          </attachment>
+	</widget>
+	
+	<!-- Inactive player instructions button -->
+	<widget class="button" id="pili" auto_size="all" click_event="plti" appearance="tabs/subsection/selected/button">
+		
+		  <translation id="text" translation_id="247610" type="use" value="Player Instructions" />
+		<!-- hide inactive version of this tab-->
+		  <attachment class="event_relay_attachment" event_id="plti">
+          <record id="action_event">
+            <flags id="event_id" value="hide" />
+            <flags id="event_target" value="pili" />
+          </record>
+        </attachment>
+		
+		  <!-- show active version of this tab-->		
+        <attachment class="event_relay_attachment" event_id="plti">
+          <record id="action_event">
+            <flags id="event_id" value="show" />
+            <flags id="event_target" value="pila" />
+          </record>
+        </attachment>
+		
+		  <!-- show other inactive tabs-->		
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="plai" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="tili" />
+            </record>
+          </attachment>
+
+		  <!-- hide other active tabs-->
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="plaa" />
+            </record>
+          </attachment>
+
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="tila" />
+            </record>
+          </attachment>
+
+	      <!-- formation panel-->
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="plis" />
+            </record>
+          </attachment>
+
+	      <!-- team instructions panel-->
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="hide" />
+              <flags id="event_target" value="tetb" />
+            </record>
+          </attachment>
+
+          <!-- player instructions panel -->
+          <attachment class="event_relay_attachment" event_id="plti">
+            <record id="action_event">
+              <flags id="event_id" value="show" />
+              <flags id="event_target" value="pitb" />
+            </record>
+          </attachment>
+	</widget>
+
+</panel>

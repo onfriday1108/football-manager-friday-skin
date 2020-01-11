@@ -1,0 +1,36 @@
+<panel>
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+	<layout class="arrange_horizontal_attachment" layout="30, 18, 18, -1" gap="6" offset="0"/>
+
+	<!-- Year -->
+	<widget class="text" id="year" alignment="left,centre_y" size="small" colour="faded text" auto_size="vertical" />
+
+	<!-- Award image -->
+	<container class="client_object_viewer_xml_panel" height="22">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<!-- Trophy picture -->
+		<widget class="comp_award_trophy_picture" id="awad" clickable="true" scale_picture="true" keep_aspect_ratio="true" hidden="true" image_alignment="centre"/>
+		<!-- Promotion picture -->
+		<widget class="picture" id="prom" file="icons/16px/up" scale_picture="true" keep_aspect_ratio="true" hidden="true" image_alignment="centre" red_replacement="positive"/>
+		<!-- Relegation picture -->
+		<widget class="picture" id="rele" file="icons/16px/down" scale_picture="true" keep_aspect_ratio="true" hidden="true" image_alignment="centre" red_replacement="negative"/>
+	</container>
+
+	<!-- Team Picture -->
+	<widget class="object_portrait_picture" id="tema" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="22"/>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+		<layout class="arrange_horizontal_attachment" alignment="fill" gap="6" offset="0"/>
+
+		<!-- Landmark type -->
+		<widget class="text" id="lndT" multiline="true" alignment="left,centre_y" auto_size="vertical" size="small"/>
+
+		<!-- Competition -->
+		<widget class="comp_button" id="comp" multiline="true" alignment="left,centre_y" format="([%comp#1-short])" icon_enabled="false" size="small" auto_size="vertical"/>
+	</container>
+</panel>

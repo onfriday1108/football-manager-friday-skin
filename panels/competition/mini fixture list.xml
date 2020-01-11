@@ -1,0 +1,14 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+	<widget class="table" id="tabl" layout="-1,20,-1">
+
+		<flags id="mode" value="fill_rows, stripe_rows, fill_custom_rows, keyboard, printable"/>
+
+		<!--mode="1" makes the team buttons not colour themselves-->
+		<record id="default_properties" spec="text" colour="white"/>
+
+	</widget>
+
+</panel>

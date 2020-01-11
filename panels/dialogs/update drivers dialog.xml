@@ -1,0 +1,30 @@
+﻿<panel>
+
+	<!-- basically a copy of dialog.xml -->
+	<attachment class="moveable_attachment" />
+
+	<layout class="arrange_vertical_attachment" alignment="top" gap="8" />
+	<layout class="centre_in_parent_attachment" alignment="vertical" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" gap="8" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+	<layout class="centre_in_parent_attachment" alignment="horizontal" />
+
+	<widget class="text" id="text" auto_size="vertical" />
+
+	<container id="btns">
+		<attachment_group class="button_arrangement_right" />
+
+		<flags id="okap" value="buttons/primary/normal/button"/>
+		<flags id="tici" value="icons/16px/tick"/>
+
+		<widget class="primary_icon_tick_button" click_event="OpDl">
+			<translation id="text" translation_id="242044" type="use" value="Yes" />
+		</widget>
+
+		<widget class="button" id="no" auto_size="all" >
+			<translation id="text" translation_id="231460" type="use" value="No" />
+		</widget>
+
+	</container>
+
+</panel>

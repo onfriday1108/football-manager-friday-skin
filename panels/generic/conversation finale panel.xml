@@ -1,0 +1,16 @@
+<panel height="70">
+  <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="4"/>
+  <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+  <widget class="button" alignment="centre_y" auto_size="all" id="leaP" click_event="lkYN" >
+    <translation id="hint" translation_id="347697" type="use" value="Attempt to put pressure on the board by telling the press that the request has been denied[COMMENT: FR 584; Conversation End Label; hint for Leak to Press button]"/>
+    <translation id="text" translation_id="347777" type="use" value="Leak to Press[COMMENT: FR584; leak board room conversation to the press]"/>
+  </widget>
+
+  <widget class="board_request_popup_button_panel" id="brpu" height="30"/>
+
+  <widget class="primary_icon_tick_button" id="exit" click_event="ENDc" controller_button="b_button">
+    <translation id="text" translation_id="308038" type="use" value="Exit[COMMENT: end converstation and link back to what you were viewing before]"/>
+    <record id="click_event" event_id="ENDc"/>
+  </widget>
+</panel>

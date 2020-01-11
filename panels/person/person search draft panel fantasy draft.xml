@@ -1,0 +1,144 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" layout="55,-1" offset="0" gap="8" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!--appearance and background colour of search dialog-->
+	<flags id="sdap" value="boxes/popup/standard/paper" />
+	<flags id="sdbc" value="" />
+
+	<!--filter panel-->
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-3, 3, -3, -3, -2,30" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--Player Name-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" height="18" font="title" colour="faded text">
+				<translation id="text" translation_id="247229" type="use" value="Player Name" />
+			</widget>
+
+			<container>
+				<widget class="edit_box" id="pass" clear_text_event="chfl">
+					<!-- send the text changed event to the clear button: if the text is empty, the clear button is disabled or removed -->
+					<event id="changed_event">
+						<flags id="event_id" value="unmF"/>
+						<flags id="event_target" value="clfl"/>
+					</event>
+				</widget>
+			</container>
+		</container>
+
+		<widget class="vertical_divider"/>
+
+		<!--Player Position-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" height="18" font="title" colour="faded text">
+				<translation id="text" translation_id="450778" type="use" value="Position[COMMENT: Player Search - Player Positions can play]" />
+			</widget>
+
+			<widget class="widget_popup_button" red_replacement="pitch_box_background" blue_replacement="pitch_box_background" id="plsP" popup_alignment="left,bottom" widget_type="player_positions_filter_panel">
+				<translation id="text" translation_id="450097" type="use" value="Select Positions[COMMENT: Player Search - Select which Player Positions can play]" />
+				<record id="widget_properties" file="dialogs/player position filter dialog" width="220" height="340">
+					<record id="object_property" get_property="Ppos" set_property="Ppos" />
+				</record>
+				<record id="modal_popup_properties" file="modal popup panel auto sized" />
+			</widget>
+		</container>
+
+		<!--Player Value-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="label" height="18" font="title" colour="faded text">
+				<translation id="text" translation_id="450779" type="use" value="Max Value[COMMENT: Player Search - Player maximum value]" />
+			</widget>
+
+			<widget class="cash_selection_list" id="posP" select_event="unvF" split_plus_minus_buttons="false" layout="30, -1, 30, 30" />
+		</container>
+
+		<!--More filters button-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="22" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="button" id="edts" height="33" click_event="scdi" alignment="left,centre_y">
+				<translation id="text" translation_id="450780" type="use" value="More Filters[COMMENT: Player Search - Link to more filters to apply to search]" />
+			</widget>
+		</container>
+
+
+		<!--reset button-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<container height="18" />
+
+			<widget class="icon_button" icon="icons/16px/cross" icon_alignment="centre" id="clos" click_event="clfl" />
+		</container>
+
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+		<boolean id="save_session_state" value="true" />
+		<boolean id="save_default_state" value="true" />
+
+		<!-- main area -->
+		<container class="inner_box" id="rslt" alignment="left">
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!-- buttons area -->
+			<container embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_left"/>
+
+				<!--player view menu-->
+				<widget class="view_menu_popup" id="plvi" />
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="person_search_table" id="pltb" table_type="1" dont_restore_selection="true" mode="fill_rows, stripe_rows, printable, keyboard, manual_sort, store_sort_state, show_bullets, select_rows, select_multiple, drag_rows, show_insert_column_popup" select_event="psls" popup_menu_class="popup_button_table_header" deferred_scrolling="true" deferred_scrolling_timeout="400" fixed_size_rows="true" auto_size_rows="false" row_height="60">
+					<boolean id="save_default_state" value="true" />
+
+					<!--default view-->
+					<flags id="default_view" value="ovvw" />
+				</widget>
+
+				<container height="34">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="4" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<widget class="button" id="cmpP" disabled="true" auto_size="horizontal">
+						<translation id="text" type="use" translation_id="326488" value="Compare Players[COMMENT: how to system, help string]" />
+					</widget>
+
+
+					<widget class="icon_tick_button" auto_size="horizontal">
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+						<record id="click_event" event_id="CONT" event_target="glob" />
+						<attachment class="test_global_attachment" mode="1" get_property="cont" set_property="hidn">
+							<list id="value">
+								<integer value="-17" />
+							</list>
+						</attachment>
+						<translation id="text" translation_id="447528" type="use" value="Ready[COMMENT: Button text; Ready to start Fantasy Draft]" />
+					</widget>
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

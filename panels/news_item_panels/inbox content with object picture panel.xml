@@ -1,0 +1,26 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+  <!-- content area -->
+  <container class="scrolling_box">
+    <container>
+      <layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+      <layout class="arrange_horizontal_attachment" layout="240, -1" gap="12"/>
+      <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+      <container id="dynI" height="140">
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+        
+        <!-- comp news image -->
+        <widget class="competition_news_image_panel" id="picT" height="140">
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+        </widget>
+      </container>
+
+      <widget class="inbox_body_text" id="bdtx" />
+
+    </container>
+  </container>
+
+</panel>

@@ -1,0 +1,58 @@
+<panel>
+
+  <boolean id="save_session_state" value="true" />
+
+  <!-- Styles -->
+  <flags id="frap" value="tables/custom/fixtures/friendly/row" />
+  <flags id="cncp" value="tables/custom/fixtures/continental/row" />
+  <flags id="cpap" value="tables/custom/fixtures/cup/row" />
+  <flags id="Hmap" value="tables/standard/row/selected/row" />
+
+  <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="10" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+  <!-- main area -->
+  <container class="main_box">
+    <translation id="text" translation_id="316604" type="use" value="Previous Results[COMMENT: team report; subsection box header text listing previous results vs an opponent]" />
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <widget class="client_object_list_table" id="pltb" database_table_type="53" select_event="self" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows, printable, store_sort_state, show_bullets, select_rows, select_multiple, dont_allow_empty_selection" column_mode="resize_columns, move_columns">
+      <boolean id="save_session_state" value="true" />
+      <list id="save_default_state">
+        <integer value="crvi" />
+      </list>
+
+      <!--properties for each object we always want to request, regardless of whether or not they're displayed 
+							 (this can help when for example supplying a selected object to another panel to display further info)-->
+      <!--these can be omitted, they're just a time saver-->
+      <list id="Spid">
+        <integer value="home" />
+        <integer value="away" />
+        <integer value="FxTy" />
+        <integer value="FxCt" />
+        <integer value="Cmic" />
+      </list>
+
+      <!-- default sort -->
+      <list id="default_sort_column">
+        <integer value="fxdt" />
+      </list>
+
+      <record id="viewed_property_ids">
+        <record id="fxdt" />
+        <record id="FXTm" />
+        <record id="FxNm" />
+        <record id="home" />
+        <record id="away" />
+        <record id="FxRT" />
+        <record id="FxRs" swap_for_context_team="false" />
+      </record>
+
+    </widget>
+
+    <widget class="text" id="NoFr">
+      <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+    </widget>
+  </container>
+
+</panel>

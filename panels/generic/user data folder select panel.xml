@@ -1,0 +1,11 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="-2" apply_to_children="true" />
+
+	<widget class="folder_select_panel" id="fols" changed_event="flch" file="folder select panel vertical" />
+	<widget class="icon_button" id="defl" auto_size="all" click_event="udfd">
+		<translation id="text" translation_id="330405" type="use" value="Reset to Default[COMMENT: preferences: change user data folder button text, default folder]" />
+		<layout class="stick_to_sides_attachment" alignment="right,bottom" inset="0" />
+	</widget>
+</panel>

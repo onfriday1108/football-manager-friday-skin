@@ -1,0 +1,108 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="20" horizontal_inset="0" />
+
+	<!-- profile picture -->
+	<widget class="picture" id="prop" width="80" height="70">
+		<boolean id="scale_picture" value="true"/>
+		<boolean id="keep_aspect_ratio" value="true"/>
+		<flags id="image_alignment" value="centre"/>
+
+		<layout class="stick_to_sides_attachment" alignment="left,top" inset="0"/>
+		<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+			<list id="value">
+				<boolean value="false"/>
+			</list>
+		</attachment>
+
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="prpc"/>
+					<integer id="set_property" value="valu"/>
+				</record>
+			</list>
+		</record>
+	</widget>
+
+	<widget class="table" layout="-1, -1" fixed_size_rows="false" row_spacing="0" auto_size_rows="true" mode="fill_rows" id="layt" row_height="15">
+		<flags id="auto_size" value="vertical" />
+
+		<!-- Nationality -->
+		<widget class="editable_client_object_property_panel" id="natp" row="0" col="0">
+			<record id="object_property" get_property="PNat">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="objt"/>
+						<integer id="set_property" value="Pers"/>
+					</record>
+				</list>
+			</record>
+			<record id="widget_properties" style="semi_bold" auto_size="all" format="[%nation#1-nationality]" alignment="left,centre_y"/>
+		</widget>
+
+		<!-- Age in years -->
+		<widget class="dob_label" id="ages" row="2" col="0" dspf="2" style="semi_bold" height="22">
+			<record id="object_property">
+				<integer id="get_property" value="Pdob"/>
+			</record>
+		</widget>
+
+		<!-- Date of birth -->
+		<widget class="editable_client_object_property_panel" id="ageb" row="3" col="0"  size="small" colour="faded text">
+			<record id="object_property">
+				<integer id="get_property" value="Pdob"/>
+			</record>
+			<record id="widget_properties" display_format="3" auto_size="all"/>
+		</widget>
+
+		<!-- reputation label -->
+		<widget class="label" row="2" col="1" font="label" colour="faded text" height="18">
+			<translation id="text" translation_id="227963" type="use" value="Reputation"/>
+		</widget>
+		<widget class="global_reputation_stars_label" id="citb" row="3" col="1" height="18" alignment="left,centre_y">
+			<record id="object_property">
+				<integer id="get_property" value="Prsa"/>
+			</record>
+		</widget>
+
+		<widget class="label" col="0" row="5" font="label" colour="faded text" height="18">
+			<translation id="text" translation_id="242578" type="use" value="Games played"/>
+		</widget>
+		<widget class="number_label" id="mapo" col="0" row="6" height="26"  size="large" style="semi_bold">
+			<record id="object_property">
+				<integer id="get_property" value="Tgpl"/>
+			</record>
+		</widget>
+
+		<!--Win Ratio Label-->
+		<widget class="label" col="1" row="5" font="label" colour="faded text" height="18">
+			<translation id="text" translation_id="242579" type="use" value="Games won"/>
+		</widget>
+		<widget class="number_label" id="pela" col="1" row="6" height="26" size="large" style="semi_bold">
+			<record id="object_property">
+				<integer id="get_property" value="Tgwn"/>
+			</record>
+		</widget>
+
+		<!--Height-->
+		<widget class="label" col="0" row="7" font="label" colour="faded text" height="18">
+			<translation id="text" translation_id="227956" type="use" value="Height[COMMENT - label for showing a player's height]"/>
+		</widget>
+		<widget class="weight_label" col="1" row="8" height="26" size="large" style="semi_bold">
+			<record id="object_property">
+				<integer id="get_property" value="Hwei"/>
+			</record>
+		</widget>
+
+		<!--Weight-->
+		<widget class="text" col="1" row="7" font="label" colour="faded text" height="18">
+			<translation id="text" translation_id="227957" type="use" value="Weight[COMMENT - label for showing a player's weight]"/>
+		</widget>
+		<widget class="height_label" col="0" row="8" height="26" size="large" style="semi_bold">
+			<record id="object_property">
+				<integer id="get_property" value="Hhei"/>
+			</record>
+		</widget>
+	</widget>
+
+</panel>

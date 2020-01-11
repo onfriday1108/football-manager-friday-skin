@@ -1,0 +1,218 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+  <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <container class="titled_box">
+    <translation id="text" translation_id="330229" type="use" value="Match[COMMENT: preferences: match settings section (short) name]" />
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+    <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+
+    <container class="titled_box">
+      <translation id="title" translation_id="329630" type="use" value="3D[COMMENT: preferences: game settings section title]" />
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+      <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <container id="graphical_detail" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="graphical_detail" />
+        </list>
+      </container>
+
+      <container id="render_quality" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="render_quality" />
+        </list>
+      </container>
+
+      <container id="mesh_detail" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="mesh_detail" />
+        </list>
+      </container>
+
+      <container id="shadow_quality" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="shadow_quality" />
+        </list>
+      </container>
+
+      <container id="texture_quality" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="texture_quality" />
+        </list>
+      </container>
+
+      <container id="anti_aliasing" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="anti_aliasing" />
+        </list>
+      </container>
+
+      <container id="crowd_quality" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="crowd_quality" />
+        </list>
+      </container>
+    </container>
+
+    <container class="titled_box">
+      <translation id="title" translation_id="348158" type="use" value="In-match[COMMENT: preferences: game settings section title]" />
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+      <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+      
+      <container id="show_popup_in_between_match_highlights" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="show_popup_in_between_match_highlights" />
+        </list>
+      </container>
+
+      <container id="show_split_time" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="show_split_time" />
+        </list>
+      </container>
+
+      <container id="enable_flashing_text" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="enable_flashing_text" />
+        </list>
+      </container>
+
+      <container id="use_plain_commentary_colours" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="use_plain_commentary_colours" />
+        </list>
+      </container>
+
+      <container id="show_player_condition_in_match" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="show_player_condition_in_match" />
+        </list>
+      </container>
+
+      <container id="show_pre_match_intro" file="game/preferences match item"  >
+        <list id="viewed_property_ids">
+          <symbol value="show_pre_match_intro" />
+        </list>
+      </container>
+
+    </container>
+
+    <container class="titled_box">
+      <translation id="title" translation_id="330383" type="use" value="Processing[COMMENT: preferences: game settings section title]" />
+      
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+      <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+      
+      <container id="enable_ad_hyperlinks" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="enable_ad_hyperlinks" />
+        </list>
+      </container>
+
+      <container id="skip_match_day_experience" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="skip_match_day_experience" />
+        </list>
+      </container>
+
+      <container id="processing_mode" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="processing_mode" />
+        </list>
+      </container>
+
+      <container id="remote_match_acceleration_enabled" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="remote_match_acceleration_enabled" />
+        </list>
+      </container>
+
+      <container id="remote_match_acceleration_host" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="remote_match_acceleration_host" />
+        </list>
+      </container>
+
+      <container id="remote_match_acceleration_port" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="remote_match_acceleration_port" />
+        </list>
+      </container>
+      
+      <container id="match_scheduling_mode" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="match_scheduling_mode" />
+        </list>
+      </container>
+      
+      <container id="view_match_result_only" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="view_match_result_only" />
+        </list>
+      </container>
+
+      <container id="match_stats_total_size" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="match_stats_total_size" />
+        </list>
+      </container>
+    </container>
+
+    <container class="titled_box">
+      <translation id="title" translation_id="348124" type="use" value="Highlights[COMMENT: preferences: game settings section title]" />
+
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+      <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <container class="inner_subtle_box" height="320" >
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+        <widget class="preferences_profile_panel" file="game/preferences profile panel match" height="100"/>
+      </container>
+    </container>
+
+
+
+    <widget class="match_settings_viewer_panel" id="set4">
+      <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+      <record id="table_properties">
+        <flags id="mode" value="" />
+        <integer id="row_spacing" value="5" />
+      </record>
+      <list id="viewed_property_ids">
+        <symbol value="use_debug_incident_text" />
+        <symbol value="debug_match_auto_highlight_players" />
+        <symbol value="debug_match_scenarios_disallow_all_goals" />
+        <symbol value="debug_match_scenarios_dodgy_keepers" />
+        <symbol value="debug_match_scenarios_send_off_keeper" />
+        <symbol value="debug_match_scenarios_send_off_player" />
+        <symbol value="debug_match_scenarios_short_halves" />
+        <symbol value="debug_match_scenarios_injure_keeper" />
+        <symbol value="debug_match_scenarios_injure_player" />
+        <symbol value="debug_match_scenarios_injure_just_human" />
+        <symbol value="debug_match_scenarios_enable_flares" />
+        <symbol value="debug_match_scenarios_instant_pen" />
+        <symbol value="debug_match_scenarios_abba" />
+        <symbol value="debug_match_scenario_all_fouls_are_pens" />
+        <symbol value="debug_match_scenarios_slight_injure_player" />
+        <symbol value="debug_match_scenario_uses_var" />
+        <symbol value="debug_match_scenario_uses_var_stand" />
+        <symbol value="debug_match_scenarios_bad_decisions" />
+        <symbol value="debug_match_scenarios_show_offsides" />
+        <symbol value="debug_match_has_hawkeye" />
+        <symbol value="debug_match_disable_ball_error" />
+        <symbol value="debug_match_all_female_cast"/>
+        <symbol value="debug_match_no_skipping_dead_time"/>
+      </list>
+    </widget>
+  </container>
+  
+
+</panel>

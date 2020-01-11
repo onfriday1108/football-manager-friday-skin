@@ -1,0 +1,46 @@
+<panel version="1.0">
+
+  <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="10" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+  <!--mentality-->
+  <container width="170" id="MENT">
+    <layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="5" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <widget class="icon_button" id="mstR" height="18" icon="icons/16px/mentality" appearance="none" font="title">
+      <translation id="text" translation_id="348204" type="use" value="Mentality[Comment: prefix used before mentality type text on quick tactical instruction button during match]" />
+    </widget>
+
+    <widget class="mentality_table_popup_button" id="ment" auto_size="vertical" appearance="buttons/custom/match/standard/normal/button" />
+    <widget class="mentality_label" id="menT" auto_size="vertical" />
+  </container>
+
+  <!--fluidity-->
+  <container width="170" id="FLUI">
+    <layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="5" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <widget class="icon_button" id="phiL" height="18" icon="icons/16px/team shape" appearance="none" font="panel_title">
+      <translation id="text" translation_id="465563" type="use" value="Team Fluidity[COMMENT: team tactical instruction, reference ID 364787, team shape is now team fluidity]" />
+      <translation id="hint" translation_id="468958" type="use" value="Team Fluidity reflects the shape and structure of the team based on their roles and duties.[COMMENT: tooltip help text for ID 465563 Team Fluidity]" />
+    </widget>
+
+    <widget class="fluidity_table_popup_button" id="flui" auto_size="vertical" appearance="buttons/custom/match/standard/normal/button" />
+    <widget class="fluidity_label" id="fluI" auto_size="vertical" />
+  </container>
+
+  <!--Team instructions-->
+  <container width="170" id="TEIN">
+    <layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="5" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <widget class="icon_button" height="18" icon="icons/16px/team instructions" appearance="none" font="title">
+      <translation id="text" translation_id="247728" type="use" value="Team Instructions" />
+    </widget>
+
+    <widget class="button" id="teIn" click_event="teIn" alignment="left,centre_y" height="30" appearance="buttons/custom/match/standard/normal/button" />
+  </container>
+
+  <container id="NOTI" />
+</panel>

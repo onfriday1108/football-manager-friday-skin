@@ -1,0 +1,19 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container id="fixY">
+   <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <widget class="fixture_full_result_text" spec="text" id="oppo" size="10" multiline="false" auto_size="vertical" alignment="left,bottom" style="bold, shadowed">
+    </widget>
+    <widget class="text" id="days" spec="text" multiline="true" alignment="left,top" style="shadowed" size="10">
+    </widget>
+  </container>
+
+  <!--panel for no fixtures-->
+  <widget class="text" id="fixN" alignment="left,top" style="bold, shadowed" size="11">
+    <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+  </widget>
+
+</panel>

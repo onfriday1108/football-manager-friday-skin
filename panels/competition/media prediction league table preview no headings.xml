@@ -1,0 +1,41 @@
+<!-- A table showing the teams in a division and their media predicted finishing position and odds to win as the start of the season. Used with MEDIA_PREDICTION_LEAGUE_TABLE_PANEL -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+	<widget class="table" id="tabl" layout="44, -1, 60" mode="fill_rows, stripe_rows" save_session_state="true" auto_size="vertical">
+		<!-- default properties adopted by every item in table -->
+		<record id="default_properties" spec="text" alignment="left,centre_y"/>
+
+		<list id="column_table_properties">
+			<!-- Media predicted position -->
+			<record id="Mpos" index="0">
+				<record id="widget_info">
+					<symbol id="class" value="dashed_formatted_label"/>
+				</record>
+			</record>
+
+			<!-- Team -->
+			<record id="ttea" index="1">
+				<record id="widget_info">
+					<symbol id="class" value="team_button"/>
+				</record>
+			</record>
+
+			<!-- Odds -->
+			<record id="Mods" index="2">
+				<record id="widget_info">
+					<symbol id="class" value="odds_label"/>
+				</record>
+			</record>
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="0" format="[%number#1-nth]"/>
+		</list>
+
+		<list id="default_sort_column">
+			<integer value="Mpos"/>
+			<integer value="Mods"/>
+		</list>
+	</widget>
+</panel>

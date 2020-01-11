@@ -1,0 +1,67 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="text" auto_size="vertical" alignment="centre_x,top" >
+			<translation id="text" translation_id="376487" type="use" value="In Attendance[COMMENT: FR 7884 - in attendance label; team meeting introduction box; team meeting, list of players who are in attendance]"/>
+		</widget>
+		<widget class="text" id="plct" auto_size="vertical" style="semi_bold" size="large" alignment="centre_x,top"/>
+		<widget class="text" id="plin" auto_size="vertical" alignment="centre" hidden="true"/>
+
+		<container navigation_container="true">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+			<widget class="client_object_list_table" id="cplt" mode="fill_rows" fixed_size_rows="true" row_height="30" >
+				<!--default view-->
+				<flags id="default_view" value="staV"/>
+				<list id="viws">
+					<record id="staV">
+						<boolean id="tick" value="false"/>
+						<record id="view">
+							<!--Player Status -->
+							<record id="Pnfo" width="40" auto_hide_priority="4"/>
+							<!--Player Morale -->
+							<record id="Pmor" width="18" auto_hide_priority="3" label_disabled="true"/>
+							<!--Players Name-->
+							<record id="Pnms" width="-3" auto_hide_priority="1"/>
+							<!--Players personality-->
+							<record id="PPst" width="-2" auto_hide_priority="50" minimum_width="800"/>
+							<!--Players Hierarchy-->
+							<record id="THic" width="-2" auto_hide_priority="3"/>
+							<!--Players Social Group-->
+							<record id="DRsd" width="-2" auto_hide_priority="4"/>
+							<!--Players happiness-->
+							<record id="PHgh" width="-6" auto_hide_priority="10"/>
+						</record>
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<widget class="client_object_list_table" id="nplt" mode="fill_rows" fixed_size_rows="true" row_height="30">
+			<!--default view-->
+			<flags id="default_view" value="staV"/>
+			<list id="viws">
+				<record id="staV">
+					<boolean id="tick" value="false"/>
+					<record id="view">
+						<!--Player Status -->
+						<record id="Pnfo" width="40" auto_hide_priority="4"/>
+						<!--Player Morale -->
+						<record id="Pmor" width="18" auto_hide_priority="3" label_disabled="true"/>
+						<!--Players Name-->
+						<record id="Pnms" width="-3" auto_hide_priority="1"/>
+						<!--Players personality-->
+						<record id="PPst" width="-2" auto_hide_priority="50" minimum_width="800"/>
+						<!--International happiness-->
+						<record id="PHih" width="-6" auto_hide_priority="10"/>
+					</record>
+				</record>
+			</list>
+		</widget>
+
+	</container>
+</panel>

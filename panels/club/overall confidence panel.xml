@@ -1,0 +1,33 @@
+<panel>
+
+	<translation id="title" translation_id="227743" type="use" value="Transfers" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="scrolling_box">
+		<widget class="main_box" id="ogbx">
+			<translation id="title" translation_id="258288" type="use" value="Overall Confidence[COMMENT: club confidence panel box heading; this will be the header for the club confidence screen area]" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+			<widget class="table" mode="fill_rows" id="tabo" layout="-2, -4" auto_size_rows="true" auto_size="vertical">
+				<boolean id="fixed_size_rows" value="false" />
+				<boolean id="auto_size_rows" value="true" />
+
+				<boolean id="save_session_state" value="true" />
+				<boolean id="save_default_state" value="true" />
+
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" />
+				</list>
+
+				<list id="column_table_properties">
+					<record indx="0" left="4" />
+					<record indx="1" top="3" bottom="3" left="4" right="4" />
+				</list>
+			</widget>
+
+			<widget class="text" auto_size="vertical" id="txtw" spec="text" size="normal" />
+
+		</widget>
+	</container>
+
+</panel>

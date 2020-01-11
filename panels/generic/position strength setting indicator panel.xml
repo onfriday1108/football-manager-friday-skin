@@ -1,0 +1,7 @@
+<panel>
+	<layout class="arrange_vertical_attachment" layout="13,37" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<widget class="label" id="posl" size="8" alignment="centre"/>
+	<widget class="picture" id="posi" file="pitch/icons/dots/kit" scale_picture="true" image_alignment="centre"/>
+</panel>

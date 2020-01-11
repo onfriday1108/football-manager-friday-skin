@@ -1,0 +1,12 @@
+<panel mode="select_rows,show_bullets,select_multiple" row_height="32" row_spacing="1">
+	<list id="column_table_properties">
+		<record width="40" column_heading="Icon">
+			<record id="column_widget_properties" scale_picture="true" image_alignment="centre"/>
+		</record>
+    <record width="-1" column_heading="Display Name"/>
+    <record width="-3" column_heading="Description"/>
+		<record width="-2" column_heading="Name"/>
+    <record width="-1" column_heading="Type"/>
+    <record width="-1" column_heading="Implemented"/>
+	</list>
+</panel>

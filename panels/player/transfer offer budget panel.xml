@@ -1,0 +1,33 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+
+	<container class="main_subtle_box">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-3" horizontal_offset="8" vertical_offset="0"/>
+
+		<container width="100">
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="0"/>
+
+
+			<widget class="text" id="tbty" alignment="left,bottom" auto_size="vertical" multiline="false" font="label" size="small">
+				<translation id="text" translation_id="291309" type="use" value="Transfer Budget[COMMENT:Transfer budget label]"/>
+			</widget>
+
+			<widget class="text" id="tbud" alignment="left,top" auto_size="vertical" font="value" />
+		</container>
+
+		<widget class="widget_popup_button" id="bdga" auto_size="all" popup_alignment="right,bottom" widget_type="client_object_viewer_xml_panel" appearance="buttons/subtle/normal/button">
+			<record id="widget_properties" file="club/popup budget adjustment panel" width="500" />
+			<record id="modal_popup_properties" file="modal popup panel auto sized" />
+			<translation id="text" translation_id="256882" type="use" value="Budget Adjustment[COMMENT::dialog title; this will be used on the dialog where the manager will be able to choose how to adjust his financial budget]"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+		</widget>
+
+		<widget class="text" id="nobf" spec="text" size="small" alignment="centre" auto_size="vertical" >
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+		</widget>
+	</container>
+
+</panel>

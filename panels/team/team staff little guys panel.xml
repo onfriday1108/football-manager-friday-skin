@@ -1,0 +1,19 @@
+<panel height="70">
+	<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+	<string id="eslf" value="icons/custom/staff/little guy empty"/>
+	<string id="eslc" value="staff empty slot colour"/>
+
+	<widget class="scrolling_box">
+		<container class="horizontal_arrange_container" id="harg" wrap="true" alignment="left" offset="0" inset="0" gap="1" auto_size="vertical" navigation_container="true" />
+	</widget>
+
+	<container >
+		<attachment_group class="vertical_arrange_horizontal_autosize"/>
+
+		<widget class="popup_button" id="popb" width="60" icon="icons/custom/staff/add little guy" icon_alignment="left" >
+		</widget>
+
+	</container>
+
+</panel>

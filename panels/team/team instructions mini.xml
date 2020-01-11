@@ -1,0 +1,31 @@
+<panel version="1.0">
+
+	<translation id="title" translation_id="247728" type="use" value="Team Instructions" />
+	<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+	<!-- General Strategies table -->
+	<widget class="table" mode="fill_rows" layout="-1,10,-1,10,-1">
+
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+		<boolean id="fixed_size_rows" value="true" />
+		<integer id="row_height" value="30" />
+		<flags id="auto_size" value="vertical" />
+
+		<widget class="text" row="0" col="0" id="mstR" spec="text" font="title" alignment="left,centre_y">
+			<translation id="text" translation_id="348204" type="use" value="Mentality[Comment: prefix used before mentality type text on quick tactical instruction button during match]" />
+		</widget>
+		<widget class="mentality_table_popup_button" id="ment" row="1" col="0" appearance="buttons/custom/match/standard/normal/button" />
+
+		<widget class="text" row="0" col="2" id="phiL" spec="text" font="title" alignment="left,centre_y">
+			<translation id="text" translation_id="465563" type="use" value="Team Fluidity[COMMENT: team tactical instruction, reference ID 364787, team shape is now team fluidity]" />
+      <translation id="hint" translation_id="468958" type="use" value="Team Fluidity reflects the shape and structure of the team based on their roles and duties.[COMMENT: tooltip help text for ID 465563 Team Fluidity]" />
+    </widget>
+		<widget class="fluidity_table_popup_button" id="flui" row="1" col="2" appearance="buttons/custom/match/standard/normal/button" />
+
+		<widget class="icon_button" row="1" col="4" id="teIn" click_event="teIn" appearance="buttons/custom/match/standard/normal/button" />
+
+	</widget>
+
+</panel>

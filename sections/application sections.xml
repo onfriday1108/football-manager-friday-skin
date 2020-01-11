@@ -1,0 +1,61 @@
+<!--
+this file contains a list of all of the sections in the game
+-->
+<properties>
+  <string id="text" value="Application"/>
+  <list id="items">
+
+    <!--main menu-->
+    <record id="Aint"/>
+
+    <record id="Anwp" >
+      <translation id="text" translation_id="248352" type="use" value="New Game" />
+      <list id="items">
+        <!--editor data files-->
+        <record id="Asuf"/>
+        <!--choose nations-->
+        <record id="Asgm"/>
+      </list>
+    </record>
+
+    <!--join online game-->
+    <record id="Ajgm"/>
+
+    <!--fantasy draft menu-->
+    <record id="ftyM"/>
+    <!--create fantasy draft-->
+    <record id="creD"/>
+    <!-- Join fantasy draft -->
+    <record id="jonD"/>
+    <record id="Avsm"/>
+    <record id="Aprf">
+      <translation id="text" translation_id="229824" type="use" value="Preferences" />
+      <list id="items">
+        <!--extra files-->
+        <record id="Apfi"/>
+        <!--profiling-->
+        <record id="Appr"/>
+        <!--translation-->
+        <record id="Aptr"/>
+        <!--debug-->
+        <record id="Apde"/>
+        <!--debug channels-->
+        <record id="Apdc"/>
+      </list>
+    </record>
+
+    <record id="Acdt">
+      <translation id="text" translation_id="247992" type="use" value="Credits" />
+      <list id="items">
+        <!--development-->
+        <record id="Acrd"/>
+        <!--research-->
+        <record id="Arsc"/>
+        <!--community-->
+        <record id="Acmu"/>
+      </list>
+    </record>
+    <!--leaderboards-->
+    <record id="ldrb"/>
+  </list>
+</properties>

@@ -1,0 +1,101 @@
+﻿<panel is_tactics_comparison="true">
+	<boolean id="is_small_version" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<flags id="required_attribute_row_appearance" value="none" />
+	<flags id="preferred_attribute_row_appearance" value="none" />
+	<flags id="not_important_attribute_row_appearance" value="none" />
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="26, 15, 6, 26, 15, 1" row_height="21" row_spacing="1" default_sort_column="name">
+		<list id="column_table_properties">
+			<record index="0" id="name">
+				<record id="widget_info" class="text" auto_size="all" alignment="left,centre_y" multiline="false" colour="faded text" />
+			</record>
+			<record index="1" id="val " sort_disabled="true" column_alignment="centre">
+				<record id="widget_info" class="attribute_label" ignore_attribute_colours="true" alignment="right,centre_y" style="semi_bold" multiline="false" auto_size="all" />
+			</record>
+			<record index="2" id="DifV" sort_disabled="true" column_alignment="centre">
+				<record id="widget_info" class="text" auto_size="all" />
+			</record>
+
+			<!--mirroed rows-->
+			<record index="3" id="nam2">
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false" colour="faded text" auto_size="all" />
+			</record>
+			<record index="4" id="va2 " sort_disabled="true" column_alignment="centre">
+				<record id="widget_info" class="attribute_label" ignore_attribute_colours="true" alignment="right,centre_y" style="semi_bold" multiline="false" auto_size="all" />
+			</record>
+			<record index="5" id="Dif2" sort_disabled="true" column_alignment="centre">
+				<record id="widget_info" class="text" auto_size="all" />
+			</record>
+		</list>
+	</record>
+
+	<container >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container class="scrolling_box" inset="0">
+			<container >
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<layout class="fit_children_attachment" alignment="vertical,fill" gap="0" offset="0" />
+
+				<!-- Technical Table -->
+				<container id="cntT">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+
+					<widget class="table" id="pltt" layout="-1" auto_size="vertical">
+
+					</widget>
+
+					<widget class="horizontal_divider" />
+				</container>
+
+				<!-- Goalkeeping Table -->
+				<container id="cntG">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+
+					<widget class="table" id="plgk" layout="-1" auto_size="vertical">
+
+					</widget>
+
+					<widget class="horizontal_divider" />
+				</container>
+
+				<!-- Mental Table -->
+				<container id="cntM">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+
+					<widget class="table" id="plmt" layout="-1" auto_size="vertical">
+
+					</widget>
+
+					<widget class="horizontal_divider" />
+
+				</container>
+
+				<!-- Physical Table -->
+				<container id="cntP">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+
+					<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+					</widget>
+
+					<widget class="horizontal_divider" />
+
+				</container>
+			</container>
+		</container>
+
+	</container>
+
+</panel>

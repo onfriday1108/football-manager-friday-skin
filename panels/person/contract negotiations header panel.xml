@@ -1,0 +1,47 @@
+﻿<!-- header panel to be used during live contract negotiations --><panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <boolean id="should_force_refresh" value="true" />
+
+  <container class="bordered_box" appearance="boxes/custom/full screen header/paper">
+	  <attachment_group class="horizontal_arrange" alignment="left" horizontal_gap="10" />
+
+    <!-- Back Button -->
+    <widget class="screen_history_button" id="back" fixed="true" width="50" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/back" icon_alignment="centre" controller_button="left_shoulder">
+      <attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
+      <record id="primary_icon_properties" red_replacement="text" />
+      <record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
+
+      <attachment class="test_global_attachment" get_property="MnuS" mode="1" value="true" set_property="hidn" skip_if_null="true" />
+    </widget>
+
+    <widget class="vertical_divider" />
+
+	  <widget class="game_formatted_label" size="large" font="title" colour="accent" alignment="left, centre_y" auto_size="horizontal">
+		  <translation id="format" translation_id="491997" type="use" value="[%person#2] Contract Negotiation[COMMENT: AREA: Contracts; SUB-AREA: Contract Negotiations; FR-BN: TBC; TONE: Formal; CHARLIMIT: Shortish; REF-ID: n/a; NOTE: title for contract negotation screen when discussing terms with a person, non-player or player, hence person variable]" />
+		  <attachment class="get_global_attachment" get_property="CNpe" set_property="var2" />
+	  </widget>
+
+	  <container>
+		  <attachment_group class="horizontal_arrange_autosize" alignment="left" vertical_inset="13" />
+
+		  <container class="inner_contrast_box" red_replacement="red 500" appearance="boxes/contrast/no margin/paper">
+			  <attachment_group class="horizontal_arrange_autosize" alignment="left" horizontal_gap="0" horizontal_offset="5" />
+
+			  <widget class="picture" file="icons/16px/bullet" image_alignment="centre" width="10" red_replacement="text">
+			  </widget>
+
+			  <widget class="text" font="title" alignment="left, centre_y" auto_size="horizontal">
+				  <translation id="text" translation_id="466452" type="use" value="Live[COMMENT: FR 22941; press conference; label indicating the press conference is in progress]" />
+			  </widget>
+		  </container>
+		  
+	  </container>
+
+	  
+
+	 
+	  
+  </container>
+
+</panel>

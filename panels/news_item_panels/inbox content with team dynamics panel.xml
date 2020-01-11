@@ -1,0 +1,49 @@
+﻿<panel>
+	<string id="skin_style" value="subtle box" />
+	<integer id="player_widget_max_height" value="90" />
+	<integer id="player_widget_max_width" value="90" />
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!--atmoshpere-->
+	<container height="105">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<!--club support details-->
+		<container class="club_chemistry_support_panel" file="club/club inbox chemistry support panel" id="clbS" />
+	</container>
+
+	<!--hierarchy and social groups-->
+	<container class="horizontal_adaptive_container" offset="0" inset="0" height="360">
+		<!--Hierarchy pyramid container-->
+		<!--Top Influencers-->
+		<container class="inner_subtle_box" force_title_borders="true" default_width="-3" >
+			<translation id="title" translation_id="447591" type="use" value="Senior Squad Hierarchy[COMMENT: Team Dynamics: Squad Hierarchy]" />
+			<attachment_group class="vertical_arrange" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" vertical_gap="0"/>
+
+			
+			<container id="hrcC">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+			</container>
+		</container>
+
+		<!--Social Groups-->
+		<container class="inner_subtle_box"  force_title_borders="true" default_width="-1" minimum_width="200">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+
+			<widget class="link_button_title" section="tHSg" embed_in_frame="true">
+				<translation id="text" translation_id="447592" type="use" value="Social Groups[COMMENT: Team Dynamics: Social Groups within the squad]" />
+				<layout class="arrange_horizontal_attachment" alignment="left" embed_in_frame="true" gap="0" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="left" embed_in_frame="true" inset="10" />
+				<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="8" />
+			</widget>
+
+			<container class="scrolling_box">
+				<container id="scSG">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+				</container>
+			</container>
+		</container>
+
+	</container>
+</panel>

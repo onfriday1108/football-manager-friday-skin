@@ -1,0 +1,177 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<flags id="should_force_refresh" value="true" />
+
+	<container class="inner_box_no_margin">
+		<layout class="arrange_vertical_attachment" layout="-4, -3" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<!--top part of the panel-->
+		<container id="top">
+			<layout class="arrange_horizontal_attachment" layout="-2, -1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--bit for the continent overview-->
+			<container class="main_box" navigation_container="true">
+				<translation id="title" translation_id="247414" type="use" value="Overview" />
+				<layout class="arrange_horizontal_attachment" layout="-4, -3" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+				<!--map and general info-->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="110, -1, 30" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+						<!--map-->
+						<widget class="picture" id="map " image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+							<record id="object_property">
+								<integer id="get_property" value="prpc" />
+							</record>
+						</widget>
+
+					</container>
+
+					<!--general info-->
+					<widget class="table" layout="-1, -1" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows, printable">
+
+						<!--name-->
+						<widget class="label" id="conN" row="0" col="0">
+							<record id="object_property">
+								<integer id="get_property" value="CRef" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>
+						<widget class="continent_button" id="conV" row="0" col="1" navigation_focus_target="false">
+							<record id="object_property">
+								<integer id="get_property" value="CRef" />
+							</record>
+						</widget>
+
+						<!--population-->
+						<widget class="label" id="popN" row="1" col="0">
+							<record id="object_property">
+								<integer id="get_property" value="CPop" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>
+						<widget class="population_label" id="popV" row="1" col="1" alignment="left,centre_y">
+							<record id="object_property">
+								<integer id="get_property" value="CPop" />
+							</record>
+						</widget>
+
+						<!--no of countries-->
+						<widget class="label" id="CouN" row="2" col="0">
+							<record id="object_property">
+								<integer id="get_property" value="CNaC" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>
+						<widget class="number_label" id="CouV" row="2" col="1" alignment="left,centre_y">
+							<record id="object_property">
+								<integer id="get_property" value="CNaC" />
+							</record>
+						</widget>
+
+						<!--no of teams-->
+						<widget class="label" id="teaN" row="3" col="0">
+							<record id="object_property">
+								<integer id="get_property" value="CTeC" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>
+						<widget class="number_label" id="teaV" row="3" col="1" alignment="left,centre_y">
+							<record id="object_property">
+								<integer id="get_property" value="CTeC" />
+							</record>
+						</widget>
+
+						<!--text about australia/asia/south america-->
+						<widget class="formatted_label" row="4" col="1" multiline="true" auto_size="vertical">
+							<record id="object_property">
+								<integer id="get_property" value="duni" />
+							</record>
+
+							<!-- Choose string based on object type -->
+							<list id="format">
+								<record value="2">
+									<translation id="format" translation_id="434672" type="use" value="Israel and Kazakhstan play in a different confederation and are not a part of this continent on footballing terms[COMMENT: FR15891 - text informing the user that despite what the map above shows, Israel and Kazakhstan are definitely not part of Asia in football terms]" />
+								</record>
+								<record value="5">
+									<translation id="format" translation_id="420663" type="use" value="Australia play in a different confederation and are not a part of this continent on footballing terms[COMMENT: FR15891 - text informing the user that despite what the map above shows, Australia is definitely not part of Oceania in football terms]" />
+								</record>
+								<record value="6">
+									<translation id="format" translation_id="434673" type="use" value="French Guiana, Suriname and Guyana play in a different confederation and are not a part of this continent on footballing terms[COMMENT: FR15891 - text informing the user that despite what the map above shows, French Guiana, Suriname and Guyana are definitely not part of South America in football terms]" />
+								</record>
+								<record default_value="true">
+									<string id="format" value="" />
+								</record>
+							</list>
+						</widget>
+					</widget>
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="right,bottom" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" />
+
+						<widget class="link_appearance_button" click_event="elrp">
+							<translation id="text" translation_id="320413" type="use" value="View competition reputations[COMMENT: Link to league rep panel]" />
+						</widget>
+					</container>
+				</container>
+
+				<!--continental championship winners-->
+				<container id="ComS" class="competition_snapshot_panel">
+					<record id="object_property">
+						<integer id="get_property" value="Cmic" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</container>
+
+			</container>
+
+			<!--top nations panel-->
+      <container class="client_object_viewer_xml_panel" file="nation/major nations snapshot" id="MjNp" number_of_rows="18" navigation_container="true">
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</container>
+
+		</container>
+
+		<!--bottom part of the panel-->
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="major_clubs_snapshot_panel" id="MCsp" number_of_rows="18" navigation_container="true">
+				<record id="object_property">
+					<integer id="get_property" value="CRef" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+      
+      <container class="client_object_viewer_xml_panel" file="nation/major players snapshot" id="MPsp" number_of_rows="18" navigation_container="true" >
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</container>
+        
+			<widget class="transfer_snapshot_panel" id="TTsp" number_of_rows="18" navigation_container="true" >
+				<record id="object_property">
+					<integer id="get_property" value="CRef" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

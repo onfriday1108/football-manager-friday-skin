@@ -1,0 +1,212 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal, top" inset="0" apply_to_children="true"/>
+
+	<container class="client_object_viewer_xml_panel" id="inPn" height="150">
+		<layout class="arrange_vertical_attachment" layout="20, 80, 10, -1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+
+		<widget class="club_button" icon_enabled="false" dspf="1">
+			<record id="object_property" get_property="objt" set_property="valu"/>
+		</widget>
+
+		<widget class="table" layout="-1" fixed_size_rows="true" row_height="18" mode="fill_rows" id="layt">
+
+			<!-- custom row graphics -->
+			<list id="row_properties">
+				<record index="0">
+					<flags id="appearance" value="tables/standard/row/alternate/row"/>
+				</record>
+				<record index="1">
+					<flags id="appearance" value="tables/standard/row/alternate/row"/>
+				</record>
+			</list>
+
+			<record id="default_properties" colour="faded text" size="small"/>
+
+			<!-- Nationality -->
+			<widget class="nation_button" id="natp" row="0" col="0" style="semi_bold">
+				<record id="object_property" get_property="Cnat" set_property="valu"/>
+			</widget>
+
+			<!-- Stadium -->
+			<widget class="client_object_label" id="inst" row="1" col="0"  alignment="left, centre_y">
+				<record id="object_property" get_property="Tsre" set_property="valu"/>
+			</widget>
+
+			<!-- Professional Status -->
+			<widget class="professional_status_label" id="ages" row="2" col="0" display_format="2">
+				<record id="object_property" get_property="Cprs" set_property="valu"/>
+			</widget>
+
+			<!-- Founded -->
+			<widget class="label" id="ageb" row="3" col="0">
+				<translation id="text" translation_id="308034" type="use" value="Founded [%date#1-short][COMMENT: club was born on date]"/>
+				<record id="object_property" get_property="Cyfn" set_property="valu"/>
+			</widget>
+
+		</widget>
+
+		<widget class="horizontal_divider" auto_size="none"/>
+
+		<widget class="client_object_label_value_table" id="nped" mode="fill_rows, stripe_rows, printable">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left, centre_y"/>
+				<record index="1" alignment="left, centre_y"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0">
+					<integer id="left" value="8"/>
+				</record>
+				<record index="1">
+					<integer id="right" value="5"/>
+				</record>
+			</list>
+
+			<list id="viewed_property_ids">
+				<integer value="Cmai"/>
+				<integer value="Csta"/>
+				<integer value="Crsc"/>
+				<integer value="Csfs"/>
+			</list>
+		</widget>
+	</container>
+
+	<container class="client_object_viewer_xml_panel" id="finC" hidden="true" height="140">
+		<layout class="arrange_horizontal_attachment" layout="-1, 20, -1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="15, 28, 15, 28, 15, 28, 15, 28" offset="0" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+			<record id="default_properties" auto_size="horizontal"/>
+
+			<widget class="label" font="title" colour="faded text" alignment="left, bottom">
+				<translation id="text" translation_id="346650" type="use" value="Financial State[COMMENT: FR 4538, challenge editor strings]"/>
+			</widget>
+
+			<widget class="financial_status_label" font="value" alignment="left, top" auto_size="horizontal">
+				<record id="object_property" get_property="Csfs" set_property="valu"/>
+			</widget>
+
+			<widget class="label" font="title" colour="faded text">
+				<translation id="text" translation_id="251300" type="use" value="Estimated Value[COMMENT: heading; team_information_panel; clubs overall value]"/>
+			</widget>
+
+			<widget class="club_value_description_text" alignment="left, top" font="value">
+				<record id="object_property" get_property="CovD" set_property="valu"/>
+			</widget>
+
+			<widget class="label" font="title" colour="faded text">
+				<translation id="text" translation_id="255028" type="use" value="Wage Bill[COMMENT: finances list panel; wage bill view option]"/>
+			</widget>
+
+			<widget class="wage_label" alignment="left, top" font="value">
+				<record id="object_property" get_property="Ccww" set_property="valu"/>
+			</widget>
+		</container>
+
+		<widget class="vertical_divider" auto_size="none"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="15, 28, 15, 28" offset="0" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true"/>
+
+			<widget class="label" font="title" colour="faded text" auto_size="horizontal">
+				<translation id="text" translation_id="310131" type="use" value="Average Wage[COMMENT: contract offer screen - comments table]"/>
+			</widget>
+
+			<widget class="wage_label" alignment="left, top" font="value" auto_size="horizontal">
+				<record id="object_property" get_property="Caww" set_property="valu"/>
+			</widget>
+
+			<widget class="label" font="title" colour="faded text" auto_size="horizontal">
+				<translation id="text" translation_id="356896" type="use" value="Maximum Wage Allowed[COMMENT: team properties, finance label]"/>
+			</widget>
+
+			<widget class="wage_label" alignment="left, top" font="value" auto_size="horizontal">
+				<record id="object_property" get_property="Cmwa" set_property="valu"/>
+			</widget>
+		</container>
+	</container>
+
+	<container class="client_object_viewer_xml_panel" id="clbC" hidden="true" height="140">
+		<layout class="arrange_horizontal_attachment" layout="-1, 20, -1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="15, 28, 15, 28, 15, 28" offset="0" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+			<record id="default_properties" auto_size="horizontal"/>
+
+			<widget class="label" font="title" colour="faded text" alignment="left, bottom">
+				<translation id="text" translation_id="242479" type="use" value="League Position"/>
+			</widget>
+
+			<widget class="division_position_button" font="value" alignment="left, top" auto_size="horizontal">
+				<record id="object_property" get_property="Cmai" set_property="valu"/>
+			</widget>
+
+			<widget class="label" font="title" colour="faded text">
+				<translation id="text" translation_id="319579" type="use" value="Continental Competition[COMMENT: label for showing what continental competition, if any, the club is entered in]"/>
+			</widget>
+
+			<widget class="comp_button" auto_size="all" alignment="left, centre_y" font="value">
+				<record id="object_property" get_property="Ccon" set_property="valu"/>
+			</widget>
+
+			<widget class="label" font="title" colour="faded text" alignment="left, bottom">
+				<translation id="text" translation_id="346650" type="use" value="Financial State[COMMENT: FR 4538, challenge editor strings]"/>
+			</widget>
+
+			<widget class="financial_status_label" font="value" alignment="left, top" auto_size="horizontal">
+				<record id="object_property" get_property="Csfs" set_property="valu"/>
+			</widget>
+		</container>
+
+		<widget class="vertical_divider" auto_size="none"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="15, 28, 15, 28, 15, 28" offset="0" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true"/>
+
+			<widget class="label" font="title" colour="faded text" auto_size="horizontal">
+				<translation id="text" translation_id="227963" type="use" value="Reputation"/>
+			</widget>
+
+			<widget class="reputation_label" alignment="left, top" font="value" auto_size="horizontal">
+				<record id="object_property" get_property="Crsc" set_property="valu"/>
+			</widget>
+
+			<widget class="label" font="title" colour="faded text" auto_size="horizontal">
+				<translation id="text" translation_id="229395" type="use" value="Training Facilities"/>
+			</widget>
+
+			<widget class="training_facilities_description_text" format="1" alignment="left, top" font="value" auto_size="horizontal">
+				<record id="object_property" get_property="TfcS" set_property="valu"/>
+			</widget>
+
+			<widget class="label" font="title" colour="faded text" auto_size="horizontal">
+				<translation id="text" translation_id="284309" type="use" value="Average Age[COMMENT: heading; team_information_panel; average age of squad]"/>
+			</widget>
+
+			<widget class="number_label" format="[%fraction#1-3.1]" alignment="left, top" font="value" auto_size="horizontal">
+				<record id="object_property" get_property="Cvag" set_property="valu"/>
+			</widget>
+		</container>
+	</container>
+
+	<container class="staff_numbers_table" id="stfn" hidden="true" height="120"/>
+</panel>

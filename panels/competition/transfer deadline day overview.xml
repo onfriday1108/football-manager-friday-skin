@@ -1,0 +1,38 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<attachment_group class="horizontal_arrange" horizontal_layout="-1,380" horizontal_offset="0" vertial_inset="0" />
+
+	<!-- Appearance container -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+		
+		<container class="main_box" height="55">
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+
+			<!-- selection menu -->
+			<widget class="popup_button" id="filt" height="30" fixed="false" select_event="fich" auto_size="horizontal" primary_use_icon_app_rep_colour="false">
+				<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			</widget>
+		</container>
+
+
+		<widget class="transfer_deadline_popup_panel" id="deta" />
+
+	</container>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+		
+		<widget class="transfer_deadline_panel" id="tdhr" file="competition/transfer deadline time"  height="55"/>
+
+		<widget class="world_top_transfers_panel" id="wttp" is_deadline_day="true" file="competition/world top transfers panel tdd">
+			<flags id="rrep" value="deadline day bar"/>
+			<flags id="colr" value="deadline day time label" />
+			<translation id="title" translation_id="345348" type="use" value="Top Deadline Day Deals[COMMENT: transfer deadline day popup panel, details of window deals worldwide, use top 10 matches as this has had a word removed]" />
+		</widget>
+
+
+	</container>
+
+
+</panel>

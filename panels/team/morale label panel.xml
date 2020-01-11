@@ -1,0 +1,11 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+  
+  <widget class="morale_label" image_alignment="centre" >
+    <flags id="alignment" value="centre" />
+    <record id="object_property">
+      <integer id="get_property" value="Pmor" />
+      <integer id="set_property" value="valu" />
+    </record>
+  </widget>
+</panel>

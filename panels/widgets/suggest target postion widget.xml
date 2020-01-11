@@ -1,0 +1,74 @@
+﻿<panel height="48" width="115">
+	<list id="draw_order">
+		<record entity_layout_id="at01"/>
+		<record entity_layout_id="at04"/>
+		<record entity_layout_id="at03"/>
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at02"/>
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container class="main_contrast_box_no_margin" entity_layout_id="at01" id="Selc" hidden="true">
+		<string id="red_replacement" value="fm purple"/>
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<widget class="subtle_popup_button" entity_layout_id="at04" id="rolb" alignment="centre_x,centre_y">
+			<string id="colour" value="white"/>
+			<string id="secondary_icon_colour" value="white"/>
+			<string id="red_replacement" value="white"/>
+			<string id="select_event" value="RolC"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main"/>
+			<layout class="stick_to_sizes_attachment" height="60.000000"/>
+		</widget>
+		<widget class="button" entity_layout_id="at03" alignment="centre_x,centre_y" appearance="none" id="UPsB" auto_size="vertical">
+			<string id="font" value="bold"/>
+			<string id="size" value="large"/>
+			<string id="colour" value="white"/>
+			<string id="click_event" value="PsSe"/>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="top" set_side="bottom" target="at04"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		</widget>
+	</container>
+	<container class="inner_subtle_box" entity_layout_id="at00" id="UnSe" width="115" height="48">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<widget class="button" entity_layout_id="at02" appearance="none" alignment="centre_x,centre_y" id="SPsB">
+			<string id="font" value="bold"/>
+			<string id="size" value="large"/>
+			<string id="colour" value="white"/>
+			<string id="click_event" value="PsSe"/>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		</widget>
+	</container>
+</panel>

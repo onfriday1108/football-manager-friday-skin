@@ -1,0 +1,40 @@
+﻿<panel id="dlog" width="560">
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment"/>
+
+	<layout class="arrange_vertical_attachment" alignment="top" gap="8"/>
+	<layout class="centre_in_parent_attachment" alignment="vertical"/>
+	<layout class="fit_children_attachment" alignment="vertical,fill" gap="8"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+	<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+
+	<widget class="text" id="text" auto_size="vertical"/>
+
+	<container class="horizontal_arrange_container" id="tico" alignment="right" auto_size="vertical">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10"/>
+
+		<widget class="text" id="prsl" alignment="right, centre_y" auto_size="all">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+		</widget>
+		<widget class="popup_button" id="pllm" alignment="left" height="32" auto_size="horizontal">
+			<translation id="text" translation_id="242438" type="use" value="Choose..."/>
+		</widget>
+
+		<widget class="icon_button" id="splb" icon="icons/16px/speech bubble" multiline="true" height="32" auto_size="horizontal" click_event="splb" alignment="left,centre_y"/>
+	</container>
+
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" layout="-2, -1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<widget class="check_box" id="atcc" hidden="true">
+			<translation id="text" translation_id="301057" type="use" value="Don't show this message again.[COMMENT: The title of a checkbox displayed in a dialog, which allows the user to request that the dialog isn't displayed again.]" />
+		</widget>
+
+		<!-- standard buttons / these get shown & hidden by subclasses -->
+		<container id="btns" file="dialog buttons"/>
+	</container>
+
+</panel>

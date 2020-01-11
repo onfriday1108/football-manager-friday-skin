@@ -1,0 +1,40 @@
+<panel>
+  
+  <!--background colours-->
+  <!--far wide-->
+  <flags id="farc" value="shot analysis far wide"/>
+  <!--wide-->
+  <flags id="widc" value="shot analysis wide"/>
+  <!--goal-->
+  <flags id="goac" value="shot analysis goal"/>
+  <!--post and crossbar-->
+  <flags id="posc" value="white"/>
+  <!--gap colour-->
+  <flags id="gapc" value="box_background"/>
+  <!--gap line width-->
+  <flags id="gapw" value="1.0"/>
+  <!--net colour-->
+  <flags id="netc" value="grey"/>
+  <!--net line width-->
+  <flags id="netw" value="1.0"/>
+  <!--net vertical density-->
+  <flags id="nevd" value="11"/>
+  <!--net vertical density-->
+  <flags id="nehd" value="10"/>
+
+  <!--team report widget colours-->
+  <flags id="twnb" value="shot analysis value box"/>
+  <flags id="twnf" value="white"/>
+  <flags id="twpb" value="white"/>
+  <flags id="twpf" value="black"/>
+  
+  <!--icons for the match panel-->
+  <!--shot icon-->
+  <flags id="shif" value="icons/custom/analysis/shots/shot"/>
+  <!--goal icon-->
+  <flags id="ghif" value="icons/custom/analysis/shots/goal"/>
+  
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+  
+</panel>

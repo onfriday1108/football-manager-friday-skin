@@ -1,0 +1,19 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  <container id="siPN" file="tactics/tactics overview side panel"/>
+  <container id="tCIP" file="tactics/tactics creator info" hidden="true" name="Tactics creator info"/>
+
+	<container id="NsuB" hidden="true">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="50" gap="5" />
+		<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<widget class="text" auto_size="all" size="11" font="title" colour="text">
+			<translation id="text" translation_id="376529" type="use" value="No Tactics selected[COMMENT: team report squad information panel, default text when no tactic has been selected to generate a formation depth report on]"/>
+		</widget>
+
+		<widget class="link_button" id="NsuL" auto_size="all">
+			<translation id="text" translation_id="363642" type="use" value="Go To Tactics[COMMENT: FR 8989 - text for a button to take you to the tactics page]"/>
+		</widget>
+
+	</container>
+</panel>

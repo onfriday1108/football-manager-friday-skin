@@ -1,0 +1,36 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container>
+		<attachment_group class="vertical_arrange" vertical_layout="-1,-5,-5" />
+		<widget id="TxDe" class="text" />
+		
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<widget class="table" id="tabl" layout="-3,-3,-1,-1" mode="fill_rows, stripe_rows,select_rows, dont_allow_empty_selection, show_bullets" auto_size_rows="true" fixed_size_rows="false" select_event="SeFo">
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="298104" type="use" value="Formation" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="378903" type="use" value="Frequency[COMMENT: press conference frequency label]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="247433" type="use" value="Started" />
+					</record>
+					<record alignment="left,centre_y" column_span="2">
+						<translation id="text" translation_id="466539" type="use" value="Chances For/Against[COMMENT: tactics analysis panel, overall difference in chances between the user's team and the opposition team in chances created]" />
+					</record>
+				</list>
+				
+				<list id="column_widget_properties">
+					<record indx="0" alignment="centre" />
+					<record indx="1" alignment="centre" />
+					<record indx="2" alignment="centre" />
+					<record indx="3" alignment="centre" />
+				</list>
+			</widget>
+		</container>
+
+		<widget id="GoBD" class="team_report_goals_breakdown_panel" />
+	</container>
+</panel>

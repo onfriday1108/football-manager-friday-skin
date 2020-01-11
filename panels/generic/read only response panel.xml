@@ -1,0 +1,12 @@
+<panel height="88">
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0,20,0,10" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="10" />
+
+  <container>
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+    <widget class="text" id="tonE" auto_size="horizontal" alignment="left,centre_y"/>
+    <widget class="text" id="coMt" alignment="left,centre_y" colour="text" auto_size="none"/>
+  </container>
+</panel>

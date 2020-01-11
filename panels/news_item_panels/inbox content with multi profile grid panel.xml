@@ -1,0 +1,8 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+	<widget class="inbox_body_text" id="bdtx"/>
+
+	<!-- grid -->
+	<widget class="table" id="tdtb" layout="200, 200, 200" mode="fill_rows" fixed_size_rows="false" auto_size="vertical" column_spacing="8" row_spacing="8"/>
+</panel>

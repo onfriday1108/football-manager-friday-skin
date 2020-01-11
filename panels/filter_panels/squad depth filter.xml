@@ -1,0 +1,58 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="316665" type="use" value="Hide Players[COMMENT: squad depth filter' text to hide players in a subsection box]" />
+		
+		<list id="objL">
+
+			<record  id="ftin">
+				<translation id="hint" translation_id="316667" type="use" value="Filter out players who are future transfers to the club[COMMENT - hint text; team screen; filter panel; squad depth option]" />
+				<translation id="text" translation_id="320505" type="use" value="Future Transfers In[COMMENT: squad depth filter; filter option on team report]" />
+			</record>
+			<record  id="ftot">
+				<translation id="hint" translation_id="316669" type="use" value="Filter out players who are future transfers out of the club[COMMENT - hint text; team screen; filter panel; squad depth option]" />
+				<translation id="text" translation_id="320506" type="use" value="Future Transfers Out[COMMENT: squad depth filter; filter option on team report]" />
+			</record>
+			<record  id="lnin">
+				<translation id="hint" translation_id="316671" type="use" value="Filter out players who are on loan at the club[COMMENT - hint text; team screen; filter panel; sqaud depth option]" />
+				<translation id="text" translation_id="344152" type="use" value="Loans/Co-Owns In[COMMENT: squad depth filter; filter option on team report]" />
+			</record>
+			<record  id="lnot">
+				<translation id="hint" translation_id="316673" type="use" value="Filter out players who are on loan to another club[COMMENT - hint text; team screen; filter panel; squad depth option]" />
+				<translation id="text" translation_id="344153" type="use" value="Loans/Co-Owns Out[COMMENT: squad depth filter; filter option on team report]" />
+			</record>
+			<record  id="tria">
+				<translation id="hint" translation_id="316675" type="use" value="Filter out players who are on on trial at the club[COMMENT - hint text; team screen; filter panel; squad depth option]" />
+				<translation id="text" translation_id="316674" type="use" value="Trials[COMMENT: squad depth filter; filter option on team report]" />
+			</record>
+			<record  id="unav">
+				<translation id="hint" translation_id="316677" type="use" value="Filter out players who are unavailable for selection[COMMENT - hint text; team screen; filter panel; squad depth option]" />
+				<translation id="text" translation_id="316676" type="use" value="Unavailable[COMMENT: squad depth filter; filter option on team report]" />
+			</record>
+			<record  id="cont">
+				<translation id="hint" translation_id="317301" type="use" value="Filter out players who have contracts due to expire[COMMENT - hint text; team screen; filter panel; squad depth option]" />
+				<translation id="text" translation_id="317300" type="use" value="Expiring Contracts[COMMENT: squad depth filter; filter option on team report]" />
+			</record>
+
+		</list>
+		
+	</container>
+
+	<container class="main_box">
+		<translation id="title" translation_id="420625" type="use" value="Minimum Ability[COMMENT: squad depth filter' text to hide low Ability players in a subsection box]" />
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="1" />
+		<record id="default_properties">
+			<boolean id="secondary_use_icon_app_rep_colour" value="false" />
+			<flags id="auto_size" value="vertical" />
+		</record>
+
+		<widget class="radio_button" id="mca3" click_event="mint" secondary_icon_enabled="true" secondary_icon="icons/custom/star rating/scouting/six" secondary_icon_alignment="centre" />
+		<widget class="radio_button" id="mca2" click_event="mind" secondary_icon_enabled="true" secondary_icon="icons/custom/star rating/scouting/four" secondary_icon_alignment="centre" />
+		<widget class="radio_button" id="mca1" click_event="mino" secondary_icon_enabled="true" secondary_icon="icons/custom/star rating/scouting/two" secondary_icon_alignment="centre" />
+		<widget class="radio_button" id="mca0" click_event="mizo" selected="true" >
+			<translation id="text" translation_id="227487" type="use" value="None" />
+		</widget>
+
+	</container>
+</panel>

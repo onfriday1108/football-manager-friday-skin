@@ -1,0 +1,32 @@
+<!-- A specialised version of "modal table menu" used on the positions indicator panel to change the highlighting mode. Use with table popup button  -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box" id="ppcn" appearance="menus/standard/box" width="340">
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="8" gap="4" />
+		<layout class="arrange_vertical_attachment" alignment="top" offset="8" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<!-- Heading-->
+		<widget class="text" auto_size="vertical" font="title" colour="accent">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<translation id="text" translation_id="395311" type="use" value="Select Roles for chosen tactics[COMMENT: tactical instruction text]" />
+		</widget>
+
+		<!-- Table of options -->
+		<widget class="table" id="tabl" layout="35,-1" mode="fill_rows,select_rows,dont_allow_click_unselect_single" auto_size="vertical" row_height="26">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<list id="column_table_properties">
+				<record id="chks" index="0">
+					<record id="widget_info" class="radio_button" auto_size="vertical" select_event="high" />
+				</record>
+				<record id="labl" index="1">
+					<record id="widget_info" class="label" auto_size="vertical" />
+				</record>
+			</list>
+		</widget>
+
+	</container>
+</panel>

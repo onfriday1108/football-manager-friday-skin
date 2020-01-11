@@ -1,0 +1,12 @@
+<panel>
+	<attachment_group class="button_arrangement_right" />
+
+	<widget class="icon_button" id="yes" auto_size="all" icon="icons/16px/tick" controller_button="y_button" appearance="buttons/primary/normal/button">
+		<translation id="text" translation_id="242044" type="use" value="Yes" />
+	</widget>
+
+	<widget class="icon_button" id="no" auto_size="all" controller_button="b_button">
+		<translation id="text" translation_id="231460" type="use" value="No" />
+	</widget>
+
+</panel>

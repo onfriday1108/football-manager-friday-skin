@@ -1,0 +1,25 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="main_box">
+		<translation id="title" translation_id="331855" type="use" value="Drafted Players[COMMENT: MLS draft panel; filter box title for hiding drafted players filter]"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="left,top" apply_to_children="true" inset="0"/>
+			<widget class="check_box" id="hpkp" auto_size="horizontal" auto_size_restricted_to_parent="true">
+				<translation id="text" translation_id="331887" type="use" value="Hide picked players[COMMENT: MLS draft panel; filter label for hiding players already drafted]"/>
+			</widget>
+		</container>
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="left,top" apply_to_children="true" inset="0"/>
+			<widget class="check_box" id="hupp" auto_size="horizontal" auto_size_restricted_to_parent="true">
+				<translation id="text" translation_id="331888" type="use" value="Hide unpicked players[COMMENT: MLS draft panel; filter label for hiding players not yet drafted]"/>
+			</widget>
+		</container>
+	</container>
+
+</panel>

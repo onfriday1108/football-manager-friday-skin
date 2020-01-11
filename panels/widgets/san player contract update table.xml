@@ -1,0 +1,49 @@
+﻿<panel height="550">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<container id="SStu">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+		<container class="inner_subtle_box" entity_layout_id="at00" force_title_borders="true" id="CutC" name="Table container">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<translation id="text" translation_id="492056" type="use" value="Player contract updates[COMMENT: AREA: Inbox; SUB-AREA: Contracts; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE:  title for player contracts update inbox item]" />
+
+			<container class="main_box" height="41">
+
+				<layout class="arrange_horizontal_attachment" layout="-5,-12" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+				<container class="main_box" id="at07" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1,1" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<widget class="text" entity_layout_id="at03" font="title" alignment="centre_y,left" id="at03">
+						<translation id="text" translation_id="492057" type="use" value="Domestic club minimum fee[COMMENT: title to indicate which parts of the table refer to domestic clubs]" />
+					</widget>
+
+					<widget class="horizontal_divider" />
+				</container>
+			</container>
+
+			<container class="client_object_list_table" entity_layout_id="at02" id="PcuT" save_session_state="true" name="Contract update table">
+				<string id="auto_size_rows" value="true" />
+				<integer id="database_table_type" value="1" />
+				<string id="mode" value="fill_rows, stripe_rows, printable, drop_on_rows, select_multiple, select_rows, dont_allow_empty_selection" />
+				<record id="viewed_property_ids">
+					<record id="Pnms" width="140" auto_hide_priority="1" />
+					<record id="Pfcf" width="80" auto_hide_priority="1" />
+					<record id="Pdcf" width="80" auto_hide_priority="1" />
+					<record id="PdcF" width="80" auto_hide_priority="1" />
+					<record id="Pdcp" width="80" auto_hide_priority="1" />
+					<record id="PdCh" width="60" auto_hide_priority="1" />
+					<record id="Pcwg" width="80" auto_hide_priority="10" />
+					<record id="Pcex" width="60" auto_hide_priority="10" />
+				</record>
+
+			</container>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,33 @@
+<panel height="30">
+  <layout class="arrange_horizontal_attachment" alignment="left" offset="6" gap="4" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<widget class="setting_check_box" id="asac" click_event="asac" auto_size="horizontal" height="30" alignment="left,centre_y"/>
+
+	<!--auto save interval-->
+	<widget class="autosave_interval_popup_button" id="asip" sele="asip" auto_size="horizontal" height="30" multiline="false">
+		<translation id="hint" translation_id="329762" type="use" value="Choose how often to automatically save your game.[COMMENT: preference screen; should the game autosave]" />
+	</widget>
+	
+	<!--auto save mode-->
+	<widget class="setting_popup_button" id="astp" sele="astp" auto_size="horizontal" height="30" multiline="false">
+	  <translation id="hint" translation_id="329760" type="use" value="Choose between auto-saving to a single file, a set number of rolling files, or a new file.[COMMENT: preference screen; you can autosave in multiple files]" />
+	  <list id="items">
+	    <record id="10">
+	      <translation id="text" translation_id="255109" type="use" value="Single File[COMMENT: preferences_screen; auto save mode; overwrite a single-file each time]" />
+	    </record>
+	    <record id="20">
+				<translation id="text" translation_id="330255" type="use" value="New File for Every Auto Save[COMMENT: preferences_screen; auto save mode; saves to a new file each time]" />
+	    </record>
+	    <record id="30">
+	      <translation id="text" translation_id="255110" type="use" value="3 File Rolling Auto Save[COMMENT: preferences_screen; auto save mode; save to one of three files in sequence]" />
+	    </record>
+	    <record id="31">
+	      <translation id="text" translation_id="257362" type="use" value="5 File Rolling Auto Save[COMMENT: preferences_screen; auto save mode; save to one of five files in sequence]" />
+	    </record>
+	    <record id="32">
+	      <translation id="text" translation_id="257363" type="use" value="10 File Rolling Auto Save[COMMENT: preferences_screen; auto save mode; save to one of ten files in sequence]" />
+	    </record>
+	  </list>
+	</widget>
+</panel>

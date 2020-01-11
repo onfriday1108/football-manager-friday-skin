@@ -1,0 +1,80 @@
+<panel>
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_contrast_box_no_margin" id="trde" height="45" red_replacement="deadline day bar highlight">
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		<layout class="arrange_horizontal_attachment" layout="45,-1,350" offset="0" gap="5" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+
+			<container class="animated_wipe_fade_container" id="tpic" wipe_data_trigger_id="objt" remove_widget_after_wipe="true" height="40" width="40">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+				<record id="widget_properties" class="object_portrait_picture" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+
+			</container>
+		</container>
+
+
+		<!-- left part with news item ticker text and link -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+			<widget class="link_button_title" id="tdbt" section="Ptdd" font="title" colour="deadline day headline" red_replacement="deadline day headline" auto_size="all">
+				<translation id="text" translation_id="336872" type="use" value="Transfer Deadline Day[COMMENT: transfer deadline day screen, title text]" />
+			</widget>
+
+			<container class="animated_wipe_fade_container" id="tick" wipe_data_trigger_id="text" remove_widget_after_wipe="true">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+
+
+				<record id="widget_properties" class="text" style="semi_bold" alignment="left,centre_y" multiline="false" colour="deadline day headline" auto_size="all"/>
+
+			</container>
+
+		</container>
+
+		<!-- right part with time remaining information -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+			<layout class="arrange_horizontal_attachment" layout="-1,90" offset="0" gap="5" />
+
+			<widget class="text" size="9" alignment="right,centre_y" colour="deadline day time label" multiline="true">
+				<translation id="text" translation_id="336862" type="use" value="Time remaining until transfer window closes[COMMENT: transfer deadline day window closing countdown hint text]" />
+			</widget>
+
+			<container id="hhmm">
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+
+				<container id="hhhh">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="-2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="label" id="tdhr" size="large" auto_size="vertical" alignment="centre_x,bottom" colour="deadline day time" style="semi_bold" />
+					<widget class="label" size="xxsmall" alignment="centre_x,top" auto_size="vertical" colour="deadline day time label">
+						<translation id="text" translation_id="336379" type="use" value="HOURS[COMMENT: transfer deadline day countdown text, will display X HOURS X MINS of time remaining in the window, use upper case]" />
+					</widget>
+				</container>
+
+				<container id="mmmm">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="-2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="label" id="tdmn" size="large" alignment="centre_x,bottom" auto_size="vertical" colour="deadline day time" style="semi_bold" />
+					<widget class="label" size="xxsmall" alignment="centre_x,top" auto_size="vertical" colour="deadline day time label">
+						<translation id="text" translation_id="336477" type="use" value="MINS[COMMENT: transfer deadline day countdown text, will display X HOURS X MINS of time remaining in the window, use upper case]" />
+					</widget>
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

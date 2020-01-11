@@ -1,0 +1,21 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <boolean id="should_force_refresh" value="true" />
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+    <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <widget class="text" auto_size="all" size="10">
+      <translation id="text" translation_id="248397" type="use" value="Players To Exchange" />
+      <translation id="hint" translation_id="420726" type="use" value="Offer some players from your club in an exchange deal[COMMENT: FR 15637 tooltips for fees and clauses; explanation of players to exchange]" />
+    </widget>
+
+    <widget class="table" id="excl" layout="-1, -1, -1" mode="fill_rows, stripe_rows" select_event="sele" auto_size_rows="false" auto_size="vertical" row_spacing="2" row_height="25" />
+  </container>
+
+</panel>

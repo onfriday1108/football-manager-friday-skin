@@ -1,0 +1,10 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+  <container class="preferences_all_panel" >
+    <record id="object_property" get_property="objt" set_property="objt" />
+  </container>
+
+
+</panel>

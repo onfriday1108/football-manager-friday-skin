@@ -1,0 +1,63 @@
+<!-- Main award voting that is shown in competition, continent sections etc -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<boolean id="save_session_state" value="true" />
+
+	<!-- Need to get the data from the server each time -->
+	<boolean id="should_force_refresh" value="true" />
+
+	<flags id="current_view_menu" value="awvw" />
+
+	<container class="inner_box" force_title_borders="true" id="titl">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- buttons area -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left" />
+
+			<widget class="label" id="oalb" font="title" auto_size="horizontal" embed_in_frame="true">
+				<translation id="text" translation_id="317297" type="use" value="Award Voting[COMMENT: award voting overview panel; panel label indicating how the voting went for a particular award]" />
+			</widget>
+			<widget class="view_menu_label" id="malb">
+				<translation id="text" translation_id="317297" type="use" value="Award Voting[COMMENT: award voting overview panel; panel label indicating how the voting went for a particular award]" />
+			</widget>
+			<!-- view button -->
+			<widget class="view_menu_popup" id="awvw" sele="chaw" />
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="8"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+					<!-- Text displayed explaining why user can't vote-->
+					<widget class="label" id="reas" auto_size="vertical" hidden="true" />
+					<!-- announcement date text -->
+					<widget class="label" id="annT" auto_size="vertical" />
+				</container>
+
+				<!-- candidates-->
+				<container class="person_award_voting_candidate_panel" id="pacp">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				</container>
+			</container>
+
+			<!-- Panel to allow human to vote for players -->
+			<container class="person_award_voting_panel" id="pavp" />
+		</container>
+	</container>
+
+	<!-- panel for no awards-->
+	<container class="empty_state" id="nofc" header_widget="BShe">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="376530" type="use" value="No awards are being voted on at this time[COMMENT: FR 7912; Award voting panel; string displayed when there are no awards to vote on]" />
+		</widget>
+	</container>
+</panel>
+<!-- person award voting overview panel -->

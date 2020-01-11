@@ -1,0 +1,58 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" do_not_size="true" />
+	<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="right, extend" offset="0" />
+
+		<widget class="text" auto_size="vertical" font="title" colour="accent" alignment="left, centre_y">
+			<translation id="text" translation_id="248395" type="use" value="Additional Clauses" />
+		</widget>
+
+		<widget class="subtle_popup_button" id="adlw" icon="icons/16px/plus" icon_alignment="left" select_event="addl" auto_size="all" fixed="true" alignment="left,centre_y" height="30">
+			<translation id="text" translation_id="229715" type="use" value="Add" />
+			<list id="items">
+				<record id="lbln">
+					<translation id="name" translation_id="344147" type="use" value="Loan Back Length[COMMENT: loan back duration transfer offer panel]" />
+				</record>
+				<record id="lbcr">
+					<translation id="name" translation_id="492012" type="use" value="Can Be Recalled From Loan Back[COMMENT: AREA: Transfer offer panel; SUB-AREA: transfer clauses sub-panel; FR-BN: 14145; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: short description of clause allowing buying team to recall a player who has been loaned back to the selling club]" />
+				</record>
+				<record id="ns%p">
+					<translation id="name" translation_id="285383" type="use" value="Percentage Of Profit From Next Sale[COMMENT: transfer offer; clause on transfer offer screen]" />
+				</record>
+				<record id="nxs%">
+					<translation id="name" translation_id="243583" type="use" value="Percentage Of Next Sale" />
+				</record>
+				<record id="tbbp">
+					<translation id="name" translation_id="243585" type="use" value="Buy Back Price" />
+				</record>
+				<record id="stwg">
+					<translation id="name" translation_id="360662" type="use" value="Selling Team Wage Contribution[COMMENT: FR 9386; transfer offer; clause on transfer offer screen to set wage contribution percentage]" />
+				</record>
+				<record id="arfr">
+					<translation id="name" translation_id="242435" type="use" value="Arrange Friendly" />
+				</record>
+				<record id="srpf">
+					<translation id="name" translation_id="416365" type="use" value="Sign Replacement Player First[COMMENT: FR 12582; transfer offer panel; clause to sign replacement before selling this player]" />
+				</record>
+				<record id="sepf">
+					<translation id="name" translation_id="416366" type="use" value="Sell Player First[COMMENT: FR 12582; transfer offer panel; clause to sell a player before signing this player]" />
+				</record>
+			</list>
+		</widget>
+	</container>
+
+	<widget class="table" id="clsp" layout="-1" mode="fill_rows, fill_custom_rows" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+		<flags id="row_appearance" value="tables/standard/row/divider/row" />
+		<list id="column_table_properties">
+			<record index="0" left="0" bottom="2" top="2" />
+		</list>
+	</widget>
+
+</panel>

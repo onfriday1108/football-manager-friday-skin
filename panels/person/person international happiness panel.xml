@@ -1,0 +1,6 @@
+<panel>
+  <!-- This version of the happiness panel displays a single item and is intended for use in custom list tables -->
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <widget class="text" id="intH" multiline="false" alignment="left,centre_y"/>
+</panel>

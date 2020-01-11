@@ -1,0 +1,54 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<!--dynamic image here please-->
+	<container id="Dyni" height="117" width="160">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	</container>
+
+	<!-- comp name -->
+	<widget class="client_object_label" id="comp" auto_size="vertical" font="title" alignment="left, centre_y" />
+
+	<widget class="horizontal_divider" id="div1" />
+
+	<container id="CUHL">
+
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="2" />
+
+		<!-- current holders -->
+		<widget class="text" font="title" auto_size="vertical" alignment="left, centre_y">
+			<translation id="text" translation_id="361100" type="use" value="Current Holders[COMMENT: FR 6567; matchday preview news; side panel heading for current competition champions]" />
+		</widget>
+		<widget class="team_button" id="cuhl" spec="text" auto_size="vertical" alignment="left, centre_y" />
+
+	</container>
+
+	<widget class="horizontal_divider" id="div2" />
+
+	<container id="MSNA">
+
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="2" />
+
+		<!-- most successful clubs -->
+		<widget class="text" font="title" auto_size="vertical" alignment="left, centre_y">
+			<translation id="text" translation_id="491933" type="use" value="Most Times Won[COMMENT: AREA: Records; SUB-AREA: Label for team that won the comp the most times; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short; REF-ID: 249024; NOTE: making the referenced ID a lot more grammatically correct]" />
+		</widget>
+
+		<container height="40">
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="40,-1" horizontal_offset="0" vertical_offset="0" />
+
+			<widget class="object_portrait_picture" id="MSba" height="40" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+
+			<container height="30">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+				<widget class="client_object_label" id="MSna" spec="text" auto_size="vertical" alignment="left, bottom" />
+
+				<widget class="text" id="MSnu" spec="text" auto_size="vertical" alignment="left, top" colour="faded text" />
+			</container>
+		</container>
+	</container>
+
+</panel>

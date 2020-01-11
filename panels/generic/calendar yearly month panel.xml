@@ -1,0 +1,44 @@
+<panel height="200">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8" />
+
+	<string id="skin_style" value="calendar gap"/>
+
+	<widget class="table" id="monT" fixed_size_rows="false" auto_size_rows="true" layout="-1,-1,-1,-1,-1,-1,-1" row_spacing="-1" column_spacing="-1">
+		<list id="headings">
+			<record alignment="centre">
+				<translation id="text" translation_id="249893" type="use" value="Mon[short for Monday]" />
+			</record>
+			<record alignment="centre">
+				<translation id="text" translation_id="249894" type="use" value="Tue[short for Tuesday]" />
+			</record>
+			<record alignment="centre">
+				<translation id="text" translation_id="249895" type="use" value="Wed[short for Wednesday]" />
+			</record>
+			<record alignment="centre">
+				<translation id="text" translation_id="249896" type="use" value="Thu[short for Thursday]" />
+			</record>
+			<record alignment="centre">
+				<translation id="text" translation_id="249897" type="use" value="Fri[short for Friday]" />
+			</record>
+			<record alignment="centre">
+				<translation id="text" translation_id="249898" type="use" value="Sat[short for Saturday]" />
+			</record>
+			<record alignment="centre" >
+				<translation id="text" translation_id="249899" type="use" value="Sun[short for Sunday]" />
+			</record>
+		</list>
+
+		<list id="column_table_properties">
+			<record indx="0" sort_disabled="true" />
+			<record indx="1" sort_disabled="true" />
+			<record indx="2" sort_disabled="true" />
+			<record indx="3" sort_disabled="true" />
+			<record indx="4" sort_disabled="true" />
+			<record indx="5" sort_disabled="true" />
+			<record indx="6" sort_disabled="true" />
+		</list>
+
+		<record id="default_properties" alignment="centre" />
+
+	</widget>
+</panel>

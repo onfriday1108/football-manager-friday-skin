@@ -1,0 +1,388 @@
+<panel class="client_object_viewer_xml_panel">
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="tabbed_container" >
+		<container id="cnt0">
+			<translation id="title" translation_id="248359" type="use" value="General" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_label_value_table" id="edtb" edit_mode="true">
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" colour="selection" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Crep" />
+					<integer value="Catd" />
+					<integer value="Cmna" />
+					<integer value="Cmxa" />
+					<integer value="C2rp" />
+					<integer value="tbcl" />
+					<integer value="ttcl" />
+				</list>
+
+			</widget>
+
+		</container>
+
+		<container id="cnt1">
+			<translation id="title" translation_id="229821" type="use" value="Finances" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_label_value_table" id="fitb" edit_mode="true">
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" colour="selection" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Cprs" />
+					<integer value="Ccba" />
+					<integer value="Ctfc" />
+					<integer value="Cwwb" />
+					<integer value="Chsd" />
+				</list>
+
+			</widget>
+
+		</container>
+
+		<container id="cnt2">
+
+			<translation id="title" translation_id="316691" type="use" value="Facilities" />
+			<layout class="arrange_vertical_attachment" alignment="top" do_not_size="true" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<widget class="client_object_label_value_table" id="sttb" edit_mode="true" auto_size="vertical">
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+					<flags id="auto_size" value="vertical" />
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="Tsre" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Snam" />
+					<integer value="Scpy" />
+					<integer value="Sscy" />
+					<integer value="Scas" />
+					<integer value="Sucy" />
+					<integer value="Secy" />
+					<integer value="Sdcy" />
+					<integer value="SsfT" />
+					<integer value="Scov" />
+					<integer value="Sush" />
+				</list>
+
+			</widget>
+
+			<widget class="client_object_label_value_table" id="fatb" edit_mode="true" auto_size="vertical">
+
+				<record id="table_properties">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+					<flags id="auto_size" value="vertical" />
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Ctlv" />
+					<integer value="Cyfb" />
+					<integer value="Cytv" />
+					<integer value="Crcb" />
+					<integer value="Ccfa" />
+				</list>
+
+			</widget>
+
+
+		</container>
+
+		<container id="cnt3">
+			<translation id="title" translation_id="293548" type="use" value="Tactical Attributes" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_label_value_table" id="tatb" edit_mode="true">
+
+				<record id="table_properties" auto_size="none">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="-3,-4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="8" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Catt" />
+					<integer value="Cdep" />
+					<integer value="Cdir" />
+					<integer value="Cflm" />
+					<integer value="Cflx" />
+					<integer value="Cfrl" />
+					<integer value="Cmar" />
+					<integer value="Coff" />
+					<integer value="Cpss" />
+					<integer value="Cstb" />
+					<integer value="Ctpo" />
+					<integer value="Cupm" />
+					<integer value="Cwid" />
+				</list>
+
+			</widget>
+
+		</container>
+
+		<container id="cnt4">
+			<translation id="title" translation_id="293059" type="use" value="Rival Clubs" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_list_property_panel" id="ricl" edit_mode="true">
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="leve" />
+
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="club" />
+								<!-- club -->
+								<flags id="leve" />
+								<!-- rel level -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/relationship properties" />
+
+				<integer id="viewed_property_ids" value="Crvc" />
+
+			</widget>
+
+		</container>
+
+		<container id="cnt5">
+			<translation id="title" translation_id="293060" type="use" value="Favourite People" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_list_property_panel" id="prfp" edit_mode="true">
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="leve" />
+
+					<list id="views">
+
+						<record id="over">
+							<record id="view">
+								<flags id="pers" />
+								<!-- person -->
+								<flags id="leve" />
+								<!-- rel level -->
+								<flags id="perm" />
+								<!-- Permenant -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/relationship properties" />
+
+				<integer id="viewed_property_ids" value="Cfvp" />
+
+			</widget>
+
+		</container>
+
+		<container id="cnt6">
+			<translation id="title" translation_id="293061" type="use" value="Disliked People" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_list_property_panel" id="prdp" edit_mode="true">
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="leve" />
+
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="pers" />
+								<!-- person -->
+								<flags id="leve" />
+								<!-- rel level -->
+								<flags id="perm" />
+								<!-- Permenant -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/relationship properties" />
+
+				<integer id="viewed_property_ids" value="Cdsp" />
+
+			</widget>
+
+		</container>
+
+		<container id="cnt7">
+			<translation id="title" translation_id="293062" type="use" value="Current Affiliations" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_list_property_panel" id="afcl" edit_mode="true">
+
+				<record id="list_table_properties">
+
+					<integer id="default_sort_column" value="affl" />
+
+					<list id="views">
+						<record id="over">
+							<record id="view">
+								<flags id="affl" />
+								<!-- affiliated club -->
+								<flags id="ismc" />
+								<!-- is this the main club -->
+								<flags id="endt" />
+								<!-- end date -->
+							</record>
+						</record>
+
+					</list>
+				</record>
+
+				<record id="Cols" file="properties/affiliation properties" />
+
+				<integer id="viewed_property_ids" value="Cafl" />
+
+			</widget>
+
+		</container>
+
+	</container>
+
+
+</panel>

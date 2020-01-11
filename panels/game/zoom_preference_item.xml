@@ -1,0 +1,25 @@
+﻿<panel height="50" width="50">
+
+	<list id="properties_to_forward">
+		<record get_property="icon" set_property="file" target="zPic"/>
+		<record get_property="hint" set_property="hint" target="rBut"/>
+		<record get_property="settings_value" set_property="settings_value" target="rBut" />
+		<record get_property="selected" set_property="selected" target="rBut" />
+	</list>
+
+
+	<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+	
+	<widget class="picture" id="zPic" auto_size="all" />
+	<widget class="radio_button" id="rBut" auto_size="none" show_button_appearance="false" primary_use_icon_app_rep_colour="true" icon="switches/zoom/button" group="0" group_parent_level="2">
+
+		<record id="click_event">
+			<flags id="event_id" value="event_user_changed_setting" />
+			<symbol id="settings_name" value="ui_zoom_level" />
+		</record>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+
+</panel>
+
+

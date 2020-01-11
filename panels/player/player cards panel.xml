@@ -1,0 +1,38 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,2" />
+	<container class="scrolling_box">
+		<container id="pliC">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_inset="0" />
+
+			<!--Gks-->
+			<container class="inner_box" id="gksC" hidden="true">
+				<translation id="title" translation_id="231451" type="use" value="Goalkeepers" />
+				<layout class="fit_children_attachment" alignment="vertical,extend" gap="0" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="left" wrap="true" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+			</container>
+			<!--Defenders-->
+			<container class="inner_box" id="defC" hidden="true">
+				<translation id="title" translation_id="231452" type="use" value="Defenders" />
+				<layout class="fit_children_attachment" alignment="vertical,extend" gap="0" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="left" wrap="true" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+			</container>
+			<!--Midfielders-->
+			<container class="inner_box" id="midC" hidden="true">
+				<translation id="title" translation_id="231453" type="use" value="Midfielders" />
+				<layout class="fit_children_attachment" alignment="vertical,extend" gap="0" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="left" wrap="true" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+			</container>
+			<!--Strikers-->
+			<container class="inner_box" id="strC" hidden="true">
+				<translation id="title" translation_id="320462" type="use" value="Strikers[COMMENT: match team talk panel; position divider if user wants to deliver a team talk to a positional group]" />
+				<layout class="fit_children_attachment" alignment="vertical,extend" gap="0" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="left" wrap="true" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+			</container>
+		</container>
+
+	</container>
+</panel>

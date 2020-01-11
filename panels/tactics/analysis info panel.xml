@@ -1,0 +1,19 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<widget class="text" alignment="centre_y,left" id="InfD" auto_size="vertical">
+		<string id="font" value="title"/>
+		<string id="value" value="text"/>
+	</widget>
+
+	<container id="PDat" height="20">
+		<attachment_group class="horizontal_arrange" />
+		<widget class="position_picked_button" id="PosI" auto_size="horizontal" />
+		<widget class="text" id="PNam" alignment="centre_y,left" style="bold" auto_size="horizontal" colour="white"/>
+	</container>
+
+	<widget class="text" id="PDes" auto_size="vertical" >
+		<string id="colour" value="faded white"/>
+		<string id="multiline" value="true"/>
+	</widget>
+</panel>

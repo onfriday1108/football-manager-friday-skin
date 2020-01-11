@@ -1,0 +1,19 @@
+<panel height="160">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="main_box" appearance="boxes/popup/standard/titled/paper" id="main">
+		<record id="object_property" get_property="titl" set_property="titl" />
+
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<widget class="picture" file="icons/16px/line" auto_size="all" embed_in_frame="true" scale_picture="false" red_replacement="grey"/>
+			<widget class="label" auto_size="horizontal" height="31" embed_in_frame="true" colour="grey" size="small">
+				<translation id="text" translation_id="297338" type="use" value="Average"/>
+			</widget>
+		</container>
+	</container>
+
+</panel>

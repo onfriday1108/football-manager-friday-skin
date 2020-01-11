@@ -1,0 +1,173 @@
+<!--
+this file contains a list of all of the sections in the game
+-->
+<properties>
+  <string id="text" value="Competition" />
+  <list id="items">
+    <record id="cinf">
+      <translation id="text" translation_id="321151" type="use" value="Overview[COMMENT: top level menu title for competition information screens]" />
+      <boolean id="collapsed" value="true" />
+      <list id="items">
+        <!--profile-->
+        <record id="ccop"/>
+        <!--season preview-->
+        <record id="Cprv"/>
+        <!--stages-->
+        <record id="cssp"/>
+        <!--past positions-->
+        <record id="cslp"/>
+        <!--accumulative points-->
+        <record id="csap"/>
+        <!--average points-->
+        <record id="csav"/>
+        <!--seedings-->
+        <record id="cssd"/>
+        <!--qualifiers-->
+        <record id="csqu"/>
+        <!--rules-->
+        <record id="csrl"/>
+        <!--structure-->
+        <record id="Csst"/>
+        <!--stadiums-->
+        <record id="CStd"/>
+				<!--sponsorship-->
+				<record id="CSpo"/>
+        <record id="----"/>
+        <!--actions-->
+        <!--scout report-->
+        <record id="CSco" item_type="ACTT"/>
+        <!--add comp-->
+        <record id="CAdd" item_type="ACTT"/>
+        <record id="SUBS" item_type="ACTT"/>
+        <record id="USUB" item_type="ACTT"/>
+      </list>
+    </record>
+    
+    <record id="cfxr">
+      <translation id="text" translation_id="296528" type="use" value="Matches[COMMENT: section title; contains fixtures and results on competition screen]" />
+      <boolean id="collapsed" value="true" />
+      <list id="items">
+        <!--fixtures and results-->
+        <record id="csfp"/>
+        <!--schedule-->
+        <record id="cssc"/>
+		<!--round up-->
+		<record id="csfR"/>
+        <!--latest scores-->
+        <record id="csls"/>
+        <!--latest event updates-->
+        <record id="csgu"/>
+        <!--live league table-->
+        <record id="csll"/>
+      </list>
+    </record>
+    
+    <record id="cnws">
+      <translation id="text" translation_id="230330" type="use" value="News" />
+      <boolean id="collapsed" value="true" />
+      <list id="items">
+        <!--headlines-->
+        <record id="csnw"/>
+        <!--transfer rumours-->
+        <record id="ctru"/>
+      </list>
+    </record>
+    
+    <record id="csts">
+      <translation id="text" translation_id="247412" type="use" value="Stats" />
+      <boolean id="collapsed" value="true" />
+      <list id="items">
+        <!--team stats overview-->
+        <record id="cste"/>
+        <!--team stats detailed-->
+        <record id="cstD"/>
+        <!--player stats overview-->
+        <record id="cspl"/>
+        <!--player stats detailed-->
+        <record id="cspD"/>
+        <!--referee-->
+        <record id="csrt"/>
+        <!--injury table-->
+        <record id="csin"/>
+        <!--injury list-->
+        <record id="csiL"/>
+        <!--suspensions-->
+        <record id="csus"/>
+      </list>
+    </record>
+    
+    <record id="ctrn">
+      <translation id="text" translation_id="227743" type="use" value="Transfers" />
+      <boolean id="collapsed" value="true" />
+      <list id="items">
+        <!--transfers-->
+        <record id="cstr"/>
+        <!--draft-->
+        <record id="csdf"/>
+        <!--allocation ranking-->
+        <record id="cMLR"/>
+        <!--waiver list-->
+        <record id="cswl"/>
+        <!--manager movements-->
+        <record id="cmmv"/>
+        <!--MLS trade values-->
+        <record id="Ctvp"/>
+        <!--Transfer window-->
+        <record id="Ctwp"/>
+      </list>
+    </record>
+
+    <record id="cawd">
+      <translation id="text" translation_id="292587" type="use" value="Awards[COMMENT: title for top level Awards menu]" />
+      <boolean id="collapsed" value="true" />
+      <list id="items">
+        <!--award winners-->
+        <record id="cawa"/>
+        <!--award voting-->
+        <record id="caav"/>
+      </list>
+    </record>
+    
+    <record id="csrc">
+      <translation id="text" translation_id="229719" type="use" value="History" />
+      <boolean id="collapsed" value="true" />
+      <list id="items">
+        <!--records-->
+        <record id="Csmp"/>
+        <!--past winners-->
+        <record id="cshi"/>
+        <!--drafts-->
+        <record id="cdfh"/>
+        <!--notes-->
+        <record id="Cnot"/>
+        <record id="----"/>
+        <!--actions-->
+        <record id="CRNO" item_type="ACTT"/>
+      </list>
+    </record>
+
+    <record id="csdb">
+      <translation id="text" translation_id="247109" type="use" value="Debug" />
+      <boolean id="collapsed" value="true" />
+      <list id="items">
+        <!--debug general-->
+        <record id="cdgG"/>
+        <!--debug rankings-->
+        <record id="csrk"/>
+        <!--debug transfer analysis -->
+        <record id="cdta"/>
+        <!--debug injuries-->
+        <record id="cdbi"/>
+        <!--debug cont teams-->
+        <record id="cctp"/>
+        <!--debug finances-->
+        <record id="cdfn"/>
+        <record id="----"/>
+        <!--actions-->
+        <!--debug-->
+        <record id="CDbg" item_type="ACTT"/>
+      </list>
+    </record>
+  </list>
+
+</properties>

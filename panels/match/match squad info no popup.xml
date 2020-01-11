@@ -1,0 +1,27 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="inner_subtle_box" id="tstb" save_default_state="true" save_session_state="true" allow_single_bar_click="true" disable_animations="true">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container class="table" id="tsit" mode="fill_rows, stripe_rows" layout="-1, 38, 25, 20, 100">
+			<flags id="auto_size" value="vertical" />
+
+			<list id="column_widget_properties">
+				<record index="0" id="rule" alignment="left,centre_y" spec="text" multiline="false" colour="faded text" size="small"/>
+				<record index="1" id="icon" auto_size="all" />
+				<record index="2" id="valu" alignment="right,centre_y" spec="text" colour="selection" multiline="false" style="semi_bold"/>
+				<record index="3" id="warn"/>
+				<record index="4" id="aval"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="rule" sort_disabled="true"/>
+				<record index="1" id="icon"/>
+				<record index="2" id="valu"/>
+				<record index="3" id="warn"/>
+				<record index="4" id="aval"/>
+			</list>
+		</container>
+	</container>
+</panel>

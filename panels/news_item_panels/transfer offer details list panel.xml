@@ -1,0 +1,109 @@
+<panel>
+  <layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal, top" inset="0" apply_to_children="true"/>
+
+  <container class="inner_subtle_box_no_margin" id="inbx">
+    <attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="6"/>
+
+    <!-- line with fee, club, offer type and action -->
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+      <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+      <layout class="arrange_horizontal_attachment" layout="-2, -3, 90" gap="6"/>
+
+      <!-- offering club -->
+      <widget class="transfer_centre_club_info_widget" id="tmiw">
+        <layout class="stick_to_sides_attachment" alignment="top" inset="6"/>
+      </widget>
+
+      <container class="inner_subtle_box_no_margin" >
+        <attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="6"/>
+
+        <container>
+          <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="fill" />
+
+          <!-- offer status -->
+          <container file="widgets/transfer multiple offers status widget" />
+
+          <!-- offer value -->
+          <container file="widgets/transfer multiple offers value widget" />
+
+        </container>
+
+      </container>
+
+      <container height="40">
+        <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="6"/>
+        <layout class="arrange_horizontal_attachment" alignment="fill" offset="0">
+          <global id="gap" name="ui.split_button_row_gap" />
+        </layout>
+
+        <!-- accept -->
+        <widget class="icon_button" id="accw" appearance="buttons/standard/split/left/button" icon="icons/16px/tick" height="30" icon_alignment="centre" icon_colour="positive"/>
+
+        <!-- stall -->
+        <widget class="icon_button" id="stlw" appearance="buttons/standard/split/middle/button" icon="icons/16px/time" height="30" icon_alignment="centre"/>
+
+        <!-- reject -->
+        <widget class="icon_button" id="canw" appearance="buttons/standard/split/right/button" icon="icons/16px/cross" height="30" icon_alignment="centre" icon_colour="negative"/>
+      </container>
+    </container>
+
+    <container id="ClBx">
+      <attachment_group class="vertical_arrange_autosize" vertical_gap="2" vertical_offset="0"/>
+
+      <!--transfer additional clauses-->
+      <widget class="text" id="TCti" auto_size="vertical" alignment="left, centre_y" font="label" colour="text" hidden="true">
+        <translation id="text" translation_id="248395" type="use" value="Additional Clauses"/>
+      </widget>
+      <widget class="text" id="TCli" auto_size="all" alignment="left, centre_y" hidden="true" colour="faded text"/>
+
+      <container>
+        <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_gap="8"/>
+
+        <container>
+          <attachment_group class="vertical_arrange_autosize_all" vertical_gap="2" vertical_offset="0"/>
+
+          <container>
+            <attachment_group class="vertical_arrange_autosize_all" vertical_gap="2" vertical_offset="0"/>
+
+          <!-- loan duration -->
+          <widget class="text" id="LDti" auto_size="vertical" width="300" font="label" colour="text" hidden="true">
+            <translation id="text" translation_id="230113" type="use" value="Duration"/>
+          </widget>
+          <widget class="text" id="LDli" auto_size="vertical" width="300" hidden="true" colour="faded text"/>
+          </container>
+
+          <container>
+            <attachment_group class="vertical_arrange_autosize_all" vertical_gap="2" vertical_offset="0"/>
+
+            <!-- loan options -->
+            <widget class="text" id="LOti" auto_size="vertical" width="300" alignment="left, centre_y" font="label" colour="text" hidden="true">
+              <translation id="text" translation_id="248394" type="use" value="Loan Options"/>
+            </widget>
+            <widget class="text" id="LOli" auto_size="vertical" width="300" alignment="left, centre_y" hidden="true" colour="faded text"/>
+          </container>
+
+        </container>
+
+        <container>
+          <attachment_group class="vertical_arrange_autosize" vertical_gap="2" vertical_offset="0"/>
+
+             <!-- loan clauses -->
+            <widget class="text" id="LCti" auto_size="vertical"  alignment="left, centre_y" font="label" colour="text" hidden="true">
+              <translation id="text" translation_id="247578" type="use" value="Loan Clauses"/>
+            </widget>
+            <widget class="text" id="LCli" auto_size="vertical"  alignment="left, centre_y" hidden="true" colour="faded text"/>
+        </container>
+
+       </container>
+
+    </container>
+
+    <!-- message for when they've accepted or rejected on your behalf -->
+    <widget class="text" id="chmm" size="10" auto_size="vertical" alignment="centre" hidden="true">
+      <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+    </widget>
+  </container>
+
+</panel>

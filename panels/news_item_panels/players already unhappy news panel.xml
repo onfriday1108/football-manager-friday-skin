@@ -1,0 +1,44 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="10" vertical_gap="0" horizontal_alignment="horizontal" />
+
+	<boolean id="check_for_multiple_requests" value="true" />
+
+	<!-- some descriptive text for the table below -->
+	<widget class="text" id="titl" auto_size="vertical" spec="text" size="large" colour="accent" font="title" />
+
+	<widget class="table" id="list" layout="-1, 100, 78, 78" mode="fill_rows, stripe_rows, printable, keyboard, dont_ask_for_focus" fixed_size_rows="false" auto_size="vertical" row_spacing="2">
+		<list id="headings">
+			<record index="0" alignment="left, centre_y">
+				<translation id="text" translation_id="227765" type="use" value="Name[comment - Person Name]" />
+				<translation id="hint" translation_id="247479" type="use" value="Person Name" />
+			</record>
+     <record index="1" alignment="left, centre_y">
+       <translation id="text" translation_id="491961" type="use" value="Agreed Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+       <translation id="hint" translation_id="491979" type="use" value="The expected playing time for this player within the current squad.[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+			</record>
+			<record index="2" alignment="centre">
+				<translation id="text" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]" />
+				<translation id="hint" translation_id="257318" type="use" value="Assistant manager's opinion of this player's current ability[COMMENT - person list view column heading hint]" />
+			</record>
+			<record index="3" alignment="centre">
+				<translation id="text" translation_id="314427" type="use" value="Potential[COMMENT: player popup info panel - scout potential ability rating]" />
+				<translation id="hint" translation_id="257319" type="use" value="Assistant manager's opinion of this player's potential ability[COMMENT - person list view column heading hint]" />
+			</record>
+		</list>
+
+		<!-- use the col id for the property to view -->
+		<list id="column_table_properties">
+			<record index="0" id="Pnms" auto_hide_priority="10" minimum_width="129" />
+			<record index="1" id="Pcpt" auto_hide_priority="1600" />
+			<record index="2" id="Pcac" auto_hide_priority="300" minimum_width="78" />
+			<record index="3" id="Pppc" auto_hide_priority="301" minimum_width="78" />
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="0" alignment="left, centre_y" />
+			<record index="1" alignment="left, centre_y" />
+			<record index="2" alignment="centre" />
+			<record index="3" alignment="centre" />
+		</list>
+	</widget>
+</panel>

@@ -1,0 +1,22 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_contrast_box" id="main">
+		<layout class="arrange_vertical_attachment" alignment="top,extend"  />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+		<widget class="label" auto_size="vertical" font="title" id="titl" colour="deadline day text" />
+
+		<container class="property_list_viewer_xml_panel" id="hilt" height="164" file="widgets/world top transfer highlight widget tdd" >
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		</container>
+
+		<container class="inner_subtle_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="table" id="tabl" mode="fill_rows, stripe_rows" sort_disabled="true" auto_size_rows="false" row_height="50" row_spacing="2" layout="-1" />
+		</container>
+	</container>
+
+</panel>

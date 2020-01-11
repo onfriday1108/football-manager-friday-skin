@@ -1,0 +1,151 @@
+﻿<panel>
+
+	<flags id="intro_appearance" value="boxes/custom/reactions/intro/paper" />
+	<flags id="manager_comment_appearance" value="boxes/custom/reactions/statement/paper" />
+	<flags id="assistant_manager_suggestion_appearance" value="boxes/custom/reactions/statement/paper" />
+	<flags id="player_reaction_good_appearance" value="boxes/custom/reactions/positive/paper" />
+	<flags id="player_reaction_neutral_appearance" value="boxes/custom/reactions/neutral/paper" />
+	<flags id="player_reaction_bad_appearance" value="boxes/custom/reactions/negative/paper" />
+	<flags id="outro_appearance" value="boxes/custom/reactions/intro/paper" />
+
+	<flags id="individual_talk_done_appearance" value="tables/custom/team talk/addressing/row" />
+	<flags id="individual_talk_not_done_appearance" value="" />
+	<flags id="just_talked_to_appearance" value="" />
+
+	<layout class="arrange_vertical_attachment" alignmnet="middle" offset="0" gap="4" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="60" apply_to_children="true" />
+
+	<!-- Conversation summary -->
+	<container height="250" class="main_transparent_box">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container class="scrolling_box" id="Conv">
+			<container id="conv">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- Player responses created here -->
+			</container>
+		</container>
+
+		<!-- Debug Conversation summary -->
+		<container class="scrolling_box" id="Dcon" hidden="true">
+			<container id="dcon">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- Debug player reactions created here -->
+			</container>
+		</container>
+
+		<container height="30" id="btna">
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--speak to selected players button-->
+			<widget class="widget_popup_button" widget_type="match_team_talk_popup_panel" auto_size="horizontal" id="sePu" popup_alignment="centre" appearance="buttons/primary/normal/button" icon="icons/16px/speech bubble">
+				<translation id="text" translation_id="376598" type="use" value="Team Talk[COMMENT: FR9089 - team talk]" />
+				<record id="primary_icon_properties" red_replacement="white" />
+				<record id="secondary_icon_properties" red_replacement="white" />
+				<record id="widget_properties" type="3" width="1024" height="264"/>
+			</widget>
+
+      <!--hand to assistant-->
+      <widget class="button" id="hdOa" auto_size="horizontal" click_event="hOtA">
+				<translation id="text" translation_id="447559" type="use" value="Hand over to assistant[COMMENT: team talk button text]" />
+			</widget>
+
+      <!-- team talk staff responsibility widget-->
+      <widget class="popup_button" id="ttRs" minimum_width="24" auto_size="horizontal" click_event="TTRS" icon="icons/16px/staff respo">
+      </widget>
+
+			<widget class="button" id="cofT" auto_size="horizontal" click_event="aptc" disabled="true">
+				<translation id="text" translation_id="441084" type="use" value="Confirm talk[COMMENT: team talk confirmation button text]" />
+			</widget>
+
+			<!--debug player reactions toggle button-->
+			<widget class="button" id="debT" auto_size="horizontal" click_event="debT" hidden ="true">
+				<string id="text" value="Talk Reaction Debug Info[COMMENT: team talk reaction debug info toggle]" />
+			</widget>
+
+		</container>
+	</container>
+
+	<!-- Player substitute subsection bubble -->
+	<container class="main_transparent_box">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="5" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="5" gap="0" />
+		<layout class="arrange_horizontal_attachment" layout="-3,-1" offset="0" />
+
+		<!-- Coming On Green Colour Container-->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="5" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container class="main_box" height="40" red_replacement="positive">
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="picture" file="icons/16px/sub on" width="20">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+				</widget>
+
+				<widget class="text" auto_size="vertical" alignment="left,centre_y" font="title" size="large" colour="text">
+					<translation id="text" translation_id="441085" type="use" value="Coming On[COMMENT: match screen sub-panel text indicating a substitute who is coming on]" />
+				</widget>
+			</container>
+
+			<container class="tactic_player_list_table" id="subO" mode="fill_rows,select_rows,show_bullets,select_multiple" select_event="sLsT" auto_size="vertical">
+				<flags id="default_view" value="prem" />
+				<list id="views">
+					<record id="prem">
+						<translation id="text" translation_id="376598" type="use" value="Team Talk[COMMENT: FR9089 - team talk]" />
+						<record id="view">
+							<!-- Name -->
+							<record id="Pnam" />
+							<!-- Condition -->
+							<record id="PRCF" />
+							<!-- Morale -->
+							<record id="Pmor" />
+							<!-- Reaction label -->
+							<record id="PMrF" colour="text"/>
+							<!-- Reaction -->
+							<record id="PMre" />
+						</record>
+					</record>
+				</list>
+			</container>
+		</container>
+
+		<!-- Coming Off Red Colour Container-->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="5" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container class="main_box" height="40" red_replacement="negative">
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="picture" file="icons/16px/sub off" width="20" alignment="centre">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+				</widget>
+
+				<widget class="text" auto_size="vertical" alignment="left,centre_y" font="title" size="large" colour="text">
+					<translation id="text" translation_id="441086" type="use" value="Coming Off[COMMENT: match screen sub-panel text indicating a substitute who is coming off]" />
+				</widget>
+			</container>
+
+			<container class="tactic_player_list_table" id="subF" mode="fill_rows" auto_size="vertical">
+				<flags id="default_view" value="prem" />
+				<list id="views">
+					<record id="prem">
+						<translation id="text" translation_id="376598" type="use" value="Team Talk[COMMENT: FR9089 - team talk]" />
+						<record id="view">
+							<!-- Name -->
+							<record id="Pnam" />
+						</record>
+					</record>
+				</list>
+			</container>
+		</container>
+
+	</container>
+
+</panel>

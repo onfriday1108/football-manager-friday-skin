@@ -1,0 +1,15 @@
+<panel>
+
+  <layout class="fit_children_attachment" alignment="horizontal" offset="5" gap="0" />
+  <layout class="arrange_vertical_attachment" layout="15,-1" gap="0"/>
+  <layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+
+  <widget class="text" colour="match actions foreground" multiline="false" auto_size="horizontal" alignment="bottom">
+    <translation id="text" translation_id="332858" type="use" value="Replay Speed[COMMENT:replay speed control on match screen]" />
+  </widget>
+
+  <widget class="delayed_slider_horizontal" id="rssl" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" final_changed_event="rspd">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" />
+  </widget>
+
+</panel>

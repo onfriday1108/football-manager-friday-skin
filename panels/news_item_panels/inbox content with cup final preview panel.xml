@@ -1,0 +1,127 @@
+<panel>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" />
+			<layout class="arrange_horizontal_attachment" layout="-1, 250" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" id="comp" style="bold" auto_size="vertical" font="fonts/inbox_body" size="11" alignment="centre" />
+
+					<widget class="text" id="tvso" font="fonts/inbox_body" size="10" alignment="centre" auto_size="vertical"/>
+
+					<!-- logos -->
+					<container height="130">
+						<layout class="arrange_horizontal_attachment" layout="-1, -1, 35, -1, -1" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+						<widget class="spacer" />
+
+						<widget class="object_portrait_picture" id="hmpc" scale_picture="true" image_alignment="centre" height="130" />
+
+						<widget class="text" auto_size="vertical" alignment="centre" colour="text" style="semi_bold" size="18">
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+							<translation id="text" translation_id="242324" type="use" value="v[versus]" />
+						</widget>
+
+						<widget class="object_portrait_picture" id="awpc" scale_picture="true" image_alignment="centre" height="130" />
+
+						<widget class="spacer" />
+
+					</container>
+
+				</container>
+
+				<!-- main body text -->
+				<widget class="inbox_body_text" id="bdtx" />
+			</container>
+
+			<container height="500">
+				<layout class="arrange_vertical_attachment" layout="180,290" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+				<!-- comp -->
+				<container class="inner_subtle_box" height="180">
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<widget class="object_portrait_picture" id="clog" height="80" scale_picture="true" image_alignment="centre">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" />
+					</widget>
+
+					<widget class="client_object_label" id="cnam" auto_size="vertical" spec="text" size="large" colour="text" alignment="centre" />
+
+					<widget class="comp_reputation_stars_label" id="crep" icon_alignment="centre" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="crps" />
+						</record>
+					</widget>
+				</container>
+
+				<container class="inner_subtle_box" height="290">
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<container height="8" />
+
+					<widget class="label" auto_size="vertical" spec="text" size="large" colour="text" alignment="centre">
+						<translation id="text" translation_id="360549" type="use" value="Competition Runs[COMMENT: FR 6580, news item additional content showing details of two cup finalists' runs to the final]" />
+					</widget>
+
+					<widget class="label" id="runs" height="30" spec="text" size="12" style="bold" colour="text" alignment="centre">
+					</widget>
+
+					<container height="8" />
+
+					<widget class="horizontal_divider" />
+
+					<container height="8" />
+
+					<widget class="label" auto_size="vertical" spec="text" size="large" colour="text" alignment="centre">
+						<translation id="text" translation_id="360551" type="use" value="Current Holders[COMMENT: FR 6580, news item additional content showing the current competition holder]" />
+					</widget>
+
+					<widget class="text" id="hold" auto_size="vertical" spec="text" size="12" style="bold" colour="text" alignment="centre">
+					</widget>
+
+					<widget class="object_portrait_picture" id="holg" height="80" scale_picture="true" image_alignment="centre">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" />
+					</widget>
+
+					<container height="40" />
+
+					<container height="30">
+
+						<layout class="arrange_horizontal_attachment" alignment="right" gap="4" />
+						<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" />
+
+						<widget class="link_button" id="hist" height="20" auto_size="horizontal" size="10" alignment="right,centre_y">
+							<translation id="text" translation_id="229719" type="use" value="History" />
+						</widget>
+
+						<widget class="link_button" id="rule" height="20" auto_size="horizontal" size="10" alignment="right,centre_y">
+							<translation id="text" translation_id="242302" type="use" value="Rules" />
+						</widget>
+
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,18 @@
+<panel>
+	<translation id="title" translation_id="242302" type="use" value="Rules"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="table" id="rtbl" layout="-1,-3" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" >
+
+		<!-- column display properties -->
+		<list id="column_table_properties">
+			<record index="0" id="R_ds" sort_disabled="true" left="4" />
+			<record index="1" id="R_vl" sort_disabled="true" top="4" bottom="2" />
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="0" alignment="left,centre_y" />
+			<record index="1" alignment="left,centre_y" spec="text" colour="selection" />
+		</list>
+	</widget>
+</panel>

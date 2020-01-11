@@ -1,0 +1,41 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!--table for the fixture info-->
+	<widget class="table" id="fixP" layout="-1" fixed_size_rows="true" mode="fill_rows, stripe_rows, printable">
+
+		<list id="column_table_properties">
+			<record index="0" left="2" right="0" sort_disabled="true" />
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="0" alignment="left,centre_y" spec="text"  />
+		</list>
+
+		<list id="row_properties">
+			<record index="0" spec="text" style="bold" />
+		</list>
+
+		<!--fixture date-->
+		<!--stadium-->
+		<widget class="stadium_button" id="stad" col="0" row="0" spec="text" style="semi_bold, shadowed" size="10" />
+		<widget class="date_cell" format="[%date#1-time]" id="date" col="0" row="1" spec="text" />
+		<!-- stadium roof status -->
+		<widget class="text" id="strs" col="0" row="2" />
+		<!--weather-->
+		<widget class="weather_indicator_panel_horizontal" id="weat" col="0" row="3" multiline="true">
+			<record id="default_properties" spec="text" colour="white" />
+			<boolean id="show_weather_label" value="true" />
+			<boolean id="show_weather_icon" value="true" />
+			<boolean id="show_temperature_on_icon" value="false" />
+			<boolean id="weather_icon_size" value="5" />
+		</widget>
+	</widget>
+
+	<!--panel for no fixtures-->
+	<widget class="label" id="fixN" spec="text" colour="white">
+		<translation id="text" translation_id="298048" type="use" value="No upcoming fixtures." />
+	</widget>
+
+</panel>

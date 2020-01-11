@@ -1,0 +1,120 @@
+<panel width="650">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+	
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container background_colour="setup_bar_background">
+			<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true" />
+
+			<widget class="picture" id="pict" file="boxes/custom/object preview/header/bar" cached="true" rthr="68" height="34" colour="setup_bar_background">
+			</widget>
+
+			<widget class="text" id="titl" style="bold, shadowed" alignment="centre" multiline="false" size="10" colour="setup_bar_text" auto_size="all">
+			</widget>
+		</container>
+
+		<!-- Processing -->
+		<container class="inner_box" id="cura">
+			<translation id="title" translation_id="334004" type="use" value="Processing[COMMENT: preferences: User Interface settings section title]" />
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- Fewer Processing Breaks-->
+				<widget class="text" id="fwst" auto_size="vertical">
+					<translation id="text" translation_id="491911" type="use" value="Increase duration of processing breaks for fewer stops in play[COMMENT: AREA: Preferences; SUB-AREA: Network Game processing option; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short please; REF-ID: 333816; NOTE: making the referenced ID shorter]" />
+				</widget>
+				<widget class="text" id="fccn" auto_size="vertical">
+					<translation id="text" translation_id="333670" type="use" value="Allow the game to continue automatically in the conditions specified below:[COMMENT - forced continue enabled option on preferences screen]" />
+				</widget>
+			</container>
+
+			<widget class="table" id="svpn" mode="fill_columns, fill_rows,stripe_rows" layout="-1, -1" row_height="24" auto_size="vertical">
+				<record id="default_properties" alignment="left,centre_y" spec="text" size="small" />
+				<list id="column_table_properties">
+					<record indx="0" left="4" sort_disabled="true" />
+				</list>
+
+				<!-- force continue timeout -->
+				<widget class="text" id="brtt" row="0" col="0">
+					<translation id="text" translation_id="333717" type="use" value="Browsing after...[COMMENT: network settings panel; time limit for forced continues]" />
+				</widget>
+				<widget class="text" id="brtw" row="0" col="1" />
+
+				<!-- pre-match time limit-->
+				<widget class="text" id="prtt" row="1" col="0">
+					<translation id="text" translation_id="334000" type="use" value="Pre-match after...[COMMENT: network preferences; option label to configure how long managers are allowed to have pre-game before auto-continue kicks in]" />
+				</widget>
+				<widget class="text" id="prtw" row="1" col="1" />
+
+				<!-- in-match time limit-->
+				<widget class="text" id="imtt" row="2" col="0">
+					<translation id="text" translation_id="333861" type="use" value="In-match after...[COMMENT: network preferences; option label to configure how long managers are allowed to have in-match before auto-continue kicks in]" />
+				</widget>
+				<widget class="text" id="imtw" row="2" col="1" />
+
+				<!-- Unresponded News time limit -->
+				<widget class="text" id="mstt" row="3" col="0">
+					<translation id="text" translation_id="334190" type="use" value="Unresponded message after...[COMMENT: network preferences; time option for how long managers have to respond to news before auto-continue kicks in]" />
+				</widget>
+				<widget class="text" id="mstw" row="3" col="1" />
+
+				<!-- time limit for longer responses-->
+				<widget class="text" id="mstt" row="4" col="0">
+					<translation id="text" translation_id="420639" type="use" value="Important messages after...[COMMENT: network preferences; time option for how long managers have to respond to news before auto-continue kicks in]" />
+				</widget>
+				<widget class="text" id="mstw" row="4" col="1" />
+
+				<!-- Percentage of clients neeeded to break in -->
+				<widget class="text" id="aspt" row="5" col="0">
+					<translation id="text" translation_id="333702" type="use" value="Automatically stop game after...[COMMENT: network preferences option label, allows user to configure whether the network game should stop processing at a given time interval]" />
+				</widget>
+				<widget class="text" id="aspw" row="5" col="1" />
+				<!--select_event="as%C" -->
+			</widget>
+		</container>
+
+		<!-- Matches -->
+		<container class="inner_box" id="cura">
+			<translation id="title" translation_id="333923" type="use" value="Matches[COMMENT: preferences: Match (3D match view) settings section title]" />
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+			<widget class="table" id="svpn" mode="fill_columns, fill_rows,stripe_rows" layout="-1, -1" row_height="24" auto_size="vertical">
+				<record id="default_properties" alignment="left,centre_y" spec="text" size="small" />
+				<list id="column_table_properties">
+					<record indx="0" left="4" sort_disabled="false" />
+				</list>
+
+				<!-- highlight mode -->
+				<widget class="text" row="0" col="0">
+					<translation id="text" translation_id="333826" type="use" value="Highlight Modes Allowed[COMMENT: network preferences; match highlights option label]" />
+				</widget>
+				<widget class="text" id="hlmw" row="0" col="1" />
+
+				<!-- slowest replays mode-->
+				<widget class="text" row="1" col="0">
+					<translation id="text" translation_id="334018" type="use" value="Replay Modes Allowed[COMMENT: network preferences; match highlights option label]" />
+				</widget>
+				<widget class="text" id="rpmw" row="1" col="1" />
+
+				<!-- slowest match speed -->
+				<widget class="text" row="2" col="0">
+					<translation id="text" translation_id="334045" type="use" value="Slowest Highlight Speed Allowed[COMMENT: network preferences; match highlights option label]" />
+				</widget>
+				<widget class="slider_horizontal" id="hlsw" row="2" col="1" disabled="true" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" />
+
+				<!-- slowest replays speed -->
+				<widget class="text" row="3" col="0">
+					<translation id="text" translation_id="334046" type="use" value="Slowest Replay Speed Allowed[COMMENT: replay speed control on match screen]" />
+				</widget>
+				<widget class="slider_horizontal" id="rpsw" row="3" col="1" disabled="true" max_value="15" min_value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" />
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

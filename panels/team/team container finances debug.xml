@@ -1,0 +1,210 @@
+﻿<panel>
+  <string id="title" value="Finances Debug" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="main_box">
+
+    <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <container class="tabbed_container" default_item="tcff" save_session_state="true">
+
+      <container id="tcff">
+        <string id="title" value="Income" />
+        <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="table" id="tfnt" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+          <list id="headings">
+            <record alignment="left,centre_y">
+              <string id="text" value="Date" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Gate Receipts" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Season Tickets" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="TV Revenue" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Merchandising" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Players Sold" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Prize Money" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Investments" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Interest" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Other" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Sponsorship" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Match Day Income" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Affiliate/B Club" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Corporate Facilities" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Solidarity Payments" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Fund Raising" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Grants" />
+            </record>
+          </list>
+        </widget>
+      </container>
+
+      <container id="tcfx">
+        <string id="title" value="Expenditure" />
+        <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="table" id="tfnx" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+          <list id="headings">
+            <record alignment="left,centre_y">
+              <string id="text" value="Date" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Player Wages" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Staff Wages" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Non-Football Costs" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Bonuses" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Loyalty Bonuses" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Dividends" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Transfer Expenditure" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Ground Maintenance" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="League Fines" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Loan Repayments and Interest" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Tax" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Other" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Match Day Expenses" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Agent Fees" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Youth Setup" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Scouting Costs" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="B Club Expenditure" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Travel Costs" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Director Emoluments" />
+            </record>
+          </list>
+        </widget>
+      </container>
+
+      <container id="tcft">
+        <string id="title" value="Totals" />
+        <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="table" id="tftt" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+          <list id="headings">
+            <record alignment="left,centre_y">
+              <string id="text" value="Date" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Cash" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Trns Budget" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Trns Budget Remaining" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Wage Budget" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Current Wage" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Total Income Inc Trns/Inves" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Tot Expediture Inc Trns" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Tot Income w/o Trns/Inves" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Tot Expediture w/o Trns" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Profit" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Net Transfer" />
+            </record>
+            <record alignment="left,centre_y">
+              <string id="text" value="Tot Wages" />
+            </record>
+          </list>
+        </widget>
+      </container>
+
+      <container id="tcfg">
+        <string id="title" value="General" />
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+        <widget class="table" id="tfgt" mode="fill_rows, stripe_rows,keyboard" layout="-1" auto_size_rows="true" row_spacing="0">
+          <list id="column_table_properties">
+            <record indx="0" alignment="left,centre_y" sort_disabled="true" top="3"/>
+          </list>
+        </widget>
+      </container>
+
+    </container>
+  </container>
+</panel>
+
+

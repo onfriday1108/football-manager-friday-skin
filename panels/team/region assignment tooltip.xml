@@ -1,0 +1,75 @@
+<panel width='500'>
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="2" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="table" mode="fill_rows, stripe_rows" id="wasl" fixed_size_rows="true" auto_size_rows="false" row_height="25" layout="150,-1,100" inset="0" default_sort_column="rema" auto_size="vertical" >
+
+			<boolean id="save_session_state" value="true" />
+			<boolean id="sdst" value="true" />
+
+			<list id="column_table_properties">
+				<record>
+					<flags id="id" value="scou" />
+					<flags id="alignment" value="left,centre_y" />
+
+					<record id="column_heading">
+						<translation id="text" translation_id="227987" type="use" value="Scout" />
+						<flags id="alignment" value="left,centre_y" />
+						<flags id="column" value="0" />
+					</record>
+				</record>
+				<record>
+					<flags id="id" value="name" />
+					<record id="column_heading">
+						<translation id="text" translation_id="323366" type="use" value="Scouting[COMMENT: how to system; help string]" />
+						<flags id="alignment" value="left,centre_y" />
+						<flags id="column" value="1" />
+					</record>
+				</record>
+
+				<record>
+					<flags id="id" value="rema" />
+					<flags id="left" value="5" />
+					<record id="column_heading">
+						<translation id="text" translation_id="363718" type="use" value="Remaining[COMMENT: FR 8138, scouting assignment list; gives an indication of how much time remains on a particular scouting assignment]" />
+						<flags id="alignment" value="left,centre_y" />
+						<flags id="column" value="2" />
+
+					</record>
+				</record>
+
+
+				<record index="0">
+					<flags id="minimum_width" value="110" />
+					<integer id="auto_hide_priority" value="0" />
+				</record>
+				<record index="1">
+					<flags id="minimum_width" value="130" />
+					<integer id="auto_hide_priority" value="0" />
+				</record>
+				<record index="2">
+					<flags id="minimum_width" value="150" />
+					<integer id="auto_hide_priority" value="10" />
+				</record>
+
+
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y" />
+				<record indx="1" alignment="left,centre_y" />
+				<record indx="2" alignment="left,centre_y" />
+			</list>
+		</widget>
+
+	</container>
+
+</panel>

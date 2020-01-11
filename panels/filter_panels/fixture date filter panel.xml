@@ -1,0 +1,17 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="316567" type="use" value="Free Dates[COMMENT: filter panel; filter showing whether or not we can show dates in the list that have nothing happening on them yet]" />
+		
+		<list id="objL">
+
+			<record id="csed">
+				<translation id="text" translation_id="316568" type="use" value="Free Dates[COMMENT: filter panel; filter title for a date with nothing on it]" />
+			</record>
+
+		</list>
+		
+	</container>
+	
+</panel>

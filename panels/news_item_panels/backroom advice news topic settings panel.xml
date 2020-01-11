@@ -1,0 +1,14 @@
+<panel width="300">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+	
+	<container class="inner_subtle_box" id="topT" appearance="boxes/popup/standard/titled/paper">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="check_box" id="topE" click_event="topE">
+			<translation id="text" translation_id="420668" type="use" value="In email reports[COMMENT: backroom advice news item topic; check box for email]" />
+		</widget>
+		<widget class="check_box" id="topC" click_event="topC">
+			<translation id="text" translation_id="420669" type="use" value="In contextual advice between emails[COMMENT: backroom advice news item topic; check box for contextual advice]" />
+		</widget>
+	</container>
+</panel>

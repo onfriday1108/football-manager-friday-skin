@@ -1,0 +1,51 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- Background image layer -->
+	<container id="laye">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<!-- Background image -->
+		<widget class="picture" id="bgim" file="photos/dynamic/generic/dark seat" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-2,-8,-12" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="spacer" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,-16,-1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<widget class="spacer" />
+
+			<widget class="simple_data_list" id="slst" alignment="horizontal,fill" set_property="objt" gap="8">
+				<!-- PROP_TEAMS -->
+				<record id="object_property" get_property="team" set_property="valu" inset="0"/>
+
+				<record id="widget_properties" class="object_portrait_picture" scale_picture="true" image_alignment="centre_x,top" keep_aspect_ratio="true" wants_mouse_events="false"/>
+			</widget>
+
+			<widget class="spacer" />
+
+		</container>
+
+		<widget class="spacer" />
+
+	</container>
+
+	<container id="horC">
+		<layout class="arrange_horizontal_attachment" layout="-2, -4, -2" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!-- Logo/Portrait -->
+		<widget class="spacer" />
+		<widget class="object_portrait_picture" id="logo" image_alignment="centre_x,bottom" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+			<!-- PROP_PERSON -->
+			<record id="object_property" get_property="Pers" set_property="objt"/>
+		</widget>
+		<widget class="spacer" />
+	</container>
+</panel>

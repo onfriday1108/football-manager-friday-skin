@@ -1,0 +1,47 @@
+<panel width="600">
+
+	<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="3" />
+
+	<container class="standard_popup_box">
+		<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="3" />
+
+		<container class="table" id="tsit" mode="fill_rows, stripe_rows" layout="-1,90,120">
+			<flags id="auto_size" value="vertical" />
+			<boolean id="fixed_size_rows" value="false" />
+			<boolean id="auto_size_rows" value="true" />
+
+			<list id="default_sort_column">
+				<integer value="plty" />
+			</list>
+
+			<list id="headings">
+				<record alignment="left,centre_y" id="plty">
+					<translation id="text" translation_id="383602" type="use" value="Player Type[COMMENT: FR5572 - heading for a table listing MLS player types, e.g. designated player, senior, senior entry level etc.]" />
+				</record>
+				<record alignment="centre" id="numb">
+					<translation id="text" translation_id="251261" type="use" value="Number[COMMENT: manager stats screen; column header for number of teams managed columns]" />
+				</record>
+				<record alignment="centre" id="schi">
+					<translation id="text" translation_id="383626" type="use" value="Salary Cap Hit[COMMENT: FR5572 - heading for a table listing total MLS club salaries by player type, e.g. designated player, senior, senior entry level etc.]" />
+				</record>
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" id="plty" alignment="left,centre_y" spec="text" multiline="true" auto_size="vertical" />
+				<record index="1" alignment="centre" spec="text" />
+				<record index="2" alignment="centre" spec="text" />
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="plty" alignment="left,centre_y" />
+				<record index="1" alignment="centre" />
+				<record index="2" alignment="centre" />
+			</list>
+
+		</container>
+	</container>
+</panel>

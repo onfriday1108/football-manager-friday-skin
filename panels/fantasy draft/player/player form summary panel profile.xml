@@ -1,0 +1,28 @@
+﻿<panel maximum_items="5" ompl="true">
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+  <container class="bordered_box_no_margin">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="8" apply_to_children="true" />
+    <layout class="arrange_horizontal_attachment" alignment="fill" gap="8" offset="8" />
+    <container >
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+      <container class="player_individual_match_form_widget" id="pIf1" hidden="true"/>
+    </container>
+    <container >
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+      <container class="player_individual_match_form_widget" id="pIf2" hidden="true"/>
+    </container>
+    <container >
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+      <container class="player_individual_match_form_widget" id="pIf3" hidden="true"/>
+    </container>
+    <container >
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+      <container class="player_individual_match_form_widget" id="pIf4" hidden="true"/>
+    </container>
+ 
+    <widget class="label" id="nfrm" alignment ="centre">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+    </widget>
+  </container>
+</panel>

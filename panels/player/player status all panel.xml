@@ -1,0 +1,23 @@
+<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+
+	<widget class="table" id="tabl" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows" row_spacing="4" layout="70,-1">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		<list id="column_widget_properties">
+			<record indx="0" icon_alignment="left,centre_y" auto_size="vertical" />
+			<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+		</list>
+		<list id="column_table_properties">
+			<record indx="0" top="0" alignment="left,centre_y" />
+			<record indx="0" top="0" alignment="left,centre_y"  />
+		</list>
+	</widget>
+
+
+	<!--buttons to go to form-->
+	<widget class="link_appearance_button" id="vpst">
+		<layout class="stick_to_sides_attachment" alignment="right" />
+		<translation id="text" translation_id="292589" type="use" value="Information[COMMENT: top level menu title for team information screens]" />
+	</widget>
+</panel>

@@ -1,0 +1,5 @@
+<panel>
+
+	<layout class="arrange_horizontal_attachment" alignment="left" gap="2" offset="0" />
+  <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+</panel>

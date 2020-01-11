@@ -1,0 +1,41 @@
+<panel>
+
+  <boolean id="save_session_state" value="true"/>
+
+  <!-- Styles -->
+  <flags id="friendly_appearance" value="tables/custom/fixtures/friendly/row"/>
+  <flags id="continental_appearance" value="tables/custom/fixtures/continental/row"/>
+  <flags id="cup_appearance" value="tables/custom/fixtures/cup/row"/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <widget class="client_object_list_table" id="pltb" database_table_type="53" select_event="self" fixed_size_rows="false" auto_size_rows="true"
+    mode="fill_rows, stripe_rows, select_rows, dont_allow_empty_selection,hide_headings">
+
+    <!-- default sort -->
+    <list id="default_sort_column" >
+      <integer value="fxdt" />
+    </list>
+
+		<!--properties for each object we always want to request, regardless of whether or not they're displayed 
+							 (this can help when for example supplying a selected object to another panel to display further info)-->
+		<!--these can be omitted, they're just a time saver-->
+		<list id="Spid">
+			<integer value="home" />
+			<integer value="away" />
+			<integer value="FxTy" />
+			<integer value="FxCt" />
+		</list>
+
+		<record id="viewed_property_ids">
+      <record id="fxdS"/>
+      <record id="FxVn" width="25"/>
+      <record id="fopt"/>
+      <record id="FxRT"/>
+      <record id="FxRs"/>
+    </record>
+
+  </widget>
+
+
+</panel>

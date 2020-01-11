@@ -1,0 +1,32 @@
+<panel info_panel_type="1">
+	<layout class="arrange_vertical_attachment" alignment="top,extend"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container height="150">
+		<layout class="arrange_horizontal_attachment" layout="-1,20,-1" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--  home incidents panel -->
+		<widget class="home_match_incidents_panel" id="hmip" file="match/match incidents left match of the day"/>
+
+		<widget class="text" size="22" alignment="centre_x,top">
+			<string id="text" value="-"/>
+		</widget>
+
+		<!--  away incidents panel -->
+		<widget class="away_match_incidents_panel" id="amip" file="match/match incidents right match of the day"/>
+	</container>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,20,-1" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--  home incidents panel -->
+		<widget class="home_match_incidents_panel" id="hmpp" file="match/match incidents left match of the day" penalty_shootout="true"/>
+
+		<widget class="spacer" />
+
+		<!--  away incidents panel -->
+		<widget class="away_match_incidents_panel" id="ampp" file="match/match incidents right match of the day" penalty_shootout="true"/>
+	</container>
+</panel>

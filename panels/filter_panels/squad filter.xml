@@ -1,0 +1,14 @@
+<panel>
+	<!-- Squad filter rule panel -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+
+	<container class="filter_check_box_list_container" id="sqdp" auto_size="vertical" >
+		<translation id="title" translation_id="247731" type="use" value="Squads" />
+
+		<!-- squad filter options will get added here -->
+
+	</container>
+
+
+</panel>

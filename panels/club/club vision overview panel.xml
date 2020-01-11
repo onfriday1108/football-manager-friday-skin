@@ -1,0 +1,27 @@
+﻿<panel draw_horizontal_dividers="true">
+	<attachment_group class="vertical_arrange" vertical_alignment="top, extend">
+		<global id="vertical_gap" name="ui.main_box_gap" />
+	</attachment_group>
+
+	<container class="main_box">
+
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+	<widget class="text" font="title" colour="accent" auto_size="vertical">
+		<translation id="text" translation_id="491850" type="use" value="Club Vision[COMMENT: AREA: Club vision panel; SUB-AREA: Panel heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the club vision panel]" />
+	</widget>
+
+	<widget class="performance_grade_box" id="smgb" auto_size="vertical">
+
+	</widget>
+
+	</container>
+
+	<container class="main_box">
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container class="club_vision_viewer_panel" id="cvis" show_objective_importance="true" show_objective_type="true" show_objective_status="true" use_performance_data="true" />
+
+	</container>
+</panel>

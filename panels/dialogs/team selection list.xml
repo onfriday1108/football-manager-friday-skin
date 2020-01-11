@@ -1,0 +1,54 @@
+<panel>
+
+	<translation id="title" translation_id="292777" type="use" value="Manage Team Selections" />
+	<!-- stick all items to width of box -->
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<!-- table containing selection names -->
+	<widget class="table" id="tatb" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets" layout="-1">
+
+		<flags id="scroll_bar_class" value="scroll_bar_vertical_blue" />
+
+		<record id="select_event">
+			<flags id="event_id" value="slrw" />
+		</record>
+	</widget>
+
+	<!-- row of buttons -->
+	<widget class="container" id="btns">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+		<!-- delete button -->
+		<widget class="icon_button" id="dele" auto_size="all" icon="icons/16px/delete">
+			<translation id="text" translation_id="255098" type="use" value="Delete[COMMENT: team selection list: button used to delete the selected item]" />
+			<record id="click_event">
+				<flags id="event_id" value="reqd" />
+			</record>
+		</widget>
+
+		<!-- copy button -->
+		<widget class="icon_button" id="copy" auto_size="all" icon="icons/16px/copy">
+			<translation id="text" translation_id="255099" type="use" value="Copy[COMMENT: team selection list: button used to make a copy of the selected item]" />
+			<record id="click_event">
+				<flags id="event_id" value="copy" />
+			</record>
+		</widget>
+
+		<!-- rename button -->
+		<widget class="icon_button" id="rena" auto_size="all" icon="icons/16px/rename">
+			<translation id="text" translation_id="255100" type="use" value="Rename[COMMENT: team selection list: button used to rename the selected item]" />
+			<record id="click_event">
+				<flags id="event_id" value="rena" />
+			</record>
+		</widget>
+
+		<container file="team/team selection buttons" />
+
+	</widget>
+	<!-- button row -->
+
+</panel>
+<!-- team selection list panel -->

@@ -1,0 +1,27 @@
+<panel save_session_state="true">
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!-- a table containing nations for a continent -->
+	<container class="main_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container height="30">
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="text" id="cnnl" auto_size="all" font="title" colour="accent" alignment="left,centre_y">
+				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+			</widget>
+			<container width="10"/>
+			<container>
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="-10" />
+					<widget class="icon_button" id="slan" width="37" appearance="buttons/subtle/split/left/button" icon="icons/16px/tick" hidden="true" icon_alignment="centre"/>
+					<widget class="icon_button" id="slnn" width="37" appearance="buttons/subtle/split/right/button" icon="icons/16px/cross" hidden="true" icon_alignment="centre"/>
+			</container>
+		</container>
+
+		<widget class="table" id="tabl" auto_size="vertical" layout="-1, 16, -1, 16, -1, 16, -1, 16, -1, 16" mode="keyboard" row_height="28"/>
+	</container>
+
+</panel>

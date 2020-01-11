@@ -1,0 +1,47 @@
+<panel save_session_state="true">
+
+	<!-- list of continents, each containing nation toggle buttons-->
+	<container class="scrolling_box" save_session_state="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+		<container id="cntl">
+
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!--help text-->
+			<widget class="icon_button" id="inbt" show_button_appearance="false" alignment="right,centre_y" icon_alignment="left" icon="icons/16px/recommended nation" colour="text" navigation_focus_target="false">
+			</widget>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="arrange_horizontal_attachment" layout="-4,-1" offset="0" />
+
+				<!--group these two together as they're both little-->
+				<!--asia-->
+				<widget class="choose_continent_nations_panel" id="2" layout="-1, 10, -1, 10, -1, 10, -1, 1">
+				</widget>
+				<!--africa-->
+				<widget class="choose_continent_nations_panel" id="1" layout="-1, 1">
+				</widget>
+			</container>
+			<!--europe-->
+			<widget class="choose_continent_nations_panel" id="3">
+			</widget>
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+				<layout class="arrange_horizontal_attachment" layout="-2,-3" offset="0" />
+
+				<!--group these two together as they're both little-->
+				<!--north america-->
+				<widget class="choose_continent_nations_panel" id="4" layout="-1, 1">
+				</widget>
+				<!--south america-->
+				<widget class="choose_continent_nations_panel" id="6" layout="-1, 10, -1, 10, -1, 1">
+				</widget>
+			</container>
+
+		</container>
+	</container>
+</panel>

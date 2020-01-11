@@ -1,0 +1,23 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="main_box" id="tstb">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container class="table" id="tsit" mode="fill_rows, stripe_rows" layout="-1,20,30">
+			<flags id="auto_size" value="vertical" />
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" spec="text" multiline="false" />
+				<record index="1" auto_size="all" />
+				<record index="2" alignment="right,centre_y" spec="text" colour="selection" multiline="false" style="bold" />
+			</list>
+
+			<list id="column_table_properties">
+				<record index="1" alignment="right,centre_y"/>
+			</list>
+
+		</container>
+
+	</container>
+</panel>

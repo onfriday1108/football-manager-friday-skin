@@ -1,0 +1,7 @@
+<panel height="36">
+  <string id="hint" value="Report Bug" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <widget class="picture" id="pict" file="icons/26px/report bug" image_alignment="centre" red_replacement="sidebar text" />
+</panel>

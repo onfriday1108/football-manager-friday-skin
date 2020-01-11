@@ -1,0 +1,22 @@
+<panel width="320">
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<flags id="cancel_mouse_hide" value="true" />
+
+	<container class="inner_subtle_box" appearance="boxes/popup/match/titled/paper" >
+		<translation id="title" translation_id="334019" type="use" value="Replays[Label for selecting highlights mode]" />
+
+		<layout class="fit_children_attachment" alignment="vertical"/>
+		<layout class="arrange_horizontal_attachment" alignment="fill"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+		<!--specific replay types-->
+		<container class="main_box" id="repl">
+
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		</container>
+
+	</container>
+</panel>

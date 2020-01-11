@@ -1,0 +1,34 @@
+<panel id="fblg" width="900" height="680" disable_animations="true">
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<!-- stick all items to width of box -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<container id="pCon">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	</container>
+
+	<!-- row of buttons -->
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+		<!-- save/load buttons on left-hand side -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+
+			<widget class="icon_button" id="savv" hidn="true" event_id="save" auto_size="all" icon="icons/custom/highlights/save">
+				<translation id="text" translation_id="247111" type="use" value="Save" />
+			</widget>
+
+			<widget class="icon_button" id="lodd" hidn="true" event_id="save" auto_size="all" icon="icons/16px/folder">
+				<translation id="text" translation_id="364601" type="use" value="Load[COMMENT: button text on file dialog; would you believe that after twenty years we don't actually have Load translated as a standlone word?]" />
+			</widget>
+		</container>
+
+		<!-- default dialog buttons (ok/cancel/yes/no) on right-hand side -->
+		<container id="btns" file="dialog buttons" />
+	</container>
+</panel>

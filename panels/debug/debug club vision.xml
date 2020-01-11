@@ -1,0 +1,101 @@
+﻿<panel>
+
+	<string id="title" value="Club Vision Debug" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="tabbed_container" id="tabs" default_item="cadb" save_session_state="true">
+
+		<container class="subsection_box" id="cadb">
+			<string id="title" value="Club Vision Debug" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="arrange_vertical_attachment" layout="-1, 35" offset="0" gap="1" />
+
+			<!-- table -->
+			<container class="scrolling_box">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				<widget class="table" id="ditb" layout="-4, -2, -2, -1, -1, -1, -2, -2, -2, -1, -1, -1, -1, 100" mode="fill_rows, stripe_rows,printable" auto_size_rows="true" fixed_size_rows="false" row_spacing="0" auto_size="vertical">
+
+					<list id="headings">
+						<record alignment="left,centre_y">
+							<string id="text" value="Objective" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="Importance" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="Details" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="Linked Value" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="Starting Value" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="5 Year Plan Year" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="Start Date" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="End Date" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="Processed Date" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="From Database" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="Is Maintain Objective" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="Is Ongoing Objective" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="Objective Origin" />
+						</record>
+						<record alignment="left,centre_y">
+							<string id="text" value="Remove Objective" />
+						</record>
+					</list>
+
+					<record id="default_properties">
+						<flags id="alignment" value="left,centre_y" />
+					</record>
+
+					<list id="column_table_properties">
+						<record indx="0" sort_disabled="true"  />
+						<record indx="1"/>
+					</list>
+
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1, 200,200" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<widget class="button" id="rega" row="0" column="1">
+					<string id="text" value="Regenerate Objectives (Create if none)" />
+					<record id="click_event" event_id="rega" index="0" />
+				</widget>
+				<widget class="button" id="uptv" row="0" column="2">
+					<string id="text" value="Update Vision" />
+					<record id="click_event" event_id="uptv" index="0" />
+				</widget>
+				<widget class="popup_button" id="asap" row="2" column="0">
+					<string id="text" value="Add Specific Ambition" />
+					<record id="select_event" event_id="asae" index="0" />
+				</widget>
+			</container>
+
+		</container> <!-- titl -->
+
+		<container id="bmtt">
+			<string id="title" value="Board Meeting Strings" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="table" id="bmst" mode="fill_rows, stripe_rows,keyboard" layout="-8" auto_size_rows="true" row_spacing="0">
+			</widget>
+		</container>
+	</container> <!-- tabs -->
+</panel>

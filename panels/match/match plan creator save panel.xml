@@ -1,0 +1,25 @@
+<panel>
+	<!-- wizard panel title, header and footer strings -->
+	<translation id="wizard_panel_title" translation_id="344743" type="use" value="Save Match Plan" />
+	<translation id="wizard_panel_header" translation_id="344576" type="use" value="Please enter a name for the new match plan.[COMMENT: match plan creator wizard: save panel detailed description]" />
+	<translation id="wizard_panel_step_text" translation_id="344931" type="use" value="Step 5: Save Match Plan[COMMENT: match plan creator wizard: Short description of save match plan step in the wizard]" />
+	
+	<!-- When the panel is shown, tell the edit box for the first name to request keyboard focus -->
+    <record id="shown_event">
+      <flags id="event_id" value="REQF" />
+      <flags id="event_target" value="nmeb" />
+    </record>
+	
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <widget class="edit_box" id="nmeb" changed_event="nmch">
+    <layout class="max_length_attachment" length="25" />
+  </widget>
+	<widget class="label" id="walb" colour="red" hidden="true">
+		<translation id="text" translation_id="343143" type="use" value="A match plan with that name already exists.[COMMENT: match plan creator wizard: warning on the save match plan panel which is shown if another tactic with the entered name already exists.]" />
+  </widget>
+  <widget class="label" id="waln" colour="red" hidden="true">
+    <translation id="text" translation_id="354052" type="use" value="No match plan name given.[COMMENT: match plan creator wizard: warning on the save match plan panel which is shown if you haven't given your match plan a name.]" />
+  </widget>
+</panel>

@@ -1,0 +1,27 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container>
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,30,0" />
+
+          <widget class="tactics_kit_picture" id="kitp"  />
+
+ </container>
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="bottom" offset="5" gap="2" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+    <container class="main_contrast_box_no_margin" id="rldB">
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="-2" />
+      <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="-2"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+      <widget class="tactical_role_label" id="role" ignore_alternate_text="true" colour="white" size="xsmall" style="semi_bold" alignment="centre" abbt="false" auto_size="vertical" multiline="true" auto_size_maximum_height="52"/>
+      <widget class="tactical_role_label" id="duty" colour="faded white" size="xsmall" auto_size="vertical" alignment="centre,can_scale"  />
+    </container>
+
+  </container>
+
+</panel>

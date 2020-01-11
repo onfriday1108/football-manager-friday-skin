@@ -1,0 +1,49 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="middle,fill" do_not_size="true" gap="12"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="middle,extend" gap="10" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="text" font="title" colour="positive" auto_size="vertical">
+			<translation id="text" translation_id="420664" type="use" value="Strengths[COMMENT: team report, strengths (positives) section]" />
+		</widget>
+
+		<widget class="table" mode="fill_rows" id="prot" layout="-1" inset="0" auto_size="none" fixed_size_rows="false" auto_size_rows="true"/>
+
+		<container id="aprc">
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_ofset="0" vertical_offset="0" />
+
+			<widget class="link_button" id="aptx" section="TSRp" auto_size="all">
+				<translation id="hint" translation_id="317219" type="use" value="View Report[COMMENT - view scout report card screen]"/>
+			</widget>
+
+		</container>
+
+	</container>
+
+	<widget class="horizontal_divider" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="middle,extend" gap="10" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="text" spec="text" font="title" colour="negative" auto_size="vertical">
+			<translation id="text" translation_id="420665" type="use" value="Weaknesses[COMMENT: team report, weaknesses (negatives) section]" />
+		</widget>
+
+		<widget class="table" mode="fill_rows" id="cont" layout="-1" inset="0" auto_size="none" fixed_size_rows="false" auto_size_rows="true"/>
+
+		<container id="acnc">
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_ofset="0" vertical_offset="0" />
+
+			<widget class="link_button" id="actx" section="TSRp" auto_size="all" >
+				<translation id="hint" translation_id="317219" type="use" value="View Report[COMMENT - view scout report card screen]"/>
+			</widget>
+
+		</container>
+
+	</container>
+
+</panel>

@@ -1,0 +1,54 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="10"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="6"/>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+			<widget class="team_button" id="team" auto_size="all" icon_enabled="true" alignment="left, centre_y" style="semi_bold" image_alignment="left, centre_y" size="large"/>
+
+			<widget class="label" id="leag" auto_size="all" spec="text" colour="faded text" alignment="left"/>
+		</container>
+	</container>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+		<layout class="arrange_horizontal_attachment" layout="200, -1" offset="0" gap="8"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+		<!-- Offer label -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="12" horizontal_inset="0"/>
+
+			<widget class="label" auto_size="vertical" spec="text" font="title" colour="faded text" alignment="left">
+				<translation id="text" translation_id="230121" type="use" value="Fee"/>
+			</widget>
+
+			<widget class="label" id="feew" auto_size="vertical" spec="text" style="semi_bold" size="large" colour="text" alignment="left"/>
+		</container>
+
+		<!-- Potential fee labels -->
+		<container class="transfer_offer_additional_fees_panel" id="fees" file="">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+			<widget id="addT" class="label" auto_size="vertical" spec="text" font="title" colour="faded text" alignment="left">
+				<translation id="text" translation_id="248396" type="use" value="Additional Fees"/>
+			</widget>
+			
+			<widget class="table" id="adft" layout="-3, -1, -2" sort_disabled="true" auto_size="vertical" fixed_size_rows="false" auto_size_rows="true" row_spacing="4">
+				<record id="default_properties" alignment="left,centre_y" colour="faded text"/>
+
+				<record id="default_properties">
+					<flags id="auto_size" value="vertical"/>
+					<boolean id="multiline" value="true"/>
+				</record>
+			</widget>
+		</container>
+	</container>
+</panel>

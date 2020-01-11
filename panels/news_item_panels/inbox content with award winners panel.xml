@@ -1,0 +1,89 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="scrolling_box" >
+		<container id="ctbx">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="inbox_body_text" id="bdtx"/>
+
+			<container id="peaw" hidden="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- 1st Place -->
+				<container class="person_award_details_panel" id="paw1" file="award/person award details winner inbox panel">
+					<integer id="placing" value="1"/>
+				</container>
+
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+					<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="6"/>
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+					<!-- 2nd Place -->
+					<container class="person_award_details_panel" id="paw2" file="award/person award details placed inbox panel">
+						<integer id="placing" value="2"/>
+					</container>
+
+					<!-- 3rd Place -->
+					<container class="person_award_details_panel" id="paw3" file="award/person award details placed inbox panel">
+						<integer id="placing" value="3"/>
+					</container>
+				</container>
+			</container>
+
+			<container id="glaw" hidden="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- 1st Place -->
+				<container class="goal_award_panel" id="gaw1" file="award/goal award details winner inbox panel">
+					<integer id="placing" value="1"/>
+				</container>
+
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+					<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="6"/>
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+					<!-- 2nd Place -->
+					<container class="goal_award_panel" id="gaw2" file="award/goal award details placed inbox panel">
+						<integer id="placing" value="2"/>
+					</container>
+
+					<!-- 3rd Place -->
+					<container class="goal_award_panel" id="gaw3" file="award/goal award details placed inbox panel">
+						<integer id="placing" value="3"/>
+					</container>
+				</container>
+			</container>
+
+			<container id="mnaw" hidden="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- 1st Place -->
+				<container class="person_award_details_panel" id="mnw1" file="award/manager award details winner inbox panel">
+					<integer id="placing" value="1"/>
+				</container>
+
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+					<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="6"/>
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+					<!-- 2nd Place -->
+					<container class="person_award_details_panel" id="mnw2" file="award/manager award details placed inbox panel">
+						<integer id="placing" value="2"/>
+					</container>
+
+					<!-- 3rd Place -->
+					<container class="person_award_details_panel" id="nmw3" file="award/manager award details placed inbox panel">
+						<integer id="placing" value="3"/>
+					</container>
+				</container>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,171 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+	<container class="main_box">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="10" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+				<container class="client_object_viewer_xml_panel" id="plin">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+					<layout class="arrange_horizontal_attachment" layout="200,-1,-1" offset="0" gap="0" />
+
+					<container height="140">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="20" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+
+						<widget class="object_portrait_picture" id="tmbg" clbl="false" image_alignment="left" scale_picture="true" >
+							<record id="object_property">
+								<integer id="get_property" value="Pclb" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</widget>
+
+						<widget class="object_portrait_picture" id="picT" scale_picture="true" clbl="false" image_alignment="right" >
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+							</record>
+						</widget>
+					</container>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top" offset="10" gap="0" do_not_size="true"/>
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="10" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="person_button" auto_size="vertical" id="plnm" size="large" style="bold" alignment="left,centre_y">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Pnam" />
+										<integer id="get_property" value="objt" />
+									</record>
+								</list>
+							</record>
+						</widget>
+						<widget class="job_label" spec="text" auto_size="vertical" id="jobl" alignment="left,centre_y" colour="faded text" size="small">
+							<record id="object_property">
+								<integer id="get_property" value="PcJj" />
+							</record>
+						</widget>
+						<widget class="playing_time_label" auto_size="vertical" id="pltx" alignment="left,centre_y" >
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Pcpt" />
+									</record>
+								</list>
+							</record>
+						</widget>
+						<widget class="morale_label" auto_size="vertical" id="plmo" alignment="left,centre_y" />
+					</container>
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="contract_is_full_time_label" use_short_contract_type="false" auto_size="vertical" id="plcn" alignment="right,centre_y">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Pcif" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+						</widget>
+						<widget class="wage_label" auto_size="vertical" id="plwg" size="large" alignment="right,centre_y" >
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Pcwg" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+						</widget>
+						<widget class="value_label" auto_size="vertical" id="plva" alignment="right,centre_y">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="Pdva" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<container class="client_object_viewer_xml_panel" id="plvT">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+					<layout class="arrange_horizontal_attachment" layout="200,-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="15" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="person_button" auto_size="vertical" id="plnm" size="large" style="bold" alignment="left,centre_y">
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="Pnam" />
+											<integer id="get_property" value="objt" />
+										</record>
+									</list>
+								</record>
+							</widget>
+							<widget class="job_label" spec="text" auto_size="vertical" alignment="left,centre_y" colour="faded text" size="small">
+								<record id="object_property">
+									<integer id="get_property" value="PcJj" />
+								</record>
+							</widget>
+						</container>
+
+						<container height="140">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="10" apply_to_children="true" />
+
+							<widget class="object_portrait_picture" id="teaO" clbl="false" image_alignment="left" scale_picture="true" >
+								<record id="object_property">
+									<integer id="get_property" value="Pclb" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+
+							<widget class="object_portrait_picture" id="picO" scale_picture="true" clbl="false" image_alignment="right" >
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+								</record>
+							</widget>
+						</container>
+					</container>
+
+					<container class="conversation_additional_information_panel" >
+						<record id="object_property">
+							<integer id="get_property" value="Pclb" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</container>
+				</container>
+			</container>
+
+			<container class="main_box" appearance="boxes/custom/speech bubble/top/paper" red_replacement="negotiation speech bubble" height="160">
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
+
+				<widget class="text" id="cnvr" alignment="left,centre_y" size="large" auto_size="vertical" colour="white"/>
+			</container>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,180 @@
+﻿<panel>
+	<list id="cnvs">
+		<record id="at01" name="coach team topbar" height="65">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="8"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="-8"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="4"/>
+		</record>
+		<record id="at0F" editor_group_id="at01" name="staff search link" width="130" height="30">
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="true" offset="-4"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="10"/>
+		</record>
+		<record id="at0G" editor_group_id="at01" name="edit coach assignment button" width="200" height="28">
+			<record id="alPr" target="at0F" set_side="none,right" get_side="none,left" move_side="true" offset="-4"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="12"/>
+		</record>
+		<record id="at0H" editor_group_id="at01" name="coaching team link" width="190" height="16">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="true" offset="12"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="6"/>
+		</record>
+		<record id="at0I" editor_group_id="at01" name="No. coaches" width="190" height="20">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="true" offset="12"/>
+			<record id="alPt" target="at0H" set_side="none,top" get_side="none,bottom" move_side="true" offset="2"/>
+		</record>
+		<record id="at0J" editor_group_id="at01" name="little coach people container" height="22">
+			<record id="alPl" target="at0H" set_side="none,left" get_side="none,right" move_side="false" offset="50"/>
+			<record id="alPr" target="at0G" set_side="none,right" get_side="none,left" move_side="false" offset="-8"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="at0K" editor_group_id="at01" name="board concerns text" height="25">
+			<record id="alPl" target="at0H" set_side="none,left" get_side="none,right" move_side="false" offset="50"/>
+			<record id="alPr" target="at0G" set_side="none,right" get_side="none,left" move_side="false" offset="-8"/>
+			<record id="alPt" target="at0J" set_side="none,top" get_side="none,bottom" move_side="true" offset="0"/>
+		</record>
+		<record id="at02">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at01" set_side="none,top" get_side="none,bottom" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+		</record>
+		<record id="at0;" editor_group_id="at02" height_percentage="50.000000">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="2"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="-2"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="at0&lt;" editor_group_id="at02">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="2"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="-2"/>
+			<record id="alPt" target="at0;" set_side="none,top" get_side="none,bottom" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+		</record>
+		<record id="at0=" editor_group_id="at0&lt;" width_percentage="32.000000">
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="true" offset="-8"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+		</record>
+		<record id="at0@" editor_group_id="at0&lt;" width_percentage="32.000000">
+			<record id="alPr" target="at0=" set_side="none,right" get_side="none,left" move_side="true" offset="-8"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+		</record>
+		<record id="at0C" editor_group_id="at0&lt;">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="8"/>
+			<record id="alPr" target="at0@" set_side="none,right" get_side="none,left" move_side="false" offset="-8"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+		</record>
+		<record id="at0O" editor_group_id="at0C" name="goalkeeping icon text" height="28">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="-1"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="at0D" editor_group_id="at0C" name="goalkeeping - shot stopping" height_percentage="41">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at0O" set_side="none,top" get_side="none,bottom" move_side="true" offset="0"/>
+		</record>
+		<record id="at0E" editor_group_id="at0C" name="goalkeeping - handling and distribution">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at0D" set_side="none,top" get_side="none,bottom" move_side="false" offset="4"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-4"/>
+		</record>
+		<record id="at0P" editor_group_id="at0@" name="fitness icon text" height="28">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="at0A" editor_group_id="at0@" name="fitness- strength" height_percentage="41">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at0P" set_side="none,top" get_side="none,bottom" move_side="true" offset="0"/>
+		</record>
+		<record id="at0B" editor_group_id="at0@" name="fitness quickness">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at0A" set_side="none,top" get_side="none,bottom" move_side="false" offset="4"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-4"/>
+		</record>
+		<record id="at0Q" editor_group_id="at0=" name="set piece icon text" height="28">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="at0&gt;" editor_group_id="at0=" name="Set pieces" height_percentage="41">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at0Q" set_side="none,top" get_side="none,bottom" move_side="true" offset="0"/>
+		</record>
+		<record id="at0?" editor_group_id="at0=" name="spare widget">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at0&gt;" set_side="none,top" get_side="none,bottom" move_side="false" offset="4"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-4"/>
+		</record>
+		<record id="at08" editor_group_id="at0;" width_percentage="32.000000">
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="true" offset="-8"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="false" offset="2"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-2"/>
+		</record>
+		<record id="at0N" editor_group_id="at08" name="attacking icon text" height="28">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="at09" editor_group_id="at08" name="attacking technical" height_percentage="41">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at0:" set_side="none,top" get_side="none,bottom" move_side="false" offset="4"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-4"/>
+		</record>
+		<record id="at0:" editor_group_id="at08" name="attacking tactical" height_percentage="41">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at0N" set_side="none,top" get_side="none,bottom" move_side="true" offset="0"/>
+		</record>
+		<record id="at05" editor_group_id="at0;" width_percentage="32.000000">
+			<record id="alPr" target="at08" set_side="none,right" get_side="none,left" move_side="true" offset="-8"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+		</record>
+		<record id="at0M" editor_group_id="at05" name="possesion icon text" height="28">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="at06" editor_group_id="at05" name="posession technical" height_percentage="41">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at0M" set_side="none,top" get_side="none,bottom" move_side="true" offset="0"/>
+		</record>
+		<record id="at07" editor_group_id="at05" name="posesssion tactical">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at06" set_side="none,top" get_side="none,bottom" move_side="false" offset="4"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-4"/>
+		</record>
+		<record id="at03" editor_group_id="at0;">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="8"/>
+			<record id="alPr" target="at05" set_side="none,right" get_side="none,left" move_side="false" offset="-8"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+		</record>
+		<record id="at0L" editor_group_id="at03" name="defending icon text" height="28">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0"/>
+		</record>
+		<record id="at00" editor_group_id="at03" name="defending - technical " height_percentage="41">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at0L" set_side="none,top" get_side="none,bottom" move_side="true" offset="0"/>
+		</record>
+		<record id="at04" editor_group_id="at03" name="defending - tactical">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="at00" set_side="none,top" get_side="none,bottom" move_side="false" offset="4"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-4"/>
+		</record>
+	</list>
+</panel>

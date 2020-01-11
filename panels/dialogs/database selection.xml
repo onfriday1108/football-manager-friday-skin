@@ -1,0 +1,100 @@
+<panel width="450" height="380">
+
+	<translation id="title" translation_id="251847" type="use" value="Choose database[COMMENT: database selection dialog default title]"/>
+	<!-- stick all items to width of box -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="6" gap="10"/>
+
+	<!-- add custom icon to top right corner of dialog -->
+	<!-- this is just a placeholder for the moment, no actual default icon is being set -->
+	<widget class="picture" id="cico" auto_size="all" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true"/>
+	</widget>
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="top,extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<widget class="text" auto_size="all" spec="text" colour="faded text">
+			<translation id="text" translation_id="281352" type="use" value="Please select a database to use.[COMMENT: database selection dialog text]"/>
+		</widget>
+
+		<container height="15"/>
+
+		<widget class="text" auto_size="all" spec="text" size="small" colour="negative" id="warn" hidden="true" multiline="true">
+			<translation id="text" translation_id="291311" type="use" value="Warning - There is no compatible database for this network game, using a different database version to the server could lead to errors.[COMMENT: database selection dialog text]"/>
+		</widget>
+
+		<container height="15"/>
+
+		<!-- popup containing list of databases -->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="0"/>
+
+			<widget class="table" layout="-2, 15, -3, 100" mode="" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false">
+				<widget col="0" row="0" class="label">
+					<translation id="text" translation_id="251849" type="use" value="Database[COMMENT: database selection dialog, label for the popup menu]"/>
+				</widget>
+				<widget col="2" row="0" class="popup_button" id="dbpb" column_span="2" auto_size="vertical" select_event="dbse"/>
+			</widget>
+		</container>
+
+		<!-- panel with current database details/information -->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<widget class="table" layout="-2, 15, -3, 100" mode="" id="dbtb" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false">
+				<list id="column_widget_properties">
+					<record indx="0" sort_disabled="true" alignment="left,centre_y" />
+					<record indx="2" sort_disabled="true" alignment="left,centre_y" colour="selection"/>
+				</list>
+
+				<list id="column_table_properties">
+					<record indx="2" left="3" />
+				</list>
+
+				<widget col="0" row="0" class="label">
+					<translation id="text" translation_id="251850" type="use" value="Author[COMMENT: database selection dialog, database author label]"/>
+				</widget>
+				<widget col="2" row="0" class="label" column_span="2" id="dbau"/>
+
+				<widget col="0" row="1" class="label">
+					<translation id="text" translation_id="251851" type="use" value="Version[COMMENT: database selection dialog, database version label]"/>
+				</widget>
+				<widget col="2" row="1" class="label" column_span="2" id="dbve"/>
+
+				<widget col="0" row="2" class="label">
+					<translation id="text" translation_id="251852" type="use" value="Description[COMMENT: database selection dialog, database description label]"/>
+				</widget>
+				<widget col="2" row="2" class="label" column_span="2" id="dbde"/>
+
+				<widget col="0" row="3" class="label"/>
+
+				<widget col="0" row="4" class="label" id="edul">
+					<translation id="text" translation_id="292621" type="use" value="Editor Data Files[COMMENT: database selection dialog, user files label]"/>
+				</widget>
+				<widget col="2" row="4" class="label" id="usfl" spec="text"/>
+
+				<widget col="3" row="4" class="popup_button" id="efpb"  select_event="efse"/>
+			</widget>
+		</container>
+	</container>
+
+	<!-- row of buttons -->
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="ok">
+			<translation id="text" translation_id="229829" type="use" value="Ok"/>
+		</widget>
+
+		<widget class="button" id="canc" auto_size="all">
+			<translation id="text" translation_id="229828" type="use" value="Cancel"/>
+		</widget>
+	</container>
+
+</panel>

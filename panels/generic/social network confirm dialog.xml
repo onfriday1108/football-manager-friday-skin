@@ -1,0 +1,35 @@
+<panel id="sncd" width="600">
+
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="8" />
+
+  <!-- Layout of the dialog data -->
+  <widget class="container" id="mesg">
+    <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" />
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+    
+    <widget class="container" id="grpb">
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+      <widget class="text" size="8" id="type" auto_size="vertical" alignment="centre" />
+      <widget class="text" size="8" id="stat" auto_size="vertical" alignment="left">
+        <translation id="text" translation_id="243319" type="use" value="Status:" />
+      </widget>
+      <widget class="text" size="8" id="chlt" auto_size="vertical" alignment="left" />
+      <widget class="edit_box" id="fbst" chev="fbtc" />
+      <widget class="text" size="8" id="capt" auto_size="vertical" alignment="left">
+        <translation id="text" translation_id="316660" type="use" value="Caption:[COMMENT: social networks; text to indicate the user is able to add custom headline text to their uploaded content]" />
+      </widget>
+      <widget class="edit_box" id="fbcn" chev="fbcn" />
+      <widget class="text" size="8" id="desc" auto_size="vertical" alignment="left">
+        <translation id="text" translation_id="316661" type="use" value="Description:[COMMENT: social networks; text to indicate the user is able to add custom descriptive text to their uploaded content]" />
+      </widget>
+      <widget class="edit_box" id="fbdn" chev="fbdn" mlti="true" />
+    </widget>
+    
+  </widget>
+
+  <!-- row of buttons -->
+  <container id="btns" file="dialog buttons" />
+</panel>

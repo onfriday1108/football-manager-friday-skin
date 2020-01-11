@@ -1,0 +1,25 @@
+<panel>
+	
+	<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="5" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+	
+	<!-- left panel Not enough space for this in the current layout
+	<container id="left">
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="5" gap="5" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" apply_to_children="true" />
+		
+		<container id="home" file="team/team next match past meetings team stat" /> 
+		<container id="draw" file="team/team next match past meetings team stat" /> 
+		<container id="away" file="team/team next match past meetings team stat" /> 
+
+	</container>-->
+	
+	<!-- right panel -->
+	<container class="scrolling_box" id="rght">
+		
+		<!-- last result and meeting league table -->
+		<container class="past_meetings_panel" id="pmtp" file="team/team next match past meetings details"/>
+	
+	</container>
+
+</panel>

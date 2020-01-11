@@ -1,0 +1,29 @@
+<panel height="420" width="390">
+	<translation id="title" translation_id="437026" type="use" value="Select Expiry Date[COMMENT: FR 18181]" />
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<!-- main panel and buttons -->
+	<widget class="date_panel" id="dtpn" />
+
+	<!-- row of buttons -->
+	<container id="btns">
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="ok">
+			<translation id="text" translation_id="247912" type="use" value="Set" />
+			<layout class="autosize_attachment" />
+		</widget>
+
+		<widget class="button" id="no" event_id="no" auto_size="all">
+			<translation id="text" translation_id="437027" type="use" value="No Expiry Date[COMMENT: FR 18181]" />
+		</widget>
+
+		<widget class="button" id="canc" auto_size="all">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,291 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="scrolling_box" reveal_widget_on_item_select="false">
+		<container id="dDcn">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_inset="0" />
+
+			<container class="chalkboard_event_dropdown_selection" id="shot" chalkboard_dropdown_category="0">
+				<translation id="text" translation_id="247381" type="use" value="Shots" />
+
+				<!-- Goals -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="1" />
+
+				<!-- Missed Target -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="2" />
+
+				<!-- Hit Woodwork -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="3" />
+
+				<!-- Saved -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="4" />
+
+				<!-- Blocked -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="5" />
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="pass" chalkboard_dropdown_category="1">
+				<translation id="text" translation_id="249416" type="use" value="Passes[COMMENT: player stat: passes table label]" />
+
+				<!-- Assist -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="53" />
+
+				<!-- Completed -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="7" />
+
+				<!-- Intercepted -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="8" />
+
+				<!-- Out of Play -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="9" />
+
+				<!-- Key Pass -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="44" />
+
+				<!-- Chance Created -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="58" />
+
+				<!-- Hit Woodwork -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="6" />
+
+				<!-- Received Pass -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="41" />
+
+				<!-- Pass Combinations -->
+				<container height="30" width="250">
+					<layout class="arrange_horizontal_attachment" layout="-1,35" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<!-- Pass Combinations -->
+					<widget class="chalkboard_toggle_event" id="PCtb" chalkboard_event_number="66" width="200" />
+
+					<!-- Pass Combinations -->
+					<widget class="widget_popup_button" id="PCpb" widget_type="client_object_viewer_xml_panel" popup_alignment="bottom" height="30" width="60" secondary_icon_alignment="centre" background_colour="cbe not selected colour">
+						<record id="widget_properties" file="widgets/top pass combinations" width="380" height="200" />
+						<record id="modal_popup_properties" file="modal popup panel auto sized" attempt_to_reposition="true" />
+					</widget>
+				</container>
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="cross" chalkboard_dropdown_category="2">
+				<translation id="text" translation_id="291481" type="use" value="Crosses[COMMENT: match analysis panel; event type]" />
+
+				<!-- Assist -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="54" />
+
+				<!-- Completed -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="10" />
+
+				<!-- Intercepted -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="11" />
+
+				<!-- Out of Play -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="12" />
+
+				<!-- Hit Woodwork -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="13" />
+
+				<!-- Received -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="42" />
+
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="head" chalkboard_dropdown_category="3">
+				<translation id="text" translation_id="376394" type="use" value="Aerial Challenges[COMMENT: player stat: headers table label]" />
+
+				<!-- Won -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="24" />
+
+				<!-- Lost -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="25" />
+
+				<!-- Missed -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="26" />
+
+				<!-- Key -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="48" />
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="tack" chalkboard_dropdown_category="4">
+				<translation id="text" translation_id="291483" type="use" value="Tackles[COMMENT: match analysis panel; event type]" />
+
+				<!-- Won -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="22" />
+
+				<!-- Lost -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="23" />
+
+				<!-- Key -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="46" />
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="foul" chalkboard_dropdown_category="5">
+				<translation id="text" translation_id="291484" type="use" value="Fouls[COMMENT: match analysis panel; event type]" />
+
+				<!-- Fouls -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="15" />
+
+				<!-- Penalty -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="18" />
+
+				<!-- Fouls Against -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="14" />
+
+				<!-- Yellow Card -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="16" />
+
+				<!-- Red Card -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="17" />
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="inte" chalkboard_dropdown_category="6">
+				<translation id="text" translation_id="291486" type="use" value="Interceptions[COMMENT: match analysis panel; event type]" />
+
+				<!-- Successful -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="27" />
+
+				<!-- Missed -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="29" />
+
+				<!-- Shot Blocked Defending -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="21" />
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="setp" chalkboard_dropdown_category="7">
+				<translation id="text" translation_id="306492" type="use" value="Set Pieces[COMMENT: match analysis panel; event type]" />
+
+				<!-- Throw In -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="59" />
+
+				<!-- Attacking Free Kick -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="60" />
+
+				<!-- Defensive Free Kick -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="61" />
+
+				<!-- Corner -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="62" />
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="chan" chalkboard_dropdown_category="8">
+				<translation id="text" translation_id="306493" type="use" value="Scoring Chances[COMMENT: match analysis panel; event type]" />
+
+				<!-- Clear Cut -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="31" />
+
+				<!-- Half Chance -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="32" />
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="save" chalkboard_dropdown_category="9">
+				<translation id="text" translation_id="316588" type="use" value="Saves[COMMENT: match analysis panel; event type]" />
+
+				<!-- Held -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="38" />
+
+				<!-- Parried -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="39" />
+
+				<!-- Tipped -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="40" />
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="move" chalkboard_dropdown_category="10">
+				<translation id="text" translation_id="306495" type="use" value="Movement[COMMENT: match analysis panel; event type]" />
+
+				<!-- Dribbled -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="30" />
+
+				<!-- Offsides -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="19" />
+
+				<!-- Player movements -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="67" />
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="mist" chalkboard_dropdown_category="11">
+				<translation id="text" translation_id="284357" type="use" value="Mistakes[COMMENT: team information panel; stats section; column heading]" />
+
+				<!-- Missed Interception -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="33" />
+
+				<!-- Lost Ball -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="34" />
+
+				<!-- Lost Challenge -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="35" />
+
+				<!-- Handball -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="36" />
+
+				<!-- Conceded Penalty -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="37" />
+
+				<!-- Dropped -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="50" />
+
+				<!-- Mistake Leading To Goal -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="51" />
+
+				<!-- Caught On Ball -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="52" />
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="avrp" chalkboard_dropdown_category="12">
+				<translation id="text" translation_id="306494" type="use" value="Average Positions[COMMENT: match analysis panel; event type]" />
+
+				<!-- With Ball -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="63" />
+
+				<!-- Without Ball -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="64" />
+
+				<!-- Overall -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="65" />
+
+				<widget class="popup_button" auto_size="all" select_event="FlAp" id="SPpp">
+					<list id="items">
+						<record id="0">
+							<translation id="text" translation_id="382818" type="use" value="All[COMMENT: bug 112567; on button to select to view all items in store]" />
+							<!-- reused this translation from elsewhere -->
+						</record>
+						<record id="1">
+							<translation id="text" translation_id="420618" type="use" value="Starting 11[COMMENT: chalkboard events filters option to show just the starting eleven]" />
+						</record>
+						<record id="2">
+							<translation id="text" translation_id="420619" type="use" value="Substitutes[COMMENT: chalkboard events filters option to show just the substitutes, not using an existing translation as the context may differ]" />
+						</record>
+					</list>
+					<translation id="hint" translation_id="420620" type="use" value="Filters the average position based on your team's line-up.[COMMENT: chalkboard events filters explanation tooltip]" />
+					<integer id="selection" value="0" />
+				</widget>
+			</container>
+
+			<container class="chalkboard_event_dropdown_selection" id="CBcP" chalkboard_dropdown_category="13">
+				<translation id="text" translation_id="232851" type="use" value="Possession" />
+
+				<!-- Heat Map Overlay -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="43" />
+
+				<!-- Gained Possession -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="55" />
+
+				<!-- Lost Possession -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="56" />
+
+				<!-- Touches -->
+				<widget class="chalkboard_toggle_event" chalkboard_event_number="57" />
+			</container>
+		</container>
+	</container>
+
+	<container >
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+		<widget class="button" auto_size="all" click_event="clEv" disabled="false">
+			<translation id="text" translation_id="420660" type="use" value="Clear Events[COMMENT: match chalkboard panel button text to clear all selected event types]" />
+		</widget>
+	</container>
+</panel>

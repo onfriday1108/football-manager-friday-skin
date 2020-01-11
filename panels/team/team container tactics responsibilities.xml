@@ -1,0 +1,142 @@
+﻿<panel>
+	<boolean id="GTBT" value="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="8"/>
+		<container class="scrolling_box">
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+				<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend"/>
+
+					<widget class="picture"  file="icons/16px/tactics" width="16" height="16" image_alignment="centre">
+						<string id="red_replacement" value="title"/>
+					</widget>
+					<widget class="text"  alignment="centre_y,left" height="26" name="title" font="title" colour="title">
+						<string id="size" value="large"/>
+						<translation id="text" translation_id="482709" type="use" value="Tactics[COMMENT:AREA: Responsibilities; SUB - AREA: Responsibility Panel; FR : 28191; TONE: Formal; CHARLIMIT: None]"/>
+					</widget>
+				</container>
+
+				<container class="group_responsibility_list_widget" id="Rtac" file="team/staff responsibility summary panel" name="tactics" />
+
+				<widget class="horizontal_divider" height="12" />
+
+
+				<container id="team" draw_horizontal_dividers="true">
+					<layout class="fit_children_attachment" alignment="vertical,fill" gap="12" />
+					<layout class="arrange_vertical_attachment" alignment="top" gap="12" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<!-- team 2 box -->
+					<container id="tea2">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<container class="group_responsibility_list_widget" id="dtac" file="team/staff responsibility summary panel" name="dev tactic group" />
+
+						<!-- tactic box -->
+						<!--<container id="tact">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="300,-1" vertical_inset="0" />
+
+							<widget class="text" auto_size="vertical" id="satl">
+								<translation id="text" translation_id="441113" type="use" value="Play matches with this tactic:[COMMENT: prompt for a popup button that allows the user to choose a specific tactic for a team to use]" />
+							</widget>
+							<widget class="popup_button" id="sptt" select_event="sttu" height="30" auto_size="horizontal" />
+						</container>-->
+
+					</container>
+
+					<!-- team 3 box -->
+					<container id="tea3">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<container class="group_responsibility_list_widget" id="dtac" file="team/staff responsibility summary panel" name="dev tactic group" />
+
+						<!-- tactic box -->
+						<!--<container id="tact">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="300,-1" vertical_inset="0" />
+
+							<widget class="text" auto_size="vertical" id="satl">
+								<translation id="text" translation_id="441113" type="use" value="Play matches with this tactic:[COMMENT: prompt for a popup button that allows the user to choose a specific tactic for a team to use]" />
+							</widget>
+							<widget class="popup_button" id="sptt" select_event="sttu" height="30" auto_size="horizontal" />
+						</container>-->
+
+					</container>
+
+					<!-- team 4 box -->
+					<container id="tea4">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<container class="group_responsibility_list_widget" id="dtac" file="team/staff responsibility summary panel" name="dev tactic group" />
+
+						<!-- tactic box -->
+						<!--<container id="tact">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="300,-1" vertical_inset="0" />
+
+							<widget class="text" auto_size="vertical" id="satl">
+								<translation id="text" translation_id="441113" type="use" value="Play matches with this tactic:[COMMENT: prompt for a popup button that allows the user to choose a specific tactic for a team to use]" />
+							</widget>
+							<widget class="popup_button" id="sptt" select_event="sttu" height="30" auto_size="horizontal" />
+						</container>-->
+
+					</container>
+
+					<!-- team 5 box -->
+					<container id="tea5">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<container class="group_responsibility_list_widget" id="dtac" file="team/staff responsibility summary panel" name="dev tactic group" />
+
+						<!-- tactic box -->
+						<!--<container id="tact">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="300,-1" vertical_inset="0" />
+
+							<widget class="text" auto_size="vertical" id="satl">
+								<translation id="text" translation_id="441113" type="use" value="Play matches with this tactic:[COMMENT: prompt for a popup button that allows the user to choose a specific tactic for a team to use]" />
+							</widget>
+							<widget class="popup_button" id="sptt" select_event="sttu" height="30" auto_size="horizontal" />
+						</container>-->
+
+					</container>
+
+					<!-- team 6 box -->
+					<container id="tea6">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<container class="group_responsibility_list_widget" id="dtac" file="team/staff responsibility summary panel" name="dev tactic group" />
+
+						<!-- tactic box -->
+						<!--<container id="tact">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="300,-1" vertical_inset="0" />
+
+							<widget class="text" auto_size="vertical" id="satl">
+								<translation id="text" translation_id="441113" type="use" value="Play matches with this tactic:[COMMENT: prompt for a popup button that allows the user to choose a specific tactic for a team to use]" />
+							</widget>
+							<widget class="popup_button" id="sptt" select_event="sttu" height="30" auto_size="horizontal" />
+						</container>-->
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+		<container class="inner_box" file="generic/simple form with confirmation buttons" />
+	</container>
+</panel>

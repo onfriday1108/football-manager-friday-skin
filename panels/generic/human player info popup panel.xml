@@ -1,0 +1,82 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
+
+	<container height="80">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<widget class="table" id="layt" layout="-1, -1" fixed_size_rows="true" row_spacing="0" row_height="20" mode="fill_rows">
+			<flags id="auto_size" value="vertical" />
+
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y"/>
+				<record indx="1" alignment="right,centre_y"/>
+			</list>
+
+			<!-- Job -->
+			<widget class="job_label" id="jobl" row="0" col="0">
+				<record id="object_property">
+					<integer id="get_property" value="PcJj"/>
+				</record>
+			</widget>
+
+			<!-- Age in years -->
+			<widget class="dob_label" id="ages" row="0" col="1" display_format="2">
+				<record id="object_property">
+					<integer id="get_property" value="Pdob"/>
+				</record>
+			</widget>
+
+			<!-- Club -->
+			<widget class="club_button" id="team" row="1" col="0">
+				<record id="object_property">
+					<integer id="get_property" value="Pclb"/>
+				</record>
+			</widget>
+
+			<!-- Reputation -->
+			<widget class="global_reputation_stars_label" id="rept" row="1" col="1">
+				<record id="object_property">
+					<integer id="get_property" value="NrSr"/>
+				</record>
+			</widget>
+
+			<!-- Nation -->
+			<widget class="person_nationality_button" id="natp" row="2" col="0">
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</widget>
+
+			<!-- Wage -->
+			<widget class="wage_label" id="wage" row="2" col="1">
+				<record id="object_property">
+					<integer id="get_property" value="Pcww"/>
+				</record>
+			</widget>
+
+			<!--Contract Expiry Date-->
+			<widget class="contract_expiry_button" id="expiry" row="3" col="1">
+				<record id="object_property">
+					<integer id="get_property" value="Pced"/>
+				</record>
+			</widget>
+
+		</widget>
+	</container>
+
+	<widget class="human_attributes_panel" file="human/human attributes small" id="subp"/>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical,extend" offset="0"/>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="4"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+
+		<widget class="embedded_popup_button" id="actn" auto_size="all" fixed="true">
+			<translation id="text" translation_id="316647" type="use" value="Actions[COMMENT: popup information panel actions button title]"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="8"/>
+		</widget>
+	</container>
+
+</panel>

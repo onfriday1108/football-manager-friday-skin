@@ -1,0 +1,338 @@
+﻿<panel>
+
+	<layout class="arrange_vertical_attachment" layout="26,-1, -1, -1" offset="12" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<!--labels-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container class="inner_box_no_margin" id="hLco" >
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="label" id="T_th"  alignment="centre" auto_size="horizontal">
+				<translation id="text" translation_id="256675" type="use" value="Home[COMMENT: team_information_panel; Home Kit Graphic Title]" />
+			</widget>
+		</container>
+
+		<container class="inner_box_no_margin" id="aLco" >
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="label" id="T_ta"  alignment="centre" auto_size="horizontal">
+				<translation id="text" translation_id="256676" type="use" value="Away[COMMENT: team_information_panel; Away Kit Graphic Title]" />
+			</widget>
+		</container>
+
+		<container class="inner_box_no_margin" id="tLco" >
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="label" id="T_tl" alignment="centre" auto_size="horizontal">
+				<translation id="text" translation_id="256677" type="use" value="Third[COMMENT: team_information_panel; Third Kit Graphic Title]" />
+			</widget>
+		</container>
+
+	</container>
+
+	<!--shirts-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+		<!--home shirts-->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="40, -1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<!--colour-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+				<widget class="popup_colour_button" cose="cVLS" id="ChSf" height="30">
+					<record id="cose" event_id="eFgc" index="0" kit_part="0"/>
+				</widget>
+
+				<widget class="popup_colour_button" cose="cVSE" id="ChSb" height="30">
+					<record id="cose" event_id="eBgc" index="0" kit_part="0"/>
+				</widget>
+
+				<widget class="popup_colour_button" cose="acCC" id="ChSo" height="30"  >
+					<record id="cose" event_id="eogc" index="0" kit_part="0"/>
+				</widget>
+			</container>
+
+			<!--style-->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="40,-1,40" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+				<!--left arrow-->
+				<widget class="icon_button" id="lfic" show_button_appearance="false"  icon="icons/16px/left" alignment="right,centre_y" icon_alignment="right,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="lfSh" index="0" kit_part="0"/>
+				</widget>
+
+				<widget class="kit_picture" id="T_hk" kit_id="0" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+					<boolean id="always_use_latest_object_list" value="true"/>
+					<!-- needed for fantasty draft create club changes -->
+					<record id="object_property">
+						<integer id="get_property" value="Tftm" />
+						<integer id="set_property" value="Ttea" />
+					</record>
+				</widget>
+
+				<!--right arrow-->
+				<widget class="icon_button" id="rgic" show_button_appearance="false" icon="icons/16px/right" icon_alignment="left,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="rgSh" index="0" kit_part="0"/>
+				</widget>
+			</container>
+
+		</container>
+
+		<!--away shirts-->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="40, -1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<!--colour-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+				<widget class="popup_colour_button" id="CaSf" height="30">
+					<record id="cose" event_id="eFgc" index="1" kit_part="0"/>
+				</widget>
+
+				<widget class="popup_colour_button" cose="cVSE" id="CaSb" height="30" >
+					<record id="cose" event_id="eBgc" index="1" kit_part="0"/>
+				</widget>
+
+				<widget class="popup_colour_button" cose="acCC" id="CaSo" height="30">
+					<record id="cose" event_id="eogc" index="1" kit_part="0"/>
+				</widget>
+
+			</container>
+
+			<!--style-->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="40,-1,40" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+				<!--left arrow-->
+				<widget class="icon_button" id="lfic" show_button_appearance="false" icon="icons/16px/left" alignment="right,centre_y" icon_alignment="right,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="lfSh" index="1" kit_part="0"/>
+				</widget>
+
+				<widget class="kit_picture" id="T_ak" kit_id="1" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+					<boolean id="always_use_latest_object_list" value="true"/>
+					<!-- needed for fantasty draft create club changes -->
+					<record id="object_property">
+						<integer id="get_property" value="Tftm" />
+						<integer id="set_property" value="Ttea" />
+					</record>
+				</widget>
+
+				<!--right arrow-->
+				<widget class="icon_button" id="rgic" show_button_appearance="false" icon="icons/16px/right" icon_alignment="left,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="rgSh" index="1" kit_part="0"/>
+				</widget>
+			</container>
+		</container>
+
+		<widget class="kit_picture" id="T_tk" kit_id="2" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+			<boolean id="always_use_latest_object_list" value="true"/>
+			<!-- needed for fantasty draft create club changes -->
+			<record id="object_property">
+				<integer id="get_property" value="Tftm" />
+				<integer id="set_property" value="Ttea" />
+			</record>
+		</widget>
+	</container>
+
+	<!--shorts-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+		<!--home shorts-->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="40, -1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<!--colour-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+				<widget class="popup_colour_button" cose="cVLS" id="Chtf" height="30" >
+					<record id="cose" event_id="eFgc" index="0" kit_part="1"/>
+				</widget>
+
+				<widget class="popup_colour_button" cose="cVSE" id="Chtb" height="30" >
+					<record id="cose" event_id="eBgc" index="0" kit_part="1"/>
+				</widget>
+				<widget class="popup_colour_button" cose="cVSE" id="Chto" height="30"  >
+					<record id="cose" event_id="eogc" index="0" kit_part="1"/>
+				</widget>
+			</container>
+
+			<!--style-->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="40,-1,40" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+				<!--left arrow-->
+				<widget class="icon_button" id="lfic" show_button_appearance="false" click_event="lflg" icon="icons/16px/left"  alignment="right,centre_y" icon_alignment="right,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="lfsh" index="0" kit_part="1"/>
+				</widget>
+
+				<widget class="editor_kit_picture" id="S_hk" kit_id="0" scale_picture="true" keep_aspect_ratio="true" alignment="top" image_alignment="top" />
+
+				<!--right arrow-->
+				<widget class="icon_button" id="rgic" show_button_appearance="false" click_event="rglg" icon="icons/16px/right" icon_alignment="left,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="rgsh" index="0" kit_part="1"/>
+				</widget>
+			</container>
+		</container>
+
+
+		<!--away shorts-->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="40, -1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<!--colour-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+				<widget class="popup_colour_button" cose="cVLS" id="Catf" height="30">
+					<record id="cose" event_id="eFgc" index="1" kit_part="1"/>
+				</widget>
+
+				<widget class="popup_colour_button" cose="cVSE" id="Catb" height="30">
+					<record id="cose" event_id="eBgc" index="1" kit_part="1"/>
+				</widget>
+				<widget class="popup_colour_button" cose="cVSE" id="Cato" height="30" >
+					<record id="cose" event_id="eogc" index="1" kit_part="1"/>
+				</widget>
+			</container>
+
+			<!--style-->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="40,-1,40" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+				<!--left arrow-->
+				<widget class="icon_button" id="lfic" show_button_appearance="false" click_event="lflg" icon="icons/16px/left" alignment="right,centre_y" icon_alignment="right,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="lfsh" index="1" kit_part="1"/>
+				</widget>
+
+				<widget class="editor_kit_picture" id="S_ak" kit_id="1" scale_picture="true" keep_aspect_ratio="true"  alignment="top" image_alignment="top" />
+				<!--right arrow-->
+				<widget class="icon_button" id="rgic" show_button_appearance="false" click_event="rglg" icon="icons/16px/right" icon_alignment="left,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="rgsh" index="1" kit_part="1"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+	<!--socks-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+		<!--home socks-->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="40, -1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<!--colour-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+				<widget class="popup_colour_button" cose="cVLS" id="Chzf" height="30">
+					<record id="cose" event_id="eFgc" index="0" kit_part="2"/>
+				</widget>
+
+				<widget class="popup_colour_button" cose="cVSE" id="Chzb" height="30" >
+					<record id="cose" event_id="eBgc" index="0" kit_part="2"/>
+				</widget>
+
+				<widget class="popup_colour_button" cose="cVSE" id="Chzo" height="30">
+					<record id="cose" event_id="eogc" index="0" kit_part="2"/>
+				</widget>
+			</container>
+
+			<!--style-->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="40,-1,40" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+				<!--left arrow-->
+				<widget class="icon_button" id="lfic" show_button_appearance="false" click_event="lflg" icon="icons/16px/left"  alignment="right,centre_y" icon_alignment="right,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="lfSo" index="0" kit_part="2"/>
+				</widget>
+
+				<widget class="editor_kit_picture" id="Sohk" kit_id="0" kit_part="1" kit_style="0"  scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,top" />
+				<!--right arrow-->
+				<widget class="icon_button" id="rgic" show_button_appearance="false" click_event="rglg" icon="icons/16px/right" icon_alignment="left,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="rgSo" index="0" kit_part="2"/>
+				</widget>
+			</container>
+		</container>
+
+		<!--away socks-->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="40, -1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<!--colour-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+				<widget class="popup_colour_button" cose="cVLS" id="Cazf" height="30">
+					<record id="cose" event_id="eFgc" index="1" kit_part="2"/>
+				</widget>
+
+				<widget class="popup_colour_button" cose="cVSE" id="Cazb" height="30">
+					<record id="cose" event_id="eBgc" index="1" kit_part="2"/>
+				</widget>
+
+				<widget class="popup_colour_button" cose="cVSE" id="Cazo" height="30">
+					<record id="cose" event_id="eogc" index="1" kit_part="2"/>
+				</widget>
+
+			</container>
+
+			<!--style-->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="40,-1,40" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+				<!--left arrow-->
+				<widget class="icon_button" id="lfic" show_button_appearance="false" click_event="lflg" icon="icons/16px/left" alignment="right,centre_y" icon_alignment="right,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="lfSo" index="1" kit_part="2"/>
+				</widget>
+
+				<widget class="editor_kit_picture" id="Soak" kit_id="1" kit_part="1" kit_style="0"  scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,top" />
+				<!--right arrow-->
+				<widget class="icon_button" id="rgic" show_button_appearance="false" click_event="rglg" icon="icons/16px/right" icon_alignment="left,centre_y">
+					<record id="primary_icon_properties" red_replacement="text" />
+					<record id="click_event" event_id="rgSo" index="1" kit_part="2"/>
+				</widget>
+			</container>
+		</container>
+
+	</container>
+</panel>

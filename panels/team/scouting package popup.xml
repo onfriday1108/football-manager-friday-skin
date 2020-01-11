@@ -1,0 +1,76 @@
+<panel id="SPpu">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+	
+	<container class="standard_popup_box">
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="8" horizontal_inset="8" vertical_gap="10"/>
+
+		<container>
+			<record id="object_property">
+				<integer id="get_property" value="hitx" />
+				<integer id="set_property" value="hidn" />
+			</record>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_inset="0" />
+
+			<widget class="text" auto_size="vertical" colour="faded text">
+				<translation id="text" translation_id="450762" type="use" value="The packages owned determine the number of players available to search through as well as increasing the knowledge level and player role visibility of players covered. Youth packages cover players aged 21 and under.[COMMENT: FR 22281, scouting package help]" />
+			</widget>
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_gap="8"/>
+
+			<container>
+				<record id="object_property">
+					<integer id="get_property" value="hise" />
+					<integer id="set_property" value="hidn" />
+				</record>
+
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="4" horizontal_inset="0" />
+
+				<widget class="text" auto_size="vertical" font="title" alignment="left,centre_y">
+					<translation id="text" translation_id="437036" type="use" value="Senior Packages[COMMENT: FR 21759 scouting package]" />
+
+				</widget>
+
+				<container class="simple_data_list" set_property="objt">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="2"/>
+
+
+					<record id="object_property">
+						<integer id="get_property" value="Tvsp" />
+						<integer id="set_property" value="valu" />
+					</record>
+					<record id="widget_properties" class="property_list_viewer_xml_panel" file="widgets/scouting package widget" />
+				</container>
+
+			</container>
+
+			<container>
+				<record id="object_property">
+					<integer id="get_property" value="hiyo" />
+					<integer id="set_property" value="hidn" />
+				</record>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="4" horizontal_inset="0" />
+
+				<widget class="text" auto_size="vertical" font="title" alignment="left,centre_y">
+					<translation id="text" translation_id="437038" type="use" value="Youth Packages[COMMENT: FR 21759 scouting package]" />
+				</widget>
+
+				<container class="simple_data_list" set_property="objt">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="2"/>
+
+					<record id="object_property">
+						<integer id="get_property" value="Tvyp" />
+						<integer id="set_property" value="valu" />
+					</record>
+					<record id="widget_properties" class="property_list_viewer_xml_panel" file="widgets/scouting package widget" />
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

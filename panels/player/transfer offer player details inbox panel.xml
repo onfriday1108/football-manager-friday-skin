@@ -1,0 +1,57 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+	<string id="skin_style" value="subtle box"/>
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="80, 140, 120, 120, -1" horizontal_offset="0" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0"/>
+
+		<!-- player pic -->
+		<widget class="object_portrait_picture" id="ppic" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre"/>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+			<widget class="dob_label" id="agtx" display_format="2" alignment="left,centre_y" auto_size="all" style="bold"/>
+			<widget class="nation_button" id="nttx" alignment="left,centre_y" auto_size="vertical" colour="faded text" icon_enabled="false" format="[%nation#1-nationality]"/>
+			<widget class="club_button" id="cltx" alignment="left,centre_y" auto_size="vertical" colour="faded text" icon_enabled="false"/>
+			<widget class="position_label" id="pstx" spec="text" alignment="left,centre_y" auto_size="all" display_format="0" multiline="false" colour="faded text"/>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+			<!-- wage -->
+			<container class="inner_box" appearance="boxes/custom/transfer offer/value/subtle/paper">
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="0"/>
+
+				<widget class="text" alignment="left,centre_y" font="label" size="small" auto_size="vertical">
+					<translation id="text" translation_id="227799" type="use" value="Wage"/>
+				</widget>
+				<widget class="text" id="plwg" alignment="left,centre_y,can_scale" multiline="false" font="value" auto_size="vertical"/>
+			</container>
+
+			<widget class="player_status_button" id="plsf" auto_size="none"/>
+		</container>
+
+		<!-- value -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" horizontal_inset="0"/>
+			
+			<container class="inner_box" appearance="boxes/custom/transfer offer/value/subtle/paper">
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="0"/>
+				
+				<widget class="text" alignment="left,centre_y" font="label" size="small" auto_size="vertical">
+					<translation id="text" translation_id="227806" type="use" value="Value"/>
+				</widget>
+
+				<widget class="text" id="plvl" alignment="left,centre_y,can_scale" multiline="false" font="value" auto_size="vertical"/>
+
+			</container>
+		</container>
+
+		<widget class="transfer_offer_interest_panel" file="player/transfer offer interest inbox panel" id="ptin"/>
+	</container>
+
+</panel>

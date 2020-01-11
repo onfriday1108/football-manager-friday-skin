@@ -1,0 +1,72 @@
+<panel>
+  <boolean id="save_session_state" value="true"/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <!-- titled box -->
+  <container >
+    <layout class="arrange_horizontal_attachment" layout="-2, -3" offset="0" gap="8"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+      <widget class="pitch_squad_depth" id="pict" vertical="true" pitch_draw_grass="false" select_event="slic" pitch_line_colour="faded white" pitch_dont_draw_ads="true" pitch_keep_selected_icons="true" pitch_touchline_width_percentage="1" line_width="1.5" >
+        <boolean id="pitch_draw_goals" value="false"/>
+        <boolean id="pitch_draw_markings" value="true"/>
+      </widget>
+    </container>
+
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+        <widget class="position_label" display_format="0" auto_size="all" id="pStx" font="title" colour="accent"/>
+
+        <widget class="client_object_list_table" hidden="true" id="pltb" customisation_context="play" select_event="desc" database_table_type="1" mode="fill_rows, stripe_rows, printable, keyboard" column_mode="resize_columns, move_columns, custom_views" row_spacing="2" row_height="28">
+        <boolean id="save_session_state" value="true"/>
+        <integer id="contextual_handler_column_id" value="Pnms"/>
+        <boolean id="should_force_refresh" value="true"/>
+
+        <!-- default sort by playing position (primary), then picked position, then name -->
+        <list id="default_sort_column">
+          <integer value="Pcac"/>
+        </list>
+
+        <!--default view-->
+        <flags id="default_view" value="role"/>
+
+        <list id="viws">
+
+          <record id="role">
+            <translation id="name" translation_id="298050" type="use" value="Role"/>
+            <record id="view">
+              <record id="Pnms" auto_hide_priority="2" width="-3" minimum_width="180"/>
+              <!-- person name -->
+              <record id="PpsC" auto_hide_priority="3" width="-2" minimum_width="100"/>
+              <!-- position -->
+              <record id="Pcac" auto_hide_priority="4" minimum_width="120" width="-2"/>
+            </record>
+          </record>
+        </list>
+
+      </widget>
+        
+      
+      </container>
+
+      <widget class="text" id="plEt" alignment="centre" size="large">
+        <translation id="text" translation_id="323307" type="use" value="Click on a position to view the players who can play there[COMMENT: team report; hint string for clicking on an icon]"/>
+      </widget>
+
+
+    </container>
+
+
+  </container>
+</panel>

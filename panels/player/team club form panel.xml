@@ -1,0 +1,65 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="inner_box" >
+				<translation id="text" translation_id="331918" type="use" value="National Pool Reports[COMMENT: match reports on players in the national pool]" />
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" id="lnop" alignment="left,top" hidden="false">
+					<translation id="text" translation_id="331923" type="use" value="None of your players have taken part in a club match recently.[COMMENT: Text for when no players are available for club match reports]" />
+				</widget>
+
+				<widget class="client_object_list_table" id="tpan" select_event="slpf" mode="show_bullets, fill_rows, stripe_rows, select_rows, dont_allow_empty_selection">
+					<list id="default_sort_column">
+						<integer value="PIfd" />
+						<integer id="Pers" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record index="10" alignment="centre" />
+					</list>
+
+					<record id="viewed_property_ids">
+						<record id="PCps" />
+						<!--Position played-->
+						<record id="PCmi" />
+						<!--Match incident (cards, injury etc)-->
+						<record id="Pnms" />
+						<!--Player name-->
+						<record id="PtmT" />
+						<!--National team type -->
+						<record id="PCcl" />
+						<!--Club -->
+						<record id="PCsc" />
+						<!--Score-->
+						<record id="PCop" />
+						<!--Opposition-->
+						<record id="PCfd" />
+						<!--Fixture date-->
+						<record id="PCmp" />
+						<!--Minutes played-->
+						<record id="PCsb" />
+						<!--Substituted-->
+						<record id="PCgo" />
+						<!--Goals-->
+						<record id="PCra" />
+						<!--Rating-->
+					</record>
+				</widget>
+			</container>
+
+			<widget id="dpan" class="team_club_form_detail_panel" width="250">
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+			</widget>
+		</container>
+
+	</container>
+</panel>

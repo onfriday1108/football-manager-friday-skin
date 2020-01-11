@@ -1,0 +1,68 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container class="scrolling_box">
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="8" gap="5" />
+			<layout class="arrange_vertical_attachment" alignment="top" gap="5" offset="8" />
+			<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" />
+			<widget class="popup_button" id="rcpu" auto_size="all" needs_height="true" height="28" name="view popup">
+				<string id="select_event" value="arvc" />
+				<list id="items">
+					<record id="0">
+						<string id="human_object_type" value="HOTc" />
+						<translation id="text" translation_id="229528" type="use" value="Staff" />
+					</record>
+					<record id="1">
+						<string id="human_object_type" value="HOTc" />
+						<translation id="text" translation_id="491842" type="use" value="Transfers and Contracts[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+					</record>
+					<record id="2">
+						<string id="human_object_type" value="HOTc" />
+						<translation id="text" translation_id="298528" type="use" value="First Team Squad[COMMENT: backroom advice, button link]" />
+					</record>
+					<record id="3">
+						<string id="human_object_type" value="HOTc" />
+						<translation id="text" translation_id="491897" type="use" value="Development Teams[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+					</record>
+				</list>
+			</widget>
+			<container class="group_responsibility_list_widget" id="adc1" file="team/team container advanced responsibility subtasks panel" name="board options" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</container>
+
+			<widget class="horizontal_divider" id="at03" height="10">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</widget>
+
+			<container class="group_responsibility_list_widget" id="adc2" file="team/team container advanced responsibility subtasks panel" name="team1 options" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</container>
+
+			<widget class="horizontal_divider" id="at05" height="10">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</widget>
+
+			<container class="group_responsibility_list_widget" id="adc3" file="team/team container advanced responsibility subtasks panel" name="devteam options" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</container>
+
+			<widget class="horizontal_divider" id="at07" height="10">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</widget>
+
+			<container class="group_responsibility_list_widget" id="adc4" file="team/team container advanced responsibility subtasks panel" name="staff contract options" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</container>
+
+			<widget class="horizontal_divider" id="at09" height="10">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</widget>
+
+			<container class="group_responsibility_list_widget" id="adc5" file="team/team container advanced responsibility subtasks panel" name="coaching options" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</container>
+
+		</container>
+
+	</container>
+</panel>

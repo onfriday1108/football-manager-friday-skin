@@ -1,0 +1,46 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box" appearance="boxes/custom/calendar/cell/paper" >
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+		<container id="outC">
+			<layout class="arrange_vertical_attachment" layout="18, -1" offset="1" gap="1"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<container id="titc">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container class="inner_subtle_box" appearance="'boxes/inner/standard/no margin/paper" id="baKg">
+					<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="8" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+					<widget class="text" id="dayN" font="label" alignment="left,centre_y" colour="text"/>
+
+					<widget class="popup_button" id="actn" width="30" select_event="dtcl" hidden="true" icon_alignment="centre" appearance="none" fixed="true" >
+						<record id="secondary_icon_properties" red_replacement="text" />
+					</widget>
+				</container>
+			</container>
+
+			<container id="entR">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container class="calendar_detailed_event_panel" id="firE" hidden="true" />
+				<container class="calendar_detailed_event_panel" id="secE" hidden="true"/>
+				<container class="calendar_detailed_event_panel" id="thiE" hidden="true"/>
+			</container>
+		</container>
+
+		<widget class="widget_popup_button" id="eEpB" width="30" auto_size="vertical" icon_alignment="centre" hidden="true" widget_type="calendar_monthly_day_extra_events" mpmF="modal popup panel auto sized" appearance="none" >
+			<layout class="stick_to_sides_attachment" alignment="right,bottom" inset="8,0" />
+			<record id="widget_properties" width="200"  />
+			<record id="modal_popup_properties" >
+				<boolean id="attempt_to_reposition" value="true" />
+			</record>
+
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,108 @@
+﻿<panel appearance="boxes/dialog/standard/paper" width="600" height="600">
+	<translation id="title" translation_id="451440" type="use" value="Change penalty taker for this penalty?[COMMENT: match tactics shortcuts, change penalty taker dialog, occurs when a penalty is awarded during a match]" />
+
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+	<layout class="centre_in_parent_attachment" alignment="all" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--top bit showing the currently selected guy-->
+		<container height="100" class="inner_subtle_box">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="10" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!--mugshot-->
+			<widget class="picture" id="ppic" width="80" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+
+			<!--name and details-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="10" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--name-->
+				<widget class="text" id="name" size="large" style="semi_bold" auto_size="all"/>
+
+				<!--details-->
+				<container class="client_object_viewer_xml_panel" id="Pers">
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<!--penalties taken-->
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="label" auto_size="vertical" font="label">
+							<translation id="text" translation_id="421385" type="use" value="Penalties Taken[COMMENT: player stats; total number of penalties taken by the player]" />
+						</widget>
+
+						<widget class="dashed_number_label" id="POpt" font="value">
+							<record id="object_property" get_property="POpt" />
+						</widget>
+					</container>
+
+					<!--penalties scored-->
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="label" auto_size="vertical" font="label">
+							<translation id="text" translation_id="249439" type="use" value="Penalties scored" />
+						</widget>
+
+						<container>
+							<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<widget class="dashed_number_label" id="POps" auto_size="horizontal" font="value" alignment="left,centre_y" height="30">
+								<record id="object_property" get_property="POps" />
+							</widget>
+
+							<widget class="label" auto_size="horizontal" font="value" alignment="left,centre_y" height="30">
+								<string id="text" value=" (" />
+							</widget>
+
+							<widget class="dashed_record_percentage_label" id="POpr" auto_size="horizontal" font="value" alignment="left,centre_y" height="30">
+								<record id="object_property" get_property="POpr" />
+							</widget>
+
+							<widget class="label" auto_size="horizontal" font="value" alignment="left,centre_y" height="30">
+								<string id="text" value=")" />
+							</widget>
+
+						</container>
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<!--list of players on the pitch-->
+		<widget class="match_team_squad_panel" id="fiXI" file="match/match team squad penalty takers dialog" include_starting_xi="false" include_current_xi="true" include_starting_subs="false" include_current_subs="false">
+			<translation id="title" translation_id="330293" type="use" value="On Pitch[COMMENT: title for a squad list of players currently in the first XI]" />
+		</widget>
+
+	</container>
+
+	<!-- standard buttons / these get shown & hidden by subclasses -->
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="ok">
+			<translation id="text" translation_id="229918" type="use" value="Confirm" />
+			<layout class="autosize_attachment" />
+		</widget>
+
+		<widget class="button" id="canc" height="30">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			<layout class="autosize_attachment" />
+		</widget>
+
+	</container>
+
+</panel>

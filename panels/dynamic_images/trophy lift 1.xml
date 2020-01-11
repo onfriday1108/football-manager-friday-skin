@@ -1,0 +1,96 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!-- Grass image -->
+	<widget class="picture" id="bgim" file="photos/dynamic/ticker 1/grass" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+
+	<!-- Board image coloured to teams colours -->
+	<container class="client_object_viewer_xml_panel" id="tick">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<!-- PROP_TEAM -->
+		<record id="object_property" get_property="Ttea" set_property="objt" />
+
+		<widget class="picture" file="photos/dynamic/ticker 1/board bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<record id="object_property">
+				<list id="get_properties">
+					<!-- PROP_TEAM_BACKGROUND_COLOUR1 -->
+					<record get_property="oDAC" set_property="rrep"/>
+				</list>
+			</record>
+		</widget>
+	</container>
+
+	<!-- Board line image -->
+	<widget class="picture" file="photos/dynamic/ticker 1/board line" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+
+	<!-- Shading image -->
+	<widget class="picture" file="photos/dynamic/ticker 1/board detail" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+
+	<!-- Team name/ logos, text etc -->
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-32, -8, -9" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="spacer" />
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-3,-12, -45, -11, -2" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="spacer" />
+			<!-- Club logo -->
+			<widget class="object_portrait_picture" id="log1" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+				<!-- PROP_TEAM -->
+				<record id="object_property" get_property="Ttea" set_property="objt" />
+			</widget>
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-6, -1, -6" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!-- Team name-->
+				<widget class="game_formatted_label" alignment="centre,auto_fit,can_scale" font="capitals_bold" colour="white" wants_mouse_events="false">
+					<string id="format" value="[%team#1-long]" />
+					<!-- PROP_TEAM -->
+					<record id="object_property" get_property="Ttea" set_property="valu" />
+				</widget>
+				<!-- gap -->
+				<widget class="spacer" />
+				<!-- Champions string -->
+				<widget class="game_formatted_label" alignment="centre,auto_fit,can_scale" font="capitals" colour="gold">
+					<record id="format">
+						<integer id="var1" value="vf_football_season" />
+						<translation id="text" translation_id="420617" type="use" value="[%season_year#1] Champions[COMMENT: dynamic news image; trophy lift]" />
+					</record>
+					<!-- PROP_YEAR -->
+					<record id="object_property" get_property="year" set_property="var1" />
+				</widget>
+			</container>
+			<!-- Comp logo -->
+			<widget class="object_portrait_picture" id="log2" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+				<!-- PROP_COMPETITION -->
+				<record id="object_property" get_property="comp" set_property="objt" />
+			</widget>
+			<widget class="spacer" />
+		</container>
+		<widget class="spacer" />
+	</container>
+
+	<!-- Ticker tape coloured to teams colours -->
+	<container class="client_object_viewer_xml_panel" id="tape">
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<!-- PROP_TEAM -->
+		<record id="object_property" get_property="Ttea" set_property="objt" />
+
+		<widget class="picture" file="photos/dynamic/ticker 1/ticker" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<record id="object_property">
+				<list id="get_properties">
+					<!-- PROP_TEAM_FOREGROUND_COLOUR1 -->
+					<record get_property="oPCn" set_property="rrep"/>
+					<!-- PROP_TEAM_BACKGROUND_COLOUR1 -->
+					<record get_property="oSCn" set_property="brep"/>
+				</list>
+			</record>
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,22 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="hscr" set_property="hidn" target="psco"/>
+		<record get_property="hcor" set_property="hidn" target="pcor"/>
+	</list>
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<widget class="client_object_viewer_xml_panel" file="widgets/player picture name nationality and description" auto_size="vertical">
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>
+
+	<widget class="spacer"/>
+
+	<container class="player_reports_overview_summary_panel" auto_size="vertical" id="psco" file="player/player reports overview for contract promises" hidden="true">
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</container>
+
+	<container class="player_scout_reports_panel" auto_size="vertical" id="pcor" file="player/player coach report for contract promises" hidden="true">
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</container>
+
+</panel>

@@ -1,0 +1,146 @@
+<panel class="press_conference_history_panel">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<layout class="arrange_vertical_attachment" layout="-7, -10" offset="0" gap="1"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<boolean id="save_session_state" valu="true" />
+
+	<container class="main_box" red_replacement="light_box_background">
+		<translation id="title" translation_id="316648" type="use" value="Press Conferences[COMMENT: screen title]" />
+		<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" />
+
+		<widget class="table" id="htbl" mode="fill_rows, stripe_rows, show_bullets, select_rows,dont_allow_empty_selection" layout="-1, -2, -4, -2, -2, -2" fixed_size_rows="true" select_event="sepc" column_spacing="5" navigation_container="true">
+
+			<boolean id="save_session_state" value="true" />
+			<flags id="default_sort_column" value="date" />
+
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="230120" type="use" value="Date" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="353060" type="use" value="Type[COMMENT: table heading; type of press interaction; press conference or interview]" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="248089" type="use" value="Headline" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="281370" type="use" value="Interviewee[COMMENT: table heading; name of person being interviewed]" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="281371" type="use" value="Location[COMMENT: table heading; where press conference was held]" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="281372" type="use" value="Reason[COMMENT: table heading; reason for press conference]" />
+				</record>
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="0" navigation_focus_target="false"/>
+				<record indx="1" multiline="false" />
+				<record indx="2" multiline="false"/>
+				<record indx="3" multiline="false"/>
+				<record indx="4" multiline="false"/>
+				<record indx="5" multiline="false"/>
+				<record indx="6" multiline="false"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" id="date" sort_ascending="false" left="5"/>
+			</list>
+
+		</widget>
+	</container>
+
+	<!-- The question we are displaying -->
+	<container class="main_box" navigation_container="true">
+		<translation id="title" translation_id="281373" type="use" value="Questions[COMMENT:sub-section title; press conference history]" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+		<layout class="arrange_horizontal_attachment" layout="-10, -6" offset="0" gap="20"/>
+
+		<widget class="text" id="quet" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="left_right_list" id="qtog" save_session_state="true" auto_size="vertical" />
+
+			<container class="table" id="dtbl" mode="fill_rows" layout="-1, -2" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2" />
+
+				<list id="headings">
+					<record alignment="left,centre_y" column_span="2">
+						<translation id="text" translation_id="281374" type="use" value="Details[COMMENT: panel heading; reason for press conference]" />
+					</record>
+				</list>
+
+				<list id="column_widget_properties">
+					<record index="1" spec="text" colour="selection" auto_size="vertical" />
+				</list>
+
+				<list id="column_table_properties">
+					<record indx="0" sort_disabled="true" />
+					<record indx="1">
+						<boolean id="sort_disabled" value="true" />
+						<flags id="alignment" value="centre_y" />
+					</record>
+				</list>
+
+				<!-- These match upto the rows defined in the table -->
+				<!-- if the widgets order is changed, update this	-->
+				<list id="row_properties">
+					<record indx="1" initial_id="rwjs" />
+					<record indx="2" initial_id="rwjp" />
+					<record indx="3" initial_id="rwjr" />
+					<record indx="4" initial_id="rwsc" />
+					<record indx="5" initial_id="rwtm" />
+					<record indx="6" initial_id="rwns" />
+				</list>
+
+				<widget class="label" col="0" row="0">
+					<translation id="text" translation_id="281375" type="use" value="Media Source[COMMENT: table heading; newspaper etc]" />
+				</widget>
+				<widget class="text" id="medi" col="1" row="0" />
+
+				<widget class="label" col="0" row="1">
+					<translation id="text" translation_id="281376" type="use" value="Journalist[COMMENT: table heading; press conference]" />
+				</widget>
+				<widget class="text" id="jour" col="1" row="1" />
+
+				<widget class="label" col="0" row="2">
+					<translation id="text" translation_id="247713" type="use" value="Personality" />
+				</widget>
+				<widget class="text" id="pern" col="1" row="2" />
+
+				<widget class="label" col="0" row="3">
+					<translation id="text" translation_id="281382" type="use" value="Relationship[COMMENT: Press conference; relationship with journalist]" />
+				</widget>
+				<widget class="text" id="rela" col="1" row="3" />
+
+				<widget class="label" col="0" row="4">
+					<translation id="text" translation_id="289483" type="use" value="Match[COMMENT: table heading; press conference; pre-match]" />
+				</widget>
+				<widget class="text" id="scor" col="1" row="4" />
+
+				<widget class="label" col="0" row="5">
+					<translation id="text" translation_id="329226" type="use" value="Other Team[COMMENT: table heading; press conference; pre-match; this has been renamed from 'Opposition' as the other team involved in a question doesn't always refer to a match opponent]" />
+				</widget>
+				<widget class="team_button" id="team" col="1" row="5" />
+
+				<widget class="label" col="0" row="6">
+					<translation id="text" translation_id="281378" type="use" value="Signing[COMMENT: table heading; press conference; new signing]" />
+				</widget>
+				<widget class="person_button" id="sign" col="1" row="6" />
+
+				<widget class="label" col="0" row="7" id="uniL">
+					<string id="text" type="use" value="Conference Unique ID" />
+				</widget>
+				<widget class="text" id="unid" col="1" row="7" />
+
+			</container>
+
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,47 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="main_box">
+		<translation id="title" translation_id="383647" type="use" value="Sponsorship Income[COMMENT: FR 10982, content for Finances Screen]" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		
+		<widget class="table" id="ctbl" mode="fill_rows,stripe_rows" layout="40,-1,-1" fixed_size_rows="false" auto_size_rows="true" save_session_state="true">
+			<record id="default_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+
+			<list id="column_table_properties">
+				<record id="pos ">
+					<record id="column_heading">
+						<translation id="text" translation_id="242883" type="use" value="Pos" />
+						<flags id="column" value="0" />
+					</record>
+				</record>
+				<record  id="club">
+					<record id="column_heading">
+						<translation id="text" translation_id="229408" type="use" value="Team" />
+						<flags id="column" value="1" />
+					</record>
+				</record>
+				<record id="spon">
+					<record id="column_heading">
+						<translation id="text" translation_id="383647" type="use" value="Sponsorship Income[COMMENT: FR 10982, content for Finances Screen]" />
+						<flags id="column" value="2" />
+					</record>
+				</record>
+
+				<record>
+					<record id="column_heading">
+						<translation id="text" translation_id="319589" type="use" value="City[COMMENT: team stadium city, short title]" />
+						<flags id="column" value="3" />
+					</record>
+				</record>
+
+			</list>
+		</widget>
+
+		<widget class="text" id="nodt" alignment="centre">
+			<translation id="text" translation_id="402382" type="use" value="No data to show[COMMENT: FR 14193; could be more specific to this panel or completely generic and reusable]" />
+		</widget>
+	</container>
+</panel>

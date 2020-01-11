@@ -1,0 +1,17 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container class="inner_box_no_margin">
+
+			<layout class="arrange_vertical_attachment" layout="-4, -5" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<widget class="text" alignment="centre_x,bottom" font="label">
+				<translation id="text" translation_id="227785" type="use" value="Contract Expires"/>
+			</widget>
+			<widget class="contract_expiry_button" id="exdt" alignment="centre_x,top" font="value"/>
+	</container>
+
+</panel>

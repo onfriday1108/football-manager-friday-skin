@@ -1,0 +1,51 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!--team logos-->
+	<container>
+		<!--logo-->
+		<widget class="match_team_logo_picture" id="hoLo" team_index="0" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="40" height="40">
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="4" />
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<!--logo-->
+		<widget class="match_team_logo_picture" id="awLo" team_index="1" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="40" height="40">
+			<layout class="stick_to_sides_attachment" alignment="right,top" inset="4" />
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+		<layout class="arrange_horizontal_attachment" layout="-25,-1,-25,-1,-25" offset="0" gap="0"/>
+
+		<!-- Left chart-->
+		<widget class="vertical_bar_chart" id="left" appearance="charts/bar/custom/action zones/bar">
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="22"/>
+		</widget>
+
+		<widget class="spacer" />
+
+		<!-- Middle chart -->
+		<widget class="vertical_bar_chart" id="midl" appearance="charts/bar/custom/action zones/bar">
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="22"/>
+		</widget>
+
+		<widget class="spacer" />
+
+		<!-- Right chart -->
+		<widget class="vertical_bar_chart" id="rigt" appearance="charts/bar/custom/action zones/bar">
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="22"/>
+		</widget>
+
+	</container>
+</panel>

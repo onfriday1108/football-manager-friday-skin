@@ -1,0 +1,6 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+  
+  <widget class="injury_time_out_label" id="injl" />
+</panel>

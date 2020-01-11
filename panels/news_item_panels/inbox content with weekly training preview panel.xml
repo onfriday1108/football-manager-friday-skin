@@ -1,0 +1,29 @@
+﻿<panel>
+	<!-- due to this item being made advanced_unique, game/panels/news_item_panels/inbox content with weekly training preview panel.xml is now used for the inbox -->
+	<string id="skin_style" value="subtle box" />
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<widget class="inbox_body_text" id="bdtx" colour="inbox_text"/>
+	<container class="main_box" appearance="boxes/custom/inbox attachment/personal/paper">
+		<attachment_group class="vertical_arrange" vertical_layout="55,-1" vertical_offset="0" />
+
+		<!-- Title container -->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="-2,-3" vertical_inset="0" />
+			<container>
+				<widget class="link_button" font="title" size="xlarge" alignment="left" auto_size="all" section="ttcP" appearance="buttons/link/title/button">
+					<layout class="stick_to_sides_attachment" alignment="top,left" inset="12" />
+					<translation id="text" translation_id="466488" type="use" value="Training Calendar[COMMENT: Training Overview calendar link]" />
+				</widget>
+			</container>
+			<widget class="tactic_slot_tab_container" id="prep" file="tactics/tactic slot tab container training inbox overview" />
+		</container>
+
+		<container class="scrolling_box">
+			<container class="vertical_arrange_container" id="twCn" auto_size="vertical" />
+		</container>
+	</container>
+
+</panel>

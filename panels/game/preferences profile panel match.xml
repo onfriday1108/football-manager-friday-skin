@@ -1,0 +1,17 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!--popup button for choosing the user-->
+	<container id="usar">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+
+		<widget class="label" auto_size="horizontal">
+			<translation id="text" translation_id="348262" type="use" value="Preferences for[COMMENT: label for choosing the user to edit preferences for]" />
+		</widget>
+		<widget class="popup_button" id="usrP" auto_size="all" select_event="usse" />
+	</container>
+
+	<widget class="manager_profile_panel" id="mpmp" file="human/manager profile panel match" />
+</panel>

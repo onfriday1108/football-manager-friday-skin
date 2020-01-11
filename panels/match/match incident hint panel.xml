@@ -1,0 +1,49 @@
+﻿<panel height="110" width="300">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="standard_popup_box">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!--left - icon and time-->
+		<container width="90">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--icon-->
+			<widget class="picture" id="icon" scale_picture="false" keep_aspect_ratio="true" image_alignment="centre" width="16" height="16">
+				<record id="object_property" get_property="type" set_property="valu" />
+			</widget>
+
+			<!--time-->
+			<widget class="text" id="time" multiline="true" alignment="centre" auto_size="vertical">
+				<record id="object_property" get_property="time" set_property="text" />
+			</widget>
+		</container>
+
+		<!--vertical separator-->
+		<widget class="vertical_divider"/>
+
+		<!--name and details-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--name-->
+			<widget class="text" id="pers" alignment="centre" auto_size="vertical" style="semi_bold">
+				<record id="object_property" get_property="Pers" set_property="text" />
+			</widget>
+
+			<!--sub head 1-->
+			<widget class="text" id="sub1" alignment="centre" auto_size="vertical" size="small">
+				<record id="object_property" get_property="text" set_property="text" />
+			</widget>
+
+			<!--sub head 2-->
+			<widget class="text" id="sub2" colour="faded text" alignment="centre" auto_size="vertical" size="small">
+				<translation id="text" translation_id="447556" type="use" value="Click to view replay[COMMENT: text informing the user they can click this to view a replay of a match incident]" />
+			</widget>
+
+		</container>
+	</container>
+</panel>

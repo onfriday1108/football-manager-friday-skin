@@ -1,0 +1,17 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<translation id="format" translation_id="416354" type="use" value="Include advice about [%string#1][COMMENT: FR 17000; backroom advice news panel setting popup title about a single topic]" />
+
+		<widget class="check_box" click_event="emal">
+			<translation id="title" translation_id="416355" type="use" value="Email report on topic[COMMENT: FR 17000; backroom advice news panel setting; enable emails about advice topic]" />
+		</widget>
+
+		<widget class="check_box" click_event="cntx">
+			<translation id="title" translation_id="416356" type="use" value="Receive contextual advice between emails[COMMENT: FR 17000; backroom advice news panel setting; enable contextual advice about advice topic]" />
+		</widget>
+	</container>
+</panel>

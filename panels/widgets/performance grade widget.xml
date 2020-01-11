@@ -1,0 +1,15 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="colr" set_property="colr" target="gtxt"/>
+		<record get_property="text" set_property="text" target="gtxt"/>
+		<record get_property="brep" set_property="brep" target="gbgp"/>
+		<record get_property="rrep" set_property="rrep" target="gbgp"/>
+	</list>
+	
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<widget class="picture" id="gbgp" image_alignment="centre" file="icons/48px/grade" scale_picture="true" keep_aspect_ratio="true"/>
+
+	<widget class="text" id="gtxt" style="bold" size="large" alignment="centre"/>
+	
+</panel>

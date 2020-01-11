@@ -1,0 +1,59 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+	
+	<boolean id="check_for_multiple_requests" value="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<widget class="table" id="pltb" layout="-1, -1, -1, 100, -1" mode="fill_rows, stripe_rows, printable, dont_ask_for_focus" fixed_size_rows="true" auto_size="vertical" column_spacing="8">
+		<list id="headings">
+			<record index="0" alignment="left,centre_y">
+				<translation id="text" translation_id="229689" type="use" value="Name"/>
+			</record>
+			<record index="1" alignment="left,centre_y">
+				<translation id="text" translation_id="229390" type="use" value="Nation"/>
+			</record>
+			<record index="2" alignment="left,centre_y">
+				<translation id="text" translation_id="310107" type="use" value="Group[COMMENT: nation qualifications panel; abbreviation for group stage]"/>
+			</record>
+			<record index="3" alignment="centre">
+				<translation id="text" translation_id="339771" type="use" value="Match Reports[COMMENT: news subscription info; label text for a news subscription type, indicating what sort of news the user will get if they subscribe to this feed]"/>
+			</record>
+			<record index="4" alignment="left,centre_y">
+				<translation id="text" translation_id="227884" type="use" value="Position"/>
+			</record>
+		</list>
+
+		<list id="column_table_properties">
+			<record index="0" auto_hide_priority="1" minimum_width="200"/>
+			<record index="1" auto_hide_priority="1" minimum_width="140"/>
+			<record index="2" auto_hide_priority="1" minimum_width="100"/>
+			<record index="3" auto_hide_priority="1"/>
+			<record index="4" auto_hide_priority="10" minimum_width="140"/>
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="0" alignment="left,centre_y"/>
+			<record index="1" alignment="left,centre_y"/>
+			<record index="2" alignment="left,centre_y"/>
+			<record index="3" alignment="centre"/>
+			<record index="4" alignment="left,centre_y"/>
+		</list>
+	</widget>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="right"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+		<widget class="button" id="SeAl" click_event="SeAl" auto_size="all">
+			<translation id="text" translation_id="247116" type="use" value="Select All"/>
+		</widget>
+		<widget class="button" id="SeNn" click_event="SeNn" auto_size="all">
+			<translation id="text" translation_id="248399" type="use" value="Remove All"/>
+		</widget>
+		<widget class="button" id="SeCf" click_event="SeCf" auto_size="all">
+			<translation id="text" translation_id="229918" type="use" value="Confirm"/>
+		</widget>
+	</container>
+
+</panel>

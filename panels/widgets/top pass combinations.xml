@@ -1,0 +1,32 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="standard_popup_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+		
+		<widget class="table" id="tPtb" layout="-1,45" mode="fill_rows, show_bullets, select_rows, dont_allow_empty_selection" auto_size_rows="true" fixed_size_rows="false" default_sort_column="stad" save_session_state="true">
+			<event id="select_event" event_id="PsCt" event_target="glob" />
+			<list id="column_table_properties">
+				<record id="comb">
+					<boolean id="sort_disabled" value="true" />
+					<record id="widget_info" class="text" />
+					<record id="column_heading">
+						<translation id="text" translation_id="450824" type="use" value="Combination[COMMENT: pass combinations label, will show the names of the players combining next to it]" />
+					</record>
+				</record>
+				<record id="totl">
+					<boolean id="sort_ascending" value="false" />
+					<record id="widget_info" class="text" />
+					<record id="column_heading">
+						<translation id="text" translation_id="450825" type="use" value="Total[COMMENT: pass combinations label, will show the total number of passes made by the combination of players]" />
+					</record>
+				</record>
+			</list>
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" />
+				<record index="1" alignment="left,centre_y" />
+			</list>
+			<integer id="default_sort_column" value="totl" />
+		</widget>
+	</container>
+</panel>

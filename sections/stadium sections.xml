@@ -1,0 +1,15 @@
+<!--
+this file contains a list of all of the sections in the game
+-->
+<properties>
+  <string id="text" value="Stadium"/>
+  <list id="items">
+    <record id="STov">
+      <translation id="text" translation_id="247414" type="use" value="Overview" />
+      <list id="items">
+        <!--profile-->
+        <record id="stov"/>
+      </list>
+    </record>
+  </list>
+</properties>

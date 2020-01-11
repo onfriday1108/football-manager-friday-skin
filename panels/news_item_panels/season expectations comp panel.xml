@@ -1,0 +1,24 @@
+<panel height="80">
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+	<layout class="arrange_horizontal_attachment" layout="40, -1" gap="6" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" />
+
+	<list id="properties_to_forward">
+    <record get_property="cnam" set_property="text" target="stgn"/>
+    <record get_property="Expc" set_property="text" target="expc"/>
+  </list>
+  
+  <!-- Comp logo -->
+  <widget class="object_portrait_picture" id="logo" scale_picture="true" image_alignment="centre" width="40">
+    <record id="object_property" get_property="objt" set_property="objt"/>
+  </widget>
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="middle" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+    <widget class="text" id="stgn" alignment="left,bottom" multiline="true"  auto_size="vertical" style="bold" size="11"/>
+    <widget class="text" id="expc" alignment="left,top" multiline="true" auto_size="vertical"/>
+  </container>
+
+</panel>

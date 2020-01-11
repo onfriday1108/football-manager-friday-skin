@@ -1,0 +1,98 @@
+﻿<panel>
+	<boolean id="should_force_refresh" value="true" />
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- No scout report -->
+	<container id="nsrc" class="main_box" hidden="true">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+
+		<container id="nocs" height="60">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+			</widget>
+			<widget class="icon_button" id="sctP" click_event="sctc" auto_size="horizontal" height="30" icon="icons/16px/search">
+				<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+			</widget>
+		</container>
+
+		<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+	</container>
+
+	<!-- Already being scounted -->
+	<container id="Arbs" class="main_box"  hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" id="arbt" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+		</widget>
+	</container>
+
+	<!-- Already being scouted by pool -->
+	<container id="Pool" class="main_box"  hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+		</widget>
+	</container>
+
+	<container id="scou"  hidden="true">
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container class="main_subtle_box" red_replacement="positive">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+				<widget class="text" font="title" colour="positive" auto_size="vertical">
+					<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+
+				</widget>
+			</container>
+
+			<widget class="table" id="tpro" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4">
+
+			</widget>
+
+		</container>
+
+
+		<container>
+
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container class="main_subtle_box" red_replacement="negative">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+				<widget class="text" font="title" colour="negative" auto_size="vertical">
+					<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]" />
+
+				</widget>
+			</container>
+
+			<widget class="table" id="tcon" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" row_spacing="4">
+
+			</widget>
+
+		</container>
+
+	</container>
+
+
+
+</panel>

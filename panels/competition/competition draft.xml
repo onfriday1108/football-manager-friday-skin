@@ -1,0 +1,72 @@
+<panel>
+	<layout class="arrange_vertical_attachment" layout="170, -1, 110" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+	<boolean id="viewing_old_draft" value="false"/>
+
+	<widget class="label" style="bold" size="large" auto_size="all" hidden="true" id="dndl">
+		<layout class="stick_to_sides_attachment" alignment="top" inset="70"/>
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
+		<translation id="text" translation_id="376544" type="use" value="Picks for the next draft will be displayed once it has been arranged.[COMMENT: FR 7045 - draft teams panel - competition draft panel text for forthcoming drafts]"/>
+	</widget>
+
+	<widget class="draft_teams_panel" id="drtp"/>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1, 300" offset="0" gap="1"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<widget class="draft_player_list_panel" id="dfpl"/>
+
+		<widget class="table" id="nxdd" mode="fill_rows, stripe_rows" layout="-1, -1" auto_size_rows="true" hidden="true">
+			<list id="headings">
+				<record>
+					<translation id="text" translation_id="227998" type="use" value="Draft"/>
+					<flags id="alignment" value="left,centre_y"/>
+				</record>
+				<record>
+					<translation id="text" translation_id="230120" type="use" value="Date"/>
+					<flags id="alignment" value="left,centre_y"/>
+				</record>
+			</list>
+		</widget>
+
+		<container class="main_box" id="tabs">
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" vertical_inset="0"/>
+
+			<container class="tabbed_container" default_item="drpp" save_session_state="true">
+
+				<widget class="draft_picks_panel" id="drpp">
+					<translation id="title" translation_id="331967" type="use" value="Summary[COMMENT: MLS draft panel; summary panel title]"/>
+				</widget>
+
+				<container id="dfin">
+					<translation id="title" translation_id="331850" type="use" value="Draft Information[COMMENT: MLS draft panel; draft information panel title]"/>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+					<widget class="table" id="dfit" mode="fill_rows" layout="20, -1" row_spacing="6" auto_size_rows="true" all_content_same_height="false">
+						<list id="column_table_properties">
+							<record index="0" sort_disabled="true" alignment="left,centre_y"/>
+							<record index="1" sort_disabled="true" alignment="left,centre_y"/>
+						</list>
+
+						<list id="column_widget_properties">
+							<record index="0" alignment="left,centre_y" size="9" auto_size="vertical"/>
+							<record index="1" alignment="left,centre_y" size="9" auto_size="vertical"/>
+						</list>
+					</widget>
+				</container>
+
+				<widget class="draft_watch_list_panel" id="walp">
+					<translation id="title" translation_id="394534" type="use" value="Player Shortlist[COMMENT: Fr 538 title of player shortlist]"/>
+				</widget>
+			</container>
+
+			<widget class="label" id="astr" alignment="centre" size="9" auto_size="vertical" multiline="true"/>
+		</container>
+	</container>
+
+	<widget class="draft_pick_buttons_panel" id="dpbp"/>
+
+</panel>

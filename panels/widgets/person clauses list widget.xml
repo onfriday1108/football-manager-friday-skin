@@ -1,0 +1,46 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="top" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<widget class="label" id="claw" font="title" alignment="left,top" colour="accent" auto_size="vertical" />
+
+		<container class="inner_box_no_margin">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<widget class="text" id="desw" alignment="left" size="10" auto_size="vertical">
+			</widget>
+
+			<widget class="text" id="fdes" alignment="left" size="10" auto_size="vertical" hidden="true">
+			</widget>
+
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="right" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+				<widget class="button" id="sclb" auto_size="all" click_event="stce" hidden="true">
+					<translation id="text" translation_id="296331" type="use" value="Sell Clause" />
+				</widget>
+
+				<widget class="button" id="bclb" auto_size="all" click_event="btce" hidden="true">
+					<translation id="text" translation_id="296332" type="use" value="Buy Clause" />
+				</widget>
+
+				<widget class="button" id="mofb" auto_size="all" click_event="mkof" hidden="true">
+					<translation id="text" translation_id="242212" type="use" value="Make Offer" />
+				</widget>
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

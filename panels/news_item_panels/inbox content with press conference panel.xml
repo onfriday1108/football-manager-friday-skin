@@ -1,0 +1,8 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+  <boolean id="save_session_state" value="true"/>
+
+  <widget class="press_conference_panel" file="human/press conference inbox panel" id="pcbx" is_in_inbox="true" height="590"/>
+  
+</panel>

@@ -1,0 +1,85 @@
+﻿<panel id="dlog">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="4"/>
+	<layout class="arrange_vertical_attachment" layout="30, 40 -1, 30"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+	<string id="title" value="Press Conference Question Debug"/>
+
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" layout="100, -1, 100, -1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<!-- list of press conference questions sorted by id -->
+		<widget class="text" auto_size="vertical" width="100" alignment="left, centre_y">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			<string id="text" value="Listed by ID"/>
+		</widget>
+
+		<container class="horizontal_arrange_container" height="35" alignment="left">
+			<widget class="icon_button" id="prvi" height="30" width="45" icon="icons/16px/left" appearance="buttons/standard/split/left/button" disabled="true">
+				<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			</widget>
+			
+			<widget class="popup_button" id="idls" fixed="false" auto_size="vertical" width="200">
+				<string id="text" value="Pick"/>
+				<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			</widget>
+
+			<widget class="icon_button" id="nxti" height="30" width="45" icon="icons/16px/right" appearance="buttons/standard/split/right/button" disabled="true">
+				<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			</widget>
+		</container>
+
+		<!-- list of press conference questions sorted by type -->
+		<widget class="text" auto_size="vertical" width="150" alignment="left, centre_y">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			<string id="text" value="Listed by type"/>
+		</widget>
+
+		<container class="horizontal_arrange_container" height="35" alignment="left">
+			<widget class="icon_button" id="prvt" height="30" width="45" icon="icons/16px/left" appearance="buttons/standard/split/left/button" disabled="true">
+				<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			</widget>
+
+			<widget class="popup_button" id="ctls" fixed="false" auto_size="vertical" width="200">
+				<string id="text" value="Pick"/>
+				<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			</widget>
+
+			<widget class="icon_button" id="nxtt" height="30" width="45" icon="icons/16px/right" appearance="buttons/standard/split/right/button" disabled="true">
+				<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			</widget>
+		</container>
+	</container>
+
+	<container height="40">
+		<layout class="arrange_horizontal_attachment" layout="75, -1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+		
+		<widget class="text" auto_size="all" alignment="left, centre_y">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			<string id="text" value="Messages:"/>
+		</widget>
+
+		<container class="scrolling_box">
+			<layout class="stick_to_sides_attachment" alignment="vertical"/>
+			<widget class="text" id="msgw" multiline="true" auto_size="vertical" alignment="left, centre_y"/>
+		</container>
+	</container>
+
+	<container id="nuic">
+		<layout class="fit_children_attachment" alignment="vertical, extend" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+		<!-- press conference UI is added here -->
+	</container>
+
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+
+		<widget class="button" id="canc" auto_size="all">
+			<string id="text" value="Close"/>
+		</widget>
+	</container>
+
+</panel>

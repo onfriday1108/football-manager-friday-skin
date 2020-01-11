@@ -1,0 +1,84 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" layout="100, 420, -1" offset="0" gap="6"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6" />
+
+	<!-- Header with portrait & important info-->
+	<widget class="player_personal_details_panel" id="ppdp">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+
+	<!-- Middle row of large panels -->
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container class="horizontal_adaptive_container"   offset="0" inset="0" gap="6" mode="distribute_equally">
+			<!-- Default: Attributes -->
+			<container class="inner_subtle_box" appearance="boxes/subsection/standard/paper" minimum_width="640" default_width="-3" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<translation id="title" translation_id="229822" type="use" value="Attributes" />
+				<widget class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true">
+					<record id="object_property" get_property="objt" set_property="objt" />
+					<integer id="default_for_unemployed_managers" value="pat1"/>
+					<integer id="default_for_international_managers_other_team" value="pat1"/>
+					<integer id="default_for_everyone_else" value="pat1"/>
+					<integer id="default_for_versus_mode" value="pat1"/>
+				</widget>
+			</container>
+			<!-- Positions -->
+			<container class="inner_subtle_box" appearance="boxes/subsection/standard/paper" default_width="-3" priority="2" >
+				<translation id="title" translation_id="420717" type="use" value="Positions &amp; Roles[COMMENT: Player comparison type header, feel free to use an alternative to an ampersand if it's not your convention but please use appropriate character references as done here]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<widget class="player_positions_indicator_panel" id="ppi1" file="player/player positions indicator" width="-1" priority="1">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+
+			<!-- Default: Biography -->
+			<container class="client_object_viewer_selector_panel" id="cos2" file="player/player overview big selector panel" save_session_state="true"  minimum_width="330" default_width="-2" priority="3">
+				<integer id="default_for_unemployed_managers" value="phb1"/>
+				<integer id="default_for_international_managers_other_team" value="phb1"/>
+				<integer id="default_for_everyone_else" value="phb1"/>
+				<integer id="default_for_versus_mode" value="phb1"/>
+			</container>
+			<!-- Default: Comparison -->
+			<container class="client_object_viewer_selector_panel" id="cos3" file="player/player overview big selector panel" save_session_state="true"  minimum_width="330" default_width="-2" priority="4">
+				<integer id="default_for_unemployed_managers" value="pscR"/>
+				<integer id="default_for_international_managers_other_team" value="pscR"/>
+				<integer id="default_for_everyone_else" value="pscR"/>
+				<integer id="default_for_versus_mode" value="pscR"/>
+			</container>
+		</container>
+	</container>
+
+	<!-- Smaller panels -->
+	<container class="vertical_adaptive_container" offset="0" inset="0" gap="6" >
+		<!-- Form-->
+		<widget class="player_form_summary_panel" id="Pfor" file="fantasy draft/player/player form summary panel profile" late_loading="true" is_in_info_popup="true" priority="1" default_height="100" minimum_height="100">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+		<!-- Season stats-->
+		<container class="main_box" minimum_height="120" default_height="-3"  priority="100" default_width="-2">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+				<record id="object_property">
+					<list id="get_properties">
+						<!-- Hide this panel if player is in inactive league-->
+						<record id="object_property" get_property="objt" set_property="objt"/>
+						<record id="object_property" get_property="Pila" set_property="hidn"/>
+					</list>
+				</record>
+			</widget>
+			<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+				<record id="object_property">
+					<list id="get_properties">
+						<!-- Show this panel if player is in inactive league-->
+						<record id="object_property" get_property="Pila" set_property="Shwn"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</list>
+				</record>
+			</widget>
+		</container>
+	</container>
+</panel>

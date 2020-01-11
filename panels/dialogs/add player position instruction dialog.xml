@@ -1,0 +1,49 @@
+<panel height="500" width="500">
+	<translation id="title" translation_id="375313" type="use" value="Select player(s) to add[COMMENT: title for a dialog to allow choosing of a player to add a custom tactic position instruction for, can be multiple players, use top ten matches]" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal"  apply_to_children="true" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" id="expl" auto_size="vertical" />
+
+		<!--player list-->
+		<widget class="client_object_list_table" id="pltb" select_event="selp" database_table_type="1" navigation_focus_target="true">
+			<flags id="mode" value="select_rows, stripe_rows, show_bullets, select_multiple" />
+			<integer id="contextual_handler_column_id" value="Pnms" />
+
+			<!-- default sort by playing position (primary), then picked position, then name -->
+			<list id="default_sort_column">
+				<integer value="PabP" />
+				<integer value="Pnms" />
+			</list>
+
+			<!--available views-->
+			<record id="viewed_property_ids">
+				<record id="Pnms" dslk="true" person_is_player="true" links_enabled_in_popup="false" />
+				<!-- person name -->
+				<record id="PabP" colour="text" />
+				<!-- position ability -->
+				<record id="PpsC" dslk="true" colour="text" />
+				<!-- position -->
+			</record>
+		</widget>
+	</container>
+
+	<container>
+
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="ok  ">
+			<translation id="text" translation_id="347951" type="use" value="Add Selected Player[COMMENT: add player position instruction, allow choosing of a player to add a custom tactic position instruction for]" />
+		</widget>
+
+		<widget class="icon_button" id="canc" auto_size="all">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+		</widget>
+	</container>
+
+</panel>

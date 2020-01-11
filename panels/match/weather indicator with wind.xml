@@ -1,0 +1,11 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<widget class="picture" id="icon" image_alignment="centre" height="30" scale_picture="true" keep_aspect_ratio="true" />
+
+	<widget class="text" id="temp" spec="text" size="normal" auto_size="vertical" alignment="centre_x,top"/>
+
+	<widget class="label" id="wind" spec="text" size="xsmall" auto_size="vertical" alignment="centre_x,top" colour="faded text"/>
+</panel>
+

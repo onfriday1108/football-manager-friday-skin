@@ -1,0 +1,40 @@
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="icon_box" icon="icons/custom/icon box/history">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="left" horizontal_inset="0" vertical_offset="0" />
+
+			<string id="skin_style" value="title link"/>
+
+			<!-- Linked header -->
+			<widget class="link_button" section="PHac" auto_size="all">
+				<translation id="text" translation_id="229719" type="use" value="History"/>
+			</widget>
+		</container>
+
+		<widget class="spacer" height="3"/>
+
+		<widget class="table" id="Olcl" layout="80, -1, -1" row_spacing="0" column_spacing="5" save_session_state="true" select_event="sltm" all_content_same_height="false" auto_size_rows="true" fixed_size_rows="false">
+			<flags id="mode" value="fill_rows, stripe_rows, printable"/>
+
+			<record id="default_properties">
+				<flags id="alignment" value="left,centre_y"/>
+			</record>
+
+			<list id="column_table_properties">
+				<record indx="0" id="dtCL" minimum_width="100" auto_hide_priority="1" left="5"/>
+				<record indx="1" id="tmCL" minimum_width="100" auto_hide_priority="2" alignment="left,centre_y"/>
+				<record indx="2" id="jbCL" minimum_width="100" auto_hide_priority="3" left="5"/>
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="0" colour="faded text" size="small"/>
+				<record indx="1"/>
+				<record indx="2" colour="faded text" size="small"/>
+			</list>
+		</widget>
+	</container>
+</panel>

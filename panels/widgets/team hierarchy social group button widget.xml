@@ -1,0 +1,44 @@
+﻿<panel width="90" height="55">
+  <boolean id="should_force_refresh" value="true"/>
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="2" />
+    <!--highlight box-->
+    <container class="main_contrast_box" id="hghl" hidden="true" red_replacement="secondary">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+    </container>
+    <!--main box-->
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+      <layout class="stick_to_sides_attachment" alignment="all" inset="2" />
+
+      <container class="main_contrast_box" id="plbx" red_replacement="primary">
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+      </container>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+        <widget class="text" id="sgrt" alignment="centre" auto_size="vertical" spec="text" size="small" style="semi_bold" font="title" colour="secondary">
+          <layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+        </widget>
+
+        <widget class="text" id="ssat" alignment="centre" auto_size="vertical" spec="text" size="small" colour="secondary">
+          <layout class="centre_in_parent_attachment" alignment="vertical" offset="6" />
+        </widget>
+      </container>
+
+      <container class="main_contrast_box" id="ifsC"  hidden="true"  red_replacement="chemistry_influences_colour" height="12">
+        <layout class="arrange_horizontal_attachment"  alignment="middle" offset="4" gap="2" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+        <widget class="picture" width="12" file="icons/26px/info" image_alignment="centre" scale_picture="true" red_replacement="black" />
+        <widget class="text" id="sgst" alignment="left,centre_y" auto_size="horizontal" spec="text" size="small" style="semi_bold" font="title" colour="black" />
+      </container>
+    </container>
+
+  </container>
+  <widget class="button" id="hsgP" appearance="" click_event="hsgP">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </widget>
+</panel>

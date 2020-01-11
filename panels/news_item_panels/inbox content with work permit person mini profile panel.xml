@@ -1,0 +1,19 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<!-- content area -->
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,-1" horizontal_offset="0" vertical_alignment="top" vertical_offset="0" />
+
+		<container class="inbox_mini_profile_player_details_panel" id="psdt" file="news_item_panels/inbox mini profile player details horizontal panel with nationality" ignore_colour_override="true">
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</container>
+
+		<!--scout report-->
+		<widget class="player_scout_reports_panel" id="pcrp" file="player/player coach reports summary only">
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+
+	</container>
+
+</panel>

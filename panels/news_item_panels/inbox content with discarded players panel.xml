@@ -1,0 +1,15 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+	<boolean id="check_for_multiple_requests" value="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<!-- main body text -->
+	<widget class="inbox_body_text" id="bdtx" auto_size="vertical"/>
+	
+	<widget class="table" id="pltb" layout="50, -2, -1, -1" mode="fill_rows, printable, dont_ask_for_focus" fixed_size_rows="true" row_height="70" auto_size="vertical" column_spacing="8">
+		<flags id="row_appearance" value="tables/standard/row/divider/row"/>
+	</widget>
+
+</panel>
+

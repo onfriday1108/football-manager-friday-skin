@@ -1,0 +1,28 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="vertical" offset="0" gap="0" do_not_size="true"/>
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- Total value and label -->
+	<container id="totC">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4"/>
+
+		<widget class="formatted_label" id="totW" format="[%number#1]" spec="text" size="large" style="bold" auto_size="all" />
+		<widget class="text" id="totL" spec="text" size="large" multiline="false" auto_size="vertical" alignment="left,can_scale"/>
+	</container>
+
+	<!-- Second value and label -->
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4" />
+
+		<widget class="formatted_label" id="valW" format="[%number#1]" spec="text" size="large" style="bold" auto_size="all" />
+		<widget class="text" id="valL" spec="text" size="large" multiline="false" auto_size="vertical" alignment="left,can_scale"/>
+	</container>
+
+	<!-- Percentage val1/val2 -->
+	<widget class="percentage_label" id="perc" spec="text" size="18" style="bold" alignment="left,top" colour="selection" auto_size="all"/>
+</panel>

@@ -1,0 +1,35 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+
+		<translation id="title" translation_id="242897" type="use" value="Major Clubs" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<!--table listing the major clubs-->
+			<widget class="client_object_list_table" id="ctbl" mode="fill_rows, stripe_rows, keyboard">
+				<record id="viewed_property_ids">
+					<record id="Ttea" navigation_focus_target="true"/>
+					<record id="Tnat" />
+				</record>
+			</widget>
+
+			<widget class="label" id="nocl" alignment="left,top">
+				<translation id="text" translation_id="300913" type="use" value="No Clubs.[COMMENT: label shown when a nation doesn't have any club teams]" />
+			</widget>
+		</container>
+
+
+		<widget class="link_appearance_button" id="gtcl">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+			<translation id="text" translation_id="297303" type="use" value="View all clubs[COMMENT: major clubs snapshot, text link to display all clubs]" />
+		</widget>
+
+
+	</container>
+
+</panel>

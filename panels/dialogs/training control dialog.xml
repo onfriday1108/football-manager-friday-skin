@@ -1,0 +1,44 @@
+<panel id="dlog" width="980" height="220">
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" gap="8" offset="4" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+	<layout class="centre_in_parent_attachment" alignment="all" />
+
+	<widget class="text" id="text" auto_size="vertical" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom" gap="8" offset="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="check_box" id="atcc" hidden="true">
+			<translation id="text" translation_id="301057" type="use" value="Don't show this message again.[COMMENT: The title of a checkbox displayed in a dialog, which allows the user to request that the dialog isn't displayed again.]" />
+		</widget>
+
+		<container id="btns">
+
+			<layout class="fit_children_attachment" alignment="vertical,extend" gap="0" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" wrap="true">
+				<global id="gap" name="ui.button_row_gap" />
+			</layout>
+
+			<widget class="primary_icon_button" id="yes" hidn="true" event_id="yes" height="30" auto_size="horizontal">
+				<translation id="text" translation_id="452375" type="use" value="Yes, but only this player for the next month[COMMENT: Text button; confirming that the manager wants to change training, revision to ID 420611]" />
+			</widget>
+			<widget class="primary_icon_button" id="exBu" hidden="true" click_event="tdEX" height="30" auto_size="horizontal">
+				<translation id="text" translation_id="494112" type="use" value="Take control of this player's individual training[COMMENT: AREA: Training; SUB-AREA: Individual Training; FR-BN: 11084; TONE: Formal; CHARLIMIT: ; REF-ID: n/a; NOTE: The human should take control of this players training indefinitely]" />
+			</widget>
+			<widget class="primary_icon_button" id="no" hidn="true" event_id="no" height="30" auto_size="horizontal">
+				<translation id="text" translation_id="452376" type="use" value="Yes, and take control of all individual training[COMMENT: Text button; confirming that the manager wants to change training and take control of training, revision to ID 420612]" />
+			</widget>
+			<widget class="button" id="canc" hidn="true" event_id="canc" height="30" auto_size="horizontal">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+		</container>
+
+	</container>
+
+
+</panel>

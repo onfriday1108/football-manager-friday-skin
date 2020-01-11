@@ -1,0 +1,19 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="-2, -3" gap="10" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-2, -4, -2" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+		<widget class="spacer" />
+		<widget class="pie_chart" id="piCH"/>
+		<widget class="spacer" />
+	</container>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="middle" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+		<widget class="table" msov="itSL" msex="itUL" id="txtG" layout="-1" row_height="28" row_spacing="0" auto_size="vertical"/>
+	</container>
+
+</panel>

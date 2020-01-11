@@ -1,0 +1,21 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="10"/>
+	
+	<flags id="old_applicant_row_appearance" value=""/>
+	<flags id="new_applicant_row_appearance" value="tables/custom/cards/yellow/row"/>
+
+	<widget class="client_object_list_table" id="lstb" fixed_size_rows="true" auto_size="vertical" database_table_type="1">
+		<flags id="mode" value="fill_rows, select_rows, stripe_rows, show_bullets, select_multiple"/>
+		<integer id="contextual_handler_column_id" value="Pnms"/>
+		<record id="viewed_property_ids">
+			<record id="Pnms"/>
+			<record id="PSag"/>
+			<record id="Pnat"/>
+			<record id="Pccj" multiline="false">
+				<flags id="expj" value="false"/>
+			</record>
+			<record id="Pclb" width="-1"/>
+		</record>
+	</widget>
+
+</panel>

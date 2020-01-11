@@ -1,0 +1,34 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="vertical_split_container" starting_layout="-4, -3" save_default_state="true" min_width_left="425" min_width_right="425">
+
+		<widget class="match_team_squad_panel" id="tesq" file="match/match team squad set piece views" />
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <!-- buttons area -->
+      <container id="btna" embed_in_frame="true">
+
+        <layout class="arrange_horizontal_attachment" alignment="right" embed_in_frame="true" gap="5" offset="10" />
+        <layout class="stick_to_sides_attachment" alignment="top" inset="6" apply_to_children="true" embed_in_frame="true" />
+        <layout class="stick_to_sides_attachment" alignment="top,right" embed_in_frame="true" inset="0" />
+
+        <layout class="fit_children_attachment" alignment="vertical" embed_in_frame="true" offset="6" gap="0" />
+        <layout class="fit_children_attachment" alignment="horizontal,fill" offset="10" embed_in_frame="true" gap="5" />
+
+        <!--auto pick button-->
+        <widget class="subtle_button" id="AuPk" click_event="AuPk" auto_size="all" embed_in_frame="true" appearance="buttons/custom/match/standard/normal/button" font="fonts/button">
+          <translation id="text" translation_id="329715" type="use" value="Auto-Pick[COMMENT: button label used to auto-pick penalty takers for a penalty shootout]" />
+        </widget>
+
+      </container>
+
+      <!--set piece takers list-->
+      <widget class="set_piece_takers_panel" id="take" file="tactics/set piece takers" />
+
+    </container>
+  </container>
+
+</panel>

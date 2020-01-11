@@ -1,0 +1,83 @@
+﻿<!-- panel to be used during the welcome to the club briefing -->
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container class="main_transparent_box">
+		<translation id="title" translation_id="491936" type="use" value="Arrangements[COMMENT: AREA: Welcome to team; SUB-AREA: arrangements step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the sub panel containing the available options on the arrangements step of the welcome pack when the human has taken over a club or national team, this covers friendlies vs youth teams and an unveiling press conference]"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+		<widget class="table" mode="fill_rows" id="tabl" layout="-1, 200" auto_size_rows="false" fixed_size_row="true" auto_size="vertical" row_height="35" row_spacing="4">
+			<list id="column_widget_properties">
+				<record index="0" alignment="left, centre_y"/>
+				<record index="1" alignment="right, centre_y"/>
+			</list>
+
+			<widget class="text" auto_size="none" row="0" col="0">
+				<translation id="text" translation_id="491937" type="use" value="Schedule a press conference to meet the media?[COMMENT: AREA: Welcome to team; SUB-AREA: arrangements step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: String for the sub panel containing the available options on the arrangements step of the welcome pack when the human has taken over a club or national team asking if the user would like an introductory press conference to be set up]"/>
+			</widget>
+
+			<container row="0" col="1" height="35">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="-10" vertical_alignment="vertical" vertical_inset="0"/>
+
+				<widget class="radio_toggle_switch_left" id="pcys" group="0" selected="true" click_event="pcys" alignment="centre" auto_size="all">
+					<translation id="text" translation_id="242044" type="use" value="Yes"/>
+				</widget>
+
+				<widget class="radio_toggle_switch_right" id="pcno" group="0" selected="false" click_event="pcno" alignment="centre" auto_size="all">
+					<translation id="text" translation_id="231460" type="use" value="No"/>
+				</widget>
+			</container>
+
+			<widget class="text" auto_size="none" row="1" col="0">
+				<translation id="text" translation_id="491938" type="use" value="Arrange an intra-squad friendly for tomorrow to assess the squad?[COMMENT: AREA: Welcome to team; SUB-AREA: arrangements step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: String for the sub panel containing the available options on the arrangements step of the welcome pack when the human has taken over a club or national team asking if the user would like a friendly to be arranged between the main and b teams]"/>
+			</widget>
+
+			<container row="1" col="1" height="35">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="-10" vertical_alignment="vertical" vertical_inset="0"/>
+
+				<widget class="radio_toggle_switch_left" id="frys" group="1" selected="true" click_event="frys" alignment="centre" auto_size="all">
+					<translation id="text" translation_id="242044" type="use" value="Yes"/>
+				</widget>
+
+				<widget class="radio_toggle_switch_right" id="frno" group="1" selected="false" click_event="frno" alignment="centre" auto_size="all">
+					<translation id="text" translation_id="231460" type="use" value="No"/>
+				</widget>
+			</container>
+
+			<widget class="text" auto_size="none" row="2" col="0">
+				<translation id="text" translation_id="491939" type="use" value="Send an advice report from the backroom staff?[COMMENT: AREA: Welcome to team; SUB-AREA: arrangements step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: String for the sub panel containing the available options on the arrangements step of the welcome pack when the human has taken over a club or national team asking if the user would like to receive a report on the current squad from their backroom staff]"/>
+			</widget>
+
+			<container row="2" col="1" height="35">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="-10" vertical_alignment="vertical" vertical_inset="0"/>
+
+				<widget class="radio_toggle_switch_left" id="bays" group="2" selected="true" click_event="bays" alignment="centre" auto_size="all">
+					<translation id="text" translation_id="242044" type="use" value="Yes"/>
+				</widget>
+
+				<widget class="radio_toggle_switch_right" id="bano" group="2" selected="false" click_event="bano" alignment="centre" auto_size="all">
+					<translation id="text" translation_id="231460" type="use" value="No"/>
+				</widget>
+			</container>
+
+			<widget class="text" id="DFrd" auto_size="none" row="3" col="0">
+				<translation id="text" translation_id="491940" type="use" value="Invite [%person#2] to become [%job#2]?[COMMENT: AREA: Welcome to team; SUB-AREA: arrangements step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: String for the sub panel containing the available options on the arrangements step of the welcome pack when the human has taken over a club or national team asking if the user would like to receive a report on the current squad from their backroom staff]"/>
+			</widget>
+
+			<container id="DFrb" row="3" col="1" height="35">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="-10" vertical_alignment="vertical" vertical_inset="0"/>
+
+				<widget class="radio_toggle_switch_left" id="PDFy" group="1" selected="true" click_event="PmDy" alignment="centre" auto_size="all">
+					<translation id="text" translation_id="242044" type="use" value="Yes"/>
+				</widget>
+
+				<widget class="radio_toggle_switch_right" id="PDFn" group="1" selected="false" click_event="PmDn" alignment="centre" auto_size="all">
+					<translation id="text" translation_id="231460" type="use" value="No"/>
+				</widget>
+			</container>
+		</widget>
+	</container>
+
+</panel>

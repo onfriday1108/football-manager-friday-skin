@@ -1,0 +1,9 @@
+﻿<panel>
+  <attachment_group class="vertical_arrange_autosize"/>
+
+  <string id="eslf" value="icons/custom/staff/little guy empty"/>
+  <string id="eslc" value="staff empty slot colour"/>
+
+  <container class="horizontal_arrange_container" id="harg" wrap="true" alignment="left" offset="0" inset="0" gap="1" auto_size="vertical" />
+
+</panel>

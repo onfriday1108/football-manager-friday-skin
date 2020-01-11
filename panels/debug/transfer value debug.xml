@@ -1,0 +1,19 @@
+<panel>
+
+	<string id="title" value="Transfer Value Debug Panel" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<widget class="main_box">
+
+		<widget class="table" id="dvtb" mode="fill_rows, stripe_rows,keyboard" layout="-8" auto_size_rows="true" row_spacing="0">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<list id="column_table_properties">
+				<record indx="0" alignment="left,centre_y" sort_disabled="true" top="3" />
+			</list>
+
+		</widget>
+	</widget>
+
+</panel>

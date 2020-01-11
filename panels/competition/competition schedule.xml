@@ -1,0 +1,5 @@
+<panel>
+  	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+    
+	<widget class="calendar_panel" id="cale" calendar_view_mode="mnth" save_session_state="true"/>
+</panel>

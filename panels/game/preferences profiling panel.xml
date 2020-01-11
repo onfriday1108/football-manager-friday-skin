@@ -1,0 +1,45 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="main_box">
+
+    <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <container class="inner_subtle_box">
+        <translation id="title" translation_id="330384" type="use" value="Profile Settings[COMMENT: preferences: profile settings section title]" />
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+        <widget class="game_settings_viewer_panel" id="set1">
+
+          <!--this record contains any properties you want to pass on to the table-->
+          <record id="table_properties">
+            <flags id="mode" value="" />
+            <string id="layout" value="-8,-3,-18" />
+            <string id="row_spacing" value="5" />
+          </record>
+
+          <list id="viewed_property_ids">
+            <symbol value="output_speed_info" />
+            <symbol value="process_stats_enabled" />
+            <symbol value="game_stats_enabled" />
+            <symbol value="enable_player_injury_stats" />
+            <symbol value="output_comp_stats" />
+            <symbol value="in_game_profiler_enabled" />
+            <symbol value="output_seasonal_finances" />
+            <symbol value="output_navigation_log" />
+          </list>
+        </widget>
+
+      </container>
+
+    </container>
+
+    <widget class="preferences_button_panel" />
+  </container>
+</panel>

@@ -1,0 +1,38 @@
+<panel>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<layout class="arrange_vertical_attachment" layout="-1,48" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container class="main_box" >
+			<translation id="title" translation_id="348322" type="use" value="Squad Training Happiness[COMMENT: training overview panel; a breakdown of how happy and how fit the players in your squad are]" />
+			<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<container id="tHAP" class="pie_chart_with_guide">
+				<record id="pie_chart_properties">
+					<boolean id="draw_instant_hint" value="true" />
+					<integer id="highlight_value" value="10" />
+				</record>
+			</container>
+		</container>
+
+		<container class="team_training_tactic_panel" id="tttr" file="team/team training tactic news panel">
+		</container>
+
+	</container>
+
+
+	<container class="main_box" >
+		<translation id="title" translation_id="348321" type="use" value="Squad Fitness[COMMENT: training overview panel; showing an overview of the fitness of your squad]" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+		<widget class="horizontal_stacked_bar_chart" id="sqfB" height="6"/>
+
+	</container>
+
+</panel>

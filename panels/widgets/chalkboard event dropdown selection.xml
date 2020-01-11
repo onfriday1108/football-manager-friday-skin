@@ -1,0 +1,24 @@
+<panel collapsed="true" appearance="boxes/collapsable/standard/single/paper" save_session_state="true">
+
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" wrap="true" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+
+	<container embed_in_frame="true">
+		<layout class="fit_children_attachment" alignment="vertical" embed_in_frame="true" />
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" embed_in_frame="true" offset="8" gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="top" inset="6" apply_to_children="true" embed_in_frame="true" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" embed_in_frame="true" inset="0" />
+
+		<widget class="label" id="emTt" height="20" embed_in_frame="true" font="title"  alignment="left,centre_y">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="5" embed_in_frame="true"/>
+		</widget>
+
+		<widget class="check_box" id="sltA" click_event="slcA" alignment="left,centre_y" auto_size="all" embed_in_frame="true" value="false" appearance="">
+			<translation id="text" translation_id="247116" type="use" value="Select All" />
+		</widget>
+
+		<container width="20" embed_in_frame="true" height="1"/>
+
+	</container>
+</panel>

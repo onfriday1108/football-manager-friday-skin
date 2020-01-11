@@ -1,0 +1,94 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="345,2, -1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend"  />
+			<widget class="table" id="pstl" layout="-3, -2, -12, -3, -3, -3" mode="fill_rows, select_rows" auto_size_rows="true" select_event="spit">
+
+				<list id="headings">
+					<record alignment="left,centre_y" column="0">
+						<translation id="hint" translation_id="229797" type="use" value="Squad Number" />
+						<translation id="text" translation_id="316720" type="use" value="No.[COMMENT:team report, player squad number]" />
+					</record>
+					<record alignment="left,centre_y" column="1">
+						<translation id="hint" translation_id="242853" type="use" value="Status" />
+						<translation id="text" translation_id="318323" type="use" value="S[COMMENT:team report, abbreviation for player Status, space constraints mean only one letter advisable here, will be a column header for status icons]" />
+					</record>
+					<record alignment="left,centre_y" column="2">
+						<translation id="text" translation_id="316722" type="use" value="Name[COMMENT:team report, player name]" />
+					</record>
+					<record alignment="left,centre_y" column="3">
+						<translation id="hint" translation_id="232994" type="use" value="Info" />
+						<translation id="text" translation_id="316723" type="use" value="Inf.[COMMENT:team report, player info]" />
+					</record>
+					<record alignment="left,centre_y" column="4">
+						<translation id="hint" translation_id="229619" type="use" value="Rating" />
+						<translation id="text" translation_id="316724" type="use" value="Rat[COMMENT:team report, player rating]" />
+					</record>
+					<record alignment="left,centre_y" column="5">
+						<translation id="hint" translation_id="227857" type="use" value="Goals" />
+						<translation id="text" translation_id="316725" type="use" value="Gls[COMMENT:team report, goals scored by this player]" />
+					</record>
+				</list>
+
+				<list id="column_widget_properties">
+					<record index="0" alignment="left,centre_y" />
+					<record index="1" alignment="left,centre_y" auto_size="all" />
+					<record index="2" alignment="left,centre_y" />
+					<record index="3" alignment="left,centre_y" />
+					<record index="4" alignment="left,centre_y" />
+					<record index="5" alignment="left,centre_y" />
+				</list>
+
+				<list id="column_table_properties">
+					<record index="0" sort_disabled="true" />
+					<record index="1" sort_disabled="true"  alignment="left,centre_y"  />
+					<record index="2" sort_disabled="true" />
+					<record index="3" sort_disabled="true" />
+					<record index="4" sort_disabled="true" />
+					<record index="5" sort_disabled="true" />
+				</list>
+			</widget>
+		</container>
+
+		<!--separator-->
+		<widget class="horizontal_divider" />
+
+		<container class="inner_box_no_margin">
+			<layout class="arrange_vertical_attachment" alignment="top,extend"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="text" id="pnam" auto_size="vertical" font="title" size="large"/>
+
+			<widget class="scrolling_box" height="80">
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+					<widget class="text" id="pdes" auto_size="vertical" />
+				</container>
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" />
+
+				<widget class="link_button_title" id="link" section="Pcmp">
+					<translation id="text" translation_id="229984" type="use" value="Statistics" />
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+
+				</widget>
+
+				<widget class="table" id="stat" layout="-1" mode="fill_rows" auto_size_rows="false" fixed_size_rows="true" row_height="26" >
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				</widget>
+			</container>
+
+		</container>
+
+	</container>
+</panel>

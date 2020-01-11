@@ -1,0 +1,16 @@
+﻿<panel width="400" cancel_mouse_hide="true">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--touchline shouts-->
+		<container class="main_box" id="tlSc" appearance="boxes/popup/standard/titled/paper">
+			<translation id="title" translation_id="326992" type="use" value="Shouts[COMMENT:title for the custom touchline instructions list]" />
+
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		</container>
+	</container>
+
+</panel>

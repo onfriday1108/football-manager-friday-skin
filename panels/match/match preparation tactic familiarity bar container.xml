@@ -1,0 +1,23 @@
+<panel >
+
+  <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" apply_to_children="true" />
+
+  <container class="inner_box" id="fmiL" height="12" appearance="boxes/custom/tactic fam/paper">
+    <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+    <container class="horizontal_stacked_bar_chart" id="stBD" height="10" appearance="charts/bar/custom/tactics" animation_file="none">
+
+      <list id="colour">
+        <record value="tactical_familiarity_colour_1" />
+        <record value="tactical_familiarity_colour_2" />
+        <record value="black" />
+      </list>
+
+    </container>
+
+  </container>
+
+
+</panel>

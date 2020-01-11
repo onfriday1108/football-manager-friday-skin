@@ -1,0 +1,52 @@
+<panel width="340" height="540">
+
+	<!-- arrange items vertically, with text at top -->
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="10" offset="5" />
+	<layout class="centre_in_parent_attachment" alignment="all" />
+	<!-- stretch everything to the sides of the dialog -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+	<!-- text field - should resize vertically to ensure that it's contents fit -->
+	<translation id="title" translation_id="363725" type="use" value="Select Favourite Formation[COMMENT: dialog title, add manager; user can choose their favourite tactics formation]" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" font="text" size="normal" auto_size="vertical">
+				<translation id="text" translation_id="363635" type="use" value="Drag the shirts on the pitch to select your preferred formation, choose from a list of defaults or import a saved tactic.[COMMENT: dialog instructions, add manager]" />
+			</widget>
+			<widget class="popup_button" id="form" auto_size="vertical" />
+
+		</container>
+
+		<widget class="pitch_with_tactics" id="pitc" 
+						vertical="true" 
+						pitch_draw_grass="true" 
+						pitch_base_appearance="" 
+						pitch_pattern="ui circles" 
+						icon_flags="show_selection_image, dont_use_player_instructions_menu" 
+						allow_y_score_adjustment_for_roles="false" pitch_override_icon_size="3" 
+						pitch_dont_draw_indicators="true" 
+						pitch_alignment="can_scale" >
+			<integer id="line_width" value="1" />
+			<string id="pitch_line_colour" value="text" />
+		</widget>
+	</container>
+
+	<!-- standard buttons / these get shown & hidden by subclasses -->
+	<container id="btns">
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="ok" hidn="true" controller_button="y_button">
+			<translation id="text" translation_id="229829" type="use" value="Ok" />
+		</widget>
+		<widget class="icon_button" id="canc" hidn="true" auto_size="horizontal" height="30" controller_button="b_button">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+		</widget>
+	</container>
+
+</panel>

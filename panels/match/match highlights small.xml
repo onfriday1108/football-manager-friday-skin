@@ -1,0 +1,18 @@
+<panel>
+  <widget class="match_pitch_panel" id="pitc">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </widget>
+
+  <!-- YouTube button overlay-->
+  <widget class="icon_button" id="yout" fixed="true" click_event="rvoc" auto_size="all" icon="icons/sections/highlights" hidden="true">
+    <translation id="hint" translation_id="312690" type="use" value="Upload to YouTube[COMMENT: Button where user can post a video to YouTube]" />
+    <layout class="stick_to_sides_attachment" alignment="top" inset="45" />
+    <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+  </widget>
+
+	<!--<widget class="match_full_window_panel" id="over">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>-->
+
+</panel>

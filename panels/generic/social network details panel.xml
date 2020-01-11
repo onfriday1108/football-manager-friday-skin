@@ -1,0 +1,90 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container id="SOCP" class="tabbed_container">
+		<record id="top_properties">
+			<flags id="appearance" value="tabs/subsection" />
+			<flags id="auto_size" value="vertical" />
+			<flags id="alignment" value="top" />
+			<boolean id="use_alt_end_tab_appearances" value="false" />
+		</record>
+
+		<!-- Twitter Login -->
+		<container id="TWIT">
+			<translation id="title" translation_id="318310" type="use" value="Twitter[COMMENT: Twitter social network options]" />
+			<layout class="arrange_vertical_attachment" alignment="top" />
+
+			<widget class="text" alignment="left,centre_y" spec="text" size="normal" colour="disabled" auto_size="vertical">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"  />
+				<translation id="text" translation_id="364267" type="use" value="Connecting to Twitter will allow you to post updates whenever key events occur; like winning a trophy or signing of a new star player.[COMMENT: social network details panel hint; cannot be feminised]" />
+			</widget>
+
+			<widget class="button" id="twIB" alignment="centre" auto_size="all">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+				<translation id="text" translation_id="361227" type="use" value="Login[COMMENT: Button that lets the manager log in to a social network.]" />
+				<event id="click_event" event_id="twDI" />
+			</widget>
+
+			<widget class="check_box" id="auCB" click_event="auto" auto_size="vertical">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"  />
+				<translation id="text" translation_id="347989" type="use" value="Automatically post updates to Twitter[COMMENT: check box that allows the user to automatically tweet stuff that happens in the game]" />
+			</widget>
+
+			<widget class="text" id="stHL" alignment="left,centre_y" spec="text" size="normal" auto_size="vertical">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"  />
+			</widget>
+
+			<widget class="button" id="twOB" alignment="centre" auto_size="all">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+				<translation id="text" translation_id="435158" type="use" value="Log out[COMMENT: Log out of the selected social network]" />
+				<event id="click_event" event_id="twLO" />
+			</widget>
+		</container>
+
+
+		<!-- YouTube Login -->
+		<container id="YOUT">
+			<translation id="title" translation_id="318312" type="use" value="YouTube[COMMENT: YouTube social network options]" />
+			<layout class="arrange_vertical_attachment" alignment="top" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"  apply_to_children="true"/>
+
+			<widget class="text" id="yoHL" spec="text" size="normal" colour="disabled" alignment="left,centre_y" auto_size="vertical" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+				<widget class="button" id="yoIB" alignment="left,centre_y" auto_size="all">
+
+					<translation id="text" translation_id="361227" type="use" value="Login[COMMENT: Button that lets the manager log in to a social network.]" />
+					<event id="click_event" event_id="yoDI" />
+				</widget>
+			</container>
+
+			<widget class="match_settings_viewer_panel" id="youS">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+				<record id="table_properties" auto_size="vertical">
+					<integer id="row_spacing" value="10" />
+				</record>
+				<list id="viewed_property_ids">
+					<symbol value="youtube_resolution" />
+					<symbol value="youtube_save_video" />
+				</list>
+			</widget>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="115" />
+				<widget class="button" id="yoOB" alignment="centre" auto_size="all">
+					<translation id="text" translation_id="435158" type="use" value="Log out[COMMENT: Log out of the selected social network]" />
+					<event id="click_event" event_id="yoLO" />
+				</widget>
+			</container>
+		</container>
+
+	</container>
+
+	<widget class="text" id="nogl" size="11" alignment="left,centre_y">
+		<translation id="text" translation_id="378025" type="use" value="Please ensure a saved game has been loaded before logging in.[COMMENT: FR 7993; Preferences panel; Text to explain why social networks login is disabled]" />
+	</widget>
+
+</panel>

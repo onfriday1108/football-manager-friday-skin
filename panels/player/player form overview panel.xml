@@ -1,0 +1,30 @@
+<panel>
+
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <widget class="text" id="nofr" size="11" alignment="centre">
+        <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+    </widget>
+
+    <container id="form">
+        <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"  />
+
+        <!--form-->
+        <widget class="form_graph_panel" id="FrmG" show_labels="true">
+            <layout class="stick_to_sides_attachment" alignment="horizontal" />
+            <record id="object_property">
+                <integer id="get_property" value="Pfrm" />
+            </record>
+        </widget>
+
+
+        <!--buttons to go to form-->
+        <widget class="link_appearance_button" id="vfrm">
+            <layout class="stick_to_sides_attachment" alignment="right" />
+
+            <translation id="text" translation_id="316625" type="use" value="View Player Form[COMMENT: player form overview panel; button text which when clicked takes the user to the player's form screen]" />
+        </widget>
+
+    </container>
+
+</panel>

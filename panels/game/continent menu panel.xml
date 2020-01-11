@@ -1,0 +1,80 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="arrange_horizontal_attachment" layout="-1,2,-2,2,-2" offset="10" gap="8" />
+
+		<!--general area-->
+		<container class="inner_box">
+			<translation id="title" translation_id="248359" type="use" value="General"/>
+
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<widget class="table" id="gene" layout="-1" auto_size_maximum_height="600" auto_size="all" auto_size_rows="true" fixed_size_rows="false" mode="fill_rows,dont_allow_click_unselect_single">
+				<list id="column_widget_properties">
+					<record indx="0" appearance="buttons/custom/world/button" auto_size="vertical" multiline="false"/>
+				</list>
+			</widget>
+
+
+		</container>
+
+		<widget class="vertical_divider">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+		</widget>
+
+		<!--international area-->
+		<container class="inner_box">
+			<translation id="title" translation_id="227820" type="use" value="International"/>
+
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="10" />
+
+			<widget class="table" id="inge" layout="-1" auto_size_maximum_height="600" auto_size="all" auto_size_rows="true" fixed_size_rows="false" mode="fill_rows,dont_allow_click_unselect_single" >
+				<list id="column_widget_properties">
+					<record indx="0" appearance="buttons/custom/world/button" auto_size="vertical" multiline="false"/>
+				</list>
+			</widget>
+
+			<widget class="table" id="inco" layout="-1" auto_size_maximum_height="600" auto_size="all" auto_size_rows="true" fixed_size_rows="false" mode="fill_rows,dont_allow_click_unselect_single">
+				<list id="column_widget_properties">
+					<record indx="0" appearance="buttons/custom/world/button" auto_size="vertical" multiline="false"/>
+				</list>
+			</widget>
+
+
+		</container>
+
+		<widget class="vertical_divider">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+		</widget>
+		<!--club area-->
+		<container class="inner_box">
+			<translation id="title" translation_id="227737" type="use" value="Club" />
+
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="10" />
+
+			<widget class="table" id="clge" layout="-1" auto_size_maximum_height="600" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" mode="fill_rows,dont_allow_click_unselect_single">
+				<list id="column_widget_properties">
+					<record indx="0" appearance="buttons/custom/world/button" auto_size="vertical" multiline="false"/>
+				</list>
+			</widget>
+
+			<widget class="table" id="clco" layout="-1" auto_size_maximum_height="600" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" mode="fill_rows,dont_allow_click_unselect_single">
+				<list id="column_widget_properties">
+					<record indx="0" appearance="buttons/custom/world/button" auto_size="vertical" multiline="false"/>
+				</list>
+			</widget>
+
+		</container>
+	</container>
+</panel>

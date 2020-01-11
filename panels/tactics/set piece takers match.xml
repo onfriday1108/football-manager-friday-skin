@@ -1,0 +1,39 @@
+<panel version="1.0">
+
+	<!--  group box holding instruction table for layout purposes  -->
+	<widget class="table" id="sptt" mode="fill_custom_rows, drag_rows, drop_on_rows, insert_on_drop" layout="40, -1, 30" sort_disabled="true" auto_size_rows="false" fixed_size_rows="true" row_height="30" drag_drop_handler_column="Pers">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+
+		<list id="column_widget_properties">
+			<record index="0" >
+				<boolean id="sort_ascending" value="false" />
+				<flags id="alignment" value="centre" />
+			</record>
+			<record index="1" id="Pers" >
+				<boolean id="sort_ascending" value="false" />
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record index="2" >
+				<boolean id="sort_ascending" value="false" />
+				<flags id="alignment" value="centre, centre_y" />
+			</record>
+		</list>
+
+		<list id="column_table_properties">
+			<record index="0">
+				<boolean id="sort_disabled" value="true" />
+			</record>
+			<record index="1">
+				<boolean id="sort_disabled" value="true" />
+			</record>
+			<record index="2">
+				<boolean id="sort_disabled" value="true" />
+			</record>
+		</list>
+
+	</widget>
+
+
+
+</panel>

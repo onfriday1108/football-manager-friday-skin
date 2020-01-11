@@ -1,0 +1,10 @@
+﻿<panel height="30">
+  <layout class="arrange_horizontal_attachment" layout="-1,40" offset="0" gap="1" />
+  <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+  <widget class="button" id="tWsB" alignment="left,centre_y" height="30" appearance="buttons/custom/conversation/statement/button" colour="text"/>
+  <widget class="widget_popup_button" id="iSbt" widget_type="touchline_shout_panel" popup_alignment="centre" auto_size="vertical" appearance="buttons/custom/conversation/statement/button">
+    <record id="widget_properties" width="720" height="480" />
+    <record id="modal_popup_properties" dcep="true" />
+  </widget>
+</panel>

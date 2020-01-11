@@ -1,0 +1,22 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="inner_subtle_box" alignment="centre">
+    <layout class="arrange_vertical_attachment" layout="-4,-5" offset="0" gap="2" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+    
+    <widget class="text" id="titl" font="title" alignment="centre" />
+    
+    <container>
+      <layout class="arrange_horizontal_attachment" layout="-1,-4,-1" offset="0" gap="6" />
+      <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+    
+      <widget class="text" id="homS" auto_size="all" alignment="right,centre_y" style="semi_bold" size="10" />
+
+      <widget class="horizontal_comparison_bar" id="horb" alignment="centre" height="10" animation_file="none"/> 
+  
+      <widget class="text" id="awaS" auto_size="all" alignment="left,centre_y" style="semi_bold" size="10" />
+    </container>
+    
+  </container>
+</panel>

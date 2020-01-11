@@ -1,0 +1,45 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<string id="skin_style" value="explantory screen"/>
+
+	<!-- panel for no available offers-->
+	<container class="empty_state" id="nofc" header_widget="titx" body_widget	="extx">
+
+		<!--explanatory text-->
+		<widget class="text" id="titx" >
+			<translation id="text" translation_id="316760" type="use" value="You have not received any offers for this player."/>
+		</widget>
+
+		<widget class="text" id="pexl" alignment="centre" auto_size="vertical" size="small"/>
+
+		<widget class="text" id="extx">
+			<translation id="text" translation_id="316761" type="use" value="To encourage bids for the player, you could offer him out to other clubs or transfer list him."/>
+		</widget>
+
+		<widget class="spacer" height="4"/>
+
+		<container class="empty_state_button_container">
+
+			<widget class="link_appearance_button" id="otcl">
+				<translation id="text" translation_id="316762" type="use" value="Offer to Clubs[COMMENT: transfer offer panel; action to offer player out to clubs]"/>
+			</widget>
+
+			<widget class="link_appearance_button" id="stst">
+				<translation id="text" translation_id="243358" type="use" value="Set Transfer Status"/>
+			</widget>
+
+			<widget class="link_appearance_button" id="inbl">
+				<translation id="text" translation_id="248088" type="use" value="Inbox"/>
+			</widget>
+
+			<widget class="link_appearance_button" id="tcel">
+				<translation id="text" translation_id="257096" type="use" value="Transfer Centre[COMMENT: team screen section; panel for showing current transfer offers]"/>
+			</widget>
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,27 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+	<string id="skin_style" value="title link" />
+
+	<widget class="horizontal_divider" />
+
+	<widget class="link_button" id="tacP" section="tacP" auto_size="all" colour="white" red_replacement="white" blue_replacement="white">
+		<translation id="text" translation_id="255053" type="use" value="Player Instructions[COMMENT: opposition team instruction player instructions: table heading]" />
+	</widget>
+
+	<container height="40">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<widget class="position_role_duty_suitability_pie" width="25" id="aRST" image_alignment="left,centre_y">
+		</widget>
+
+		<widget class="text" colour="faded white" alignment="left,centre_y">
+			<translation id="text" translation_id="447617" type="use" value="Starting 11 Average Role Suitability[COMMENT: showing average role suitability of the squad]" />
+		</widget>
+
+	</container>
+
+
+</panel>

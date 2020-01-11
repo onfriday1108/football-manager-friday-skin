@@ -1,0 +1,10 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+	<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+
+	<widget class="widget_popup_button" id="popB" widget_type="property_list_viewer_xml_panel" red_replacement="dark accent" colour="white" icon="icons/16px/primary tactic" font="label" size="xsmall" auto_size="all">
+		<record id="primary_icon_properties" red_replacement="pitch_box_background" green_replacement="white" blue_replacement="amber 500" />
+		<record id="modal_popup_properties" file="modal popup panel auto sized" darkened="false" attempt_to_reposition="true" dont_close_existing_popup="true" />
+		<translation id="text" translation_id="466567" type="use" value="Primary Trained Tactic[COMMENT: FR 23334]" />
+	</widget>
+</panel>

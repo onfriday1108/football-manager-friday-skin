@@ -1,0 +1,54 @@
+<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="middle" offset="0"  />
+
+	<!-- profile picture -->
+	<widget class="object_portrait_picture" id="prop" width="65" height="65">
+		<boolean id="scale_picture" value="true" />
+		<boolean id="keep_aspect_ratio" value="true" />
+		<flags id="image_alignment" value="centre_x,top" />
+		<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+
+		<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+			<list id="value">
+				<boolean value="false" />
+			</list>
+		</attachment>
+
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>
+
+	<!--name-->
+	<widget class="label" auto_size="vertical" font="label" alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		<translation id="text" translation_id="227981" type="use" value="Manager" />
+	</widget>
+
+	<widget class="person_button" id="pers" style="bold" auto_size="vertical" size="large" alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="valu" />
+		</record>
+	</widget>
+
+
+	<!--relationship with you-->
+	<widget class="label" auto_size="vertical" font="label" alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		<translation id="text" translation_id="344678" type="use" value="Relationship" />
+	</widget>
+
+	<widget class="relationship_label" id="rela" style="bold" auto_size="vertical" size="large" alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		<record id="object_property">
+			<integer id="get_property" value="PRHn" />
+			<integer id="set_property" value="valu" />
+		</record>
+	</widget>
+
+
+</panel>

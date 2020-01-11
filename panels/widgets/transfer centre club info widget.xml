@@ -1,0 +1,24 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="inner_box_no_margin">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="35,-1" horizontal_offset="2" horizontal_gap="4" />
+
+		<widget class="object_portrait_picture" id="tmlg" scale_picture="true" height="30" keep_aspect_ratio="true" image_alignment="centre" />
+
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-1" horizontal_inset="0" />
+
+			<widget class="club_button" id="tmnm" auto_size="vertical" style="bold" icon_enabled="false"/>
+			<widget class="comp_button" id="divb" auto_size="vertical" icon_enabled="false" colour="faded text" multiline="true" size="small" comp_display_type="1">
+				<record id="auto_size_restrictions">
+					<string id="type" value="available"/>
+					<string id="orientation" value="vertical"/>
+					<string id="limit_type" value="maximum"/>
+				</record>
+			</widget>
+			<container height="2"/>
+		</container>
+	</container>
+</panel>

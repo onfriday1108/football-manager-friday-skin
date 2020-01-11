@@ -1,0 +1,31 @@
+<panel >
+	<layout class="fit_children_attachment" alignment="horizontal" offset="0" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="standard_popup_box">
+		<layout class="fit_children_attachment" alignment="horizontal" offset="0" />
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container class="simple_data_list" set_property="objt">
+			<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="arrange_vertical_attachment" alignment="top" gap="0" />
+
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="objL" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+			<record id="widget_properties" class="property_list_viewer_xml_panel" file="widgets/negotiation widget information popup widget" height="30" />
+		</container>
+
+	</container>
+
+</panel>

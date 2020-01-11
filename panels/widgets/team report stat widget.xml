@@ -1,0 +1,38 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container id="data" hidden="true">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8"/>
+
+			<widget class="link_button" id="stat"  alignment="left,centre_y" auto_size="all" size="11" navigation_focus_target="false">
+				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"/>
+			</widget>
+
+			<container>
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+        <layout class="centre_in_parent_attachment" alignment="vertical" />
+        <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" id="perc" alignment="right" auto_size="vertical"/>
+				<widget class="text" id="plaw" alignment="right" colour="faded text" auto_size="vertical" />
+				<widget class="person_button" id="plSP" alignment="right" colour="faded text" auto_size="vertical" />
+			</container>
+
+		</container>
+
+		<widget class="horizontal_percentage_bar" id="barw" height="10">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+		</widget>
+
+	</container>
+
+	<widget class="label" id="nodt" alignment="centre">
+		<translation id="text" translation_id="233089" type="use" value="-" />
+	</widget>
+
+</panel>

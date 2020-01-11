@@ -1,0 +1,24 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+  <layout class="arrange_vertical_attachment" alignment="top,extend"/>
+
+  <list id="properties_to_forward">
+    <record get_property="TmOu" set_property="text" target="TmOu"/>
+    <record get_property="TlTO" set_property="text" target="TlTO"/>
+  </list>
+
+  <container id="staf" height="50">
+    <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+    <!-- Person name -->
+    <widget class="text" id="TmOu" alignment="left,top" style="bold" auto_size="vertical">
+      <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+    </widget>
+
+    <!-- text label -->
+    <widget class="text" id="TlTO" alignment="left,top" size="small" colour="faded text" auto_size="vertical">
+      <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+    </widget>
+  </container>
+</panel>

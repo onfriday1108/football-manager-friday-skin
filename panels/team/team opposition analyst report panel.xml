@@ -1,0 +1,32 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="main_box">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+		<widget class="label" font="title" size="10" alignment="left,centre_y" auto_size="all">
+			<translation id="text" translation_id="447607" type="use" value="Analyst Report[COMMENT: Panel title for when viewing analyst report]" />
+		</widget>
+
+		<container file="team/team opposition report header panel" />
+	</container>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-15, -8" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<widget class="team_opposition_report_previous_match_analysis_panel" id="tpma"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="team_goal_analysis_summary_panel" id="tgas"/>
+
+			<widget class="team_tactic_analysis_summary_panel" id="ttas" file="team/team tactic analysis summary panel with heading"/>
+
+		</container>
+
+	</container>
+
+</panel>

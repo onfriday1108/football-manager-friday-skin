@@ -1,0 +1,68 @@
+<panel width="105">
+	<flags id="next_bg_colour" value="draft next team"/>
+	<flags id="user_bg_colour" value=""/>
+
+	<flags id="timer_appearance" value="boxes/main/contrast/paper" />
+	<flags id="highlighted_team_appearance" value="boxes/custom/darken/rounded/standard/paper" />
+	<flags id="standard_team_appearance" value="boxes/custom/darken/rounded/standard/paper" />
+
+	<colour id="human_team_colour" red="255" green="220" blue="56" alpha="255" />
+
+	<layout class="arrange_vertical_attachment" layout="-1" offset="0"/>]
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="24,-1" gap="2" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<!--Timer container with appearance-->
+				<container class="main_box" id="hdbx" red_replacement="fantasy draft timer">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-1,18,35,-1" gap="0" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<widget class="spacer" />
+
+						<!--pretty icon-->
+						<widget class="picture" file="icons/16px/time" id="icon" image_alignment="centre" red_replacement="white" scale_picture="false"/>
+
+						<!--Time label-->
+						<widget class="label" id="time" spec="text" size="large" style="semi_bold" alignment="centre" colour="white" />
+
+						<widget class="spacer" />
+
+					</container>
+				</container>
+			</container>
+
+			<!--Team container with appearance-->
+			<container class="main_box" id="bdbx">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" gap="2" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" offset="0"/>
+
+					<widget class="object_portrait_picture" id="pktm" scale_picture="true">
+						<boolean id="keep_aspect_ratio" value="true"/>
+						<flags id="image_alignment" value="centre"/>
+					</widget>
+
+					<container height="4"/>
+
+					<widget class="label" id="ptmn" spec="text" alignment="centre_x,bottom" auto_size="all" colour="white" multiline="false"/>
+					<widget class="label" id="bdlt" spec="text" size="small" alignment="centre_x,top" auto_size="all"  colour="faded white"/>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

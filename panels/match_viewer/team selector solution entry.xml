@@ -1,0 +1,46 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="2" horizontal_alignment="horizontal"  />
+
+	<!--The Name of the player...-->
+	<widget class="table" layout="-1, -1" id="tabl" auto_size_rows="false" row_height="15" auto_size="vertical" column_gap="5" column_spacing="5" row_spacing="3">
+
+		<list id="column_widget_properties">
+			<record indx="0" alignment="left,centre_y" colour="selection" />
+			<record indx="1" alignment="left,centre_y" spec="text" colour="selection" />
+		</list>
+
+		<record id="default_properties" auto_size="all" fixed="false" />
+
+		<!--Position-->
+		<widget class="text" row="0" col="0">
+			<string id="text" value="Name"/>
+		</widget>
+
+		<widget class="label" row="1" col="0">
+			<string id="text" value="Solution Score"/>
+		</widget>
+
+		<widget class="label" row="2" col="0">
+			<string id="text" value="Personal Score"/>
+		</widget>
+
+		<widget class="label" row="3" col="0">
+			<string id="text" value="Supremacy Score"/>
+		</widget>
+
+		<widget class="label" row="4" col="0">
+			<string id="text" value="Lost Score"/>
+		</widget>
+
+		<widget class="label" row="5" col="0">
+			<string id="text" value="Raw Lost Score"/>
+		</widget>
+
+		<widget class="label" row="6" col="0">
+			<string id="text" value="Ratio"/>
+		</widget>
+
+	</widget>
+
+</panel>

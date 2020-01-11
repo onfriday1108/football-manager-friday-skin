@@ -1,0 +1,83 @@
+<panel height="500" width="600">
+
+	<translation id="title" translation_id="257296" type="use" value="Edit Note Categories[COMMENT: Title for the note tag list edit dialog]" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<attachment class="moveable_attachment" />
+
+	<!-- list of tags -->
+	<widget class="table" id="list" mode="fill_rows, stripe_rows, select_rows, select_multiple, show_bullets, dont_allow_empty_selection" layout="-1">
+
+		<flags id="scroll_bar_class" value="scroll_bar_vertical_blue" />
+		<flags id="heading_class" value="column_heading_alternative" />
+
+		<list id="column_table_properties">
+			<record>
+				<boolean id="sort_disabled" value="false" />
+				<record id="column_heading">
+					<flags id="alignment" value="left,centre_y" />
+					<translation id="text" translation_id="257297" type="use" value="All Categories[COMMENT: Table heading for column with note tag/category titles]" />
+				</record>
+				<record id="column_widget_properties">
+					<flags id="alignment" value="left,centre_y" />
+				</record>
+			</record>
+		</list>
+
+		<record id="select_event">
+			<flags id="event_id" value="tase" />
+		</record>
+
+	</widget>
+
+	<!-- container with assigned tags (if in single-note mode), and ok/cancel buttons -->
+	<widget class="container" id="info">
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- the list of tags for note -->
+		<widget class="table" id="tags" auto_size="vertical" fixed_size_rows="true" mode="fill_rows, stripe_rows" auto_size_rows="true" layout="-1">
+			<flags id="scroll_bar_class" value="scroll_bar_vertical_blue" />
+
+			<list id="column_table_properties">
+				<record>
+					<boolean id="sort_disabled" value="true" />
+					<record id="column_heading">
+						<flags id="alignment" value="left,centre_y" />
+						<translation id="text" translation_id="257298" type="use" value="Currently Assigned Categories[COMMENT: Title for subsection on note tag list dialog that lists all tags assigned to the note]" />
+					</record>
+				</record>
+			</list>
+
+			<widget class="text" id="tagt" auto_size="vertical" spec="text" col="0" row="0" />
+		</widget>
+
+		<!-- the dialog buttons -->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" apply_to_children="true" inset="0" />
+
+			<widget class="icon_button" id="crta" click_event="crta" auto_size="all" icon="icons/16px/create">
+				<translation id="hint" translation_id="257289" type="use" value="Click to create a new category[COMMENT: hint text for button that creates a new tag/category]" />
+				<translation id="text" translation_id="257288" type="use" value="Create...[COMMENT: Text on button that creates a new tag/category]" />
+			</widget>
+
+			<widget class="icon_button" id="reta" click_event="reta" auto_size="all" icon="icons/16px/rename">
+				<translation id="hint" translation_id="284847" type="use" value="Click to rename the selected category[COMMENT: hint text for button that renames a tag/category]" />
+				<translation id="text" translation_id="257290" type="use" value="Rename...[COMMENT: Text on button that renames a tag/category]" />
+			</widget>
+
+			<widget class="icon_button" id="deta" click_event="deta" auto_size="all" icon="icons/16px/delete">
+				<translation id="hint" translation_id="257295" type="use" value="Click to delete the selected category[COMMENT: hint text for button that deletes a tag/category]" />
+				<translation id="text" translation_id="257292" type="use" value="Delete[COMMENT: Text on button that deletes a tag/category]" />
+			</widget>
+
+			<container id="btns" file="generic/note tag list buttons" />
+		</container>
+
+
+	</widget>
+
+</panel>

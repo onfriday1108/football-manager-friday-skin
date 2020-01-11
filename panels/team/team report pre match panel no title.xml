@@ -1,0 +1,35 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container class="main_box">
+
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!--manager-->
+		<widget class="client_object_viewer_xml_panel" id="mana" file="human/manager profile pre match" width="230">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="index" value="1" />
+						<integer id="get_property" value="Ttsl" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--strengths/weaknesses-->
+			<widget class="table" mode="fill_rows" id="prot" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" />
+
+			<!--no info available-->
+			<widget class="manager_text" id="nopr" alignment="centre" multiline="true">
+				<translation id="text" translation_id="450808" type="use" value="[%person#1-You] need to compile a scout report for [%person#1-your] next opposition in order to be able to see their strengths and weaknesses.[COMMENT: bug 164860 - team report pre match panel help text]" />
+			</widget>
+
+		</container>
+	</container>
+</panel>

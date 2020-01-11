@@ -1,0 +1,31 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <!-- Background image -->
+  <widget class="picture" file="photos/dynamic/trophy engraving/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="false"/>
+
+  <container class="client_object_viewer_xml_panel" id="trop">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <!-- PROP_COMPETITION -->
+    <record id="object_property" get_property="comp" set_property="objt"/>
+
+    <container class="transformation_container" caching="true">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+      <list id="transformations">
+        <!--Rotate 15 degrees-->
+        <record type="rotation" value="-15" centre="0.5,0.5"/>
+        <record type="translation" value="-0.1, 0.2"/>
+      </list>
+
+      <container class="simple_data_list" set_property="valu" alignment="bottom" layout="left" position="0" reverse_order="true" maximum_items="13">
+        <record id="object_property" get_property="cRwn" set_property="valu"/>
+
+        <record id="widget_info" class="game_formatted_label" id_1="year" id_2="Ttea" alignment="left,centre_y" height="20" font="engraving" size="small" width="500" wants_mouse_events="false">
+          <string id="format" value="[%number#1] - [%team#2]"/>
+        </record>
+      </container>
+    </container>
+  </container>
+</panel>

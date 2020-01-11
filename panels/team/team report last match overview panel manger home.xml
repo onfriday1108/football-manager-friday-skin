@@ -1,0 +1,98 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container id="scnt">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" layout="-1,100,-1" offset="0" gap="5" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<widget class="object_portrait_picture" id="bghm" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="50"/>
+				<widget class="team_button" id="htna" alignment="centre" auto_size="vertical" style="semi_bold" size="10" icon_enabled="false" multiline="true"/>
+			</container>
+
+			<widget class="label" id="scor" size="25" auto_size="vertical" style="bold" alignment="centre" font="fonts/letterpressed" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<widget class="object_portrait_picture" id="bgaw" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="50"/>
+				<widget class="team_button" id="atna" alignment="centre" auto_size="vertical" style="semi_bold" size="10" icon_enabled="false" multiline="true"/>
+			</container>
+		</container>
+
+		<!-- Stats table. Labels are filled in according to theyir team and type properties -->
+		<widget class="table" id="stat" layout="-1, -4, -1" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" row_spacing="0">
+
+			<record id="default_properties" auto_size="vertical" />
+
+			<!-- Possession -->
+			<widget class="label" row="0" col="0" team="0" type="2" />
+			<widget class="label" row="0" col="1" size="9"  alignment="centre">
+				<translation id="text" translation_id="232851" type="use" value="Possession" />
+			</widget>
+			<widget class="label" row="0" col="2" team="2" type="2" />
+			<!-- Shots-->
+			<widget class="label" row="1" col="0" team="0" type="0" />
+			<widget class="label" row="1" col="1" size="9"  alignment="centre">
+				<translation id="text" translation_id="247381" type="use" value="Shots" />
+			</widget>
+			<widget class="label" row="1" col="2" team="2" type="0" />
+			<!-- On Target -->
+			<widget class="label" row="2" col="0" team="0" type="1" />
+			<widget class="label" row="2" col="1" size="9" alignment="centre">
+				<translation id="text" translation_id="247382" type="use" value="On Target" />
+			</widget>
+			<widget class="label" row="2" col="2" team="2" type="1" />
+			<!-- Clear cut chances -->
+			<widget class="label" row="3" col="0" team="0" type="5" />
+			<widget class="label" row="3" col="1" size="9" alignment="centre">
+				<translation id="text" translation_id="284438" type="use" value="Clear Cut Chances[COMMENT - match stats; clear cut chances]" />
+			</widget>
+			<widget class="label" row="3" col="2" team="2" type="5" />
+			<!-- Passes completed -->
+			<widget class="label" row="4" col="0" team="0" type="6" />
+			<widget class="label" row="4" col="1" size="9" alignment="centre">
+				<translation id="text" translation_id="249444" type="use" value="Passes completed" />
+			</widget>
+			<widget class="label" row="4" col="2" team="2" type="6" />
+			<!-- Tackles won -->
+			<widget class="label" row="5" col="0" team="0" type="7" />
+			<widget class="label" row="5" col="1" size="9" alignment="centre">
+				<translation id="text" translation_id="247389" type="use" value="Tackles Won" />
+			</widget>
+			<widget class="label" row="5" col="2" team="2" type="7" />
+			<!-- Fouls -->
+			<widget class="label" row="6" col="0" team="0" type="3" />
+			<widget class="label" row="6" col="1" size="9" alignment="centre">
+				<translation id="text" translation_id="247385" type="use" value="Fouls" />
+			</widget>
+			<widget class="label" row="6" col="2" team="2" type="3" />
+			<!-- Yellow cards -->
+			<widget class="label" row="7" col="0" team="0" type="8" />
+			<widget class="label" row="7" col="1" size="9" alignment="centre">
+				<translation id="text" translation_id="349232" type="use" value="Yellow Card[COMMENT: in match caption title for when a player has been shown a yellow card]" />
+			</widget>
+			<widget class="label" row="7" col="2" team="2" type="8" />
+			<!-- Average Rating -->
+			<widget class="label" row="8" col="0" team="0" type="9" />
+			<widget class="label" row="8" col="1" size="9" alignment="centre">
+				<translation id="text" translation_id="227853" type="use" value="Average rating" />
+			</widget>
+			<widget class="label" row="8" col="2" team="2" type="9" />
+		</widget>
+	</container>
+
+	<widget id="nomt" class="label" alignment="centre">
+		<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+	</widget>
+
+</panel>

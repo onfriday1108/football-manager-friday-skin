@@ -1,0 +1,14 @@
+<panel width="700" height="150">
+	<list id="properties_to_forward">
+		<record get_property="TPTI" set_property="TPTI" target="tsat"/>
+		<record get_property="Ttea" set_property="Ttea" target="tsat"/>
+    <record get_property="evtg" set_property="evtg" target="tsat"/>
+</list>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,0,170" />
+
+	<container class="standard_popup_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,4,0" />
+		<container class="tactic_slot_tab_container" id="tsat" file="tactics/tactic slot tab container tactics popup" show_inactive_buttons="true" />
+	</container>
+
+</panel>

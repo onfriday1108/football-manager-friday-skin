@@ -1,0 +1,9 @@
+<panel>
+	<boolean id="viewing_old_draft" value="true"/>
+	<boolean id="save_session_state" value="true"/>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- table containing draft picks -->
+	<widget class="draft_picks_history_panel" id="drph"/>
+</panel>

@@ -1,0 +1,44 @@
+﻿<panel>
+	<attachment class="set_global_property_attachment" set_property="FS  " value="true" reset="true" />
+	<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container width="600">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="20" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- Fantasy draft logo-->
+		<widget class="picture" height="200" file="icons/custom/start/logo" scale_picture="true" image_alignment="centre" />
+		<!-- Waffle -->
+		<widget class="text" auto_size="vertical" alignment="centre" size="large">
+			<translation id="text" translation_id="447531" type="use" value="Fantasy Draft Mode allows you to build a squad from scratch from a pool of players.[COMMENT: Fantasy Draft, FR 18768; Fantasy Draft description, cannot be feminised]" />
+		</widget>
+		<widget class="text" auto_size="vertical" alignment="centre" size="large">
+			<translation id="text" translation_id="447532" type="use" value="Each club takes it in turn to draft a player. Once all the squads are complete it's time to pit them against one another within a league or cup format.[COMMENT: Fantasy Draft, FR 18768; Fantasy Draft description]" />
+		</widget>
+
+		<container height="280">
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="6" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- Quick start button -->
+			<widget class="icon_button" section="jonD" alignment="centre" icon="icons/custom/start/quick" icon_alignment="centre_top,centre_x" height="140" width="300" style="semi_bold" size="large" click_event="QuNG">
+				<translation id="text" translation_id="341393" type="use" value="Quick Start[COMMENT: intro panel; demo only; quickstarts section title text, allows the user to click and load from a selection of quick start saved games]" />
+				<translation id="hint" translation_id="450738" type="use" value="Will try to join an available game. If none are found a new game will be created instead.[COMMENT: Fantasy draft - Quick Start hint text]" />
+			</widget>
+			<!-- Create draft / join draft-->
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="icon_button" click_event="FDCG" alignment="centre" icon="icons/custom/start/create" icon_alignment="centre_top,centre_x" style="semi_bold" size="large">
+					<translation id="text" translation_id="447533" type="use" value="Create Draft[COMMENT: Fantasy Draft, FR 18768; Button to create a new game]" />
+				</widget>
+				<widget class="icon_button" click_event="FDJG"  alignment="centre" icon="icons/custom/start/join" icon_alignment="centre_top,centre_x" style="semi_bold" size="large">
+          <attachment class="test_user_privilege_attachment" mode="allow_multiplayer" property="disabled"/>
+					<translation id="text" translation_id="447530" type="use" value="Join Draft[COMMENT: Fantasy Draft, FR 18768; Button to join existing game]" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,38 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" layout="-1,-2,-1" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+  <container class="animation_player_widget" id="plLA">
+  </container>
+  <container>
+    <layout class="arrange_vertical_attachment" layout="25, 120, 25, 120" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <widget class="text" font="title" alignment="centre">
+      <translation id="text" translation_id="247328" type="use" value="Formations[COMMENT - match screen; formations panel title]" />
+    </widget>
+    <widget class="table" id="ttab" mode="fill_rows, stripe_rows" layout="-1, -1, -1" auto_size_rows="true"  row_spacing="0" >
+      <list id="column_widget_properties">
+        <record index="0" alignment="right,centre_y" colour="comp person bar 1"/>
+        <record index="1" alignment="centre" />
+        <record index="2" alignment="left,centre_y" colour="comp person bar 2"/>
+      </list>
+      <!-- Comparison items will be created dynamically and added here -->
+    </widget>
+
+    <widget class="text" font="title" alignment="centre">
+      <translation id="text" translation_id="466468" type="use" value="Style[COMMENT: tactical style]" />
+    </widget>
+    <widget class="table" id="sttb" mode="fill_rows, stripe_rows" layout="-1, -1, -1" auto_size_rows="true"  row_spacing="0" >
+      <list id="column_widget_properties">
+        <record index="0" alignment="right,centre_y" colour="comp person bar 1"/>
+        <record index="1" alignment="centre" />
+        <record index="2" alignment="left,centre_y" colour="comp person bar 2"/>
+      </list>
+      <!-- Comparison items will be created dynamically and added here -->
+    </widget>
+  </container>
+  <container class="animation_player_widget" id="plRA">
+
+  </container>
+</panel>

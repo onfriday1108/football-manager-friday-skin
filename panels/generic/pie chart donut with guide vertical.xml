@@ -1,0 +1,22 @@
+<panel>
+  <layout class="arrange_vertical_attachment" layout="-2, -2" gap="0" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+    <widget class="pie_chart" id="piCH" max_value="100" is_donut_chart="true" donut_line_width="8"/>
+
+    <container >
+      <layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+      <widget class="text" id="perw" alignment="centre" font="text" height="44" width="44" colour="text" size="small"/>
+    </container>
+    
+  </container>
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="middle" gap="0" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+    <widget class="table" msov="itSL" msex="itUL" id="txtG" layout="-1" row_height="28" row_spacing="0" auto_size="vertical"/>
+  </container>
+
+</panel>

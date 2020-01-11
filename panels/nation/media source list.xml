@@ -1,0 +1,54 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="inner_box" id="cftb" >
+		<translation id="title" translation_id="227745" type="use" value="Media" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+		<widget class="table" id="mstb" layout="-1,-1,-1,-1,-1" mode="fill_rows, stripe_rows" save_session_state="true">
+			<boolean id="fixed_size_rows" value="false" />
+			<boolean id="auto_size_rows" value="true" />
+
+			<list id="column_table_properties">
+				<record index="0" id="name" />
+				<record index="1" id="type" />
+				<record index="2" id="murl" />
+				<record index="3" id="scop" />
+				<record index="4" id="cove" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" spec="text" />
+				<record index="1" alignment="left,centre_y" spec="text" />
+				<record index="2" alignment="left,centre_y" spec="text" multiline="false"/>
+				<record index="3" alignment="left,centre_y" />
+				<record index="4" alignment="left,centre_y" spec="text" />
+			</list>
+
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="229689" type="use" value="Name" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="229400" type="use" value="Type" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="227733" type="use" value="Website" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="306507" type="use" value="Scope" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="306508" type="use" value="Coverage" />
+				</record>
+			</list>
+
+		</widget>
+	</container>
+</panel>

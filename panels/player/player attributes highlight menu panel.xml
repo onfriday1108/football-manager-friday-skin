@@ -1,0 +1,41 @@
+﻿<!-- A layout used with MENU to display some additional widgets -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<!-- Set bottom offset to prevent menu items overlapping the colour key. Appearance border is added to this number before layout -->
+	<integer id="bottom" value="25"/>
+
+	<!-- Blank space for menu items to be drawn-->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="7" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" apply_to_children="true" />
+
+		<widget class="horizontal_divider"/>
+		
+		<!--<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0,15,0,0" apply_to_children="true"  />
+
+			<widget class="radio_button" auto_size="vertical" click_event="clat">
+				<translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+			</widget>
+		</container>-->
+			<!-- Attributes highlighting key-->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="4" />
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="40" gap="4" />
+
+			<widget class="icon_button" icon="icons/16px/circle" show_button_appearance="false" colour="text" auto_size="all">
+				<record id="primary_icon_properties" red_replacement="required attribute" />
+				<translation id="text" translation_id="383533" type="use" value="Key[COMMENT: FR 10661; player overview positions panel; legend showing the colours of highlighting used on a player's attributes; this label identified the colour used for the most important attirbutes]" />
+			</widget>
+			<widget class="icon_button" icon="icons/16px/circle" show_button_appearance="false" colour="text" auto_size="all">
+				<record id="primary_icon_properties" red_replacement="preferred attribute" />
+				<translation id="text" translation_id="383610" type="use" value="Preferable[COMMENT: FR 10661; player overview positions panel; legend showing the colours of highlighting used on a player's attributes; this label identified the colour used for the attributes that are good to have but not vital]" />
+			</widget>
+		</container>
+	</container>
+</panel>

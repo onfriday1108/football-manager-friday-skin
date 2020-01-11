@@ -1,0 +1,29 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<integer id="trigger_window_width" value="1440"/>
+	<integer id="trigger_window_height" value="767"/>
+
+	<!-- content area -->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+
+			<widget class="inbox_body_text" id="bdtx" colour="inbox_text"/>
+			<widget class="text" id="rctx" auto_size="vertical" spec="text" size="large" colour="positive" hidden="true"/>
+		</container>
+
+		<container class="inner_subtle_box" appearance="boxes/custom/inbox attachment/personal/paper">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<widget class="transfer_offer_panel" id="roob" file="player/transfer offer inbox read only panel" is_in_inbox="true" is_inbox_read_only="true"/>
+			<widget class="transfer_offer_panel" id="ofbx" file="player/transfer offer inbox panel" is_in_inbox="true" is_inbox_read_only="false"/>
+		</container>
+	</container>
+
+</panel>

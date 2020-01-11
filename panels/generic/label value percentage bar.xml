@@ -1,0 +1,42 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at01"/>
+		<record entity_layout_id="at02"/>
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<widget class="text" entity_layout_id="at00" alignment="centre_y,left" id="at00" name="relevant_stat_1_label">
+		<string id="font" value="title"/>
+		<string id="colour" value="faded text"/>
+		<string id="size" value="small"/>
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" move_side="true" target="main"/>
+		<layout class="stick_to_sizes_attachment" height="50.000000" width="50.000000"/>
+	</widget>
+	<widget class="text" entity_layout_id="at01" alignment="centre_y,right" id="at01" name="relevant_stat_1_value">
+		<string id="font" value="title"/>
+		<string id="colour" value="text"/>
+		<string id="size" value="large"/>
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" move_side="true" target="main"/>
+		<layout class="stick_to_sizes_attachment" height="50.000000" width="50.000000"/>
+	</widget>
+	<container class="horizontal_percentage_bar" id="at02" entity_layout_id="at02" name="relevant_stat_1_percentage_bar">
+		<record id="valu" alignment="right">
+			<string id="min_value" value="5"/>
+			<string id="max_value" value="20"/>
+		</record>
+		<integer id="label_width" value="0"/>
+		<layout class="stick_to_object_attachment" id="alPt" get_side="bottom" set_side="top" target="at01"/>
+		<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
+	</container>
+</panel>

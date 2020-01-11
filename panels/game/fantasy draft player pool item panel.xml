@@ -1,0 +1,47 @@
+﻿<panel >
+  <!-- Version of the competition_player_stats_panel. Displays a the top player statistic in a panel -->
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <list id="properties_to_forward">
+    <record get_property="slct" target="selc"/>
+  </list>
+  
+  <!-- Radio button for selecting this item -->
+  <widget class="radio_button" id="selc" group="psrb" group_parent_level="polL" click_event="PstS" select_event="PstS" icon_enabled="false" show_button_appearance="true" appearance="switches/custom/competition stats/list/button" red_replacement="fg accent" embed_in_frame="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" embed_in_frame="true" />
+  </widget>
+
+  <container>
+    <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="6" gap="8" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+    <!-- Pool icon -->
+    <widget class="picture" scale_picture="false" width="60" image_alignment="centre" file="icons/custom/pool/world">
+      <record id="object_property" get_property="icon" set_property="file"/>
+    </widget>
+
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <container>
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+        <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+
+        <!-- Pool title -->
+        <widget class="label" auto_size="vertical" >
+          <record id="object_property" get_property="titl" set_property="text"/>
+        </widget>
+        <!-- DLC label-->
+        <widget class="label" auto_size="all" colour="faded text" hidden="true">
+          <record id="object_property" get_property="idlc" set_property="Shwn"/>
+        </widget>
+      </container>
+      <!-- Pool decription -->
+      <widget class="label" auto_size="vertical" colour="faded text">
+        <record id="object_property" get_property="text" set_property="text"/>
+      </widget>
+    </container>
+  </container>
+</panel>

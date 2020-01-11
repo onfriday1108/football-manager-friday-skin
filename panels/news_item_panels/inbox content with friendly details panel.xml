@@ -1,0 +1,110 @@
+<panel>
+
+	<string id="skin_style" value="subtle box" />
+	<flags id="ofha" value="boxes/custom/darken/rounded/no margin/paper" />
+	<flags id="ofhc" value="positive dark" />
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!--friendly cup name and info-->
+	<container class="inner_subtle_box" id="frcn">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_alignment="top" vertical_inset="0" />
+
+		<!--fee-->
+		<container class="vertical_label_value_pair" value_widget="fee " label_widget="labl">
+
+			<widget class="label" auto_size="vertical" id="labl">
+				<translation id="text" translation_id="230121" type="use" value="Fee" />
+			</widget>
+			<widget class="cash_cell" id="fee " auto_size="vertical" ccrs="4" alternate_text="-" />
+		</container>
+
+		<!--income-->
+		<container class="vertical_label_value_pair" value_widget="inco" label_widget="labl">
+
+
+			<widget class="label" auto_size="vertical" id="labl">
+				<translation id="text" translation_id="242366" type="use" value="Income" />
+			</widget>
+			<widget class="cash_cell" id="inco" auto_size="vertical" ccrs="4" alternate_text="-"/>
+		</container>
+
+		<!--venue-->
+		<container class="vertical_label_value_pair" value_widget="venu" label_widget="labl">
+
+
+			<widget class="label" auto_size="vertical" id="labl">
+				<translation id="text" translation_id="247233" type="use" value="Venue" />
+			</widget>
+			<widget class="text" id="venu" auto_size="vertical" />
+		</container>
+
+		<!--rules-->
+		<container class="vertical_label_value_pair" value_widget="rule" label_widget="labl">
+
+
+			<widget class="label" auto_size="vertical" id="labl">
+				<translation id="text" translation_id="247256" type="use" value="Match Rules" />
+			</widget>
+			<widget class="text" id="rule" auto_size="vertical" />
+		</container>
+
+	</container>
+
+	<!--add contextual small team info in here-->
+	<container class="inner_subtle_box" id="infs" height="120">
+		<translation id="text" translation_id="420676" type="use" value="Teams Involved[COMMENT: FR13759 - title for a panel containing info on the teams playing in a friendly tournament]" />
+
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="fill" horizontal_offset="0" vertical_offset="0" />
+
+	</container>
+
+	<!--add contextual team and friendly info in here-->
+	<container id="info">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	</container>
+
+	<!--fixtures-->
+	<container class="inner_subtle_box" id="sche">
+		<translation id="text" translation_id="242285" type="use" value="Schedule" />
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="fixtures_list_panel" id="flpn" file="" fixtures_ahead="6" fixtures_previous="2">
+			<boolean id="save_session_state" value="true" />
+
+			<!-- Styles -->
+			<flags id="friendly_appearance" value="tables/custom/fixtures/friendly/row" />
+			<flags id="continental_appearance" value="tables/custom/fixtures/continental/row" />
+			<flags id="cup_appearance" value="tables/custom/fixtures/cup/row" />
+
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="client_object_list_table" id="pltb" database_table_type="53" select_event="self" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows" auto_size="vertical">
+
+				<!-- default sort -->
+				<list id="default_sort_column">
+					<integer value="fxdt" />
+				</list>
+
+				<record id="viewed_property_ids">
+					<record id="fxdS" />
+					<record id="FXTm" />
+					<record id="fopt" />
+					<record id="FxTV" />
+					<record id="FxVn" />
+					<record id="FxNm" />
+					<record id="FxRs" />
+				</record>
+				
+				<list id="column_widget_properties">
+					<record index="0"  navigation_focus_target="false"/>
+					<record index="1"  navigation_focus_target="false"/>
+				</list>
+
+			</widget>
+		</widget>
+	</container>
+
+</panel>

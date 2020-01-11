@@ -1,0 +1,44 @@
+﻿<!-- Panel used to display backroom advice text with a dismiss button -->
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<widget class="picture" file="boxes/custom/speech bubble/right/paper" colour="general speech bubble 2" scale_picture="true" keep_aspect_ratio="false">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="2"/>
+		</widget>
+
+		<container>
+			
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="5" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="10,5"/>
+			<!-- Advice text -->
+			<widget class="text" id="Atxt" alignment="left,top" colour="white" />
+			
+			<!--advice popup button-->
+			<widget class="icon_button" id="prds" icon="icons/16px/maximise" auto_size="horizontal" show_button_appearance="false" click_event="advP" />
+		</container>
+
+	</container>
+
+	<!-- 'Done' overlay shown when advice is actioned-->
+	<container class="bordered_box" id="Aovr" hidden="true">
+		<widget class="picture" file="boxes/custom/speech bubble/right/paper" colour="general speech bubble 2" scale_picture="true" keep_aspect_ratio="false">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="2"/>
+		</widget>
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" do_not_size="true" />
+			<layout class="centre_in_parent_attachment" alignment="vertical" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+
+			<widget class="picture" image_alignment="centre_x,top" file="icons/26px/tick" auto_size="vertical" red_replacement="normal_icon" />
+			<widget class="label" alignment="centre_x,top"  auto_size="vertical">
+				<translation id="text" translation_id="416311" type="use" value="Done[COMMENT: FR 16955; backroom advice; string displayed when advice has already been followed/actioned]" />
+			</widget>
+		</container>
+	</container>
+</panel>

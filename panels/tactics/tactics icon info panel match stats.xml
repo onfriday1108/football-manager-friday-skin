@@ -1,0 +1,24 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<animation class="fade_on_hide_animation" duration="0.1" end_mode="stop"/>
+	<!-- This animation isn't a normal position animation as it gets triggered in code with specfic values-->
+	<animation class="position_animation" trigger_id="linp" tween="ease_in_out" duration="0.2"/>
+
+	<container height="24">
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" do_not_size="true" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+		<layout class="centre_in_parent_attachment" alignment="vertical"/>
+
+		<!-- Name -->
+		<container class="main_contrast_box_no_margin" id="nmcn">
+			<layout class="arrange_horizontal_attachment" layout="4,-1,44" offset="0" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<container/>
+			<widget class="text" id="name" colour="text" size="xsmall" alignment="centre,can_scale" multiline="false" style="semi_bold"/>
+			<widget class="match_rating_label_formatted" id="avra" auto_size="horizontal" alignment="centre,can_scale" format="[%fraction#1-2.1]" />
+		</container>
+
+	</container>
+</panel>

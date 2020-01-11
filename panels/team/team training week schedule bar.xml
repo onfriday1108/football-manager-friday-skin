@@ -1,0 +1,111 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container width="150" id="siMN">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!--For the mode that the bar is not disabled-->
+			<container width="150" id="sbCO">
+				<layout class="arrange_vertical_attachment" layout="20,55,-1" offset="5" gap="6" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="label" id="cwla" alignment="left,centre_y" font="title" colour="accent" auto_size="vertical" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<widget class="label" alignment="left,centre_y" auto_size="none" height="22" colour="faded text">
+						<translation id="text" translation_id="329965" type="use" value="Focus[COMMENT: team training; header text for the team's particular training Focus in a given week]" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="3" />
+					</widget>
+					<widget class="general_training_focus_popup_button" id="fcpo" icon="" appearance="buttons/standard/normal/button" icon_alignment="left,centre_y" alignment="left,centre_y" auto_size="none" height="30">
+						<translation id="hint" translation_id="340547" type="use" value="The area which the team will focus on this week[COMMENT: training screen; hint text for focus area dropdown]" />
+						<translation id="text" translation_id="227910" type="use" value="Teamwork" />
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<widget class="label" alignment="left,centre_y" auto_size="all" colour="faded text">
+						<translation id="text" translation_id="330128" type="use" value="Intensity" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="3" />
+					</widget>
+					<widget class="general_training_intensity_popup_button" id="inpo" appearance="buttons/standard/normal/button" alignment="left,centre_y" auto_size="none" height="30">
+						<translation id="hint" translation_id="341694" type="use" value="The intensity at which the players will work on their focus area[COMMENT: training screen; hint text for intensity selection on training focus]" />
+					</widget>
+				</container>
+
+
+			</container>
+
+			<!--For the mode that the bar is disabled-->
+			<container width="150" id="Hbox" hidden="true">
+				<layout class="arrange_vertical_attachment" layout="20,41,45,-1" offset="4" gap="1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<widget class="label" alignment="left,centre_y" font="title" colour="accent" auto_size="all">
+					<translation id="text" translation_id="339927" type="use" value="This week[Comment: Training panel; label for the current week in the calendar]" />
+				</widget>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<widget class="label" alignment="left,centre_y" auto_size="vertical" colour="faded text" size="small">
+						<translation id="text" translation_id="342043" type="use" value="Focus:[COMMENT: use top ten matches as word exists already, colon is here for UI purposes, followed by the training focus itself ie Tactics]" />
+					</widget>
+					<widget class="icon_button" appearance="" icon="icons/16px/circle" colour="text" id="FCin" alignment="left,centre_y" auto_size="vertical" style="semi_bold">
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<widget class="label" alignment="left,centre_y" auto_size="vertical" colour="faded text" size="small">
+						<translation id="text" translation_id="342066" type="use" value="Intensity:[COMMENT: use top ten matches as word exists already, colon is here for UI purposes, followed by the training intensity itself ie High]" />
+					</widget>
+					<widget class="label" id="INin" alignment="left" auto_size="vertical" style="semi_bold">
+					</widget>
+				</container>
+
+				<widget class="text" size="small" alignment="left,top" auto_size="none" colour="faded text">
+					<translation id="text" translation_id="434600" type="use" value="3pm Monday deadline to set training focus.[COMMENT: training panel; text indicating why the user can't change the Focus once the first day of the week has passed]" />
+				</widget>
+
+			</container>
+		</container>
+
+		<container id="tabl">
+			<layout class="arrange_horizontal_attachment" layout="-1, -1, -1, -1, -1, -1, -1" offset="0" gap="-1" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+			<widget class="team_training_date_calendar_box" />
+		</container>
+
+	</container>
+
+	<container class="inner_box_no_margin" id="seBr" background_colour="training season break colour" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<widget class="text" alignment="centre">
+			<translation id="text" translation_id="241285" type="use" value="Squad end of season break[COMMENT: END_OF_SEASON_HOLIDAY_NEWS; players begin post-season holiday; headline]" />
+		</widget>
+	</container>
+
+	<container class="inner_box_no_margin" id="seMb" background_colour="training season break colour" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<widget class="text" alignment="centre">
+			<translation id="text" translation_id="447664" type="use" value="Squad mid-season break[COMMENT: TEAM TRAINING SCHEDULE; players mid-season holiday; headline]" />
+		</widget>
+	</container>
+
+</panel>

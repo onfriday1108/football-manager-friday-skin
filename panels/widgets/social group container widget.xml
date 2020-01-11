@@ -1,0 +1,29 @@
+﻿<panel>
+	<layout class="fit_children_attachment" alignment="vertical"  gap="0" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+	<container class="main_box" navigation_container="true">
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+		<layout class="fit_children_attachment" alignment="vertical"  gap="0" offset="0"/>
+		<layout class="arrange_horizontal_attachment" layout="250, -1" gap="2" offset="6"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="10"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="10"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5"/>
+
+			<!-- Group Name-->
+			<widget class="text" id="txtN" spec="text" size="large" style="semi_bold" colour="gold" auto_size="vertical" multiline="false" wants_mouse_events="false"/>
+
+			<!--Group Description-->
+			<widget class="text" id="txtD" alignment="left,top" auto_size="vertical" multiline="true" wants_mouse_events="false=" />
+		</container>
+
+		<!--Player honeycomb container-->
+		<container id="scrc">
+			<layout class="arrange_vertical_attachment" alignment="top" gap="-6" offset="10"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill"  gap="-6" offset="10"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+		</container>
+	</container>
+</panel>

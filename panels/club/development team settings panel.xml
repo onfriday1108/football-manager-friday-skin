@@ -1,0 +1,56 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" />
+
+			<widget class="picture" file="icons/26px/development" width="20" height="20">
+				<string id="red_replacement" value="title" />
+			</widget>
+			<widget class="text" alignment="centre_y,left" auto_size="vertical" name="title" font="title" colour="title">
+				<string id="size" value="large" />
+				<translation id="text" translation_id="491861" type="use" value="Development Teams Responsibilities[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+			</widget>
+		</container>
+
+		<container class="tabbed_container" id="ovar" save_session_state="true" default_item="cres" name="tab container">
+			<container class="team_container_responsibilities_panel" file="team/team container dev team overall responsibilities" auto_size="horizontal" id="cres">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				<translation id="title" translation_id="282224" type="use" value="Overall[COMMENT: match analysis panel; title header]" />
+			</container>
+
+			<!-- team 2 box -->
+			<container file="team/team container dev team type responsibilities" auto_size="horizontal" id="tea2">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</container>
+
+			<!-- team 3 box -->
+			<container file="team/team container dev team type responsibilities" auto_size="horizontal" id="tea3">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</container>
+
+			<!-- team 4 box -->
+			<container file="team/team container dev team type responsibilities" auto_size="horizontal" id="tea4">
+				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="fill" vertical_alignment="fill" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</container>
+
+			<!-- team 5 box -->
+			<container file="team/team container dev team type responsibilities" auto_size="horizontal" id="tea5">
+				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="fill" vertical_alignment="fill" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</container>
+
+			<!-- team 6 box -->
+			<container file="team/team container dev team type responsibilities" auto_size="horizontal" id="tea6">
+				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="fill" vertical_alignment="fill" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</container>
+		</container>
+	</container>
+	<container class="inner_box" file="generic/simple form with confirmation buttons" />
+</panel>

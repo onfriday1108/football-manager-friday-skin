@@ -1,0 +1,134 @@
+﻿<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+	<container class="main_box" red_replacement="pitch_box_background">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" />
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_layout="30,30, -1" />
+
+			<widget class="label" alignment="left,centre_y" font="title" size="large" auto_size="horizontal" colour="white">
+				<translation id="text" translation_id="447657" type="use" value="Expected Tactic[COMMENT: oppositon team report; heading]" />
+			</widget>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="-9" />
+
+				<widget class="radio_toggle_switch_left" auto_size="horizontal" selected="true" click_event="shop">
+					<translation id="text" translation_id="447658" type="use" value="Line-up[COMMENT: oppositon team report; button to view lineup]" />
+				</widget>
+
+				<widget class="radio_toggle_switch_right" auto_size="horizontal" click_event="shcl">
+					<translation id="text" translation_id="447659" type="use" value="Line-up Comparison[COMMENT: oppositon team report; button to compare team line ups]" />
+				</widget>
+			</container>
+
+			<widget class="pitch_with_tactics" id="otpc" pitch_vertical_padding="20" pitch_alignment="centre,can_scale" vertical="true" draw_analysis_overlay="true" player_icon_file="tactics/tactics icon opposition predicted team" icon_flags="show_name,show_number,show_role_duty_labels,dont_colour_names,dont_fade_icons,show_preview_info_popup" pitch_draw_grass="false" />
+			<widget class="pitch_with_both_tactics" id="tcpi" hidden="true" file="widgets/pitch with both tactics vertical" vertical="true" pitch_alignment="centre,can_scale" icon_flags="show_name,dont_colour_names,dont_fade_icons" allow_y_score_adjustment_for_roles="false" player_icon_file="tactics/tactics icon opposition comparison" pitch_draw_grass="false" />
+
+		</container>
+
+		<container class="inner_subtle_box" draw_horizontal_dividers="true">
+			<attachment_group class="vertical_arrange" vertical_layout="100,-1,-1" />
+
+			<container class="titled_box">
+				<translation id="title" translation_id="247233" type="use" value="Venue" />
+
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+				<container>
+					<attachment_group class="horizontal_arrange" />
+
+					<widget class="text" font="title" auto_size="all" id="venU" />
+
+					<container class="weather_indicator_panel_horizontal" id="weat" file="match/weather indicator horizontal auto sized">
+						<boolean id="show_weather_label" value="true" />
+						<boolean id="show_weather_icon" value="true" />
+						<boolean id="show_temperature_on_icon" value="true" />
+						<boolean id="weather_icon_size" value="10" />
+					</container>
+				</container>
+				<widget class="text" auto_size="all" id="tacD" />
+			</container>
+
+
+			<container class="titled_box">
+				<translation id="title" translation_id="492032" type="use" value="Expected Tactical Style[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: opposition report tactical style label]" />
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+				<widget class="animation_player_widget" id="wbPN" />
+				<container>
+					<attachment_group class="vertical_arrange" />
+
+					<widget class="text" auto_size="vertical" font="title" id="styT" />
+					<widget class="text" auto_size="vertical" id="styD" />
+					<widget class="text" auto_size="vertical" id="opSD" />
+				</container>
+			</container>
+
+			<container class="tabbed_container" default_item="poPI">
+
+				<container id="poPI">
+					<translation id="title" translation_id="492033" type="use" value="Strengths and Weaknesses[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: opposition report tactical style label]" />
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+					<widget class="team_pro_con_summary_panel" id="pcPA" auto_size="vertical" />
+				</container>
+
+				<container class="opposition_injuries_table_widget" id="IaSC">
+					<translation id="title" translation_id="492034" type="use" value="Injuries and Suspensions[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: opposition report tactical style label]" />
+					<attachment_group class="vertical_arrange" />
+
+					<widget class="table" id="ijsu" auto_size="vertical">
+						<flags id="layout" value="80, -1, -1, -2" />
+
+						<flags id="mode" value="fill_rows,printable" />
+						<integer id="row_spacing" value="0" />
+						<boolean id="fixed_size_rows" value="false" />
+						<boolean id="save_session_state" value="true" />
+
+						<list id="headings">
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="227763" type="use" value="Inf[comment - Player Status Info]" />
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="227765" type="use" value="Name[comment - Person Name]" />
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="491645" type="use" value="Proposed Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="247182" type="use" value="Expected Return" />
+							</record>
+						</list>
+
+						<record id="defp">
+							<flags id="algn" value="left,centre_y" />
+						</record>
+
+						<list id="column_widget_properties">
+							<record indx="0">
+								<flags id="offset" value="10" />
+								<flags id="algn" value="centre" />
+							</record>
+						</list>
+
+						<list id="column_table_properties">
+							<record indx="0">
+								<boolean id="sort_disabled" value="true" />
+							</record>
+							<record indx="1">
+								<boolean id="sort_disabled" value="true" />
+							</record>
+							<record indx="2">
+								<boolean id="sort_disabled" value="true" />
+							</record>
+						</list>
+					</widget>
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

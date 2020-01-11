@@ -1,0 +1,42 @@
+﻿<panel width="650" height="768">
+
+	<!-- arrange items vertically, with text at top -->
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="10" offset="5" />
+	<layout class="centre_in_parent_attachment" alignment="all" />
+	<!-- stretch everything to the sides of the dialog -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+	<!-- text field - should resize vertically to ensure that it's contents fit -->
+	<translation id="title" translation_id="491890" type="use" value="Choose Preferred Style[COMMENT: AREA: Tactics; SUB-AREA: Tactical Style; FR-BN: ?; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: asks user to pick a preferred tactical style]" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="20" horizontal_alignment="horizontal" horizontal_inset="0" />
+		<!--<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />-->
+
+			<widget class="popup_button" id="stys" auto_size="vertical" />
+
+			<widget class="text" id="des1" size="normal" auto_size="vertical">
+				<translation id="text" translation_id="491891" type="use" value="More information regarding tactical styles will be available upon taking a job.[COMMENT: AREA: Tactics; SUB-AREA: Tactical Style; FR-BN: ?; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: asks user to pick a preferred tactical style]" />
+			</widget>
+			<widget class="text" id="des2" size="normal" auto_size="vertical">
+				<translation id="text" translation_id="491892" type="use" value="Styles will also be recommended based on the playing squad available, or a new style can be created from scratch.[COMMENT: AREA: Tactics; SUB-AREA: Tactical Style; FR-BN: ?; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: asks user to pick a preferred tactical style]" />
+			</widget>
+
+			<container class="animation_player_widget" id="StAn" height="525">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</container>
+	</container>
+
+	<!-- standard buttons / these get shown & hidden by subclasses -->
+	<container id="btns">
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="primary_icon_tick_button" id="ok" hidn="true">
+			<translation id="text" translation_id="229829" type="use" value="Ok" />
+		</widget>
+		<widget class="icon_button" id="canc" hidn="true" auto_size="horizontal" height="30">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+		</widget>
+	</container>
+
+</panel>

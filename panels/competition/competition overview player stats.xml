@@ -1,0 +1,36 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!-- Table showing the data-->
+	<widget class="object_list_table" id="stat" mode="hide_headings, no_scrolling, stripe_rows, fill_rows" row_height="40" fixed_size_rows="true" row_spacing="4" column_spacing="5">
+		<list id="column_table_properties">
+			<!-- Team -->
+			<record id="Ttea" width="26" dont_set_object="true" image_alignment="centre" right="5">
+				<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre"/>
+			</record>
+			<!-- Person portrait -->
+			<record id="Pers" width="40">
+				<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre"/>
+			</record>
+			<!-- Person and team stacked labels -->
+			<record id="PTIf" width="-1" dont_set_object="true" left="5">
+				<record id="widget_info" class="property_list_viewer_xml_panel" file="competition/player and team label panel"/>
+			</record>
+			<!-- Short stat value -->
+			<record id="csSS" width="60">
+				<record id="widget_info" class="label" size="large" style="bold" alignment="right,centre_y"/>
+			</record>
+		</list>
+
+		<record id="viewed_property_ids">
+			<record id="Ttea" />
+			<record id="Pers" />
+			<record id="PTIf" />
+			<record id="csSS" />
+		</record>
+	</widget>
+	
+
+
+</panel>

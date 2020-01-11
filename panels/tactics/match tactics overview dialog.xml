@@ -1,0 +1,169 @@
+﻿<panel >
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!--home tactics-->
+	<container class="tabbed_container" id="taHO" default_item="ht01" save_default_state="true" hidden="true">
+
+		<record id="default_properties" team_index="0">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</list>
+			</record>
+		</record>
+
+		<container id="ht01">
+			<translation id="title" translation_id="230056" type="use" value="Tactics" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics overview panel" />
+
+		</container>
+
+		<container id="ht02">
+			<translation id="title" translation_id="227966" type="use" value="Player" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics player instructions panel" />
+
+		</container>
+
+		<container id="ht03">
+			<translation id="title" translation_id="336534" type="use" value="Opposition[COMMENT - opposition team instructions on match tactics]" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics opposition instructions panel" />
+
+		</container>
+
+		<container id="ht04">
+			<translation id="title" translation_id="247724" type="use" value="Set Piece Takers" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics all set piece takers picking panel" />
+
+		</container>
+
+		<container id="ht05">
+			<translation id="title" translation_id="227896" type="use" value="Corners" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics set pieces panel" />
+			<record id="widget_properties" set_piece_area="0" />
+
+		</container>
+
+		<container id="ht06">
+			<translation id="title" translation_id="227892" type="use" value="Free Kicks" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics set pieces panel" />
+			<record id="widget_properties" set_piece_area="1" />
+
+		</container>
+
+		<container id="ht07">
+			<translation id="title" translation_id="247690" type="use" value="Throw Ins" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics set pieces panel" />
+			<record id="widget_properties" set_piece_area="2" />
+
+		</container>
+
+		<container id="ht08">
+			<translation id="title" translation_id="335212" type="use" value="Penalties[COMMENT: sections.xml, tactics section header text]" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics penalty takers panel" />
+
+		</container>
+
+		<container id="ht09">
+			<translation id="title" translation_id="247736" type="use" value="Captains" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics captains panel" />
+
+		</container>
+
+	</container>
+
+	<!--away tactics-->
+	<container class="tabbed_container" id="taAW" default_item="at01" save_default_state="true"  hidden="true">
+
+		<record id="default_properties" team_index="1">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</list>
+			</record>
+		</record>
+
+		<container id="at01">
+			<translation id="title" translation_id="230056" type="use" value="Tactics" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics overview panel" />
+
+		</container>
+
+		<container id="at02">
+			<translation id="title" translation_id="227966" type="use" value="Player" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics player instructions panel" />
+
+		</container>
+
+		<container id="at03">
+			<translation id="title" translation_id="336534" type="use" value="Opposition[COMMENT - opposition team instructions on match tactics]" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics opposition instructions panel" />
+
+		</container>
+
+		<container id="it04">
+			<translation id="title" translation_id="247724" type="use" value="Set Piece Takers" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics all set piece takers picking panel" />
+
+		</container>
+
+		<container id="at04">
+			<translation id="title" translation_id="227896" type="use" value="Corners" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics set pieces panel" />
+			<record id="widget_properties" set_piece_area="0" />
+
+		</container>
+
+		<container id="at05">
+			<translation id="title" translation_id="227892" type="use" value="Free Kicks" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics set pieces panel" />
+			<record id="widget_properties" set_piece_area="1" />
+
+		</container>
+
+		<container id="at06">
+			<translation id="title" translation_id="247690" type="use" value="Throw Ins" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics set pieces panel" />
+			<record id="widget_properties" set_piece_area="2" />
+
+		</container>
+
+		<container id="at07">
+			<translation id="title" translation_id="335212" type="use" value="Penalties[COMMENT: sections.xml, tactics section header text]" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics penalty takers panel" />
+
+		</container>
+
+		<container id="at08">
+			<translation id="title" translation_id="247736" type="use" value="Captains" />
+			<symbol id="class" value="match_tactics_panel_base" />
+			<string id="file" value="match/match tactics captains panel" />
+
+		</container>
+
+	</container>
+
+</panel>

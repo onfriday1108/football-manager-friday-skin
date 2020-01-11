@@ -1,0 +1,12 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<container class="main_contrast_box_no_margin" red_replacement="tutorial bg">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="26,-5,-4,-2" horizontal_gap="8" horizontal_offset="8"/>
+
+		<widget class="picture" id="icon" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="40"/>
+		<widget class="text" id="name" auto_size="vertical" style="bold" />
+		<widget class="icon_button" id="sent" show_button_appearance="false" icon="icons/16px/tick" icon_enabled="false" icon_alignment="left,centre_y" auto_size="vertical" alignment="right,centre_y" colour="text" navigation_focus_target="false"/>
+		<widget class="button" id="requ" auto_size="vertical" click_event="ABcl" />
+	</container>
+</panel>

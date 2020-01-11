@@ -1,0 +1,46 @@
+<panel width="600" height="500">
+	<translation id="title" translation_id="420628" type="use" value="Invite Friends[COMMENT: Button text; Inviting friend to play fantasy Draft]" />
+	<layout class="arrange_vertical_attachment" layout="30,-1,30" offset="10" gap="2" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+	<!--start server-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<translation id="hint" translation_id="334166" type="use" value="Tick to enable your computer to host network games by allowing other computers to connect into your save game.[COMMENT: preference screen; hint string, cannot be feminised]" />
+
+		<widget class="label" auto_size="horizontal" alignment="left,centre_y" colour="text">
+			<translation id="text" translation_id="447517" type="use" value="Allow users to join your game[COMMENT: network settings panel; network game options]" />
+		</widget>
+
+		<widget class="setting_popup_button" id="chkx" auto_size="horizontal">
+			<list id="items">
+				<record id="0">
+					<translation id="text" translation_id="231460" type="use" value="No" />
+				</record>
+				<record id="1">
+					<translation id="text" translation_id="447518" type="use" value="Friends Only[COMMENT: network server type in preferences]" />
+				</record>
+				<record id="2">
+					<translation id="text" translation_id="447519" type="use" value="Anyone[COMMENT: network server type in preferences]" />
+				</record>
+			</list>
+		</widget>
+
+	</container>
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="20" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+		<widget class="table" id="tbFL" layout="-3, 100, 100" mode="fill_rows, stripe_rows" row_spacing="2" row_height="30" />
+	</container>
+
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="button" id="canc" event_id="canc" height="30" auto_size="horizontal">
+			<translation id="text" translation_id="229829" type="use" value="Ok" />
+		</widget>
+	</container>
+
+</panel>

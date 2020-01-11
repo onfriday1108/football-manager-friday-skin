@@ -1,0 +1,66 @@
+﻿<panel>
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" horizontal_alignment="horizontal" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<!-- buffer container for top area actions -->
+		<container height="100" id="buff" hidden="true" />
+
+		<container class="main_contrast_box_no_margin" id="step" red_replacement="tutorial header">
+
+			<animation class="slide_in_top_animation" duration="0.6" tween="ease_out" high_priority="true" />
+
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" vertical_offset="0" />
+			<container height="52">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-1,160" horizontal_offset="0" vertical_inset="0" horizontal_gap="-10" />
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="50,-1" horizontal_offset="2" vertical_inset="0" />
+					<widget class="picture" file="pictures/players/normal/default/male/staff" red_replacement="black" height="52" image_alignment="centre_x, bottom" scale_picture="true" keep_aspect_ratio="true" />
+
+					<container class="inner_subtle_box" appearance="boxes/custom/speech bubble/induction/paper" red_replacement="blue 700" height="44">
+						<attachment_group class="horizontal_arrange" horizontal_layout="-1,50" apply_to_children="true" inset="0" />
+						<widget class="text" id="sttx" alignment="left, centre_y" colour="white" />
+						<widget class="icon_button" id="ddbu" icon="icons/16px/rotate right" appearance="buttons/custom/tutorial/induction skip/button" icon_alignment="centre" icon_enabled="true" width="35" click_event="ddtu" icon_colour="blue">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+						</widget>
+					</container>
+
+				</container>
+				<widget class="icon_button" controller_button="right_trigger" hidden="true" id="nexI" appearance="buttons/custom/tutorial/induction next/button" icon="icons/16px/continue" icon_alignment="centre_right, centre_y" click_event="adtu" alignment="centre" font="continue" size="large">
+					<translation id="text" translation_id="255268" type="use" value="Next[COMMENT: wizard dialog: default next button text]" />
+					<attachment class="flash_colour_attachment" auto_start="true" rate="999">
+						<colour id="first_colour" name="light blue 500" />
+						<colour id="second_colour" name="blue 700" />
+						<flags id="colour_property" value="bkcl" />
+					</attachment>
+				</widget>
+
+
+				<widget class="icon_button" hidden="true" id="finI" appearance="buttons/custom/tutorial/induction next/button" icon="icons/16px/tick" icon_alignment="centre_left, centre_y" click_event="fitu" alignment="centre" font="continue" size="large" controller_button="right_trigger">
+					<translation id="text" translation_id="297549" type="use" value="Finish[COMMENT: tactic creator wizard: confirmation button text]" />
+					<attachment class="flash_colour_attachment" auto_start="true" rate="999">
+						<colour id="first_colour" name="light blue 500" />
+						<colour id="second_colour" name="blue 700" />
+						<flags id="colour_property" value="bkcl" />
+					</attachment>
+				</widget>
+			</container>
+			<container id="actC" hidden="true">
+				<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal, top" apply_to_children="true" inset="4" />
+
+				<container class="main_box" id="opts" >
+					<layout class="fit_children_attachment" alignment="vertical,extend" offset="6" gap="20"/>
+					<layout class="arrange_items_attachment" alignment="left" gap="20" offset="6" />
+					<!-- We will programatically add decisions here e.g scouting control: head coach or manager-->
+				</container>
+			</container>
+		</container>
+		<!-- Skip Button -->
+		<container height="35">
+			<widget class="icon_button" id="skip" icon="icons/16px/clear" appearance="buttons/custom/tutorial/induction skip/button" red_replacement="background" icon_alignment="centre" icon_enabled="true" width="35" click_event="sktu" icon_colour="white">
+				<layout class="stick_to_sides_attachment" alignment="right, vertical" inset="0" />
+			</widget>
+		</container>
+	</container>
+</panel>

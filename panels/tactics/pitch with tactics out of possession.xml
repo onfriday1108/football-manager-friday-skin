@@ -1,0 +1,35 @@
+﻿<panel>
+	<string id="player_icon_file" value="tactics/tactics icon info panel basic out of possession" />
+	<!--<integer id="pitch_horizontal_padding" value="150"/>-->
+	<boolean id="pitch_dont_draw_indicators" value="false" />
+	<boolean id="show_background" value="false" />
+
+	<!--line of engagement slider-->
+	<widget class="slider_vertical" id="loes" min_value="-2" max_value="2" changed_event="loeC" final_changed_event="loeF" appearance="sliders/custom/instruction slider/pitch line left/slider">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+	</widget>
+
+	<!--text description (positioned in code)-->
+	<widget class="label" id="loeT" auto_size="all" colour="white" />
+	<widget class="label" id="loeL" auto_size="all" font="title" size="small" colour="white">
+		<translation id="text" translation_id="466507" type="use" value="Line of Engagement[COMMENT: label for a slider to choose how high up the pitch your team's line of engagement should be]" />
+		<translation id="hint" translation_id="469434" type="use" value="The Line of Engagement is where the forwards in the team begin to press the opposition to try to win the ball back. In combination with the Defensive Line, it allows control over the team's vertical compactness out of possession.[COMMENT: explanatory text for 466507 Line of Engagement]" />
+	</widget>
+
+	<!--defensive line slider-->
+	<widget class="slider_vertical" id="dlis" min_value="-2" max_value="2" changed_event="dliC" final_changed_event="dliF" appearance="sliders/custom/instruction slider/pitch line right/slider">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+	</widget>
+
+	<!--text description (positioned in code)-->
+	<widget class="label" id="dliT" auto_size="all" colour="white" />
+	<widget class="label" id="dliL" auto_size="all" font="title" size="small" colour="white">
+		<translation id="text" translation_id="466508" type="use" value="Defensive Line[COMMENT: label for a slider to choose how high up the pitch your team's defensive line should be]" />
+		<translation id="hint" translation_id="469435" type="use" value="This instructs defenders how high they should position themselves when the opposition have the ball in their own half.[COMMENT: explanatory text for ID 466508 Defensive Line]" />
+	</widget>
+
+	<!--icons container-->
+	<container id="icns">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+</panel>

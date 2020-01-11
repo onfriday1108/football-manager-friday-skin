@@ -1,0 +1,88 @@
+<panel height="245">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<string id="comp_win_background_appearance" value="boxes/custom/comp win/trophy/paper"/>
+	<string id="other_background_appearance" value="boxes/custom/comp loss/trophy/paper"/>
+
+	<container id="DtBx" class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container height="115">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			<!-- team badge -->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="90, -1," gap="0" offset="2"/>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="25, 0, 35, 0"/>
+
+				<widget class="object_portrait_picture" id="tmbg" image_alignment="right" scale_picture="true" keep_aspect_ratio="true"/>
+				<widget class="spacer" />
+			</container>
+
+			<!-- comp badge -->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1, 90" gap="0" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="25, 0, 35, 0"/>
+
+				<widget class="spacer" />
+				<widget class="object_portrait_picture" id="cmbg" image_alignment="left" scale_picture="true" keep_aspect_ratio="true"/>
+			</container>
+
+			<!-- trophy -->
+			<container class="main_box" appearance="boxes/custom/comp win/trophy shadow/paper">
+				<layout class="arrange_horizontal_attachment" layout="-1, 180, -1" gap="0" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5, 0, 0, 0"/>
+
+				<widget class="spacer" />
+				<widget class="object_portrait_picture" id="trph" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" comp_use_trophy_icon="true">
+					<integer id="property" value="trop"/>
+				</widget>
+				<widget class="spacer" />
+			</container>
+		</container>
+
+		<container id="PvMt" height="55">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<!--pivotal match-->
+			<widget class="label" font="title" colour="faded text" alignment="centre" auto_size="vertical">
+				<translation id="text" translation_id="437033" type="use" value="Pivotal Match[COMMENT: FR 13665; comp win news item; section title for important match]"/>
+			</widget>
+
+			<!--pivotal match score-->
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" layout="-2, -1, -2" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<widget class="team_button" id="hmnm" size="small" colour="text" alignment="right,centre_y" format="[%team#1-short]" icon_alignment="right"/>
+				<widget class="fixture_button" id="scrl" size="14" style="bold" alignment="centre,auto_fit"/>
+				<widget class="team_button" id="awnm" size="small" colour="text" alignment="left,centre_y" format="[%team#1-short]"/>
+			</container>
+		</container>
+
+		<container id="kypC" height="75">
+			<layout class="arrange_vertical_attachment" layout="20, 25, 20" gap="0" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<!--key player-->
+			<widget class="label" auto_size="none" font="title" colour="faded text" alignment="centre">
+				<translation id="text" translation_id="227396" type="use" value="Key Player"/>
+			</widget>
+
+			<container height="25">
+				<layout class="arrange_vertical_attachment" alignment="top" gap="0"/>
+				<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true"/>
+
+				<widget class="person_button" id="kypl" person_is_player="true" auto_size="all" alignment="centre" style="bold">
+					<translation id="text" translation_id="227396" type="use" value="Key Player"/>
+				</widget>
+			</container>
+
+			<!--key player's average rating-->
+			<widget class="label" id="avrt" auto_size="none" alignment="centre">
+			</widget>
+		</container>
+	</container>
+
+</panel>

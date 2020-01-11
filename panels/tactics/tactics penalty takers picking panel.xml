@@ -1,0 +1,217 @@
+<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at10" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at17" />
+		<record entity_layout_id="at11" />
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at16" />
+		<record entity_layout_id="at14" />
+		<record entity_layout_id="at13" />
+		<record entity_layout_id="at15" />
+		<record entity_layout_id="at12" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at04" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="empty_state" entity_layout_id="at02" id="nvab" hidden="true">
+		<string id="header_widget" value="noCo" />
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<widget class="text" entity_layout_id="at01" alignment="centre_x,centre_y" id="at01">
+			<string id="if  " value="noCo" />
+			<translation id="text" translation_id="395313" type="use" value="Set Piece Instructions cannot be viewed without control of the team.[COMMENT: FR 9552 - explanatory text when you can't see AI team's set pieces]" />
+			<string id="standard_spec" value="text" />
+			<string id="style" value="bold" />
+			<string id="size" value="large" />
+			<string id="colour" value="text" />
+			<layout class="stick_to_object_attachment" id="alPt" offset="374" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="alPb" offset="-373" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+		</widget>
+	</container>
+	<container class="empty_state" entity_layout_id="at10" id="CtEd" hidden="true">
+		<string id="header_widget" value="cted" />
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<widget class="text" entity_layout_id="at07" id="cted" height="19">
+			<layout class="stick_to_object_attachment" id="alPt" offset="375" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="alPl" offset="500" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="alPr" offset="-500" get_side="right" set_side="right" target="main" />
+		</widget>
+		<container entity_layout_id="at09" id="at09" height="30">
+			<layout class="stick_to_object_attachment" id="alPt" offset="4" get_side="bottom" set_side="top" move_side="true" target="at07" />
+			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<widget class="link_button" entity_layout_id="at08" auto_size="horizontal" id="at08" needs_width="true">
+				<string id="section" value="tacO" />
+				<translation id="text" translation_id="363642" type="use" value="Go To Tactics[COMMENT: FR 8989 - text for a button to take you to the tactics page]" />
+				<layout class="stick_to_object_attachment" id="alPt" offset="1236" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="centre_in_parent_attachment" id="alCn" alignment="horizontal" offset="2020" />
+			</widget>
+		</container>
+	</container>
+	<container entity_layout_id="at17" hidden="true" id="vabl" save_default_state="true">
+		<string id="starting_layout" value="-4, -3" />
+		<integer id="min_width_left" value="525" />
+		<integer id="min_width_right" value="425" />
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container class="team_squad_panel" entity_layout_id="at11" id="tesq" file="tactics/team squad penalty views">
+			<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" move_side="true" target="main" />
+			<layout class="stick_to_sizes_attachment" width="57.000000" />
+		</container>
+		<widget class="vertical_divider" entity_layout_id="at00" id="at00" needs_width="true" auto_size="horizontal">
+			<layout class="stick_to_object_attachment" id="alPt" offset="1" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="alPl" get_side="right" set_side="left" move_side="true" target="at11" />
+		</widget>
+		<container class="main_box" entity_layout_id="at16" id="at16">
+			<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="alPl" offset="8" get_side="right" set_side="left" target="at00" />
+			<layout class="stick_to_object_attachment" id="alPr" offset="-8" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<widget class="check_box" entity_layout_id="at14" id="2Scr" height="24">
+				<string id="click_event" value="ChTS" />
+				<translation id="text" translation_id="451448" type="use" value="Allow player who has scored 2 goals to take penalty[COMMENT: Checkbox related to penalty takers; Allowing the player who scored two goals to take the penalty]" />
+				<layout class="stick_to_object_attachment" id="alPb" offset="-5" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+			</widget>
+			<container class="inner_subtle_box"  entity_layout_id="at13" id="titl">
+				<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="alPb" get_side="top" set_side="bottom" target="at14" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container class="set_piece_takers_panel" entity_layout_id="at12" id="take">
+					<record id="defp" />
+					<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+				</container>
+			</container>
+			<widget class="spacer" entity_layout_id="at15" id="at15">
+				<layout class="stick_to_object_attachment" id="alPt" offset="2" get_side="bottom" set_side="top" target="at14" />
+				<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+			</widget>
+		</container>
+	</container>
+	<container class="empty_state" entity_layout_id="at06" id="ntac" hidden="true">
+		<string id="header_widget" value="noTa" />
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<widget class="manager_text" entity_layout_id="at03" id="noTa" alignment="centre_x,bottom" auto_size="all" needs_width="true" needs_height="true">
+			<translation id="text" translation_id="395563" type="use" value="[%person#1-You] need to create a tactic before [%person#1-you] can set up set-piece routines.[COMMENT: FR 9552 - explanatory text to show that the user hasn't created a tactic yet, so can't set up any set piece routines]" />
+			<string id="standard_spec" value="text" />
+			<string id="style" value="bold" />
+			<string id="size" value="large" />
+			<string id="colour" value="text" />
+			<layout class="centre_in_parent_attachment" id="alCn" alignment="horizontal" offset="0" />
+			<layout class="centre_in_parent_attachment" id="alCv" alignment="vertical" offset="0" />
+		</widget>
+		<container entity_layout_id="at05" id="at05" height="34">
+			<layout class="stick_to_object_attachment" id="alPt" offset="4" get_side="bottom" set_side="top" move_side="true" target="at03" />
+			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<widget class="link_button" entity_layout_id="at04" id="at04" auto_size="horizontal" needs_width="true">
+				<string id="section" value="tacO" />
+				<translation id="text" translation_id="363642" type="use" value="Go To Tactics[COMMENT: FR 8989 - text for a button to take you to the tactics page]" />
+				<layout class="stick_to_object_attachment" id="alPt" offset="4" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="centre_in_parent_attachment" id="alCn" alignment="horizontal" offset="0" />
+			</widget>
+		</container>
+	</container>
+</panel>

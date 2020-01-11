@@ -1,0 +1,74 @@
+﻿<panel cancel_mouse_hide="true">
+
+	<boolean id="save_immediate_state" value="true" />
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="main_transparent_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--competitions drop down-->
+		<container id="btns">
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" apply_to_children="true" />
+
+			<widget class="popup_button" id="mlsc" auto_size="all"/>
+		</container>
+
+		<!--league table and updates-->
+		<container class="horizontal_adaptive_container" inset="0" offset="0">
+
+			<!--league table-->
+			<container class="inner_subtle_box" id="Leag" default_width="-1" minimum_width="450" priority="1">
+				<translation id="title" translation_id="248082" type="use" value="League Table" />
+
+				<!-- Slide in from side of screen -->
+				<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.2" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
+				<!-- Fade animation -->
+				<animation class="fade_on_hide_animation" duration="0.2"/>
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container id="leag" class="match_league_table_panel">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</container>
+			</container>
+
+			<!--goal updates-->
+			<container class="inner_subtle_box" id="Goal" default_width="-1" minimum_width="450" priority="2">
+				<translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+
+				<!-- Slide in from side of screen -->
+				<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="-1,0" end_value="0,0" duration="0.2" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
+				<!-- Fade animation -->
+				<animation class="fade_on_hide_animation" duration="0.1"/>
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container id="goal" class="match_goal_update_panel">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</container>
+			</container>
+
+			<!--latest scores-->
+			<container class="inner_subtle_box" id="Late" default_width="-1" minimum_width="450" priority="1">
+				<translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+
+				<!-- Slide in from side of screen -->
+				<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1,0" end_value="0,0" duration="0.2" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
+				<!-- Fade animation -->
+				<animation class="fade_on_hide_animation" duration="0.2"/>
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container id="late" class="match_latest_scores_panel" file="match/match update latest scores">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</container>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

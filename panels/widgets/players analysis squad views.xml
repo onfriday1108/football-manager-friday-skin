@@ -1,0 +1,300 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+
+  <widget class="view_menu_popup" id="plvi" select_event="SlSE" save_session_state="true" embed_in_frame="false">
+    <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+  </widget>
+
+  <container class="scrolling_box">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+    <widget class="match_player_list_table" id="pltb" sort_disabled="false" customisation_context="chlk" lock_to_context="true" database_table_type="1" mode="fill_rows, stripe_rows, show_insert_column_popup" fixed_size_rows="true" auto_size_rows="false" auto_size="vertical" row_height="28" row_spacing="1" column_mode="custom_views">
+      <record id="default_properties" spec="text" />
+      <flags id="default_view" value="shot" />
+      <list id="views">
+        <record id="shot">
+          <translation id="text" translation_id="247381" type="use" value="Shots" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+						
+            <!--Stats-->
+            <!-- Shots Gone In -->
+            <record id="SGiC" auto_hide_priority="10" />
+            <!-- Shot missed target -->
+            <record id="miST" auto_hide_priority="10"/>
+            <!-- Shot hit woodwork -->
+            <record id="shWd" auto_hide_priority="10"/>
+            <!-- Shots Saved by Goalie -->
+            <record id="sSVD" auto_hide_priority="10" />
+            <!-- Shots Blocked -->
+            <record id="sBlc" auto_hide_priority="10" />
+          </record>
+        </record>
+        <record id="pasS">
+          <translation id="text" translation_id="249416" type="use" value="Passes[COMMENT: player stat: passes table label]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Pass Assist -->
+            <record id="pAst" auto_hide_priority="10"/>
+            <!-- Pass Completed -->
+            <record id="pcmP" auto_hide_priority="10"/>
+            <!-- Pass Intercepted -->
+            <record id="psIn" auto_hide_priority="10"/>
+            <!-- Pass out of Pitch -->
+            <record id="pOfP" auto_hide_priority="10"/>
+            <!-- Received Pass -->
+            <record id="rcPs" auto_hide_priority="10"/>
+            <!-- Key Pass -->
+            <record id="keYP" auto_hide_priority="10"/>
+            <!-- Chance Created -->
+            <record id="chCr" auto_hide_priority="10"/>
+            <!-- Pass Hit Woodwork -->
+            <record id="psWd" auto_hide_priority="10"/>
+          </record>
+        </record>
+        <record id="cros">
+          <translation id="text" translation_id="291481" type="use" value="Crosses[COMMENT: match analysis panel; event type]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Cross Assist -->
+            <record id="cAst" auto_hide_priority="10"/>
+            <!-- Crosses Completed -->
+            <record id="cCPM" auto_hide_priority="10"/>
+            <!-- Crosses out of Pitch -->
+            <record id="cOOp" auto_hide_priority="10"/>
+            <!-- Recieved Crosses -->
+            <record id="rCCE" auto_hide_priority="10"/>
+            <!-- Crosses Hit Woodwork -->
+            <record id="crWd" auto_hide_priority="10"/>
+          </record>
+        </record>
+        <record id="head">
+          <translation id="text" translation_id="376394" type="use" value="Aerial Challenges[COMMENT: player stat: headers table label]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Headers Won -->
+            <record id="cEHW" auto_hide_priority="10"/>
+            <!-- Headers Lost -->
+            <record id="cEHL" auto_hide_priority="10"/>
+            <!-- Headers Missed -->
+            <record id="hDMS" auto_hide_priority="10"/>
+						<!-- Key Headers -->
+						<record id="cEKH" auto_hide_priority="10"/>
+          </record>
+        </record>
+        <record id="tacK">
+          <translation id="text" translation_id="291483" type="use" value="Tackles[COMMENT: match analysis panel; event type]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Tackles Won -->
+            <record id="cETW" auto_hide_priority="10"/>
+            <!-- Tackles Lost -->
+            <record id="cETL" auto_hide_priority="10"/>
+						<!-- Key Tackles -->
+						<record id="cEKT" auto_hide_priority="10" />
+          </record>
+        </record>
+        <record id="foul">
+          <translation id="text" translation_id="291484" type="use" value="Fouls[COMMENT: match analysis panel; event type]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+            <record id="PsnC" auto_hide_priority="1" />
+            <record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Fouls Called -->
+            <record id="cEFC" auto_hide_priority="10"/>
+            <!-- Penalties Called -->
+            <record id="cEFP" auto_hide_priority="10"/>
+            <!-- Fouls Against -->
+            <record id="cEFA" auto_hide_priority="10"/>
+						<!-- Yellow Card -->
+						<record id="cEYC" auto_hide_priority="10"/>
+            <!-- Red Card -->
+            <record id="cERC" auto_hide_priority="10"/>
+          </record>
+        </record>
+        <record id="intc">
+          <translation id="text" translation_id="291486" type="use" value="Interceptions[COMMENT: match analysis panel; event type]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Interception -->
+            <record id="cEIN" auto_hide_priority="10" />
+            <!-- Interception Missed -->
+            <record id="cEIM" auto_hide_priority="10"/>
+            <!-- Interception Blocked Shot -->
+            <record id="cEBS" auto_hide_priority="10"/>
+          </record>
+        </record>
+        <record id="setp">
+          <translation id="text" translation_id="306492" type="use" value="Set Pieces[COMMENT: match analysis panel; event type]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Throw Ins -->
+            <record id="cETI" auto_hide_priority="10"/>
+            <!-- Attacking Free Kicks -->
+            <record id="cEAF" auto_hide_priority="10"/>
+            <!-- Defending Free Kicks -->
+            <record id="cEDF" auto_hide_priority="10"/>
+            <!-- Corners -->
+            <record id="cECR" auto_hide_priority="10"/>
+          </record>
+        </record>
+        <record id="chnc">
+          <translation id="text" translation_id="306493" type="use" value="Scoring Chances[COMMENT: match analysis panel; event type]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Clear Cut Chances -->
+            <record id="cECc" auto_hide_priority="10"/>
+            <!-- Half Chances -->
+            <record id="cEhC" auto_hide_priority="10"/>
+          </record>
+        </record>
+        <record id="save">
+          <translation id="text" translation_id="316588" type="use" value="Saves[COMMENT: match analysis panel; event type]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Saves Held -->
+            <record id="cESh" auto_hide_priority="10"/>
+            <!-- Saves Parried -->
+            <record id="ceSP" auto_hide_priority="10"/>
+            <!-- Saves Tipped -->
+            <record id="cESt" auto_hide_priority="10" />
+          </record>
+        </record>
+        <record id="move">
+          <translation id="text" translation_id="306495" type="use" value="Movement[COMMENT: match analysis panel; event type]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Dribbles -->
+            <record id="cEDr" auto_hide_priority="10"/>
+            <!-- Offsides Called -->
+            <record id="cEOC" auto_hide_priority="10"/>
+            <!-- Player Movement Map -->
+            <record id="plMm" auto_hide_priority="10"/>
+          </record>
+        </record>
+        <record id="mist">
+          <translation id="text" translation_id="284357" type="use" value="Mistakes[COMMENT: team information panel; stats section; column heading]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Mistake Missed Interception -->
+            <record id="cEmi" auto_hide_priority="10"/>
+            <!-- Mistake Lost Ball -->
+            <record id="cElb" auto_hide_priority="10"/>
+            <!-- Mistake Lost Challenge -->
+            <record id="cElc" auto_hide_priority="10"/>
+              <!-- Mistake Leading To Goal -->
+            <record id="cElg" auto_hide_priority="10"/>
+            <!-- Mistake Handball -->
+            <record id="cEmh" auto_hide_priority="10"/>
+            <!-- Mistake Caught On Ball -->
+            <record id="cEcb" auto_hide_priority="10"/>
+            <!-- Mistake Conceded Penalty -->
+            <record id="cEcp" auto_hide_priority="10"/>
+            <!-- Mistake Dropped Ball -->
+            <record id="cEdp" auto_hide_priority="10"/> 
+          </record>
+        </record>
+        <record id="poss">
+          <translation id="text" translation_id="232851" type="use" value="Possession" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+						<record id="PsnC" auto_hide_priority="1" />
+						<record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!--Stats-->
+            <!-- Gained Possession -->
+            <record id="cEgP" auto_hide_priority="10"/>
+            <!-- Lost Possession -->
+            <record id="cElP" auto_hide_priority="10"/>
+            <!-- Touch -->
+            <record id="cETo" auto_hide_priority="10"/>
+          </record>
+        </record>
+        <record id="avrp">
+          <translation id="text" translation_id="433803" type="use" value="Average Position[COMMENT: analysis panel, label for a player's average position on the pitch during a match]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+            <record id="PsnC" auto_hide_priority="1" />
+            <record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+
+            <!-- Overall Average Position -->
+            <record id="CERo" auto_hide_priority="10"/>
+            <!-- Average Position with Ball -->
+            <record id="CERW" auto_hide_priority="10"/>
+            <!-- Average Position without Ball -->
+            <record id="CERb" auto_hide_priority="10"/>
+          </record>
+        </record>
+        <record id="heat">
+          <translation id="text" translation_id="420623" type="use" value="Heat Map[COMMENT: match analysis, graphic to display the frequency of activity and touches in each area of the pitch]" />
+          <record id="view">
+            <!--Name, Incident, etc-->
+            <record id="PsnC" auto_hide_priority="1" />
+            <record id="Pnam" auto_hide_priority="1"/>
+						<record id="Pcar" auto_hide_priority="1"/>
+            <!-- Heatmap -->
+            <record id="PHmp" auto_hide_priority="10"/>
+          </record>
+        </record>
+      </list>
+    </widget>
+  </container>
+</panel>

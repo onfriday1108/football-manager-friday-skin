@@ -1,0 +1,52 @@
+﻿<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+
+		<widget class="inbox_body_text" id="bdtx" auto_size="vertical" colour="inbox_text"/>
+
+		<container class="main_contrast_box" appearance="boxes/custom/inbox attachment/personal/paper">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container class="inner_box">
+
+			<translation id="title" translation_id="450764" type="use" value="Most recommended players this month[COMMENT: scouting centre text showing the scout who has recommended the most players in the last month]" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="client_object_list_table" id="tabl" layout="-1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true">
+				<flags id="current_view" value="ovvw" />
+				<list id="views">
+					<record id="ovvw">
+						<translation id="name" translation_id="247414" type="use" value="Overview" />
+						<record id="view">
+							<flags id="PSpi" />
+							<!-- player status/info -->
+							<flags id="PNaC" />
+							<!-- player name/nation -->
+							<flags id="PpsP" />
+							<!-- person position-->
+							<flags id="PSag" />
+							<!-- person age -->
+
+							<flags id="Pmxa" />
+							<!-- max asking price -->
+							<flags id="Psrk" />
+							<!-- recommended -->
+						</record>
+
+					</record>
+				</list>
+			</widget>
+		</container>
+		</container>
+
+
+
+	</container>
+
+
+</panel>

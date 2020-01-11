@@ -1,0 +1,54 @@
+<panel>
+	<flags id="text_colour" value="white" />
+
+	<!-- Tell our containing modal popup that we want a delay when closing to finish our animation -->
+	<real id="delay_modal_close" value="0.5" />
+
+	<!-- this panel is contained in a modal popup panel, which tells its children to stick to all sides - the
+         main panel therefore should not fit itself to its children as they will conflict.
+        We should also not use the "layout" property for arrange attachments in sizing scenarios,
+         they do not cooperate. -->
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+
+	<!-- We want to be able to size object browser (the bordered box), so that panel should not end up sticking to the bottom
+        i.e. don't stick 'all' or 'vertical' of its parent contaienr, as it conflicts with the idea of vertical sizing -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="main_box" appearance="boxes/object explorer/paper" height="164" id="szbx">
+		<attachment class="sizeable_attachment" mode="bottom" minimum_height="40" resized_event="oers" />
+
+		<!-- Slide on from above the screen -->
+		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,-1" end_value="0,0" duration="0.1" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
+		<!-- Fade animation -->
+		<animation class="fade_on_hide_animation" duration="0.2"/>
+
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="40,-1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,300" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="label" size="11" style="bold" alignment="left" font="fonts/match_panel_title">
+					<translation id="text" translation_id="331838" type="use" value="Browse the World" />
+				</widget>
+				<widget class="db_record_search_box" />
+			</container>
+
+			<container class="main_box" appearance="boxes/object explorer/inner/paper">
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" inset="0" alignment="horizontal" apply_to_children="true" />
+				<widget class="client_object_link_explorer" id="expl">
+					<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" inset="0" />
+				</widget>
+			</container>
+
+
+		</container>
+	</container>
+
+</panel>

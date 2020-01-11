@@ -1,0 +1,21 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+			<widget class="inbox_body_text" id="bdtx"/>
+
+			<container id="rpbx">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+			</container>
+
+			<widget class="text" id="adtx" auto_size="vertical" font="fonts/inbox_body" size="11" />
+
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,45 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container>
+
+    <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <container class="tactics_overview_panel" id="tacc" file="none" >
+
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+      <container>
+
+        <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="1" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+          <!--squad list for all players-->
+          <widget class="match_team_squad_panel" id="tesA" include_starting_xi="true" include_starting_subs="true" include_unpicked="true" />
+
+        </container>
+
+        <container id="spCO" width="160">
+        </container>
+
+        <container id="miEX" width="660" hidden="true">
+        </container>
+
+        <container id="spEX" width="820" hidden="true">
+        </container>
+
+
+      </container>
+
+      <container id="siPN" file="tactics/tactics overview side panel"/>
+
+    </container>
+
+  </container>
+
+</panel>

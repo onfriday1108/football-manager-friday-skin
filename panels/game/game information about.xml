@@ -1,0 +1,31 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="scrolling_box" id="scrb">
+		<container class="table" id="info" layout="-1, -2" mode="fill_rows, stripe_rows">
+			<boolean id="fixed_size_rows" value="false" />
+			<boolean id="auto_size_rows" value="true" />
+			<flags id="auto_size" value="vertical" />
+
+			<!-- default properties for everything in a table -->
+			<record id="default_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+
+			<list id="column_widget_properties">
+				<record index="1" alignment="right,centre_y" />
+			</list>
+
+			<widget class="label" row="0" col="0">
+				<translation id="text" translation_id="230234" type="use" value="Version" />
+			</widget>
+			<widget class="label" row="0" col="1">
+				<attachment class="get_global_attachment" get_property="lver" set_property="text" />
+			</widget>
+
+		</container>
+		<!-- table -->
+	</container>
+	<!-- scrolling box -->
+
+</panel>

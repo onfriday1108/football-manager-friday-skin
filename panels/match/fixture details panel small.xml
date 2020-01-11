@@ -1,0 +1,41 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <container>
+    <layout class="arrange_vertical_attachment" layout="28, -1" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+    <!-- teams and score -->
+    <widget class="client_object_viewer_xml_panel" id="badg" file="team/team upcoming fixture badges names no versus">
+      <record id="object_property">
+        <integer id="get_property" value="objt"/>
+        <integer id="set_property" value="objt"/>
+      </record>
+    </widget>
+    
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+      <layout class="arrange_horizontal_attachment" layout="-3, 10, -4" offset="0" gap="4"/>
+
+      <!-- date -->
+      <widget class="date_cell" id="fxdt" alignment="right" colour="faded text">
+        <record id="object_property">
+          <integer id="get_property" value="fxdt"/>
+        </record>
+      </widget>
+    
+      <widget class="text" alignment="centre_x" colour="faded text">
+        <translation id="text" translation_id="233089" type="use" value="-" />
+      </widget>
+
+      <!-- comp -->
+      <widget class="fixture_name_text" id="FxNm" alignment="left" colour="faded text">
+        <record id="object_property">
+          <integer id="get_property" value="FxNm"/>
+        </record>
+      </widget>
+    
+    </container>
+  </container>
+
+</panel>

@@ -1,0 +1,8 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="horizontal" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="popup_button" id="brBU" auto_size="all">
+		<translation id="text" translation_id="333910" type="use" value="Make Board Request[COMMENT: popup button to make a board request]" />
+	</widget>
+</panel>

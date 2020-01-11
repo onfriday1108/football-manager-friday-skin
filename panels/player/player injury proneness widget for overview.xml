@@ -1,0 +1,20 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <list id="properties_to_forward">
+    <record get_property="RAiv" set_property="text" target="RAiv"/>
+    <record get_property="IPTc" set_property="colour" target="RAiv"/>
+    <record get_property="RAir" set_property="text" target="RAir"/>
+  </list>
+
+  <container height="60">
+	  <layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+	  <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+
+	  <!-- value -->
+    <widget class="label" id="RAiv" auto_size="all" style="bold" size="large" alignment="left,centre_y"/>
+
+    <!-- description -->
+    <widget class="label" id="RAir" auto_size="vertical"  alignment="left,centre_y"/>
+  </container>
+</panel>

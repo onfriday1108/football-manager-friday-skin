@@ -1,0 +1,18 @@
+﻿<panel>
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<!--commentary and away tactics popup button-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--commentary-->
+		<widget class="match_commentary_panel" id="cmif" height="35">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+	</container>
+</panel>

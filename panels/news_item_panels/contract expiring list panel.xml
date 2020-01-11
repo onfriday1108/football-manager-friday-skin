@@ -1,0 +1,32 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal"  />
+
+	<boolean id="check_for_multiple_requests" value="true" />
+	<boolean id="should_force_refresh" value="true" />
+
+	<!-- some descriptive text for the table below -->
+	<widget class="text" id="titl" auto_size="vertical" spec="text" colour="text" font="fonts/inbox_body" size="11" />
+
+	<widget class="table" id="list" mode="fill_rows, stripe_rows, printable, keyboard, dont_ask_for_focus, select_rows, select_multiple, show_bullets" fixed_size_rows="true" auto_size="vertical" row_spacing="2" row_height="30" select_event="sele">
+		<!-- don't bother trying to save the state here as state saving is broken, we need save it via the top level inbox panel -->
+		<string id="customise_view_panel_class" value="customise_view_advanced_panel" />
+	</widget>
+
+	<!--buttons-->
+	<container id="butt">
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="arrange_horizontal_attachment" alignment="right" gap="5" offset="0" />
+
+		<!--DoF button-->
+		<widget class="button" id="spfR" click_event="spfR" auto_size="all" disabled="true">
+			<translation id="text" translation_id="420670" type="use" value="DoF Negotiate Contract Renewals[COMMENT: FR16485 - sets all highlighted players to have their contracts renewed by the Director of Football]" />
+		</widget>
+
+		<!--set for release button-->
+		<widget class="button" id="spfr" click_event="spfr" auto_size="all" disabled="true">
+			<translation id="text" translation_id="334040" type="use" value="Set For Release[COMMENT: sets the player to be released at the end of his contract]" />
+		</widget>
+
+	</container>
+</panel>

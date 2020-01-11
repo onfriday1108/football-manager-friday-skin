@@ -1,0 +1,197 @@
+<panel>
+
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/row/normal/row" />
+
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/substitute/row" />
+
+	<!-- Sent off Styles -->
+	<flags id="soff" value="tables/custom/red/row" />
+
+	<!-- Not in squad Styles -->
+	<flags id="nisq" value="tables/custom/squad/row/outside squad/row" />
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container class="inner_box" alignment="left">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label_match" id="TitL">
+				<translation id="text" translation_id="229527" type="use" value="Squad" />
+			</widget>
+
+			<!-- player view menu -->
+			<widget class="view_menu_popup_match" id="plvi" auto_tick_exclusive="true" fixed="false" />
+
+		</container>
+
+		<widget class="tactic_player_list_table" id="pltb" database_table_type="1" view_setting_name="stored_match_view" mode="fill_rows, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows" column_mode="resize_columns, move_columns, custom_views">
+
+			<boolean id="auto_size_rows" value="true" />
+			<boolean id="dont_restore_selection" value="true" />
+			<boolean id="save_session_state" value="true" />
+			<boolean id="save_default_state" value="true" />
+			<record id="default_properties" spec="text"  />
+
+			<list id="column_widget_properties">
+				<record indx="0" spec="text"  />
+				<record indx="1" spec="text"  />
+				<record indx="2" spec="text"  />
+				<record indx="3" spec="text"  />
+				<record indx="4" spec="text"  />
+				<record indx="5" spec="text"  />
+			</list>
+
+			<!-- default sort by playing position (primary), then picked position, then name -->
+			<list id="default_sort_column">
+				<integer value="Pshp" />
+			</list>
+
+			<!--properties for each object we always want to request, regardless of whether or not they're displayed 
+							 (this can help when for example supplying a selected object to another panel to display further info)-->
+			<!--these can be omitted, they're just a time saver-->
+			<list id="Spid">
+				<integer value="PPra" />
+				<integer value="Pnfo" />
+				<integer value="PpsC"/>
+			</list>
+
+			<!--default view-->
+			<flags id="default_view" value="deta" />
+
+			<!--available views-->
+			<list id="viws">
+
+				<record id="deta">
+					<translation id="text" translation_id="227793" type="use" value="Condition" />
+					<boolean id="tick" value="false" />
+					<record id="view">
+						<flags id="Pshp" />
+						<!-- picked info -->
+						<flags id="Pcar" />
+						<!-- status info -->
+						<record id="Pnam" person_is_player="true" />
+						<!-- person name -->
+						<record id="PisC" auto_hide_priority="800" />
+						<!-- captain? -->
+						<record id="PpsC" auto_hide_priority="1000" />
+						<!-- position -->
+						<record id="Pmor" auto_hide_priority="1300" />
+						<!-- player morale -->
+						<record id="PRCF" auto_hide_priority="900" />
+						<!-- player condition -->
+						<record id="Pgls" auto_hide_priority="1500" />
+						<!-- overall goals -->
+						<record id="Prat" auto_hide_priority="1200" />
+						<!-- overall average rating -->
+					</record>
+				</record>
+
+				<record id="stat">
+					<translation id="text" translation_id="247412" type="use" value="Stats" />
+					<boolean id="tick" value="false" />
+					<record id="view">
+						<flags id="Pshp" />
+						<!-- picked info -->
+						<flags id="Pcar" />
+						<!-- status info -->
+						<record id="Pnam" person_is_player="true" />
+						<!-- person name -->
+						<record id="PisC" auto_hide_priority="800" />
+						<!-- captain? -->
+						<record id="PpsC" auto_hide_priority="1100" />
+						<!-- position -->
+						<record id="Pmor" auto_hide_priority="1400" />
+						<!-- player morale -->
+						<record id="PRCF" auto_hide_priority="1200" />
+						<!-- player condition -->
+						<record id="Pgls" auto_hide_priority="900" />
+						<!-- overall goals -->
+						<record id="Prat" auto_hide_priority="900" />
+						<!-- overall average rating -->
+					</record>
+				</record>
+
+				<record id="mora">
+					<translation id="text" translation_id="227839" type="use" value="Morale" />
+					<record id="view">
+						<flags id="Pshp" />
+						<!-- picked info -->
+						<flags id="Pcar" />
+						<!-- status info -->
+						<record id="Pnam" person_is_player="true" />
+						<!-- person name -->
+						<record id="PisC" auto_hide_priority="800" />
+						<!-- captain? -->
+						<record id="PpsC" auto_hide_priority="1000" />
+						<!-- position -->
+						<record id="Pmor" auto_hide_priority="900" />
+						<!-- player morale -->
+						<record id="PRCF" auto_hide_priority="1100" />
+						<!-- player condition -->
+						<record id="Pgls" auto_hide_priority="1500" />
+						<!-- overall goals -->
+						<record id="Prat" auto_hide_priority="1300" />
+						<!-- overall average rating -->
+					</record>
+				</record>
+
+				<record id="posi">
+					<translation id="text" translation_id="227884" type="use" value="Position" />
+					<record id="view">
+						<flags id="Pshp" />
+						<!-- picked info -->
+						<flags id="Pcar" />
+						<!-- status info -->
+						<record id="Pnam" person_is_player="true" />
+						<!-- person name -->
+						<record id="PisC" auto_hide_priority="800" />
+						<!-- captain? -->
+						<record id="PpsC" auto_hide_priority="900" />
+						<!-- position -->
+						<record id="Pmor" auto_hide_priority="1300" />
+						<!-- player morale -->
+						<record id="PRCF" auto_hide_priority="1000" />
+						<!-- player condition -->
+						<record id="Pgls" auto_hide_priority="1500" />
+						<!-- overall goals -->
+						<record id="Prat" auto_hide_priority="1200" />
+						<!-- overall average rating -->
+					</record>
+				</record>
+
+
+				<!-- This view will show the player unique IDs in a list (visible if 'show unique id' preference set) -->
+				<record id="unid">
+					<translation id="name" translation_id="247858" type="use" value="Unique IDs" />
+					<record id="view">
+						<flags id="duni" />
+						<!-- unique id -->
+						<record id="Pnam" person_is_player="true" />
+						<!-- person name -->
+						<flags id="PisC" />
+						<!-- captain? -->
+						<flags id="Pclb" />
+						<!-- person club -->
+						<flags id="Pnat" />
+						<!-- nationality -->
+						<flags id="Pdva" />
+						<!-- value -->
+					</record>
+				</record>
+			</list>
+
+		</widget>
+
+	</container>
+
+</panel>

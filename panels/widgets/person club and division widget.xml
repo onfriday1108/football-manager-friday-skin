@@ -1,0 +1,14 @@
+<panel auto_size_minimum_height="60">
+  <layout class="arrange_vertical_attachment" alignment="middle" offset="2" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+  <flags id="child_for_sort" value="Pclb"/>
+
+  <widget class="club_button" id="Pclb" auto_size="vertical">
+    <record id="object_property" get_property="Pclb" set_property="valu" />
+  </widget>
+
+  <widget class="comp_button" auto_size="vertical" icon_enabled="false" colour="faded text">
+    <record id="object_property" get_property="PbIa" set_property="valu" />
+  </widget>
+
+</panel>

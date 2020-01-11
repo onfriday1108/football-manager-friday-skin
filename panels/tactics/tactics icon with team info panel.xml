@@ -1,0 +1,36 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="-8"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<container>
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-3,-4" offset="0" gap="-20"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+			<widget class="object_portrait_picture" id="team" scale_picture="true"/>
+			<widget class="tactics_kit_picture" id="kitp" number_inset_left="2" number_inset_right="2" number_inset_top="2" number_inset_bottom="2"/>
+		</container>
+
+		<!--containers for the indicators-->
+		<!--injury/red/yellow card-->
+		<container id="inji" width="14" height="14">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="15"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="2"/>
+		</container>
+		<!--captain icon-->
+		<widget class="picture" id="capi" scale_picture="true" file="icons/16px/captain" width="14" height="14">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="9"/>
+		</widget>
+
+	</container>
+
+	<!--name-->
+	<container class="main_contrast_box_no_margin" red_replacement="bg green lighter" height="22">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="2" apply_to_children="true"/>
+
+		<widget class="text" id="name" size="small" alignment="centre,can_scale" multiline="false" />
+	</container>
+
+</panel>

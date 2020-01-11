@@ -1,0 +1,19 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" alignment="left,extend" gap="2" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+  <widget class="text" width="35" size="small" id="tiGN" alignment="right,centre_y"/>
+
+  <widget class="picture" width="22" id="piGU" file="icons/16px/circle" >
+    <flags id="image_alignment" value="centre" />
+  </widget>
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="middle" gap="0" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+    <!-- The text describing what the slice of the pie chart is -->
+    <widget class="text" id="txGI" auto_size="vertical" alignment="left,centre_y" size="small" colour="text"/>
+  </container>
+  
+</panel>

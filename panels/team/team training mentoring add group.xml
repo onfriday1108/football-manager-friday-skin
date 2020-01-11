@@ -1,0 +1,6 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize_horizontal_centre" />
+	<widget class="icon_button" icon="icons/16px/plus" auto_size="all" click_event="adGR" id="addG" controller_button="y_button">
+		<translation id="text" translation_id="466546" type="use" value="Add Group[COMMENT: Mentoring panel; adding an extra group to be mentored]" />
+	</widget>
+</panel>

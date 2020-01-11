@@ -1,0 +1,113 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<widget class="background" file="backgrounds/add manager" id="bgnd" />
+
+	<!-- panel for selecting leagues -->
+	<container class="main_box" id="titl">
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+			<container width="600">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" id="tWId" height="50" alignment="centre" size="xlarge">
+					<translation id="text" translation_id="333755" type="use" value="Create Versus Competition[COMMENT: versus competition screen title]" />
+				</widget>
+
+
+				<widget class="label" alignment="centre" font="title" colour="accent">
+					<translation id="text" translation_id="445098" type="use" value="Format[COMMENT: FR 18768 - format of the new versus/fantasy draft competition]" />
+				</widget>
+
+				<container id="vsCC">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+					<!-- Properties for comp type radio buttons -->
+					<!-- Note that the appearance given here will have left/normal/right appended according to each button's position -->
+					<record id="widget_properties" appearance="switches/toggle/" colour="text" style="bold" alignment="centre" icon_enabled="false" auto_size="vertical" show_button_appearance="true" />
+				</container>
+
+				<container height="15" />
+
+				<widget class="label" spec="text" font="title" colour="accent" alignment="centre">
+					<translation id="text" translation_id="333734" type="use" value="Competition Name[COMMENT - name of the new versus competition]" />
+				</widget>
+
+				<widget class="edit_box" id="cpnm" alignment="centre" auto_size="vertical" changed_event="cpnm">
+					<layout class="max_length_attachment" length="25" />
+				</widget>
+
+				<container height="15" />
+
+				<widget class="text" id="vsCd" alignment="centre" auto_size="vertical" colour="faded alt text" />
+
+				<container height="15" />
+
+				<container>
+					<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" apply_to_children="true" />
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<widget class="check_box" auto_size="all" id="2leg" colour="text" alignment="centre" click_event="2leg">
+						<translation id="text" translation_id="450732" type="use" value="Two-legged ties[COMMENT: FR 18768 - create fantasy draft game, Use 2 legs for cup ties up until final]" />
+						<translation id="hint" translation_id="443658" type="use" value="Use 2 legs for cup ties up until final[COMMENT: FR18760, network settings panel; network game options]" />
+					</widget>
+				</container>
+
+				<!-- Network options-->
+				<widget class="label" alignment="left" auto_size="vertical" font="label">
+					<translation id="text" translation_id="450733" type="use" value="Who can join?[COMMENT: FR 18768, fantasy draft option to set who can see and join the game (local/hotseat, online friends, online anyone)]" />
+				</widget>
+				<widget class="popup_button" id="gacc" sele="gacc" auto_size="vertical">
+					<list id="items">
+						<record id="0">
+							<translation id="text" translation_id="450734" type="use" value="Local Players (Hotseat)[COMMENT: FR 18768, fantasy draft option; only local player can join]" />
+						</record>
+						<record id="1">
+							<translation id="text" translation_id="450735" type="use" value="Friends Online[COMMENT: FR 18768, fantasy draft option; only friends player can join]" />
+						</record>
+						<record id="2">
+							<translation id="text" translation_id="450736" type="use" value="Anyone Online[COMMENT: FR 18768, fantasy draft option; anyone can join]" />
+						</record>
+					</list>
+					<integer id="selection" value="1" />
+				</widget>
+
+			
+			</container>
+		</container>
+
+		<!-- bottom container with the buttons -->
+		<container height="40">
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+			<!-- cancel button-->
+			<widget class="button" id="cncl" height="35" auto_size="horizontal">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				<layout class="stick_to_sides_attachment" alignment="left" />
+				<flags id="icon" value="icons/16px/cancel" />
+				<record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
+			</widget>
+
+			<widget class="primary_icon_button" id="fini" height="35" auto_size="horizontal">
+				<translation id="text" translation_id="333753" type="use" value="Create Competition[COMMENT: network versus mode, button text]" />
+				<layout class="stick_to_sides_attachment" alignment="right" />
+				<flags id="icon" value="icons/16px/confirm" />
+				<record id="click_event">
+					<flags id="event_id" value="fini" />
+				</record>
+			</widget>
+
+		</container>
+	</container>
+</panel>

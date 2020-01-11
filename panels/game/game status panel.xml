@@ -1,0 +1,75 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<translation id="text" translation_id="316573" type="use" value="Game Status[COMMENT:Container title text on Game Status screen]" />
+		<attachment_group class="vertical_arrange" offset="0" vertical_layout="-1, -2" vertical_offset="0" />
+
+		<!-- bordered box containing the game info table -->
+		<container class="main_box" id="SInn">
+			<translation id="titl" translation_id="248016" type="use" value="Game Information" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="game_information_panel" id="gipa" />
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange" alignment="top,extend" offset="0" vertical_layout="-1, -2"/>
+
+			<!-- bordered box containing the system info table -->
+			<container>
+				<global id="hidden" name="platform_is_stadia"/>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container class="main_box" id="Dinn">
+					<translation id="titl" translation_id="289582" type="use" value="System Information[COMMENT:Title of area displaying information about the computer operating system and power sources]" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="system_information_panel" id="sipa"/>
+				</container>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="manager_text" id="WInn" alignment="centre" height="50">
+						<translation id="text" translation_id="420627" type="use" value="Waiting for all managers to join. Press 'Continue' when [%person#1-you] are ready.[COMMENT: fantasy draft mode; string showing when waiting in a network game for other peers to join]" />
+					</widget>
+
+					<!-- bordered box containing the game info table -->
+					<widget class="user_list_panel" id="ulpa" />
+
+				</container>
+
+				<container height="36" id="aMBC">
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="2" gap="3" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="2" apply_to_children="true" />
+
+					<widget class="primary_icon_button" id="inFR" click_event="InFR" auto_size="horizontal" icon="icons/16px/man">
+						<attachment class="test_user_privilege_attachment" mode="allow_multiplayer" property="disabled"/>
+						<translation id="text" translation_id="420628" type="use" value="Invite Friends[COMMENT: Button text; Inviting friend to play fantasy Draft]" />
+					</widget>
+
+					<widget class="icon_button" id="adCC" click_event="AdCc" auto_size="horizontal" icon="icons/16px/plus">
+						<translation id="text" translation_id="412825" type="use" value="Add AI Club[COMMENT: FR15053; button to add a computer manager to a game]" />
+					</widget>
+
+					<widget class="icon_button" id="adHC" click_event="AdHc" auto_size="horizontal" icon="icons/16px/plus">
+						<translation id="text" translation_id="254460" type="use" value="Add Manager[COMMENT: add new manager: dialog title]" />
+					</widget>
+
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

@@ -1,0 +1,32 @@
+﻿<panel width="300">
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="main_transparent_box">
+		<translation id="title" translation_id="447554" type="use" value="Watch Highlights[COMMENT: FR21699, title of a set of controls to watch highlights of a match]" />
+
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--goals-->
+		<widget class="button" id="vgls" click_event="vgls" auto_size="vertical">
+			<translation id="text" translation_id="447555" type="use" value="Goals Only[COMMENT: FR21699, button to watch goals from a match only]" />
+		</widget>
+
+		<!--key-->
+		<widget class="button" click_event="vkey" auto_size="vertical">
+			<translation id="text" translation_id="441077" type="use" value="Key Highlights[COMMENT: match highlights type]" />
+		</widget>
+
+		<!--extended-->
+		<widget class="button" click_event="vext" auto_size="vertical">
+			<translation id="text" translation_id="441076" type="use" value="Extended Highlights[COMMENT: match highlights type]" />
+		</widget>
+
+		<!--comprehensive-->
+		<widget class="button" click_event="vcom" auto_size="vertical">
+			<translation id="text" translation_id="441075" type="use" value="Comprehensive Highlights[COMMENT: match highlights type]" />
+		</widget>
+
+	</container>
+
+</panel>

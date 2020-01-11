@@ -1,0 +1,33 @@
+<panel read_only='true'>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container id="slCO" class="main_box" appearance="tables/standard/row/normal/row">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-3,-3" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+		<!--formation drop down and button to remove-->
+		<widget class="icon_button" id="frmt" alignment="left,centre_y" spec="text" appearance="none" auto_size="none"/>
+
+		<!--container for active slot stuff-->
+		<container id="SloA">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!--familiarity-->
+			<container height="30" id="famC">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="5" apply_to_children="true" />
+
+				<widget class="horizontal_percentage_bar" id="fami" label_width="0" height="30">
+					<translation id="hint" translation_id="326040" type="use" value="Click to see the full breakdown of tactic familiarity levels[COMMENT: hint to the user to tell them that clicking on this widget will show them a panel with their team's levels of tactical familiarity]" />
+				</widget>
+
+				<!--This is a button overlay to make the horizontal percentage bar look more like you can click on it -->
+				<container id="FamB">
+					<translation id="hint" translation_id="326040" type="use" value="Click to see the full breakdown of tactic familiarity levels[COMMENT: hint to the user to tell them that clicking on this widget will show them a panel with their team's levels of tactical familiarity]" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,45 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- Background image -->
+	<container class="client_object_viewer_xml_panel" id="bgim">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		
+		<!-- PROP_CLUB -->
+		<record id="object_property" get_property="Cclu" set_property="objt"/>
+
+		<widget class="picture" id="CoPi" file="photos/dynamic/generic/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<!-- PROP_BACKGROUND_COLOUR -->
+			<record id="object_property" get_property="oPCL" set_property="rrep"/>
+		</widget>
+	</container>
+
+	<widget class="picture" id="CSha" file="photos/dynamic/shirt logo/material" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1, -9, -6" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<widget class="spacer" />
+			<container class="transformation_container" id="logt">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="20" apply_to_children="true"/>
+
+				<list id="transformations">
+					<!-- Rotate 12 degrees -->
+					<record type="rotation" value="12"/>
+				</list>
+				<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+					<!-- PROP_CLUB -->
+					<record id="object_property" get_property="Cclu" set_property="objt"/>
+				</widget>
+			</container>
+			<widget class="spacer" />
+		</container>
+	</container>
+
+	<widget class="picture" id="CSha" file="photos/dynamic/shirt logo/shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+</panel>

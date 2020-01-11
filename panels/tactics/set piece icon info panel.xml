@@ -1,0 +1,35 @@
+<panel navigation_focus_target="true">
+  <flags id="selected_appearance" value="buttons/custom/tactics/player icon/selected/button"/>
+  <flags id="appearance" value="buttons/custom/tactics/player icon/normal/button"/>
+  <colour id="back_colour" name="red 500" />
+  <colour id="middle_colour" name="amber 500" />
+  <colour id="forward_colour" name="green 500" />
+
+
+  <widget class="tactics_kit_picture" id="kitp" font="set_piece_number" number_inset_left="10" number_inset_right="10">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </widget>
+
+  <container class="picture" id="bssl" file="pictures/kits/2d/outfield/back/halo" red_replacement="positive" scale_picture="true" hidden="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </container>
+
+
+  <!--containers for the indicators-->
+  <!--taker icon-->
+  <widget class="picture" id="takr" scale_picture="true" file="icons/custom/set piece editor/player icons/set piece taker" width="16" height="16" >
+    <layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+  </widget>
+
+  <!--set piece instruction-->
+  <container id="spiC" width="25" height="25" >
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+
+    <widget class="text" id="spiT" alignment="centre,can_scale"  wants_mouse_events="false" setup_hint_for_overrun="false"/>
+  </container>
+
+
+</panel>

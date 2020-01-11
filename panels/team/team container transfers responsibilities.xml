@@ -1,0 +1,86 @@
+﻿<panel>
+	<boolean id="GTBT" value="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="8"/>
+		<container class="scrolling_box">
+			<container class="inner_box" draw_horizontal_dividers="true" >
+				<layout class="fit_children_attachment" alignment="vertical,fill" gap="12" />
+				<layout class="arrange_vertical_attachment" alignment="top" gap="12" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<container class="group_responsibility_list_widget" id="Rfps" file="team/staff responsibility summary panel" name="1st team player signings"/>
+
+				<container class="group_responsibility_list_widget" id="Rfsa" file="team/staff responsibility summary panel" name="1st team sales"/>
+
+				<container class="group_responsibility_list_widget" id="Rodl" file="team/staff responsibility summary panel" name="outgoing dev loans"/>
+				
+				<!-- Breaking down signings and sales by team -->
+				<container id="team" draw_horizontal_dividers="true">
+					<layout class="fit_children_attachment" alignment="vertical,fill" gap="12" />
+					<layout class="arrange_vertical_attachment" alignment="top" gap="12" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<!-- team 2 box -->
+					<container id="tea2" draw_horizontal_dividers="true">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="12" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="12" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<container class="group_responsibility_list_widget" id="dtsg" file="team/staff responsibility summary panel" name="signings group" />
+
+						<container class="group_responsibility_list_widget" id="dpsa" file="team/staff responsibility summary panel" name="player sales group" />
+
+					</container>
+
+					<!-- team 3 box -->
+					<container id="tea3" draw_horizontal_dividers="true">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="12" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="12" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<container class="group_responsibility_list_widget" id="dtsg" file="team/staff responsibility summary panel" name="signings group" />
+
+						<container class="group_responsibility_list_widget" id="dpsa" file="team/staff responsibility summary panel" name="player sales group" />
+					</container>
+
+					<!-- team 4 box -->
+					<container id="tea4" draw_horizontal_dividers="true">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="12" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="12" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<container class="group_responsibility_list_widget" id="dtsg" file="team/staff responsibility summary panel" name="signings group" />
+
+						<container class="group_responsibility_list_widget" id="dpsa" file="team/staff responsibility summary panel" name="player sales group" />
+					</container>
+
+					<!-- team 5 box -->
+					<container id="tea5" draw_horizontal_dividers="true">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="12" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="12" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<container class="group_responsibility_list_widget" id="dtsg" file="team/staff responsibility summary panel" name="signings group" />
+
+						<container class="group_responsibility_list_widget" id="dpsa" file="team/staff responsibility summary panel" name="player sales group" />
+					</container>
+
+					<!-- team 6 box -->
+					<container id="tea6" draw_horizontal_dividers="true">
+						<layout class="fit_children_attachment" alignment="vertical,fill" gap="12" />
+						<layout class="arrange_vertical_attachment" alignment="top" gap="12" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+						<container class="group_responsibility_list_widget" id="dtsg" file="team/staff responsibility summary panel" name="signings group" />
+
+						<container class="group_responsibility_list_widget" id="dpsa" file="team/staff responsibility summary panel" name="player sales group" />
+					</container>
+
+				</container>
+
+			</container>
+		</container>
+	</container>
+</panel>

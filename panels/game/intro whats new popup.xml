@@ -1,0 +1,118 @@
+﻿<panel width="1000" height="715">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<layout class="centre_in_parent_attachment" alignment="all" />
+
+	<!-- This one was addded for translation but not used in the mockup -->
+	<!--<widget class="label"  auto_size="vertical" alignment="centre">
+    <translation id="text" type="new" value="Headline features:[COMMENT: FR 19098; What's new in the game popup string]" />
+  </widget>-->
+
+	<container class="main_box" appearance="boxes/custom/whats new/paper">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+		<container height="30">
+			<layout class="arrange_horizontal_attachment" layout="-1,42" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="3" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="titl" auto_size="vertical" alignment="centre" font="title" size="14" style="bold" colour="white">
+					<translation id="text" translation_id="491900" type="use" value="What's new in FM 2020[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+				</widget>
+			</container>
+
+			<widget class="icon_button" click_event="mcan" height="42" width="42" icon="icons/16px/cross" icon_alignment="centre" appearance="buttons/standard/normal/button" red_replacement="white">
+				<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" />
+			</widget>
+		</container>
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="20" />
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="20" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container height="310">
+				<layout class="grid_layout_attachment" row_layout="110,200" column_layout="-1,-1,-1" mode="auto" vertical_gap="0" horizontal_gap="10" />
+
+				<record id="default_properties" colour="white" />
+
+				<widget class="text" alignment="centre" font="title" size="13" style="bold">
+					<translation id="text" translation_id="491901" type="use" value="Development Centre[COMMENT: AREA: sidebar menu button, FR-DC: 25830; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: top level menu title for club development centre]" />
+				</widget>
+				<widget class="text" alignment="centre" font="title" size="13" style="bold">
+					<translation id="text" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+				</widget>
+				<widget class="text" alignment="centre" font="title" size="13" style="bold">
+
+					<translation id="text" translation_id="491850" type="use" value="Club Vision[COMMENT: AREA: Club vision panel; SUB-AREA: Panel heading; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the club vision panel]" />
+				</widget>
+
+				<widget class="text" alignment="centre_x,top">
+					<translation id="text" translation_id="491903" type="use" value="Take full control of your youth team operations in a new all-encompassing hub. Nurture your young stars from the moment they arrive until they're ready for first-team action.[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game, can't be feminised]" />
+				</widget>
+				<widget class="text" alignment="centre_x,top">
+					<translation id="text" translation_id="491904" type="use" value="A whole new way to define a player's standing in your squad. Build in current and future playing time across the length of a contract, defining a clear pathway to Star Player.[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game, can't be feminised]" />
+				</widget>
+				<widget class="text" alignment="centre_x,top">
+					<translation id="text" translation_id="491905" type="use" value="Develop a culture, work with the board to achieve ongoing objectives and plot a course for your club to progress in seasons to come.[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game, can't be feminised]" />
+				</widget>
+			</container>
+		</container>
+		
+		<container height="220">
+			<layout class="grid_layout_attachment" row_layout="70,150" column_layout="-1,-2,-2,-1" mode="auto" vertical_gap="0" horizontal_gap="10" />
+
+			<record id="default_properties" colour="white" />
+
+			<widget class="spacer" />
+
+			<widget class="label" alignment="centre" font="title" size="13" style="bold" colour="white">
+				<translation id="text" translation_id="491906" type="use" value="Improved Graphics[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+			</widget>
+
+			<widget class="label" alignment="centre" font="title" size="13" style="bold" colour="white">
+				<translation id="text" translation_id="491907" type="use" value="Backroom Team[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+			</widget>
+
+			<widget class="spacer" />
+			<widget class="spacer" />
+
+			<widget class="text" alignment="centre_x,top" colour="white">
+				<translation id="text" translation_id="491908" type="use" value="Redesigned player and manager models, improved lighting and overhauled pitch visuals combine to create the best-looking match experience yet.[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+			</widget>
+
+			<widget class="text" alignment="centre_x,top" colour="white">
+				<translation id="text" translation_id="491909" type="use" value="New roles, advice and interaction make your staff more involved and important than ever.[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game, can't be feminised]" />
+			</widget>
+
+			<widget class="spacer" />
+		</container>
+
+		<widget class="horizontal_divider" red_replacement="white" />
+		<widget class="button" show_button_appearance="false" auto_size="vertical" alignment="centre" colour="white" multiline="true">
+			<translation id="text" translation_id="491910" type="use" value="Plus, lots of new additions and improvements throughout the game - a full list of announced new features can be found here: https://community.sigames.com/topic/492481-football-manager-2020-feature-announcement-blogs/[COMMENT: FR 19098; What's new in the game popup string]" />
+			<record id="click_event">
+				<flags id="event_id" value="OURL" />
+				<string id="url" value="https://www.footballmanager.com/features" />
+				<string id="url_tracking_category" value="FM20 Features" />
+			</record>
+		</widget>
+
+		<container height="50">
+			<layout class="centre_in_parent_attachment" alignment="all" offset="0" apply_to_children="true" />
+
+			<widget class="primary_button" height="50" size="large" style="semi_bold">
+				<translation id="text" translation_id="339126" type="use" value="Start a new game[COMMENT: intro panel; start a new game, use top matches as a similar string was previously used]" />
+				<record id="click_event" event_id="NEWO" is_fmc_game="false" evtg="root" evfl="7" />
+			</widget>
+		</container>
+		<container height="50">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="30,8" apply_to_children="true" />
+
+
+		</container>
+	</container>
+
+</panel>

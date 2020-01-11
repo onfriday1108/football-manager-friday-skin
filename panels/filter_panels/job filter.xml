@@ -1,0 +1,53 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" vertical_offset="0" />
+
+
+	<container class="filter_check_box_list_container" auto_size="vertical" ahdn="false">
+		<translation id="title" translation_id="230331" type="use" value="Jobs" />
+
+		<list id="objL">
+			<record id="mngr">
+				<translation id="text" translation_id="227981" type="use" value="Manager" />
+			</record>
+			<record id="amng">
+				<translation id="text" translation_id="227983" type="use" value="Assistant Manager" />
+			</record>
+			<record id="coch">
+				<translation id="text" translation_id="227985" type="use" value="Coach" />
+			</record>
+      <record id="gkch">
+        <translation id="text" translation_id="251854" type="use" value="Goalkeeping Coach[COMMENT - job string]" />
+      </record>
+      <record id="fich">
+        <translation id="text" translation_id="251414" type="use" value="Fitness Coach[COMMENT - job string]" />
+      </record>
+      <record id="HoYD">
+        <translation id="text" translation_id="336387" type="use" value="Head of Youth Development[COMMENT: job title]" />
+      </record>
+      <record id="DoF">
+        <translation id="text" translation_id="227972" type="use" value="Director of Football" />
+      </record>
+      <record id="tecd">
+        <translation id="text" translation_id="482629" type="use" value="Technical Director[COMMENT: AREA: Staff job roles; SUB-AREA: job role title; FR-BN: 25527; TONE: Formal; CHARLIMIT: None; REF-ID: None; NOTE: Name of the job title]" />
+      </record>
+			<record id="scot">
+				<translation id="text" translation_id="227987" type="use" value="Scout" />
+			</record>
+      <record id="DaAn">
+        <translation id="text" translation_id="412817" type="use" value="Data Analyst[COMMENT: job title; FR 9121]" />
+      </record>
+      <record id="hopd">
+        <translation id="text" translation_id="491899" type="use" value="Loan Manager[COMMENT: AREA: Staff job roles; SUB-AREA: job role title; FR-BN: 25847; TONE: Formal; CHARLIMIT: None; REF-ID: None; NOTE: Name of the job title]" />
+      </record>
+			<record id="phys">
+				<translation id="text" translation_id="227989" type="use" value="Physio" />
+			</record>
+			<record id="SpSc">
+				<translation id="text" translation_id="412822" type="use" value="Sports Scientist[COMMENT: job title; FR 15694]" />
+			</record>
+
+		</list>
+
+	</container>
+	
+</panel>

@@ -1,0 +1,184 @@
+﻿<panel id="scfo">
+  <boolean id="save_session_state" value="true" />
+  <boolean id="save_default_state" value="true" />
+  <boolean id="should_force_refresh" value="true" />
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="container_with_mouse_events" absorb_click_events="true" />
+
+  <container class="standard_popup_box">
+    <attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+    <container class="inner_subtle_box">
+      <translation id="title" translation_id="443659" type="use" value="Scouting Focus[COMMENT: FR 21760, title label text for the user to set the scouting focus]" />
+      <attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+
+      <widget class="text" id="scop" spec="text" auto_size="vertical" multiline="true" alignment="centre"/>
+
+      <container>
+        <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_gap="-8"/>
+
+        <widget class="radio_toggle_switch_left" id="gene" alignment="centre" click_event="GENE" auto_size="all">
+          <translation id="text" translation_id="450161" type="use" value="General[COMMENT FR 21760, a general scouting focus assignment not requesting any specifics from the scouts undertaking it]" />
+        </widget>
+        <widget class="radio_toggle_switch_right" id="shot" alignment="centre" click_event="SHOT" auto_size="all">
+          <translation id="text" translation_id="450160" type="use" value="Short-term[COMMENT FR 21760, a brief and short scouting focus assignment not expected to last long]" />
+        </widget>
+      </container>
+
+      <widget class="text" id="fdes" multiline="true" auto_size="vertical" alignment="centre" colour="faded text" />
+
+    </container>
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <container class="main_box" id="gefc">
+        <attachment_group class="horizontal_arrange" horizontal_layout="-1,-2"/>
+
+        <container>
+          <attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+          <widget class="text" auto_size="vertical" font="title" size="large" colour="text">
+            <translation id="text" translation_id="227842" type="use" value="Based" />
+          </widget>
+
+          <widget class="team_container_scouting_range_popup" id="basp" propagate_mouse_events="false">
+
+          </widget>
+
+        </container>
+
+        <container>
+          <layout class="grid_layout_attachment" row_layout="-1,-1,-1,-1,-1" column_layout="-1" mode="auto" vertical_offset_start="0" vertical_offset_end="0" horizontal_offset="10" />
+
+          <container>
+            <attachment_group class="vertical_arrange"/>
+
+            <widget class="text" auto_size="vertical" font="title" size="large" colour="text">
+              <translation id="text" translation_id="229407" type="use" value="Age" />
+            </widget>
+
+			<container class="menu_strip" id="ageP" height="30" inset="0" offset="2" gap="-8" auto_size="horizontal" default_widget_type="radio_toggle_switch_left" submenu_type="popup_button" positional_appearance_first="switches/toggle/left/button" positional_appearance_last="switches/toggle/right/button" positional_appearance_normal="switches/toggle/middle/button" positional_appearance_first_and_last="buttons/primary/normal/button" />
+
+          </container>
+
+          <container>
+            <attachment_group class="vertical_arrange"/>
+
+            <widget class="text" auto_size="vertical" font="title" size="large" colour="text">
+              <translation id="text" translation_id="447513" type="use" value="Player Style[COMMENT FR 21760, set the style of player to be found by the scout]" />
+            </widget>
+
+			<container class="menu_strip" id="outP" height="30" inset="0" offset="2" gap="-8" auto_size="horizontal" default_widget_type="radio_toggle_switch_left" submenu_type="popup_button" positional_appearance_first="switches/toggle/left/button" positional_appearance_last="switches/toggle/right/button" positional_appearance_normal="switches/toggle/middle/button" positional_appearance_first_and_last="buttons/primary/normal/button" />
+          </container>
+
+          <container>
+            <attachment_group class="vertical_arrange"/>
+
+            <widget class="text" auto_size="vertical" font="title" size="large" colour="text">
+              <translation id="text" translation_id="447514" type="use" value="Goalkeeper Style[COMMENT FR 21760, set the style of goalkeeper to be found by the scout]" />
+            </widget>
+
+			<container class="menu_strip" id="golP" height="30" inset="0" offset="2" gap="-8" auto_size="horizontal" default_widget_type="radio_toggle_switch_left" submenu_type="popup_button" positional_appearance_first="switches/toggle/left/button" positional_appearance_last="switches/toggle/right/button" positional_appearance_normal="switches/toggle/middle/button" positional_appearance_first_and_last="buttons/primary/normal/button" />
+
+          </container>
+
+          <container>
+            <attachment_group class="vertical_arrange"/>
+
+            <widget class="text" auto_size="vertical" font="title" size="large" colour="text">
+              <translation id="text" translation_id="491934" type="use" value="Fits Tactic[COMMENT: AREA: Scouting; SUB-AREA: Scouting Focus; FR-BN: 21760; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: FR 21760, set the style of goalkeeper to be found by the scout]" />
+            </widget>
+
+			<container height="30">
+				<attachment_group class="horizontal_arrange" horizontal_gap="-8"/>
+
+				<!--@note lachezar.hubanov 06/11/19 - This is a bit of a hack to wrap this up before release- menu strips allow for integrated popup buttons, but there was some underlying issue with the popup's click events and it was behaving oddly-->
+				<widget class="radio_toggle_switch_left" id="anTC" alignment="centre" auto_size="all">
+					<translation id="text" translation_id="339570" type="use" value="Any[COMMENT: join network game - any league to search for]" />
+				</widget>
+				
+				<widget class="tactic_popup_button" id="tctp" height="30" width="100" appearance="switches/toggle/right/button"/>
+			</container>
+			  
+          </container>
+
+          <container>
+            <attachment_group class="vertical_arrange"/>
+
+            <widget class="text" auto_size="vertical" font="title" size="large" colour="text">
+              <translation id="text" translation_id="447515" type="use" value="Availability[COMMENT FR 21760, set the framework of availability for the scouting assignment, can ignore/exclude players deemed to be unavailable for example]" />
+            </widget>
+			  
+			<container class="menu_strip" id="avlP" height="30" inset="0" offset="2" gap="-8" auto_size="horizontal" default_widget_type="radio_toggle_switch_left" submenu_type="popup_button" positional_appearance_first="switches/toggle/left/button" positional_appearance_last="switches/toggle/right/button" positional_appearance_normal="switches/toggle/middle/button" positional_appearance_first_and_last="buttons/primary/normal/button" />
+          </container>
+
+        </container>
+
+
+
+      </container>
+
+      <container id="stfc" hidden="true">
+        <attachment_group class="vertical_arrange" vertical_alignment="top, extend"/>
+
+        <widget class="primary_button" id="stfb" click_event="nstf" auto_size="all" icon="icons/16px/plus">
+          <layout class="stick_to_sides_attachment" alignment="left" inset="4" />
+          <translation id="text" translation_id="441098" type="use" value="New Short-Term Focus[COMMENT: button to set a new scouting focus to take place as a priority above all other assignments]" />
+        </widget>
+
+        <widget class="table" id="stft" layout="120,-1,120,120, 45" mode="fill_rows,stripe_rows" sort_disabled="true" fixed_size_rows="false" auto_size_rows="true">
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" />
+
+          <list id="column_table_properties">
+            <record>
+              <record id="column_heading">
+                <translation id="text" translation_id="329964" type="use" value="Focus" />
+                <flags id="alignment" value="left,centre_y" />
+                <flags id="column" value="0" />
+              </record>
+            </record>
+            <record>
+              <record id="column_heading">
+                <translation id="text" translation_id="229526" type="use" value="Details" />
+                <flags id="alignment" value="left,centre_y" />
+                <flags id="column" value="1" />
+              </record>
+            </record>
+            <record>
+              <record id="column_heading">
+                <translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+                <flags id="alignment" value="left,centre_y" />
+                <flags id="column" value="2" />
+              </record>
+            </record>
+            <record>
+              <record id="column_heading">
+                <translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]" />
+                <flags id="alignment" value="left,centre_y" />
+                <flags id="column" value="3" />
+              </record>
+            </record>
+            <record>
+              <record id="column_heading">
+
+                <flags id="alignment" value="left,centre_y" />
+                <flags id="column" value="4" />
+              </record>
+            </record>
+          </list>
+
+          <list id="column_widget_properties">
+            <record index="0" alignment="left,centre_y"/>
+            <record index="1" alignment="left,centre_y"/>
+          </list>
+
+        </widget>
+
+      </container>
+    </container>
+
+  </container>
+
+</panel>

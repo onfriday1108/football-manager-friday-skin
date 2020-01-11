@@ -1,0 +1,57 @@
+﻿<panel width="600">
+
+	<layout class="arrange_vertical_attachment" alignment="top" offset="12" gap="0"/>
+	<layout class="fit_children_attachment" alignment="vertical" offset="12" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<container class="standard_popup_box">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="6" gap="4"/>
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="6" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6"/>
+
+		<widget class="position_label" id="labl" auto_size="vertical" font="title" alignment="left" spec="text" size="large"  />
+
+		<record id="object_property">
+			<integer id="get_property" value="crvi" />
+			<integer id="set_property" value="crvi" />
+		</record>
+
+		<widget class="client_object_list_table" auto_size="vertical" auto_size_maximum_height="400" id="pltb" mode="fill_rows, stripe_rows"  database_table_type="1">
+			<boolean id="should_force_refresh" value="true" />
+
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="objL" />
+						<integer id="set_property" value="objL" />
+					</record>
+					<record>
+						<integer id="get_property" value="crvi" />
+						<integer id="set_property" value="crvi" />
+					</record>
+				</list>
+			</record>
+
+			<!-- default sort by playing position (primary), then picked position, then name -->
+			<list id="default_sort_column">
+				<integer value="PabP" />
+				<integer value="Pnms" />
+			</list>
+			<integer id="contextual_handler_column_id" value="Pnms" />
+
+			<list id="viws">
+				<record id="fitn">
+					<record id="view">
+						<record id="Pnms"  width="140" info_popup_enabled="true" />
+						<!-- person name -->
+						<record id="PabP" width="120" should_colour="true"/>
+						<!-- player position level-->
+					</record>
+				</record>
+			</list>
+		</widget>
+	</container>
+
+
+
+</panel>

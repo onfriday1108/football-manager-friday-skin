@@ -1,0 +1,134 @@
+<panel  height="400">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="inner_box_no_margin">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<!-- the contents of the following container should change depending on the option selected in the embedded popup button -->
+				<widget class="client_object_label_value_table" auto_size="vertical" id="StIn">
+					<boolean id="should_force_refresh" value="true" />
+
+					<!--this record contains any properties you want to pass on to the table-->
+					<record id="table_properties">
+						<flags id="mode" value="fill_rows, stripe_rows, printable" />
+						<boolean id="auto_size_rows" value="true" />
+						<boolean id="fixed_size_rows" value="false" />
+						<flags id="auto_size" value="vertical" />
+						<string id="layout" value="-1,-2" />
+						<integer id="row_spacing" value="0" />
+
+						<!-- default properties adopted by every item in table -->
+						<list id="column_widget_properties">
+							<record index="0" alignment="left,centre_y" />
+							<record index="1" spec="text">
+								<colour id="colour" name="selection" />
+								<flags id="auto_size" value="vertical" />
+								<flags id="alignment" value="left,centre_y" />
+							</record>
+						</list>
+
+						<!-- small inset from sides of table -->
+						<list id="column_table_properties">
+							<record index="0">
+								<integer id="left" value="4" />
+								<boolean id="sort_disabled" value="true" />
+							</record>
+							<record index="1">
+								<integer id="top" value="4" />
+								<integer id="bottom" value="4" />
+								<boolean id="sort_disabled" value="true" />
+								<flags id="alignment" value="left,centre_y" />
+							</record>
+						</list>
+					</record>
+
+					<!--this list contains the property ids you want to display in the table - if you omit it, the table will attempt to display all properties in the supplied object-->
+					<list id="viewed_property_ids">
+						<integer value="stad" />
+						<integer value="SctI" />
+						<integer value="SctW" />
+						<integer value="Sren" />
+						<integer value="TstD" />
+						<integer value="Sbdy" />
+						<integer value="Srby" />
+						<integer value="Soty" />
+						<integer value="Sown" />
+						<integer value="Sdcy" />
+						<integer value="Sush" />
+						<integer value="Scov" />
+						<integer value="SsfT" />
+						<integer value="Sdim" />
+						<integer value="SMdi" />
+						<integer value="Sptc" />
+						<integer value="Splr" />
+					</list>
+
+				</widget>
+
+				<!-- the contents of the following container should change depending on the option selected in the embedded popup button -->
+				<widget class="client_object_label_value_table" auto_size="vertical" id="ClIn">
+
+					<!--this record contains any properties you want to pass on to the table-->
+					<record id="table_properties">
+						<flags id="mode" value="fill_rows, stripe_rows, printable" />
+						<boolean id="auto_size_rows" value="true" />
+						<boolean id="fixed_size_rows" value="false" />
+						<flags id="auto_size" value="vertical" />
+						<string id="layout" value="-1,-2" />
+						<integer id="row_spacing" value="0" />
+
+						<!-- default properties adopted by every item in table -->
+						<list id="column_widget_properties">
+							<record index="0" alignment="left,centre_y" />
+							<record index="1" spec="text">
+								<colour id="colour" name="selection" />
+								<flags id="auto_size" value="vertical" />
+								<flags id="alignment" value="left,centre_y" />
+							</record>
+						</list>
+
+						<!-- small inset from sides of table -->
+						<list id="column_table_properties">
+							<record index="0">
+								<integer id="left" value="4" />
+								<boolean id="sort_disabled" value="true" />
+							</record>
+							<record index="1">
+								<integer id="top" value="4" />
+								<integer id="bottom" value="4" />
+								<boolean id="sort_disabled" value="true" />
+								<flags id="alignment" value="left,centre_y" />
+							</record>
+						</list>
+					</record>
+
+					<!--this list contains the property ids you want to display in the table - if you omit it, the table will attempt to display all properties in the supplied object-->
+					<list id="viewed_property_ids">
+						<integer value="Ccfs" />
+						<integer value="TfcD" />
+						<integer value="DAfd"/>
+						<integer value="TytD" />
+						<integer value="TsfD" />
+						<integer value="TysC" />
+						<integer value="CsSP"/>
+						<integer value="CRst"/>
+						<integer value="CPSx"/>
+						<integer value="CPSm"/>
+						<integer value="CPSp"/>
+						<integer value="Trta"/>
+						<integer value="Tyts"/>
+						<integer value="Ttgs"/>
+						<integer value="Cyos"/>
+						<integer value="Crcs"/>
+					</list>
+
+				</widget>
+			</container>
+		</container>
+
+	</container>
+</panel>

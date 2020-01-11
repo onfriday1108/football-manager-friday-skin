@@ -1,0 +1,23 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="-2,-4" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container id="badG" class="object_portrait_picture">
+		<boolean id="scale_picture" value="true" />
+		<boolean id="keep_aspect_ratio" value="true" />
+		<flags id="image_alignment" value="centre" />
+	</container>
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="text" id="nxML" alignment="left,centre_y" font="panel_title" auto_size="vertical" colour="accent">
+			<translation id="text" translation_id="247353" type="use" value="Next Match" />
+		</widget>
+		<widget class="comp_button" icon_enabled="false" id="comT" alignment="left,top" spec="text" size="normal" colour="faded text" auto_size="vertical"/>
+		<widget class="team_button" icon_enabled="false" id="nxMT" alignment="left,top" spec="text" size="large" style="semi_bold" auto_size="vertical"/>
+
+	</container>
+
+
+</panel>

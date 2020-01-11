@@ -1,0 +1,45 @@
+﻿<panel width="750">
+	<layout class="fit_children_attachment" alignment="vertical" offset="12" gap="0"/>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+
+	<container class="main_box" appearance="boxes/popup/standard/paper">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="12"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="12" gap="0"/>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="12" gap="0"/>
+
+
+		<widget class="client_object_list_table" auto_size="vertical" auto_size_maximum_height="400" id="pltb" mode="fill_rows, stripe_rows"  database_table_type="1">
+			<boolean id="should_force_refresh" value="true" />
+
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="objL" />
+						<integer id="set_property" value="objL" />
+					</record>
+				</list>
+			</record>
+			<integer id="default_sort_column" value="THic" />
+			<integer id="contextual_handler_column_id" value="Pnms" />
+
+			<list id="viws">
+				<record id="hapi">
+					<!-- default sort by playing position (primary), then picked position, then name -->
+
+					<record id="view">
+						<record id="Pnms"  width="110" info_popup_enabled="false" />
+						<!-- person name -->
+						<record id="THic" width="-2"/>
+						<record id="PThd" width="-5"/>
+					</record>
+				</record>
+			</list>
+		</widget>
+	</container>
+
+
+
+
+</panel>

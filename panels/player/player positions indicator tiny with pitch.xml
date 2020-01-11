@@ -1,0 +1,76 @@
+﻿<panel save_session_state="true" auto_size_minimum_height="60">
+
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="8" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+	<flags id="child_for_sort" value="PPos"/>
+
+	<widget class="player_basic_positions_indicator_widget" id="pppi" height="60" width="34">
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</list>
+		</record>
+	</widget>
+
+	<container height="60">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--horrible to do, but we need this pitch hidden in the widget in order for the auto highlighting of attributes on the attributes part of the panel-->
+		<widget class="pitch_with_player_positions" id="ppip" height="0"
+							vertical="true"
+							pitch_alignment="centre,can_scale"
+							pitch_draw_goals="false"
+							pitch_draw_markings="false"
+							show_position_strength="false"
+							hide_player_positions="true"
+							pitch_show_names="false"
+							pitch_show_names_as_hint="true"
+							pitch_draw_grass="false"
+							pitch_line_colour="disabled"
+							pitch_touchline_width_percentage="1"
+							pitch_override_icon_size="2"
+							line_width="1.4"
+							pitch_vertical_padding="4">
+			<!-- Set the icon to use for people on the pitch. The icon will first look for a size that matches the pitch's size, for instance 'pitch/icons/kit/tiny/kit' or 'pitch/icons/kit/medium/kit'.
+          If an icon for the size category is not found it will try the base path: pitch/icons/kit/kit. This means that if you want to use an icon on a pitch that will only ever be one size you 
+          can just provide the base and not worry about the tiny/small/medium/large size categories -->
+			<string id="pitch_kit_icon" value="pitch/icons/dots" />
+		</widget>
+		<!-- Position label-->
+		<widget class="position_label" id="PPos" alignment="left,centre_y" auto_size="vertical" multiline="true" navigation_focus_target="false">
+			<record id="auto_size_restrictions">
+				<string id="type" value="property"/>
+				<string id="limit_type" value="maximum"/>
+				<string id="orientation" value="vertical"/>
+				<flags id="target" value="PPos"/>
+				<integer id="value" value="2"/>
+				<flags id="property" value="restrict_to_lines"/>
+			</record>
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="PpsC" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<widget class="tactical_role_label" id="Pbrs" alignment="left,centre_y" colour="faded text" abbt="false" auto_size="vertical" multiline="false" >
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="Pbrs" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget>
+	</container>
+
+</panel>

@@ -1,0 +1,22 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <widget class="table" id="phst" layout="20,20,50,-2,40,40" mode="fill_rows, stripe_rows" fixed_size_rows="false">
+    <!--boolean id="all_content_same_height" value="false"/-->
+    <integer id="row_spacing" value="10"/>
+
+    <list id="headings">
+      <record column_span="3" />
+      <record alignment="centre" />
+      <record alignment="centre" />
+    </list>
+
+    <list id="column_widget_properties">
+      <record index="0" alignment="centre" style="vertical" height="54"/>
+      <record index="1" alignment="centre" style="vertical"/>
+      <record index="2" alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="50" image_alignment="centre"/>
+      <record index="4" alignment="centre" spec="text" size="large" style="light_bold"/>
+      <record index="5" alignment="centre" spec="text" size="large" style="light_bold"/>
+    </list>
+  </widget>
+</panel>

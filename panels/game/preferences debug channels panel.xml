@@ -1,0 +1,45 @@
+﻿<panel>
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container class="main_box">
+			<translation id="title" translation_id="453029" type="use" value="Channels[COMMENT: preferences: List of available log channels]" />
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="table" id="scmd" mode="fill_rows,stripe_rows,select_rows,show_bullets" layout="-1" select_event="secu">
+
+				<record id="default_properties" alignment="left,centre_y" />
+
+			</widget>
+		</container>
+
+		<container class="main_box" width="300">
+			<translation id="title" translation_id="453030" type="use" value="Channel Options[COMMENT: title for a table containing a list of options that can be enabled or disabled for a log channel]" />
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="table" id="scut" mode="fill_rows,stripe_rows" layout="-1">
+				<record id="default_properties" alignment="left,centre_y" />
+			</widget>
+		</container>
+
+	</container>
+
+	<widget class="container">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+		<widget class="button" disabled="true" id="reSC" auto_size="horizontal" height="30" click_event="reSC">
+			<translation id="text" translation_id="251948" type="use" value="Restore All To Defaults[COMMENT: preferences: keyboard shortcut: reset to default, button text]" />
+		</widget>
+	</widget>
+
+	<widget class="preferences_button_panel" />
+</panel>

@@ -1,0 +1,38 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- Pitch showing positions -->
+	<widget class="pitch_with_player_positions" id="ppip">
+		<boolean id="vertical" value="false" />
+		<boolean id="pitch_draw_goals" value="false" />
+		<boolean id="pitch_draw_markings" value="true" />
+		<integer id="pitch_player_radius" value="6" />
+		<boolean id="pitch_show_names" value="true" />
+		<integer id="pitch_override_icon_size" value="3" />
+
+		<!-- Ignore mouse events (stop user selecting players) -->
+		<boolean id="WMev" value="false" />
+
+		<string id="pitch_kit_icon" value="pitch/icons/dots" />
+	</widget>
+
+	<container height="35">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+
+		<!-- Best tactical role (assistant or scouts opinion)-->
+		<widget class="tactical_role_label" id="trol" auto_size="vertical" alignment="centre_x" spec="text" style="bold">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+		<!-- Best tactical duty (assistant or scouts opinion) -->
+		<widget class="tactical_role_label" id="tdut" auto_size="vertical" alignment="centre_x" spec="text">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+
+		<!--buttons to go to personal details-->
+		<widget class="link_appearance_button" id="vpos">
+			<translation id="text" translation_id="328537" type="use" value="View Positions[COMMENT: player overview panel; button text which when clicked takes the user to the player's positions screen]" />
+			<layout class="stick_to_sides_attachment" alignment="right,bottom" inset="0" />
+		</widget>
+	</container>
+</panel>

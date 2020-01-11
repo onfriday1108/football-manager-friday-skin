@@ -1,0 +1,23 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+
+	<container class="filter_check_box_list_container" auto_size="vertical" ahdn="false">
+		<translation id="title" translation_id="420621" type="use" value="Job Scope[COMMENT: title for a filter to allow the user to select job scope - international or club]" />
+
+		<list id="objL">
+			<record id="inte">
+				<translation id="text" translation_id="227820" type="use" value="International" />
+			</record>
+			<record id="club">
+				<translation id="text" translation_id="227737" type="use" value="Club" />
+			</record>
+			<record id="n1st">
+				<translation id="text" translation_id="336620" type="use" value="Reserves/Youth Teams[COMMENT: interaction manager; interaction topic]" />
+			</record>
+			
+		</list>
+		
+	</container>
+
+</panel>

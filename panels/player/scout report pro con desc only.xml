@@ -1,0 +1,5 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+	<widget class="text"  id="desc" auto_size="vertical" />
+</panel>

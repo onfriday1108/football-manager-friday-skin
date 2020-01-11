@@ -1,0 +1,253 @@
+<panel width="500" height="90">
+
+	<!--this list shows the match feed notification type. We need to match the number here with the list of appearances below. Any appearances that don't appear 
+  in this list will use the unchanged main_box appearance on the bordered box 'skbo'.-->
+	<!--enum NOTIFICATION_TYPE
+{
+	NT_GOAL = 1,
+	NT_OWN_GOAL = 2,
+	NT_DISALLOWED_GOAL = 3,
+	NT_YELLOW_CARD = 6,
+	NT_RED_CARD = 7,
+};
+-->
+	<list id="icns">
+		<record id="1" icon="icons/26px/goal" />
+		<record id="2" icon="icons/26px/own goal" />
+		<record id="3" icon="icons/26px/missed penalty" />
+		<record id="6" icon="icons/26px/yellow card" />
+		<record id="7" icon="icons/26px/red card" />
+		<record id="32" icon="icons/26px/var" /> <!--Review happening-->
+		<record id="33" icon="icons/26px/var" /> <!--Review outcome-->
+	</list>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box">
+		<symbol id="appearance" value="boxes/custom/match/caption/paper" />
+
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--left side - what happened-->
+		<container width="90">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="2" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--simple icon-->
+			<widget class="picture" id="SIic" image_alignment="centre_x,top" />
+
+			<!--sub icon-->
+			<container id="subI">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<!--sub icon picture-->
+				<widget class="picture" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+
+				<!--team kit picture-->
+				<widget class="kit_picture" id="TSic" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" hidden="true" />
+
+			</container>
+
+			<!--what happened text-->
+			<widget class="text" id="WHtx" multiline="false" alignment="centre" auto_size="vertical" font="title" size="7.5"/>
+		</container>
+
+		<!--vertical separator-->
+		<widget class="vertical_divider"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!--simple events-->
+			<container id="siEV">
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<!--left side picture-->
+				<container width="80">
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<record id="default_properties" width="60" scale_picture="true" keep_aspect_ratio="true" />
+					
+					<!--team kit picture-->
+					<widget class="kit_picture" id="lTea" image_alignment="left">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+					</widget>
+
+					<!--mugshot-->
+					<widget class="picture" id="lPer" image_alignment="right">
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+					</widget>
+				</container>
+
+				<!--right side name and details-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="-6"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<record id="default_properties" alignment="left,centre_y" auto_size="vertical" />
+					
+					<!--name-->
+					<widget class="person_button" id="pers" size="large" style="semi_bold" />
+
+					<!--sub head 1-->
+					<widget class="text" id="sub1" colour="faded text" size="normal" />
+
+					<!--sub head 2-->
+					<widget class="text" id="sub2" colour="faded text" size="normal" />
+
+				</container>
+
+			</container>
+
+			<!--single sub events-->
+			<container id="SSub">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<!--sub on-->
+				<container id="SOn ">
+					<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+	                
+
+	                <container>
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<!--icon-->
+						<container>
+							<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="bottom,extend"/>
+
+							<!--simple icon-->
+							<widget class="picture" file="icons/26px/right" image_alignment="centre" red_replacement="positive light" width="26"/>
+
+							<!--what happened text-->
+							<widget class="text" multiline="false" alignment="centre" auto_size="all" font="title" size="8" colour="positive light">
+								<translation id="text" translation_id="450748" type="use" value="On[COMMENT: FR21690 - label for an icon showing substitutes who are coming on to the field]" />
+							</widget>
+						</container>
+
+						<container class="horizontal_adaptive_container" inset="0" offset="0" alignment="left,extend" gap="0">
+							<!--mugshot-->
+							<widget class="picture" id="PerP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" minimum_width="55" default_width="55" priority="2"/>
+
+							<!--right side name and details-->
+							<container default_width="-1" priority="1" minimum_width="75">
+								<layout class="arrange_vertical_attachment" alignment="middle" offset="2" gap="-4"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+								<record id="default_properties" alignment="left,centre_y" auto_size="vertical" />
+								
+								<!--name-->
+								<widget class="person_button" id="PerB" style="semi_bold"/>
+
+								<!--sub head-->
+								<widget class="text" id="Per1" colour="faded text" size="small" multiline="false"/>
+							</container>
+						</container>
+					</container>
+
+					<!--vertical separator-->
+					<widget class="vertical_divider"/>
+
+				</container>
+
+				<!--sub off-->
+				<container id="SOff">
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<!--icon-->
+					<container>
+						<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="bottom,extend"/>
+
+						<!--simple icon-->
+						<widget class="picture" file="icons/26px/left" image_alignment="centre" red_replacement="negative light" width="26"/>
+
+						<!--what happened text-->
+						<widget class="text" multiline="false" alignment="centre" auto_size="all" font="title" size="8" colour="negative light">
+							<translation id="text" translation_id="450749" type="use" value="Off[COMMENT: FR21690 - label for an icon showing players who are leaving the field to be substituted off]" />
+						</widget>
+					</container>
+
+					<container class="horizontal_adaptive_container" inset="0" offset="0" alignment="left,extend" gap="0">
+
+						<!--mugshot-->
+						<widget class="picture" id="PerP" width="55" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" minimum_width="55" default_width="55" priority="2"/>
+
+						<!--right side name and details-->
+						<container default_width="-1" priority="1" minimum_width="75">
+							<layout class="arrange_vertical_attachment" alignment="middle" offset="2" gap="-4"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<record id="default_properties" alignment="left,centre_y" auto_size="vertical" />
+							
+							<!--name-->
+							<widget class="person_button" id="PerB" style="semi_bold" />
+
+							<!--sub head-->
+							<widget class="text" id="Per1" colour="faded text" size="small" multiline="false"/>
+						</container>
+
+					</container>
+
+				</container>
+			</container>
+
+			<!--multiple sub events-->
+			<container id="MSub">
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<!--icons-->
+				<container width="60">
+					<layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<record id="default_properties"  show_button_appearance="false" image_alignment="left,centre_y" alignment="centre" font="title" size="8" />
+					
+					<widget class="icon_button" icon="icons/26px/right" icon_colour="positive light" colour="positive light">
+						<translation id="text" translation_id="450748" type="use" value="On[COMMENT: FR21690 - label for an icon showing substitutes who are coming on to the field]" />
+					</widget>
+
+					<widget class="icon_button" icon="icons/26px/left" icon_colour="negative light" colour="negative light">
+						<translation id="text" translation_id="450749" type="use" value="Off[COMMENT: FR21690 - label for an icon showing players who are leaving the field to be substituted off]" />
+					</widget>
+
+				</container>
+
+				<!--people on and off-->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1,1,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--on-->
+					<container id="msOn">
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<record id="default_properties" alignment="centre" size="10" icon_enabled="true" style="semi_bold" />
+
+					</container>
+
+					<!--separator-->
+					<widget class="horizontal_divider" />
+
+					<!--off-->
+					<container id="msOf">
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<record id="default_properties" alignment="centre" size="10" icon_enabled="true" style="semi_bold" />
+
+					</container>
+				</container>
+
+			</container>
+		</container>
+
+	</container>
+</panel>

@@ -1,0 +1,61 @@
+<panel id="fcpa" height="28">
+  <translation id="title" translation_id="247231" type="use" value="Fixture Competition" />
+  <!-- Note: Height defined statically ^ -->
+  <layout class="arrange_horizontal_attachment" layout="-7, -4, -31, -2, -2, 50, -2, -2, -36, -7" gap="0" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+  <!-- *** Home team *** -->
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+    
+    <!-- League position -->
+    <widget id="hpos" class="text" colour="league position" spec="text" size="small" alignment="left,centre_y" />
+    <!-- Nation -->
+    <widget id="hnat" class="nation_button" colour="nation" hidden="true" alignment="left,centre_y" />
+  </container>
+  
+  <!-- TV icon -->
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+    <!--widget id="ftv " class="label" colour="fixture tv" alignment="right,centre_y" hidden="true">
+      <translation id="text" translation_id="242415" type="use" value="TV[COMMENT - match on tv, needs to be short text]" />
+    </widget-->
+    <widget id="ftv " class="picture" file="icons/16px/tv" scale_picture="false" image_alignment="centre" hidden="true"/>
+  </container>
+  
+  <!-- Team name -->
+  <widget id="hnam" class="team_button" icon_alignment="right" alignment="right,centre_y" />
+  
+  <!-- Result -->
+  <widget id="hres" class="label" alignment="right" />
+  
+  <!-- Aggregate Score -->
+  <widget id="hagg" class="label" colour="result aggregate" alignment="right,centre_y" />
+
+  <!-- *** Score *** -->
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <widget id="scor" class="text" colour="fixture score separator" spec="text" size="large" alignment="centre" />
+    <widget id="attd" class="button" appearance="buttons/text/button" colour="fixture score separator" spec="text" size="large" alignment="centre" hidden="true" />
+  </container>
+
+  <!-- *** Away Team *** -->
+  <!-- Aggregate Score -->
+  <widget id="aagg" class="label" colour="result aggregate" />
+  
+  <!-- Result -->
+  <widget id="ares" class="label" colour="fixture outcome" />
+  
+  <!-- Team name -->
+  <widget id="anam" class="team_button" />
+  
+  <container id="temp">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <!-- League position -->
+    <widget id="apos" class="text" colour="league position" spec="text" size="small" alignment="right,centre_y" />
+    <!-- Nation -->
+    <widget id="anat" class="nation_button" colour="nation" hidden="true" alignment="left,centre_y" />
+  </container>
+</panel>

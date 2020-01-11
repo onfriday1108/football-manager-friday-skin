@@ -1,0 +1,50 @@
+<panel>
+	<!-- Position filter rule panel -->
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="filter_check_box_list_container" id="posC" auto_size="vertical" ahdn="false">
+		<translation id="title" translation_id="230082" type="use" value="Positions" />
+
+		<list id="objL">
+			<record id="goal">
+				<translation id="text" translation_id="231451" type="use" value="Goalkeepers" />
+			</record>
+			<record id="defn">
+				<translation id="text" translation_id="231452" type="use" value="Defenders" />
+			</record>
+			<record id="defm">
+				<translation id="text" translation_id="343513" type="use" value="Def. Midfielders[COMMENT: abbreviation for defensive midfielders]" />
+			</record>
+			<record id="midf">
+				<translation id="text" translation_id="231453" type="use" value="Midfielders" />
+			</record>
+			<record id="attm">
+				<translation id="text" translation_id="343272" type="use" value="Att. Midfielders[COMMENT: abbreviation for attacking midfielders]" />
+			</record>
+			<record id="attk">
+				<translation id="text" translation_id="231454" type="use" value="Attackers" />
+			</record>
+
+		</list>
+
+	</container>
+
+	<container class="filter_check_box_list_container" id="sidC" auto_size="vertical" ahdn="false">
+		<translation id="title" translation_id="247715" type="use" value="Side" />
+
+		<list id="objL">
+			<record id="left">
+				<translation id="text" translation_id="247716" type="use" value="Left sided" />
+			</record>
+			<record id="cent">
+				<translation id="text" translation_id="247717" type="use" value="Central" />
+			</record>
+			<record id="rght">
+				<translation id="text" translation_id="247718" type="use" value="Right sided" />
+			</record>
+
+		</list>
+
+	</container>
+
+</panel>

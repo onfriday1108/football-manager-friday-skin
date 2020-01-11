@@ -1,0 +1,23 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+	
+	<container class="filter_check_box_list_container" auto_size="vertical" ahdn="false" id="hpsC">
+		<translation id="title" translation_id="334174" type="use" value="Training Happiness[COMMENT: player training, player happiness comments]" />
+
+		<list id="objL">
+
+			<record  id="hpcb" >
+				<translation id="text" translation_id="348120" type="use" value="Happy[COMMENT: Training overview panel; player happy with his training level]" />
+			</record>
+			<record  id="cncb" >
+				<translation id="text" translation_id="348006" type="use" value="Content[COMMENT: Training overview panel; player content with his training level]" />
+			</record>
+			<record  id="uhcb" >
+				<translation id="text" translation_id="348464" type="use" value="Unhappy[COMMENT: Training overview panel; player unhappy with his training level]" />
+			</record>
+			
+		</list>
+		
+	</container>
+
+</panel>

@@ -1,0 +1,9 @@
+﻿<panel>
+
+  <string id="skin_style" value="match" />
+
+  <boolean id="save_session_state" value="true" />
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container id="adIC" class="picture" file="icons/16px/speech bubble" image_alignment="centre" red_replacement="text" />
+</panel>

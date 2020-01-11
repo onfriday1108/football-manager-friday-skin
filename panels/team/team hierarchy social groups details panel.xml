@@ -1,0 +1,51 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0"/>
+  <layout class="arrange_vertical_attachment"  layout="-1,-1" gap="0" offset="0"/>
+
+  <container>
+    <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="14"/>
+    <layout class="arrange_vertical_attachment"  layout="36,-1" gap="8" offset="14"/>
+
+    <!--Icon and header-->
+    <container>
+      <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="vertical" inset="0"/>
+      <layout class="arrange_horizontal_attachment"  layout="36,-1" gap="14" offset="0"/>
+
+      <widget class="picture" file="icons/26px/info" image_alignment="centre" scale_picture="true" red_replacement="chemistry_influences_colour" />
+
+      <container>
+        <layout class="arrange_vertical_attachment"  alignment="top,extend" gap="0" offset="0"/>
+        <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0"/>
+
+        <widget class="label" id="sgrN" auto_size ="vertical" alignment="left,top" spec="text" size="large" font="title" style="bold" colour="chemistry_influences_colour" />
+        <widget class="label" id="grpC" colour="text"  alignment="left,top" spec="text" size="small" />
+      </container>
+    </container>
+
+    <container>
+      <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0"/>
+      <layout class="arrange_vertical_attachment"  alignment="top,extend" gap="14" offset="2"/>
+      <widget class="label" id="sgDh" alignment="left,top" auto_size="vertical" colour="text" />
+      
+      <!--group pros/cons-->
+      <container class="scrolling_box">
+        <container id="Gpcn">
+          <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+          <layout class="fit_children_attachment" alignment="vertical,fill"/>
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+        </container>
+      </container>
+    </container>
+  </container>
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top,extend" gap="2" offset="4"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+    <widget class="horizontal_divider" />
+    <widget class="person_happiness_panel" id="phap" file="person/person happiness profile">
+      <record id="object_property">
+        <integer id="get_property" value="objt" />
+        <integer id="set_property" value="objt" />
+      </record>
+    </widget>
+  </container>
+</panel>

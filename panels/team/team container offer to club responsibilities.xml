@@ -1,0 +1,18 @@
+﻿<panel>
+	<boolean id="GTBT" value="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="8"/>
+		<container class="scrolling_box">
+			<container class="inner_box">
+				<layout class="fit_children_attachment" alignment="vertical,fill" gap="5" />
+				<layout class="arrange_vertical_attachment" alignment="top" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+				<container id="opca" file="club/backroom staff offering players panel" height="400" name="offering players settings"/>
+
+			</container>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,347 @@
+<panel wants_mouse_events="true">
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+	<!-- When the panel is shown, tell the edit box for the first name to request keyboard focus -->
+	<record id="shown_event">
+		<flags id="event_id" value="REQF" />
+		<flags id="event_target" value="fav1" />
+	</record>
+
+	<container class="main_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="10" vertical_gap="0" horizontal_inset="0" />
+
+		<!-- box containing personal details form -->
+		<!-- Isaac 06/03/19 - Changed pdpa height from 635 to 675 for bug #7266 -->
+		<container id="pdpa" height="675">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0" />
+
+			<container width="520">
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" horizontal_inset="0" />
+
+				<container    icon="icons/custom/add manager/gender" >
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+					<!--Male/Female-->
+					<container height="30">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="-9" vertical_inset="0" />
+
+						<widget class="radio_toggle_switch_left" id="genm" group="0" selected="true" alignment="centre">
+							<translation id="text" translation_id="278121" type="use" value="Male[COMMENT: add_manager_panel; choosing your manager's gender when starting a new game]" />
+							<record id="click_event">
+								<flags id="event_id" value="chge" />
+								<!-- The PROP_GENDER for this event needs to match the facegen FGG_MALE/FEMALE values: -1 = MALE, 1 = FEMALE -->
+								<flags id="mgen" value="-1" />
+							</record>
+						</widget>
+						<widget class="radio_toggle_switch_right" id="genf" group="0" selected="false" alignment="centre">
+							<translation id="text" translation_id="278120" type="use" value="Female[COMMENT: add_manager_panel; choosing your manager's gender when starting a new game]" />
+							<record id="click_event">
+								<flags id="event_id" value="chge" />
+								<!-- The PROP_GENDER for this event needs to match the facegen FGG_MALE/FEMALE values: -1 = MALE, 1 = FEMALE -->
+								<flags id="mgen" value="1" />
+							</record>
+						</widget>
+					</container>
+
+					<container id="dbCN">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<!-- DOB title -->
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" vertical_inset="0" />
+
+							<widget class="text" font="title" alignment="left,centre_y" auto_size="all" colour="accent">
+								<translation id="text" translation_id="230147" type="use" value="Date Of Birth" />
+							</widget>
+
+							<widget class="text" font="title" alignment="left,centre_y" auto_size="all" colour="accent">
+								<translation id="hint" translation_id="300786" type="use" value="All items with a * must be filled in[COMMENT:indicator to the user that the coloured asterisk indicates that the user must fill in this field]" />
+								<translation id="text" translation_id="248129" type="use" value="*" />
+							</widget>
+
+						</container>
+
+						<!-- DOB buttons -->
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="70,-1,90,40" horizontal_offset="0" vertical_inset="0">
+								<global id="horizontal_gap" name="ui.button_row_gap"/>
+							</attachment_group>
+
+							<record id="default_properties" auto_size="vertical" />
+
+							<widget class="popup_button" id="dobd" sele="sdbd" mode="0x00180000" >
+								<translation id="text" type="new" value="88" />
+							</widget>
+
+							<widget class="popup_button" id="dobm" sele="sdbm">
+								<list id="items">
+									<record id="1">
+										<translation id="name" translation_id="249618" type="use" value="January" />
+									</record>
+									<record id="2">
+										<translation id="name" translation_id="249619" type="use" value="February" />
+									</record>
+									<record id="3">
+										<translation id="name" translation_id="249620" type="use" value="March" />
+									</record>
+									<record id="4">
+										<translation id="name" translation_id="249621" type="use" value="April" />
+									</record>
+									<record id="5">
+										<translation id="name" translation_id="249622" type="use" value="May" />
+									</record>
+									<record id="6">
+										<translation id="name" translation_id="249623" type="use" value="June" />
+									</record>
+									<record id="7">
+										<translation id="name" translation_id="249624" type="use" value="July" />
+									</record>
+									<record id="8">
+										<translation id="name" translation_id="249625" type="use" value="August" />
+									</record>
+									<record id="9">
+										<translation id="name" translation_id="249626" type="use" value="September" />
+									</record>
+									<record id="10">
+										<translation id="name" translation_id="249627" type="use" value="October" />
+									</record>
+									<record id="11">
+										<translation id="name" translation_id="249628" type="use" value="November" />
+									</record>
+									<record id="12">
+										<translation id="name" translation_id="249629" type="use" value="December" />
+									</record>
+								</list>
+							</widget>
+              
+							<widget class="popup_button" id="doby" sele="sdby">
+								<translation id="text" type="new" value="8888" />
+							</widget>
+							<widget class="icon_button" id="date" click_event="cdob" appearance="buttons/standard/normal/button" icon="icons/16px/schedule" icon_alignment="centre" />
+						</container>
+
+					</container>
+
+					<!-- Height and Weight title -->
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+
+						<record id="default_properties" alpha="215" font="title" alignment="left,centre_y" colour="accent" auto_size="vertical" />
+
+						<widget class="text" >
+							<translation id="text" translation_id="247660" type="use" value="Height[COMMENT - player profile panel; height label]" />
+						</widget>
+
+						<widget class="text">
+							<translation id="text" translation_id="247661" type="use" value="Weight[COMMENT - player profile panel; weight label]" />
+						</widget>
+
+					</container>
+
+					<!-- Height and Weight buttons -->
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+						<!-- Height -->
+            <container>
+              <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,70" horizontal_offset="0" horizontal_gap="0" vertical_inset="0">
+              <global id="horizontal_gap" name="ui.split_button_row_gap" />
+              </attachment_group>
+              <!-- mode="1310722" is the code for POPUP_BELOW|POPUP_FIT_TO_TARGET|POPUP_AT_SELECTION-->
+              <widget class="popup_button" id="hePO" sele="hePO" height="50" auto_tick_exclusive="true" alignment="left,centre_y" appearance="buttons/standard/split/left/button" mode="1310722" auto_size="vertical" />
+              <widget class="popup_button" id="HUPO" sele="HUPO" height="50" alignment="left,centre_y" appearance="buttons/standard/split/right/button" auto_size="vertical" />
+            </container>
+
+						<!-- Weight -->
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,70" horizontal_offset="0" horizontal_gap="0" vertical_inset="0">
+              <global id="horizontal_gap" name="ui.split_button_row_gap" />
+              </attachment_group>
+							<widget class="popup_button" id="wePO" sele="wePO" alignment="left,centre_y" auto_tick_exclusive="true" appearance="buttons/standard/split/left/button" mode="1310722" auto_size="vertical" />
+							<widget class="popup_button" id="WUPO" sele="WUPO" alignment="left,centre_y" appearance="buttons/standard/split/right/button"  auto_size="vertical"  />
+						</container>
+
+					</container>
+
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<widget class="icon_button" icon_alignment="centre" alignment="centre" appearance="buttons/custom/generate face/button" icon="icons/custom/photofit/HeadinGame" icon_colour="text" click_event="ePHo" height="50">
+						<global id="hidden" name="platform_is_stadia"/>
+						<translation id="text" translation_id="420652" type="use" value="Generate 3D model from your Photo[COMMENT: add manager appearance panel button text for generating a user avatar, cannot be feminised]" />
+					</widget>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,40" horizontal_offset="0" horizontal_gap="0" vertical_inset="0">
+            <global id="horizontal_gap" name="ui.split_button_row_gap" />
+            </attachment_group>
+
+						<widget class="icon_button" click_event="rdNS" appearance="buttons/standard/split/left/button" icon="icons/custom/photofit/random" icon_alignment="centre" alignment="centre" auto_size="vertical">
+							<translation id="text" translation_id="396554" type="use" value="Randomise Face[COMMENT: Button hint;Randomises the manager man face]" />
+						</widget>
+
+						<widget class="popup_button" appearance="buttons/standard/split/right/button" sele="adOP" height="31">
+							<list id="items">
+								<record>
+									<translation id="text" translation_id="396016" type="use" value="Edit Face[COMMENT: options to customise different part of the head; customising your character's look and feel]" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<container height="25">
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+						<record id="default_properties" alpha="215" font="title" alignment="left,centre_y" colour="accent" auto_size="vertical" />
+
+						<!-- Skin Tone -->
+						<widget class="text" id="skTX">
+							<translation id="text" translation_id="293362" type="use" value="Skin Tone" />
+						</widget>
+
+						<widget class="text" id="eCOL">
+							<translation id="text" translation_id="424579" type="use" value="Eye Colour[COMMENT: Face options; customising your character's look and feel]" />
+						</widget>
+					</container>
+
+					<container height="29">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+							<widget class="slider_horizontal" id="skSL" height="30" test="icons/16px/down" draw_notches="true" red_replacement="fg accent">
+								<integer id="notch_frequency" value="1" />
+								<integer id="interval" value="1" />
+								<integer id="page_interval" value="1" />
+								<flags id="alignment" value="centre" />
+								<integer id="min_value" value="0" />
+								<integer id="max_value" value="4" />
+								<integer id="value" value="0" />
+								<boolean id="draw_middle_notch" value="no" />
+
+							<event id="final_changed_event">
+								<flags id="event_id" value="skTN" />
+							</event>
+
+						</widget>
+
+						<widget class="adjustable_bar" use_red_replacement="true" keep_selected_slot_highlighted="true" slot_appearance="adjustable bar sartorial look slot" file="adjustable bar sartorial look" id="eyCC" max_value="7" bar_value_changed_event="eyCC" disable_highlight_on_hover="true">
+							<!--changing the order of these colours for bug 188157-->
+							<!--if you change things here, change also in MANAGER_PROFILE_PANEL::get_display_index_for_eye_colour-->
+							<!--and MANAGER_PROFILE_PANEL::get_eye_colour_for_display_index-->
+							<record id="adj_bar_slot_props">
+								<record id="1" bar_value_colour="eye colour 1" adj_bar_adj_filler_colour="eye colour 1" adj_bar_highlight_value_colour="eye colour 1" />
+								<record id="2" bar_value_colour="eye colour 2" adj_bar_adj_filler_colour="eye colour 2" adj_bar_highlight_value_colour="eye colour 2" />
+								<record id="3" bar_value_colour="eye colour 3" adj_bar_adj_filler_colour="eye colour 3" adj_bar_highlight_value_colour="eye colour 3" />
+								<record id="4" bar_value_colour="eye colour 4" adj_bar_adj_filler_colour="eye colour 4" adj_bar_highlight_value_colour="eye colour 4" />
+								<record id="5" bar_value_colour="eye colour 5" adj_bar_adj_filler_colour="eye colour 5" adj_bar_highlight_value_colour="eye colour 5" />
+								<record id="6" bar_value_colour="eye colour 6" adj_bar_adj_filler_colour="eye colour 6" adj_bar_highlight_value_colour="eye colour 6" />
+								<record id="7" bar_value_colour="eye colour 7" adj_bar_adj_filler_colour="eye colour 7" adj_bar_highlight_value_colour="eye colour 7" />
+							</record>
+						</widget>
+
+
+					</container>
+
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<container icon="icons/custom/add manager/hair" height="115">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+					<container>
+
+						<attachment_group class="horizontal_arrange" horizontal_layout="-1,-2" horizontal_offset="0" vertical_inset="0" />
+
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0,5" apply_to_children="true" />
+							<widget class="text" id="hrTX" font="title" alignment="left" colour="accent">
+								<translation id="text" translation_id="396040" type="use" value="Hair Style[COMMENT:title for popup button; listing different choices for the hair type in the creation of the avatar process]" />
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0"/>
+
+							<widget class="icon_button" id="hODp" auto_size="all" secondary_icon="icons/16px/maximise" appearance="buttons/custom/hairstyle/normal/button" secondary_icon_enabled="true" click_event="sHop" />
+
+						</container>
+
+					</container>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="adjustable_bar" use_red_replacement="true" height="29" disable_highlight_on_hover="true" slot_appearance="adjustable bar sartorial look slot"  file="adjustable bar sartorial look" id="hCCL" max_value="6" bar_value_changed_event="hCCL" keep_selected_slot_highlighted="true"/>
+
+						<widget class="horizontal_divider" />
+
+						<widget class="left_right_list" auto_tick_exclusive="true" id="CcFj" select_event="fHCH" auto_size="vertical" />
+
+						<widget class="adjustable_bar" use_red_replacement="true" height="29" disable_highlight_on_hover="true" slot_appearance="adjustable bar sartorial look slot"  file="adjustable bar sartorial look" id="fHCl" max_value="6" bar_value_changed_event="clFH" keep_selected_slot_highlighted="true" />
+					</container>
+
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="fill" horizontal_offset="0" vertical_offset="0" />
+
+					<widget class="check_box" id="glPO" click_event="glPO" alignment="left,centre_y" auto_size="vertical">
+						<translation id="text" translation_id="424580" type="use" value="Glasses[COMMENT: popup button options; listing the different options for glasses for the manager]" />
+					</widget>
+
+					<widget class="popup_colour_button" appearance="buttons/standard/normal/button" colour_selected_event="clFR" id="frBU" icon_enabled="true" auto_size="vertical" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" colour_dialog_file="dialogs/manager colour dialog">
+						<translation id="text" translation_id="424581" type="use" value="Frames Colour[COMMENT: option to change the frame colour of the manager]" />
+					</widget>
+				</container>
+
+				<widget class="horizontal_divider"/>
+
+				<container    icon="icons/custom/add manager/outfit" height="150">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<!-- Sartorial Look -->
+					<widget class="text" id="AtTX" auto_size="vertical" font="title" alignment="left,centre_y" colour="accent">
+						<translation id="text" translation_id="395967" type="use" value="Attire[COMMENT:title for popup button; listing different choices for the cloth styles in the creation of the avatar process]" />
+					</widget>
+
+					<widget class="left_right_list" auto_tick_exclusive="true" id="stPO" sele="stPO" auto_size="vertical"  />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" >
+							<global id="horizontal_gap" name="ui.button_row_gap"/>
+						</attachment_group>
+						
+						<record id="default_properties" appearance="buttons/standard/normal/button" auto_size="vertical" icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" />
+
+						<widget class="popup_colour_button" colour_selected_event="cVLS" id="pCbu" colour_dialog_file="dialogs/manager colour dialog"/>
+            <widget class="popup_colour_button" colour_selected_event="cVSE" id="sCbu" colour_dialog_file="dialogs/manager colour dialog"/>
+            <widget class="popup_colour_button" colour_selected_event="acCC" id="tCbu" colour_dialog_file="dialogs/manager colour dialog"/>
+
+					</container>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" >
+							<global id="horizontal_gap" name="ui.button_row_gap"/>
+						</attachment_group>
+						
+						<record id="default_properties" appearance="buttons/standard/normal/button" auto_size="vertical" icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" />
+
+						<widget class="popup_colour_button" colour_selected_event="clTS" id="aCbu" colour_dialog_file="dialogs/manager colour dialog"/>
+            <widget class="popup_colour_button" colour_selected_event="shCC" id="qCbu" colour_dialog_file="dialogs/manager colour dialog"/>
+					</container>
+				</container>
+
+			</container>
+		</container>
+
+	</container>
+</panel>

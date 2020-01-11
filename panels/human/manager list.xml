@@ -1,0 +1,325 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- main area -->
+	<container id="main">
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container class="inner_box" force_title_borders="true" id="plti" alignment="left" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- buttons area -->
+			<container id="embb" embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_left"/>
+
+				<widget class="view_menu_label" id="TitL">
+					<translation id="text" translation_id="231459" type="use" value="Managers" />
+				</widget>
+				<!-- view button -->
+				<widget class="view_menu_popup" id="plvi" />
+			</container>
+
+			<!-- buttons area -->
+			<container id="btna" embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_right"/>
+
+				<!-- filter menu -->
+				<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="all" embed_in_frame="true" />
+
+			</container>
+
+			<widget class="client_object_list_table" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" column_mode="resize_columns, move_columns">
+				<integer id="contextual_handler_column_id" value="Pnms" />
+				<boolean id="save_session_state" value="true" />
+
+				<!-- default sort by playing position (primary), then picked position, then name -->
+				<list id="default_sort_column">
+					<integer value="Pnrs" />
+				</list>
+
+				<!--default view-->
+				<flags id="default_view" value="gene" />
+
+				<list id="viws">
+					<record id="gene">
+						<translation id="text" translation_id="248359" type="use" value="General" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pmtm" />
+							<!-- team managed -->
+							<record id="Pbas" width="250" />
+							<!-- based -->
+							<flags id="Pnat" />
+							<!-- nationality -->
+							<flags id="PSag" />
+							<!-- person age -->
+							<flags id="Pnrs" />
+							<!-- reputation -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Pnrs" />
+						</record>
+					</record>
+
+					<record id="hgfs">
+						<translation id="text" translation_id="320433" type="use" value="Highest Fee Spent[COMMENT: manager list; column header for manager stat]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Nhft" />
+							<!-- team managed -->
+							<flags id="Nhsp" />
+							<!-- player -->
+							<flags id="Nhsd" />
+							<!-- date -->
+							<flags id="Nhsa" />
+							<!-- amount -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Nhsa" />
+						</record>
+					</record>
+
+					<record id="hgfr">
+						<translation id="text" translation_id="320434" type="use" value="Highest Fee Received[COMMENT: manager list; column header for manager stat]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Nhrf" />
+							<!-- team managed -->
+							<flags id="Nhrp" />
+							<!-- player -->
+							<flags id="Nhrd" />
+							<!-- date -->
+							<flags id="Nhra" />
+							<!-- amount -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Nhra" />
+						</record>
+					</record>
+
+					<record id="ctac">
+						<translation id="text" translation_id="320435" type="use" value="Time at Current Club[COMMENT: manager list; column header]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="PCtm" />
+							<!-- team managed -->
+							<flags id="Nctc" />
+							<!-- time at club-->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Nctc" />
+						</record>
+					</record>
+
+					<record id="ltac">
+						<translation id="text" translation_id="382825" type="use" value="Longest Time at Club[COMMENT: manager list; column header]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pmtm" />
+							<!-- team managed -->
+							<flags id="Nltc" />
+							<!-- club -->
+							<flags id="Nltd" />
+							<!-- time -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Nltd" />
+						</record>
+					</record>
+
+					<record id="stac">
+						<translation id="text" translation_id="382829" type="use" value="Shortest Time at Club[COMMENT: manager list; column header]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pmtm" />
+							<!-- team managed -->
+							<flags id="Nstc" />
+							<!-- club -->
+							<flags id="Nstd" />
+							<!-- time -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Nstd" />
+						</record>
+					</record>
+
+					<record id="nopb">
+						<translation id="text" translation_id="320438" type="use" value="Players Bought[COMMENT: manager list screen; view option for players bought]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pmtm" />
+							<!-- team managed -->
+							<flags id="Nnpb" />
+							<!-- number of players bought-->
+							<flags id="Ntpb" />
+							<!-- total value of players bought -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Ntpb" />
+						</record>
+					</record>
+
+					<record id="nops">
+						<translation id="text" translation_id="320439" type="use" value="Players Sold[COMMENT: manager list screen; view option for players sold]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pmtm" />
+							<!-- team managed -->
+							<flags id="Nnps" />
+							<!-- number of players sold -->
+							<flags id="Ntps" />
+							<!-- total value of players sold -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Ntps" />
+						</record>
+					</record>
+
+					<!-- disabled as this doesnt work at all in FM12 currently - bug 65334. Needs to have HoF data properly linked up to staff in game e.g. Alex Ferguson
+          <record id="hgnr">
+            <string id="text" value="Highest Hall of Fame Rankings[COMMENT: manager stats screen; view option for hall of fame rankings]"/>
+            <record id="view">
+              <flags id="Pnms"/>              person name 
+              <flags id="Pmtm"/>              team managed 
+              <flags id="Nhnr"/>              highest nationality ranking 
+              <flags id="Nhtr"/>              highest national ranking 
+              <flags id="Nhcr"/>              highest continental ranking 
+              <flags id="Nhwr"/>              highest world ranking 
+            </record>
+            <record id="table_properties">
+              <integer id="sort" value="Nhwr"/>
+            </record>
+          </record>
+-->
+					<record id="lcwn">
+						<translation id="text" translation_id="320441" type="use" value="Landmarks[COMMENT - manager table screen; view option text for league/cup and award wins]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pmtm" />
+							<!-- team managed -->
+							<flags id="Ctlw" />
+							<!-- league wins -->
+							<flags id="Ctpw" />
+							<!-- cup wins -->
+							<flags id="Ctnp" />
+							<!-- number of promotions-->
+							<flags id="Ctnr" />
+							<!-- number of relegations-->
+							<flags id="Nnaw" />
+							<!-- number of awards -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Ctlw" />
+						</record>
+					</record>
+
+					<record id="cmcs">
+						<translation id="text" translation_id="320442" type="use" value="Club Career Stats[COMMENT - manager table screen; view option text for showing match stats]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pmtm" />
+							<!-- team managed -->
+							<flags id="Ctgp" />
+							<!-- games played -->
+							<flags id="Ctgw" />
+							<!-- games won -->
+							<flags id="Ctgd" />
+							<!-- games drawn -->
+							<flags id="Ctgl" />
+							<!-- games lost -->
+							<flags id="Ctgf" />
+							<!-- goals for -->
+							<flags id="Ctga" />
+							<!-- goals against -->
+							<flags id="Ctdf" />
+							<!-- goal diff -->
+							<flags id="Ctwr" />
+							<!-- win ratio -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Ctgw" />
+						</record>
+					</record>
+
+					<record id="ntcs">
+						<translation id="text" translation_id="321107" type="use" value="National Team Career Stats[COMMENT - manager table screen; view option text for showing match stats]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pmtm" />
+							<!-- team managed -->
+							<flags id="Ntgp" />
+							<!-- games played -->
+							<flags id="Ntgw" />
+							<!-- games won -->
+							<flags id="Ntgd" />
+							<!-- games drawn -->
+							<flags id="Ntgl" />
+							<!-- games lost -->
+							<flags id="Ntgf" />
+							<!-- goals for -->
+							<flags id="Ntga" />
+							<!-- goals against -->
+							<flags id="Ntdf" />
+							<!-- goal diff -->
+							<flags id="Ntgr" />
+							<!-- win ratio -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Ntgw" />
+						</record>
+					</record>
+
+					<record id="tmcs">
+						<translation id="text" translation_id="320444" type="use" value="Total Career Stats[COMMENT - manager table screen; view option text for showing match stats]" />
+						<record id="view">
+							<flags id="Pnms" />
+							<!-- person name -->
+							<flags id="Pmtm" />
+							<!-- team managed -->
+							<flags id="Tgpl" />
+							<!-- games played -->
+							<flags id="Tgwn" />
+							<!-- games won -->
+							<flags id="Tgdw" />
+							<!-- games drawn -->
+							<flags id="Tglt" />
+							<!-- games lost -->
+							<flags id="Tgfr" />
+							<!-- goals for -->
+							<flags id="Tgaa" />
+							<!-- goals against -->
+							<flags id="Tgdf" />
+							<!-- goal diff -->
+							<flags id="Tgwr" />
+							<!-- win ratio -->
+						</record>
+						<record id="table_properties">
+							<integer id="sort" value="Tgwn" />
+						</record>
+					</record>
+				</list>
+
+			</widget>
+
+		</container>
+		<!-- players titled box -->
+
+	</container>
+	<!-- main area -->
+
+</panel>

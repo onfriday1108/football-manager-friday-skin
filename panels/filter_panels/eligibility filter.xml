@@ -1,0 +1,35 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="260816" type="use" value="Eligibility[COMMENT: filter panel; a player eligibility for certain squads e.g. U21s]" />
+
+		<list id="objL">
+
+			<record id="u23s">
+				<translation id="text" translation_id="260817" type="use" value="U23s[COMMENT: filter panel; squad filter title for U23 squad]" />
+			</record>
+			<record id="u22s">
+				<translation id="text" translation_id="353066" type="use" value="U22s[COMMENT: Use Top 10 Matches as very similar to existing string]" />
+			</record>
+			<record id="u21s">
+				<translation id="text" translation_id="260818" type="use" value="U21s[COMMENT: filter panel; squad filter title for U21 squad]" />
+			</record>
+			<record id="yu20">
+				<translation id="text" translation_id="282053" type="use" value="Youths[COMMENT: filter panel; squad filter title for Youth squad]" />
+			</record>
+			<record id="u20s">
+				<translation id="text" translation_id="260819" type="use" value="U20s[COMMENT: filter panel; squad filter title for U20 squad]" />
+			</record>
+			<record id="u19s">
+				<translation id="text" translation_id="260820" type="use" value="U19s[COMMENT: filter panel; squad filter title for U19 squad]" />
+			</record>
+			<record id="u18s">
+				<translation id="text" translation_id="260821" type="use" value="U18s[COMMENT: filter panel; squad filter title for U18 squad]" />
+			</record>
+			
+		</list>
+		
+	</container>
+
+</panel>

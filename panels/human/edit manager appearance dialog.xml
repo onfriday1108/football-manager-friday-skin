@@ -1,0 +1,109 @@
+﻿<panel id="dlog" width="1024" height="768">
+	<translation id="title" translation_id="443654" type="use" value="Edit Manager Appearance[COMMENT: manager edit appearance panel; editing manager's look]" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="add_manager_panel" id="adMP" file="none" show_navigation="true">
+		<layout class="arrange_vertical_attachment" layout="-1, 40" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+		<container>
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="10" />
+
+
+			<container>
+
+				<container id="CHWc">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+					<!-- A wizard panel to provide standard wizard buttons and panel handling -->
+					<container class="wizard_panel" id="wzrd">
+
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						<layout class="arrange_horizontal_attachment" layout="-60,-40" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<container>
+
+							<layout class="arrange_vertical_attachment" layout="-1,690" offset="10" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+							<container  />
+
+							<!-- wizard panel container, the actual panels will be added here -->
+							<container id="plco" class="main_transparent_box">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+								<container class="manager_profile_panel" id="sPan" check_profile="true" file="human/add manager appearance panel" hide_dob="true" is_dialog="true">
+									<translation id="wizard_panel_title" translation_id="395141" type="use" value="Appearance[COMMENT: add manager screen; panel title; appearance of the manager]" />
+								</container>
+
+							</container>
+
+						</container>
+
+						<!-- empty container for create a padding for the manager man -->
+						<container id="emCW">
+							<container class="main_transparent_box" entity_layout_id="at03" id="at03" auto_size="horizontal" height="50">
+								<attachment_group class="horizontal_arrange_autosize" />
+								<layout class="stick_to_sides_attachment" alignment="left,top" inset="20" />
+						
+								<widget class="icon_button" entity_layout_id="at01" appearance="buttons/subtle/normal/button" icon_alignment="centre_x,centre_y" id="at01" width="45" name="camera button">
+									<string id="icon" value="icons/16px/camera" />
+									<string id="click_event" value="cTGl" />
+									<translation id="hint" translation_id="468956" type="use" value="Change the camera angle[COMMENT: tooltip for adding face to the manager man profile, camera angle button]" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+								</widget>
+								<widget class="icon_button" entity_layout_id="at04" icon_alignment="centre_x,centre_y" id="at04" appearance="buttons/subtle/normal/button" width="45" name="save_appearance_icon_button">
+									<global id="hidden" name="platform_is_stadia"/>
+									<string id="icon" value="icons/custom/highlights/save" />
+									<string id="hint" value="Save Avatar" />
+									<string id="click_event" value="svAp" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+								</widget>
+								<widget class="icon_button" entity_layout_id="at00" id="at00" appearance="buttons/subtle/normal/button" icon_alignment="centre_x,centre_y" width="45" name="load_appearance_icon_buttons">
+									<global id="hidden" name="platform_is_stadia"/>
+									<string id="icon" value="icons/16px/folder" />
+									<string id="hint" value="Load Avatar" />
+									<string id="click_event" value="unch" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+								</widget>
+							</container>
+						</container>
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+
+
+		<!-- row of buttons -->
+
+		<container height="30">
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="5" />
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+
+
+			<widget class="primary_icon_tick_button" click_event="ok">
+				<translation id="text" translation_id="229918" type="use" value="Confirm" />
+			</widget>
+
+			<widget class="icon_button" click_event="canc" auto_size="all">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

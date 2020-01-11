@@ -1,0 +1,14 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-3,-1,-10,-6" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical,fill" apply_to_children="true" inset="0"/>
+
+		<widget class="object_portrait_picture" id="tmlg" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre"/>
+		<container></container>
+		<widget class="text" id="tmnm" size="10" alignment="left,centre_y" style="bold"/>
+		<widget class="label" id="cpyr" size="10" alignment="right,centre_y" colour="disabled"/>
+	</container>
+	<widget class="horizontal_divider" />
+</panel>

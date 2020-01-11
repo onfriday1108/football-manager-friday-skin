@@ -1,0 +1,35 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="scrolling_box">
+		<container>
+
+			<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" gap="0" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<record id="default_properties" auto_size="vertical" />
+
+			<widget class="label" alignment="left" font="label" colour="positive">
+				<translation id="text" translation_id="434997" type="use" value="Biggest Strength[COMMENT: Team Report strength header, bug 153070]" />
+			</widget>
+
+			<container class="scout_report_pro_con_widget" id="mpro" pisp="true" item="1" file="widgets/team pro con summary widget" />
+
+			<widget class="text" id="npro" alignment="left" >
+				<translation id="text" translation_id="227378" type="use" value="Unknown" />
+			</widget>
+
+			<widget class="label" alignment="left" font="label" colour="negative">
+				<translation id="text" translation_id="423840" type="use" value="Potential Weakness[COMMENT: team report weakness header]" />
+			</widget>
+
+			<container class="scout_report_pro_con_widget" id="mcon" pisp="false" item="1" file="widgets/team pro con summary widget" />
+
+			<widget class="text" id="ncon" alignment="left">
+				<translation id="text" translation_id="227378" type="use" value="Unknown" />
+			</widget>
+
+		</container>
+	</container>
+</panel>

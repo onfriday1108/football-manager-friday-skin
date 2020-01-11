@@ -1,0 +1,28 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+	<string id="skin_style" value="title link" />
+
+	<container class="main_subtle_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="0"/>
+
+		<widget class="text" font="title" auto_size="vertical">
+			<translation id="text" translation_id="395516" type="use" value="Upcoming Fixtures[COMMENT: FR 9550 - inbox; title for section showing upcoming fixtures for the competition]" />
+		</widget>
+
+		<widget id="upMl" class="client_object_viewer_xml_panel">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			
+			<widget class="simple_data_list" set_property="objt" draw_vertical_dividers="true">
+				<record id="object_property" get_property="Tn5f" set_property="valu" />
+
+				<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="left,fill" vertical_offset="0" horizontal_gap="20"/>
+
+				<record id="widget_properties" class="team_upcoming_fixture_widget"/>
+			</widget>
+		</widget>
+
+	</container>
+
+</panel>

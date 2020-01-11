@@ -1,0 +1,85 @@
+<panel height="60">
+	<boolean id="cancel_mouse_hide" value="true"/>
+	<layout class="arrange_horizontal_attachment" alignment="left" gap="0" do_not_size="true" />
+	<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0"  />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<boolean id="hide_unused_buttons" value="true" />
+
+	<container class="standard_popup_box" alignment="centre">
+
+		<layout class="arrange_horizontal_attachment" alignment="left" gap="5" offset="10" do_not_size="true" />
+		<layout class="fit_children_attachment" alignment="horizontal,fill" gap="5" offset="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+
+		<!--home button-->
+		<widget class="icon_button" id="homb" width="40" appearance="buttons/custom/match/exit/button" icon="icons/16px/home" icon_alignment="centre">
+			<event id="click_event">
+				<flags id="event_id" value="HOME"/>
+				<flags id="event_target" value="scrC"/>
+			</event>
+			<layout class="centre_in_parent_attachment" alignment="vertical" />
+		</widget>
+
+		<!-- "live" button -->
+		<widget class="icon_button" id="live" icon="icons/26px/live" icon_alignment="left" auto_size="horizontal" height="32">
+			<translation id="text" translation_id="289352" type="use" value="Live[COMMENT: match_time_slider; instruction to set the action back to live]" />
+			<translation id="hint" translation_id="289353" type="use" value="Live[COMMENT: match_time_slider; instruction to set the action back to live, hint tooltip]" />
+		</widget>
+
+		<container class="positional_appearance_container" positional_appearance_first="buttons/subtle/split/left/button" positional_appearance_normal="buttons/subtle/split/middle/button" positional_appearance_last="buttons/subtle/split/right/button" positional_appearance_first_and_last="buttons/subtle/normal/button">
+			<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0" do_not_size="true">
+      <global id="gap" name="ui.split_button_row_gap" />
+      </layout>
+			<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<record id="default_properties" auto_size="horizontal" height="32"/>
+
+			<!--previous highlight-->
+			<widget class="match_playback_control_button" id="pskp" icon="icons/26px/skip back" icon_alignment="left" control_type="skip" control_direction="backward">
+				<translation id="text" translation_id="247351" type="use" value="Previous Highlight" />
+				<record id="primary_icon_properties" red_replacement="button_icon"/>
+			</widget>
+
+			<!-- rewind / nudge rewind -->
+			<widget class="match_playback_control_button" id="prew" icon="icons/26px/rewind" icon_alignment="left" control_type="wind" control_direction="backward">
+				<translation id="text" translation_id="289544" type="use" value="Rewind[COMMENT - match screen; button to rewind through highlights]" />
+				<record id="primary_icon_properties" red_replacement="button_icon"/>
+			</widget>
+
+			<!--replay highlight-->
+			<widget class="icon_button" id="repl" icon="icons/26px/replay" icon_alignment="centre">
+				<translation id="text" translation_id="247350" type="use" value="Replay" />
+				<record id="primary_icon_properties" red_replacement="button_icon"/>
+			</widget>
+
+			<!--play/pause-->
+			<!--<widget class="match_play_pause_button" id="play" appearance="pitch/buttons/controls/play" auto_size="horizontal" height="32">
+      </widget>-->
+
+			<!-- fast forward / nudge forward -->
+			<widget class="match_playback_control_button" id="pff " icon="icons/26px/fast forward" icon_alignment="right" control_type="wind" control_direction="forward">
+				<translation id="text" translation_id="289545" type="use" value="Fast Forward[COMMENT - match screen; button to fast forward through highlights]" />
+				<record id="primary_icon_properties" red_replacement="button_icon"/>
+			</widget>
+
+			<!--next highlight-->
+			<widget class="match_playback_control_button" id="pskn" icon="icons/26px/skip forward" icon_alignment="right" control_type="skip" control_direction="forward">
+				<translation id="text" translation_id="247352" type="use" value="Next Highlight" />
+				<record id="primary_icon_properties" red_replacement="button_icon"/>
+			</widget>
+
+			<!--leave match-->
+			<widget class="button" id="LeaM" click_event="lvmt">
+				<translation id="text" translation_id="281358" type="use" value="Leave Match[COMMENT: match screen; when user is viewing a match; button to leave the match]" />
+			</widget>
+
+		</container>
+
+		<!--Record button-->
+		<widget class="icon_button" id="rcrd" icon="icons/26px/record" label_disabled="true" auto_size="horizontal" height="32" click_event="ermc" icon_alignment="centre" >
+			<global id="hidden" name="platform_is_stadia"/>
+		</widget>
+	</container>
+</panel>

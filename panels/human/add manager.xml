@@ -1,0 +1,116 @@
+<!-- add manager panel --><panel consider_quick_start="true">
+
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	
+	<widget class="character_widget" id="manw" graphics_view="character_widget" model_world="character_widget" view_behind="true" view_camera="character_widget">
+	</widget>
+
+	<container class="wizard_panel" id="wzrd" nnPB="false">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--header-->
+		<container file="human/add manager header panel" height="60" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-70,-40" offset="12" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="12" />
+
+			<!-- A wizard panel to provide standard wizard buttons and panel handling -->
+			<container class="main_transparent_box">
+
+				<flags id="tab_appearance" value="tabs/subsection/normal/top/button" />
+				<flags id="tab_selected_appearance" value="tabs/subsection/selected/top/button" />
+
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!-- wizard panel container, the actual panels will be added here -->
+				<container id="plco">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<container class="add_manager_select_profile_panel" id="slPP" wizard_next1_step="3" wizard_next2_step="1">
+						<translation id="wizard_panel_title" translation_id="361087" type="use" value="Choose Profile[COMMENT: add manager screen; short panel title used on next/previous button]" />
+					</container>
+					<container class="manager_profile_panel" check_profile="true">
+						<translation id="wizard_panel_title" translation_id="292599" type="use" value="Personal Details[COMMENT: add manager screen; panel title]" />
+					</container>
+					<container class="manager_profile_panel" file="human/add manager appearance panel" check_profile="true" id="apMP">
+						<translation id="wizard_panel_title" translation_id="395141" type="use" value="Appearance[COMMENT: add manager screen; panel title; appearance of the manager]" />
+					</container>
+					<container class="add_manager_select_team_panel" team_index="0" id="CHft" wizard_next1_step="2" hide_manager="true">
+						<translation id="wizard_panel_title" type="use" translation_id="242429" value="Choose Team" />
+					</container>
+
+					<container class="add_manager_select_team_panel" team_index="1" id="CHst" hide_manager="true">
+						<translation id="wizard_panel_title" translation_id="361088" type="use" value="Choose Second Team[COMMENT: add manager panel; short panel title used on next/previous button]" />
+					</container>
+
+					<!-- Edit club panel -->
+					<container class="add_manager_create_a_club" hide_manager="true">
+						<translation id="wizard_panel_title" translation_id="395014" type="use" value="Create a Club[COMMENT: FR 8517 add manager panel, title of the panel used in create a club mode]" />
+					</container>
+
+					<!-- Choosing fantasy squad for the create-a-club mode -->
+					<container class="add_manager_select_dream_squad" hide_manager="true">
+						<translation id="wizard_panel_title" translation_id="395010" type="use" value="Choose Dream Squad[COMMENT: FR 8517 add manager panel, title of the panel used in choosing ur team]" />
+					</container>
+
+					<container class="add_manager_select_managerial_style_panel" hide_manager="true">
+						<translation id="wizard_panel_title" translation_id="363684" type="use" value="Managerial Style[COMMENT: add manager screen; short panel title used on next/previous button]" />
+					</container>
+				</container>
+
+				<!-- row of other buttons -->
+				<widget class="inner_box" id="btns">
+					<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+
+					<!-- cancel button -->
+					<widget class="icon_button" id="canc" click_event="cnwz" auto_size="all" controller_button="b_button">
+						<translation id="text" translation_id="229828" type="use" value="Cancel" />
+					</widget>
+					<!-- row of buttons -->
+					<container id="btns">
+
+						<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right" offset="0" wrap="true">
+							<global id="gap" name="ui.button_row_gap"/>
+						</layout>
+
+						<widget class="icon_button" id="prev" click_event="prpa" auto_size="all" icon="icons/16px/left" controller_button="left_trigger"/>
+						
+						<widget class="icon_button" id="util" auto_size="all" controller_button="x_button">
+							<translation id="text" translation_id="374724" type="use" value="Delete Profile[COMMENT: add manager; title for dialog asking the user if they want to delete a profile]" />
+						</widget>
+						<widget class="icon_button" id="nxt2" click_event="n2pa" auto_size="all" hidden="true">
+							<translation id="text" translation_id="255268" type="use" value="Next[COMMENT: wizard dialog: default next button text]" />
+						</widget>
+						<widget class="primary_icon_button" id="uti2" auto_size="all" icon="icons/16px/right" icon_alignment="right" controller_button="y_button">
+							<translation id="text" translation_id="374813" type="use" value="New Profile[COMMENT: add manager; button text for the button that the user presses when they wish to create a new profile]" />
+						</widget>
+						<widget class="primary_icon_button" id="nxt1" click_event="n1pa" auto_size="all" icon="icons/16px/right" icon_alignment="right" controller_button="right_trigger">
+							<translation id="text" translation_id="255268" type="use" value="Next[COMMENT: wizard dialog: default next button text]" />
+						</widget>
+						<widget class="primary_icon_tick_button" id="fini" click_event="fnwz" hidden="true" controller_button="y_button">
+							<translation id="text" translation_id="229918" type="use" value="Confirm" />
+						</widget>
+					</container>
+				</widget>
+			</container>
+
+			<!-- empty container for create a padding for the manager man -->
+			<container id="emCW">
+				<container id="mnBT" file="game/manager man buttons">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</container>
+			</container>
+		</container>
+
+	</container>
+
+</panel>

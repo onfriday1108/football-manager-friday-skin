@@ -1,0 +1,18 @@
+﻿<panel>
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" do_not_size="true" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+
+
+		<container class="inner_box" height="12" id="inCO" appearance="boxes/custom/tactic intensity/paper">
+
+			<widget class="horizontal_percentage_bar" id="inBR" label_width="0" appearance="charts/bar/custom/tactics">
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</widget>
+
+		</container>
+
+
+
+</panel>

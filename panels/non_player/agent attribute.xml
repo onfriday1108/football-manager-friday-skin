@@ -1,0 +1,15 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="main_box" id="titl">
+
+    <translation id="title" translation_id="229822" type="use" value="Attributes" />
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="20" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <container class="text" id="char" auto_size="vertical"/>
+    
+  </container>
+  
+</panel>

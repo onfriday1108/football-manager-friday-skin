@@ -1,0 +1,51 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+	<container class="standard_popup_box">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="12, 0" apply_to_children="true"/>
+
+		<container class="scrolling_box" id="scbx" auto_size="vertical" amxh="400">
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="text" alignment="left,centre_y" font="title" height="30">
+					<translation id="text" translation_id="316766" type="use" value="Interest[COMMENT: Header for Clubs Interested in Player summary box]"/>
+				</widget>
+
+				<!-- Major club interest -->
+				<widget class="table" id="MajT" layout="-9, -5, -6" mode="fill_rows" auto_size="vertical" fixed_size_rows="false" auto_size_rows="true">
+					<list id="default_sort_column">
+						<integer value="0"/>
+					</list>
+
+					<!-- Title of box -->
+					<list id="headings">
+						<record column_span="3" alignment="left,centre_y">
+							<translation id="text" translation_id="306803" type="use" value="Major Interest From Clubs"/>
+						</record>
+					</list>
+				</widget>
+
+				<!-- Clubs which are monitoring -->
+				<widget class="table" id="MinT" layout="-9, -5 ,-6" mode="fill_rows" auto_size="vertical" fixed_size_rows="false" auto_size_rows="true">
+					<list id="default_sort_column">
+						<integer value="0"/>
+					</list>
+
+					<!-- Title of box -->
+					<list id="headings">
+						<record column_span="3" alignment="left,centre_y">
+							<translation id="text" translation_id="306804" type="use" value="Minor Interest From Clubs"/>
+						</record>
+					</list>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+</panel>

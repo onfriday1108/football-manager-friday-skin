@@ -1,0 +1,40 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="titled_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- embedded buttons -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="TitL">
+				<translation id="text" translation_id="247326" type="use" value="Fixtures &amp; Results" />
+			</widget>
+			<widget class="view_menu_popup" id="vity" sele="vtvm" fixed="false" />
+		</container>
+
+		<!-- embedded buttons -->
+		<container id="btns" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<widget class="embedded_left_right_list" id="fdat" sele="fdat" height="30" width="260" embed_in_frame="true">
+				<translation id="text" translation_id="247161" type="use" value="Dates" />
+			</widget>
+			<!--<widget class="embedded_popup_button" id="fyar" sele="fyar" height="30" width="90" auto_size="none" fixed="false" embed_in_frame="true"/>-->
+
+			<widget class="subtle_button" id="lrbt" click_event="fdtr" auto_size="horizontal" embed_in_frame="true">
+				<translation id="text" translation_id="247162" type="use" value="Latest Results" />
+			</widget>
+			<widget class="subtle_button" id="nfbt" click_event="fdtl" auto_size="horizontal" embed_in_frame="true">
+				<translation id="text" translation_id="247163" type="use" value="Next Fixtures" />
+			</widget>
+		</container>
+
+		<container class="scrolling_box"  save_session_state="true">
+			<container id="cont">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+			</container>
+		</container>
+	</container>
+</panel>

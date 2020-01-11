@@ -1,0 +1,37 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+	<list id="properties_to_forward">
+		<record get_property="Obpr" set_property="Obpr" target="objw" />
+		<record get_property="cmhd" set_property="hidden" target="cmbx" />
+		<record get_property="cptx" set_property="text" target="cmtx" />
+		<record get_property="pltx" set_property="text" target="pltx" />
+	</list>
+
+	<container class="club_vision_objective_item_widget" id="objw" />
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, -1" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+			<widget class="text" font="title" auto_size="all" colour="faded text">
+				<translation id="text" translation_id="491963" type="use" value="Planned[COMMENT: AREA: Club vision success or failure news items; SUB-AREA: success or failure details sub panel; FR-BN: 23335; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for subsection of news item indicating success or failure of an club vision objective to describe the planned completion date of a particular objective]" />
+			</widget>
+
+			<widget class="text" id="pltx" style="bold" auto_size="all" />
+		</container>
+
+		<container id="cmbx">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+			<widget class="text" font="title" auto_size="all" colour="faded text">
+				<translation id="text" translation_id="310338" type="use" value="Completed[COMMENT: board request status; the board request has been completed]" />
+			</widget>
+
+			<widget class="text" id="cmtx" style="bold" auto_size="all" />
+		</container>
+
+	</container>
+</panel>

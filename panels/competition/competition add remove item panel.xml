@@ -1,0 +1,47 @@
+<panel width="300">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!-- appearance settings -->
+	<string id="add_competition_icon" value="icons/16px/add to list" />
+	<string id="remove_competition_icon" value="icons/16px/remove from list" />
+	<colour id="removed_competition_colour" name="red" />
+	<colour id="added_competition_colour" name="cyan1" />
+
+	<container class="inner_subtle_box" id="cont">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- embedded buttons -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<widget class="button" id="rrem" appearance="icons/16px/remove from list" width="15" embed_in_frame="true">
+				<translation id="hint" translation_id="318282" type="use" value="Remove all divisions of this nation[COMMENT: add/remove nations; comment for button that removes all divisons from a nation]" />
+			</widget>
+		</container>
+
+		<container height="50">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"  />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"  />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"  />
+
+				<widget class="picture" id="img " scale_picture="true" keep_aspect_ratio="true" width="50" />
+			</container>
+
+			<!-- Rule group nation label -->
+			<widget class="nation_button" id="rnam" icon_enabled="false" alignment="left,centre_y" font="fonts/panel_title"/>
+		</container>
+
+		<widget class="table" id="tabl" layout="25, -1" mode="fill_rows" auto_size="vertical" row_height="22" />
+
+		<widget class="label" id="rdat" spec="text" alignment="left,top" auto_size="vertical" hidden="true" />
+
+		<!-- The appearance has a slight border so we need a little extra padding -->
+		<widget class="spacer" height="4" />
+
+	</container>
+
+</panel>

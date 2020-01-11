@@ -1,0 +1,19 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+
+		<translation id="title" translation_id="306915" type="use" value="Competitions[COMMENT: this refers to a panel which lists the top leagues + comps in a continent]" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="client_object_list_table" id="ctbl" mode="fill_rows, stripe_rows, keyboard">
+			<record id="viewed_property_ids">
+				<record id="comp" width="-1" />
+				<record id="cnat" width="60" />
+				<record id="crps" width="72" stty="3" />
+			</record>
+		</widget>
+
+	</container>
+</panel>

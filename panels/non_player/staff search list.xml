@@ -1,0 +1,76 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="save_session_state" value="true"/>
+	<boolean id="save_default_state" value="true"/>
+
+	<container class="main_box" id="plti" alignment="left">
+		<translation id="title" translation_id="247194" type="use" value="Search"/>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6, 0, 0, 0"/>
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<widget class="button" id="clrf" auto_size="all" click_event="rstr" event_target="psfp" embed_in_frame="true">
+				<translation id="hint" translation_id="321119" type="use" value="Remove all conditions and return the exclude criteria to the default state[COMMENT: person search panel; hint text for clear filter menu item]"/>
+				<translation id="text" translation_id="321118" type="use" value="Reset[COMMENT - clear filter menu item]"/>
+			</widget>
+
+			<widget class="icon_button" id="shpa" appearance="" icon="icons/16px/hide top bar" click_event="tgao" height="28" width="36" embed_in_frame="true" icon_alignment="centre"/>
+		</container>
+
+		<container class="horizontal_split_container" id="splt" starting_layout="-2, -4" save_session_state="true" save_default_state="true" min_height_top="200" min_height_bottom="100">
+
+			<widget class="person_filter_panel" id="psfp" draw_title="false">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+			</widget>
+
+			<!-- main area -->
+			<container class="inner_box" id="rslt" alignment="left">
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<!-- buttons area -->
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_left"/>
+
+					<widget class="view_menu_label" id="TitL"/>
+
+					<!--player view menu-->
+					<widget class="view_menu_popup" id="plvi" />
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+					<!-- customisation context is set in code for this table, depending on if search is player or staff search -->
+					<widget class="person_search_table" id="pltb" table_type="1" dont_restore_selection="true" mode="fill_rows, stripe_rows, printable, keyboard, manual_sort, store_sort_state, show_bullets, select_rows, select_multiple, drag_rows, show_insert_column_popup" select_event="psls" column_mode="resize_columns, move_columns, custom_views" popup_menu_class="popup_button_table_header" deferred_scrolling="true" deferred_scrolling_timeout="400">
+						<boolean id="save_session_state" value="true"/>
+						<boolean id="save_default_state" value="true"/>
+					</widget>
+
+					<container height="30">
+						<layout class="arrange_horizontal_attachment" alignment="left" gap="0" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+						<!-- assignment popup button -->
+						<widget class="label" id="assl" height="30" auto_size="horizontal" alignment="left,centre_y">
+							<translation id="text" translation_id="338996" type="use" value="Filter by assignment:"/>
+						</widget>
+						<widget class="popup_button" id="assb" height="30" auto_size="horizontal"/>
+
+						<!-- shortlists menu -->
+						<widget class="subtle_button" id="ansh" auto_size="horizontal" click_event="newl">
+							<translation id="text" translation_id="382205" type="use" value="Add Players to New Shortlist...[COMMENT: person search list; shortlist manipulation option]"/>
+						</widget>
+						<widget class="embedded_popup_button" id="shmn" auto_size="horizontal" fixed="true">
+							<translation id="text" translation_id="251889" type="use" value="Shortlists[COMMENT: search/shortlist panels: shortlist manipulation menu]"/>
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

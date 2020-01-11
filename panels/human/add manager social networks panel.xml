@@ -1,0 +1,130 @@
+<panel>
+
+	<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" layout="-1, 28" offset="10" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container id="pdpa">
+
+			<container width="440" height="615">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="18" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="centre_in_parent_attachment" alignment="all" />
+
+
+				<!-- Title and sub-heading
+        <widget class="label" font="title" size="normal" auto_size="vertical" colour="accent">
+          <translation id="text" translation_id="312758" type="use" value="Social Networks" />
+        </widget>-->
+				<widget class="text" font="text" size="small" auto_size="vertical">
+					<translation id="text" translation_id="361270" type="use" value="Share your Football Manager experience with friends by connecting to the social networks below[COMMENT:add manager; description of the social networks login section]" />
+				</widget>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" gap="1"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!-- Twitter Login -->
+					<container id="TWIT">
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<container class="main_box" red_replacement="twitter">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							<layout class="arrange_horizontal_attachment" layout="80,-1" offset="0" gap="0" />
+
+							<!-- Logo -->
+							<widget class="picture" scale_picture="false" image_alignment="centre_x" file="icons/48px/twitter" red_replacement="white"/>
+
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" gap="5" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+								<!-- Section description, set in code-->
+								<widget class="text" font="text" auto_size="vertical" colour="white" size="small">
+									<translation id="text" translation_id="364266" type="use" value="Connecting to Twitter will allow you to post updates when key events occur; like winning trophies or signing a new player.[COMMENT: social network details panel hint; cannot be feminised]" />
+								</widget>
+
+								<container>
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+									<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="20" />
+
+									<container>
+										<layout class="arrange_vertical_attachment" alignment="top,extend" offset="18" gap="0" />
+										<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+
+										<widget class="button" id="twIB" alignment="centre" auto_size="vertical" width="100">
+											<translation id="text" translation_id="361227" type="use" value="Login[COMMENT: Button that lets the manager log in to a social network.]" />
+											<event id="click_event" event_id="twDI" />
+											<layout class="centre_in_parent_attachment" alignment="horizontal" />
+										</widget>
+
+										<widget class="button" id="twOB" alignment="centre" auto_size="vertical" width="100">
+											<translation id="text" translation_id="435158" type="use" value="Log out[COMMENT: Log out of the selected social network]" />
+											<event id="click_event" event_id="twLO" />
+											<layout class="centre_in_parent_attachment" alignment="horizontal" />
+										</widget>
+									</container>
+								</container>
+							</container>
+
+
+						</container>
+					</container>
+
+					<!-- YouTube Login -->
+					<container id="YOUT">
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<container class="main_box" red_replacement="youtube">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							<layout class="arrange_horizontal_attachment" layout="80,-1" offset="0" gap="0" />
+
+							<!-- Logo -->
+							<widget class="picture" scale_picture="false" image_alignment="centre_x" file="icons/48px/youtube" red_replacement="white"/>
+
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" gap="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+								<!-- Section description, set in code-->
+								<widget class="text" id="yoHL" font="text" auto_size="vertical" colour="white" size="small"/>
+
+								<!-- Login widgets -->
+								<container>
+									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+									<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+
+									<widget class="button" id="yoIB" alignment="centre" auto_size="all">
+										<translation id="text" translation_id="361227" type="use" value="Login[COMMENT: Button that lets the manager log in to a social network.]" />
+										<event id="click_event" event_id="yoDI" />
+									</widget>
+
+									<widget class="button" id="yoOB" alignment="centre" auto_size="all">
+										<translation id="text" translation_id="435158" type="use" value="Log out[COMMENT: Log out of the selected social network]" />
+										<event id="click_event" event_id="yoLO" />
+									</widget>
+								</container>
+							</container>
+
+
+						</container>
+					</container>
+
+				</container>
+			</container>
+		</container>
+
+
+
+		<widget class="label" id="errm" alignment="right,centre_y" height="24" size="12" colour="negative" style="semi_bold, shadowed">
+			<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" />
+		</widget>
+	</container>
+
+</panel>

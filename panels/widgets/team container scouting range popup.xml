@@ -1,0 +1,17 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="5" vertical_offset="0" horizontal_inset="0" />
+
+		<widget class="popup_button" id="popu" auto_size="vertical" fixed="true" primary_use_icon_app_rep_colour="false" select_event="escc" icon="icons/16px/add to list" fixed_icon="true">
+			<translation id="text" translation_id="466572" type="use" value="Add Competition or Location[COMMENT: FR 22918, scouting range options to add]" />
+		</widget>
+
+		<widget class="table" id="scot" mode="fill_rows" layout="-1,30" row_height="23">
+
+		</widget>
+
+	</container>
+
+</panel>

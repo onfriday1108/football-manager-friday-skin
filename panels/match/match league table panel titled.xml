@@ -1,0 +1,22 @@
+<panel save_session_state="true">
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box" appearance="boxes/custom/match/background/paper">
+
+		<container class="inner_subtle_box" appearance="boxes/subsection/match/paper">
+			<translation id="title" translation_id="248082" type="use" value="League Table" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<container class="scrolling_box" id="ScrB" save_session_state="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+				<container id="cont">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				</container>
+			</container>
+		</container>
+
+	</container>
+</panel>

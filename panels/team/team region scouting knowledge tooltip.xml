@@ -1,0 +1,76 @@
+<panel width="520">
+
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+	<container class="standard_popup_box">
+
+		<layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="0" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="5" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+		<widget class="region_label" auto_size="vertical" size="large" style="semi_bold">
+			<record id="object_property">
+				<integer id="get_property" value="regi" />
+				<integer id="set_property" value="valu" />
+			</record>
+		</widget>
+
+		<widget class="label" auto_size="vertical">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="text" />
+						<integer id="set_property" value="text" />
+					</record>
+					<record>
+						<integer id="get_property" value="colr" />
+						<integer id="set_property" value="colr" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<container height="4" />
+
+		<widget class="horizontal_divider" />
+
+		<widget class="label" font="title" colour="accent" height="20">
+			<translation id="text" translation_id="420742" type="use" value="Scouts in this region[COMMENT: FR 14098, lists scouts in a given region]" />
+		</widget>
+
+		<widget class="assignment_list_widget" file="team/region assignment tooltip" auto_size="vertical" hide_future_assignments="true" hide_completed_assignments="true">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="hidt" />
+						<integer id="set_property" value="hidn" />
+					</record>
+					<record>
+						<integer id="get_property" value="Cclu" />
+						<integer id="set_property" value="objt" />
+					</record>
+					<record>
+						<integer id="get_property" value="regi" />
+						<integer id="set_property" value="regi" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<widget class="label">
+			<translation id="text" translation_id="320493" type="use" value="None currently[COMMENT: text indicating that there is no person to view here currently (e.g. a manager, captain, vice captain etc.)]" />
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="hidL" />
+						<integer id="set_property" value="hidn" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+	</container>
+
+</panel>

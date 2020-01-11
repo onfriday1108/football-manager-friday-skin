@@ -1,0 +1,309 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container>
+		<translation id="title" translation_id="252901" type="use" value="Stadium[COMMENT: team stadium, title]" />
+
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!--top bit (nation/capacity etc)-->
+		<container class="main_box" height="80">
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="8"/>
+
+			<!--nation-->
+			<container>
+				<!-- The nation button currently can't be set to centre_x,top since the icon would be misaligned
+             from the text. This is therefore handled a bit differently than the following columns. -->
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+				<widget class="label" id="SnaL" spec="text" alignment="centre_x,bottom" auto_size="vertical" font="label">
+					<record id="object_property">
+						<integer id="get_property" value="Snat" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+				<widget class="nation_button" spec="text" id="SnaV" auto_size="none" icon_alignment="centre" alignment="centre" font="value">
+					<record id="object_property">
+						<integer id="get_property" value="Snat" />
+					</record>
+				</widget>
+			</container>
+
+			<!--capacity-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<widget class="label" id="ScpL" spec="text" alignment="centre_x,bottom" auto_size="vertical" font="label">
+					<record id="object_property">
+						<integer id="get_property" value="Scpy" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+				<widget class="dashed_number_label" spec="text" size="large" style="bold" id="ScpV" alignment="centre_x,top" font="value">
+					<record id="object_property">
+						<integer id="get_property" value="Scpy" />
+					</record>
+				</widget>
+			</container>
+
+			<!--year built-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<widget class="label" id="SbdL" spec="text" alignment="centre_x,bottom" auto_size="vertical" font="label">
+					<record id="object_property">
+						<integer id="get_property" value="Sbdy" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+				<widget class="dashed_number_label" spec="text" size="large" style="bold" id="SbdV" alignment="centre_x,top" font="value">
+					<boolean id="NumF" value="0" />
+					<record id="object_property">
+						<integer id="get_property" value="Sbdy" />
+					</record>
+				</widget>
+			</container>
+
+			<!--stadium condition-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<widget class="label" id="SdcL" spec="text" alignment="centre_x,bottom" auto_size="vertical" font="label">
+					<record id="object_property">
+						<integer id="get_property" value="Sdcy" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+				<widget class="stadium_condition_label" spec="text" size="large" style="bold" id="SdcV" alignment="centre_x,top" font="value">
+					<list id="value_list">
+						<record min_value="0" max_value="1" colour="very good" />
+						<record min_value="2" max_value="5" colour="good" />
+						<record min_value="6" max_value="10" colour="text" />
+						<record min_value="11" max_value="15" colour="poor" />
+						<record min_value="16" max_value="20" colour="negative" />
+					</list>
+					<record id="object_property">
+						<integer id="get_property" value="Sdcy" />
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<!--bottom bit (pitch/info etc)-->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-4,-3" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<!--pitch-->
+			<container class="main_box">
+				<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="10" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<!--title-->
+				<widget class="label" spec="title" auto_size="vertical">
+					<translation id="title" translation_id="349831" type="use" value="Pitch Details[COMMENT: team report summary, title for an area showing details of the team's pitch]" />
+				</widget>
+
+				<!--pitch-->
+				<widget class="pitch_with_dimensions" id="Pitc">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--pitch condition-->
+				<container height="50">
+					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="4"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+					<!--condition label-->
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="4"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+						<widget class="label" id="SptL" spec="text" size="large" style="bold" alignment="right,centre_y" font="fonts/letterpressed">
+							<record id="object_property">
+								<integer id="get_property" value="Sptc" />
+								<boolean id="name" value="true"/>
+							</record>
+						</widget>
+						<widget class="pitch_condition_label" spec="text" size="large" style="bold" id="SptV" alignment="left,centre_y" font="fonts/letterpressed">
+							<list id="value_list">
+								<record min_value="0" max_value="30" colour="negative" />
+								<record min_value="31" max_value="50" colour="very poor" />
+								<record min_value="51" max_value="80" colour="poor" />
+								<record min_value="81" max_value="130" colour="text" />
+								<record min_value="131" max_value="170" colour="good" />
+								<record min_value="171" max_value="200" colour="positive" />
+							</list>
+							<record id="object_property">
+								<integer id="get_property" value="Sptc" />
+							</record>
+						</widget>
+					</container>
+
+					<!--condition bar-->
+					<widget class="horizontal_percentage_bar" id="SptB" max_value="200" show_label_on_bar="false" label_width="0">
+						<record id="object_property">
+							<integer id="get_property" value="Sptc" />
+						</record>
+					</widget>
+				</container>
+			</container>
+
+			<!--info-->
+			<container class="main_box">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<container class="tabbed_container">
+					<!--information-->
+					<container id="info">
+						<translation id="title" translation_id="292589" type="use" value="Information[COMMENT: top level menu title for team information screens]" />
+
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2"/>
+
+						<!--city-->
+						<container height="60">
+							<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4"/>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+							<container>
+								<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="4"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+								<widget class="city_label" id="SctI" spec="text" size="small" alignment="left,bottom" height="20" >
+									<record id="object_property">
+										<integer id="get_property" value="SctI" />
+									</record>
+								</widget>
+								<widget class="nation_button" spec="text" style="bold" id="SnaC" size="13" alignment="left,centre_y" icon_alignment="left,centre_y" font="fonts/letterpressed">
+									<record id="object_property">
+										<integer id="get_property" value="Snat" />
+									</record>
+								</widget>
+							</container>
+						</container>
+
+						<!--undersoil heating-->
+						<container height="60">
+							<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4"/>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+							<container>
+								<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="4"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+								<widget class="label" id="SusL" spec="text" size="small" alignment="left,bottom" height="20" >
+									<record id="object_property">
+										<integer id="get_property" value="Sush" />
+										<boolean id="name" value="true"/>
+									</record>
+								</widget>
+								<widget class="yes_no_label" spec="text" style="bold" id="SusV" size="13" alignment="left,top" font="fonts/letterpressed">
+									<record id="object_property">
+										<integer id="get_property" value="Sush" />
+									</record>
+								</widget>
+							</container>
+						</container>
+
+						<!--retractable roof-->
+						<container height="60">
+							<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4"/>
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+							<container>
+								<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="4"/>
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+								<widget class="label" id="ScoL" spec="text" size="small" alignment="left,bottom" height="20" >
+									<record id="object_property">
+										<integer id="get_property" value="Scov" />
+										<boolean id="name" value="true"/>
+									</record>
+								</widget>
+								<widget class="yes_no_label" spec="text" style="bold" id="ScoV" size="13" alignment="left,top" font="fonts/letterpressed">
+									<record id="object_property">
+										<integer id="get_property" value="Scov" />
+									</record>
+								</widget>
+							</container>
+						</container>
+					</container>
+
+					<!--matches-->
+					<container id="matc">
+						<translation id="title" translation_id="257238" type="use" value="Matches" />
+
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+						<widget class="client_object_list_table" id="FixL" database_table_type="53" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows, printable, store_sort_state">
+							<record id="object_property">
+								<integer id="get_property" value="Slym" />
+								<integer id="set_property" value="objt"/>
+							</record>
+
+							<!-- default sort -->
+							<list id="default_sort_column">
+								<integer value="fxdt" />
+							</list>
+
+							<!--default view from the view list-->
+							<flags id="default_view" value="gene" />
+
+							<!--list of all available views-->
+							<record id="viewed_property_ids">
+								<flags id="home" />
+								<flags id="FxRs" />
+								<flags id="away" />
+							</record>
+
+						</widget>
+					</container>
+
+					<!--competitions-->
+					<container id="comp">
+						<translation id="title" translation_id="227741" type="use" value="Competitions" />
+
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+						<widget class="client_object_list_table" id="CmPs" database_table_type="57" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" mode="fill_rows, stripe_rows, printable, store_sort_state">
+							<record id="object_property">
+								<integer id="get_property" value="Scom" />
+								<integer id="set_property" value="objt"/>
+							</record>
+
+							<record id="viewed_property_ids">
+								<record id="dref" />
+							</record>
+						</widget>
+					</container>
+
+					<!--teams-->
+					<container class="scrolling_box" id="team">
+						<translation id="title" translation_id="229362" type="use" value="Teams" />
+
+
+						<container class="simple_data_list" id="tems" set_property="objt" auto_size="vertical" gap="6">
+							<record id="object_property">
+								<integer id="get_property" value="Susr" />
+							</record>
+
+							<record id="widget_properties" class="client_object_viewer_xml_panel" file="team/team item panel" />
+						</container>
+
+					</container>
+
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

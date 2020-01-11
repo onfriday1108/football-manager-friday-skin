@@ -1,0 +1,15 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<layout class="arrange_horizontal_attachment" layout="-1" offset="10"/>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" horizontal_inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+
+		<widget id="comp" class="text" font="title" alignment="left,centre_y" height="15" colour="processing_comp"/>
+		<!-- Main text -->
+		<widget id="text" class="text" style="semi_bold" colour="processing_headline" auto_size="vertical" />
+		<!-- List of string concatenated onto different lines-->
+		<widget id="stxt" class="text" multiline="true" colour="processing_goalscorers" auto_size="vertical" size="small"/>
+	</container>
+</panel>

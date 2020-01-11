@@ -1,0 +1,32 @@
+﻿<panel>
+
+	<!--these are appearances and colours used for the bars-->
+	<string id="nbar" value="charts/bar/horizontal/custom/news/normal"/>
+	<!--normal bar appearance for positive values-->
+	<string id="rbar" value="charts/bar/horizontal/custom/news/reversed"/>
+	<!--reversed bar appearance for negative values-->
+	<string id="tbar" value="charts/bar/horizontal/custom/news/thin"/>
+	<!--thin bar appearance-->
+	<string id="posi" value="positive"/>
+	<!--colour for positive values-->
+	<string id="nega" value="negative"/>
+	<!--colour for negative values-->
+	<string id="norm" value="blue 700"/>
+	<!--default colour-->
+	<string id="thic" value="light blue 500"/>
+	<!--thin bar colour-->
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0"/>
+
+		<!--text-->
+		<widget class="inbox_body_text" id="bdtx" auto_size="vertical"/>
+
+		<widget class="table" id="tabl" layout="20,150,-1,-1" mode="fill_rows,stripe_rows" auto_size_rows="false" />
+	</container>
+
+</panel>

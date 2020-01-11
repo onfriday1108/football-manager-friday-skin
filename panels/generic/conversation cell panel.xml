@@ -1,0 +1,8 @@
+<panel draw_horizontal_dividers="true">
+  <animation class="fade_on_hide_animation" duration="0.5"/>
+  <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0">
+  	<global id="gap" name="ui.main_box_gap"/>
+  </layout>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+  <!-- conversation statements are created here. -->
+</panel>

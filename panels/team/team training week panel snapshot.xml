@@ -1,0 +1,14 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"  inset="0"/>
+	<widget class="scrolling_box">
+		<container id="TWpc" class="pie_chart_with_guide" file="team/team training session pie chart with guide" >
+			<record id="pie_chart_properties">
+				<boolean id="draw_instant_hint" value="true" />
+				<integer id="highlight_value" value="10" />
+			</record>
+		</container>
+	</widget>
+	<widget class="text" id="noTi" alignment="centre" hidden="true">
+		<translation id="text" translation_id="242522" type="use" value="N/A"/>
+	</widget>
+</panel>

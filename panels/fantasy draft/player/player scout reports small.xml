@@ -1,0 +1,34 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<!-- Heading with link-->
+	<widget class="text" id="cort" auto_size="vertical" font="title" colour="faded text" />
+
+	<!-- Bit that shows the data-->
+	<container id="scou">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />
+
+		<container height="20">
+			<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!-- Recommendation -->
+			<widget class="scout_stars_label" id="FDSc" alignment="left,centre_y" auto_size="none" click_event="ltms" />
+
+		</container>
+
+		<!-- Recommendation text -->
+		<widget class="text" id="SMtx" auto_size="vertical" colour="faded text" />
+	</container>
+
+	<container id="naSP">
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" />
+
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" spec="text" size="large" auto_size="vertical">
+			<translation id="text" translation_id="435189" type="use" value="Unavailable[COMMENT: no scouting report available; was ID 247303 but some languages need specific translations here]" />
+		</widget>
+	</container>
+</panel>

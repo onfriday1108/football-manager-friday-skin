@@ -1,0 +1,79 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<list id="container_navigation_event">
+
+		<record id="mkPK">
+			<flags id="event_id" value="mkPK" />
+			<translation id="navigation_description" translation_id="255367" type="use" value="Make Pick" />
+			<flags id="navigation_button" value="xGRa" />
+		</record>
+
+		<record id="snxp">
+			<flags id="event_id" value="snxp" />
+			<translation id="navigation_description" translation_id="247190" type="use" value="See Next Pick" />
+			<flags id="navigation_button" value="xGRa" />
+		</record>
+
+		<record id="auto">
+			<flags id="event_id" value="auto" />
+			<translation id="navigation_description" translation_id="247191" type="use" value="Auto" />
+			<flags id="navigation_button" value="xBLa" />
+		</record>
+
+		<record id="fini">
+			<flags id="event_id" value="fini" />
+			<translation id="navigation_description" translation_id="247193" type="use" value="Finish" />
+			<flags id="navigation_button" value="xYLa" />
+		</record>
+
+	</list>
+
+	<!-- embedded buttons -->
+	<container id="btns" embed_in_frame="true">
+		<attachment_group class="title_embedded_panel_right" />
+
+		<!-- year menu -->
+		<widget class="embedded_popup_button" id="year" sele="year" auto_size="all" embed_in_frame="true" hidden="true">
+			<translation id="text" translation_id="229773" type="use" value="Year" />
+		</widget>
+	</container>
+
+	<!-- group box of fixed height-->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+
+		<!-- table -->
+		<widget class="table" id="tabl" mode="fill_rows, stripe_rows" layout="50, 50, -1,-1" height="150" auto_size_rows="true">
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="247187" type="use" value="Round" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="247188" type="use" value="Pick" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="227737" type="use" value="Club" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="247189" type="use" value="Player Chosen" />
+				</record>
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" sort_disabled="true" />
+				<record indx="1" sort_disabled="true" />
+				<record indx="2" sort_disabled="true" />
+				<record indx="3" sort_disabled="true" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="0" alignment="centre" />
+				<record indx="1" alignment="centre" />
+				<record indx="2" alignment="left,centre_y" />
+				<record indx="3" alignment="left,centre_y" />
+			</list>
+		</widget>
+	</container>
+</panel>

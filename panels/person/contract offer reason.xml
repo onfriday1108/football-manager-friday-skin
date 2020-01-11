@@ -1,0 +1,50 @@
+<panel>
+	<!-- arrange items vertically -->
+	<layout class="arrange_vertical_attachment" alignment="top" />
+
+	<!-- centre dialog in parent -->
+	<layout class="centre_in_parent_attachment" alignment="all" />
+
+	<!-- fit the height of the dialog to the height of its components -->
+	<layout class="fit_children_attachment" alignment="vertical,fill" />
+
+	<!-- stretch everything to the sides of the dialog -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+
+	<!-- header -->
+	<widget class="text" id="ques" auto_size="all">
+		<translation id="text" translation_id="247158" type="use" value="Question" />
+		<flags id="spec" value="text" />
+	</widget>
+
+	<widget class="spacer" height="6" />
+
+	<container>
+
+		<layout class="arrange_horizontal_attachment" layout="-1" offset="8" gap="8" />
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" />
+
+		<!-- delay table -->
+		<widget class="table" id="dtwt" sele="item" dcac="doub" mode="0" row_height="20" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" layout="-1">
+			<list id="column_table_properties">
+				<record index="0" top="2" bottom="2" />
+			</list>
+		</widget>
+
+	</container>
+
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1" offset="8" gap="8" />
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" />
+
+		<widget class="text" id="foot" colour="contract negotiation restriction" height="14" size="8" auto_size="vertical" />
+	</container>
+
+	<!-- row of buttons -->
+	<container id="btns" file="person/contract offer delay buttons" />
+
+</panel>

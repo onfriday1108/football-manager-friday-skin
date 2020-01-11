@@ -1,0 +1,107 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<container id="assm">
+		<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
+
+		<widget class="text" auto_size="vertical">
+			<translation id="text" translation_id="337802" type="use" value="Assistant Manager's Responsibilities[COMMENT: team policy panel; responsibilities string]" />
+		</widget>
+		<widget class="text" id="amtx" auto_size="vertical" spec="text" colour="selection" />
+
+	</container>
+
+	<!-- manager box -->
+	<container id="mana">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-3,-4" vertical_inset="0" />
+
+		<widget class="text" auto_size="vertical" id="satl">
+			<translation id="text" translation_id="227981" type="use" value="Manager" />
+		</widget>
+		<widget class="popup_button" id="tmpb" select_event="ERes" height="30" />
+	</container>
+
+	<!-- tactic box -->
+	<container id="tact">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-3,-4" vertical_inset="0" />
+
+		<widget class="text" auto_size="vertical" id="satl">
+			<translation id="text" translation_id="441113" type="use" value="Play matches with this tactic:[COMMENT: prompt for a popup button that allows the user to choose a specific tactic for a team to use]" />
+		</widget>
+		<widget class="popup_button" id="sptt" select_event="sttu" height="30" />
+	</container>
+
+	<widget class="check_box" id="fmar" click_event="arfr" multiline="true" auto_size="horizontal" height="30" alignment="left,centre_y" />
+
+	<container id="afmc">
+		<layout class="arrange_vertical_attachment" alignment="top" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" />
+
+
+		<container height="30">
+			<layout class="arrange_horizontal_attachment" alignment="left" gap="30" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<container width="20" height="30" />
+
+			<widget class="label" auto_size="horizontal" height="30">
+				<translation id="text" translation_id="395237" type="use" value="Frequency of matches[COMMENT: team settings panel header for option to customise how often friendly matches are played by sub-teams]" />
+
+			</widget>
+
+			<widget class="popup_button" id="arff" select_event="affe" auto_size="horizontal" height="30" />
+		</container>
+
+		<widget class="label" height="25" auto_size="horizontal">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,50,0,0" />
+
+			<translation id="text" translation_id="395137" type="use" value="All friendlies will be scheduled around competitive fixtures in order to avoid a clash[COMMENT: team settings friendly matches help text]" />
+		</widget>
+
+	</container>
+
+
+
+	<!-- reserve news box -->
+	<container id="resv">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-3,-4" vertical_inset="0" />
+
+		<widget class="label" id="LFRp">
+			<translation id="txtt" translation_id="437851" type="use" value="Ask [%person#1-you] which First Team players are available for this team[COMMENT: team settings panel; label for option when to receive reserve team availability news item]" />
+		</widget>
+		<widget class="popup_button" id="rrnm" select_event="srrn" height="30" />
+	</container>
+
+	<widget class="check_box" id="amap" click_event="amap" multiline="false" auto_size="horizontal" height="30" alignment="left,centre_y">
+		<translation id="text" translation_id="437042" type="use" value="Sets first team players in need of match fitness to be available for this team[COMMENT: FR14430; responsibility table; check box for auto making players available]" />
+	</widget>
+
+	<widget class="check_box" id="trem" click_event="trem" multiline="false" auto_size="horizontal" height="30" alignment="left,centre_y">
+	</widget>
+
+	<widget class="table" id="rest" mode="stripe_rows,fill_rows" layout="-3,-2" row_height="31" row_spacing="4" save_session_state="true" auto_size="vertical">
+
+		<!--headings-->
+		<list id="column_table_properties">
+			<record>
+				<record id="column_heading">
+					<translation id="text" translation_id="334023" type="use" value="Responsibility[COMMENT: responsibility table; column header for responsibility name]" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="0" />
+				</record>
+			</record>
+			<record>
+				<record id="column_heading">
+					<translation id="text" translation_id="333927" type="use" value="Member of Staff Responsible[COMMENT: responsibility table; column header for staff member ]" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="1" />
+				</record>
+			</record>
+		</list>
+
+
+	</widget>
+
+</panel>

@@ -1,0 +1,26 @@
+<panel>
+	<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+
+	<container height="60">
+		<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0"/>
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!-- comp -->
+		<widget class="object_portrait_picture" id="cmlw" scale_picture="true" clickable="true" keep_aspect_ratio="true" image_alignment="centre" width="60" comp_use_trophy_icon="true"/>
+
+		<!-- champs -->
+		<widget class="object_portrait_picture" id="chlw" scale_picture="true" clickable="true" keep_aspect_ratio="true" image_alignment="centre" width="60"/>
+	</container>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--stage name-->
+		<widget class="text" id="ttls" auto_size="vertical" colour="faded text" multiline="true" />
+		<!--team name-->
+		<widget class="text" id="chsw" size="large" auto_size="vertical" style="bold"/>
+	</container>
+</panel>

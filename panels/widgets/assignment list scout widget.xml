@@ -1,0 +1,54 @@
+﻿<panel>
+  <attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_inset="0"/>
+
+  <container width="80">
+    <attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="6" vertical_gap="0" horizontal_inset="6"/>
+
+    <widget class="object_portrait_picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+      <record id="object_property" get_property="Scou" set_property="objt" />
+    </widget>
+
+    <container class="inner_contrast_box_no_margin" height="30" red_replacement="bg darker">
+      <attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="8" vertical_inset="0"/>
+
+
+      <widget class="attribute_label" auto_size="horizontal" alignment="centre">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="hnt1" />
+              <integer id="set_property" value="hint" />
+            </record>
+            <record>
+              <integer id="get_property" value="Npja" />
+              <integer id="set_property" value="valu" />
+            </record>
+          </list>
+        </record>
+      </widget>
+
+      <widget class="vertical_divider" width="1"/>
+
+      <widget class="attribute_label" auto_size="horizontal" alignment="centre">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="hnt2" />
+              <integer id="set_property" value="hint" />
+            </record>
+            <record>
+              <integer id="get_property" value="Npjp" />
+              <integer id="set_property" value="valu" />
+            </record>
+          </list>
+        </record>
+      </widget>
+
+    </container>
+  </container>
+
+  <widget class="person_button_with_job_description" size="large" >
+    <record id="object_property" get_property="Scou" set_property="valu" />
+  </widget>
+  
+</panel>

@@ -1,0 +1,36 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<boolean id="save_session_state" value="true" />
+
+	<!-- Section title and settings - Player development advice-->
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" horizontal_offset="4" vertical_offset="0" />
+
+		<widget class="label" id="sect" font="title" colour="accent" alignment="left" auto_size="vertical" style="semi_bold" />
+
+		<widget class="icon_button" id="mstb" file="icons/16px/settings" auto_size="horizontal" height="30">
+			<event id="click_event" event_id="plds" file="news_item_panels/backroom advice news settings popup panel" />
+		</widget>
+
+	</container>
+
+
+	<!--Advice lists -->
+	<container id="tops" item_file="news_item_panels/backroom advice news topic panel">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" vertical_gap="6"/>
+
+	</container>
+
+
+	<container>
+		<attachment_group class="button_arrangement_right" />
+		<!-- Link to settings -->
+		<widget class="link_button" section="mnst" auto_size="all">
+
+			<record id="properties" dflt="adre"/>
+
+			<translation id="text" translation_id="416353" type="use" value="Backroom Advice Settings[COMMENT: FR 16999; backroom advice settings panel title]" />
+		</widget>
+	</container>
+</panel>

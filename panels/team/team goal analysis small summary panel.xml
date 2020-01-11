@@ -1,0 +1,63 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="inner_subtle_box">
+		<layout class="arrange_vertical_attachment" alignment="top" gap="12"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<string id="skin_style" value="title link" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend"/>
+
+			<widget class="link_button" section="glan" auto_size="all" alignment="left,centre_y" >
+				<translation id="text" translation_id="317304" type="use" value="Goal Analysis[COMMENT: team report goal analysis panel; panel title for goal analysis section]" />
+			</widget>
+
+			<widget class="label" id="ghtx" auto_size="vertical" colour="faded text" size="small" alignment="right,centre_y">
+			</widget>
+
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" gap="0"/>
+
+			<widget class="label" auto_size="vertical" font="label">
+				<translation id="text" translation_id="330715" type="use" value="Total[COMMENT:column title for the uefa coefficient total for a team this season]" />
+			</widget>
+
+			<widget class="label" id="goal" auto_size="vertical" style="bold" multiline="true"/>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" gap="0"/>
+
+			<widget class="label" auto_size="vertical" font="label">
+				<translation id="text" translation_id="420709" type="use" value="Location[COMMENT: search filter dialog; location panel heading]" />
+			</widget>
+
+			<widget class="label" id="gloc" auto_size="vertical" style="bold" multiline="true"/>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" gap="0"/>
+
+			<widget class="label" auto_size="vertical" font="label">
+				<translation id="text" translation_id="317310" type="use" value="Assist Type[COMMENT:team report, type of assist]" />
+			</widget>
+
+			<widget class="label" id="asst" auto_size="vertical" style="bold" multiline="true"/>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" gap="0"/>
+
+			<widget class="label" auto_size="vertical" font="label">
+				<translation id="text" translation_id="433862" type="use" value="Time[COMMENT: time an event happened during a match]" />
+			</widget>
+
+			<widget class="label" id="gtim" auto_size="vertical" style="bold" multiline="true"/>
+		</container>
+	</container>
+</panel>
+

@@ -1,0 +1,50 @@
+﻿<panel width="550">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizonal_alignment="horizontal" horizontal_inset="0" />
+	<container class="main_box" appearance="boxes/popup/standard/paper">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="8" horizonal_alignment="horizontal" horizontal_inset="8" />
+
+		<container class="main_box" id="wrnB" hidden="true" red_replacement="red2" height="74">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+			<widget class="picture" file="icons/26px/urgent" image_alignment="centre" red_replacement="white" keep_aspect_ratio="true" width="50" />
+			<widget class="text" alignment="top,left" id="wrnT" multiline="true" auto_size="vertical" size="small"/>
+			
+		</container>
+		
+		<widget class="table" id="tabl" mode="fill_rows, stripe_rows" layout="100, -1, -1, -1" height="290" fixed_size_rows="true" row_height="40" row_spacing="0">
+		<!-- headings -->
+		<list id="headings">
+			<record alignment="left,centre_y" index="0" />
+			<record alignment="centre" font="title" index="1" size="7" colour="title">
+				<translation id="text" translation_id="466559" type="use" value="Goalkeeping Unit[COMMENT:training session selector - Goalkeeping Unit training intensity header]" />
+			</record>
+			<record alignment="centre" font="title" index="2" size="7" colour="title">
+				<translation id="text" translation_id="466560" type="use" value="Defensive Unit[COMMENT:training session selector - Defensive Unit training intensity header]" />
+			</record>
+			<record alignment="centre" font="title" index="3" size="7" colour="title">
+				<translation id="text" translation_id="466571" type="use" value="Offensive Unit[COMMENT:training session selector - Offensive Unit training intensity header]" />
+			</record>
+		</list>
+		
+		<widget class="text" row="0" col="0" inset="10" style="bold" alignment="centre">
+			<translation id="text" translation_id="441106" type="use" value="Intensity[COMMENT: representing the physical intensity of user's tactics]" />
+		</widget>
+		<widget class="text" row="1" col="0" style="bold" alignment="centre">
+			<translation id="text" translation_id="450118" type="use" value="Injury Risk[COMMENT: player injury panel section detailing susceptibility to injury, title]" />
+		</widget>
+		<widget class="text" row="2" col="0" style="bold" alignment="centre">
+			<translation id="text" translation_id="227793" type="use" value="Condition" />
+		</widget>
+		<widget class="text" row="3" col="0" style="bold" alignment="centre">
+			<translation id="text" translation_id="463515" type="use" value="Fatigue[COMMENT:Training Calendar Schedule Selector - Training Fatigue Impact header]" />
+		</widget>
+		<widget class="text" row="4" col="0" style="bold" alignment="centre">
+			<translation id="text" translation_id="395316" type="use" value="Sharpness[COMMENT: short for match sharpness, which is what used to be match fitness]" />
+		</widget>
+		<widget class="text" row="5" col="0" style="bold" alignment="centre">
+			<translation id="text" translation_id="247463" type="use" value="Happiness" />
+		</widget>
+
+	</widget>
+	</container>
+</panel>

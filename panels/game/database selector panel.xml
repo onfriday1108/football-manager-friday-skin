@@ -1,0 +1,116 @@
+<panel width="600">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--database choosing section-->
+		<container class="main_box">
+			<translation id="text" translation_id="251849" type="use" value="Database[COMMENT: database selection dialog, label for the popup menu]" />
+
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!--database popup-->
+			<widget class="popup_button" id="dbpb" auto_size="vertical" select_event="dbse" />
+
+			<!--author-->
+			<widget class="text" id="dbau" auto_size="vertical" multiline="true" colour="faded text">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="3" />
+			</widget>
+
+			<!--version-->
+			<widget class="text" id="dbve" auto_size="vertical" multiline="true" colour="faded text">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="3" />
+			</widget>
+
+			<!--description-->
+			<widget class="text" id="dbde" auto_size="vertical" multiline="true" colour="faded text">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="3" />
+			</widget>
+		</container>
+
+		<!--editor data files-->
+		<container class="main_box" id="edfi">
+			<translation id="text" translation_id="292621" type="use" value="Editor Data Files[COMMENT: database selection dialog, user files label]" />
+
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!--user files used/available text-->
+			<widget class="label" id="usfl" spec="text" auto_size="vertical" alignment="left,centre_y" />
+
+			<!--select all button-->
+			<container height="28">
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="button" auto_size="horizontal">
+					<translation id="text" translation_id="247116" type="use" value="Select All" />
+					<record id="click_event">
+						<flags id="event_id" value="ALL " />
+					</record>
+				</widget>
+
+				<widget class="button" auto_size="horizontal">
+					<translation id="text" translation_id="248399" type="use" value="Remove All" />
+					<record id="click_event">
+						<flags id="event_id" value="rmva" />
+					</record>
+				</widget>
+			</container>
+
+			<!--list of available files-->
+			<widget class="table" id="dbtb" mode="keyboard" fixed_size_rows="true" auto_size_rows="true" layout="-1, 150" height="300">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				<integer id="default_sort_column" value="file" />
+
+				<!-- headings -->
+				<list id="headings">
+					<record>
+						<translation id="text" translation_id="291329" type="use" value="File[COMMENT: select user files screen; file column header]" />
+						<flags id="algn" value="left,centre_y" />
+					</record>
+					<record>
+						<translation id="text" translation_id="308082" type="use" value="Nation / Continent[COMMENT: select user files screen; nation column header]" />
+						<flags id="algn" value="left,centre_y" />
+						<integer id="column_span" value="2" />
+					</record>
+				</list>
+
+				<list id="column_table_properties">
+					<record id="file" />
+					<record id="nati" />
+				</list>
+
+				<list id="column_widget_properties">
+					<record index="0" id="file">
+						<flags id="alignment" value="left,centre_y" />
+					</record>
+
+					<record index="1">
+						<flags id="icon_alignment" value="left" />
+						<flags id="primary_use_icon_app_rep_colour" value="false" />
+					</record>
+
+
+				</list>
+			</widget>
+
+			<!--explanatory blurb-->
+			<widget class="text" id="blub" multiline="true" auto_size="vertical" alignment="centre_x,top">
+				<translation id="text" translation_id="466420" type="use" value="Editor data files can be created by you or downloaded from [%string#1] and are used to make changes to the main database.[COMMENT: database selection dialog, explanatory text about user files, cannot be feminised, string variable contains name of place you can download files from]" />
+			</widget>
+		</container>
+
+		<!--confirm/cancel buttons-->
+		<container height="30">
+			<attachment_group class="button_arrangement_right" />
+
+			<widget class="primary_icon_tick_button" id="coba" auto_size="horizontal" click_event="conf">
+				<translation id="text" translation_id="229918" type="use" value="Confirm" />
+			</widget>
+			<widget class="button" id="caba" auto_size="horizontal" click_event="caba">
+				<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			</widget>
+		</container>
+	</container>
+</panel>

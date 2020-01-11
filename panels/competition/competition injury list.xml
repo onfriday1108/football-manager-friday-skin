@@ -1,0 +1,124 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+
+		<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- titled box -->
+		<widget class="inner_box" id="hpto" >
+			<translation id="title" translation_id="331616" type="use" value="Disabled List[COMMENT: MLS-specific injury list, placing a player on the disabled list frees up a roster spot, so you have 'disabled' their registration for a period of time]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="label" id="nDpl" alignment="centre" style="bold">
+				<translation id="text" translation_id="395479" type="use" value="There are currently no players on the disabled list[COMMENT: FR #5117, information for an empty MLS Disabled Players List screen]" />
+			</widget>
+
+			<!-- main table -->
+			<widget class="table" id="hptb" mode="fill_rows, stripe_rows" layout="-5, -5, -6, -5, -5" auto_size_rows="true" row_spacing="0" hidden="true">
+				<boolean id="save_session_state" value="true" />
+				<boolean id="fixed_size_rows" value="false" />
+				<boolean id="auto_size_rows" value="true" />
+
+				<!-- headings -->
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="227966" type="use" value="Player" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="227737" type="use" value="Club" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="247523" type="use" value="Injury[COMMENT: Player Injury name, table header]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="333761" type="use" value="Date Placed in the DL6[COMMENT - MLS Disabled List, short string]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="331618" type="use" value="Eligible for Squad Registration In[COMMENT: MLS Player date, becoming eligible for squad registration after injury, table header]" />
+					</record>
+				</list>
+
+				<!-- column display properties -->
+				<list id="column_table_properties">
+					<record indx="0" id="play" left="4" sort_disabled="false" />
+					<record indx="1" id="club" sort_disabled="false" />
+					<record indx="2" id="cond" sort_disabled="false" top="2" bottom="2" />
+					<record indx="3" id="date" right="4" sort_disabled="false" />
+					<record indx="4" id="expe" right="4" sort_disabled="false" />
+				</list>
+
+				<record id="default_properties" spec="text" />
+
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" />
+					<record indx="1" alignment="centre" />
+					<record indx="2" alignment="left,centre_y" />
+					<record indx="3" alignment="left,centre_y" />
+					<record indx="4" alignment="left,centre_y" />
+				</list>
+
+			</widget>
+
+		</widget>
+
+		<widget class="inner_box" id="hptP" >
+			<translation id="title" translation_id="331663" type="use" value="Season Ending Injury List[COMMENT: MLS-specific injury list, placing a player on this list frees up a roster spot and means the player cannot feature again in the current league season]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="label" id="nIjp" alignment="centre" style="bold">
+				<translation id="text" translation_id="395480" type="use" value="There are currently no players on the season-ending injury list[COMMENT: FR #5117, information on an empty MLS Season-Ending Injury List screen]" />
+			</widget>
+
+			<!-- main table -->
+			<widget class="table" id="hpIL" mode="fill_rows, stripe_rows" layout="-5, -5, -6, -5, -5" auto_size_rows="true" row_spacing="0" hidden="true">
+				<boolean id="save_session_state" value="true" />
+				<boolean id="fixed_size_rows" value="false" />
+				<boolean id="auto_size_rows" value="true" />
+
+				<!-- headings -->
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="227966" type="use" value="Player" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="227737" type="use" value="Club" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="247523" type="use" value="Injury[COMMENT: Player Injury name, table header]" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="333762" type="use" value="Date Placed in the SEI" />
+					</record>
+					<record alignment="left,centre_y">
+						<translation id="text" translation_id="331618" type="use" value="Eligible for Squad Registration In[COMMENT: MLS Player date, becoming eligible for squad registration after injury, table header]" />
+					</record>
+				</list>
+
+				<!-- column display properties -->
+				<list id="column_table_properties">
+					<record indx="0" id="play" left="4" sort_disabled="false" />
+					<record indx="1" id="club" sort_disabled="false" />
+					<record indx="2" id="cond" sort_disabled="false" top="2" bottom="2" />
+					<record indx="3" id="date" right="4" sort_disabled="false" />
+					<record indx="4" id="expe" right="4" sort_disabled="false" />
+				</list>
+
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" spec="text" />
+					<record indx="1" alignment="centre" spec="text" />
+					<record indx="2" alignment="left,centre_y" spec="text" />
+					<record indx="3" alignment="left,centre_y" spec="text" />
+					<record indx="4" alignment="left,centre_y" spec="text" />
+				</list>
+
+			</widget>
+		</widget>
+
+	</container>
+
+	<!-- titled box -->
+
+</panel>

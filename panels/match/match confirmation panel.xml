@@ -1,0 +1,47 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="inner_box" appearance="boxes/match confirm/paper">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container height="5" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="14" />
+			<container height="30">
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="arrange_horizontal_attachment" layout="20, -1" offset="0" gap="0" />
+				<widget class="picture" file="icons/play match/exclamation" auto_size="all" />
+				<widget class="text" size="10" multiline="true" colour="red2">
+					<translation id="text" translation_id="339576" type="use" value="Are you sure you want to leave this match to your staff?" />
+				</widget>
+			</container>
+		</container>
+
+		<container height="5" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="14" />
+			<widget class="label" id="mplb" auto_size="all">
+				<translation id="text" translation_id="339883" type="use" value="Set Match Plan[COMMENT: Match confirmation dialog; label informing user what the match plan popup does]" />
+			</widget>
+			<widget class="popup_button" id="pmpn"/>
+		</container>
+
+		<container height="5" />
+
+		<container>
+			<attachment_group class="button_arrangement_right" />
+			
+			<widget class="primary_button" id="cont" click_event="conS" width="90">
+				<translation id="text" translation_id="242044" type="use" value="Yes" />
+			</widget>
+			<widget class="button" id="canc" click_event="canc" auto_size="horizontal">
+				<translation id="text" translation_id="231460" type="use" value="No" />
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

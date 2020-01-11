@@ -1,0 +1,24 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<!--this bit we tell how big it should be-->
+	<container id="arrw">
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<list id="properties_to_forward">
+			<record get_property="red_replacement" target="body" set_property="red_replacement" />
+			<record get_property="red_replacement" target="head" set_property="red_replacement" />
+		</list>
+
+		<widget class="picture" id="body" file="icons/custom/analysis/arrow/body" scale_picture="false" keep_aspect_ratio="false" image_alignment="right,centre_y" >
+		</widget>
+		<widget class="picture" id="head" file="icons/custom/analysis/arrow/head right" scale_picture="true" keep_aspect_ratio="false" image_alignment="left,centre_y" width="10">
+		</widget>
+	</container>
+
+	<!--fills the remaining space-->
+	<widget class="spacer" id="spac"/>
+
+</panel>

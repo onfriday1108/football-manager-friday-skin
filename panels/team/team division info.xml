@@ -1,0 +1,46 @@
+<panel>
+    <layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="1"/>
+    <layout class="arrange_vertical_attachment" layout="-1,-1" gap="1" offset="0"/>
+
+    <widget class="fixture_name_text" id="TdvS" spec="text" size="small" auto_size="horizontal" alignment="bottom" style="shadowed">
+        <layout class="centre_in_parent_attachment" alignment="horizontal" />
+        <record id="object_property">
+            <list id="get_properties">
+                <record>
+                    <integer id="get_property" value="tbcl" />
+                    <boolean id="dont_set_property" value="true"/>
+                    <boolean id="dont_set_object" value="true" />
+                    <!--we don't use this, we just get it so that the title colour can be calculated correctly for contrast-->
+                </record>
+                <record>
+                    <integer id="get_property" value="TdvS" />
+                    <boolean id="dont_set_object" value="true" />
+                </record>
+                <record>
+                    <integer id="get_property" value="ttcl" />
+                    <integer id="set_property" value="colr" />
+                    <boolean id="dont_set_object" value="true" />
+                </record>
+            </list>
+        </record>
+    </widget>
+    <widget class="division_position_button" spec="text" id="Tpos" size="10" alignment="top" auto_size="horizontal" style="bold, shadowed">
+        <layout class="centre_in_parent_attachment" alignment="horizontal" />
+        <record id="object_property">
+            <list id="get_properties">
+                <record>
+                    <integer id="get_property" value="tbcl" />
+                    <boolean id="dont_set_property" value="true"/>
+                    <!--we don't use this, we just get it so that the title colour can be calculated correctly for contrast-->
+                </record>
+                <record>
+                    <integer id="get_property" value="Tpos" />
+                </record>
+                <record>
+                    <integer id="get_property" value="ttcl" />
+                    <integer id="set_property" value="colr" />
+                </record>
+            </list>
+        </record>
+    </widget>
+</panel>

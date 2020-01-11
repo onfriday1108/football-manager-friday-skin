@@ -1,0 +1,20 @@
+﻿<panel>
+	<list id="cnvs">
+		<record id="at00">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+		</record>
+		<record id="at01" editor_group_id="at00" embed_in_frame="true" width="200" height="30">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="true" offset="2" embed_in_frame="true"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="2" embed_in_frame="true"/>
+		</record>
+		<record id="at02" editor_group_id="at00">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+		</record>
+	</list>
+</panel>

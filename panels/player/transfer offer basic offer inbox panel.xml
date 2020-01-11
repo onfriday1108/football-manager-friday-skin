@@ -1,0 +1,106 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<boolean id="should_force_refresh" value="true" />
+	<string id="skin_style" value="subtle box" />
+
+	<container class="inner_subtle_box">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container class="tabbed_container" id="detg" appearance="boxes/plain/standard/paper" default_item="fepl" save_session_state="true" hide_selector_if_one_or_fewer_items="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<container class="scrolling_box" id="fepl">
+				<container draw_horizontal_dividers="true">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<translation id="title" translation_id="229526" type="use" value="Details" />
+
+					<!-- Fee -->
+					<container>
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+							<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="text" id="feet" auto_size="vertical">
+								<translation id="text" translation_id="230121" type="use" value="Fee" />
+							</widget>
+							<widget class="text" id="fevt" style="bold" size="11" auto_size="vertical" />
+						</container>
+
+						<widget class="picture" id="minc" height="15" width="18" alignment="left,centre_y" file="icons/16px/minimum fee" scale_picture="false" keep_aspect_ratio="true" />
+					</container>
+
+					<!-- Fee when not playing (loan offers)-->
+					<container id="fnpc">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="text" id="fnpt" auto_size="vertical">
+							<translation id="text" translation_id="420722" type="use" value="Unused Monthly Fee[COMMENT: FR 14469; transfer offer; monthly fee paid to loaning club when the player is not playing]" />
+							<translation id="hint" translation_id="469784" type="use" value="A fee paid to the loaning club when the player is not playing in the first team[COMMENT: FR 14469; transfer offer; monthly fee paid to loaning club when the player is not playing]" />
+						</widget>
+						<widget class="text" id="fnpv" style="bold" size="11" auto_size="vertical" />
+					</container>
+
+					<!-- Transfer Date -->
+					<container id="tdcn">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="text" auto_size="vertical">
+							<translation id="text" translation_id="247986" type="use" value="Transfer Date" />
+						</widget>
+						<widget class="text" id="tdtt" style="bold" size="11" auto_size="vertical" />
+
+					</container>
+
+					<!-- Wages -->
+					<container id="wacn">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="text" auto_size="vertical">
+							<translation id="text" translation_id="420694" type="use" value="Playing Wage Percentage[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is playing]" />
+						  <translation id="hint" translation_id="469785" type="use" value="A proportion of the player's wage to be paid by the loaning club when the player is playing in the first team[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is playing]" />
+						</widget>
+						<widget class="text" id="wagt" style="bold" size="11" auto_size="vertical" />
+					</container>
+
+					<!-- Wages when not playing (loan offers) -->
+					<container id="wnpc">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="text" auto_size="vertical">
+							<translation id="text" translation_id="420695" type="use" value="Unused Wage Percentage[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is not playing]" />
+							<translation id="hint" translation_id="469786" type="use" value="A proportion of the player's wage to be paid by the loaning club when the player is not playing in the first team[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is not playing]" />
+						</widget>
+						<widget class="text" id="wnpt" style="bold" size="11" auto_size="vertical" />
+					</container>
+
+					<!-- messages, rules and comments -->
+
+					<container id="insc">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						
+						<widget class="transfer_offer_comments_panel" id="comm" />
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

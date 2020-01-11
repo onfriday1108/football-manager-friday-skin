@@ -1,0 +1,25 @@
+<!-- A panel showing the details of a single past transfer. See PAST_TRANSFER_LIST_ITEM_PANEL -->
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true"/>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+    <layout class="arrange_horizontal_attachment" layout="30, -1, 75" offset="0" gap="10"/>
+
+    <!-- Person portrait -->
+    <widget class="object_portrait_picture" id="port" scale_picture="true" image_alignment="centre"/>
+    
+    <!-- Transfer details -->
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+      <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="-1"/>
+
+      <widget class="person_button" id="name" font="semibold" alignment="left,bottom" colour="text"/>
+      <widget class="text" id="clbs" alignment="left,top" multiline="false" colour="faded text" size="small"/>
+    </container>
+
+    <!-- Transfer value -->
+    <widget class="value_label" id="valu" alignment="right,centre_y" spec="text" size="large" style="semi_bold"/>
+  </container>
+</panel>

@@ -1,0 +1,48 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <!--container for the team badges-->
+  <container id="tbdg">
+    <layout class="arrange_horizontal_attachment" layout="-1, 28, 40, 28, -1" offset="0" gap="6"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+    <!--home team-->
+    <widget class="team_button" id="htnm" icon_enabled="false" auto_size="none" style="bold" alignment="right,centre_y" size="9" multiline="false" mode="1">
+      <record id="object_property">
+        <integer id="get_property" value="home"/>
+        <integer id="set_property" value="valu"/>
+      </record>
+    </widget>
+
+    <widget class="object_portrait_picture" id="htpi" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" inset="25">
+      <record id="object_property">
+        <integer id="get_property" value="home"/>
+        <integer id="set_property" value="objt"/>
+      </record>
+    </widget>
+
+    <!-- score -->
+    <widget class="fixture_button" id="FxFR" format="[%scoreline#1-home_away]" style="bold" size="12" alignment="centre" reverse_teams="false" FxCV="true" swap_for_context_team="false">
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+      <record id="object_property">
+        <integer id="get_property" value="FxFR"/>
+      </record>
+    </widget>
+
+    <!--away team-->
+    <widget class="object_portrait_picture" id="atpi" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" inset="25">
+      <record id="object_property">
+        <integer id="get_property" value="away"/>
+        <integer id="set_property" value="objt"/>
+      </record>
+    </widget>
+
+    <widget class="team_button" id="atnm" icon_enabled="false" auto_size="none" style="bold" alignment="left,centre_y" size="9" multiline="false" mode="1">
+      <record id="object_property">
+        <integer id="get_property" value="away"/>
+        <integer id="set_property" value="valu"/>
+      </record>
+    </widget>
+  </container>
+
+</panel>

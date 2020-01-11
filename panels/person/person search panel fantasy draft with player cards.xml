@@ -1,0 +1,62 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!--appearance and background colour of search dialog-->
+	<flags id="sdap" value="boxes/popup/standard/paper" />
+	<flags id="sdbc" value="" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+		<boolean id="save_session_state" value="true" />
+		<boolean id="save_default_state" value="true" />
+
+
+		<!-- main area -->
+		<container class="inner_box" id="rslt" alignment="left">
+
+			<attachment_group class="vertical_arrange" vertical_layout="20,-1" vertical_gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+			<!-- buttons area -->
+			<container>
+				<attachment_group class="title_embedded_panel_left"/>
+
+				<!--player view menu-->
+				<widget class="view_menu_popup" save_session_state="true" id="plvi" />
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="12" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,2" />
+
+					<container class="player_cards_panel" id="plcC" hidden="true" />
+
+					<widget class="person_search_table" hidden="false" id="pltb" table_type="1" dont_restore_selection="true" mode="fill_rows, stripe_rows, printable, keyboard, manual_sort, store_sort_state, show_bullets, select_rows, select_multiple, drag_rows, show_insert_column_popup" select_event="psls" popup_menu_class="popup_button_table_header" deferred_scrolling="true" deferred_scrolling_timeout="400" fixed_size_rows="false" row_height="60">
+						<boolean id="save_default_state" value="true" />
+					</widget>
+				</container>
+
+				<!--buttons-->
+				<container height="30">
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<attachment class="test_global_attachment" mode="1" get_property="cont" set_property="hidn">
+						<list id="value">
+							<integer value="-17" />
+						</list>
+					</attachment>
+
+					<widget class="icon_tick_button" auto_size="horizontal">
+						<record id="click_event" event_id="CONT" event_target="glob" />
+						<translation id="text" translation_id="447528" type="use" value="Ready[COMMENT: Button text; Ready to start Fantasy Draft]" />
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

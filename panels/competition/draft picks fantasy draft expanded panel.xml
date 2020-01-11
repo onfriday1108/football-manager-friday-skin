@@ -1,0 +1,7 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<container class="standard_popup_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<widget class="draft_picks_panel" id="drfP"/>
+	</container>
+</panel>

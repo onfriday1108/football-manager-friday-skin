@@ -1,0 +1,12 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="20" />
+	<layout class="arrange_vertical_attachment" alignment="middle" offset="2" gap="2" />
+	<container class="bordered_box_no_margin" appearance="labels/standard/label" id="colB" height="28">
+		<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<widget class="picture" width="12" red_replacement="white" id="indI" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" />
+
+		<widget class="link_text" id="numL" section="tHap" auto_size="horizontal" alignment="centre" />
+	</container>
+</panel>

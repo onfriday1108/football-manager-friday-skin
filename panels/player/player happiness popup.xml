@@ -1,0 +1,66 @@
+﻿<panel width="500">
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" horizontal_inset="10" vertical_offset="10"/>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+			
+			<container height="20">
+				<attachment_group class="horizontal_arrange_autosize"/>
+
+				<widget class="picture" id="IcoW" width="20" scale_picture="true" file="icons/16px/bullet" red_replacement="text"/>
+				<widget class="text" id="TitT" auto_size="all" font="title" />
+			</container>
+			
+			<!-- Summary Lable -->
+			<widget class="label" id="SumL"/>
+			
+			<!-- happiness -->
+			<container id="hcon">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- Positives -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" font="title" colour="positive" auto_size="vertical">
+						<translation id="text" translation_id="365300" type="use" value="Positives[COMMENT: FR 512; person happiness panel; section listing things that have a positive impact on the person's happiness]" />
+					</widget>
+					<widget class="table" id="GenH" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" >
+						<list id="column_table_properties">
+							<record id="bull">
+								<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="14"/>
+							</record>
+							<record id="text">
+								<record id="widget_info" class="text" auto_size="vertical"/>
+							</record>
+						</list>
+					</widget>
+				</container>
+
+				<!-- Negatives -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" font="title" colour="negative" auto_size="vertical">
+						<translation id="text" translation_id="365291" type="use" value="Negatives[COMMENT: FR 512; person happiness panel; section listing things that have a negative impact on the person's happiness]" />
+					</widget>
+					<widget class="table" id="GenU" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false">
+						<list id="column_table_properties">
+							<record id="bull">
+								<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="14"/>
+							</record>
+							<record id="text">
+								<record id="widget_info" class="text" auto_size="vertical"/>
+							</record>
+						</list>
+					</widget>
+				</container>
+
+			</container>
+		</container>
+
+	</container>
+</panel>

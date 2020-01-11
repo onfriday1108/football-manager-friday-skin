@@ -1,0 +1,115 @@
+﻿<panel>
+  <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+  <boolean id="should_force_refresh" value="true"/>
+
+  <!--dynamic image here please-->
+  <container id="Dyni" height="117" width="160">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  </container>
+
+  <!-- squad dynamics -->
+	<container height="24">
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="6" apply_to_children="true"/>
+		
+		<widget class="link_button" font="title" auto_size="all" alignment="left, centre_y" section="tHOv" appearance="buttons/link/title/button">
+			<translation id="text" translation_id="466451" type="use" value="Squad Dynamics[COMMENT: FR 22941; press conference; title for box containg squad dynamics breakdown, reference ID 451177 when translating]"/>
+		</widget>
+	</container>
+
+  <widget class="horizontal_divider"/>
+
+  <container>
+    <attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+    <!-- match cohesion -->
+    <widget class="text" font="title" auto_size="vertical" alignment="left, centre_y">
+      <translation id="text" translation_id="463514" type="use" value="Team Cohesion[COMMENT:Training Calendar Schedule Selector - Training Team Cohesion Impact header]" />
+    </widget>
+
+		<container height="20">
+			<layout class="arrange_horizontal_attachment" layout="100, -1" gap="4" offset="0"/>
+			
+			<container class="main_box" appearance="boxes/custom/dynamics/bar/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="4"/>
+
+				<widget class="horizontal_split_value_bar" negative_colour="negative" positive_colour="positive" max_value="100" min_value="-100" id="mcbb"/>
+				<widget class="horizontal_split_value_bar" max_value="100" min_value="-100" id="mcsb" background_appearance_left="" background_appearance_right=""/>
+			</container>
+			
+			<!--support text-->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="left" gap="4" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+
+				<widget class="text" id="mcgT" spec="text" auto_size="horizontal" alignment="left, centre_y" style="semi_bold"/>
+			</container>
+		</container>
+  </container>
+
+  <widget class="horizontal_divider"/>
+
+  <container>
+    <attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+    <!-- dressing room atmosphere -->
+    <widget class="text" font="title" auto_size="vertical" alignment="left, centre_y">
+      <translation id="text" translation_id="445603" type="use" value="Dressing Room Atmosphere[COMMENT: Team Dynamics: Dressing Room Atmosphere label]"/>
+    </widget>
+
+		<container height="20">
+			<layout class="arrange_horizontal_attachment" layout="100, -1" gap="4" offset="0"/>
+			
+			<container class="main_box" appearance="boxes/custom/dynamics/bar/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="4"/>
+				<widget class="horizontal_split_value_bar" negative_colour="comp person bar 1" positive_colour="comp person bar 2" max_value="100" min_value="-100" id="atbb"/>
+				<widget class="horizontal_split_value_bar" max_value="100" min_value="-100" id="atsb" background_appearance_left="" background_appearance_right=""/>
+			</container>
+			
+			<!--support text-->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="left" gap="4" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+
+				<widget class="text" id="angT" spec="text" auto_size="horizontal" alignment="left, centre_y" style="semi_bold"/>
+			</container>
+		</container>
+  </container>
+
+  <widget class="horizontal_divider"/>
+
+  <container>
+    <attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+    <!-- managerial support -->
+    <widget class="text" font="title" auto_size="vertical" alignment="left, centre_y">
+      <translation id="text" translation_id="447498" type="use" value="Managerial Support[COMMENT: team confidence panel header, offers board confidence feedback on the level of managerial support from the players]"/>
+    </widget>
+
+		<container height="20">
+			<layout class="arrange_horizontal_attachment" layout="100, -1" gap="4" offset="0"/>
+			
+			<container class="main_box" appearance="boxes/custom/dynamics/bar/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="4"/>
+				<widget class="horizontal_split_value_bar" negative_colour="comp person bar 1" positive_colour="comp person bar 2" max_value="100" min_value="-100" id="mtbb"/>
+				<widget class="horizontal_split_value_bar" max_value="100" min_value="-100" id="mtsb" background_appearance_left="" background_appearance_right=""/>
+			</container>
+			
+			<!--support text-->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="left" gap="4" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+
+				<widget class="text" id="MngT" spec="text" auto_size="horizontal" alignment="left, centre_y" style="semi_bold"/>
+			</container>
+		</container>
+  </container>
+
+</panel>

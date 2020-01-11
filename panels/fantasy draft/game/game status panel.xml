@@ -1,0 +1,148 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="3" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<!--header box-->
+		<container id="shDS" height="65">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<string id="skin_style" value="contrast box" />
+
+			<container class="bordered_box_no_margin">
+				<layout class="arrange_horizontal_attachment" layout="110,-3, -2, -2, -3" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container class="main_box" appearance="boxes/custom/darken/rounded/no margin/paper">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="6" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6" />
+
+					<widget class="text" alignment="left,top" auto_size="vertical" style="bold" font="title" colour="teal a400">
+						<translation id="text" translation_id="447523" type="use" value="Lobby[COMMENT: Fantasy Draft Lobby header]" />
+					</widget>
+
+					<widget class="text" alignment="left,centre_y" size="xlarge" style="bold" colour="white">
+						<translation id="text" type="use" translation_id="232861" value="Waiting" />
+					</widget>
+
+				</container>
+
+				<!--Comp name and type-->
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="12" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+
+					<widget class="picture" width="40" file="icons/26px/circle" red_replacement="white" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" />
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="4" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+						<widget class="text" id="nmmA" alignment="left,top" auto_size="vertical" size="xlarge" multiline="false" style="bold" colour="white" />
+
+						<widget class="text" id="nTyA" alignment="left,top" auto_size="vertical" style="semi_bold" font="title" />
+
+					</container>
+				</container>
+				<!--Budget-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="4" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+					<widget class="text" alignment="left,top" auto_size="vertical" style="semi_bold" font="title">
+						<translation id="text" translation_id="291309" type="use" value="Transfer Budget[COMMENT:Transfer budget label]" />
+					</widget>
+
+					<widget class="cash_cell" id="sbsh" cusv="true" auto_size="vertical" alignment="left,bottom" size="large" style="bold" colour="white">
+					</widget>
+				</container>
+
+				<!--Draft round limit-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="4" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+					<widget class="text" alignment="left,top" auto_size="vertical" style="semi_bold" font="title">
+						<translation id="text" translation_id="447524" type="use" value="Draft Round Limit[COMMENT: Fantasy Draft - Competition Draft timer limit]" />
+					</widget>
+
+					<widget class="text" id="drLm" auto_size="vertical" alignment="left,bottom" size="large" style="bold" colour="white" />
+				</container>
+
+				<!-- Player Pool-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="4" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+					<widget class="text" alignment="left,top" auto_size="vertical" style="semi_bold" font="title">
+						<translation id="text" translation_id="390518" type="use" value="Player Pool[COMMENT: versus competition panel, label text for list of players available for selection]" />
+					</widget>
+
+					<widget class="text" id="ppCn" auto_size="vertical" alignment="left,bottom" size="large" style="bold" colour="white" />
+
+				</container>
+			</container>
+
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="main_box" id="txBx">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="12" vertical_gap="8" horizontal_inset="0" />
+
+				<widget class="manager_text" id="WInn" alignment="centre" auto_size="vertical">
+					<translation id="text" translation_id="447525" type="use" value="Waiting for managers to join. Once all managers are ready they will have 5 minutes to draw up a shortlist of players before the draft begins.[COMMENT: fantasy draft mode; string showing when waiting in a network game for other peers to join]" />
+				</widget>
+
+				<widget class="text" id="hstL" alignment="centre" auto_size="vertical" style="semi_bold" colour="teal a400">
+					<translation id="text" translation_id="447526" type="use" value="Click 'Ready' when [%person#1-you] are ready to proceed.[COMMENT: fantasy draft mode; string showing when waiting in a network game for other peers to join]" />
+				</widget>
+			</container>
+
+			<container class="main_box">
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<!-- bordered box containing the game info table -->
+				<widget class="user_list_panel" id="ulpa" file="fantasy draft/generic/user list" />
+
+				<container height="36" id="aMBC">
+
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="2" gap="3" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="2" apply_to_children="true" />
+
+
+					<widget class="primary_icon_button" id="inFR" click_event="InFR" auto_size="horizontal" icon="icons/16px/man">
+            <attachment class="test_user_privilege_attachment" mode="allow_multiplayer" property="disabled"/>
+            <translation id="text" translation_id="420628" type="use" value="Invite Friends[COMMENT: Button text; Inviting friend to play fantasy Draft]" />
+					</widget>
+
+					<widget class="popup_button" id="spop" alignment="centre" icon="icons/16px/plus" auto_size="horizontal" icon_alignment="left,centre_y" select_event="adMn" dont_set_selection="true">
+						<translation id="text" translation_id="254460" type="use" value="Add Manager[COMMENT: add new manager: dialog title]" />
+						<list id="items">
+							<record id="0" icon="icons/16px/plus" red_replacement="white">
+								<translation id="text" translation_id="412825" type="use" value="Add AI Club[COMMENT: FR15053; button to add a computer manager to a game]" />
+							</record>
+							<record id="1" icon="icons/16px/plus" red_replacement="white">
+								<translation id="text" translation_id="447527" type="use" value="Add Human Manager[COMMENT: add new human manager: dialog title]" />
+							</record>
+						</list>
+					</widget>
+
+					<widget class="primary_icon_button" id="rqsS" auto_size="horizontal" hidden="true" icon="icons/16px/continue" icon_alignment="right,centre_y">
+						<event id="click_event" event_id="RQST" event_target="glob" />
+						<translation id="text" translation_id="447528" type="use" value="Ready[COMMENT: Button text; Ready to start Fantasy Draft]" />
+					</widget>
+					<widget class="primary_icon_button" id="conS" auto_size="horizontal" hidden="true" icon="icons/16px/continue" icon_alignment="right,centre_y">
+						<event id="click_event" event_id="CONT" event_target="glob" />
+						<translation id="text" translation_id="447529" type="use" value="Begin Draft[COMMENT: Button text; Host ready to start draft]" />
+					</widget>
+				</container>
+			</container>
+		</container>
+
+	</container>
+
+</panel>

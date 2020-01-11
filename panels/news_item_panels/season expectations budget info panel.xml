@@ -1,0 +1,35 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+	
+	<container class="inner_subtle_box">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle, fill" horizontal_gap="12" vertical_inset="0"/>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+			<widget class="text" auto_size="vertical" font="title" colour="accent" alignment="left, centre_y">
+				<translation id="text" translation_id="386800" type="use" value="New transfer budget[COMMENT: FR 8904; season expectations news item; label to indicate club's transfer budget according to competition expectations]"/>
+			</widget>
+			<widget class="text" id="ntbt" font="value" auto_size="vertical" colour="text" alignment="left, centre_y"/>
+			<widget class="text" id="ctbt" auto_size="vertical" colour="faded text" alignment="left, centre_y"/>
+		</container>
+
+		<widget class="vertical_divider">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+		</widget>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+			<record id="default_properties" auto_size="vertical" alignment="left, centre_y"/>
+
+			<widget class="text" font="title" colour="accent">
+				<translation id="text" translation_id="386801" type="use" value="New wage budget[COMMENT: FR 8904; season expectations news item; label to indicate club's wage budget according to competition expectations]"/>
+			</widget>
+			<widget class="text" id="nwbt" font="value" colour="text"/>
+			<widget class="text" id="cwbt" colour="faded text"/>
+			<widget class="text" id="cwst" colour="faded text"/>
+		</container>
+	</container>
+
+</panel>

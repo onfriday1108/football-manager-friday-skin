@@ -1,0 +1,202 @@
+<panel>
+	<!--appearances for status buttons and labels-->
+	<flags id="stfa" value="buttons/custom/dof status/failed/button" />
+	<!--Failed label-->
+	<flags id="snsa" value="buttons/custom/dof status/not started/button" />
+	<!--Not Started label-->
+	<flags id="spha" value="buttons/standard/normal/button" />
+	<!--Put on Hold button-->
+	<flags id="soha" value="buttons/custom/dof status/not started/button" />
+	<!--On Hold label-->
+	<flags id="ssna" value="buttons/primary/normal/button" />
+	<!--Start Negotiations button-->
+	<flags id="sipa" value="buttons/custom/dof status/in progress/button" />
+	<!--In Progress label-->
+
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="inner_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="6" />
+
+
+			<widget class="label" id="dadd" colour="faded text" auto_size="all" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="6" />
+
+				<widget class="button" id="stal" auto_size="all" />
+				<widget class="button" id="stab" auto_size="all" />
+			</container>
+
+
+
+		
+			
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="6" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" colour="faded text" font="title" size="small" auto_size="all">
+					<translation id="text" translation_id="316794" type="use" value="Type[COMMENT: default properties.xml; list header to describe the type of game object shown - a game object is anything the user can interact with]" />
+				</widget>
+
+				<widget class="text" id="typl" auto_size="horizontal" height="30" style="bold" alignment="left,centre_y" />
+
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" colour="faded text" font="title" size="small" auto_size="all">
+					<translation id="text" translation_id="466498" type="use" value="Attempt Until[COMMENT: player development label, allows the user to instruct their staff how long to persist with a development task]" />
+				</widget>
+
+				<widget class="date_select_panel" id="expd" auto_size="horizontal" height="30" />
+
+			</container>
+
+
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,150,-1" horizontal_offset="0" horizontal_gap="12" vertical_inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" alignment="left,centre_y" colour="faded text" font="title" auto_size="vertical" size="small">
+						<translation id="text" translation_id="420694" type="use" value="Playing Wage Percentage[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is playing]" />
+						<translation id="label_hint" translation_id="469785" type="use" value="A proportion of the player's wage to be paid by the loaning club when the player is playing in the first team[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is playing]" />
+					</widget>
+
+					<widget class="popup_button" id="wppb" alignment="left,centre_y" style="bold" size="10" auto_size="vertical">
+
+					</widget>
+
+
+
+				</container>
+				
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+          <widget class="label" alignment="left,centre_y" colour="faded text" font="title" auto_size="vertical" size="small">
+						<translation id="text" translation_id="491645" type="use" value="Proposed Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+					</widget>
+
+					<widget class="popup_button" id="sspb" alignment="left,centre_y" style="bold" size="10" auto_size="vertical">
+				
+					</widget>
+
+
+
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" alignment="left,centre_y" colour="faded text" font="title" auto_size="vertical" size="small">
+						<translation id="text" translation_id="229395" type="use" value="Training Facilities" />
+					</widget>
+
+					<widget class="popup_button" id="tfpb" alignment="left,centre_y" style="bold" size="10" auto_size="vertical">
+				
+					</widget>
+
+
+
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" alignment="left,centre_y" colour="faded text" font="title" auto_size="vertical" size="small">
+						<translation id="text" translation_id="229390" type="use" value="Nation" />
+					</widget>
+
+					<widget class="popup_button" id="napb" alignment="left,centre_y" style="bold" size="10" auto_size="vertical">
+				
+					</widget>
+
+
+
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" alignment="left,centre_y" colour="faded text" font="title" auto_size="vertical" size="small">
+						<translation id="text" translation_id="243513" type="use" value="League" />
+					</widget>
+
+					<widget class="popup_button" id="lgpb" alignment="left,centre_y" style="bold" size="10" auto_size="vertical">
+				
+					</widget>
+
+
+
+				</container>
+				
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+				
+				<widget class="pitch_with_all_positions" id="ppip" vertical="true" pitch_show_names="false" pitch_allow_multiple_select_no_modifiers="true" pitch_touchline_width_percentage="0" pitch_vertical_padding="12" pitch_horizontal_padding="0" pitch_base_appearance="" pitch_pattern="ui circles" line_width="1" pitch_draw_goals="false" pitch_alignment="centre,can_scale" select_event="esfp" absorb_click_events="true" height="184" />
+
+				<widget class="popup_button" id="ropb" auto_size="all">
+					
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="text" auto_size="all" font="title" size="small" alignment="left,centre_y" colour="faded text">
+					<translation id="text" translation_id="248394" type="use" value="Loan Options" />
+				</widget>
+
+				<widget class="check_box" auto_size="vertical" id="lcbr" multiline="true">
+					<translation id="text" translation_id="243589" type="use" value="Can be recalled" />
+				</widget>
+				<widget class="check_box" auto_size="vertical" id="lpcm" multiline="true">
+					<translation id="text" translation_id="243587" type="use" value="Can play in cup matches" />
+				</widget>
+				<widget class="check_box" auto_size="vertical" id="lpao" multiline="true">
+					<translation id="text" translation_id="243588" type="use" value="Can play against own team" />
+				</widget>
+				<widget class="check_box" auto_size="vertical" id="lpab" multiline="true">
+					<translation id="text" translation_id="420724" type="use" value="Can play against own club's B team[COMMENT: transfer offer loan option type, works alongside IDs 243587, 243588, 243589 and 383274]" />
+				</widget>
+				<widget class="check_box" auto_size="vertical" id="lcnt" multiline="true">
+					<translation id="text" translation_id="420725" type="use" value="Loan cannot be terminated[COMMENT: FR 13832; loan offer; clause to prevent loaning team from terminating the loan early]" />
+				</widget>
+				<widget class="check_box" auto_size="vertical" id="lpmc" multiline="true">
+					<translation id="text" translation_id="441100" type="use" value="Can play for parent club[COMMENT: loan clause]" />
+				</widget>
+				<widget class="check_box" auto_size="vertical" id="lprs" multiline="true">
+					<translation id="text" translation_id="383274" type="use" value="Can play for parent club reserves[COMMENT: loan clause]" />
+				</widget>
+			</container>
+			
+		</container>
+
+	
+		
+	</container>
+
+
+
+
+</panel>

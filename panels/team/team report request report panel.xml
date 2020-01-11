@@ -1,0 +1,78 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="empty_state" id="nasa">
+
+		<!--explanatory text-->
+		<widget class="text">
+			<translation id="text" translation_id="320527" type="use" value="You need an assistant manager to compile your team report.[COMMENT: team report; need assistant advice]" />
+		</widget>
+		<widget class="text" id="sash">
+			<translation id="text" translation_id="320528" type="use" value="You can search for an assistant manager to hire via the staff search.[COMMENT: team report; need assistant sub advice]" />
+		</widget>
+
+		<container class="empty_state_button_container">
+			<widget class="link_appearance_button" id="sstm" click_event="gtss">
+				<translation id="text" translation_id="320500" type="use" value="Staff Search[COMMENT: team report; link to the staff search]" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			</widget>
+		</container>
+	</container>
+
+	<container class="empty_state" id="nitr">
+
+		<!--explanatory text-->
+		<widget class="manager_text">
+			<translation id="text" translation_id="358419" type="use" value="[%person#1-You] need to be a national team manager in order to get a team report on a nation.[COMMENT: team report request report panel help text]" />
+		</widget>
+	</container>
+
+	<container class="empty_state" id="nsca" header_widget="titx">
+
+		<!--explanatory text-->
+		<widget class="text" id="titx">
+			<translation id="text" translation_id="320529" type="use" value="You need to request a member of your scouting staff to compile a report on this team.[COMMENT: team report; need to scout advice]" />
+		</widget>
+
+		<container class="empty_state_button_container">
+			<widget class="client_action_popup_button" id="remI" ignore_top_level_submenus="true" auto_size="all" action_id="STAi" item_type="ACTT" >
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+		</container>
+
+	</container>
+
+	<container class="empty_state" id="naas">
+
+		<!--explanatory text-->
+		<widget class="text">
+			<translation id="text" translation_id="320531" type="use" value="Your board will not allow you to scout this team as they feel it would be too expensive for the club.[COMMENT: team report; need assistant advice]" />
+		</widget>
+		<widget class="text" id="srtx">
+			<translation id="text" translation_id="320532" type="use" value="You can ask the board to consider increasing their scouting range to allow you to scout a larger range of clubs.[COMMENT: team report; need assistant sub advice]" />
+		</widget>
+
+		<container class="empty_state_button_container">
+			<widget class="link_appearance_button" id="rebt" click_event="gtbr">
+				<translation id="text" translation_id="320533" type="use" value="Board Request[COMMENT: team report; link to the staff search]" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			</widget>
+		</container>
+	</container>
+
+	<container class="empty_state" id="unem">
+
+		<!--explanatory text-->
+		<widget class="text">
+			<translation id="text" translation_id="357020" type="use" value="You cannot scout this team because you are unemployed.[COMMENT: team report; need assistant advice]" />
+		</widget>
+	</container>
+
+	<container class="empty_state" id="SciP">
+
+		<!--explanatory text-->
+		<widget class="text">
+			<translation id="text" translation_id="453033" type="use" value="Your scouts are in the process of compiling a report on this team[COMMENT: team report; need assistant advice]" />
+		</widget>
+	</container>
+</panel>

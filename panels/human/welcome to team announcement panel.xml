@@ -1,0 +1,54 @@
+﻿<!-- NOTE: The property 'usoc' used on elements tells the panel to recolour them based on object colours --><panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!-- Title heading -->
+	<container class="main_transparent_box" appearance="boxes/custom/breaking news/main/paper">
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+
+		<!-- title area -->
+		<container height="33">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+			<container class="inner_subtle_box" appearance="boxes/custom/breaking news/title/paper">
+				<attachment_group class="horizontal_arrange_autosize" />
+
+				<widget class="text" font="title" size="large" colour="deadline day bar" alignment="left, centre_y" auto_size="horizontal">
+					<translation id="text" translation_id="491935" type="use" value="Breaking News[COMMENT: AREA: Welcome to team; SUB-AREA: introduction and announcement step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title text for news item style sub-panel on the introduction and announcement step of the welcome pack when the human has taken over a club or national team. Differs from other similar translations by not having a semi-colon at the end]" />
+				</widget>
+			</container>
+
+			<widget class="text" id="mdsc" font="title" alignment="right, centre_y" colour="deadline day text">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="8" />
+			</widget>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" horizontal_inset="8" vertical_offset="8" vertical_gap="8" />
+
+			<!-- headline -->
+			<widget class="text" id="titl" size="18" style="bold" colour="deadline day bar" alignment="left, centre_y" auto_size="all" />
+
+			<!-- content -->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="300, -1" horizontal_gap="10" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_layout="150, 150" vertical_gap="8" />
+
+					<!-- Dynamic news image 1 -->
+					<container id="dyn1" height="180" width="300">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					</container>
+
+					<!-- Dynamic news image 2 -->
+					<container id="dyn2" height="180" width="300">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					</container>
+				</container>
+
+				<widget class="text" id="mntx" alignment="left, top" size="large" auto_size="vertical" clickable="false" colour="white" />
+			</container>
+		</container>
+	</container>
+
+</panel>

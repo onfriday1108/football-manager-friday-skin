@@ -1,0 +1,76 @@
+<panel>
+
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<!-- titled box -->
+	<widget class="inner_box" force_title_borders="true" id="qpto" alignment="left" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- embedded buttons -->
+		<container id="btns" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+			<!-- filter button -->
+			<widget class="subtle_button" id="shof" click_event="shfl" auto_size="all" embed_in_frame="true" save_session_state="true">
+				<translation id="text" translation_id="247166" type="use" value="Show Filters" />
+			</widget>
+
+		</container>
+
+		<!-- main table -->
+		<widget class="table" id="qptb" mode="fill_rows, stripe_rows" layout="-2,-2,-3,-3,80,80" auto_size_rows="false" row_spacing="0" fixed_size_rows="true" auto_size="none">
+			<boolean id="save_session_state" value="true" />
+
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="229408" type="use" value="Team" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="229390" type="use" value="Nation" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="247169" type="use" value="Seeding" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="232957" type="use" value="Reason" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="242890" type="use" value="Coefficient" />
+				</record>
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="249386" type="use" value="Qualified[COMMENT: home_page; team league/group fate]" />
+				</record>
+			</list>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record indx="0" id="temc" sort_disabled="false" />
+				<record indx="1" id="natn" sort_disabled="false" />
+				<record indx="2" id="infc" sort_disabled="false" />
+				<record indx="3" id="reas" sort_disabled="false" />
+				<record indx="4" id="coef" sort_disabled="false" />
+				<record indx="5" id="date" sort_disabled="false" />
+			</list>
+
+			<record id="default_properties" alignment="left,centre_y" auto_size="none" />
+
+		</widget>
+
+	</widget>
+	<!-- titled box -->
+
+	<!-- filter editing panel -->
+	<widget class="filter_panel" id="filp" width="200" hidden="true">
+
+		<!-- buttons area -->
+		<container id="btnf" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<!-- filter menu -->
+			<widget class="subtle_button" id="hdfl" click_event="hdfl" auto_size="all" embed_in_frame="true" save_session_state="true">
+				<translation id="text" translation_id="247168" type="use" value="Hide Filters" />
+			</widget>
+		</container>
+	</widget>
+
+</panel>

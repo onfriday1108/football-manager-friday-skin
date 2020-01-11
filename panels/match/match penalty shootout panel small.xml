@@ -1,0 +1,163 @@
+<panel>
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<container class="inner_box" id="mnbx" appearance="boxes/popup/match/paper" auto_size="vertical">
+		<layout class="fit_children_attachment" alignment="vertical,fill" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" />
+
+		<container id="tpcn" height="25">
+			<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="4" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="middle,extend" gap="0" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+				<widget class="picture" id="hmnm" height="20" width="20" image_alignment="right">
+					<layout class="stick_to_sides_attachment" alignment="vertical" />
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+				</widget>
+
+				<widget class="label" font="fonts/match_panel_title" auto_size="horizontal" alignment="centre_x,top">
+					<translation id="text" translation_id="232875" type="use" value="Penalty Shoot-out" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="6" />
+				</widget>
+
+				<widget class="picture" id="awnm" height="20" width="20" image_alignment="left">
+					<layout class="stick_to_sides_attachment" alignment="vertical" />
+					<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+				</widget>
+			</container>
+
+			<!-- Widget close button -->
+			<widget class="button" id="clms" appearance="pitch/boxes/match_day_info_neutral/minimise/button">
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="right" inset="2" />
+				<event id="click_event" event_id="cliw" selection="pscn" />
+			</widget>
+
+		</container>
+
+		<container id="bmcn" height="45">
+			<layout class="arrange_horizontal_attachment" layout="-2, -1, -2" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal,bottom" inset="0" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="left" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="table" layout="25, 25, 25, 25, 25" id="psht" width="125">
+					<integer id="row_height" value="20" />
+					<flags id="auto_size" value="vertical" />
+					<flags id="mode" value="fill_rows" />
+
+					<list id="column_table_properties">
+						<record indx="0" sort_disabled="true" alignment="centre" />
+						<record indx="1" sort_disabled="true" alignment="centre" />
+						<record indx="2" sort_disabled="true" alignment="centre" />
+						<record indx="3" sort_disabled="true" alignment="centre" />
+						<record indx="4" sort_disabled="true" alignment="centre" />
+					</list>
+
+					<widget class="label" col="0" row="0" colour="faded white" size="small" auto_size="all">
+						<translation id="text" type="new" value="1" />
+					</widget>
+					<widget class="label" col="1" row="0" colour="faded white" size="small" auto_size="all">
+						<translation id="text" type="new" value="2" />
+					</widget>
+					<widget class="label" col="2" row="0" colour="faded white" size="small" auto_size="all">
+						<translation id="text" type="new" value="3" />
+					</widget>
+					<widget class="label" col="3" row="0" colour="faded white" size="small" auto_size="all">
+						<translation id="text" type="new" value="4" />
+					</widget>
+					<widget class="label" col="4" row="0" colour="faded white" auto_size="all">
+						<translation id="text" type="new" value="5" />
+					</widget>
+
+					<widget class="picture" file="" col="0" row="1"  height="20" width="20" />
+					<widget class="picture" file="" col="1" row="1"  height="20" width="20" />
+					<widget class="picture" file="" col="2" row="1"  height="20" width="20" />
+					<widget class="picture" file="" col="3" row="1"  height="20" width="20" />
+					<widget class="picture" file="" col="4" row="1"  height="20" width="20" />
+				</widget>
+
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top"  />
+				<layout class="arrange_horizontal_attachment" alignment="middle" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+
+				<widget class="table" layout="30, 30, 10 30, 25" width="125">
+					<integer id="row_height" value="25" />
+					<flags id="auto_size" value="vertical" />
+					<flags id="mode" value="fill_rows" />
+
+					<list id="column_table_properties">
+						<record indx="1" sort_disabled="true" alignment="centre" />
+						<record indx="2" sort_disabled="true" alignment="centre" />
+						<record indx="3" sort_disabled="true" alignment="centre" />
+					</list>
+
+					<widget class="label" id="pshs" col="1" row="0" size="large" style="semi_bold" auto_size="all" alignment="right,centre_y" />
+					<widget class="label" col="2" row="0" size="large" style="semi_bold" auto_size="all" alignment="centre">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+					<widget class="label" id="psas" col="3" row="0" size="large" style="semi_bold" auto_size="all" alignment="left,centre_y" />
+				</widget>
+
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="left" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="table" layout="25, 25, 25, 25, 25" id="psat" width="125">
+					<integer id="row_height" value="20" />
+					<flags id="auto_size" value="vertical" />
+					<flags id="mode" value="fill_rows" />
+
+					<list id="column_table_properties">
+						<record indx="0" sort_disabled="true" alignment="centre" />
+						<record indx="1" sort_disabled="true" alignment="centre" />
+						<record indx="2" sort_disabled="true" alignment="centre" />
+						<record indx="3" sort_disabled="true" alignment="centre" />
+						<record indx="4" sort_disabled="true" alignment="centre" />
+					</list>
+
+					<widget class="label" col="0" row="0" colour="faded white" size="small" auto_size="all">
+						<translation id="text" type="new" value="1" />
+					</widget>
+					<widget class="label" col="1" row="0" colour="faded white" size="small" auto_size="all">
+						<translation id="text" type="new" value="2" />
+					</widget>
+					<widget class="label" col="2" row="0" colour="faded white" size="small" auto_size="all">
+						<translation id="text" type="new" value="3" />
+					</widget>
+					<widget class="label" col="3" row="0" colour="faded white" size="small" auto_size="all">
+						<translation id="text" type="new" value="4" />
+					</widget>
+					<widget class="label" col="4" row="0" colour="faded white" size="small" auto_size="all">
+						<translation id="text" type="new" value="5" />
+					</widget>
+
+					<widget class="picture" file="" col="0" row="1" height="20"  width="20" />
+					<widget class="picture" file="" col="1" row="1" height="20"  width="20" />
+					<widget class="picture" file="" col="2" row="1" height="20"  width="20" />
+					<widget class="picture" file="" col="3" row="1" height="20"  width="20" />
+					<widget class="picture" file="" col="4" row="1" height="20"  width="20" />
+				</widget>
+
+			</container>
+		</container>
+
+	</container>
+
+</panel>

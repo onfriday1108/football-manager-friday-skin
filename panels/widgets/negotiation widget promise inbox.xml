@@ -1,0 +1,69 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="0"/>
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="2" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+  <container>
+    <layout class="centre_in_parent_attachment" alignment="vertical" offset="2" apply_to_children="true"/>
+    <layout class="fit_children_attachment" alignment="vertical" offset="2" />
+    <layout class="arrange_horizontal_attachment" layout="-1, 50" offset="0"/>
+
+    <container>
+      <layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+      <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+      <layout class="arrange_horizontal_attachment" layout="25,10,-1,180" offset="0" gap="2"/>
+
+      <widget class="check_box" id="lock" click_event="lock" label_disabled="true" width="34" height="30" alignment="centre" icon="switches/lock/button" icon_alignment="centre" appearance="buttons/subtle/normal/button">
+        <translation id="hint" translation_id="350950" type="use" value="Select to mark this as non-negotiable[COMMENT: contract offer panel and transfer offer panel; offer condition lock; the contract term or transfer condition is not negotiable, i.e. the wage, squad status etc]"/>
+      </widget>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+        <widget class="label" alignment="left,centre_y" hidden="true" width="10" colour="contract negotiation restriction" id="star" auto_size="vertical">
+          <string id="text" value="*"/>
+        </widget>
+
+      </container>
+
+      <container >
+        <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true"/>
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+        <layout class="arrange_horizontal_attachment" layout="30,-1" offset="0" gap="4"/>
+
+        <widget class="picture" id="pict" image_alignment="centre" auto_size="vertical" width="30" />
+
+        <container>
+          <layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="0"/>
+          <layout class="fit_children_attachment" alignment="vertical,fill" offset="2" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+          <widget class="text" id="text" alignment="left,centre_y" auto_size="vertical">
+            <string id="text" value="Temp"/>
+          </widget>
+          
+
+          <container>
+            <layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="0"/>
+            <layout class="fit_children_attachment" alignment="vertical,fill" offset="2" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true"/>
+            
+            <widget class="popup_button" alignment="left,centre_y" id="popU"  multiline="false"  auto_size="all" minimum_width="100" minimum_height="30"/>
+
+          </container>
+
+          <widget class="text" id="eiwi" auto_size="vertical" alignment="left,centre_y" colour="faded text" multiline="true" />
+        </container>
+
+      </container>
+
+    </container>
+
+
+
+    <widget class="popup_button" id="icon" icon="icons/16px/remove from list" height="30" icon_alignment="left" hidden="true">
+
+    </widget>
+  </container>
+
+</panel>

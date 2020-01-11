@@ -1,0 +1,86 @@
+﻿<panel>
+    <flags id="appearance" value="buttons/custom/tactics/style bar/button" />
+    <flags id="selected_appearance" value="buttons/custom/tactics/style bar/button_selected" />
+	
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_contrast_box" red_replacement="style_background">
+
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="8" horizontal_inset="10" vertical_gap="16" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" />
+
+			<widget class="text" auto_size="vertical" font="label" colour="faded white" alignment="centre">
+				<translation id="text" translation_id="466531" type="use" value="Tactical Style[COMMENT: FR 23334; tactics panel; title for a button to allow the user to choose a tactical style]" />
+			</widget>
+
+			<widget class="tactics_tactical_style_popup_button" id="TcSt" widget_type="tactics_tactical_style_popup_panel" popup_alignment="left, bottom" auto_size="vertical" appearance="" font="title" size="xlarge" alignment="centre" colour="white" secondary_icon_alignment="centre_right, centre_y">
+				<translation id="text" translation_id="466531" type="use" value="Tactical Style[COMMENT: FR 23334; tactics panel; title for a button to allow the user to choose a tactical style]" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</widget>
+		</container>
+
+		<container id="MENT">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="4" vertical_alignment="top" />
+
+
+			<widget class="text" id="mstR" auto_size="vertical" font="label" colour="white" alignment="centre">
+				<translation id="text" translation_id="348204" type="use" value="Mentality[Comment: prefix used before mentality type text on quick tactical instruction button during match]" />
+			</widget>
+
+			<widget class="mentality_table_popup_button" id="ment" auto_size="horizontal" height="30">
+				<flags id="appearance" value="buttons/custom/tactics/style bar/button" />
+				<flags id="alignment" value="centre" />
+				<flags id="icon_alignment" value="centre" />
+				<flags id="colour" value="white" />
+			</widget>
+
+		</container>
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="12" />
+
+				<!--Change Done-->
+				<widget class="icon_button" height="30" id="inPm" font="label" colour="white" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/reduce" icon_alignment="left" secondary_icon_alignment="far_right">
+					<record id="primary_icon_properties" red_replacement="white" />
+					<record id="secondary_icon_properties" red_replacement="white" />
+					<translation id="text" translation_id="466532" type="use" value="In Possession[COMMENT: team instructions, what the team do when they have the ball]" />
+					<record id="click_event">
+						<flags id="event_id" value="teIn" />
+						<flags id="index" value="poSE" />
+						<flags id="event_target" value="prnt" />
+					</record>
+				</widget>
+
+				<!--Change Done-->
+				<widget class="icon_button" height="30" id="trAm" font="label" colour="white" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/reduce" icon_alignment="left" secondary_icon_alignment="far_right">
+					<record id="primary_icon_properties" red_replacement="white" />
+					<record id="secondary_icon_properties" red_replacement="white" />
+					<translation id="text" translation_id="466538" type="use" value="Transition[COMMENT: team instructions, what the team do when transitioning from having the ball to losing it, or vice-versa, this section contains instructions for both situations]" />
+					<record id="click_event">
+						<flags id="event_id" value="teIn" />
+						<flags id="index" value="trSE" />
+						<flags id="event_target" value="prnt" />
+					</record>
+				</widget>
+
+				<!--Change Done-->
+				<widget class="icon_button" height="30" id="ouPm" font="label" colour="white" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/reduce" icon_alignment="left" secondary_icon_alignment="far_right">
+					<record id="primary_icon_properties" red_replacement="white" />
+					<record id="secondary_icon_properties" red_replacement="white" />
+					<translation id="text" translation_id="466535" type="use" value="Out of Possession[COMMENT: team instructions, what the team do when they do not have the ball]" />
+					<record id="click_event">
+						<flags id="event_id" value="teIn" />
+						<flags id="index" value="opSE" />
+						<flags id="event_target" value="prnt" />
+
+					</record>
+				</widget>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

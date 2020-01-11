@@ -1,0 +1,5 @@
+﻿<panel>
+	<layout class="arrange_horizontal_attachment" id="arhz" offset="0" gap="0"/>
+	<layout class="fit_children_attachment" id="fcVT" alignment="vertical" offset="10"/>
+	<layout class="stick_to_sides_attachment" id="st2s" alignment="top" apply_to_children="true" inset="10"/>
+</panel>

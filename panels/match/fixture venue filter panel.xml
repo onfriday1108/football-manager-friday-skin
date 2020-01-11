@@ -1,0 +1,24 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="filter_check_box_list_container" auto_size="vertical">
+		<translation id="title" translation_id="247233" type="use" value="Venue" />
+
+		<list id="objL">
+		
+			<record id="csHF" >
+				<translation id="text" translation_id="319078" type="use" value="Home[COMMENT: player match feedback history; venue location text]" />
+			</record>
+			<record id="csAF" >
+				<translation id="text" translation_id="319079" type="use" value="Away[COMMENT: player match feedback history; venue location text]" />
+			</record>
+			<record id="csNF" >
+				<translation id="text" translation_id="320153" type="use" value="Neutral[COMMENT: player match feedback history; venue location text]" />
+			</record>
+			
+		</list>
+		
+	</container>
+
+</panel>

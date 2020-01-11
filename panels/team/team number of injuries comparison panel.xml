@@ -1,0 +1,43 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <flags id="bcol" value="negative"/>
+  <flags id="wcol" value="positive"/>
+  <flags id="acol" value="grey"/>
+  <flags id="ncol" value="bar value"/>
+  <flags id="bbco" value="transparent"/>
+  <flags id="wbco" value="alpha_box_background"/>
+  <flags id="alwt" value="2"/>
+
+  <boolean id="always_use_latest_object_list" value="true"/>
+  <boolean id="should_force_refresh" value="true"/>
+  <boolean id="show_all_properties_in_popup" value="true"/>
+  <boolean id="show_actual_value" value="true"/>
+
+  <container>
+    <layout class="arrange_vertical_attachment" layout="-1, 20" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4"/>
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+      <!-- No data label -->
+      <widget class="label" id="nodt" auto_size="vertical" hidden="true">
+        <translation id="text" translation_id="330275" type="use" value="Not available[COMMENT: happiness panel; text displayed when no happiness information is available]"/>
+      </widget>
+
+      <widget class="graph" id="tacg" inset="1, 15, 1, 1" show_instant_hint="false">
+        <list id="graph_series">
+          <record id="bar1" type="bar" maximum_width="40"/>
+          <record id="bar2" type="bar" appearance="charts/bar/custom/top line/thin" animation_file="none" show_instant_hint="false"/>
+          <record id="mark" type="marker" line_width="2" label_alignment="top"/>
+        </list>
+        <record id="x_axis" gap="1"/>
+        <record id="y_axis" round_min_max="false" hidden="true"/>
+      </widget>
+    </container>
+    
+    <widget class="label" id="fotr" font="title" colour="accent" alignment="centre"/>
+  </container>
+
+</panel>

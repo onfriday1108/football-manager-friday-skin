@@ -1,0 +1,90 @@
+﻿<panel>
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="8" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<container class="main_box" width="180" red_replacement="blue grey 100">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="text" auto_size="vertical" font="title" colour="scout card text">
+			<translation id="text" translation_id="375266" type="use" value="Knowledge Level[COMMENT - person list view column heading hint, indication of a non-player's level of knowledge of a region used for scouting]" />
+		</widget>
+
+		<container height="25">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="8" />
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+
+			<container class="main_box" appearance="boxes/custom/scouting knowledge/paper" height="12" width="55" id="hbar">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="horizontal_percentage_bar" height="4" maximum_value="100" bar_value_colour="knowledge level" show_label_on_bar="false" label_width="0" appearance="charts/bar/custom/knowledge">
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+          <record id="object_property">
+            <list id="get_properties">
+              <record>
+                <integer id="get_property" value="PsKL" />
+                <integer id="set_property" value="minv" />
+              </record>
+              <record>
+                <integer id="get_property" value="PsKL" />
+                <integer id="set_property" value="valu" />
+              </record>
+            </list>
+          </record>
+	
+				</widget>
+			</container>
+
+			<widget class="formatted_label" auto_size="all" style="semi_bold" size="large" alignment="left,centre_y" colour="scout card text">
+				<translation id="format" translation_id="233144" type="use" value="[%number#1]%" />
+				<record id="object_property" get_property="PsKL" dont_set_hint="true" />
+			</widget>
+
+		</container>
+
+
+	</container>
+
+	<container>
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <widget class="link_button" id="lnkb"  alignment="left,centre_y" appearance="buttons/custom/recommendation link/button">
+      <record id="object_property" get_property="Pers" set_property="objt" dont_set_hint="true" />
+    </widget>
+   
+    <container wants_mouse_events="false">
+      <layout class="arrange_horizontal_attachment" layout="32,-1,26" offset="10" gap="8" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+      <widget class="player_scout_recommendation_widget" width="32" show_knowledge_bar="false">
+        <record id="object_property" get_property="Psrk" set_property="objt" />
+      </widget>
+
+      <container wants_mouse_events="false">
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+        <container id="main" wants_mouse_events="false">
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+          <widget class="text" id="drtx" multiline="true" alignment="left,centre_y" colour="scout card text" wants_mouse_events="false" style="semi_bold">
+          </widget>
+        </container>
+
+        <container id="norp" wants_mouse_events="false">
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+          <widget class="text" multiline="true" alignment="left,centre_y" colour="scout card text" wants_mouse_events="false">
+            <translation id="text" translation_id="450792" type="use" value="Scout player to receive a recommendation[COMMENT: FR 21109 Scouting centre]" />
+          </widget>
+
+        </container>
+      </container>
+
+        <widget class="picture" id="mcgP" file="icons/16px/right" width="16" image_alignment="centre" red_replacement="scout card text" />
+
+    </container>
+		
+
+	</container>
+</panel>

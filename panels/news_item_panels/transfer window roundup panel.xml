@@ -1,0 +1,283 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<string id="skin_style" value="subtle box"/>
+	<container class="scrolling_box" >
+		<container id="ctbx">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!--text-->
+			<widget class="inbox_body_text" id="bdtx" auto_size="vertical"/>
+			
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--major transfers-->
+				<container class="inner_subtle_box" id="cmtb">
+					<translation id="text" translation_id="297333" type="use" value="Major Transfers"/>
+					<layout class="fit_children_attachment" alignment="vertical" offset="2" />
+					<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="5"/>
+
+					<!--major transfer 1 container-->
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+						<!--major transfer 1 info-->
+						<container class="client_object_viewer_xml_panel" id="mjtf" file="news_item_panels/transfer window roundup major transfer panel"/>
+					</container>
+
+					<!--major transfer 2 container-->
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+						<!--major transfer 2 info-->
+						<container class="client_object_viewer_xml_panel" id="mjts" file="news_item_panels/transfer window roundup major transfer panel"/>
+					</container>
+
+					<!--major transfer 3 container-->
+					<container>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+						<!--major transfer 3 info-->
+						<container class="client_object_viewer_xml_panel" id="mjtt" file="news_item_panels/transfer window roundup major transfer panel"/>
+					</container>
+				</container>
+
+				<!--failed transfers-->
+				<container class="inner_subtle_box" id="fltb" >
+					<translation id="text" translation_id="376516" type="use" value="Major Failed Transfers[COMMENT: FR 10012 transfer window roundup panel, high profile bids made that didn't end up translating into moves]"/>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+					<!--failed transfer 1 container-->
+					<container class="main_box">
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+						<!--failed transfer 1 info-->
+						<container class="client_object_viewer_xml_panel" id="mjff" file="news_item_panels/transfer window roundup failed transfer panel"/>
+					</container>
+
+					<!--failed transfer 2 container-->
+					<container class="main_box">
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+						<!--failed transfer 2 info-->
+						<container class="client_object_viewer_xml_panel" id="mjfs" file="news_item_panels/transfer window roundup failed transfer panel"/>
+					</container>
+				</container>
+
+				<!--extra info - big spenders, most active etc-->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+					<container class="inner_subtle_box" id="speB">
+						<translation id="text" translation_id="376426" type="use" value="Biggest Spenders[COMMENT: FR 10012 transfer window roundup panel]"/>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+						<!--biggest spender-->
+						<container class="client_object_viewer_xml_panel" id="bgsp">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+							<!--biggest spender info-->
+							<container class="contrast_box">
+								<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<layout class="arrange_horizontal_attachment" layout="60,-1" gap="8" offset="0"/>
+
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="oPCn"/>
+											<integer id="set_property" value="red_replacement"/>
+										</record>
+									</list>
+								</record>
+
+								<!--club badge-->
+								<widget class="object_portrait_picture" id="bspc" image_alignment="centre" scale_picture="true" height="60">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="objt"/>
+												<integer id="set_property" value="valu"/>
+											</record>
+										</list>
+									</record>
+								</widget>
+
+								<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+									<!--club name-->
+									<widget class="team_button" id="bstb" icon_enabled="false" auto_size="vertical" style="bold" mode="1">
+										<record id="object_property">
+											<list id="get_properties">
+												<record>
+													<integer id="get_property" value="objt"/>
+													<integer id="set_property" value="valu"/>
+												</record>
+												<record>
+													<integer id="get_property" value="oSCn"/>
+													<integer id="set_property" value="colour"/>
+												</record>
+											</list>
+										</record>
+									</widget>
+
+									<!--club division-->
+									<widget class="comp_button" id="bscb" icon_enabled="false" auto_size="vertical">
+										<record id="object_property">
+											<list id="get_properties">
+												<record>
+													<integer id="get_property" value="Tdiv"/>
+													<integer id="set_property" value="valu"/>
+												</record>
+												<record>
+													<integer id="get_property" value="oSCn"/>
+													<integer id="set_property" value="colour"/>
+												</record>
+											</list>
+										</record>
+									</widget>
+
+									<!--amount-->
+									<widget class="text" id="bgsa" auto_size="vertical" alignment="left,centre_y" style="bold">
+										<record id="object_property">
+											<list id="get_properties">
+												<record>
+													<integer id="get_property" value="oSCn"/>
+													<integer id="set_property" value="colour"/>
+												</record>
+											</list>
+										</record>
+									</widget>
+								</container>
+							</container>
+						</container>
+					</container>
+
+					<!--most active club-->
+					<container class="inner_subtle_box" id="mosA">
+						<translation id="text" translation_id="376524" type="use" value="Most Active[COMMENT: FR 10012 transfer window roundup panel]"/>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+						<!--text-->
+						<container id="CTbx" class="main_box">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<!--number of transfers-->
+							<widget class="text" id="CTtx" auto_size="vertical" alignment="left,centre_y" style="bold" size="15"/>
+
+							<!--total spend-->
+							<widget class="text" id="TStx" auto_size="vertical" alignment="left,top" style="bold" size="15"/>
+						</container>
+
+						<container class="client_object_viewer_xml_panel" id="macl">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+							<!--club info-->
+							<container id="moAs" class="contrast_box">
+								<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<layout class="arrange_horizontal_attachment" layout="60,-1" gap="8" offset="0"/>
+
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="oPCn"/>
+											<integer id="set_property" value="red_replacement"/>
+										</record>
+									</list>
+								</record>
+
+								<!--badge-->
+								<widget class="object_portrait_picture" id="mapc" image_alignment="centre" scale_picture="true" height="60">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="objt"/>
+												<integer id="set_property" value="valu"/>
+											</record>
+										</list>
+									</record>
+								</widget>
+
+								<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+									<!--name-->
+									<widget class="team_button" id="matb" icon_enabled="false" auto_size="vertical" style="bold">
+										<record id="object_property">
+											<list id="get_properties">
+												<record>
+													<integer id="get_property" value="objt"/>
+													<integer id="set_property" value="valu"/>
+												</record>
+												<record>
+													<integer id="get_property" value="oSCn"/>
+													<integer id="set_property" value="colour"/>
+												</record>
+											</list>
+										</record>
+									</widget>
+
+									<!--division-->
+									<widget class="comp_button" id="macb" icon_enabled="false" auto_size="vertical">
+										<record id="object_property">
+											<list id="get_properties">
+												<record>
+													<integer id="get_property" value="Tdiv"/>
+													<integer id="set_property" value="valu"/>
+												</record>
+												<record>
+													<integer id="get_property" value="oSCn"/>
+													<integer id="set_property" value="colour"/>
+												</record>
+											</list>
+										</record>
+									</widget>
+
+									<!--number of transfers-->
+									<widget class="text" id="mact" auto_size="vertical" alignment="left,centre_y" style="bold">
+										<record id="object_property">
+											<list id="get_properties">
+												<record>
+													<integer id="get_property" value="oSCn"/>
+													<integer id="set_property" value="colour"/>
+												</record>
+											</list>
+										</record>
+									</widget>
+								</container>
+							</container>
+						</container>
+					</container>
+
+				</container>
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" vertical_offset="0" horizontal_alignment="right" horizontal_inset="0" />
+					<widget class="link_appearance_button" id="vtlk" click_event="LkTt">
+						<translation id="text" translation_id="376655" type="use" value="View Transfers[COMMENT: FR 10012 - transfer roundup news item - major transfer - view transfers]"/>
+					</widget>
+				</container>
+
+
+
+			</container>
+		</container>
+	</container>
+</panel>

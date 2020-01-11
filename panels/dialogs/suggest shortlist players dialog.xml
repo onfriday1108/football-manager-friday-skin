@@ -1,0 +1,63 @@
+﻿<panel width="900" height="600">
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<container >
+		<layout class="arrange_vertical_attachment" alignment="top,extend" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<widget class="text" id="text" auto_size="vertical" />
+
+		<widget class="client_object_list_table" id="tabl" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" select_event="espa"  fixed_size_rows="true" row_height="55">
+			<flags id="current_view" value="ovvw" />
+
+			<list id="views">
+				<record id="ovvw">
+					<translation id="name" translation_id="247414" type="use" value="Overview" />
+					<record id="view">
+						<flags id="PSpi" />
+						<!-- player status/info -->
+						<flags id="PNaN" />
+						<!-- player name/nation -->
+						<flags id="PCaD" />
+						<!-- player club/division -->
+						<flags id="PpsP" />
+						<!-- person position-->
+						<flags id="PSag" />
+						<!-- person age -->
+						<flags id="Poav" />
+						<!-- overall average rating -->
+						<flags id="Pcww" />
+						<!-- weekly wage -->
+						<flags id="Pdva" />
+						<!-- value -->
+						<flags id="Pmxa" />
+						<!-- max asking price -->
+						<flags id="Psrk" />
+						<!-- recommended -->
+					</record>
+
+				</record>
+			</list>
+		</widget>
+	</container>
+
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="icon_button" id="canc" auto_size="horizontal">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+			<record id="click_event">
+				<flags id="event_id" value="canc" />
+			</record>
+		</widget>
+
+		<widget class="primary_icon_button" id="ok  " auto_size="horizontal" icon="icons/16px/search" height="30" disabled="true">
+			<translation id="text" translation_id="243350" type="use" value="Add To Shortlist"/>
+			<record id="click_event">
+				<flags id="event_id" value="ok  " />
+			</record>
+		</widget>
+	</container>
+	
+</panel>

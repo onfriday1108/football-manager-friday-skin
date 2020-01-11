@@ -1,0 +1,78 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at05"/>
+		<record entity_layout_id="at02"/>
+		<record entity_layout_id="at04"/>
+		<record entity_layout_id="at03"/>
+	</list>
+	<string id="row_normal_appearance" value="boxes/custom/training calendar/week/paper"/>
+	<string id="row_highlighted_appearance" value="boxes/custom/training calendar/current week/paper"/>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container class="main_box_no_margin" entity_layout_id="at00" id="subB" sub_group_id="0">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<container class="training_schedule_week_widget" entity_layout_id="at04" id="schT" file="widgets/training schedule week widget intensity" name="schedule week table" force_update_table="true">
+			<string id="session_description_column" value="true"/>
+			<boolean id="shortened" value="true"/>
+			<string id="draggable" value="true"/>
+			<string id="clickable" value="true"/>
+			<string id="schedule_session_widget_file" value="widgets/training schedule large session widget"/>
+			<string id="schedule_header_file" value="widgets/training schedule day month header"/>
+			<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main"/>
+		</container>
+		<widget class="text" entity_layout_id="at05" alignment="centre_y,left" id="txtL" font="title" auto_size="horizontal" name="week text" embed_in_frame="true" needs_width="true" height="32">
+			<layout class="stick_to_object_attachment" id="align_top" embed_in_frame="true" offset="2" get_side="top" set_side="top" move_side="true" target="fmin"/>
+			<layout class="stick_to_object_attachment" id="align_left" embed_in_frame="true" offset="30" get_side="left" set_side="left" move_side="true" target="fmin"/>
+		</widget>
+		<container class="inner_box_no_margin" entity_layout_id="at02" id="schB" sub_group_id="0" embed_in_frame="true" width="297" height="30">
+			<layout class="stick_to_object_attachment" id="align_top" embed_in_frame="true" offset="3" get_side="top" set_side="top" move_side="true" target="fmin"/>
+			<layout class="stick_to_object_attachment" id="align_left" embed_in_frame="true" offset="30" get_side="right" set_side="left" move_side="true" target="at05"/>
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true"/>
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+			</widget>
+			<widget class="widget_popup_button" entity_layout_id="at03" id="scBu" icon_alignment="centre_y,right" show_button_appearance="true" alignment="centre_y,left" name="schedule name popup" appearance="buttons/custom/training/week schedule/button">
+				<string id="style" value="bold"/>
+				<string id="popup_alignment" value="top,left"/>
+				<string id="widget_type" value="calendar_week_schedule_selector_popup"/>
+				<string id="colour" value="text"/>
+				<integer id="size" value="8"/>
+				<string id="font" value="title"/>
+				<record id="widget_properties" height="400" width="900"/>
+				<record id="modal_popup_properties">
+					<string id="darkened" value="false"/>
+					<string id="attempt_to_reposition" value="true"/>
+				</record>
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" offset="1" get_side="left" set_side="left" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_right" offset="-9" get_side="right" set_side="right" target="main"/>
+			</widget>
+		</container>
+	</container>
+</panel>

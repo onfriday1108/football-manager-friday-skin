@@ -1,0 +1,107 @@
+<panel>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<attachment_group class="horizontal_arrange_vertical_autosize"  horizontal_layout="260, -1"/>
+
+	<container  id="infc" >
+		<attachment_group class="vertical_arrange_autosize" />
+		<container class="inbox_mini_profile_player_details_panel" id="psdt" />
+
+		<!-- additional information boxes will be added to this container -->
+	</container>
+
+	<container id="tpcn" gap="0" inset="0" offset="0">
+
+		<attachment_group class="vertical_arrange_autosize" />
+
+		<container class="main_contrast_box" red_replacement="negative bg">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="17" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container class="horizontal_arrange_container" auto_size="vertical" inset="0" offset="0" gap="0" layout="-1,-2">
+				<widget class="text" auto_size="vertical" font="label" >
+					<translation id="text" translation_id="336005" type="use" value="Last Offer Amount[COMMENT: transfers unwanted list; column header, last offer received for player]"/>
+				</widget>
+				<widget class="text" id="rrtl" auto_size="vertical" font="label" >
+					<translation id="text" translation_id="336019" type="use" value="Reject Reason[COMMENT: transfers lists; column header, reason a deal was rejected]"/>
+				</widget>
+			</container>
+
+			<container class="horizontal_arrange_container" auto_size="vertical" inset="0" offset="0" gap="0" layout="-1,-2">
+				<widget class="value_label" id="lofa" auto_size="all" font="value">
+					<translation id="text" translation_id="249426" type="use" value="N/A[COMMENT: Not Applicable, abbreviation]"/>
+				</widget>
+				<widget class="label" id="rjrs" auto_size="all" font="value">
+					<translation id="text" translation_id="249426" type="use" value="N/A[COMMENT: Not Applicable, abbreviation]"/>
+				</widget>
+			</container>
+		</container>
+
+		<container class="inner_subtle_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="17" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container class="horizontal_arrange_container" auto_size="vertical" inset="0" offset="0" gap="0" layout="-1, -1, -1">
+				<widget class="text" spec="text" size="large" auto_size="vertical" font="label" >
+					<translation id="text" translation_id="247495" type="use" value="Player Value"/>
+				</widget>
+				<widget class="text" auto_size="vertical" font="label">
+					<translation id="text" translation_id="227799" type="use" value="Wage" />
+				</widget>
+				<widget class="text" auto_size="vertical" font="label">
+					<translation id="text" translation_id="227784" type="use" value="Expires" />
+				</widget>
+			</container>
+
+			<container class="horizontal_arrange_container" auto_size="vertical" inset="0" offset="0" gap="0" layout="-1, -1, -1">
+				<widget class="value_label" id="plvl" auto_size="all" font="value">
+					<translation id="text" translation_id="249426" type="use" value="N/A[COMMENT: Not Applicable, abbreviation]"/>
+				</widget>
+				<widget class="label" id="wagw" auto_size="all" font="value" >
+					<translation id="text" translation_id="249426" type="use" value="N/A[COMMENT: Not Applicable, abbreviation]"/>
+				</widget>
+				<widget class="label" id="conw" auto_size="all" font="value" >
+					<translation id="text" translation_id="249426" type="use" value="N/A[COMMENT: Not Applicable, abbreviation]"/>
+				</widget>
+			</container>
+		</container>
+
+    <container class="vertical_arrange_container" id="btcn" auto_size="all" gap="0">
+      <container height="15"/>
+
+      <container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1"/>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" />
+					
+					<widget  class="label" spec="text" colour="text" font="fonts/inbox_body" size="11" auto_size="vertical">
+						<translation id="text" translation_id="316794" type="use" value="Type[COMMENT: default properties.xml; list header to describe the type of game object shown - a game object is anything the user can interact with]"/>
+						<translation id="hint" translation_id="336071" type="use" value="Transfer Type[COMMENT: transfer lists; column header, type of transfer proposed for a player]"/>
+					</widget>
+
+					<widget class="popup_button" id="trtp" select_event="typc" auto_size="vertical"/>
+					
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" />
+					
+					<widget class="label" id="amtl" spec="text" colour="text" font="fonts/inbox_body" size="11" auto_size="vertical"/>
+
+					<widget class="cash_selection_list" id="maca" select_event="ofvc" auto_size="vertical"/>
+
+					<container height="15"/>
+
+					<widget class="action_button_news" id="stin" click_event="stin" auto_size="vertical">
+						<translation id="text" translation_id="375960" type="use" value="Set Instructions[COMMENT: FR 7443; transfer listed player fails to attract offers news item; button text to apply changes to acceptible offer types and values]"/>
+					</widget>
+				</container>
+				
+
+      </container>
+    </container>
+	</container>
+
+  
+
+
+</panel>

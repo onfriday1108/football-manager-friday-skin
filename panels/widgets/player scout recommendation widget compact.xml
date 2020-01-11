@@ -1,0 +1,48 @@
+﻿<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+
+	<widget class="text" alignment="centre" id="norp" multiline="false" colour="faded text" auto_size="vertical" auto_size_minimum_height="27">
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+		<string id="text" value="-" />
+	</widget>
+
+
+
+	<container id="rpco" hidden="true">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="2" gap="4" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="3" gap="0" />
+		<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+
+		<container height="26" width="26">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="picture" id="icon" file="icons/custom/scouting/recommendation compact" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" height="26">
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+			</widget>
+
+			<widget class="text" alignment="centre" style="semi_bold, shadowed" size="8" colour="white">
+				<record id="object_property" get_property="Pscr" set_property="valu" />
+			</widget>
+
+
+		</container>
+
+		<container class="main_box" appearance="boxes/custom/scouting knowledge/paper" height="12" id="hbar">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="horizontal_percentage_bar" height="4" maximum_value="100" bar_value_colour="knowledge level" show_label_on_bar="false" label_width="0" appearance="charts/bar/custom/knowledge">
+				<layout class="centre_in_parent_attachment" alignment="vertical" />
+				<record id="object_property" get_property="PsKL" set_property="minv" />
+				<record id="object_property" get_property="PsKL" set_property="valu" />
+			</widget>
+		</container>
+
+	</container>
+
+	<widget class="link_button" id="lnkb" section="Pssr" alignment="left,centre_y" appearance="buttons/custom/over state only/button" hidden="true">
+
+	</widget>
+
+</panel>

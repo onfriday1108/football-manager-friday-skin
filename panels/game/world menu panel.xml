@@ -1,0 +1,39 @@
+<panel>
+	<!-- World Menu-->
+	
+	<!-- Tell our containing modal popup that we want a delay when closing to finish our animation -->
+	<real id="delay_modal_close" value="0.06" />
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!-- Slide on from above the screen -->
+	<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,-0.7" end_value="0,0" duration="0.1" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
+
+	<!--menubar-->
+	<container height="40">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- coloured actions bar image -->
+		<widget class="main_contrast_box" id="ACTb" red_replacement="light_box_background"/>
+
+		<container class="world_tab_menu_strip" id="BrMe"/>
+	</container>
+
+	<!--container for the panels we can browse with-->
+	<container class="main_contrast_box" id="body" red_replacement="box_background" blue_replacement="box_background">
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="client_object_link_explorer" id="expl" height="400"/>
+
+		<!--continent menu-->
+		<widget class="continent_menu_panel" id="cont" hidden="true" />
+
+		<!--nation menu-->
+		<widget class="nation_menu_panel" id="nati" hidden="true"/>
+
+		<!--bookmarks menu-->
+		<widget class="bookmarks_menu_panel" id="book" hidden="true"/>
+	</container>
+</panel>

@@ -1,0 +1,25 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="client_object_list_table" id="pltb" mode="fill_rows, stripe_rows" database_table_type="1" default_sort_column="Pcte">
+		<record id="object_property">
+			<!-- PROP_COMP_MEDIA_PLAYERS_TO_WATCH -->
+			<integer id="get_property" value="Cptw"/>
+			<integer id="set_property" value="objL"/>
+			<boolean id="dont_set_object" value="true"/>
+		</record>
+
+		<record id="viewed_property_ids">
+			<!-- team -->
+			<record id="Pcte" auto_hide_priority="1" multiline="false"/>
+			<!-- name -->
+			<record id="Pnms" auto_hide_priority="2" multiline="false"/>
+			<!-- nationality -->
+			<record id="Pnat" auto_hide_priority="3" multiline="false"/>
+			<!-- position -->
+			<record id="PpsC" auto_hide_priority="4" multiline="false"/>
+			<!-- value -->
+			<record id="Pdva" auto_hide_priority="101" multiline="false"/>
+		</record>
+	</widget>
+</panel>

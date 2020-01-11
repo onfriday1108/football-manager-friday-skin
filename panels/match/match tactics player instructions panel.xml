@@ -1,0 +1,19 @@
+<panel>
+
+  <!--these are parameters that are passed to the panel from link events-->
+  <list id="PRAM">
+    <integer value="TsIx" />
+  </list>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="main_transparent_box_no_margin">
+
+	  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+
+	  <widget class="tactics_player_instructions_panel" id="tacc" file="tactics/tactics player instructions panel" />
+
+  </container>
+
+
+</panel>

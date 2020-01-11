@@ -1,0 +1,38 @@
+<panel>
+
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="6" />
+
+		<widget class="label" id="rptl" auto_size="vertical" font="label">
+			<translation id="text" translation_id="361067" type="use" value="Assistant Report[COMMENT: FR 6571; panel title for assistant's rating of newly signed player]"/>
+		</widget>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_gap="8"/>
+			<!--potential ability-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+
+				<widget class="scout_stars_label" id="cast" auto_size="all" />
+				<widget class="player_scout_recommendation_widget" id="RCic" auto_size="all" />
+
+				<widget class="label" id="noss" auto_size="all" colour="text" hidden="true" alignment="centre">
+					<translation id="text" translation_id="249426" type="use" value="N/A[COMMENT: Not Applicable, abbreviation]"/>
+				</widget>
+				<widget class="text" id="sctx" auto_size="vertical" alignment="centre"/>
+			</container>
+			<!--potential ability-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+
+				<widget class="scout_stars_label" id="Past" auto_size="all" />
+				<widget class="label" id="nops" auto_size="all" colour="text" hidden="true" alignment="centre">
+					<translation id="text" translation_id="249426" type="use" value="N/A[COMMENT: Not Applicable, abbreviation]"/>
+				</widget>
+				<widget class="text" id="sptx" auto_size="vertical" alignment="centre"/>
+			</container>
+		</container>
+
+
+
+
+</panel>

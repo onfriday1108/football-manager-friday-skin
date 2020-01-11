@@ -1,0 +1,38 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="TPTI" set_property="TPTI" target="tsat" /> 
+		<record get_property="Ttea" set_property="Ttea" target="tsat" />  
+	</list>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container id="noTC" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="text" alignment="centre_y,left" >
+				<translation id="text" translation_id="466510" type="use" value="No Primary Tactic Selected[COMMENT: Training Overview - Primary Tactic]" />
+			</widget>
+		</container>
+		<container id="tacC">
+			<layout class="arrange_horizontal_attachment" layout="50,-1" offset="0"  />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+
+			<widget class="picture" file="icons/48px/primary tactic" image_alignment="centre" scale_picture="false" />
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+				<widget class="text" font="title" colour="faded text" alignment="left, centre_y" size="small"  auto_size="all">
+					<translation id="text" translation_id="466511" type="use" value="Primary Tactic[COMMENT: Training Overview - Primary Tactic]" />
+				</widget>
+
+				<widget class="widget_popup_button" id="tacw" appearance="buttons/subtle/normal/button" auto_size="all" >
+					<string id="popup_alignment" value="left,bottom" />
+					<!-- <string id="icon" value="icons/16px/tactics" />-->
+					<string id="widget_type" value="property_list_viewer_xml_panel" />
+					<record id="widget_properties" file="tactics/primary youth team tactic slot tab popup" />
+					<record id="modal_popup_properties" file="modal popup panel auto sized">
+						<string id="darkened" value="false" />
+					</record>
+				</widget>
+			</container>
+	</container>
+</panel>

@@ -1,0 +1,54 @@
+<!-- A panel used for displaying a ranked list of stats about players in a competition -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="main_box" id="stit" wants_mouse_events="false">
+		<attachment_group class="vertical_arrange" vertical_layout="20,-1" vertical_gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!-- Stat selector button -->
+		<container embed_in_frame="true">
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" embed_in_frame="true"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" embed_in_frame="true"/>
+
+			<widget class="popup_button" id="view" appearance="buttons/custom/customise panel/button" fixed="true" auto_tick_exclusive="true" auto_size="all" embed_in_frame="true">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="32" embed_in_frame="true"/>
+				<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true"/>
+			</widget>
+		</container>
+
+
+		<widget class="spacer" />
+
+		<!-- Table showing the data-->
+		<widget class="object_list_table" id="stat" mode="hide_headings" row_height="25">
+			<list id="column_table_properties">
+				<!-- Ranking -->
+				<record id="csRN" width="40">
+					<record id="widget_info" class="sortable_text" size="large" style="bold" alignment="left,centre_y"/>
+				</record>
+				<!-- Team badge-->
+				<record id="badg" width="40" top="2" bottom="2">
+					<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre"/>
+				</record>
+				<!-- Team name -->
+				<record id="Ttea" width="-1" dont_set_object="true">
+					<record id="widget_info" class="team_button" icon_enabled="false"/>
+				</record>
+				<!-- Short stat value -->
+				<record id="csSS" width="70">
+					<record id="widget_info" class="text" style="bold" alignment="right,centre_y"/>
+				</record>
+			</list>
+
+			<record id="viewed_property_ids">
+				<record id="csRN" />
+				<record id="badg" />
+				<record id="Ttea" />
+				<record id="csSS" />
+			</record>
+		</widget>
+	</container>
+</panel>
+
+

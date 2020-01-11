@@ -1,0 +1,9 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+  
+  <container id="icbx">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+    <!-- inbox content panel gets added here -->
+    
+  </container>
+</panel>

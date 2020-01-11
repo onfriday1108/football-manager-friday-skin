@@ -1,0 +1,29 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="8" gap="8"/>
+
+	<widget class="object_portrait_picture" id="teaP" width="24" height="24" image_alignment="centre" scale_picture="true" >
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+	</widget>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+
+		<widget class="fixture_name_text" id="comT" auto_size="vertical" font="title" hidden="true" size="small" alignment="left" colour="faded text" multiline="true" />
+
+		<widget class="text" id="teaF" auto_size="vertical" size="small" hidden="true" style="semi_bold" multiline="true" colour="text" navigation_focus_target="true">
+			<record id="auto_size_restrictions">
+				<string id="type" value="property"/>
+				<string id="limit_type" value="maximum"/>
+				<string id="orientation" value="vertical"/>
+				<flags id="target" value="teaF"/>
+				<integer id="value" value="3"/>
+				<flags id="property" value="restrict_to_lines"/>
+			</record>
+		</widget>
+		<widget class="link_text" id="likT" auto_size="vertical" size="small" hidden="true" style="semi_bold" multiline="true" colour="text" navigation_focus_target="true"/>
+
+		<widget class="text" id="venU" auto_size="vertical" size="xsmall" hidden="true" colour="text" multiline="true"/>
+	</container>
+</panel>

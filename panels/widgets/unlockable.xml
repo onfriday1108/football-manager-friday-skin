@@ -1,0 +1,96 @@
+<panel height="230" width="400">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_subtle_box" id="PpR ">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		<layout class="arrange_vertical_attachment" layout="55,-1" offset="0" />
+
+		<container>
+
+			<layout class="arrange_horizontal_attachment" layout="50,-1, 60" offset="0" />
+
+			<widget class="picture" id="pict" height="50" scale_picture="true">
+				<layout class="centre_in_parent_attachment" alignment="vertical" />
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre" />
+			</widget>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+				<widget class="label" id="titl" font="capitals_bold" colour="store_dialog_text" auto_size="vertical" />
+				<widget class="label" id="unty" colour="store_dialog_text" auto_size="vertical" />
+			</container>
+
+			<!--New icon-->
+			<widget class="picture" id="new" height="60" scale_picture="true">
+				<layout class="centre_in_parent_attachment" alignment="vertical" />
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre" />
+			</widget>
+
+		</container>
+		
+		<container id="TeMp">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<widget class="label" id="desc" alignment="left,top" colour="text" multiline="true" disabled_colour="faded text" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize"/>
+
+				<container id="inic">
+					<layout class="centre_in_parent_attachment" offset="0" alignment="vertical" apply_to_children="true" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="8" />
+
+					<widget class="button" id="prtg" size="large" colour="grey" auto_size="all" appearance="" />
+
+					<widget class="button" id="acbt" auto_size="all" click_event="raiC" appearance="buttons/custom/store/primary/normal/button">
+						<translation id="text" translation_id="424587" type="use" value="Add to Cart[COMMENT: store dialog; text to appear on a button to add a purchasable item to your cart]" />
+					</widget>
+
+				</container>
+
+				<container id="iaic" >
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+					<widget class="label" auto_size="all" colour="white">
+						<translation id="text" translation_id="333894" type="use" value="Item is already in Cart[COMMENT: store dialog; info text informing the user that they already have an instance of a purchasable item in their cart]" />
+					</widget>
+
+				</container>
+
+				<container id="ialp">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="8" />
+
+					<widget class="label" id="alpr" auto_size="all" colour="white">
+						<translation id="text" translation_id="333671" type="use" value="Already Purchased[COMMENT: store dialog text; text indicating user has already purchased an item available in the store]" />
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+					</widget>
+					<widget class="label" id="unlc" auto_size="all" colour="white">
+						<translation id="text" translation_id="339235" type="use" value="Unlocked[COMMENT: store dialog text; text indicating user has already unlocked an item available in the store]" />
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+					</widget>
+
+					<widget class="button" id="vwwl" auto_size="all" appearance="buttons/custom/store/primary/normal/button" red_replacement="wallet_colour" green_replacement="wallet_colour" blue_replacement="deep purple 500" colour="black" click_event="view">
+						<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" />
+						<translation id="text" translation_id="424588" type="use" value="View Wallet[COMMENT: store dialog text; link to Users store wallet]" />
+					</widget>
+
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

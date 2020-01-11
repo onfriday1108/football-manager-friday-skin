@@ -1,0 +1,23 @@
+<panel height="200">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!-- group box of fixed height-->
+
+	<!-- table -->
+	<widget class="table" id="tabl" mode="fill_rows, stripe_rows" layout="-1,75,75,10,-1,75,75">
+		<list id="column_table_properties">
+			<record index="0" top="2" bottom="2"/>
+			<record index="1" top="2" bottom="2" alignment="left,centre_y" />
+			<record index="2" top="2" bottom="2" />
+			<record index="3" top="2" bottom="2"/>
+			<record index="4" top="2" bottom="2"/>
+			<record index="5" top="2" bottom="2" alignment="left,centre_y" />
+			<record index="6" top="2" bottom="2" />
+		</list>
+
+		<list id="column_widget_properties">
+			<record index="2" top="2" bottom="2" alignment="right,centre_y" spec="text" multiline="false"/>
+			<record index="6" top="2" bottom="2" alignment="right,centre_y" spec="text" multiline="false"/>
+		</list>
+	</widget>
+</panel>

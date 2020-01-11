@@ -1,0 +1,52 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<!--Text showing what the board reckon to budget change requests-->
+	<widget class="text" auto_size="vertical" id="Scbt" multiline="true" spec="text" size="normal" />
+
+
+	<container id="bacS">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle,extend" horizontal_offset="0" horizontal_gap="10" vertical_inset="0" />
+
+		<container>
+			<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+
+			<widget class="label" auto_size="all" font="title" colour="secondary_text" alignment="left,bottom">
+				<translation id="text" translation_id="443653" type="use" value="Scouting Budget[COMMENT:Scouting budget label]" />
+			</widget>
+
+			<widget class="cash_cell" id="cusb" auto_size="vertical" width="135" format="[%cash#1-long-roundnone]" size="large" />
+		</container>
+
+		<!--sliders for adjusting transfer/scouting budgets-->
+		<widget class="slider_horizontal" id="bsls" disabled="true" changed_event="sbch" height="20">
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" />
+		</widget>
+
+		<container>
+			<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+
+			<widget class="label" auto_size="all" font="title" colour="secondary_text" alignment="right,bottom">
+				<translation id="text" translation_id="291309" type="use" value="Transfer Budget[COMMENT:Transfer budget label]" />
+			</widget>
+
+			<widget class="cash_cell" id="ctb2" auto_size="vertical" width="135" format="[%cash#1-long-roundnone]" size="large" alignment="right,centre_y" />
+		</container>
+	</container>
+
+
+	<!--Edit/commit/undo buttons-->
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="button" id="caba" auto_size="all" click_event="caba" disabled="true">
+			<translation id="text" translation_id="229828" type="use" value="Cancel" />
+		</widget>
+		<widget class="primary_icon_tick_button" id="coba" auto_size="all" click_event="coba" disabled="true">
+			<translation id="text" translation_id="229918" type="use" value="Confirm" />
+		</widget>
+
+	</container>
+</panel>

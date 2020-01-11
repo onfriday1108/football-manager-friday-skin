@@ -1,0 +1,54 @@
+<panel width="555">
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+
+	<!-- add custom icon to top right corner of dialog (actual icon image gets set in code) -->
+	<widget class="picture" id="cico" auto_size="all" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true" />
+	</widget>
+
+	<!-- arrange items vertically, with text at top -->
+	<layout class="arrange_vertical_attachment" alignment="top" gap="8" />
+
+	<!-- the height of the dialog has now been set, so centre the dialog vertically -->
+	<layout class="centre_in_parent_attachment" alignment="vertical" />
+
+	<!-- fit the height of the dialog to the height of its components -->
+	<layout class="fit_children_attachment" alignment="vertical,fill" gap="8" />
+
+	<!-- stretch everything to the sides of the dialog -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+	<!-- first we centre the dialog horizontally, the width will not change so this will position the dialog correctly -->
+	<layout class="centre_in_parent_attachment" alignment="horizontal" />
+
+	<!-- text field - should resize vertically to ensure
+	     that it's contents fit -->
+	<widget class="text" id="text" auto_size="vertical" alignment="centre" />
+
+	<!-- editable text field - normally hidden -->
+	<!-- by default the return action does the same as clicking ok -->
+	<widget class="edit_box" id="edit" hidden="true" return_event="ok" ask_for_focus="true" />
+
+	<!-- timeout label - normally hidden -->
+	<widget class="text" id="time" hidden="true" auto_size="vertical" />
+
+	<container>
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="icon_button" id="yes" hidn="true" event_id="yes" height="30" auto_size="horizontal">
+			<translation id="text" translation_id="435774" type="use" value="New Competition[COMMENT: FR 18754; button for creating a new fantasy draft or versus competition]" />
+		</widget>
+
+		<widget class="button" id="no" hidn="true" event_id="no" height="30" auto_size="horizontal">
+			<translation id="text" translation_id="327247" type="use" value="Quit to Start Screen[COMMENT: Menu option to exit current game and return to start screen]" />
+		</widget>
+
+		<widget class="button" id="canc" hidn="true" event_id="canc" height="30" auto_size="horizontal">
+			<translation id="text" translation_id="249644" type="use" value="Close[COMMENT - Button to close tutorial dialog]" />
+			<record id="click_event">
+				<flags id="event_id" value="canc" />
+			</record>
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,19 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<container class="main_box">
+		<translation id="title" translation_id="339120" type="use" value="Show Clubs[COMMENT - club reputation filter panel, filter title]" />
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="left" horizontal_inset="0" />
+
+		<widget class="radio_button" id="majo" auto_size="horizontal">
+			<translation id="text" translation_id="339058" type="use" value="Major[COMMENT - club reputation filter text, for major clubs]" />
+		</widget>
+		<widget class="radio_button" id="mino" auto_size="horizontal">
+			<translation id="text" translation_id="339057" type="use" value="Major and Minor[COMMENT - club reputation filter text, for major and minor clubs]" />
+		</widget>
+		<widget class="radio_button" id="all " auto_size="horizontal">
+			<translation id="text" translation_id="338919" type="use" value="All[COMMENT - club reputation filter text, for all clubs]" />
+		</widget>
+	</container>
+
+</panel>

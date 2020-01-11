@@ -1,0 +1,28 @@
+<panel>
+  <string id="skin_style" value="title link" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="inner_box_no_margin" id="cPan">
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+
+    <widget class="link_button" id="txCn" section="tacO" auto_size="all" alignment="left,centre_y">
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+      <translation id="text" translation_id="346873" type="use" value="Tactics Being Trained[COMMENT: match preparation news item; section heading for tactic preparation choice]" />
+
+      <record id="object_property">
+        <list id="get_properties">
+          <record>
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </list>
+      </record>
+      
+    </widget>
+
+    <widget class="tactic_slot_tab_container" id="prep" file="tactics/tactic slot tab container training news">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+    </widget>
+	</container>
+</panel>

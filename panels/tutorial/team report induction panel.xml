@@ -1,0 +1,42 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+
+
+	<container height="320">
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" horizontal_gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		<!--Pros-->
+		<container class="inner_subtle_box" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="main_contrast_box" height="30" red_replacement="pro high">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+				<widget class="text" auto_size="vertical" alignment="left" font="title" colour="white">
+					<translation id="text" translation_id="420664" type="use" value="Strengths[COMMENT: team report, strengths (positives) section]" />
+				</widget>
+			</container>
+
+			<widget class="table" mode="fill_rows" id="pros" layout="-1" inset="0"  fixed_size_rows="false" row_height="20" auto_size_rows="true" />
+		</container>
+		<!--Cons-->
+		<container class="inner_subtle_box" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="6"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="main_contrast_box" height="30" red_replacement="con high">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+				<widget class="text" auto_size="vertical" alignment="left" font="title" colour="white">
+					<translation id="text" translation_id="420665" type="use" value="Weaknesses[COMMENT: team report, weaknesses (negatives) section]" />
+				</widget>
+			</container>
+
+			<widget class="table" mode="fill_rows" id="cons" layout="-1" inset="0"  fixed_size_rows="false" row_height="20" auto_size_rows="true" />
+		</container>
+	</container>
+</panel>

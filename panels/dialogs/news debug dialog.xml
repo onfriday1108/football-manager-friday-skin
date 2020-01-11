@@ -1,0 +1,145 @@
+<panel id="dlog" width="900" height="750">
+	<layout class="arrange_vertical_attachment" layout="32, 32, 50, -1, 30, 100, 32, 32, 32, 32"/>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+	<string id="title" value="News Debug"/>
+
+	<!-- list of news items sorted by id -->
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" layout="150, -1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="text" auto_size="vertical" width="150" alignment="left,centre_y">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			<string id="text" value="Listed by ID"/>
+		</widget>
+
+		<widget class="popup_button" id="idls" fixed="false" auto_size="all">
+			<string id="text" value="Pick"/>
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+		</widget>
+	</container>
+
+	<!-- list of news items sorted by category -->
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" layout="150, -1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="text" auto_size="vertical" width="150" alignment="left,centre_y">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+			<string id="text" value="Listed by category"/>
+		</widget>
+
+		<widget class="popup_button" id="ctls" fixed="false" auto_size="all">
+			<string id="text" value="Pick"/>
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+		</widget>
+	</container>
+
+	<!-- headline text -->
+	<container height="75">
+		<layout class="arrange_horizontal_attachment" layout="155, -1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<widget class="text" auto_size="vertical" width="155" alignment="left,centre_y">
+			<string id="text" value="Headline:"/>
+			<layout class="stick_to_sides_attachment" alignment="top"/>
+		</widget>
+
+		<widget class="text" id="hltw" auto_size="all" alignment="left,centre_y">
+			<layout class="stick_to_sides_attachment" alignment="vertical"/>
+		</widget>
+	</container>
+
+	<!-- editable values list -->
+	<widget class="table" id="dett" layout="-1, -1" auto_size_rows="false" fixed_size_rows="true" row_height="30" auto_size="vertical">
+		<list id="headings">
+			<record>
+				<string id="text" value="Info"/>
+			</record>
+			<record>
+				<string id="text" value="Value"/>
+			</record>
+		</list>
+	</widget>
+
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+
+		<widget class="text" auto_size="all" alignment="left,centre_y">
+			<layout class="stick_to_sides_attachment" alignment="horizontal"/>
+			<string id="text" value="Messages"/>
+		</widget>
+
+		<widget class="button" id="OutM" click_event="OutM" auto_size="all" disabled="true">
+			<string id="text" value="Output messages to text file"/>
+			<string id="hint" value="Output the contents of the message box to a text file, found at AppData/Local/Sports Interactive/Football Manager 2020/Logs/Temp/news item debug message box output.log"/>
+		</widget>
+	</container>
+	
+	<container class="scrolling_box" id="scrl">
+		<!-- somewhere to display messages from the news items -->
+		<widget class="text" id="msgw" auto_size="all" alignment="left,centre_y">
+			<layout class="stick_to_sides_attachment" alignment="horizontal"/>
+		</widget>
+	</container>
+
+	<!-- generate news items -->
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+
+		<widget class="button" click_event="gePI" auto_size="all">
+			<string id="text" value="Generate Personal Internal (Inbox)"/>
+			<string id="hint" value="Create the selected NEWS_ITEM and deliver it to the inbox panel as an internal, personal email item (if applicable)."/>
+		</widget>
+
+		<widget class="button" click_event="gePE" auto_size="all">
+			<string id="text" value="Generate Personal External (Inbox)"/>
+			<string id="hint" value="Create the selected NEWS_ITEM and deliver it to the inbox panel as an external, personal email item (if applicable)."/>
+		</widget>
+
+		<widget class="button" click_event="gePM" auto_size="all">
+			<string id="text" value="Generate Personal Media (Inbox)"/>
+			<string id="hint" value="Create the selected NEWS_ITEM and deliver it to the inbox panel as a forwarded news item (if applicable)."/>
+		</widget>
+	</container>
+
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+
+		<widget class="button" click_event="geSN" auto_size="all">
+			<string id="text" value="Generate Subscribed News (News Feed/Comp News)"/>
+			<string id="hint" value="Create the selected NEWS_ITEM and deliver it to the relevent news panel as a news item (if applicable)."/>
+		</widget>
+
+		<widget class="button" click_event="geSS" auto_size="all">
+			<string id="text" value="Generate Subscribed Social (Social Feed)"/>
+			<string id="hint" value="Create the selected NEWS_ITEM and deliver it to the social feed panel as a social item (if applicable)."/>
+		</widget>
+	</container>
+
+	<!-- some tests -->
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+
+		<widget class="button" click_event="NDtd" auto_size="all">
+			<string id="text" value="Test all debug_setup()"/>
+			<string id="hint" value="Check all NEWS_ITEMs have a debug_stup() function used to populate data for the News Debug, and it's returning true (though this may be misleading as some coders are setting it to return true without bothering to populate the data). Please report any crashes or asserts to the owner of the NEWS_ITEM indicated by the call stack."/>
+		</widget>
+
+		<widget class="button" click_event="NDta" auto_size="all">
+			<string id="text" value="Test all add news"/>
+			<string id="hint" value="Check all NEWS_ITEMs can be created and sent to the human player correctly. Please report any crashes or asserts to the owner of the NEWS_ITEM indicated by the call stack."/>
+		</widget>
+
+		<widget class="button" id="canc" auto_size="all">
+			<layout class="stick_to_sides_attachment" alignment="right"/>
+			<string id="text" value="Close"/>
+		</widget>
+	</container>
+
+</panel>

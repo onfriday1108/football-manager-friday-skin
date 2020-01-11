@@ -1,0 +1,18 @@
+﻿<panel height="65">
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<container class="inner_box" appearance="buttons/standard/normal/button" id="STtb">
+		<layout class="arrange_horizontal_attachment" layout="-1, 15" offset="0" gap="0" do_not_size="true"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+		<layout class="centre_in_parent_attachment" alignment="vertical"/>
+
+		<widget class="text" id="Stts" height="35" alignment="centre" size="small" colour="faded text" multiline="true">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+		</widget>
+
+		<widget class="button" id="VwOf" height="25" alignment="left, centre_y" appearance="icons/16px/right">
+			<layout class="centre_in_parent_attachment" alignment="vertical"/>
+		</widget>
+	</container>
+
+</panel>

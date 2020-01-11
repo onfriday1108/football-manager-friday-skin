@@ -1,0 +1,76 @@
+<panel>
+	<set_var name="term_gap">
+		<integer value="4" />
+	</set_var>
+
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend"/>
+
+		<widget class="icon_button" id="nego" click_event="chek" icon="icons/lock/button_off" appearance="buttons/embedded/normal/button" auto_size="horizontal">
+
+		</widget>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right"/>
+
+			<!--action buttons-->
+			<widget class="popup_button" id="bonp" sele="bonp" icon="icons/16px/plus" icon_alignment="left" auto_size="all" fixed="true">
+				<record id="primary_icon_properties" red_replacement="normal_icon" />
+				<translation id="text" translation_id="308452" type="use" value="Add Bonus" />
+			</widget>
+
+			<widget class="popup_button" id="clap" sele="clap" icon="icons/16px/plus" icon_alignment="left" auto_size="all" fixed="true">
+				<record id="primary_icon_properties" red_replacement="normal_icon" />
+				<translation id="text" translation_id="308453" type="use" value="Add Clause" />
+			</widget>
+
+		</container>
+	</container>
+
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize"/>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize">
+					<var id="vertical_gap" name="term_gap" />
+				</attachment_group>
+
+
+
+				<record id="default_properties">
+					<string id="file" value="widgets/negotiation widget horizontal" />
+				</record>
+
+				<!-- Job -->
+				<widget class="negotiation_popup_widget" id="jobP"/>
+
+        <!-- Transfer Start Date-->
+        <widget class="negotiation_popup_widget" id="traP"/>
+
+				<!-- Contract Length -->
+				<widget class="negotiation_left_right_widget" id="lenP" />
+
+				<!-- Wage -->
+				<widget class="negotiation_cash_widget" id="wagP" show_info_icon="true" />
+				
+			</container>
+
+			<!-- The Bonuses and Clauses for this contract-->
+			<container class="inner_box">
+				<translation id="title" translation_id="395150" type="use" value="Bonuses &amp; Clauses[COMMENT: contract offer panel, section text]" />
+
+				<attachment_group class="vertical_arrange_autosize"/>
+
+				<widget class="table" id="bclt" layout="-1" mode="fill_rows" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+					<var id="row_spacing" name="term_gap" />
+				</widget>
+
+			</container>
+
+		</container>
+	</container>
+
+</panel>

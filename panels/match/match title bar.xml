@@ -1,0 +1,190 @@
+<panel colour_team_names="false" colour_team_scores="false">
+
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
+
+	<container height="60">
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" gap="-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="main_box" appearance="boxes/custom/match/titlebar/paper">
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="0" vertical_inset="0" />
+				
+				<!-- Back Button -->
+				<widget class="screen_history_button" id="back" fixed="true" width="60" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/left" icon_alignment="centre">
+					<attachment class="get_global_attachment" get_property="hnpt" set_property="itms" />
+					<record id="primary_icon_properties" red_replacement="text"/>
+					<record id="click_event" event_id="GOTO" event_target="brow" scin="-8" />
+
+					<attachment class="test_global_attachment" get_property="MnuS" mode="1" value="true" set_property="hidn" skip_if_null="true"/>
+				</widget>
+
+				<!--clock-->
+				<container width="120">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+					<!--clock-->
+					<container id="ClkC">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-2" />
+
+						<record id="default_properties" auto_size="vertical" alignment="centre" colour="match scoreboard clock" />
+						
+						<widget class="text" id="Mclk" size="14" style="semi_bold" />
+						<widget class="text" id="ClkT" size="8" font="title" />
+						<widget class="text" id="Pent" size="14" style="semi_bold" />
+					</container>
+
+					<!--injury time indicator-->
+					<container id="MijC" height="16" >
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+						<widget class="text" id="Mijt" size="small" alignment="centre" style="semi_bold" colour="green 500"/>
+					</container>
+
+				</container>
+
+				<!--team names and score-->
+				<container width="190">
+					<layout class="arrange_vertical_attachment" layout="-1,1,-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container class="main_box" id="T1Co" appearance="boxes/custom/match/scoreboard/paper">
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<!--home team logo-->
+						<widget class="match_team_logo_picture" id="HtLG" team_index="0" width="40">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</widget>
+
+						<container>
+							<layout class="arrange_horizontal_attachment" alignment="right,extend" gap="5" offset="5" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<record id="default_properties" colour="text" font="title" />
+							
+							<!--home team name -->
+							<widget class="text_button" id="T1nm" alignment="left,centre_y" click_event="htac" navigation_focus_target="false"/>
+
+							<!--home score -->
+							<widget class="text" id="T1sc" size="9" auto_size="horizontal" alignment="right,centre_y" />
+
+							<!--home aggregate score -->
+							<widget class="text" id="T1as" size="9" auto_size="horizontal" alignment="right,centre_y" />
+						</container>
+					</container>
+
+					<widget class="horizontal_divider" auto_size="none" />
+
+					<container class="main_box" id="T2Co" appearance="boxes/custom/match/scoreboard/paper">
+						<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<!--away team logo-->
+						<widget class="match_team_logo_picture" id="AtLG" team_index="1" width="40">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</widget>
+
+						<container>
+							<layout class="arrange_horizontal_attachment" alignment="right,extend" gap="5" offset="5" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<record id="default_properties" font="title" colour="text" />
+							
+							<!--away team name -->
+							<widget class="text_button" id="T2nm" alignment="left,centre_y" click_event="atac" navigation_focus_target="false"/>
+
+							<!--away score -->
+							<widget class="text" id="T2sc" size="9" auto_size="horizontal" alignment="right,centre_y" />
+
+							<!--away aggregate score -->
+							<widget class="text" id="T2as" size="9" auto_size="horizontal" alignment="right,centre_y" />
+						</container>
+					</container>
+
+				</container>
+
+				<widget class="vertical_divider" />
+
+			</container>
+
+			<container class="main_box" appearance="boxes/custom/match/titlebar/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<!--match timeline-->
+				<container id="mtml">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<!-- an animation just to delay widget hiding-->
+					<!--<animation class="fade_animation" trigger_id="hidden" trigger_value="true" start_value="1" end_value="1" duration="1" end_mode="stop"/>-->
+
+					<attachment class="test_multiple_globals_attachment" default_value="true">
+						<list id="get_properties">
+							<record get_property="TTyp" test_mode="not_equal" value="1" skip_if_null="false"/>
+							<record get_property="dtty" test_mode="not_equal" comparison_mode="or" value="53" skip_if_null="false"/>
+							<record get_property="Tmts" test_mode="not_equal" comparison_mode="or" value="2" skip_if_null="true"/>
+						</list>
+						<integer id="set_property" value="hidn"/>
+					</attachment>
+
+					<widget class="spacer" />
+					<container class="match_flow_graphic_panel">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</container>
+				</container>
+
+				<!--match time bar-->
+				<widget class="match_time_slider_panel" id="mtSL">
+					<!-- slide in from right when shown, out left when hidden-->
+					<animation class="slide_in_left_animation"  trigger_id="hidden" trigger_value="false" end_mode="stop"/>
+					<animation class="slide_in_right_animation" trigger_id="hidden" trigger_value="true" end_mode="hold_end"/>
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+
+					<attachment class="test_multiple_globals_attachment" default_value="true">
+						<list id="get_properties">
+							<record get_property="TTyp" test_mode="not_equal" value="1" skip_if_null="false"/>
+							<record get_property="dtty" test_mode="not_equal" comparison_mode="or" value="53" skip_if_null="false"/>
+							<record get_property="Tmts" test_mode="not_equal" comparison_mode="or" value="1" skip_if_null="true"/>
+						</list>
+						<integer id="set_property" value="hidn"/>
+					</attachment>
+				</widget>
+
+				<!--captions-->
+				<widget class="match_caption_panel" id="MCap">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+			</container>
+
+		</container>
+
+		<container class="main_box" appearance="boxes/custom/match/titlebar/paper" width="210">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!-- continue button -->
+			<widget class="match_continue_panel" id="mcnt">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+	</container>
+</panel>

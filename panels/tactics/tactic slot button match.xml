@@ -1,0 +1,44 @@
+<panel height="50">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box" id="borb"/>
+
+	<container>
+
+		<layout class="arrange_horizontal_attachment" layout="4,-1,28" offset="4" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+
+		<widget class="spacer" />
+
+		<!--formation text-->
+		<widget class="icon_button" id="frmt" alignment="left,centre_y" spec="text" appearance="none" >
+		</widget>
+
+
+		<!--container for active slot stuff-->
+		<container id="SloA">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!--options drop down-->
+			<widget class="popup_button" id="opti" fixed="true" appearance="buttons/custom/tactics/slot menu/button">
+			</widget>
+		</container>
+
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<!--container for inactive slot stuff-->
+		<container id="SloI">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
+
+			<widget class="popup_button" id="CrNw" fixed="true" appearance="none" colour="faded white" disabled_colour="faded white" spec="text">
+				<translation id="text" translation_id="227487" type="use" value="None"/>
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

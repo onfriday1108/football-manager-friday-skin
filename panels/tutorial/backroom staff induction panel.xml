@@ -1,0 +1,7 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="4"/>
+	
+	<widget class="team_staff_subteam_overview_panel" file="team/team staff subteam overview induction" id="coac" navigation_container="true"/>
+	<widget class="team_staff_subteam_overview_panel" file="team/team staff subteam overview induction" id="scou" navigation_container="true"/>
+	<widget class="team_staff_subteam_overview_panel" file="team/team staff subteam overview induction" id="medi" navigation_container="true"/>
+</panel>

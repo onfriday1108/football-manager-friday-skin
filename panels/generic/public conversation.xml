@@ -1,0 +1,33 @@
+<panel>
+
+  <!--these are parameters that are passed to the interaction panel from link events-->
+  <list id="PRAM">
+    <integer value="FTop"/>
+    <integer value="FCat"/>
+    <integer value="FAns"/>
+    <integer value="FPop"/>
+    <integer value="cCon"/>
+  </list>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  
+  <container>
+    <layout class="arrange_horizontal_attachment" offset="0" gap="10" layout="-5, -2"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+    <container class="conversation_panel" id="conv" converter_class="public_statement_converter"/>
+
+    <!-- This will have three boxes, two for player information and one other for other information-->
+    <container class="inner_box_no_margin" auto_size="vertical">
+
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+      <widget class="mini_information_panel" id="min1" hidden="true" xml_file="player/player mini profile" default_properties="0"/>
+      <widget class="mini_information_panel" id="min2" hidden="true" xml_file="non_player/journalist mini profile" default_properties="3"/>
+  
+    </container>
+  </container>
+
+</panel>

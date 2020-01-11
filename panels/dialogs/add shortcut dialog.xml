@@ -1,0 +1,27 @@
+<panel id="dlog">
+	<!-- stretch everything to the sides of the dialog -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+	
+	<!-- arrange items vertically, with text at top -->
+	<layout class="arrange_vertical_attachment" alignment="top" gap="8" />
+
+	<!-- centre dialog in parent -->
+	<layout class="centre_in_parent_attachment" alignment="all" />
+
+	<!-- fit the height of the dialog to the height of its components -->
+	<layout class="fit_children_attachment" alignment="vertical,fill" gap="8" />
+	
+	<!-- text field - should resize vertically to ensure
+	     that it's contents fit -->
+	<widget class="text" id="text" auto_size="vertical" style="semi_bold"/>
+
+	<!-- Used to display the currently pressed key combination -->	
+	<widget class="text" id="keyC" auto_size="vertical" />
+
+	<!-- standard buttons / these get shown & hidden by subclasses -->
+	<container id="btns" file="dialog buttons" />
+
+</panel>

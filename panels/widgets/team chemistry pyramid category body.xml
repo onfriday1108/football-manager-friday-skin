@@ -1,0 +1,13 @@
+﻿<panel wants_mouse_events="false">
+  <layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+  <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+  <container class="main_box" id="pyrB" appearance="boxes/custom/hierarchy/body/paper" red_replacement="black" wants_mouse_events="false">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+  </container>
+
+  <container id="pyrI" height="95" navigation_container="true">
+    <layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" wants_mouse_events="false" />
+    <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </container>
+</panel>

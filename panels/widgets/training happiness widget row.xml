@@ -1,0 +1,27 @@
+﻿<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="2"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2" />
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2"/>
+
+	
+	<container class="main_box">
+		<layout class="arrange_horizontal_attachment" layout="40,-1" offset="0" gap="2"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="2" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="2" />
+		
+		<widget class="picture" id="thum" height="40" image_alignment="centre" keep_aspect_ratio="true"  />
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="text" id="hddr" auto_size="vertical" size="10" style="bold"/>
+			<widget class="text" id="body" auto_size="vertical" colour="faded text" size="8"/>
+		</container>
+	</container>
+	
+	<widget class="button" id="bttn" appearance="">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+</panel>

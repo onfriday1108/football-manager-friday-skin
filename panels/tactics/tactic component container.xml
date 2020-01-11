@@ -1,0 +1,11 @@
+<panel>
+  <!-- NOTE: this panel only stores state on the panel: NOT on the menu or multi-box! -->
+  <boolean id="save_session_state" value="true"/>
+
+  <flags id="top_kind" value="view_menu_popup_match"/>
+  <record id="top_properties" auto_size="horizontal"/>
+  <flags id="contents_kind" value="container"/>
+  <flags id="left_embed_inset" value="0"/>
+  <flags id="top_embed_inset" value="0"/>
+  <flags id="superimpose_top_control" value="true"/>
+</panel>

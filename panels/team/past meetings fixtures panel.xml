@@ -1,0 +1,83 @@
+<panel>
+
+  <boolean id="save_session_state" value="true" />
+
+  <!-- Styles -->
+  <flags id="frap" value="tables/custom/fixtures/friendly/row" />
+  <flags id="cncp" value="tables/custom/fixtures/continental/row" />
+  <flags id="cpap" value="tables/custom/fixtures/cup/row" />
+  <flags id="Hmap" value="tables/standard/row/selected/row" />
+
+  <layout class="arrange_horizontal_attachment" layout="-1, 310" offset="0" gap="1" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+  <!-- main area -->
+  <container class="inner_box" id="plti" navigation_container="true">
+    <translation id="text" translation_id="316604" type="use" value="Previous Results[COMMENT: team report; subsection box header text listing previous results vs an opponent]" />
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5,0,0,0" />
+
+    <!-- buttons area -->
+    <container id="btna" embed_in_frame="true">
+
+      <layout class="arrange_horizontal_attachment" alignment="right" embed_in_frame="true" gap="2" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" embed_in_frame="true" />
+      <layout class="stick_to_sides_attachment" alignment="top,right" embed_in_frame="true" inset="2" />
+
+      <layout class="fit_children_attachment" alignment="vertical" embed_in_frame="true" />
+      <layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="true" />
+
+      <!-- filter menu -->
+      <widget class="embedded_filter_button" id="plsf" target="plti" auto_size="all" embed_in_frame="true"/>
+
+    </container>
+
+    <widget class="client_object_list_table" id="pltb" database_table_type="53" select_event="self" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows, printable, store_sort_state, show_bullets, select_rows, dont_allow_empty_selection" column_mode="resize_columns, move_columns" hidden="true">
+      <boolean id="save_session_state" value="true" />
+      <list id="save_default_state">
+        <integer value="crvi" />
+      </list>
+
+      <!--properties for each object we always want to request, regardless of whether or not they're displayed 
+							 (this can help when for example supplying a selected object to another panel to display further info)-->
+      <!--these can be omitted, they're just a time saver-->
+      <list id="Spid">
+        <integer value="home" />
+        <integer value="away" />
+        <integer value="FxTy" />
+        <integer value="FxCt" />
+        <integer value="Cmic" />
+      </list>
+
+      <!-- default sort -->
+      <list id="default_sort_column">
+        <integer value="fxdt" />
+      </list>
+
+      <!--default view from the view list-->
+      <flags id="default_view" value="gene" />
+
+      <record id="viewed_property_ids">
+        <record id="fxdt" />
+        <record id="FXTm" />
+        <record id="FxNm" />
+        <record id="home" />
+        <record id="away" />
+        <record id="FxRT" />
+        <record id="FxRs" swap_for_context_team="false" />
+      </record>
+
+		<list id="column_widget_properties">
+			<record indx="0" navigation_focus_target="false" />
+			<record indx="1" navigation_focus_target="false" />
+		</list>
+
+    </widget>
+
+    <widget class="text" id="NoFr">
+      <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+    </widget>
+  </container>
+
+  <widget class="fixture_details_panel" id="Deta" width="300"/>
+
+</panel>

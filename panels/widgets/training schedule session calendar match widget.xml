@@ -1,0 +1,12 @@
+﻿<panel height="80">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="1,0" apply_to_children="true" />
+
+	<container class="main_box" id="sBox" appearance="boxes/custom/training/session/paper">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="2"  />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		<widget class="fixture_name_text" id="comp" font="label" alignment="centre" colour="blue grey 800" height="12" />
+		<widget class="object_portrait_picture" id="matP" red_replacement="white" image_alignment="centre" height="24" keep_aspect_ratio="true"  scale_picture="true"  />
+		<widget class="text" id="text" colour="blue grey 800" style="bold" alignment="centre" size="small" height="14" />
+		<widget class="text" id="scnd" colour="blue grey 800" alignment="centre" size="xsmall" height="14" />
+	</container>
+</panel>

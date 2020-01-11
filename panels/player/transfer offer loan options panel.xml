@@ -1,0 +1,56 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left" horizontal_offset="0" vertical_offset="0" />
+
+		<widget class="text" auto_size="all" font="title" alignment="left,centre_y" colour="title">
+			<translation id="text" translation_id="248394" type="use" value="Loan Options" />
+		</widget>
+
+		<widget class="subtle_popup_button" id="alow" icon="icons/16px/plus" icon_alignment="left" select_event="adlo" fixed="true" auto_size="all">
+			<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" />
+
+			<translation id="text" translation_id="229715" type="use" value="Add" />
+			<list id="items">
+				<record id="lpcm">
+					<translation id="name" translation_id="243587" type="use" value="Can play in cup matches" />
+				</record>
+				<record id="lpao">
+					<translation id="name" translation_id="243588" type="use" value="Can play against own team" />
+				</record>
+				<record id="lpab">
+					<translation id="name" translation_id="420724" type="use" value="Can play against own club's B team[COMMENT: transfer offer loan option type, works alongside IDs 243587, 243588, 243589 and 383274]" />
+				</record>
+				<record id="lcbr">
+					<translation id="name" translation_id="243589" type="use" value="Can be recalled" />
+				</record>
+				<record id="lcnt">
+					<translation id="name" translation_id="420725" type="use" value="Loan cannot be terminated[COMMENT: FR 13832; loan offer; clause to prevent loaning team from terminating the loan early]" />
+				</record>
+				<record id="lpmc">
+					<translation id="name" translation_id="441100" type="use" value="Can play for parent club[COMMENT: loan clause]" />
+				</record>
+				<record id="lprs">
+					<translation id="name" translation_id="383274" type="use" value="Can play for parent club reserves[COMMENT: loan clause]" />
+				</record>
+				<record id="lpoc">
+			    <translation id="text" translation_id="463722" type="use" value="Can play for parent club in cup matches[COMMENT: FR 12067; loan clause]" />
+				</record>
+        <record id="lppT">
+          <translation id="text" translation_id="482456" type="use" value="Increased playing time second season[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+        </record>
+			</list>
+		</widget>
+	</container>
+
+	<widget class="table" id="losp" layout="-1" mode="fill_rows, fill_custom_rows" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+		<flags id="row_appearance" value="tables/standard/row/divider/row" />
+		<list id="column_table_properties">
+			<record index="0" left="0" bottom="1" top="1" />
+		</list>
+	</widget>
+
+</panel>

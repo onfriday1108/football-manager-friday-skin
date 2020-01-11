@@ -1,0 +1,39 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!-- Weather shading image -->
+	<widget class="value_based_picture" id="weat" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+		<list id="value_list">
+			<!-- SUNNY 1&2 -->
+			<record min_value="0" max_value="1" file="photos/dynamic/ticker stadium/sunny" default_value="true"/>
+			<!-- CLOUDY, OVERCAST, DOWNPOUR -->
+			<record min_value="2" max_value="4" file="photos/dynamic/ticker stadium/overcast" />
+			<!-- NIGHT -->
+			<record min_value="5" max_value="6" file="photos/dynamic/ticker stadium/night" />
+		</list>
+		<!-- PROP_WEATHER (top-level record)-->
+		<record id="object_property" get_property="weat" set_property="valu"/>
+	</widget>
+
+	<!-- Ticker tape coloured to teams colours -->
+	<container class="client_object_viewer_xml_panel">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+		<!-- PROP_TEAM -->
+		<record id="object_property" get_property="Ttea" set_property="objt"/>
+
+		<widget class="picture" file="photos/dynamic/ticker stadium/ticker" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<record id="object_property">
+				<list id="get_properties">
+					<!-- PROP_TEAM_FOREGROUND_COLOUR1 -->
+					<record get_property="oPCn" set_property="rrep"/>
+					<!-- PROP_TEAM_BACKGROUND_COLOUR1 -->
+					<record get_property="oSCn" set_property="brep"/>
+				</list>
+			</record>
+		</widget>
+	</container>
+
+	<!-- Shading image -->
+	<widget class="picture" id="shad" file="photos/dynamic/ticker stadium/shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+</panel>

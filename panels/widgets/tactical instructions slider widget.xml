@@ -1,0 +1,28 @@
+﻿<panel>	
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0"/>
+
+	<record id="adjusted_slider_appearance" red_replacement="selected instruction" />
+	<record id="default_slider_appearance" red_replacement="white" />
+	<record id="restricted_min_slider_appearance" red_replacement="conflicting with role instruction" />
+	<record id="restricted_max_slider_appearance" red_replacement="conflicting with role instruction" />
+	<record id="background_slider_appearance" red_replacement="black"/>
+
+	
+	<!-- Title of slider -->
+	<widget class="text" id="titl" auto_size="vertical" font="title" text="Defensive Width" alignment="centre" colour="white"/>
+
+	<container height="1"/>
+
+	<!-- Slider setting -->
+	<widget class="text" id="desc" auto_size="vertical" text="Normal" alignment="centre" colour="white"/>
+
+	<!-- Slider -->
+	<container height="20">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="2" />
+		
+		<widget class="picture" id="SLiI" auto_size="all" />
+		<widget class="slider_horizontal" id="slid"  appearance="sliders/custom/instruction slider/slider" show_filler="true" show_default="true" show_default_appearance="true" show_restricted_min_appearance="true" show_restricted_max_appearance="true">
+			<flags id="final_changed_event" value="Scha" />
+		</widget>
+	</container>
+</panel>

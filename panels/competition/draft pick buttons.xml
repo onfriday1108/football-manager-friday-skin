@@ -1,0 +1,60 @@
+<panel save_session_state="true">
+	<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="1"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<container id="liPC" height="56" class="main_box">
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+		<record id="default_properties" auto_size="all"/>
+		
+		<widget class="button" id="ltmo" click_event="ltmo">
+			<translation id="text" translation_id="348988" type="use" value="Make offer for draft pick[COMMENT: MLS draft panel; button label for live trading during the draft]"/>
+		</widget>
+		<widget class="button" id="ltro" click_event="ltro">
+			<translation id="text" translation_id="349171" type="use" value="View offers for draft pick[COMMENT: MLS draft panel; button label for live trading during the draft]"/>
+		</widget>
+	</container>
+
+	<container height="56" class="main_box">
+		<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+		<record id="default_properties" auto_size="all"/>
+		
+		<widget class="button" id="snxp" click_event="snxp">
+			<translation id="text" translation_id="247190" type="use" value="See Next Pick"/>
+		</widget>
+		
+		<widget class="button" id="sthp" click_event="sthp">
+			<translation id="text" translation_id="331958" type="use" value="Skip to your next pick[COMMENT: MLS draft panel; button label for skipping to humans next pick]"/>
+		</widget>
+		
+		<widget class="button" id="dftp" click_event="dftp">
+			<translation id="text" translation_id="331852" type="use" value="Draft[COMMENT: MLS draft panel; button label for picking selected player]"/>
+		</widget>
+		
+		<widget class="popup_button" id="aarc" select_event="aarc" fixed="true">
+			<translation id="text" translation_id="331830" type="use" value="Ask Assistant[COMMENT: MLS draft panel; button label for ask your assitant manager for a recommendation]"/>
+		</widget>
+		
+		<widget class="button" id="chpl" click_event="chpl">
+			<translation id="text" translation_id="412438" type="use" value="Change Manager[COMMENT: FR12648; MLS draft panel; button for changing the human manager]"/>
+
+			<attachment class="flash_colour_attachment" auto_start="true">
+				<colour id="first_colour" name="ui_header_background"/>
+				<colour id="second_colour" red="255" green="0" blue="0"/>
+				<flags id="colour_property" value="bkcl"/>
+			</attachment>
+		</widget>
+		
+		<widget class="button" id="pafn" click_event="pafn">
+			<translation id="text" translation_id="251230" type="use" value="Pass / Finish[COMMENT - draft screen; button for passing a pick and thus finishing your team's selection]"/>
+		</widget>
+		
+		<widget class="button" id="fini" click_event="fini">
+			<translation id="text" translation_id="360153" type="use" value="Complete Draft[COMMENT: FR #7452; draft screen; button for skipping to the end of the draft once the user has no more picks; Complete means to finish the draft]"/>
+		</widget>
+	</container>
+
+</panel>

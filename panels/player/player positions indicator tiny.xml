@@ -1,0 +1,54 @@
+<panel save_session_state="true" auto_size_minimum_height="60">
+
+	<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="left, extend" horizontal_gap="8" />
+
+	<flags id="child_for_sort" value="PPos"/>
+
+	<widget class="player_basic_positions_indicator_widget" id="ppip" height="60" width="34">
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</list>
+		</record>
+	</widget>
+
+	<container height="60">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- Position label-->
+		<widget class="position_label" id="PPos" alignment="left,centre_y" auto_size="vertical" multiline="true" navigation_focus_target="false">
+			<record id="auto_size_restrictions">
+				<string id="type" value="property"/>
+				<string id="limit_type" value="maximum"/>
+				<string id="orientation" value="vertical"/>
+				<flags id="target" value="PPos"/>
+				<integer id="value" value="2"/>
+				<flags id="property" value="restrict_to_lines"/>
+			</record>
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="PpsC" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<widget class="tactical_role_label" id="Pbrs" alignment="left,centre_y" colour="faded text" abbt="false" auto_size="vertical" multiline="false" >
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="Pbrs" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget>
+	</container>
+
+</panel>

@@ -1,0 +1,882 @@
+<panel>
+	<translation id="title" translation_id="306487" type="use" value="Debug Info" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box">
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container class="tabbed_container" default_item="dttc" save_session_state="true">
+
+			<container id="dttc">
+				<string id="title" value="Team Transfers" />
+				<layout class="arrange_vertical_attachment" offset="0"  alignment="top,extend" gap="1"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="embedded_season_selection_list" id="dtys" sele="esch" auto_size="vertical" />
+
+				<container class="tabbed_container" default_item="dtic" save_session_state="true">
+
+					<container id="dtic">
+						<string id="title" value="Transfers In" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="ttit" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Team" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Person" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="From" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cur. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Guar. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Pot. Fee" />
+								</record>
+								  <record alignment="left,centre_y">
+									<string id="text" value="Loan Fee" />
+								  </record>
+								  <record alignment="left,centre_y">
+									<string id="text" value="Loan Buy Back Fee" />
+								  </record>
+								  <record alignment="left,centre_y">
+									<string id="text" value="Loan Mand. Fee" />
+								  </record>
+								  <record alignment="left,centre_y">
+									<string id="text" value="Loan Cond. Fee" />
+								  </record>
+									<record alignment="left,centre_y">
+										<string id="text" value="High Profile" />
+									</record>
+							</list>
+						</widget>
+					</container>
+
+					<container id="dtoc">
+						<string id="title" value="Transfers Out" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="ttot" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Team" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Person" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="To" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cur. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Guar. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Pot. Fee" />
+								</record>
+								  <record alignment="left,centre_y">
+									<string id="text" value="Loan Fee" />
+								  </record>
+								  <record alignment="left,centre_y">
+									<string id="text" value="Loan Buy Back Fee" />
+								  </record>
+								  <record alignment="left,centre_y">
+									<string id="text" value="Loan Mand. Fee" />
+								  </record>
+								  <record alignment="left,centre_y">
+									<string id="text" value="Loan Cond. Fee" />
+								  </record>
+								<record alignment="left,centre_y">
+									<string id="text" value="High Profile" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<container id="dtit">
+						<string id="title" value="Transfers In - Totals" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="ittb" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Team" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cash" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Free" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Loan" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="P/Ex" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Dom.(T)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Fgn.(T)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Dom.(L)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Fgn.(L)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cur. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Guar. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Pot. Fee" />
+								</record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Buy Back Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Mand. Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Cond. Fee" />
+	              </record>
+							</list>
+						</widget>
+
+					</container>
+
+					<container id="dtot">
+						<string id="title" value="Transfers Out - Totals" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="ottb" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Team" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cash" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Free" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Loan" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="P/Ex" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Dom.(T)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Fgn.(T)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Dom.(L)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Fgn.(L)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cur. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Guar. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Pot. Fee" />
+								</record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Buy Back Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Mand. Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Cond. Fee" />
+	              </record>
+							</list>
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<container id="dctc">
+				<string id="title" value="Competition Transfers" />
+				<layout class="arrange_vertical_attachment" offset="0"  alignment="top,extend" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container class="tabbed_container" default_item="dcti" save_session_state="true">
+
+					<container id="dcti">
+						<string id="title" value="Transfers In - Totals" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="citb" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Year" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cash" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Free" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Loan" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="P/Ex" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Dom.(T)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Fgn.(T)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Dom.(L)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Fgn.(L)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cur. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Guar. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Pot. Fee" />
+								</record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Buy Back Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Mand. Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Cond. Fee" />
+	              </record>
+							</list>
+						</widget>
+
+					</container>
+
+					<container id="dcto">
+						<string id="title" value="Transfers Out - Totals" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="cotb" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Year" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cash" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Free" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Loan" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="P/Ex" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Dom.(T)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Fgn.(T)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Dom.(L)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Fgn.(L)" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cur. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Guar. Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Pot. Fee" />
+								</record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Buy Back Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Mand. Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Loan Cond. Fee" />
+	              </record>
+							</list>
+						</widget>
+
+					</container>
+				</container>
+			</container>
+
+			<container id="dtta">
+				<string id="title" value="Team Analysis" />
+				<layout class="arrange_vertical_attachment" offset="0"  alignment="top,extend" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container class="tabbed_container" default_item="dtas" save_session_state="true">
+
+					<container id="dtas">
+						<string id="title" value="Squad Make Up" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="dtst" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Team" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Squad Size" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Av. Age" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Dom. Players" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Fgn. Players" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="2nd Squad Size" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="2nd Av. Age" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="3rd Squad Size" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="3rd Av. Age" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<container id="dtaf">
+						<string id="title" value="Club Finances" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="dtft" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Team" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Ori. Transfer Budget" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cur. Transfer Budget" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Tranfer Income %" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Wage Bill" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Wage Budget" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Rem. Wage Budget" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Av. Wage" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Av. Value" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<container id="dtac">
+						<string id="title" value="Contract Expiry" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="dtct" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Team" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Permanent Players" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Month to Month" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Under 1 Year" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1 - 2 Years" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="2 - 3 Years" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="3+ Years" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<container id="dtam">
+						<string id="title" value="Contract Release Clauses" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="dtmr" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-2,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Team" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Player" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Type" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Fee" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Expires" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+	        <container id="dtbc">
+	          <string id="title" value="Buy Back Clauses" />
+	          <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+	          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	          <widget class="table" id="dtbb" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+	            <list id="headings">
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Current Team" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Player" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Buy Back Team" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Fee" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Expires" />
+	              </record>
+	            </list>
+	          </widget>
+	        </container>
+
+					<container id="dtar">
+						<string id="title" value="Contract Rebels" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="dtrt" mode="fill_rows, stripe_rows,keyboard,printable" layout="-3,-3,-2,-2,-2,-3,-3,-2,-2" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Team" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Player" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Contract Expires" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Num. Renewals Rej." />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Date Last Rej." />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Last Rej. Offered Importance" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Last Rej. Desired Importance" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Last Rej. Interest" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Last Rej. Wage" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+          <container id="dtsh">
+            <string id="title" value="New Signings Out Of Shortlist" />
+            <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+            <widget class="table" id="dtso" mode="fill_rows, stripe_rows, keyboard, printable" layout="-3,-3,-2,-2,-2,-2,-2,-2,-2,-2,-2,-3-3" auto_size_rows="true" row_spacing="0">
+              <list id="headings">
+                <record alignment="left,centre_y">
+                  <string id="text" value="Team" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Player" />
+                </record>
+				<record alignment="left,centre_y">
+				  <string id="text" value="Age" />
+				</record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Date of Signing" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Cost of Signing" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="CA" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="PA" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="PPA" />
+                </record>
+                 <record alignment="left,centre_y">
+                  <string id="text" value="SROP" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="SROPOT" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Main Position" />
+                </record>
+                <record alignment="left,centre_y">
+                  <string id="text" value="Flags" />
+                </record>
+              </list>
+            </widget>
+          </container>
+
+		<container id="dthc">
+			<string id="title" value="High Profile Players" />
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="table" id="dtht" mode="fill_rows, stripe_rows,keyboard,printable" layout="-1,-1" auto_size_rows="true" row_spacing="0">
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<string id="text" value="Team" />
+					</record>
+					<record alignment="left,centre_y">
+						<string id="text" value="Player" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<container id="dtae">
+			<string id="title" value="Top Earners" />
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="table" id="dtte" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1" auto_size_rows="true" row_spacing="0">
+				<list id="headings">
+					<record alignment="left,centre_y">
+						<string id="text" value="Team" />
+					</record>
+					<record alignment="left,centre_y">
+						<string id="text" value="Name" />
+					</record>
+					<record alignment="left,centre_y">
+						<string id="text" value="Wage" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+	        <container id="dtal">
+	          <string id="title" value="Key Player Contract Length" />
+	          <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+	          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	          <widget class="table" id="dtkl" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1" auto_size_rows="true" row_spacing="0">
+	            <list id="headings">
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Team" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Reputation" />
+	              </record>
+	              <record alignment="left,centre_y">
+	                <string id="text" value="Contract Length (Years)" />
+	              </record>
+	            </list>
+	          </widget>
+	        </container>
+
+				</container>
+			</container>
+
+			<container id="dtca">
+				<string id="title" value="Comp Analysis" />
+				<layout class="arrange_vertical_attachment" offset="0"  alignment="top,extend" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container class="tabbed_container" default_item="dsaf" save_session_state="true">
+
+					<container id="dsaf">
+						<string id="title" value="Squad Make Up" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="dcst" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Year" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Squad Size" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Av. Age" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Dom. Players" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Fgn. Players" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="2nd Squad Size" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="2nd Av. Age" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="3rd Squad Size" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="3rd Av. Age" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<container id="dcaf">
+						<string id="title" value="Club Finances" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="dcft" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Year" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Ori. Transfer Budget" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Cur. Transfer Budget" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Tranfer Income %" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Wage Bill" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Wage Budget" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Rem. Wage Budget" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Av. Wage" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1st Av. Value" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<container id="dcac">
+						<string id="title" value="Contract Expiry" />
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="table" id="dcct" mode="fill_rows, stripe_rows,keyboard,printable" layout="-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1" auto_size_rows="true" row_spacing="0">
+							<list id="headings">
+								<record alignment="left,centre_y">
+									<string id="text" value="Year" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Permanent Players" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Month to Month" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="Under 1 Year" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="1 - 2 Years" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="2 - 3 Years" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="3+ Years" />
+								</record>
+								<record alignment="left,centre_y">
+									<string id="text" value="%" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+				</container>
+			</container>
+
+		</container>
+	</container>
+</panel>

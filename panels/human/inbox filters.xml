@@ -1,0 +1,79 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="main_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container class="inner_box_no_margin" height="30">
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+       <global id="horizontal_gap" name="ui.split_button_row_gap" />
+      </layout>
+
+			<widget class="button" id="ibfa" auto_size="all" appearance="buttons/standard/split/left/button">
+				<translation id="text" translation_id="247183" type="use" value="All"/>
+				<record id="click_event">
+					<flags id="event_id" value="ibfa"/>
+				</record>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+			</widget>
+
+			<widget class="button" id="ibfp" auto_size="all" appearance="buttons/standard/split/middle/button">
+				<translation id="text" translation_id="248419" type="use" value="Personal"/>
+				<record id="click_event">
+					<flags id="event_id" value="ibfp"/>
+				</record>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+			</widget>
+
+			<widget class="button" id="ibfs" auto_size="all" appearance="buttons/standard/split/right/button">
+				<translation id="text" translation_id="312488" type="use" value="Subscribed"/>
+				<record id="click_event">
+					<flags id="event_id" value="ibfs"/>
+				</record>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+			</widget>
+
+		</container>
+
+		<container class="inner_box_no_margin" height="30">
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="5" gap="5"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+			<widget class="button" id="flpu" auto_size="all" click_event="sflt">
+				<translation id="text" translation_id="249639" type="use" value="Filters" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+			</widget>
+		</container>
+
+		<container class="inner_box_no_margin" height="30">
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="5" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" apply_to_children="true"/>
+				<layout class="fit_children_attachment" alignment="vertical"/>
+				<layout class="fit_children_attachment" alignment="horizontal"/>
+
+				<widget class="edit_box" id="nwsf" return_event="chfl" auto_size="vertical" width="210" save_session_state="true" ignore_leading_space="true" colour="searchbox text" appearance="edit boxes/custom/search/box" clear_text_event="chfl">
+				</widget>
+
+				<!-- search button -->
+				<widget class="icon_button" id="nefi" appearance="none" icon="icons/16px/search" auto_size="all">
+					<record id="primary_icon_properties" red_replacement="ui_header_icons"/>
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="12"/>
+					<layout class="stick_to_sides_attachment" alignment="left" inset="10"/>
+
+					<event id="click_event">
+						<flags id="event_id" value="keyp"/>
+						<flags id="event_target" value="nwsf"/>
+						<flags id="code" value="5"/>
+					</event>
+				</widget>
+			</container>
+
+		</container>
+
+	</container>
+</panel>

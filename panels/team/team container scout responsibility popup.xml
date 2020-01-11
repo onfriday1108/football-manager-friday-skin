@@ -1,0 +1,18 @@
+﻿<panel >
+	<layout class="fit_children_attachment" alignment="vertical" offset="2" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="4"/>
+
+	<container class="standard_popup_box">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0,8,0,8"/>
+
+		<widget class="team_container_scout_responsibility_panel" auto_size="vertical" id="toto" minimum_auto_size_height="200">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+	</container>
+
+</panel>

@@ -1,0 +1,99 @@
+﻿<panel>
+  <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+  <boolean id="should_force_refresh" value="true"/>
+
+  <!--dynamic image here please-->
+  <container id="Dyni" height="117" width="160">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  </container>
+
+  <container>
+    <attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+    <!-- person name -->
+    <widget class="person_button" id="nmlb" auto_size="vertical" font="title" alignment="left, centre_y"/>
+
+    <!-- person description -->
+    <widget class="text" id="delb" spec="text" colour="faded text" auto_size="vertical" alignment="left, centre_y"/>
+  </container>
+
+  <widget class="horizontal_divider"/>
+
+  <container>
+    <attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+    <!-- scoreline (match stats) -->
+    <widget class="text" id="mtsc" font="title" auto_size="vertical" alignment="left, centre_y"/>
+
+    <!-- fitness -->
+    <widget class="text" id="fttl" font="title" auto_size="vertical" alignment="left, centre_y">
+      <translation id="text" translation_id="247571" type="use" value="Fitness"/>
+    </widget>
+
+    <!-- injury indicator widget -->
+    <widget class="player_status_button" id="inji" height="30" maximised="true">
+      <layout class="stick_to_sides_attachment" alignment="left"/>
+    </widget>
+
+    <!-- injury details -->
+    <widget class="fitness_label" id="injL" spec="text" auto_size="vertical" size="small" alignment="left, centre_y"/>
+    <widget class="text" id="injd" spec="text" auto_size="vertical" size="small" alignment="left, centre_y"/>
+
+    <!-- fitness (season stats) -->
+    <container id="ftbx" height="40">
+      <layout class="arrange_horizontal_attachment" layout="40, -1" offset="0" gap="4"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+
+      <container class="pie_condition_label" id="fitn" file="widgets/pie condition no label no embed" mode="2">
+        <layout class="stick_to_sides_attachment" alignment="vertical"/>
+      </container>
+
+      <container height="30">
+        <layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" gap="0"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+
+        <widget class="text" id="Cond" auto_size="none" alignment="left, bottom" size="small" colour="faded text"/>
+        <widget class="text" id="Shar" auto_size="none" alignment="left, top" size="small" colour="faded text"/>
+      </container>
+    </container>
+  </container>
+
+  <widget class="horizontal_divider"/>
+
+  <container>
+    <attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+    <!-- appearances -->
+    <widget class="text" id="ApTl" font="title" auto_size="vertical" alignment="left, centre_y">
+      <translation id="text" translation_id="227845" type="use" value="Appearances"/>
+    </widget>
+    <widget class="text" id="plap" spec="text" auto_size="vertical" size="small" alignment="left, centre_y"/>
+  </container>
+
+  <widget class="horizontal_divider"/>
+
+  <container>
+    <attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+    <!-- goals -->
+    <widget class="text" id="goTl" font="title" auto_size="vertical" alignment="left, centre_y">
+      <translation id="text" translation_id="227857" type="use" value="Goals"/>
+    </widget>
+    <widget class="text" id="goal" spec="text" auto_size="vertical" size="small" alignment="left, centre_y"/>
+  </container>
+
+  <widget class="horizontal_divider"/>
+
+  <container>
+    <attachment_group class="vertical_arrange_autosize" vertical_gap="2"/>
+
+    <!-- form -->
+    <widget class="text" id="FmTl" font="title" auto_size="vertical" alignment="left, centre_y">
+      <translation id="text" translation_id="395236" type="use" value="Form (Last 5 Matches)[COMMENT: player overview; sub panel title for player form graph]"/>
+    </widget>
+    <widget class="number_label" id="plfm" spec="text" size="small" alignment="left, centre_y" auto_size="vertical"/>
+  </container>
+
+</panel>

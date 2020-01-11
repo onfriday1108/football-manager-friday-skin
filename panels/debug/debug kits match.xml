@@ -1,0 +1,398 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="table">
+
+		<flags id="layout" value="-1,-1,-1,-1" />
+		<flags id="mode" value="fill_rows, stripe_rows" />
+		<integer id="row_spacing" value="0" />
+		<boolean id="auto_size_rows" value="true" />
+		<boolean id="fixed_size_rows" value="false" />
+		<boolean id="sort_disabled" value="true" />
+
+		<list id="headings">
+			<record>
+				<translation id="text" value="" />
+			</record>
+			<!-- first column heading is empty -->
+			<record column_span="1" alignment="centre">
+				<translation id="text" translation_id="282040" type="use" value="HOME" />
+			</record>
+			<record column_span="1" alignment="centre">
+				<translation id="text" translation_id="282041" type="use" value="AWAY" />
+			</record>
+			<record column_span="1" alignment="centre">
+				<translation id="text" translation_id="282042" type="use" value="THIRD" />
+			</record>
+		</list>
+
+		<!-- row 0 - titlebars for home, away and third -->
+		<widget class="label" row="0" col="0" auto_size="vertical">
+			<translation id="text" type="new" value="Titlebars" />
+		</widget>
+
+		<!-- Home - Title Bar -->
+		<container id="HTbr" row="0" col="1">
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<!-- titlebar background image -->
+			<widget class="picture" id="pict" file="interface/titlebar/background/bar" cached="true">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+
+			<!-- titlebar image -->
+			<!-- this widget gives the height of the table cell, the width is given by the table layout -->
+			<widget class="picture" id="Htbi" file="interface/titlebar/bar" auto_size="vertical" cached="true" rthr="68">
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" />
+			</widget>
+
+			<!-- team logo and text -->
+			<container height="100">
+				<layout class="arrange_horizontal_attachment" alignment="fill" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" />
+
+				<!-- team logo -->
+				<widget class="picture" id="Hlog" scale_picture="true" keep_aspect_ratio="true" height="90" image_alignment="centre">
+					<layout class="stick_to_sides_attachment" alignment="top" />
+				</widget>
+
+				<!-- team name -->
+				<widget class="text" id="Hnam" alignment="centre_x" size="20" style="shadowed" font="fonts/ProximaNova-Bold" multiline="false" auto_size="vertical">
+					<translation id="text" translation_id="248883" type="use" value="FC" />
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+				</widget>
+
+			</container>
+
+		</container>
+
+		<!-- Away - Title Bar -->
+		<container id="ATbr" row="0" col="2">
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<!-- titlebar background image -->
+			<widget class="picture" id="pict" file="interface/titlebar/background/bar" cached="true">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+
+			<!-- titlebar image -->
+			<!-- this widget gives the height of the table cell, the width is given by the table layout -->
+			<widget class="picture" id="Atbi" file="interface/titlebar/bar" auto_size="vertical" cached="true" rthr="68">
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" />
+			</widget>
+
+			<!-- team logo and text -->
+			<container height="100">
+				<layout class="arrange_horizontal_attachment" alignment="fill" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" />
+
+				<!-- team logo -->
+				<widget class="picture" id="Alog" scale_picture="true" keep_aspect_ratio="true" height="90" image_alignment="centre">
+					<layout class="stick_to_sides_attachment" alignment="top" />
+				</widget>
+
+				<!-- team name -->
+				<widget class="text" id="Anam" alignment="centre_x" size="20" style="shadowed" font="fonts/ProximaNova-Bold" multiline="false" auto_size="vertical">
+					<translation id="text" translation_id="248883" type="use" value="FC" />
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+				</widget>
+
+			</container>
+
+		</container>
+
+		<!-- Third - Title Bar -->
+		<container id="TTbr" row="0" col="3">
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<!-- titlebar background image -->
+			<widget class="picture" id="pict" file="interface/titlebar/background/bar" cached="true">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+
+			<!-- titlebar image -->
+			<!-- this widget gives the height of the table cell, the width is given by the table layout -->
+			<widget class="picture" id="Ttbi" file="interface/titlebar/bar" auto_size="vertical" cached="true" rthr="68">
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" />
+			</widget>
+
+			<!-- team logo and text -->
+			<container height="100">
+				<layout class="arrange_horizontal_attachment" alignment="fill" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" />
+
+				<!-- team logo -->
+				<widget class="picture" id="Tlog" scale_picture="true" keep_aspect_ratio="true" height="90" image_alignment="centre">
+					<layout class="stick_to_sides_attachment" alignment="top" />
+				</widget>
+
+				<!-- team name -->
+				<widget class="text" id="Tnam" alignment="centre_x" size="20" style="shadowed" font="fonts/ProximaNova-Bold" multiline="false" auto_size="vertical">
+					<translation id="text" translation_id="248883" type="use" value="FC" />
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+				</widget>
+
+			</container>
+
+		</container>
+
+		<!-- row 1 - commentary bars for home, away and third  -->
+		<widget class="label" row="1" col="0" auto_size="vertical">
+			<translation id="text" translation_id="282050" type="use" value="Commentary" />
+		</widget>
+
+		<!-- Home - Commentary Bar -->
+		<container id="HCom" row="1" col="1">
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<!-- commentary background -->
+			<!-- this widget gives the height of the table cell, the width is given by the table layout -->
+			<widget class="picture" id="Hcba" file="boxes/custom/match/commentary/bar" auto_size="vertical" rthr="85">
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" />
+			</widget>
+
+			<!-- commentary text -->
+			<widget class="label" id="Hcla" auto_size="vertical">
+				<layout class="centre_in_parent_attachment" alignment="all" />
+
+				<translation id="text" translation_id="247603" type="use" value="Comment" />
+				<integer id="size" value="12" />
+				<flags id="alignment" value="centre" />
+			</widget>
+
+		</container>
+
+		<!-- Away - Commentary Bar -->
+		<container id="ACom" row="1" col="2">
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<!-- commentary background -->
+			<!-- this widget gives the height of the table cell, the width is given by the table layout -->
+			<widget class="picture" id="Acba" file="boxes/custom/match/commentary/bar" auto_size="vertical" rthr="85">
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" />
+			</widget>
+
+			<!-- commentary text -->
+			<widget class="label" id="Acla" auto_size="vertical">
+				<layout class="centre_in_parent_attachment" alignment="all" />
+
+				<translation id="text" translation_id="247603" type="use" value="Comment" />
+				<integer id="size" value="12" />
+				<flags id="alignment" value="centre" />
+			</widget>
+
+		</container>
+
+		<!-- Third - Commentary Bar -->
+		<container id="TCom" row="1" col="3">
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<!-- commentary background -->
+			<!-- this widget gives the height of the table cell, the width is given by the table layout -->
+			<widget class="picture" id="Tcba" file="boxes/custom/match/commentary/bar" auto_size="vertical" rthr="85">
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" />
+			</widget>
+
+			<!-- commentary text -->
+			<widget class="label" id="Tcla" auto_size="vertical">
+				<layout class="centre_in_parent_attachment" alignment="all" />
+
+				<translation id="text" translation_id="247603" type="use" value="Comment" />
+				<integer id="size" value="12" />
+				<flags id="alignment" value="centre" />
+			</widget>
+
+		</container>
+
+		<!-- row 2  - goalkeeper pitch icons for home, away and third -->
+		<widget class="label" row="2" col="0" auto_size="vertical">
+			<string id="text" value="GK Pitch Icons" />
+		</widget>
+
+		<!-- Home - GK Pitch Icon -->
+		<container row="2" col="1">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Hgpi" class="picture" file="pitch/icons/kit/large/kit 0" auto_size="vertical" image_alignment="centre_x" />
+			<widget id="Hgpt" class="label" auto_size="vertical" alignment="centre">
+				<translation id="text" type="new" value="1" />
+			</widget>
+		</container>
+
+		<!-- Away - GK Pitch Icon -->
+		<container row="2" col="2">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Agpi" class="picture" file="pitch/icons/kit/large/kit 0" auto_size="vertical" image_alignment="centre_x" />
+			<widget id="Agpt" class="label" auto_size="vertical" alignment="centre">
+				<translation id="text" type="new" value="1" />
+			</widget>
+		</container>
+
+		<!-- Third - GK Pitch Icon -->
+		<container row="2" col="3">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Tgpi" class="picture" file="pitch/icons/kit/large/kit 0" auto_size="vertical" image_alignment="centre_x" />
+			<widget id="Tgpt" class="label" auto_size="vertical" alignment="centre">
+				<translation id="text" type="new" value="1" />
+			</widget>
+		</container>
+
+		<!-- row 3  - outfield pitch icons for home, away and third -->
+		<widget class="label" row="3" col="0" auto_size="vertical">
+			<string id="text" value="Outfield Pitch Icons" />
+		</widget>
+
+		<!-- Home - Pitch Icon -->
+		<container row="3" col="1">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Hopi" class="picture" file="pitch/icons/kit/large/kit 0" auto_size="vertical" image_alignment="centre_x" />
+			<widget id="Hopt" class="label" auto_size="vertical" alignment="centre">
+				<translation id="text" type="new" value="10" />
+			</widget>
+		</container>
+
+		<!-- Away - Pitch Icon -->
+		<container row="3" col="2">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Aopi" class="picture" file="pitch/icons/kit/large/kit 0" auto_size="vertical" image_alignment="centre_x" />
+			<widget id="Aopt" class="label" auto_size="vertical" alignment="centre">
+				<translation id="text" type="new" value="10" />
+			</widget>
+		</container>
+
+		<!-- Third - Pitch Icon -->
+		<container row="3" col="3">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Topi" class="picture" file="pitch/icons/kit/large/kit 0" auto_size="vertical" image_alignment="centre_x" />
+			<widget id="Topt" class="label" auto_size="vertical" alignment="centre">
+				<translation id="text" type="new" value="10" />
+			</widget>
+		</container>
+
+		<!-- row 4  - tactics panel shirt icons for goalkeepers home, away and third -->
+		<widget class="label" row="4" col="0" auto_size="vertical">
+			<string id="text" value="GK Shirt Back Icons" />
+		</widget>
+
+		<!-- Home - Pitch Icon -->
+		<container row="4" col="1">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Htgi" class="picture" height="30" width="30" image_alignment="centre" scale_picture="true" />
+			<widget id="Htgt" class="picture" file="pictures/kits/2d/numbers/default/1" height="30" width="30" image_alignment="centre" scale_picture="true" />
+		</container>
+
+		<!-- Away - Pitch Icon -->
+		<container row="4" col="2">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Atgi" class="picture" height="30" width="30" image_alignment="centre" scale_picture="true" />
+			<widget id="Atgt" class="picture" file="pictures/kits/2d/numbers/default/1" height="30" width="30" image_alignment="centre" scale_picture="true" />
+		</container>
+
+		<!-- Third - Pitch Icon -->
+		<container row="4" col="3">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Ttgi" class="picture" height="30" width="30" image_alignment="centre" scale_picture="true" />
+			<widget id="Ttgt" class="picture" file="pictures/kits/2d/numbers/default/1" height="30" width="30" image_alignment="centre" scale_picture="true" />
+		</container>
+
+		<!-- row 5 - tactics panel shirt icons for outfield home, away and third -->
+		<widget class="label" row="5" col="0" auto_size="vertical">
+			<string id="text" value="Outfield Shirt Back Icons" />
+		</widget>
+
+		<!-- Home - Pitch Icon -->
+		<container row="5" col="1">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Htoi" class="picture" height="30" width="30" image_alignment="centre" scale_picture="true" />
+			<widget id="Htot" class="picture" file="pictures/kits/2d/numbers/default/10" height="30" width="30" image_alignment="centre" scale_picture="true" />
+		</container>
+
+		<!-- Away - Pitch Icon -->
+		<container row="5" col="2">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Atoi" class="picture" height="30" width="30" image_alignment="centre" scale_picture="true" />
+			<widget id="Atot" class="picture" file="pictures/kits/2d/numbers/default/10" height="30" width="30" image_alignment="centre" scale_picture="true" />
+		</container>
+
+		<!-- Third - Pitch Icon -->
+		<container row="5" col="3">
+			<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" />
+
+			<widget class="picture" file="interface/titlebar/bar" height="30" cached="true" rthr="85" rrep="47" grep="84" brep="33">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+			</widget>
+			<widget id="Ttoi" class="picture" height="30" width="30" image_alignment="centre" scale_picture="true" />
+			<widget id="Ttot" class="picture" file="pictures/kits/2d/numbers/default/10" height="30" width="30" image_alignment="centre" scale_picture="true" />
+		</container>
+
+	</widget>
+
+</panel>

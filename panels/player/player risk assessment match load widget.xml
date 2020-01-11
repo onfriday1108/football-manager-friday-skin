@@ -1,0 +1,21 @@
+﻿<panel>
+  
+  <list id="properties_to_forward">
+    <record get_property="RAmv" set_property="text" target="MLVl"/>
+    <record get_property="MLTc" set_property="colour" target="MLVl"/>
+    <record get_property="Poap" set_property="text" target="Poap"/>
+    <record get_property="PODr" set_property="text" target="PODr"/>
+  </list>
+  
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+    <!-- value -->
+    <widget class="text" id="MLVl" auto_size="vertical" style="bold" size="large"/>
+
+    <!-- description -->
+    <widget class="text" id="Poap" auto_size="vertical" size="small" colour="faded text" multiline="true"/>
+
+    <!-- description -->
+    <widget class="text" id="PODr" auto_size="none" size="small" colour="faded text" multiline="false"/>
+</panel>

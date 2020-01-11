@@ -1,0 +1,185 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+
+		<layout class="arrange_horizontal_attachment" layout="-3,-2" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!--left side - match details-->
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="30" gap="20" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="30" apply_to_children="true" />
+
+			<!--comp picture-->
+			<widget class="object_portrait_picture" id="fxCo" scale_picture="true" width="70">
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre_x,top" />
+				<record id="object_property">
+					<integer id="get_property" value="fxCo" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<!--blurb-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!-- Division -->
+				<widget class="fixture_name_text" id="FxNM" size="xxlarge" style="bold, shadowed" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="FxNm" />
+					</record>
+				</widget>
+
+				<!--time/place-->
+				<widget class="match_conditions_panel" id="matc" file="">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+
+					<!--time, place-->
+					<widget class="text" id="tipl" style="semi_bold, shadowed" auto_size="vertical" />
+
+				</widget>
+
+				<!--weather icon-->
+				<widget class="weather_indicator_panel_horizontal" id="FxWe" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="FxWe" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</widget>
+
+			</container>
+		</container>
+
+		<!--right side - line ups-->
+		<container class="main_box">
+			<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--header-->
+			<container height="110" class="main_box" red_replacement="dark accent">
+				<layout class="arrange_horizontal_attachment" alignment="middle,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--home team logo-->
+				<widget class="match_team_logo_picture" id="HtLG" team_index="0" width="70">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--blurb-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="10" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!-- Division -->
+					<widget class="fixture_name_text" id="FxNm" auto_size="vertical" alignment="centre" size="small">
+						<record id="object_property">
+							<integer id="get_property" value="FxNm" />
+						</record>
+					</widget>
+
+					<!--title-->
+					<widget class="text" size="xlarge" auto_size="vertical" alignment="centre" font="title" colour="text">
+						<translation id="text" translation_id="441070" type="use" value="Official Team Sheet[COMMENT: header for the match preview page's team sheet showing both teams' lineups]" />
+					</widget>
+
+					<!--date-->
+					<widget class="date_cell" id="fxdt" auto_size="vertical" alignment="centre" size="small">
+						<translation id="format" translation_id="316796" type="use" value="[%date#1-short_day]" />
+						<record id="object_property">
+							<integer id="get_property" value="fxdt" />
+						</record>
+					</widget>
+
+					<!--ref-->
+					<widget class="referee_strictness_label" id="reff" height="20" alignment="centre" size="small">
+						<translation id="format" translation_id="332843" type="use" value="Referee: [%string#1][COMMENT: string to how strict the referee is]" />
+					</widget>
+
+				</container>
+
+				<!--away team logo-->
+				<widget class="match_team_logo_picture" id="AtLG" team_index="1" width="70">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+			</container>
+
+			<!--line ups-->
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="10" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="match_lineup_table" id="hmlu" team_index="0" include_managers="false">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="maCo" />
+								<integer id="set_property" value="maCo" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<widget class="match_lineup_table" id="amlu" team_index="1" include_managers="false">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="maCo" />
+								<integer id="set_property" value="maCo" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+			</container>
+
+			<!--managers-->
+			<container height="52">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="10" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="match_lineup_table" id="hMlu" team_index="0" include_starting_xi="false" include_starting_subs="false">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="maCo" />
+								<integer id="set_property" value="maCo" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<widget class="match_lineup_table" id="aMlu" team_index="1" include_starting_xi="false" include_starting_subs="false">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="maCo" />
+								<integer id="set_property" value="maCo" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

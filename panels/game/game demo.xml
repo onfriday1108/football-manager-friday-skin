@@ -1,0 +1,76 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+
+		<!-- Picture -->
+		<widget class="picture" file="demo end/background" id="jing" transparency="1.0" scale_picture="true" keep_aspect_ratio="false">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+
+		<!-- Picture -->
+		<widget class="picture" file="main menu/logo" id="jing" transparency="1.0" image_alignment="centre" scale_picture="true" height="200" width="800" keep_aspect_ratio="true">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" priority="1" />
+		</widget>
+
+		<!-- description/info -->
+		<widget hidden="true" class="text" id="desc" gap="2" alignment="centre" style="bold, shadowed" size="12" colour="white" auto_size="vertical">
+
+			<translation id="text" translation_id="256749" type="use" value="Thank you for playing the [%string#1 - full name of the application] Demo[COMMENT: demo end screen text above logo; the string argument will be changed to the application name by the game]" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="180" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" />
+		</widget>
+
+		<!-- activation info -->
+		<widget class="inner_box_no_margin" hidden="true" id="acti">
+			<!--appearance="demo end/box/paper"-->
+
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="160" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" priority="1" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="150" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+
+			<!-- split each line into separate text widget for easier translation while keeping it in XML -->
+			<widget class="text_button" id="act1" alignment="left,centre_y" style="semi_bold, shadowed" size="11" colour="white" auto_size="vertical">
+				<translation id="text" translation_id="289530" type="use" value="Thank you for playing [%string#1 - application title].[COMMENT: Text when an demo period ends for unactivated copy of the game]" />
+			</widget>
+			<widget class="text_button" alignment="left,centre_y" style="semi_bold, shadowed" size="11" colour="white" auto_size="vertical">
+				<translation id="text" translation_id="289531" type="use" value="You must now activate your copy before you can continue to play.[COMMENT: Text when an demo period ends for unactivated copy of the game]" />
+			</widget>
+			<widget class="text_button" alignment="left,centre_y" style="semi_bold, shadowed" size="11" colour="white" auto_size="vertical">
+				<translation id="text" translation_id="289532" type="use" value="Please launch the game again and follow the instructions.[COMMENT: Text when an demo period ends for unactivated copy of the game]" />
+			</widget>
+
+		</widget>
+
+		<!-- pre purchase button -->
+		<widget class="primary_button" id="ppfm">
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="80" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" priority="1" />
+			<record id="click_event" event_id="OURL" url="www.footballmanager.com" />
+		</widget>
+
+		<!-- exit button -->
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="10" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="right" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="10" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" offset="10" />
+
+			<widget class="button" id="exdm" click_event="exdm" auto_size="all">
+				<translation id="text" translation_id="256750" type="use" value="Exit[COMMENT: demo end screen: exit game button text]" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+			</widget>
+
+		</container>
+
+	</container>
+
+</panel>

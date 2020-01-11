@@ -1,0 +1,45 @@
+﻿<panel>
+	<list id="cnvs">
+		<record id="at00">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="false" offset="0"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="0"/>
+		</record>
+		<record id="at02" editor_group_id="at00" embed_in_frame="true" needs_width="true" height="40">
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="true" offset="0" embed_in_frame="true"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0" embed_in_frame="true"/>
+		</record>
+		<record id="at01" editor_group_id="at00" embed_in_frame="true" needs_width="true" height="40">
+			<record id="alPr" target="at02" set_side="none,right" get_side="none,left" move_side="true" offset="-2" embed_in_frame="true"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="0" embed_in_frame="true"/>
+		</record>
+		<record id="at03" editor_group_id="at00" height="340">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="0"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="0"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="true" offset="45"/>
+		</record>
+		<record id="at04" editor_group_id="at00">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="2"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="-2"/>
+			<record id="alPt" target="at03" set_side="none,top" get_side="none,bottom" move_side="false" offset="9"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-50"/>
+		</record>
+		<record id="at05" editor_group_id="at04">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="422"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="-424"/>
+			<record id="alPt" target="main" set_side="none,top" get_side="none,top" move_side="false" offset="80"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-82"/>
+		</record>
+		<record id="at06" editor_group_id="at00">
+			<record id="alPl" target="main" set_side="none,left" get_side="none,left" move_side="false" offset="2"/>
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="false" offset="-2"/>
+			<record id="alPt" target="at03" set_side="none,top" get_side="none,bottom" move_side="false" offset="9"/>
+			<record id="alPb" target="main" set_side="none,bottom" get_side="none,bottom" move_side="false" offset="-50"/>
+		</record>
+		<record id="at07" editor_group_id="at00" needs_width="true" height="30">
+			<record id="alPr" target="main" set_side="none,right" get_side="none,right" move_side="true" offset="-3"/>
+			<record id="alPt" target="at04" set_side="none,top" get_side="none,bottom" move_side="true" offset="12"/>
+		</record>
+	</list>
+</panel>

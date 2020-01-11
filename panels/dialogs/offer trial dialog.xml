@@ -1,0 +1,60 @@
+<panel id="dlog" width="350" height="400">
+	<!-- make dialog moveable -->
+	<attachment class="moveable_attachment" />
+
+	<!-- add custom icon to top right corner of dialog (actual icon image gets set in code) -->
+	<widget class="picture" id="cico" auto_size="all" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="0" embed_in_frame="true" />
+	</widget>
+
+	<!-- arrange items vertically, with text at top -->
+	<layout class="arrange_vertical_attachment" alignment="top" gap="8" />
+
+	<!-- the height of the dialog has now been set, so centre the dialog vertically -->
+	<layout class="centre_in_parent_attachment" alignment="vertical" />
+
+	<!-- fit the height of the dialog to the height of its components -->
+	<layout class="fit_children_attachment" alignment="vertical,fill" gap="8" />
+
+	<!-- stretch everything to the sides of the dialog -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<!-- first we centre the dialog horizontally, the width will not change so this will position the dialog correctly -->
+	<layout class="centre_in_parent_attachment" alignment="horizontal" />
+
+	<!-- text field - should resize vertically to ensure
+	     that it's contents fit -->
+	<widget class="text" id="text" auto_size="vertical" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" />
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+
+		<widget class="label" auto_size="horizontal">
+			<translation id="text" translation_id="230113" type="use" value="Duration" />
+		</widget>
+
+		<widget class="popup_button" id="trls" select_event="lenc" auto_size="all">
+			<list id="items">
+				<record id="1">
+					<translation id="name" translation_id="247139" type="use" value="1 Week" />
+				</record>
+				<record id="2">
+					<translation id="name" translation_id="247140" type="use" value="2 Weeks" />
+				</record>
+				<record id="3">
+					<translation id="name" translation_id="248369" type="use" value="3 Weeks" />
+				</record>
+				<record id="4">
+					<translation id="name" translation_id="248370" type="use" value="4 Weeks" />
+				</record>
+				<record id="-1">
+					<translation id="name" translation_id="338604" type="use" value="Until end of Pre-Season[COMMENT: transfer offer panel; potential length of trial contract ie until the end of pre-season, use top matches, one word added for clarification]" />
+				</record>
+			</list>
+		</widget>
+	</container>
+	<!-- standard buttons / these get shown & hidden by subclasses -->
+	<container id="btns" file="dialog buttons" />
+</panel>

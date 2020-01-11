@@ -1,0 +1,29 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<!-- main body text -->
+	<widget class="inbox_body_text" id="etxt" auto_size="vertical" hidden="true" font="inbox_body"/>
+
+	<widget class="client_object_list_table" id="lstb" mode="fill_rows, stripe_rows" fixed_size_rows="false" auto_size="vertical" auto_size_rows="true" database_table_type="1">
+		<list id="default_sort_column">
+			<integer value="InOt"/>
+			<integer value="PpsC"/>
+		</list>
+
+		<record id="viewed_property_ids">
+			<record id="InOt" auto_hide_priority="80"/>
+			<record id="Pnfo" auto_hide_priority="90"/>
+			<record id="Pnms" auto_hide_priority="70"/>
+			<record id="PpsC" auto_hide_priority="100"/>
+			<record id="Pclb" auto_hide_priority="110"/>
+			<record id="Page" auto_hide_priority="120"/>
+			<record id="Piap" auto_hide_priority="130"/>
+			<record id="Pigl" auto_hide_priority="170"/>
+			<record id="Piav" auto_hide_priority="140"/>
+			<record id="Poap" auto_hide_priority="160"/>
+			<record id="Pogl" auto_hide_priority="180"/>
+			<record id="Poas" auto_hide_priority="200"/>
+			<record id="Poav" auto_hide_priority="150"/>
+		</record>
+	</widget>
+</panel>

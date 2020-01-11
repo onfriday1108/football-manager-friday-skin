@@ -1,0 +1,197 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<widget class="table" id="sftb" name="General Info">
+		<flags id="layout" value="-4, -6, -6" />
+
+		<flags id="mode" value="fill_rows, stripe_rows,printable" />
+		<integer id="row_spacing" value="0" />
+		<boolean id="auto_size_rows" value="true" />
+		<boolean id="fixed_size_rows" value="false" />
+		<boolean id="save_session_state" value="true" />
+
+		<list id="headings">
+			<record alignment="left,centre_y">
+				<translation id="text" translation_id="284306" type="use" value="Fact[COMMENT: team information panel; column heading]" />
+			</record>
+			<record alignment="left,centre_y" />
+			<record alignment="left,centre_y" />
+		</list>
+
+		<!-- default properties adopted by every item in table -->
+		<record id="defp">
+			<flags id="algn" value="left,centre_y" />
+		</record>
+
+		<list id="column_widget_properties">
+			<record indx="1">
+				<colour id="colour" name="selection" />
+				<flags id="auto_size" value="vertical" />
+			</record>
+			<record indx="2">
+				<colour id="colour" name="selection" />
+				<flags id="auto_size" value="vertical" />
+			</record>
+		</list>
+
+		<!-- small inset from sides of table -->
+		<list id="column_table_properties">
+			<record indx="0">
+				<integer id="left" value="4" />
+				<boolean id="sort_disabled" value="true" />
+			</record>
+			<record indx="1">
+				<boolean id="sort_disabled" value="true" />
+				<integer id="top" value="2" />
+				<integer id="bottom" value="2" />
+			</record>
+			<record indx="2">
+				<boolean id="sort_disabled" value="true" />
+				<integer id="top" value="2" />
+				<integer id="bottom" value="2" />
+			</record>
+		</list>
+
+		<widget class="label" col="0" row="0">
+			<translation id="text" translation_id="284307" type="use" value="Youngest Player[COMMENT: heading; team_information_panel; the youngest player]" />
+		</widget>
+		<!-- team value -->
+		<widget class="text" id="Tyop" col="1" row="0" spec="text" />
+		<!-- division value -->
+		<widget class="text" id="Dyop" col="2" row="0" spec="text" />
+
+		<widget class="label" col="0" row="1">
+			<translation id="text" translation_id="284308" type="use" value="Oldest Player[COMMENT: heading; team_information_panel; the oldest player]" />
+		</widget>
+		<widget class="text" id="Tolp" col="1" row="1" spec="text" />
+		<widget class="text" id="Dolp" col="2" row="1" spec="text" />
+
+		<widget class="label" col="0" row="2">
+			<translation id="text" translation_id="284309" type="use" value="Average Age[COMMENT: heading; team_information_panel; average age of squad]" />
+		</widget>
+		<widget class="text" id="T_aa" col="1" row="2" spec="text" />
+		<widget class="text" id="D_aa" col="2" row="2" spec="text" />
+
+		<widget class="label" col="0" row="3">
+			<translation id="text" translation_id="284310" type="use" value="Shortest Player[COMMENT: heading; team_information_panel; the shortest player]" />
+		</widget>
+		<widget class="text" id="Tshp" col="1" row="3" spec="text" />
+		<widget class="text" id="Dshp" col="2" row="3" spec="text" />
+
+		<widget class="label" col="0" row="4">
+			<translation id="text" translation_id="284311" type="use" value="Tallest Player[COMMENT: heading; team_information_panel; the tallest player]" />
+		</widget>
+		<widget class="text" id="Ttap" col="1" row="4" spec="text" />
+		<widget class="text" id="Dtap" col="2" row="4" spec="text" />
+
+		<widget class="label" col="0" row="5">
+			<translation id="text" translation_id="284312" type="use" value="Average Height[COMMENT: heading; team_information_panel; average height]" />
+		</widget>
+		<widget class="text" id="Tahe" col="1" row="5" spec="text" />
+		<widget class="text" id="Dahe" col="2" row="5" spec="text" />
+
+		<widget class="label" col="0" row="6">
+			<translation id="text" translation_id="284313" type="use" value="Lightest Player[COMMENT: heading; team_information_panel; the lightest player]" />
+		</widget>
+		<widget class="text" id="Tlip" col="1" row="6" spec="text" />
+		<widget class="text" id="Dlip" col="2" row="6" spec="text" />
+
+		<widget class="label" col="0" row="7">
+			<translation id="text" translation_id="284314" type="use" value="Heaviest Player[COMMENT: heading; team_information_panel; the heaviest player]" />
+		</widget>
+		<widget class="text" id="Thep" col="1" row="7" spec="text" />
+		<widget class="text" id="Dhep" col="2" row="7" spec="text" />
+
+		<widget class="label" col="0" row="8">
+			<translation id="text" translation_id="284315" type="use" value="Average Weight[COMMENT: heading; team_information_panel; average weight]" />
+		</widget>
+		<widget class="text" id="Tavw" col="1" row="8" spec="text" />
+		<widget class="text" id="Davw" col="2" row="8" spec="text" />
+
+		<widget class="label" col="0" row="9">
+			<translation id="text" translation_id="284316" type="use" value="Top Earner[COMMENT: heading; team_information_panel; the top earner]" />
+		</widget>
+		<widget class="text" id="Ttoe" col="1" row="9" spec="text" />
+		<widget class="text" id="Dtoe" col="2" row="9" spec="text" />
+
+		<widget class="label" col="0" row="10">
+			<translation id="text" translation_id="284317" type="use" value="Lowest Earner[COMMENT: heading; team_information_panel; the lowest earner]" />
+		</widget>
+		<widget class="text" id="Tloe" col="1" row="10" spec="text" />
+		<widget class="text" id="Dloe" col="2" row="10" spec="text" />
+
+		<widget class="label" col="0" row="11">
+			<translation id="text" translation_id="284318" type="use" value="Average Wage[COMMENT: heading; team_information_panel; average wage]" />
+		</widget>
+		<widget class="text" id="Tawa" col="1" row="11" spec="text" />
+		<widget class="text" id="Dawa" col="2" row="11" spec="text" />
+
+		<widget class="label" col="0" row="12">
+			<translation id="text" translation_id="284319" type="use" value="Highest Caps[COMMENT: heading; team_information_panel; highest caps]" />
+		</widget>
+		<widget class="text" id="Thca" col="1" row="12" spec="text" />
+		<widget class="text" id="Dhca" col="2" row="12" spec="text" />
+
+		<widget class="label" col="0" row="13">
+			<translation id="text" translation_id="284320" type="use" value="Average Caps[COMMENT: heading; team_information_panel; average caps]" />
+		</widget>
+		<widget class="text" id="Taca" col="1" row="13" spec="text" />
+		<widget class="text" id="Daca" col="2" row="13" spec="text" />
+
+		<widget class="label" col="0" row="14">
+			<translation id="text" translation_id="284321" type="use" value="Domestic Player Bias[COMMENT: heading; team_information_panel; percentage of players who are native to a team or competition]" />
+		</widget>
+		<widget class="text" id="Tdpb" col="1" row="14" spec="text" />
+		<widget class="text" id="Ddpb" col="2" row="14" spec="text" />
+
+		<widget class="label" col="0" row="15">
+			<translation id="text" translation_id="284322" type="use" value="Nationalities Represented[COMMENT: heading; team_information_panel; number of nationalities represented in a team or competition]" />
+		</widget>
+		<widget class="text" id="Tndn" col="1" row="15" spec="text" />
+		<widget class="text" id="Dndn" col="2" row="15" spec="text" />
+
+		<widget class="label" col="0" row="16">
+			<translation id="text" translation_id="284323" type="use" value="Current Internationals[COMMENT: heading; team_information_panel; current internationals]" />
+		</widget>
+		<widget class="text" id="Tcin" col="1" row="16" spec="text" />
+		<widget class="text" id="Dcin" col="2" row="16" spec="text" />
+
+		<widget class="label" col="0" row="17">
+			<translation id="text" translation_id="284324" type="use" value="Current U23 Internationals[COMMENT: heading; team_information_panel; current under23 internationals]" />
+		</widget>
+		<widget class="text" id="T23i" col="1" row="17" spec="text" />
+		<widget class="text" id="D23i" col="2" row="17" spec="text" />
+
+		<widget class="label" col="0" row="18">
+			<translation id="text" translation_id="284325" type="use" value="Current U21 Internationals[COMMENT: heading; team_information_panel; current under21 internationals]" />
+		</widget>
+		<widget class="text" id="T21i" col="1" row="18" spec="text" />
+		<widget class="text" id="D21i" col="2" row="18" spec="text" />
+
+		<widget class="label" col="0" row="19">
+			<translation id="text" translation_id="284326" type="use" value="Current U20 Internationals[COMMENT: heading; team_information_panel; current under20 internationals]" />
+		</widget>
+		<widget class="text" id="T20i" col="1" row="19" spec="text" />
+		<widget class="text" id="D20i" col="2" row="19" spec="text" />
+
+		<widget class="label" col="0" row="20">
+			<translation id="text" translation_id="284327" type="use" value="Current U19 Internationals[COMMENT: heading; team_information_panel; current under19 internationals]" />
+		</widget>
+		<widget class="text" id="T19i" col="1" row="20" spec="text" />
+		<widget class="text" id="D19i" col="2" row="20" spec="text" />
+
+		<widget class="label" col="0" row="21">
+			<translation id="text" translation_id="316679" type="use" value="Manager Tenure[COMMENT: heading; team_information_panel; average caps]" />
+		</widget>
+		<widget class="text" id="Tmgt" col="1" row="21" spec="text" />
+		<widget class="text" id="Dmgt" col="2" row="21" spec="text" />
+
+		<widget class="label" col="0" row="22">
+			<translation id="text" translation_id="395293" type="use" value="Players Used[COMMENT: heading; team_information_panel; number players used in season]" />
+		</widget>
+		<widget class="text" id="Cplu" col="1" row="22" spec="text" />
+		<widget class="text" id="Dlpw" col="2" row="22" spec="text" />
+
+	</widget>
+
+</panel>

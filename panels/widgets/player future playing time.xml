@@ -1,0 +1,18 @@
+﻿<panel>
+	<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="10"/>
+
+	<widget class="text" id="Fptd" auto_size="all" alignment="left,centre_y" size="large">
+		<record id="object_property">
+			<integer id="get_property" value="text" />
+			<integer id="set_property" value="valu" />
+		</record>
+	</widget>
+	
+	<widget class="playing_time_label" is_future_playing_time="true" auto_size="all" alignment="left,centre_y" size="large" style="bold">
+		<record id="object_property">
+			<integer id="get_property" value="pbpt" />
+			<integer id="set_property" value="valu" />
+		</record>
+	</widget>
+
+</panel>

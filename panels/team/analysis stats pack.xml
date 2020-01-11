@@ -1,0 +1,14 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="pre_match_stats_panel" >
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="nFre" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </list>
+    </record>
+  </container>
+</panel>

@@ -1,0 +1,74 @@
+<panel>
+
+	<string id="skin_style" value="subtle box" />
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--top bit with the issue-->
+		<container height="90">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" gap="6" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" font="title" auto_size="vertical">
+					<translation id="text" translation_id="433441" type="use" value="Issue[COMMENT: title for a panel indicating a particular unhappiness or grievance a player or players have]" />
+				</widget>
+
+				<!--issue-->
+				<widget class="text" id="issu" />
+
+			</container>
+
+			<!--unhappy player-->
+			<container class="client_object_viewer_xml_panel" id="unha" width="200" file="player/player faction info panel" />
+		</container>
+
+		<widget class="horizontal_divider" />
+
+		<!--against players-->
+		<container height="25">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="text" font="title" alignment="left,centre_y" colour="negative" auto_size="horizontal">
+				<translation id="text" translation_id="434653" type="use" value="Unhappy Players - [COMMENT: beginning of a title for a box containing players unhappy with a decision you've made, to be followed by the reason for the unhappiness, use top 10 matches]" />
+			</widget>
+			<widget class="text" id="agaT" colour="faded text" alignment="left,centre_y">
+			</widget>
+		</container>
+		<container id="agai">
+			<layout class="fit_children_attachment" alignment="vertical,extend" gap="0" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left" wrap="true" gap="0" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+		</container>
+
+		<widget class="horizontal_divider" />
+
+		<!--supporting players-->
+		<container height="25">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="text" font="title" alignment="left,centre_y" colour="positive" auto_size="horizontal">
+				<translation id="text" translation_id="434654" type="use" value="Supportive Of You - [COMMENT: beginning of a title for a box containing players happy with a decision you've made, to be followed by the reason for the happiness, use top 10 matches]" />
+			</widget>
+			<widget class="text" id="supT" colour="faded text" alignment="left,centre_y">
+			</widget>
+		</container>
+		<container id="supp">
+			<layout class="fit_children_attachment" alignment="vertical,extend" gap="0" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left" wrap="true" gap="0" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+		</container>
+
+	</container>
+
+</panel>

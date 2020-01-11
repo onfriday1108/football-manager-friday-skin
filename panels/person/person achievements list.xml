@@ -1,0 +1,21 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="scrolling_box">
+
+		<widget class="table" id="acli" layout="-1,-4" mode="0" column_spacing="10" auto_size="vertical">
+
+			<boolean id="fixed_size_rows" value="false"/>
+			<boolean id="auto_size_rows" value="true"/>
+			<boolean id="all_content_same_height" value="false"/>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="75" width="75" image_alignment="top" />
+				<record index="1" alignment="left" auto_size="all"/>
+			</list>
+
+		</widget>
+	</container>
+
+</panel>

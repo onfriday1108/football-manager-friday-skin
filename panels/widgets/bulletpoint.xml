@@ -1,0 +1,6 @@
+﻿<panel>
+	<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_layout="30,-1" horizontal_offset="0" horizontal_gap="0" vertical_offset="0"/>
+	
+	<widget class="picture" file="icons/8px/bullet" red_replacement="text" auto_size="horizontal" image_alignment="centre" height="15"/>
+	<widget class="text" alignment="centre_y,left" id="adeT" auto_size="vertical"/>
+</panel>

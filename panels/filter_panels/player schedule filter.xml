@@ -1,0 +1,17 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="main_box">
+		<translation id="title" translation_id="247664" type="use" value="Show Players[COMMENT - training schedule panel, filter title]" />
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="radio_button" id="thsh" auto_size="horizontal">
+			<translation id="text" translation_id="247665" type="use" value="Selected Schedule[COMMENT - training schedules panel player filter text]" />
+		</widget>
+		<widget class="radio_button" id="alsh" auto_size="horizontal">
+			<translation id="text" translation_id="247666" type="use" value="All Schedules[COMMENT - training schedules panel player filter text]" />
+		</widget>
+	</container>
+
+</panel>

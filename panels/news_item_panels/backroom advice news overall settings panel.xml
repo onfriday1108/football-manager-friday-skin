@@ -1,0 +1,26 @@
+<panel width="300">
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+	<container class="inner_subtle_box" id="topT" appearance="boxes/popup/standard/titled/paper">
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+
+		<widget class="check_box" id="topE" click_event="topE">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			<translation id="text" translation_id="420666" type="use" value="Email report on topic:[COMMENT: backroom advice news item topic; section header for email settings]" />
+		</widget>
+		<widget class="popup_button" id="topF" select_event="topF">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="14" />
+		</widget>
+		<widget class="popup_button" id="topS" select_event="topS">
+      <translation id="text" translation_id="247153" type="use" value="None Selected" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="14" />
+		</widget>
+		<widget class="horizontal_divider" />
+		<widget class="check_box" id="topC" click_event="topC">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			<translation id="text" translation_id="420667" type="use" value="Receive contextual advice between emails[COMMENT: backroom advice news item topic; section header for contextual advice]" />
+		</widget>
+	</container>
+</panel>

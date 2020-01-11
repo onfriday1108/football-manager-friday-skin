@@ -1,0 +1,123 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<!-- current injuries -->
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="30,-1" horizontal_alignment="none" horizontal_offset="0" vertical_offset="0" horizontal_gap="10"/>
+
+			<widget class="picture" file="icons/48px/injured" height="30" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+
+				<widget class="text" colour="accent" auto_size="vertical" font="title">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+					<translation id="text" translation_id="227748" type="use" value="Injuries" />
+				</widget>
+
+				<widget class="text" id="InjL" font="value" auto_size="vertical">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				</widget>
+			</container>
+		</container>
+
+		<widget class="table" id="InjT" layout="-2, -3, -1, -2" mode="fill_rows, stripe_rows" all_content_same_height="false" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" row_spacing="1" save_session_state="true">
+			<list id="headings">
+				<record index="0">
+					<translation id="text" translation_id="227966" type="use" value="Player" />
+				</record>
+				<record index="1">
+					<translation id="text" translation_id="247523" type="use" value="Injury[COMMENT: Player Injury name, table header]" />
+				</record>
+				<record index="2">
+					<translation id="text" translation_id="447652" type="use" value="Treatment[COMMENT: FR 20159; player injury table; treatment type player is receiving column header]" />
+				</record>
+				<record index="3">
+					<translation id="text" translation_id="450765" type="use" value="Out For[COMMENT: FR 20159; team injuries overview panel; table column header indicating how long a player will be injured for]" />
+				</record>
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" alignment="left,centre_y" auto_hide_priority="1" minimum_width="140">
+					<boolean id="sort_ascending" value="true" />
+				</record>
+				<record indx="1" alignment="left,centre_y" auto_hide_priority="1" minimum_width="140">
+					<boolean id="sort_ascending" value="false" />
+				</record>
+				<record indx="2" alignment="left,centre_y" auto_hide_priority="1" minimum_width="140">
+					<boolean id="sort_ascending" value="false" />
+				</record>
+				<record indx="3" alignment="left,centre_y" auto_hide_priority="1" minimum_width="140">
+					<boolean id="sort_ascending" value="false" />
+				</record>
+			</list>
+
+			<list id="sort">
+				<integer value="0" />
+			</list>
+		</widget>
+	</container>
+
+	<!-- recurring injuries -->
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="30,-1" horizontal_alignment="none" horizontal_offset="0" vertical_offset="0" horizontal_gap="10"/>
+
+			<widget class="picture" file="icons/48px/urgent" height="30" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" red_replacement="orange" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="0"/>
+
+				<widget class="text" auto_size="vertical" font="title" colour="accent">
+					<translation id="text" translation_id="441764" type="use" value="Recurring injuries[COMMENT: details for player injury proneness level]" />
+					<translation id="hint" translation_id="451326" type="use" value="A recurring injury is a specific injury that a player is susceptible to suffering.[COMMENT: hint text for recurring injuries on physio's introductory news item]" />
+				</widget>
+				<widget class="text" id="ReIL" font="value" auto_size="vertical" />
+			</container>
+		</container>
+
+		<widget class="table" id="ReIT" layout="-2, -3, 90, -2" mode="fill_rows, stripe_rows" all_content_same_height="false" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" row_spacing="1" save_session_state="true">
+			<list id="headings">
+				<record index="0">
+					<translation id="text" translation_id="227966" type="use" value="Player" />
+				</record>
+				<record index="1">
+					<translation id="text" translation_id="441139" type="use" value="Recurring Injury[COMMENT: header for a column of recurring injuries]" />
+				</record>
+				<record index="2">
+					<translation id="text" translation_id="227793" type="use" value="Condition" />
+				</record>
+				<record index="3">
+					<translation id="text" translation_id="247571" type="use" value="Fitness" />
+				</record>
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" alignment="left,centre_y" auto_hide_priority="1" minimum_width="140">
+					<boolean id="sort_ascending" value="true" />
+				</record>
+				<record indx="1" alignment="left,centre_y" auto_hide_priority="1" minimum_width="140">
+					<boolean id="sort_ascending" value="false" />
+				</record>
+				<record indx="2" alignment="centre" auto_hide_priority="1" minimum_width="140">
+					<boolean id="sort_ascending" value="false" />
+				</record>
+				<record indx="3" alignment="left,centre_y" auto_hide_priority="1" minimum_width="140">
+					<boolean id="sort_ascending" value="false" />
+				</record>
+			</list>
+
+			<list id="sort">
+				<integer value="0" />
+			</list>
+		</widget>
+	</container>
+
+</panel>

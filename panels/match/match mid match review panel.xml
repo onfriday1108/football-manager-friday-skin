@@ -1,0 +1,129 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<container class="main_box" appearance="boxes/custom/match/fade/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<container class="horizontal_adaptive_container" inset="10" offset="10" >
+
+		<!--left side - match details-->
+		<container default_width="-500" minimum_width="500" priority="1">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="30" gap="20" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="30" apply_to_children="true" />
+
+			<!--comp picture-->
+			<widget class="object_portrait_picture" id="fxCo" scale_picture="true" width="70" clickable="false">
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre_x,top" />
+				<record id="object_property">
+					<integer id="get_property" value="fxCo" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<!--blurb-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--match period-->
+				<widget class="text" id="mper" size="large" style="bold, shadowed" auto_size="vertical" colour="white"/>
+
+				<!--time/place-->
+				<widget class="match_conditions_panel" id="matc" file="">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+
+					<!--time, place-->
+					<widget class="text" id="tipl" style="bold, shadowed" auto_size="vertical" colour="white"/>
+
+				</widget>
+
+				<!--weather icon-->
+				<widget class="weather_indicator_panel_horizontal" id="FxWe" auto_size="vertical" text_colour="white">
+					<record id="object_property">
+						<integer id="get_property" value="FxWe" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</widget>
+
+			</container>
+		</container>
+
+		<!--right side - stats review-->
+		<container class="main_transparent_box" force_title_borders="true" default_width="-400" minimum_width="400" priority="1">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container embed_in_frame="true">
+				<layout class="arrange_horizontal_attachment" alignment="right" gap="0" offset="10" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="4" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="4" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+
+				<layout class="fit_children_attachment" alignment="vertical"/>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="10" gap="0"/>
+
+				<!--stats logo -->
+				<!-- TODO:: Matt W 26/09/2019 - Bug 13328 removed prozone branding, revisit when known what replacement is-->
+				<widget class="picture" auto_size="all" file=""/>
+
+				<!--title-->
+				<widget class="text" id="Titl" auto_size="all" font="title" size="large" colour="match accent">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+				</widget>
+			</container>
+
+			<container class="vertical_adaptive_container" inset="0" offset="0" gap="6">
+
+				<!--match info-->
+				<widget class="match_info_panel" id="minf" default_height="60" minimum_height="60" priority="1" file="match/match info overview review">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--adaptive match info-->
+				<widget class="match_info_panel" id="min2" default_height="120" minimum_height="120" priority="2" file="match/match info overview popup scorers">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--match stats/analysis/best/worst players-->
+				<widget class="match_analysis_panel" id="Anal" default_height="-1" minimum_height="500" priority="1" file="match/match analysis panel overview">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<!--adaptive latest scores panel-->
+		<container class="main_transparent_box" default_width="-400" minimum_width="400" priority="2">
+			<translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="match_latest_scores_panel" id="Mlat" file="match/match update latest scores">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+	</container>
+
+</panel>

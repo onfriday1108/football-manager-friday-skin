@@ -1,0 +1,61 @@
+<panel width="300">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="main_box" red_replacement="light_box_background">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--comp name-->
+		<container class="inner_box_no_margin">
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="middle" horizontal_offset="0 "/>
+
+			<widget class="client_object_label" id="cnam" auto_size="all" size="large" style="bold"/>
+		</container>
+
+		<!--comp rep-->
+		<container class="inner_box_no_margin">
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="middle" horizontal_offset="0 "/>
+			<widget class="comp_reputation_stars_label" id="crep" row="4" col="0" icon_alignment="centre" height="22" auto_size="horizontal">
+				<record id="object_property">
+					<integer id="get_property" value="crps"/>
+				</record>
+			</widget>
+		</container>
+
+		<container class="collapsable_box" id="detb" collapsed="true" alignment="centre" clos="itsl">
+			<translation id="title" translation_id="229526" type="use" value="Details"/>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!--number of clubs-->
+			<widget class="label" auto_size="vertical" size="11" alignment="left">
+				<translation id="text" translation_id="229361" type="use" value="Clubs"/>
+			</widget>
+			<widget class="label" id="numc" auto_size="vertical" style="bold" size="12" alignment="left" />
+
+			<!--number of promoted teams-->
+			<widget class="label" auto_size="vertical" size="11" alignment="left">
+				<translation id="text" translation_id="305086" type="use" value="Promotions[COMMENT: manager stats screen; column heading for promotions]"/>
+			</widget>
+			<widget class="label" id="nump" auto_size="vertical" style="bold" size="12" alignment="left"/>
+
+			<!--number of relegated teams-->
+			<widget class="label" auto_size="vertical" size="11" alignment="left">
+				<translation id="text" translation_id="305087" type="use" value="Relegations[COMMENT: manager stats screen; column heading for Relegations]"/>
+			</widget>
+			<widget class="label" id="numr" auto_size="vertical" style="bold" size="12" alignment="left" />
+
+			<!--links-->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+
+				<widget class="link_appearance_button" id="stgs" auto_size="all">
+					<translation id="text" translation_id="247175" type="use" value="Stages"/>
+				</widget>
+				<widget class="link_appearance_button" id="ruls" auto_size="all">
+					<translation id="text" translation_id="242302" type="use" value="Rules"/>
+				</widget>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

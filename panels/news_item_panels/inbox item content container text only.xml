@@ -1,0 +1,12 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<boolean id="save_session_state" value="true"/>
+
+	<container id="icbx">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		<!-- inbox content panel gets added here -->
+
+	</container>
+</panel>

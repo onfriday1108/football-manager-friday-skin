@@ -1,0 +1,68 @@
+﻿<panel>
+	<boolean id="should_force_refresh" value="true" />
+	<colour id="budget_info_positive_colour" name="positive" />
+	<colour id="budget_info_zero_colour" name="text" />
+	<colour id="budget_info_negative_colour" name="negative" />
+	<colour id="scouting_package_highlight_colour" name="positive" />
+	<list id="visible_items">
+		<flags value="scrc" />
+		<flags value="scfc" />
+		<flags value="rtec" />
+		<flags value="scbc" />
+		<flags value="assc" />
+	</list>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+	<container class="scrolling_box">
+
+		<container draw_horizontal_dividers="true">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+			<!--Scouting responsibility-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" height="58" id="scrc" icon="icons/custom/icon box/staff" widget_type="client_object_viewer_xml_panel" popup_alignment="left,bottom" lkhd="true" vdhd="true" tcol="accent" ncol="text" jcol="faded text"  secondary_icon_colour="text">
+				<translation id="titl" translation_id="420803" type="use" value="Scouting Responsibility[COMMENT: FR 11179 - title for buttons to change who is responsible for organising scouting at the club]" />
+				<record id="toto" file="team/team container scout responsibility popup" width="950" />
+				<record id="modal_popup_properties" file="modal popup panel auto sized" />
+			</widget>
+			
+			<!--Scouting focus-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" height="58" id="scfc" icon="icons/custom/icon box/focus" widget_type="scouting_focus_popup" popup_alignment="left,top" lkhd="true" vdhd="true" tcol="accent" txcl="text" dscl="faded text"  secondary_icon_colour="text">
+				<translation id="titl" translation_id="443659" type="use" value="Scouting Focus[COMMENT: FR 21760, title label text for the user to set the scouting focus]" />
+				<record id="toto" width="800" height="520" />
+			</widget>
+			
+			<!--Assignments-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" height="58" id="assc" icon="icons/custom/icon box/focus" puhd="true" section="tstp" vdhd="true" lkcl="text" lkrr="text" txcl="text" dscl="faded text"  secondary_icon_colour="text">
+				<translation id="lktx" translation_id="251956" type="use" value="Assignments[COMMENT - team screen section; Scouting; title; current assignments]" />
+			</widget>
+		
+			<!--Recruitment team-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" height="58" id="rtec" icon="icons/custom/icon box/staff" puhd="true" section="tcSS" vdhd="true" lkcl="text" lkrr="text" txcl="text" dscl="faded text"  secondary_icon_colour="text">
+				<translation id="lktx" translation_id="437040" type="use" value="Recruitment Team[COMMENT: FR]" />
+			</widget>
+		
+			<!--Scouting budget-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" height="58" id="scbc"  icon="icons/custom/icon box/scouting" widget_type="client_object_viewer_xml_panel" popup_alignment="left,top" lkhd="true" vdhd="true" tcol="accent" txcl="text" dscl="faded text"  secondary_icon_colour="text">
+				<translation id="titl" translation_id="443667" type="use" value="Scouting Budget[COMMENT: FR 21760 ; scouting centre]" />
+				<record id="toto" file="club/popup scouting budget adjustment panel" width="500" />
+				<record id="modal_popup_properties" file="modal popup panel auto sized" />
+			</widget>
+		
+
+			<!--Senior package-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" height="58"  id="scpc" icon="icons/custom/icon box/package" widget_type="property_list_viewer_xml_panel" type="1" popup_alignment="left,top" lkhd="true" vdhd="true" tcol="accent" txcl="text" dscl="faded text"  secondary_icon_colour="text">
+				<translation id="titl" translation_id="447588" type="use" value="Senior Package[COMMENT: FR 21759 scouting package]" />
+				<record id="toto" file="team/scouting package popup" width="450" />
+			</widget>
+
+			<!--Youth package-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" height="58"  id="yosp" icon="icons/custom/icon box/package" widget_type="property_list_viewer_xml_panel" type="2" popup_alignment="left,top" lkhd="true" vdhd="true" tcol="accent" txcl="text" dscl="faded text"  secondary_icon_colour="text">
+				<translation id="titl" translation_id="450763" type="use" value="Youth Package[COMMENT: FR 21759 scouting package type]" />
+				<record id="toto" file="team/scouting package popup" width="450" />
+			</widget>
+		
+		</container>
+
+	</container>
+</panel>

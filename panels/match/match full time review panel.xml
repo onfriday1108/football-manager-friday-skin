@@ -1,0 +1,125 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<container class="main_box" appearance="boxes/custom/match/fade/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<container class="horizontal_adaptive_container" inset="10" offset="10">
+		<!--left side - match details-->
+		<container default_width="-450" minimum_width="450" priority="1">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="20" gap="20" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="10" apply_to_children="true" />
+
+			<!--comp picture-->
+			<widget class="object_portrait_picture" id="fxCo" scale_picture="true" width="60" clickable="false">
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre_x,top" />
+				<record id="object_property">
+					<integer id="get_property" value="fxCo" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<!--blurb-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--match period-->
+				<widget class="text" id="mper" size="xlarge" auto_size="vertical" colour="white" font="title" style="shadowed"/>
+
+				<!--journo comment-->
+				<widget class="text" auto_size="vertical" id="jcom" size="large" colour="white" style="bold, shadowed"/>
+
+				<!--name/media source-->
+				<widget class="text" auto_size="vertical" id="jnam" colour="white, shadowed" />
+
+			</container>
+		</container>
+
+		<!--right side - stats review-->
+		<container class="main_transparent_box" force_title_borders="true"  default_width="-450" minimum_width="450" priority="1">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container embed_in_frame="true">
+				<layout class="arrange_horizontal_attachment" alignment="right" gap="0" offset="10" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="4" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="4" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+
+				<layout class="fit_children_attachment" alignment="vertical"/>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="10" gap="0"/>
+
+				<!--stats logo -->
+				<!-- TODO:: Matt W 26/09/2019 - Bug 13328 removed prozone branding, revisit when known what replacement is-->
+				<widget class="picture" auto_size="all" file=""/>
+
+				<!--title-->
+				<widget class="text" id="Titl" auto_size="all" font="title" size="large" colour="match accent">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+				</widget>
+			</container>
+
+			<container class="vertical_adaptive_container" inset="0" offset="10" gap="6">
+
+				<!--match info-->
+				<widget class="match_info_panel" id="minf" default_height="60" minimum_height="60" priority="1" file="match/match info overview review">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--adaptive match info-->
+				<widget class="match_info_panel" id="min2" default_height="120" minimum_height="100" priority="2" file="match/match info overview popup scorers">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--match stats/analysis/best/worst players-->
+				<widget class="match_analysis_panel" id="Anal" default_height="-1" minimum_height="400" priority="1" file="match/match analysis panel overview full time">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--milestones-->
+				<container class="inner_subtle_box" default_height="150" minimum_height="150" priority="3" >
+					<translation id="title" translation_id="308471" type="use" value="Milestones[COMMENT: title of match panel containing milestones]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+					<widget class="match_preview_milestones_panel" id="mile" miti="1">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<!--adaptive content - match team stats-->
+		<container default_width="-300" minimum_width="300" priority="2">
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<widget class="match_team_stats_panel" id="HMts" file="match/match team stats full time review" team_index="0">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<widget class="match_team_stats_panel" id="AMts" file="match/match team stats full time review" team_index="1">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+		</container>
+	</container>
+</panel>

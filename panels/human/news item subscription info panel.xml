@@ -1,0 +1,103 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="standard_popup_box">
+		<!-- these buttons don't need reversing across platforms -->
+		<layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="5" />
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="5" gap="5" />
+
+		<widget class="text" id="nsis" auto_size="vertical" font="title" size="9">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" />
+		</widget>
+
+		<widget class="object_portrait_picture" id="picT" scale_picture="true" keep_aspect_ratio="true" height="40" width="40" image_alignment="centre">
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+		</widget>
+
+		<container height="4">
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+		</container>
+
+		<!-- "You are subscribed to..." text -->
+		<widget class="text" id="obin" size="9" auto_size="vertical" alignment="centre">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" />
+		</widget>
+
+		<!-- move player to different shortlist -->
+		<widget class="popup_button" id="mtsh" select_event="mtsh" auto_size="vertical" width="160" fixed="true" alignment="centre" hidden="true">
+			<translation id="text" translation_id="243352" type="use" value="Move To Shortlist" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+		</widget>
+
+		<!-- remove player from shortlist -->
+		<widget class="popup_button" id="rmsp" select_event="rmsh" auto_size="vertical" width="160" fixed="true" alignment="centre" hidden="true">
+			<translation id="text" translation_id="243353" type="use" value="Remove From Shortlist" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+		</widget>
+
+		<!-- remove player from shortlist -->
+		<widget class="button" id="rshb" click_event="rmsh" auto_size="vertical" width="160" alignment="centre" hidden="true">
+			<translation id="text" translation_id="243353" type="use" value="Remove From Shortlist" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+		</widget>
+
+		<!-- unsubscribe other objects -->
+		<widget class="button" id="unbt" click_event="unbt" auto_size="vertical" width="160" hidden="true">
+			<translation id="text" translation_id="412460" type="use" value="Unfollow[COMMENT: Unsubscribe to news items on this database object; menu item in menu when right-clicking person, team, etc]" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+		</widget>
+
+		<container height="5">
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+		</container>
+
+		<!-- "You receive messages about..." text -->
+		<widget class="text" id="sbin" size="9" auto_size="vertical" alignment="centre">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" />
+		</widget>
+
+		<!-- stop receiving news about player -->
+		<widget class="popup_button" id="dshp" select_event="dshn" auto_size="vertical" width="160" fixed="true" alignment="centre" hidden="true">
+			<translation id="text" translation_id="336260" type="use" value="Don't show items like this[COMMENT:news item subscription information panel; button label for user to stop receiving this type of news item]" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			<list id="items">
+				<record id="shlt">
+					<translation id="text" translation_id="336293" type="use" value="For players on this shortlist only[COMMENT:news item subscription information panel; menu item in the don't show news like this popup]" />
+				</record>
+				<record id="ever">
+					<translation id="text" translation_id="336271" type="use" value="Ever[COMMENT:news item subscription information panel;  this is an option to choose when responding to the news subscription text 'Don't show items like this'...]" />
+				</record>
+			</list>
+		</widget>
+
+		<!-- stop receiving news about other objects -->
+		<widget class="popup_button" id="dshb" select_event="dshn" auto_size="vertical" width="180" fixed="true" alignment="centre" hidden="true">
+			<translation id="text" translation_id="336260" type="use" value="Don't show items like this[COMMENT:news item subscription information panel; button label for user to stop receiving this type of news item]" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			<list id="items">
+				<record id="nfto">
+					<translation id="text" translation_id="336294" type="use" value="For this category[COMMENT:news item subscription information panel; menu item in the don't show news like this popup]" />
+				</record>
+				<record id="ever">
+					<translation id="text" translation_id="336271" type="use" value="Ever[COMMENT:news item subscription information panel;  this is an option to choose when responding to the news subscription text 'Don't show items like this'...]" />
+				</record>
+			</list>
+		</widget>
+
+		<widget class="horizontal_divider">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" />
+		</widget>
+
+		<container id="sbLt">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" />
+
+			<widget class="text" id="sbin" size="9" auto_size="vertical" alignment="left,centre_y">
+				<translation id="text" translation_id="395302" type="use" value="Related subscriptions[COMMENT: news item inbox label displaying similar subscription types to the one being used to deliver a particular news item]" />
+			</widget>
+
+		</container>
+	</container>
+</panel>

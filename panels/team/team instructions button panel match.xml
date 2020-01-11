@@ -1,0 +1,23 @@
+<panel version="1.0">
+
+  <boolean id="actions" value="true" />
+  
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+  <layout class="fit_children_attachment" alignment="horizontal" offset="0" />
+
+	<widget class="icon_button" id="teIn" icon="icons/16px/team instructions" click_event="tinD" auto_size="horizontal" appearance="buttons/subtle/normal/button">
+		<translation id="text" translation_id="247728" type="use" value="Team Instructions" />
+
+		<attachment class="test_screen_size_attachment">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="horizontal" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="1250" />
+					<symbol id="set_property" value="label_disabled" />
+				</record>
+			</list>
+		</attachment>
+	</widget>
+
+</panel>

@@ -1,0 +1,35 @@
+﻿<panel wants_mouse_events="false" disable_animations="true">
+
+	 <record id="widget_info">
+		<flags id="alignment" value="centre_x" />
+		<symbol id="class" value="container" />	  
+	</record>
+
+
+	<animation class="slide_in_left_animation"/>
+	<layout class="arrange_horizontal_attachment" layout="-70,-40" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<container class="main_box" appearance="boxes/subsection/solid/paper" red_replacement="box_background"  wants_mouse_events="true">
+		<translation id="title" translation_id="396040" type="use" value="Hair Style[COMMENT:title for popup button; listing different choices for the hair type in the creation of the avatar process]" />
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="10" offset="10" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+		<container class="scrolling_box">
+			<container id="mbuT">
+				<layout class="fit_children_attachment" alignment="vertical,extend"  gap="5" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="5"  wrap="true" auto_size="vertical"/>
+
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+			</container>
+		</container>
+    
+		<!-- row of buttons -->
+    <container id="btns" file="dialog buttons"/>
+    
+	</container>
+
+	<widget class="spacer" />
+
+</panel>

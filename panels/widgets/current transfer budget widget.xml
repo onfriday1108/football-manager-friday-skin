@@ -1,0 +1,51 @@
+﻿<panel height="70" width="250">
+	<list id="draw_order">
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at02" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="plain_box" entity_layout_id="at03" id="pnBx" appearance="boxes/inner/subtle/paper" height="70" name="parent_box">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<widget class="text" entity_layout_id="at01" alignment="centre_y,left" id="ctbT" height="30" name="current_transfer_budget_title">
+			<translation id="text" translation_id="492050" type="use" value="Current Transfer Budget[COMMENT: Transfer budget increase board request widget, showing current transfer budget; AREA: Transfer budget increase board request FR-BN: 15263]" />
+			<string id="colour" value="accent" />
+			<string id="font" value="title" />
+			<string id="size" value="large" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		</widget>
+		<container class="icon_box" entity_layout_id="at00" id="pbIC" icon_alignment="centre_x,centre_y" width="30" height="30" name="piggy_bank_icon">
+			<string id="icon" value="icons/custom/icon box/budget" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at01" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+		</container>
+		<widget class="cash_cell" entity_layout_id="at02" alignment="left,top" id="bgAM" height="30" name="budget_amount_text">
+			<string id="size" value="large" />
+			<string id="font" value="bold" />
+			<string id="colour" value="text" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at01" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="right" set_side="left" target="at00" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		</widget>
+	</container>
+</panel>

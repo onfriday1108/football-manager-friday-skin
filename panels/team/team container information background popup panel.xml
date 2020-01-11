@@ -1,0 +1,11 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+  <container class="inner_box">
+    <translation id="title" translation_id="333728" type="use" value="Club Background[COMMENT: title for panel showing a club's background]" />
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+    <!--background text -->
+    <widget class="text" id="text" />
+  </container>
+</panel>

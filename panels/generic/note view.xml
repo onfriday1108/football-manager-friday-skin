@@ -1,0 +1,40 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<widget class="main_box" red_replacement="dark_box_background">
+
+		<translation id="title" translation_id="257253" type="use" value="Details[COMMENT: Title text for the panel containing the note details]" />
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- top bit with title and subtitle (tags) -->
+		<widget class="container">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" id="titl" spec="title" auto_size="vertical" />
+			<widget class="text" id="tags" spec="text" size="small" auto_size="vertical" />
+		</widget>
+
+		<!-- main bit with note text and date/reminders -->
+		<widget class="container">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- middle bith with note text/details -->
+			<widget class="scrolling_box">
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" id="text" spec="text" size="large" auto_size="vertical" />
+				</container>
+			</widget>
+
+			<!-- bottom bit with date and reminders data -->
+			<widget class="text" id="info" spec="text" size="small" auto_size="vertical" />
+
+		</widget>
+
+	</widget>
+
+</panel>

@@ -1,0 +1,102 @@
+﻿<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="scouting_top_panel" id="stop">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+			<list id="visible_items">
+				<flags value="scrc" />
+				<flags value="scfc" />
+				<flags value="assc" />
+				<flags value="rtec" />
+				<flags value="scbc" />
+				<flags value="trbc" />
+			</list>
+		</widget>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="main_box" navigation_container="true">
+				<translation id="title" translation_id="450715" type="use" value="Discard List[COMMENT - a list of all the players that have been discarded from scouting centre FR 21748]" />
+				<!-- buttons area -->
+				<container id="btnf" embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" />
+
+					<!-- filter menu -->
+					<widget class="icon_button" id="buto" click_event="rdlp" auto_size="all" embed_in_frame="true" save_session_state="true" controller_button="x_button" appearance="buttons/subtle/normal/button">
+						<translation id="text" translation_id="450716" type="use" value="Remove Selected Players From Discard List[COMMENT: remove the selected players from the discard list FR 21748]" />
+					</widget>
+
+				</container>
+
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="10" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container class="main_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+					<widget class="manager_text" auto_size="vertical">
+						<translation id="text" translation_id="450717" type="use" value="Players on this list will not be recommended to [%person#1-you] by scouts or agents. Removing a player from this list means the player may be recommended to [%person#1-you] again.[COMMENT: FR 21110 and bug 161351]" />
+					</widget>
+
+				</container>
+
+
+				<widget class="client_object_list_table" id="oblt" database_table_type="1" mode="fill_rows, stripe_rows, store_sort_state, drag_rows, drop_on_rows, select_rows, dont_allow_empty_selection, select_multiple,show_bullets" fixed_size_rows="true" auto_size_rows="false" row_height="60" fixed_row_height="29" navigation_focus_target="true">
+					<!-- column_mode="resize_columns, move_columns, custom_views" @todo @note no excplicit view menu, disabled for now -->
+
+					<boolean id="save_session_state" value="true" />
+					<boolean id="save_default_state" value="true" />
+					<integer id="contextual_handler_column_id" value="Pnms" />
+
+					<!--default view-->
+					<flags id="default_view" value="deta" />
+
+					<!--available views-->
+					<list id="viws">
+						<record id="deta">
+							<boolean id="tick" value="false" />
+							<record id="view">
+								<flags id="PSpi" />
+								<!-- player status/info -->
+								<flags id="PNaN" />
+								<!-- player name/nation -->
+								<flags id="PCaD" />
+								<!-- player club/division -->
+								<flags id="PpsP" />
+								<!-- person position-->
+								<flags id="PSag" />
+								<!-- person age -->
+								<flags id="Poav" />
+								<!-- overall average rating -->
+								<flags id="Pcww" />
+								<!-- weekly wage -->
+								<flags id="Pdva" />
+								<!-- value -->
+								<flags id="Pmxa" />
+								<!-- max asking price -->
+								<flags id="Psrk" />
+								<!-- recommended -->
+							</record>
+						</record>
+					</list>
+				</widget>
+
+				<widget class="text" id="nopl" size="11" auto_size="none" alignment="centre" hidden="true" font="fonts/letterpressed">
+					<translation id="text" translation_id="450718" type="use" value="There are currently no players on the Discard List.[COMMENT: scouting pool; information text helping the user understand discard list a little better FR 21748]" />
+				</widget>
+
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

@@ -1,0 +1,32 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+  <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <widget class="table" mode="fill_rows" auto_size="vertical" auto_size_rows="true" layout="-1, -1" row_spacing="5">
+
+    <widget class="label" row="0" col="0">
+      <translation id="text" translation_id="247336" type="use" value="Highlight Mode" />
+    </widget>
+    <widget class="popup_button" row="0" col="1" id="hgmd" select_event="hmsl" auto_size="vertical">
+      <list id="items">
+        <record id="0">
+          <translation id="name" translation_id="247337" type="use" value="Full Match" />
+        </record>
+        <record id="1">
+          <translation id="name" translation_id="329863" type="use" value="Comprehensive[COMMENT: match highlights type]" />
+        </record>
+        <record id="2">
+          <translation id="name" translation_id="329930" type="use" value="Extended[COMMENT: match highlights type]" />
+        </record>
+        <record id="3">
+          <translation id="name" translation_id="330180" type="use" value="Key[COMMENT: match highlights type]" />
+        </record>
+        <record id="4">
+          <translation id="name" translation_id="247340" type="use" value="Only Commentary" />
+        </record>
+      </list>
+      <translation id="hint" translation_id="350758" type="use" value="Choose the highlight mode to use during matches[COMMENT: match preferences hint]" />
+    </widget>
+  </widget>
+</panel>

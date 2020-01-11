@@ -1,0 +1,6 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="10"/>
+	
+  <widget class="table" id="pclt" layout="-1" mode="fill_rows" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" row_height="85" row_spacing="0" column_spacing="8"/>
+
+</panel>

@@ -1,0 +1,136 @@
+<panel>
+
+	<!--this list shows the match feed notification type. We need to match the number here with the list of appearances below. Any appearances that don't appear 
+  in this list will use the unchanged main_box appearance on the bordered box 'skbo'.-->
+	<!--enum NOTIFICATION_TYPE
+{
+	NT_NONE = 0,
+	NT_GOAL = 1,
+	NT_OWN_GOAL = 2,
+	NT_DISALLOWED_GOAL = 3,
+	NT_MISSED_PENALTY = 4,
+	NT_FOUL = 5,
+	NT_YELLOW_CARD = 6,
+	NT_RED_CARD = 7,
+	NT_OFFSIDE = 8,
+	NT_ADDED_TIME = 9,
+	NT_IMPORTANT_SCORE = 10,
+	NT_LEAGUE_POSITION_CHANGE = 11,
+	NT_SERIOUS_INJURY = 12,
+	NT_SLIGHT_INJURY = 13,
+	NT_TACTICS_ADVICE = 14,
+	NT_STATS_ADVICE = 15,
+	NT_PERFORMANCE_ADVICE = 16,
+	NT_TEAM_ADVICE = 17,
+  NT_KNOCK = 18,
+	NT_HALF_TIME = 19,
+	NT_EXTRA_TIME_KICK_OFF = 20,
+	NT_HALF_TIME_EXTRA_TIME = 21,
+	NT_FULL_TIME = 22,
+	NT_SUB = 23,
+  NT_TEAM_STAT = 24,
+  NT_PLAYER_STAT = 25
+	NT_MATCH_PLAN_TACTIC_CHANGE = 26
+	NT_MATCH_PLAN_PHILOSPHY_CHANGE = 27
+	NT_MATCH_PLAN_MENTALITY_CHANGE = 28
+	NT_PENALTY_AWARDED = 29
+	NT_TOUCHLINE_SHOUT = 30
+	NT_ASSISTANT_OBSERVATION = 31
+};
+-->
+	<list id="link">
+		<record id="1" link="hilp"/>
+		<record id="2" link="hilp"/>
+		<record id="3" link="hilp"/>
+		<record id="4" link="hilp"/>
+		<record id="5" link="hilp"/>
+		<record id="6" link="hilp"/>
+		<record id="7" link="TacT"/>
+		<record id="8" link="hilp"/>
+		<record id="9" link="hilp"/>
+		<record id="10" link="mgup"/>
+		<record id="11" link="mgup"/>
+		<record id="12" link="TacT"/>
+		<record id="13" link="TacT"/>
+		<record id="14" link="Anal"/>
+		<record id="15" link="Anal"/>
+		<record id="16" link="Anal"/>
+		<record id="17" link="Anal"/>
+		<record id="18" link="TacT"/>
+		<record id="19" link="hilp"/>
+		<record id="20" link="hilp"/>
+		<record id="21" link="hilp"/>
+		<record id="22" link="hilp"/>
+		<record id="23" link="hilp"/>
+		<record id="24" link="Anal"/>
+		<record id="25" link="Anal"/>
+		<record id="26" link="hilp"/>
+		<record id="27" link="hilp"/>
+		<record id="28" link="hilp"/>
+		<record id="29" link="TacT"/>
+		<record id="30" link="TacT"/>
+		<record id="31" link="TacT"/>
+	</list>
+
+	<list id="skns">
+		<record id="1" appearance="boxes/custom/match/feed/goal/paper"/>
+		<record id="2" appearance="boxes/custom/match/feed/goal/paper"/>
+		<record id="3" appearance="boxes/custom/match/feed/disallowed/paper"/>
+		<record id="4" appearance="boxes/custom/match/feed/event/paper"/>
+		<record id="5" appearance="boxes/custom/match/feed/foul/paper"/>
+		<record id="6" appearance="boxes/custom/match/feed/yellow card/paper"/>
+		<record id="7" appearance="boxes/custom/match/feed/red card/paper"/>
+		<record id="8" appearance="boxes/custom/match/feed/event/paper"/>
+		<record id="9" appearance="boxes/custom/match/feed/event/paper"/>
+		<record id="10" appearance="boxes/custom/match/feed/important score/paper"/>
+		<record id="11" appearance="boxes/custom/match/feed/event/paper"/>
+		<record id="12" appearance="boxes/custom/match/feed/serious injury/paper"/>
+		<record id="13" appearance="boxes/custom/match/feed/slight injury/paper"/>
+		<record id="14" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="15" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="16" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="17" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="18" appearance="boxes/custom/match/feed/event/paper"/>
+		<record id="19" appearance="boxes/custom/match/feed/event/paper"/>
+		<record id="20" appearance="boxes/custom/match/feed/event/paper"/>
+		<record id="21" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="22" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="23" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="24" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="25" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="26" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="27" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="28" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="29" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="30" appearance="boxes/custom/match/feed/advice/paper"/>
+		<record id="31" appearance="boxes/custom/match/feed/advice/paper"/>
+	</list>
+
+	<!-- There is also a GPU animation setup in code -->
+	<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+	<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="2"/>
+
+	<!--icon-->
+	<widget class="icon_button" id="icon" image_alignment="centre" scale_picture="true" auto_size="horizontal" show_button_appearance="false"/>
+
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="2"/>
+		<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="2"/>
+
+		<!--event text-->
+		<widget class="text" id="evtx" style="semi_bold" alignment="left,centre_y" size="9.5" colour="white" auto_size="all" multiline="true"/>
+
+		<!--person doing the event-->
+		<widget class="embeddable_button" id="pers" info_popup_enabled="false" auto_size="all" size="9.5" show_button_appearance="false" colour="white"/>
+
+		<!--buttons (optional)-->
+		<widget class="button" id="but1" auto_size="horizontal" height="28" appearance="buttons/custom/very subtle/button" colour="text"/>
+		<widget class="popup_button" id="but2" height="28" fixed="true" width="28" appearance="buttons/custom/very subtle/button" colour="text"/>
+	</container>
+
+
+</panel>
